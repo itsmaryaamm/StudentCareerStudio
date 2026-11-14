@@ -11,6 +11,7 @@ import { documentsRouter } from "../features/documents/router";
 import { feedbackRouter } from "../features/feedback/router";
 import { flagsRouter } from "../features/flags/router";
 import { resumeRouter } from "../features/resume/router";
+import { scsRouter } from "../features/scs/router";
 import { statisticsRouter } from "../features/statistics/router";
 import { storageRouter } from "../features/storage/router";
 import { webAccessRouter } from "../features/web-access/router";
@@ -29,6 +30,7 @@ export default {
 	feedback: feedbackRouter,
 	flags: flagsRouter,
 	resume: resumeRouter,
+	scs: scsRouter,
 	statistics: statisticsRouter,
 	storage: storageRouter,
 	webAccess: webAccessRouter,

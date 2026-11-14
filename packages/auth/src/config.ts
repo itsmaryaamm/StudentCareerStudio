@@ -46,6 +46,7 @@ import { generateId, toUsername } from "@reactive-resume/utils/string";
 import { timezoneSchema } from "@reactive-resume/utils/timezone";
 import { isAllowedOAuthRedirectUri } from "@reactive-resume/utils/url-security.node";
 import { generateBackupCodes } from "./backup-codes";
+import { BetaClosedError, bindBetaSeat, reserveBetaSeat } from "./beta-seats";
 import {
 	allocateUniqueUsername,
 	createGithubProfileMapper,
@@ -844,6 +845,15 @@ const getAuthConfig = () => {
 			user: {
 				create: {
 					before: async (user, context) => {
+						// Founding beta: a seat is reserved server-side before the account exists, so the cap holds
+						// for e-mail, OAuth and any direct API call alike.
+						try {
+							await reserveBetaSeat(user.email, context?.headers?.get("x-beta-code"));
+						} catch (error) {
+							if (error instanceof BetaClosedError)
+								throw new APIError("FORBIDDEN", { message: error.message, code: `BETA_${error.reason.toUpperCase()}` });
+							throw error;
+						}
 						// New accounts inherit the device timezone from the auth request, so interview times,
 						// reminders and schedules are right from the first use. Social callbacks don't carry the
 						// header; the sign-in hook stores the validated zone in the signed OAuth state.
@@ -862,6 +872,9 @@ const getAuthConfig = () => {
 						// Guests sign in without a username. The tail of a UUIDv7 is random; its head is a timestamp.
 						const username = `guest-${generateId().slice(-12)}`;
 						return { data: { ...data, username, displayUsername: username } };
+					},
+					after: async (user) => {
+						await bindBetaSeat(user.email, user.id);
 					},
 				},
 			},

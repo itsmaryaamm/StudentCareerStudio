@@ -226,6 +226,22 @@ export const env = createEnv({
 		AI_AGENT_STEP_TIMEOUT_MS: z.coerce.number().int().positive().max(300_000).default(120_000),
 		AI_AGENT_RUN_TIMEOUT_MS: z.coerce.number().int().positive().max(MAX_AGENT_RUN_TIMEOUT_MS).default(240_000),
 
+		// Student Career Studio beta. The Gemini key is server-side only and never sent to a browser.
+		GEMINI_API_KEY: z.string().trim().min(1).optional(),
+		// Test/staging only: point the Gemini client at a stand-in server. Leave unset in production.
+		SCS_GEMINI_BASE_URL: z.url({ protocol: /^https?$/ }).optional(),
+		SCS_GEMINI_MODEL: z.string().trim().min(1).optional(),
+		// Founding beta: maximum accounts (admins excluded). 0 closes sign-ups.
+		SCS_BETA_MAX_USERS: z.coerce.number().int().min(0).default(50),
+		// When set, sign-up requires this code (header `x-beta-code`), so strangers can't take the seats.
+		SCS_BETA_INVITE_CODE: z.string().trim().min(1).optional(),
+		// Per user, per UTC day: chat replies and LinkedIn generations from Gemini.
+		SCS_LIMIT_CHAT_PER_DAY: z.coerce.number().int().min(0).default(10),
+		// Per user, lifetime: document or image analyses.
+		SCS_LIMIT_UPLOADS_TOTAL: z.coerce.number().int().min(0).default(3),
+		// Across all users, per UTC day: a circuit breaker that keeps the shared Gemini key inside its free quota.
+		SCS_LIMIT_GLOBAL_AI_PER_DAY: z.coerce.number().int().min(0).default(600),
+		SCS_UPLOAD_MAX_BYTES: z.coerce.number().int().positive().max(20_971_520).default(4_194_304),
 		// Feature Flags
 		FLAG_DISABLE_SIGNUPS: z.stringbool().default(false),
 		FLAG_DISABLE_EMAIL_AUTH: z.stringbool().default(false),

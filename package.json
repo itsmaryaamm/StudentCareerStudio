@@ -36,6 +36,7 @@
 		"docs:check": "node tooling/docs/check.mjs",
 		"db:generate": "dotenvx run --ignore=MISSING_ENV_FILE -f .env.local -- turbo run db:generate --filter=@reactive-resume/db",
 		"db:migrate": "dotenvx run --ignore=MISSING_ENV_FILE -f .env.local -- turbo run db:migrate --filter=@reactive-resume/db",
+		"scs:make-admin": "node tooling/scs/make-admin.mjs",
 		"db:studio": "dotenvx run --ignore=MISSING_ENV_FILE -f .env.local -- turbo run db:studio --filter=@reactive-resume/db",
 		"lingui:extract": "turbo run lingui:extract --filter=web && turbo run lingui:extract --filter=mobile && pnpm pdf:translations",
 		"lingui:check": "pnpm --filter web exec lingui check sync --clean --overwrite && pnpm --filter mobile exec lingui check sync --clean",

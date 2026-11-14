@@ -4,6 +4,7 @@
 	"type": "module",
 	"private": true,
 	"exports": {
+		"./beta-seats": "./src/beta-seats.ts",
 		"./config": "./src/config.ts",
 		"./trusted-origins": "./src/trusted-origins.ts",
 		"./types": "./src/types.ts"
