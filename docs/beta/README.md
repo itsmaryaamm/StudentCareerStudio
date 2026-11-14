@@ -49,7 +49,7 @@ These prove our plumbing. They do **not** prove Gemini's answer quality or your 
 
 ## Known gaps before inviting students
 
-1. **Real Gemini has not been exercised** (no key in the build environment).
+1. **Real Gemini was exercised through the API only** (chat, memory, fact proposals, LinkedIn generation, PDF upload, refund on a failed call all passed). Not yet run: the browser suite against real Gemini, quota behaviour near Google's limits, and answer quality at scale.
 2. **No email delivery configured** → no password-reset or verification emails. A student who forgets a password is locked out until you reset it. Configure SMTP (or a free transactional tier) first.
 3. Editor "Assistant"/"Improve"/AI-import buttons are RR's bring-your-own-key AI; students who connect a key send data to _that_ provider (disclosed in the privacy notice). Not covered by our limits.
 4. Many secondary RR strings still say "Reactive Resume" (homepage components, share dialogs, importer text). Auth, shell, titles, manifest and icons are rebranded.

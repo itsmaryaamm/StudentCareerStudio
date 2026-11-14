@@ -12,7 +12,9 @@ const check = (name, ok, extra = "") => {
 	console.log(`${ok ? "PASS" : "FAIL"}  ${name}${ok ? "" : "  -> " + extra}`);
 };
 const psql = (q) =>
-	execFileSync("psql", ["-h", "localhost", "-U", "postgres", "-d", "scs", "-Atc", q]).toString().trim();
+	execFileSync("psql", ["-h", "localhost", "-U", "postgres", "-d", process.env.PGDB ?? "scs", "-Atc", q])
+		.toString()
+		.trim();
 
 async function http(method, path, { body, cookie, headers = {} } = {}) {
 	const res = await fetch(`${API}${path}`, {
@@ -100,7 +102,7 @@ check(
 );
 const adminEmail = won[0].json.user.email;
 execFileSync("node", ["tooling/scs/make-admin.mjs", adminEmail], {
-	env: { ...process.env, DATABASE_URL: "postgresql://postgres@localhost:5432/scs" },
+	env: { ...process.env, DATABASE_URL: `postgresql://postgres@localhost:5432/${process.env.PGDB ?? "scs"}` },
 });
 // ---------- 3. Consent gate ----------
 let r = await http("POST", "/scs/chat/send", {

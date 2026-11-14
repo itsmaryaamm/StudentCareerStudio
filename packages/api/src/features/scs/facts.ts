@@ -7,6 +7,22 @@ import { resume, scsCareerFact } from "@reactive-resume/db/schema";
 
 const MAX_FACTS_PER_USER = 200;
 const norm = (s: string) => s.toLowerCase().replace(/\s+/g, " ").trim();
+const words = (s: string) =>
+	new Set(
+		norm(s)
+			.replace(/[^\p{L}\p{N} ]/gu, "")
+			.split(" ")
+			.filter((w) => w.length > 2),
+	);
+/** Near-duplicate: most of the shorter fact's words already appear in an existing one (a reworded restatement). */
+export function isNearDuplicate(a: string, b: string): boolean {
+	const x = words(a);
+	const y = words(b);
+	if (x.size === 0 || y.size === 0) return false;
+	let shared = 0;
+	for (const w of x) if (y.has(w)) shared += 1;
+	return shared / Math.min(x.size, y.size) >= 0.8;
+}
 export const stripHtml = (html: string) =>
 	html
 		.replace(/<\/(p|li|div|br)>/gi, " ")
@@ -61,7 +77,12 @@ export const factsService = {
 		const seen = new Set(existing.map((e) => norm(e.text)));
 		const fresh = facts
 			.map((f) => ({ ...f, text: f.text.trim() }))
-			.filter((f) => f.text && !seen.has(norm(f.text)) && seen.add(norm(f.text)))
+			.filter((f) => {
+				if (!f.text || seen.has(norm(f.text)) || existing.some((e) => isNearDuplicate(e.text, f.text))) return false;
+				existing.push({ text: f.text });
+				seen.add(norm(f.text));
+				return true;
+			})
 			.slice(0, MAX_FACTS_PER_USER - existing.length);
 		if (fresh.length === 0) return [];
 		const rows = await db
