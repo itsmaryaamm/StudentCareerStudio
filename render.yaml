@@ -1,0 +1,55 @@
+# Student Career Studio founding beta on Render. NOTHING is deployed by this file existing:
+# you create the service from it in the Render dashboard (New → Blueprint) and approve the plan yourself.
+# Database: use Neon (free, no 30-day expiry), paste its connection string as DATABASE_URL when prompted.
+services:
+  - type: web
+    name: student-career-studio
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free # sleeps after ~15 min idle (30-60 s wake-up). Change to `starter` (~$7/mo) to stay awake.
+    healthCheckPath: /api/health
+    autoDeploy: false
+    envVars:
+      - key: NODE_ENV
+        value: production
+      # Must equal the public URL Render gives you (https://<name>.onrender.com). Set after first deploy, then redeploy.
+      - key: APP_URL
+        sync: false
+      - key: DATABASE_URL # Neon connection string (must include ?sslmode=require)
+        sync: false
+      - key: AUTH_SECRET
+        generateValue: true
+      - key: ENCRYPTION_SECRET
+        generateValue: true
+      # Free-tier disk is ephemeral: profile pictures vanish on restart. Fine for the beta; use S3/R2 later.
+      - key: STORAGE_BACKEND
+        value: local
+      - key: LOCAL_STORAGE_PATH
+        value: /app/data
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SCS_GEMINI_MODEL
+        value: gemini-3.5-flash-lite
+      - key: SCS_BETA_MAX_USERS
+        value: "50"
+      - key: SCS_BETA_INVITE_CODE
+        sync: false
+      - key: SCS_LIMIT_CHAT_PER_DAY
+        value: "7"
+      - key: SCS_LIMIT_UPLOADS_TOTAL
+        value: "3"
+      - key: SCS_LIMIT_GLOBAL_AI_PER_MINUTE
+        value: "12"
+      - key: SCS_LIMIT_GLOBAL_AI_PER_DAY
+        value: "450"
+      # Email (needed for password resets). Fill from your SMTP provider; leave blank to run without email.
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        sync: false
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASS
+        sync: false
+      - key: SMTP_FROM
+        sync: false
