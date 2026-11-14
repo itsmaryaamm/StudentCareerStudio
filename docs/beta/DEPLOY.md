@@ -31,9 +31,11 @@ Nothing here has been run. Every step is yours to approve. Total time: about 30 
 ## 3. Make yourself admin
 
 1. Open the URL → `/auth/register?invite=YOURCODE` → create your account.
-2. Render → your service → **Shell**: run
-   `node -e "process.env.DATABASE_URL" && DATABASE_URL=$DATABASE_URL node tooling/scs/make-admin.mjs you@example.com`
-   (If the Shell isn't available on the free plan, run the same command from your laptop with Neon's connection string.)
+2. In Neon → **SQL Editor**, run (use your own email):
+   ```sql
+   update "user" set role = 'admin' where lower(email) = lower('you@example.com');
+   ```
+   (Admin is never granted by sign-up, so nobody can claim it by registering your address first.)
 3. Reload — a **Beta dashboard** item appears in the sidebar.
 
 ## 4. Smoke test the live site (15 minutes, do not skip)
