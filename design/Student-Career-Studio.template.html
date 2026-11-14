@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="ea79bb47-ef34-42ff-b560-631938ef7f8c"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("532a382c-a94e-4fb3-acd5-22993c47d981") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("b8c9707a-d9e8-4090-a079-956ff6e17cb2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("fac17482-9eb5-43dc-b7f2-0a2b0e128bff") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("3d87bbe3-c4e6-49ea-9f66-c58e0d3f8fde") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("532a382c-a94e-4fb3-acd5-22993c47d981") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("b8c9707a-d9e8-4090-a079-956ff6e17cb2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("fac17482-9eb5-43dc-b7f2-0a2b0e128bff") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("3d87bbe3-c4e6-49ea-9f66-c58e0d3f8fde") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("532a382c-a94e-4fb3-acd5-22993c47d981") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("b8c9707a-d9e8-4090-a079-956ff6e17cb2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("fac17482-9eb5-43dc-b7f2-0a2b0e128bff") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("3d87bbe3-c4e6-49ea-9f66-c58e0d3f8fde") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("532a382c-a94e-4fb3-acd5-22993c47d981") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("b8c9707a-d9e8-4090-a079-956ff6e17cb2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("fac17482-9eb5-43dc-b7f2-0a2b0e128bff") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("3d87bbe3-c4e6-49ea-9f66-c58e0d3f8fde") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("532a382c-a94e-4fb3-acd5-22993c47d981") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("b8c9707a-d9e8-4090-a079-956ff6e17cb2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("fac17482-9eb5-43dc-b7f2-0a2b0e128bff") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("3d87bbe3-c4e6-49ea-9f66-c58e0d3f8fde") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>body{margin:0;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1d1b26;background:#faf9fc}a{color:#6d4bd8}a:hover{color:#5436b8}*{box-sizing:border-box}textarea,input{font-family:inherit}</style>
+</helmet>
+<div style="display:flex;min-height:100vh;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#1d1b26;background:#faf9fc">
+
+<sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+<aside style="width:244px;flex:none;position:sticky;top:0;height:100vh;background:#fff;border-right:1px solid #ebe9f1;padding:20px 14px;display:flex;flex-direction:column;gap:20px">
+  <div style="display:flex;align-items:center;gap:10px;padding:0 6px">
+    <img src="3dfd5901-26f3-4d6a-ba67-6c2f0d415261" alt="" width="38" height="38" style="border-radius:11px;flex:none">
+    <div><div style="font-weight:800;font-size:15px;line-height:1.1">Student Career Studio</div><div style="font-size:12px;color:#6b6878;margin-top:2px">by Maryam Imran</div></div>
+  </div>
+  <nav style="display:flex;flex-direction:column;gap:3px">
+    <sc-for list="{{ nav }}" as="n" hint-placeholder-count="6">
+      <button sc-camel-on-click="{{ n.go }}" style="display:flex;align-items:center;gap:12px;border:0;cursor:pointer;text-align:left;padding:10px 12px;border-radius:11px;font:600 14px 'Plus Jakarta Sans',sans-serif;background:{{ n.bg }};color:{{ n.fg }}" style-hover="background:#f4f1fc">
+        <span style="width:22px;text-align:center;font-size:15px">{{ n.icon }}</span>{{ n.label }}
+      </button>
+    </sc-for>
+  </nav>
+  <div style="margin-top:auto;display:flex;flex-direction:column;gap:12px">
+    <sc-if value="{{ showPlan }}" hint-placeholder-val="{{ true }}"><div style="background:#f4f1fc;border-radius:14px;padding:14px">
+      <div style="font-size:12px;font-weight:700;color:#5436b8">Free plan</div>
+      <div style="font-size:12px;color:#4a4757;margin:4px 0 8px">18 of 40 AI messages used</div>
+      <div style="height:6px;border-radius:9px;background:#e0d8f8"><div style="width:45%;height:100%;border-radius:9px;background:#6d4bd8"></div></div>
+    </div></sc-if>
+    <div style="display:flex;align-items:center;gap:10px;padding:0 6px"><div style="width:32px;height:32px;border-radius:50%;background:#e0d8f8;color:#5436b8;font-weight:700;display:grid;place-items:center;font-size:13px">LH</div><div style="font-size:13px;font-weight:600">Layla Hassan<div style="font-weight:400;color:#6b6878;font-size:12px">Student</div></div></div>
+    <div style="font-size:11px;color:#8a879a;padding:0 6px;line-height:1.4">Built on Reactive Resume (MIT). Not affiliated with its authors.</div>
+  </div>
+</aside>
+</sc-if>
+
+<div style="flex:1;min-width:0;display:flex;flex-direction:column">
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+<header style="display:flex;align-items:center;gap:10px;padding:12px 16px;background:#fff;border-bottom:1px solid #ebe9f1;position:sticky;top:0;z-index:5">
+  <img src="3dfd5901-26f3-4d6a-ba67-6c2f0d415261" alt="" width="34" height="34" style="border-radius:10px;flex:none">
+  <div style="font-weight:800;font-size:15px;line-height:1.1">Student Career Studio<div style="font-weight:500;font-size:11px;color:#6b6878">by Maryam Imran</div></div>
+</header>
+</sc-if>
+
+<main style="flex:1;padding:{{ pad }};max-width:1180px;width:100%;margin:0 auto;display:flex;flex-direction:column;gap:24px;padding-bottom:{{ padBottom }}">
+
+<!-- DASHBOARD -->
+<sc-if value="{{ isDash }}" hint-placeholder-val="{{ true }}">
+<section style="display:flex;flex-direction:column;gap:24px">
+  <div><h1 style="margin:0;font-size:28px;font-weight:800;letter-spacing:-.02em">Welcome back, Layla</h1><p style="margin:6px 0 0;color:#6b6878;font-size:15px">Tell your story once. We'll use it for your résumé and LinkedIn.</p></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px">
+    <sc-for list="{{ actions }}" as="a" hint-placeholder-count="5">
+      <button sc-camel-on-click="{{ a.go }}" style="text-align:left;border:1px solid #ebe9f1;background:#fff;border-radius:16px;padding:18px;cursor:pointer;display:flex;flex-direction:column;gap:10px;font-family:inherit;color:inherit" style-hover="border-color:#b9a6f0;box-shadow:0 4px 18px rgba(109,75,216,.10)">
+        <span style="width:36px;height:36px;border-radius:11px;background:#f1edfd;color:#6d4bd8;display:grid;place-items:center;font-weight:800;font-size:16px">{{ a.icon }}</span>
+        <span style="font-weight:700;font-size:15px">{{ a.title }}</span>
+        <span style="font-size:13px;color:#6b6878;line-height:1.45">{{ a.sub }}</span>
+      </button>
+    </sc-for>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start">
+    <div style="flex:2 1 460px;min-width:0">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px"><h2 style="margin:0;font-size:18px;font-weight:700">Your résumés</h2><button sc-camel-on-click="{{ goResumes }}" style="border:0;background:none;color:#6d4bd8;font:600 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer">View all</button></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:14px">
+        <sc-for list="{{ resumes }}" as="r" hint-placeholder-count="3">
+          <div style="background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:12px;display:flex;flex-direction:column;gap:10px" style-hover="box-shadow:0 4px 18px rgba(109,75,216,.10)">
+            <div style="aspect-ratio:3/4;background:#f6f5f9;border-radius:10px;padding:14px 12px;display:flex;flex-direction:column;gap:7px">
+              <div style="height:9px;width:55%;background:#cfc6ee;border-radius:3px"></div><div style="height:5px;width:80%;background:#e1dfe8;border-radius:3px"></div>
+              <div style="height:5px;width:70%;background:#e1dfe8;border-radius:3px;margin-bottom:8px"></div>
+              <div style="height:6px;width:35%;background:#cfc6ee;border-radius:3px"></div><div style="height:5px;width:90%;background:#e1dfe8;border-radius:3px"></div><div style="height:5px;width:85%;background:#e1dfe8;border-radius:3px"></div><div style="height:5px;width:60%;background:#e1dfe8;border-radius:3px"></div>
+            </div>
+            <div><div style="font-weight:700;font-size:14px">{{ r.name }}</div><div style="font-size:12px;color:#6b6878;margin-top:2px">{{ r.template }} · {{ r.updated }}</div></div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="flex:1 1 280px;min-width:0;background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:14px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline"><h2 style="margin:0;font-size:16px;font-weight:700">Your career profile</h2><span style="font-size:13px;font-weight:700;color:#6d4bd8">{{ completeness }}% complete</span></div>
+      <div style="height:7px;border-radius:9px;background:#efecf6"><div style="width:{{ completeness }}%;height:100%;border-radius:9px;background:#6d4bd8"></div></div>
+      <div style="display:flex;flex-direction:column;gap:9px">
+        <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4">
+          <div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;line-height:1.4"><span style="flex:none;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;margin-top:1px;background:{{ f.bg }};color:{{ f.fg }}">{{ f.label }}</span><span style="color:#3a3846">{{ f.text }}</span></div>
+        </sc-for>
+      </div>
+      <button sc-camel-on-click="{{ goChat }}" style="border:0;background:#6d4bd8;color:#fff;border-radius:11px;padding:11px;font:600 14px 'Plus Jakarta Sans',sans-serif;cursor:pointer" style-hover="background:#5b3cc4">Add more with your coach</button>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<!-- MY RESUMES -->
+<sc-if value="{{ isResumes }}" hint-placeholder-val="{{ false }}">
+<section style="display:flex;flex-direction:column;gap:20px">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center"><div><h1 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-.02em">My Résumés</h1><p style="margin:4px 0 0;color:#6b6878;font-size:14px">Duplicate a résumé to tailor it. Your wording is never overwritten without asking.</p></div>
+  <div style="display:flex;gap:8px"><button sc-camel-on-click="{{ toastImport }}" style="border:1px solid #d9d4ea;background:#fff;border-radius:11px;padding:10px 16px;font:600 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer;color:#1d1b26">Import</button><button sc-camel-on-click="{{ toastNew }}" style="border:0;background:#6d4bd8;color:#fff;border-radius:11px;padding:10px 16px;font:600 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer">+ New résumé</button></div></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px">
+    <sc-for list="{{ resumes }}" as="r" hint-placeholder-count="3">
+      <div style="background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:12px">
+        <div style="aspect-ratio:3/4;background:#f6f5f9;border-radius:10px;padding:16px 14px;display:flex;flex-direction:column;gap:8px">
+          <div style="height:10px;width:55%;background:#cfc6ee;border-radius:3px"></div><div style="height:5px;width:80%;background:#e1dfe8;border-radius:3px"></div>
+          <div style="height:5px;width:70%;background:#e1dfe8;border-radius:3px;margin-bottom:10px"></div>
+          <div style="height:6px;width:35%;background:#cfc6ee;border-radius:3px"></div><div style="height:5px;width:90%;background:#e1dfe8;border-radius:3px"></div><div style="height:5px;width:85%;background:#e1dfe8;border-radius:3px"></div><div style="height:5px;width:60%;background:#e1dfe8;border-radius:3px"></div>
+          <div style="height:6px;width:30%;background:#cfc6ee;border-radius:3px;margin-top:8px"></div><div style="height:5px;width:88%;background:#e1dfe8;border-radius:3px"></div><div style="height:5px;width:75%;background:#e1dfe8;border-radius:3px"></div>
+        </div>
+        <div><div style="font-weight:700;font-size:14px">{{ r.name }}</div><div style="font-size:12px;color:#6b6878;margin-top:2px">{{ r.template }} · Edited {{ r.updated }}</div></div>
+        <div style="display:flex;gap:6px"><button sc-camel-on-click="{{ toastOpen }}" style="flex:1;border:0;background:#f1edfd;color:#5436b8;border-radius:9px;padding:8px;font:600 12px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Edit</button><button sc-camel-on-click="{{ toastDup }}" style="flex:1;border:1px solid #e3e0ec;background:#fff;border-radius:9px;padding:8px;font:600 12px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Duplicate</button><button sc-camel-on-click="{{ toastPdf }}" style="flex:1;border:1px solid #e3e0ec;background:#fff;border-radius:9px;padding:8px;font:600 12px 'Plus Jakarta Sans',sans-serif;cursor:pointer">PDF</button></div>
+      </div>
+    </sc-for>
+    <button sc-camel-on-click="{{ toastNew }}" style="border:2px dashed #cfc6ee;background:transparent;border-radius:16px;min-height:300px;color:#6d4bd8;font:600 14px 'Plus Jakarta Sans',sans-serif;cursor:pointer" style-hover="background:#f4f1fc">+ Create new résumé</button>
+  </div>
+</section>
+</sc-if>
+
+<!-- LINKEDIN STUDIO -->
+<sc-if value="{{ isLi }}" hint-placeholder-val="{{ false }}">
+<section style="display:flex;flex-direction:column;gap:18px">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:flex-end"><div><h1 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-.02em">LinkedIn Studio</h1><p style="margin:4px 0 0;color:#6b6878;font-size:14px">Generate and refine your profile, then copy it into LinkedIn. We never post for you.</p></div>
+  <div style="display:flex;background:#efecf6;border-radius:12px;padding:4px;flex-wrap:wrap">
+    <sc-for list="{{ modes }}" as="m" hint-placeholder-count="3"><button sc-camel-on-click="{{ m.go }}" style="border:0;border-radius:9px;padding:8px 14px;font:600 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer;background:{{ m.bg }};color:{{ m.fg }};box-shadow:{{ m.shadow }}">{{ m.label }}</button></sc-for>
+  </div></div>
+
+  <sc-if value="{{ modeA }}" hint-placeholder-val="{{ true }}">
+  <div style="display:flex;flex-direction:column;gap:16px">
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <sc-for list="{{ secChips }}" as="s" hint-placeholder-count="10"><button sc-camel-on-click="{{ s.go }}" style="border:1px solid {{ s.bd }};border-radius:99px;padding:7px 14px;font:600 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer;background:{{ s.bg }};color:{{ s.fg }}">{{ s.title }}</button></sc-for>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+      <div style="flex:2 1 440px;min-width:0;display:flex;flex-direction:column;gap:16px">
+        <div style="background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;justify-content:space-between;align-items:center;gap:8px"><h2 style="margin:0;font-size:17px;font-weight:700">{{ cur.title }}</h2><span style="font-size:11px;font-weight:700;padding:3px 9px;border-radius:99px;background:{{ cur.bg }};color:{{ cur.fg }}">{{ cur.label }}</span></div>
+          <textarea value="{{ cur.text }}" sc-camel-on-change="{{ editText }}" rows="{{ cur.rows }}" style="width:100%;border:1px solid #e3e0ec;border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.55;resize:vertical;color:#1d1b26;background:#fdfcff;outline:none"></textarea>
+          <div style="display:flex;flex-wrap:wrap;gap:8px"><button sc-camel-on-click="{{ copyCur }}" style="border:1px solid #d9d4ea;background:#fff;border-radius:10px;padding:9px 14px;font:600 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Copy to clipboard</button><button sc-camel-on-click="{{ saveCur }}" style="border:0;background:#6d4bd8;color:#fff;border-radius:10px;padding:9px 16px;font:600 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Save</button></div>
+        </div>
+        <div style="background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px">
+          <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center"><h3 style="margin:0;font-size:15px;font-weight:700;color:#5436b8">✦ Gemini suggestions</h3>
+            <div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{ tones }}" as="t" hint-placeholder-count="3"><button sc-camel-on-click="{{ t.go }}" style="border:1px solid #d9d4ea;background:#fff;border-radius:99px;padding:6px 12px;font:600 12px 'Plus Jakarta Sans',sans-serif;cursor:pointer;color:#4a4757" style-hover="background:#f4f1fc">{{ t.label }}</button></sc-for></div></div>
+          <sc-if value="{{ noSugg }}" hint-placeholder-val="{{ false }}"><div style="font-size:13px;color:#6b6878;padding:8px 0">No pending suggestions. Ask for a different tone above.</div></sc-if>
+          <sc-for list="{{ suggs }}" as="g" hint-placeholder-count="2">
+            <div style="border:1px solid #e0d8f8;background:#faf8ff;border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px">
+              <div style="font-size:14px;line-height:1.55;white-space:pre-wrap">{{ g.text }}</div>
+              <div style="font-size:12px;color:#6b6878">{{ g.note }}</div>
+              <div style="display:flex;flex-wrap:wrap;gap:8px"><button sc-camel-on-click="{{ g.accept }}" style="border:0;background:#6d4bd8;color:#fff;border-radius:9px;padding:7px 14px;font:600 12px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Accept</button><button sc-camel-on-click="{{ g.reject }}" style="border:1px solid #d9d4ea;background:#fff;border-radius:9px;padding:7px 14px;font:600 12px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Reject</button><button sc-camel-on-click="{{ g.copy }}" style="border:0;background:none;color:#6d4bd8;padding:7px 6px;font:600 12px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Copy</button></div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+      <div style="flex:1 1 280px;min-width:0;display:flex;flex-direction:column;gap:16px">
+        <div style="background:#fff7e6;border:1px solid #f3dfae;border-radius:16px;padding:16px;display:flex;flex-direction:column;gap:8px">
+          <div style="font-size:13px;font-weight:700;color:#7a4e00">Résumé changed 2 days ago</div>
+          <div style="font-size:13px;line-height:1.5;color:#5c4510">Your “Data Analyst Intern” bullets were updated. Review a proposed update to your LinkedIn Experience?</div>
+          <button sc-camel-on-click="{{ jumpExp }}" style="align-self:flex-start;border:0;background:#7a4e00;color:#fff;border-radius:9px;padding:7px 13px;font:600 12px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Review update</button>
+        </div>
+        <div style="background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px">
+          <h3 style="margin:0;font-size:15px;font-weight:700">From your career profile</h3>
+          <sc-for list="{{ facts }}" as="f" hint-placeholder-count="4"><div style="display:flex;gap:8px;align-items:flex-start;font-size:13px;line-height:1.4"><span style="flex:none;font-size:10px;font-weight:700;padding:2px 7px;border-radius:99px;margin-top:1px;background:{{ f.bg }};color:{{ f.fg }}">{{ f.label }}</span><span style="color:#3a3846">{{ f.text }}</span></div></sc-for>
+          <button sc-camel-on-click="{{ goChat }}" style="border:1px solid #d9d4ea;background:#fff;border-radius:10px;padding:9px;font:600 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Ask the coach</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ modeB }}" hint-placeholder-val="{{ false }}">
+  <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+    <div style="flex:1 1 320px;min-width:0;background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:14px">
+      <h2 style="margin:0;font-size:17px;font-weight:700">1. Bring in your LinkedIn data</h2>
+      <div style="border:2px dashed #cfc6ee;border-radius:14px;padding:28px 16px;text-align:center;background:#faf8ff"><div style="font-weight:700;font-size:14px">Drop your LinkedIn data export (.zip)</div><div style="font-size:12px;color:#6b6878;margin-top:4px">Or paste your profile text below. Direct URL import isn't supported by LinkedIn.</div></div>
+      <textarea rows="4" placeholder="Paste profile text…" style="width:100%;border:1px solid #e3e0ec;border-radius:12px;padding:12px;font-size:14px;resize:vertical;outline:none"></textarea>
+    </div>
+    <div style="flex:1 1 320px;min-width:0;background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px">
+      <h2 style="margin:0;font-size:17px;font-weight:700">2. Choose what goes on your résumé</h2>
+      <sc-for list="{{ liItems }}" as="i" hint-placeholder-count="4"><button sc-camel-on-click="{{ i.toggle }}" style="display:flex;gap:12px;align-items:center;text-align:left;border:1px solid {{ i.bd }};background:{{ i.bg }};border-radius:12px;padding:12px;cursor:pointer;font:500 14px 'Plus Jakarta Sans',sans-serif;color:#1d1b26"><span style="flex:none;width:20px;height:20px;border-radius:6px;border:2px solid #6d4bd8;background:{{ i.fill }};color:#fff;font-size:12px;display:grid;place-items:center">{{ i.mark }}</span>{{ i.text }}</button></sc-for>
+      <div style="font-size:12px;color:#6b6878;background:#fdf3dc;border-radius:10px;padding:10px 12px;color:#7a4e00">The coach will ask about missing details, like what you personally did on “Tech Week”.</div>
+      <button sc-camel-on-click="{{ toastGen }}" style="border:0;background:#6d4bd8;color:#fff;border-radius:11px;padding:11px;font:600 14px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Generate résumé from selection</button>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ modeC }}" hint-placeholder-val="{{ false }}">
+  <div style="background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:14px;align-items:flex-start;max-width:620px">
+    <h2 style="margin:0;font-size:20px;font-weight:800">No résumé yet? Start with a conversation.</h2>
+    <p style="margin:0;color:#4a4757;font-size:15px;line-height:1.6">Your coach asks two or three questions at a time about classes, projects, clubs, events and part-time work. You approve each fact before it's saved, and then it builds both your résumé and your LinkedIn.</p>
+    <button sc-camel-on-click="{{ goChat }}" style="border:0;background:#6d4bd8;color:#fff;border-radius:11px;padding:12px 20px;font:600 14px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Start the conversation</button>
+  </div>
+  </sc-if>
+</section>
+</sc-if>
+
+<!-- CHAT -->
+<sc-if value="{{ isChat }}" hint-placeholder-val="{{ false }}">
+<section style="display:flex;flex-direction:column;gap:16px;min-height:0">
+  <div><h1 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-.02em">AI Career Chat</h1><p style="margin:4px 0 0;color:#6b6878;font-size:14px">Your Gemini-powered coach. It only saves what you confirm.</p></div>
+  <sc-if value="{{ needConsent }}" hint-placeholder-val="{{ false }}">
+  <div style="background:#f1edfd;border:1px solid #d9cff5;border-radius:14px;padding:14px 16px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between"><div style="font-size:13px;line-height:1.5;color:#3a2a7a;flex:1 1 300px">Your messages and any uploads are sent to Google's Gemini API to generate replies. Don't share anything you wouldn't want processed there.</div><button sc-camel-on-click="{{ giveConsent }}" style="border:0;background:#6d4bd8;color:#fff;border-radius:10px;padding:9px 16px;font:600 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer">I understand</button></div>
+  </sc-if>
+  <div style="background:#fff;border:1px solid #ebe9f1;border-radius:16px;display:flex;flex-direction:column;height:{{ chatH }}">
+    <div id="chatscroll" style="flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:14px">
+      <sc-for list="{{ msgs }}" as="m" hint-placeholder-count="3">
+        <div style="display:flex;justify-content:{{ m.just }}"><div style="max-width:min(560px,88%);padding:11px 15px;border-radius:16px;font-size:14px;line-height:1.55;background:{{ m.bg }};color:{{ m.fg }}">{{ m.text }}</div></div>
+      </sc-for>
+      <sc-if value="{{ pending }}" hint-placeholder-val="{{ false }}">
+      <div style="align-self:flex-start;max-width:min(560px,92%);border:1px solid #f3dfae;background:#fffaf0;border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:8px">
+        <div style="font-size:11px;font-weight:700;color:#7a4e00">VERIFY BEFORE SAVING</div>
+        <div style="font-size:14px;font-weight:600">Organized Tech Week at university</div>
+        <div style="font-size:13px;color:#4a4757;line-height:1.5">Role and attendee count not given yet, so none will be added. Saved as “needs verification”.</div>
+        <div style="display:flex;gap:8px"><button sc-camel-on-click="{{ saveFact }}" style="border:0;background:#6d4bd8;color:#fff;border-radius:9px;padding:7px 14px;font:600 12px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Save to profile</button><button sc-camel-on-click="{{ dropFact }}" style="border:1px solid #d9d4ea;background:#fff;border-radius:9px;padding:7px 14px;font:600 12px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Discard</button></div>
+      </div>
+      </sc-if>
+    </div>
+    <div style="border-top:1px solid #ebe9f1;padding:12px;display:flex;gap:8px;align-items:center">
+      <button sc-camel-on-click="{{ toastUpload }}" title="Attach a document or image" style="flex:none;width:42px;height:42px;border:1px solid #d9d4ea;background:#fff;border-radius:11px;cursor:pointer;font-size:18px;color:#6d4bd8">+</button>
+      <input value="{{ chatInput }}" sc-camel-on-change="{{ setChat }}" sc-camel-on-key-down="{{ chatKey }}" placeholder="Tell me about something you've done…" style="flex:1;min-width:0;height:42px;border:1px solid #e3e0ec;border-radius:11px;padding:0 14px;font-size:14px;outline:none">
+      <button sc-camel-on-click="{{ send }}" style="flex:none;height:42px;border:0;background:#6d4bd8;color:#fff;border-radius:11px;padding:0 18px;font:600 14px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Send</button>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<!-- PROMPTS -->
+<sc-if value="{{ isPrompts }}" hint-placeholder-val="{{ false }}">
+<section style="display:flex;flex-direction:column;gap:18px">
+  <div><h1 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-.02em">Career Prompts</h1><p style="margin:4px 0 0;color:#6b6878;font-size:14px">Personalized prompts to paste into your own ChatGPT or Claude account.</p></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+    <sc-for list="{{ flows }}" as="w" hint-placeholder-count="3"><button sc-camel-on-click="{{ w.go }}" style="text-align:left;border:2px solid {{ w.bd }};background:{{ w.bg }};border-radius:16px;padding:16px;cursor:pointer;display:flex;flex-direction:column;gap:6px;font-family:inherit;color:#1d1b26"><span style="font-weight:700;font-size:15px">{{ w.title }}</span><span style="font-size:13px;color:#4a4757;line-height:1.45">{{ w.sub }}</span></button></sc-for>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:20px;align-items:flex-start">
+    <div style="flex:1 1 300px;min-width:0;display:flex;flex-direction:column;gap:16px">
+      <div style="background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px">
+        <h3 style="margin:0;font-size:15px;font-weight:700">Your preferences</h3>
+        <sc-for list="{{ fields }}" as="f" hint-placeholder-count="3"><label style="display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:600;color:#4a4757">{{ f.label }}<textarea value="{{ f.value }}" sc-camel-on-change="{{ f.set }}" rows="{{ f.rows }}" placeholder="{{ f.ph }}" style="border:1px solid #e3e0ec;border-radius:10px;padding:10px 12px;font-size:13px;font-weight:400;resize:vertical;outline:none;color:#1d1b26"></textarea></label></sc-for>
+      </div>
+      <div style="background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:10px">
+        <h3 style="margin:0;font-size:15px;font-weight:700">Information included</h3>
+        <div style="font-size:12px;color:#6b6878;line-height:1.45">Untick anything you don't want to share outside this app.</div>
+        <sc-for list="{{ factToggles }}" as="i" hint-placeholder-count="5"><button sc-camel-on-click="{{ i.toggle }}" style="display:flex;gap:10px;align-items:flex-start;text-align:left;border:0;background:none;padding:2px 0;cursor:pointer;font:500 13px/1.4 'Plus Jakarta Sans',sans-serif;color:#1d1b26"><span style="flex:none;width:18px;height:18px;margin-top:1px;border-radius:5px;border:2px solid #6d4bd8;background:{{ i.fill }};color:#fff;font-size:11px;display:grid;place-items:center">{{ i.mark }}</span>{{ i.text }}</button></sc-for>
+      </div>
+    </div>
+    <div style="flex:1.4 1 380px;min-width:0;background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:12px">
+      <div style="display:flex;justify-content:space-between;align-items:center"><h3 style="margin:0;font-size:15px;font-weight:700">Prompt preview</h3><span style="font-size:12px;color:#6b6878">Review before copying</span></div>
+      <pre style="margin:0;white-space:pre-wrap;word-break:break-word;font:400 13px/1.6 ui-monospace,Menlo,Consolas,monospace;background:#faf9fc;border:1px solid #ebe9f1;border-radius:12px;padding:16px;max-height:460px;overflow:auto">{{ promptText }}</pre>
+      <div style="display:flex;flex-wrap:wrap;gap:8px"><button sc-camel-on-click="{{ copyPrompt }}" style="border:0;background:#6d4bd8;color:#fff;border-radius:10px;padding:10px 18px;font:600 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Copy prompt</button><a href="https://chatgpt.com/" target="_blank" rel="noopener" style="border:1px solid #d9d4ea;border-radius:10px;padding:10px 16px;font:600 13px 'Plus Jakarta Sans',sans-serif;text-decoration:none;color:#1d1b26">Open ChatGPT ↗</a><a href="https://claude.ai/new" target="_blank" rel="noopener" style="border:1px solid #d9d4ea;border-radius:10px;padding:10px 16px;font:600 13px 'Plus Jakarta Sans',sans-serif;text-decoration:none;color:#1d1b26">Open Claude ↗</a></div>
+      <div style="font-size:12px;color:#6b6878;line-height:1.5">Opening ChatGPT or Claude does not import the prompt. Copy it here, open your assistant, and paste it into a new chat.</div>
+    </div>
+  </div>
+</section>
+</sc-if>
+
+<!-- SETTINGS -->
+<sc-if value="{{ isSettings }}" hint-placeholder-val="{{ false }}">
+<section style="display:flex;flex-direction:column;gap:18px;max-width:720px">
+  <h1 style="margin:0;font-size:26px;font-weight:800;letter-spacing:-.02em">Settings</h1>
+  <div style="background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:12px">
+    <h3 style="margin:0;font-size:15px;font-weight:700">Account</h3>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px"><label style="display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:600;color:#4a4757">Name<input value="Layla Hassan" style="height:40px;border:1px solid #e3e0ec;border-radius:10px;padding:0 12px;font-size:14px;outline:none"></label><label style="display:flex;flex-direction:column;gap:5px;font-size:12px;font-weight:600;color:#4a4757">Email<input value="layla@example.edu" style="height:40px;border:1px solid #e3e0ec;border-radius:10px;padding:0 12px;font-size:14px;outline:none"></label></div>
+  </div>
+  <div style="background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:14px">
+    <h3 style="margin:0;font-size:15px;font-weight:700">AI &amp; privacy</h3>
+    <button sc-camel-on-click="{{ toggleConsent }}" style="display:flex;gap:14px;align-items:center;justify-content:space-between;border:0;background:none;padding:0;cursor:pointer;text-align:left;font-family:inherit;color:#1d1b26"><span style="font-size:14px;line-height:1.45"><b>Allow sending my profile to Gemini</b><br><span style="color:#6b6878;font-size:13px">Needed for coaching and suggestions. Uploaded documents aren't kept after extraction.</span></span><span style="flex:none;width:44px;height:26px;border-radius:99px;background:{{ consentBg }};position:relative"><span style="position:absolute;top:3px;left:{{ consentLeft }};width:20px;height:20px;border-radius:50%;background:#fff"></span></span></button>
+    <div style="display:flex;flex-wrap:wrap;gap:8px"><button sc-camel-on-click="{{ toastExport }}" style="border:1px solid #d9d4ea;background:#fff;border-radius:10px;padding:9px 14px;font:600 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Download my data</button><button sc-camel-on-click="{{ toastDelete }}" style="border:1px solid #f0c4c4;background:#fff;color:#b32a2a;border-radius:10px;padding:9px 14px;font:600 13px 'Plus Jakarta Sans',sans-serif;cursor:pointer">Delete my account</button></div>
+  </div>
+  <div style="background:#fff;border:1px solid #ebe9f1;border-radius:16px;padding:20px;display:flex;flex-direction:column;gap:14px">
+    <div style="display:flex;justify-content:space-between;align-items:center"><h3 style="margin:0;font-size:15px;font-weight:700">Plan &amp; usage</h3><span style="font-size:12px;font-weight:700;background:#f1edfd;color:#5436b8;padding:3px 10px;border-radius:99px">Free</span></div>
+    <sc-for list="{{ usage }}" as="u" hint-placeholder-count="3"><div><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>{{ u.label }}</span><span style="color:#6b6878">{{ u.val }}</span></div><div style="height:6px;border-radius:9px;background:#efecf6"><div style="width:{{ u.pct }}%;height:100%;border-radius:9px;background:#6d4bd8"></div></div></div></sc-for>
+    <div style="background:#faf9fc;border:1px dashed #d9d4ea;border-radius:12px;padding:14px;font-size:13px;color:#4a4757;line-height:1.5"><b>Pro is coming later.</b> Higher AI limits, multiple LinkedIn variations and targeted résumé versions. No billing is active.</div>
+  </div>
+  <div style="font-size:12px;color:#8a879a;line-height:1.6">Student Career Studio by Maryam Imran is built on Reactive Resume, © Amruth Pillai and contributors, MIT License. Original additions © Maryam Imran. <a href="#">Privacy</a> · <a href="#">Terms</a>. We make no guarantees of interviews, employment or ATS results.</div>
+</section>
+</sc-if>
+
+</main>
+</div>
+
+<sc-if value="{{ isMobile }}" hint-placeholder-val="{{ false }}">
+<nav style="position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid #ebe9f1;display:grid;grid-template-columns:repeat(6,1fr);padding:6px 4px calc(6px + env(safe-area-inset-bottom));z-index:10">
+  <sc-for list="{{ nav }}" as="n" hint-placeholder-count="6"><button sc-camel-on-click="{{ n.go }}" style="border:0;background:none;display:flex;flex-direction:column;align-items:center;gap:2px;padding:6px 0;min-height:48px;font:600 10px 'Plus Jakarta Sans',sans-serif;color:{{ n.fg2 }};cursor:pointer"><span style="font-size:17px">{{ n.icon }}</span>{{ n.short }}</button></sc-for>
+</nav>
+</sc-if>
+
+<sc-if value="{{ toast }}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;left:50%;transform:translateX(-50%);bottom:{{ toastBottom }};background:#1d1b26;color:#fff;padding:11px 18px;border-radius:12px;font-size:13px;font-weight:600;z-index:30;box-shadow:0 8px 30px rgba(0,0,0,.2);max-width:90vw">{{ toast }}</div>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;showPlanCard&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;density&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;comfortable&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;comfortable&quot;,&quot;compact&quot;],&quot;section&quot;:&quot;Layout&quot;},&quot;startView&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;default&quot;:&quot;dash&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;options&quot;:[&quot;dash&quot;,&quot;resumes&quot;,&quot;li&quot;,&quot;chat&quot;,&quot;prompts&quot;,&quot;settings&quot;],&quot;section&quot;:&quot;Behavior&quot;},&quot;consentGiven&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Behavior&quot;}}">
+class Component extends DCLogic {
+  state = {
+    view: 'dash', w: 1200, toast: '', section: 'headline', mode: 'A', consent: false, pending: true, chatInput: '', replyIdx: 0,
+    prompt: 'find', roles: 'Data analyst or software internships, summer 2027', loc: 'Riyadh, Saudi Arabia; open to remote', elig: 'Saudi citizen, no visa needed', target: '',
+    liItems: [
+      { text: 'Data Analyst Intern, Northwind Analytics', on: true },
+      { text: 'Tech Week organizer, university', on: true },
+      { text: 'Riyadh Code Jam 2025 finalist', on: true },
+      { text: 'Retail assistant, family shop (part-time)', on: false }
+    ],
+    facts: [
+      { text: 'B.Sc. Computer Science, expected May 2027', s: 'verified', on: true },
+      { text: 'Data Analyst Intern, Northwind Analytics, Summer 2025: built a weekly KPI dashboard in Power BI', s: 'verified', on: true },
+      { text: 'Riyadh Code Jam 2025 finalist', s: 'verified', on: true },
+      { text: 'Skills: Python, SQL, Power BI, React', s: 'verified', on: true },
+      { text: 'Languages: English, Arabic', s: 'verified', on: true }
+    ],
+    msgs: [
+      { r: 'ai', text: "Hi Layla! I'm your career coach. Tell me about something you've done at university: a project, an event, a club. We'll turn it into strong material, and I won't make anything sound fancier than it was." },
+      { r: 'me', text: 'I organized a university event.' },
+      { r: 'ai', text: 'Nice start. A few questions: What were you personally responsible for? Roughly how many people took part? And how did it go?' }
+    ],
+    secs: [
+      { id: 'headline', title: 'Headline', rows: 2, text: 'Computer Science student | Data & web projects | Riyadh Code Jam finalist', st: 'ai',
+        sg: [{ text: 'Computer Science student building data tools people actually use', note: 'Based on: degree, internship, projects' }, { text: 'CS student at the intersection of data and web | Hackathon finalist | Seeking 2027 internships', note: 'Based on: degree, hackathon, career interest' }],
+        alts: ['Computer Science student who likes turning messy data into clear answers', 'CS student | Data, web, and a lot of coffee | Open to internships'] },
+      { id: 'about', title: 'About', rows: 8, text: "I'm a final-year Computer Science student in Riyadh. Last summer I interned at Northwind Analytics, where I built a weekly KPI dashboard in Power BI for the operations team.\n\nI enjoy projects where data meets something people use daily. In 2025 my team reached the finals of Riyadh Code Jam.\n\nI'm looking for a data or software internship for summer 2027.", st: 'user',
+        sg: [{ text: "I like making data useful. As a Computer Science student in Riyadh, I've built a weekly KPI dashboard during my internship at Northwind Analytics and took my team to the Riyadh Code Jam finals.\n\nI'm now looking for a summer 2027 internship where I can keep learning by building.", note: 'More conversational than your résumé summary' }],
+        alts: ["Short version: CS student, data intern, hackathon finalist, and looking for what's next.", "I started with spreadsheets and ended up in Python. That curiosity is how I got to Northwind Analytics and the Riyadh Code Jam finals."] },
+      { id: 'education', title: 'Education', rows: 4, text: 'B.Sc. Computer Science\nKing Saud University, 2023 to 2027 (expected)', st: 'verified', sg: [], alts: ['B.Sc. Computer Science, King Saud University. Expected graduation May 2027.'] },
+      { id: 'experience', title: 'Experience', rows: 7, text: 'Data Analyst Intern, Northwind Analytics (Summer 2025)\n• Built a weekly KPI dashboard in Power BI for the operations team\n• Cleaned and joined data from three internal sources', st: 'verified',
+        sg: [{ text: "Data Analyst Intern, Northwind Analytics (Summer 2025)\nI built the weekly KPI dashboard the operations team used in their Monday meetings, pulling and cleaning data from three internal sources. I learned how much of analysis is asking the right question first.", note: 'Matches your updated résumé bullets. Nothing added that you did not say.' }],
+        alts: ['Interned on the analytics team and owned one deliverable end to end: a Power BI KPI dashboard.'] },
+      { id: 'projects', title: 'Projects', rows: 5, text: 'Campus Bus Tracker (Riyadh Code Jam 2025, finalist)\nReact app showing live bus arrival estimates.', st: 'ai', sg: [], alts: ['Campus Bus Tracker: our team built a React app to estimate bus arrivals and reached the Code Jam finals.'] },
+      { id: 'volunteering', title: 'Volunteering', rows: 4, text: 'Tech Week organizer, University Computing Club\n[Role and attendance to be confirmed]', st: 'check', sg: [], alts: ['Helped organize Tech Week at my university. Tell me your exact role so I can describe it accurately.'] },
+      { id: 'certifications', title: 'Certifications', rows: 3, text: 'Microsoft Power BI Data Analyst (PL-300)', st: 'verified', sg: [], alts: ['Power BI Data Analyst (PL-300), Microsoft'] },
+      { id: 'skills', title: 'Skills', rows: 3, text: 'Python · SQL · Power BI · React · Data cleaning · Team collaboration', st: 'ai',
+        sg: [{ text: 'Python · SQL · Power BI · React · Data visualization · Problem solving', note: 'Top 6 for data and software internships' }], alts: ['Python · SQL · Power BI · React · Data cleaning'] },
+      { id: 'featured', title: 'Featured', rows: 3, text: 'Suggested: Campus Bus Tracker repo; KPI dashboard write-up (remove client data first)', st: 'ai', sg: [], alts: ['Feature your best project link and one certificate.'] },
+      { id: 'contact', title: 'Contact & networking', rows: 3, text: 'Open to: Data analyst and software internships, summer 2027. Riyadh or remote.', st: 'user', sg: [], alts: ['Open to internships in data and software. Message me anytime.'] }
+    ]
+  };
+  componentDidUpdate() { const k = (this.props.startView || 'dash') + '|' + (this.props.consentGiven ? 1 : 0); if (this._pk !== k) { const first = this._pk === undefined; this._pk = k; if (!first) this.setState({ view: this.props.startView || 'dash', consent: !!this.props.consentGiven }); } }
+  componentDidMount() {
+    this._pk = (this.props.startView || 'dash') + '|' + (this.props.consentGiven ? 1 : 0); this.setState({ view: this.props.startView || 'dash', consent: !!this.props.consentGiven }); this.setState({ w: window.innerWidth }); this._r = () => this.setState({ w: window.innerWidth }); window.addEventListener('resize', this._r); }
+  componentWillUnmount() { window.removeEventListener('resize', this._r); }
+  note(t) { clearTimeout(this._t); this.setState({ toast: t }); this._t = setTimeout(() => this.setState({ toast: '' }), 2400); }
+  copy(t) { try { navigator.clipboard.writeText(t); } catch (e) {} this.note('Copied to clipboard'); }
+  prov(s) { return { verified: ['Verified', '#e6f5ee', '#16724a'], ai: ['AI-generated', '#f1edfd', '#5436b8'], user: ['You edited', '#e8f0fa', '#1f5a9e'], check: ['Needs verification', '#fdf3dc', '#8a5600'] }[s]; }
+  upSec(id, fn) { this.setState(st => ({ secs: st.secs.map(s => s.id === id ? fn(s) : s) })); }
+  buildPrompt() {
+    const s = this.state, inc = s.facts.filter(f => f.on).map(f => '- ' + f.text).join('\n') || '- (nothing shared)';
+    const base = 'MY BACKGROUND (verified by me)\n' + inc + '\n\n';
+    if (s.prompt === 'find') return 'You are a careful career research assistant. Use live web search and cite sources. Never invent openings; if you cannot verify something, say so.\n\n' + base + 'PREFERENCES\nTarget: ' + s.roles + '\nLocation: ' + s.loc + '\nWork eligibility: ' + s.elig + '\n\nTASK\nFind current internships, jobs, research placements, scholarships and programs that fit me. For each one give: the official application link, deadline, eligibility check against my background, and any location or visa restrictions. Rank them by fit and explain why. Finish with three next steps.';
+    if (s.prompt === 'apply') return 'You are a truthful application coach. Only use experience listed below. Do not invent skills, numbers or achievements.\n\n' + base + 'JOB DESCRIPTION\n' + (s.target || '[paste the job description here]') + '\n\nTASK\n1. Break down the requirements and match them to my experience.\n2. List honest gaps.\n3. Suggest how to tailor my résumé truthfully.\n4. Draft answers to application questions and a cover letter.\n5. If publicly available, suggest who to contact and draft a short outreach email for me to review. Do not send anything on my behalf.';
+    return 'You are an interview coach. Base examples only on what is listed below.\n\n' + base + 'ROLE AND EMPLOYER\n' + (s.target || '[paste the job description or employer here]') + '\n\nTASK\n1. Analyze the role and employer.\n2. List likely behavioral and technical questions.\n3. Match each to a real example from my background.\n4. Run a mock interview one question at a time and give feedback on each answer.\n5. Afterwards, help me write a thank-you email.';
+  }
+  renderVals() {
+    const s = this.state, go = v => () => this.setState({ view: v }), m = s.w < 860, v = s.view;
+    const navDef = [['dash', 'Dashboard', 'Home', '⌂'], ['resumes', 'My Résumés', 'Résumés', '▤'], ['li', 'LinkedIn Studio', 'LinkedIn', 'in'], ['chat', 'AI Career Chat', 'Coach', '✦'], ['prompts', 'Career Prompts', 'Prompts', '❝'], ['settings', 'Settings', 'Settings', '⚙']];
+    const cur0 = s.secs.find(x => x.id === s.section), p = this.prov(cur0.st);
+    const flowsDef = [['find', 'Find Opportunities', 'Research current internships, jobs and programs that fit you.'], ['apply', 'Help Me Apply', 'Match your experience to a job and draft honest materials.'], ['interview', 'Prepare for Interviews', 'Practice with a mock interview using your real examples.']];
+    const fieldsAll = [['Roles & interests', 'roles', 2, '', ['find']], ['Location preferences', 'loc', 2, '', ['find']], ['Work eligibility (optional)', 'elig', 2, '', ['find']], ['Job description or role', 'target', 6, 'Paste the posting here', ['apply', 'interview']]];
+    const reply = ["Thanks. That helps. What did you personally do day to day on that? And was anything you're proud of?", "Got it. Is there a result you can point to, like feedback, a number you know for sure, or something that changed because of it?", "Good. Did you work with a team or on your own? I'll describe your part accurately."];
+    const send = () => { const t = s.chatInput.trim(); if (!t) return; const i = s.replyIdx; this.setState(st => ({ msgs: [...st.msgs, { r: 'me', text: t }], chatInput: '', replyIdx: i + 1 })); setTimeout(() => { this.setState(st => ({ msgs: [...st.msgs, { r: 'ai', text: reply[i % 3] }] })); const e = document.getElementById('chatscroll'); if (e) e.scrollTop = e.scrollHeight; }, 700); };
+    const used = [['AI messages this month', '18 / 40', 45], ['Career prompts generated', '2 / 5', 40], ['Résumé PDF exports', 'Unlimited', 0]];
+    const secChange = (id, t) => this.upSec(id, x => ({ ...x, st: 'ai', text: t }));
+    const sugs = cur0.sg.map((g, i) => ({ text: g.text, note: g.note,
+      accept: () => { this.upSec(cur0.id, x => ({ ...x, text: g.text, st: 'ai', sg: x.sg.filter((_, j) => j !== i) })); this.note('Suggestion accepted'); },
+      reject: () => this.upSec(cur0.id, x => ({ ...x, sg: x.sg.filter((_, j) => j !== i) })),
+      copy: () => this.copy(g.text) }));
+    const toneDef = [['Make it less corporate', 0], ['More concise', 1], ['More personal', 0]];
+    return {
+      isMobile: m, isDesktop: !m, showPlan: this.props.showPlanCard ?? true, pad: m ? '20px 16px' : (this.props.density === 'compact' ? '20px' : '32px'), padBottom: m ? '92px' : '32px', toastBottom: m ? '88px' : '28px',
+      isDash: v === 'dash', isResumes: v === 'resumes', isLi: v === 'li', isChat: v === 'chat', isPrompts: v === 'prompts', isSettings: v === 'settings',
+      nav: navDef.map(([id, label, short, icon]) => ({ label, short, icon, go: go(id), bg: v === id ? '#f1edfd' : 'transparent', fg: v === id ? '#5436b8' : '#3a3846', fg2: v === id ? '#6d4bd8' : '#6b6878' })),
+      actions: [['+', 'Create new résumé', 'Start from a template', () => this.note('Opens the résumé builder with the template gallery')], ['↑', 'Import existing résumé', 'PDF, JSON or LinkedIn export', () => this.note('Opens the import dialog')], ['in', 'Create or improve LinkedIn', 'Built from your career profile', go('li')], ['✦', 'Talk to AI Career Coach', 'Uncover experiences you forgot', go('chat')], ['❝', 'Generate career prompts', 'For ChatGPT or Claude', go('prompts')]].map(([icon, title, sub, g]) => ({ icon, title, sub, go: g })),
+      resumes: [{ name: 'Data Analyst Intern', template: 'Modern', updated: '2 days ago' }, { name: 'Software Internship', template: 'Classic', updated: '1 week ago' }, { name: 'General Résumé', template: 'Compact', updated: '3 weeks ago' }],
+      goResumes: go('resumes'), goChat: go('chat'),
+      completeness: Math.min(100, 40 + s.facts.length * 8),
+      facts: s.facts.map(f => { const q = this.prov(f.s); return { text: f.text, label: q[0], bg: q[1], fg: q[2] }; }),
+      toastImport: () => this.note('Opens the import dialog'), toastNew: () => this.note('Opens the résumé builder'), toastOpen: () => this.note('Opens the résumé editor'), toastDup: () => this.note('Résumé duplicated'), toastPdf: () => this.note('PDF export started'),
+      modes: [['A', 'Résumé → LinkedIn'], ['B', 'LinkedIn → Résumé'], ['C', 'Start with Gemini']].map(([id, label]) => ({ label, go: () => this.setState({ mode: id }), bg: s.mode === id ? '#fff' : 'transparent', fg: s.mode === id ? '#5436b8' : '#4a4757', shadow: s.mode === id ? '0 1px 3px rgba(0,0,0,.12)' : 'none' })),
+      modeA: s.mode === 'A', modeB: s.mode === 'B', modeC: s.mode === 'C',
+      secChips: s.secs.map(x => ({ title: x.title, go: () => this.setState({ section: x.id }), bg: s.section === x.id ? '#6d4bd8' : '#fff', fg: s.section === x.id ? '#fff' : '#3a3846', bd: s.section === x.id ? '#6d4bd8' : '#e3e0ec' })),
+      cur: { title: cur0.title, text: cur0.text, rows: cur0.rows, label: p[0], bg: p[1], fg: p[2] },
+      editText: e => this.upSec(cur0.id, x => ({ ...x, text: e.target.value, st: 'user' })),
+      copyCur: () => this.copy(cur0.text), saveCur: () => this.note(cur0.title + ' saved'),
+      suggs: sugs, noSugg: sugs.length === 0,
+      tones: toneDef.map(([label, k]) => ({ label, go: () => { const a = cur0.alts[Math.min(k, cur0.alts.length - 1)]; this.upSec(cur0.id, x => ({ ...x, sg: [{ text: a, note: 'Tone: ' + label.toLowerCase() + '. Demo text; live Gemini writes this.' }, ...x.sg] })); } })),
+      jumpExp: () => this.setState({ section: 'experience' }),
+      liItems: s.liItems.map((i, idx) => ({ text: i.text, mark: i.on ? '✓' : '', fill: i.on ? '#6d4bd8' : '#fff', bg: i.on ? '#faf8ff' : '#fff', bd: i.on ? '#cfc6ee' : '#ebe9f1', toggle: () => this.setState(st => ({ liItems: st.liItems.map((x, j) => j === idx ? { ...x, on: !x.on } : x) })) })),
+      toastGen: () => this.note('Résumé draft created from your selection'),
+      needConsent: !s.consent, giveConsent: () => this.setState({ consent: true }),
+      chatH: m ? 'calc(100vh - 300px)' : 'calc(100vh - 220px)',
+      msgs: s.msgs.map(x => ({ text: x.text, just: x.r === 'me' ? 'flex-end' : 'flex-start', bg: x.r === 'me' ? '#6d4bd8' : '#f4f1fc', fg: x.r === 'me' ? '#fff' : '#1d1b26' })),
+      pending: s.pending,
+      saveFact: () => { this.setState(st => ({ pending: false, facts: [...st.facts, { text: 'Organized Tech Week at university (role and attendance to be confirmed)', s: 'check', on: true }], msgs: [...st.msgs, { r: 'ai', text: "Saved to your profile as “needs verification”. Tell me what you were responsible for and I'll update it." }] })); },
+      dropFact: () => this.setState({ pending: false }),
+      chatInput: s.chatInput, setChat: e => this.setState({ chatInput: e.target.value }), chatKey: e => { if (e.key === 'Enter') { e.preventDefault(); send(); } },
+      send, toastUpload: () => this.note('Upload a résumé, certificate or image (PDF, PNG, JPG, up to 5 MB)'),
+      flows: flowsDef.map(([id, title, sub]) => ({ title, sub, go: () => this.setState({ prompt: id }), bg: s.prompt === id ? '#f4f1fc' : '#fff', bd: s.prompt === id ? '#6d4bd8' : '#ebe9f1' })),
+      fields: fieldsAll.filter(f => f[4].includes(s.prompt)).map(([label, key, rows, ph]) => ({ label, rows, ph, value: s[key], set: e => this.setState({ [key]: e.target.value }) })),
+      factToggles: s.facts.map((f, idx) => ({ text: f.text, mark: f.on ? '✓' : '', fill: f.on ? '#6d4bd8' : '#fff', toggle: () => this.setState(st => ({ facts: st.facts.map((x, j) => j === idx ? { ...x, on: !x.on } : x) })) })),
+      promptText: this.buildPrompt(), copyPrompt: () => this.copy(this.buildPrompt()),
+      toggleConsent: () => this.setState({ consent: !s.consent }), consentBg: s.consent ? '#6d4bd8' : '#cfccd9', consentLeft: s.consent ? '21px' : '3px',
+      toastExport: () => this.note('Your data export is being prepared'), toastDelete: () => this.note('Confirmation required. Nothing was deleted.'),
+      usage: used.map(([label, val, pct]) => ({ label, val, pct })),
+      toast: s.toast
+    };
+  }
+}
+</script>
+
+
+</body></html>
