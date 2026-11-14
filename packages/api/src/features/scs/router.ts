@@ -38,7 +38,7 @@ export const scsRouter = {
 		.handler(({ context }) => accountService.revokeConsent(context.user.id)),
 	setOnboarding: protectedProcedure
 		.route(route("PUT", "/onboarding", "scsSetOnboarding", "Record the onboarding choice"))
-		.input(z.strictObject({ choice: z.enum(["ai", "resume", "linkedin"]) }))
+		.input(z.strictObject({ choice: z.enum(["ai", "resume", "linkedin", "skip"]) }))
 		.handler(({ context, input }) => accountService.setOnboarding(context.user.id, input.choice)),
 	exportData: protectedProcedure
 		.route(route("GET", "/export", "scsExportData", "Download all my data"))

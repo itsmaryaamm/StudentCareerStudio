@@ -240,7 +240,7 @@ export const env = createEnv({
 		// Per user, lifetime: document or image analyses.
 		SCS_LIMIT_UPLOADS_TOTAL: z.coerce.number().int().min(0).default(3),
 		// Across all users, per UTC day: a circuit breaker that keeps the shared Gemini key inside its free quota.
-		SCS_LIMIT_GLOBAL_AI_PER_DAY: z.coerce.number().int().min(0).default(600),
+		SCS_LIMIT_GLOBAL_AI_PER_DAY: z.coerce.number().int().min(0).default(450),
 		SCS_UPLOAD_MAX_BYTES: z.coerce.number().int().positive().max(20_971_520).default(4_194_304),
 		// Feature Flags
 		FLAG_DISABLE_SIGNUPS: z.stringbool().default(false),

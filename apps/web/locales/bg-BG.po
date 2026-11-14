@@ -3507,7 +3507,6 @@ msgstr "Работно пространство на кандидатурата"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/applications/index.tsx
 msgid "Applications"
 msgstr "Кандидатури"
@@ -4517,7 +4516,6 @@ msgstr "Залавянето не използва AI. Прегледайте в
 #: src/features/career/career-crumb.tsx
 #: src/features/career/career-page.tsx
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/career/index.tsx
 #: src/routes/dashboard/career/route.tsx
 msgid "Career"
@@ -7523,7 +7521,6 @@ msgstr "Документация"
 #: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/documents.tsx
 msgid "Documents"
 msgstr "Документи"
@@ -9187,8 +9184,8 @@ msgid "Found the role and company on the page. Review the details before saving.
 msgstr "Длъжността и компанията са открити на страницата. Прегледайте подробностите, преди да запазите."
 
 #: src/features/auth/layout.tsx
-msgid "Free and open source. Your data stays yours."
-msgstr "Безплатно и с отворен код. Данните ви остават ваши."
+msgid "Founding beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
@@ -10560,6 +10557,11 @@ msgstr "Присъединете се към Discord"
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "Присъединете се към общността в Discord"
+
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the founding beta"
+msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -15201,6 +15203,10 @@ msgstr "Отпечатайте или експортирайте формуля�
 msgid "Privacy"
 msgstr "Поверителност"
 
+#: src/routes/dashboard/settings/route.tsx
+msgid "Privacy & data"
+msgstr ""
+
 #: src/features/resume/share/share-panel.tsx
 msgid "Privacy and downloads"
 msgstr "Поверителност и изтегляния"
@@ -19096,11 +19102,6 @@ msgstr "Започнете с разделите, които повечето а
 msgid "Start with your resume"
 msgstr "Започнете с автобиографията си"
 
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Start your resume"
-msgstr "Започнете автобиографията си"
-
 #: src/features/career/offers.tsx
 msgid "Starts"
 msgstr "Начало"
@@ -19600,6 +19601,10 @@ msgstr "Разкажете ми за продуктово подобрение, 
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "Разкажете ми за случай, в който не сте били съгласни с колега. Как го разрешихте?"
+
+#: src/features/auth/layout.tsx
+msgid "Tell your story once. Use it for your résumé and LinkedIn."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Telugu"
@@ -21080,8 +21085,6 @@ msgstr "днес"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/share/share-panel.tsx
 #: src/routes/builder/letter/-components/write-panel.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
-#: src/routes/dashboard/index.tsx
 msgid "Today"
 msgstr "Днес"
 
@@ -21443,8 +21446,8 @@ msgid "Two offers, each in its own currency and pay period."
 msgstr "Две оферти, всяка в собствена валута и период на заплащане."
 
 #: src/features/auth/layout.tsx
-msgid "Two resumes made with Reactive Resume"
-msgstr "Две автобиографии, създадени с Reactive Resume"
+msgid "Two résumés made in Student Career Studio"
+msgstr ""
 
 #: src/features/resume/editor/design/entries-group.tsx
 msgid "Two rows: company, then position"
@@ -23630,10 +23633,6 @@ msgstr "вашето резюме"
 #: src/routes/builder/letter/-components/download-sheet.tsx
 msgid "your resume and this letter"
 msgstr "вашата автобиография и това писмо"
-
-#: src/features/auth/layout.tsx
-msgid "Your resume and your job search, in one place."
-msgstr "Вашата автобиография и търсенето на работа, на едно място."
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your resume as a web page"

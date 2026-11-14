@@ -24,7 +24,9 @@ export const accountService = {
 			.from(scsCareerFact)
 			.where(and(eq(scsCareerFact.userId, userId), eq(scsCareerFact.status, "approved")));
 		const [resumes] = await db.select({ n: count() }).from(resume).where(eq(resume.userId, userId));
+		const [account] = await db.select({ role: user.role }).from(user).where(eq(user.id, userId));
 		return {
+			isAdmin: account?.role === "admin",
 			aiConsentAt: row?.aiConsentAt?.toISOString() ?? null,
 			privacyAckAt: row?.privacyAckAt?.toISOString() ?? null,
 			onboardingChoice: row?.onboardingChoice ?? null,
@@ -48,7 +50,7 @@ export const accountService = {
 		await db.update(scsUserState).set({ aiConsentAt: null }).where(eq(scsUserState.userId, userId));
 	},
 
-	async setOnboarding(userId: string, choice: "ai" | "resume" | "linkedin") {
+	async setOnboarding(userId: string, choice: "ai" | "resume" | "linkedin" | "skip") {
 		const now = new Date();
 		await db
 			.insert(scsUserState)

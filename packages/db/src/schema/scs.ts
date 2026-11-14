@@ -30,7 +30,7 @@ export const scsUserState = pg.pgTable("scs_user_state", {
 		.references(() => user.id, { onDelete: "cascade" }),
 	aiConsentAt: pg.timestamp("ai_consent_at", { withTimezone: true }),
 	privacyAckAt: pg.timestamp("privacy_ack_at", { withTimezone: true }),
-	onboardingChoice: pg.text("onboarding_choice").$type<"ai" | "resume" | "linkedin">(),
+	onboardingChoice: pg.text("onboarding_choice").$type<"ai" | "resume" | "linkedin" | "skip">(),
 	onboardedAt: pg.timestamp("onboarded_at", { withTimezone: true }),
 	createdAt: pg.timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });

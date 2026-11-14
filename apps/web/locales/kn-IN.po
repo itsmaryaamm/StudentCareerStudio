@@ -3507,7 +3507,6 @@ msgstr "ಅರ್ಜಿ ಕಾರ್ಯಕ್ಷೇತ್ರ"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/applications/index.tsx
 msgid "Applications"
 msgstr "ಅರ್ಜಿಗಳು"
@@ -4517,7 +4516,6 @@ msgstr "ಸೆರೆಹಿಡಿಯುವಿಕೆ AI ಬಳಸುವುದಿ�
 #: src/features/career/career-crumb.tsx
 #: src/features/career/career-page.tsx
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/career/index.tsx
 #: src/routes/dashboard/career/route.tsx
 msgid "Career"
@@ -7523,7 +7521,6 @@ msgstr "ದಾಖಲೀಕರಣ"
 #: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/documents.tsx
 msgid "Documents"
 msgstr "ದಾಖಲೆಗಳು"
@@ -9187,8 +9184,8 @@ msgid "Found the role and company on the page. Review the details before saving.
 msgstr "ಪುಟದಲ್ಲಿ ಹುದ್ದೆ ಮತ್ತು ಕಂಪನಿ ಕಂಡುಬಂದಿವೆ. ಉಳಿಸುವ ಮೊದಲು ವಿವರಗಳನ್ನು ಪರಿಶೀಲಿಸಿ."
 
 #: src/features/auth/layout.tsx
-msgid "Free and open source. Your data stays yours."
-msgstr "ಉಚಿತ ಮತ್ತು ಮುಕ್ತ ಮೂಲ. ನಿಮ್ಮ ಡೇಟಾ ನಿಮ್ಮದೇ."
+msgid "Founding beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
@@ -10560,6 +10557,11 @@ msgstr "Discord ಸೇರಿ"
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "Discord ಸಮುದಾಯವನ್ನು ಸೇರಿ"
+
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the founding beta"
+msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -15201,6 +15203,10 @@ msgstr "ಕಳುಹಿಸುವ ಮೊದಲು ಫಾರ್ಮ್ ಅನ್ನ
 msgid "Privacy"
 msgstr "ಗೌಪ್ಯತೆ"
 
+#: src/routes/dashboard/settings/route.tsx
+msgid "Privacy & data"
+msgstr ""
+
 #: src/features/resume/share/share-panel.tsx
 msgid "Privacy and downloads"
 msgstr "ಗೌಪ್ಯತೆ ಮತ್ತು ಡೌನ್‌ಲೋಡ್‌ಗಳು"
@@ -19096,11 +19102,6 @@ msgstr "ಹೆಚ್ಚಿನ ರೆಸ್ಯೂಮೆಗಳು ಹೊಂದಿ�
 msgid "Start with your resume"
 msgstr "ನಿಮ್ಮ ರೆಸ್ಯೂಮ್‌ನಿಂದ ಪ್ರಾರಂಭಿಸಿ"
 
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Start your resume"
-msgstr "ನಿಮ್ಮ ರೆಸ್ಯೂಮ್ ಪ್ರಾರಂಭಿಸಿ"
-
 #: src/features/career/offers.tsx
 msgid "Starts"
 msgstr "ಪ್ರಾರಂಭ"
@@ -19600,6 +19601,10 @@ msgstr "ನೀವು ಮುನ್ನಡೆಸಿದ ಒಂದು ಉತ್ಪನ
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "ಸಹೋದ್ಯೋಗಿಯೊಂದಿಗೆ ನಿಮಗೆ ಭಿನ್ನಾಭಿಪ್ರಾಯವಿದ್ದ ಸಂದರ್ಭದ ಬಗ್ಗೆ ಹೇಳಿ. ನೀವು ಅದನ್ನು ಹೇಗೆ ಬಗೆಹರಿಸಿದಿರಿ?"
+
+#: src/features/auth/layout.tsx
+msgid "Tell your story once. Use it for your résumé and LinkedIn."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Telugu"
@@ -21080,8 +21085,6 @@ msgstr "ಇಂದು"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/share/share-panel.tsx
 #: src/routes/builder/letter/-components/write-panel.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
-#: src/routes/dashboard/index.tsx
 msgid "Today"
 msgstr "ಇಂದು"
 
@@ -21443,8 +21446,8 @@ msgid "Two offers, each in its own currency and pay period."
 msgstr "ಎರಡು ಆಫರ್‌ಗಳು, ಪ್ರತಿಯೊಂದೂ ತನ್ನದೇ ಕರೆನ್ಸಿ ಮತ್ತು ವೇತನ ಅವಧಿಯಲ್ಲಿ."
 
 #: src/features/auth/layout.tsx
-msgid "Two resumes made with Reactive Resume"
-msgstr "Reactive Resume ನಿಂದ ಮಾಡಿದ ಎರಡು ರೆಸ್ಯೂಮ್‌ಗಳು"
+msgid "Two résumés made in Student Career Studio"
+msgstr ""
 
 #: src/features/resume/editor/design/entries-group.tsx
 msgid "Two rows: company, then position"
@@ -23630,10 +23633,6 @@ msgstr "ನಿಮ್ಮ ರೆಸ್ಯೂಮೆ"
 #: src/routes/builder/letter/-components/download-sheet.tsx
 msgid "your resume and this letter"
 msgstr "ನಿಮ್ಮ ರೆಸ್ಯೂಮ್ ಮತ್ತು ಈ ಪತ್ರ"
-
-#: src/features/auth/layout.tsx
-msgid "Your resume and your job search, in one place."
-msgstr "ನಿಮ್ಮ ರೆಸ್ಯೂಮ್ ಮತ್ತು ನಿಮ್ಮ ಉದ್ಯೋಗ ಹುಡುಕಾಟ, ಒಂದೇ ಸ್ಥಳದಲ್ಲಿ."
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your resume as a web page"

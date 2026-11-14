@@ -13,6 +13,7 @@ import { Route as HomeRouteRouteImport } from "./routes/_home/route";
 import { Route as AgentRouteRouteImport } from "./routes/agent/route";
 import { Route as AuthRouteRouteImport } from "./routes/auth/route";
 import { Route as DashboardRouteRouteImport } from "./routes/dashboard/route";
+import { Route as PrivacyRouteImport } from "./routes/privacy";
 import { Route as HomeIndexRouteImport } from "./routes/_home/index";
 import { Route as HomeAtsCheckerRouteImport } from "./routes/_home/ats-checker";
 import { Route as HomeResumeTemplatesRouteImport } from "./routes/_home/resume-templates";
@@ -32,9 +33,13 @@ import { Route as AuthVerify2faBackupRouteImport } from "./routes/auth/verify-2f
 import { Route as BuilderResumeIdRouteRouteImport } from "./routes/builder/$resumeId/route";
 import { Route as BuilderKitRouteImport } from "./routes/builder/kit";
 import { Route as DashboardIndexRouteImport } from "./routes/dashboard/index";
+import { Route as DashboardAdminRouteImport } from "./routes/dashboard/admin";
 import { Route as DashboardCareerRouteRouteImport } from "./routes/dashboard/career/route";
+import { Route as DashboardChatRouteImport } from "./routes/dashboard/chat";
 import { Route as DashboardCoverLettersRouteImport } from "./routes/dashboard/cover-letters";
 import { Route as DashboardDocumentsRouteImport } from "./routes/dashboard/documents";
+import { Route as DashboardLinkedinRouteImport } from "./routes/dashboard/linkedin";
+import { Route as DashboardPromptsRouteImport } from "./routes/dashboard/prompts";
 import { Route as DashboardSettingsRouteRouteImport } from "./routes/dashboard/settings/route";
 import { Route as DashboardTrashRouteImport } from "./routes/dashboard/trash";
 import { Route as FeedbackTokenRouteImport } from "./routes/feedback/$token";
@@ -56,6 +61,7 @@ import { Route as DashboardSettingsDeveloperRouteImport } from "./routes/dashboa
 import { Route as DashboardSettingsIntegrationsRouteRouteImport } from "./routes/dashboard/settings/integrations/route";
 import { Route as DashboardSettingsJobSearchRouteImport } from "./routes/dashboard/settings/job-search";
 import { Route as DashboardSettingsPreferencesRouteImport } from "./routes/dashboard/settings/preferences";
+import { Route as DashboardSettingsPrivacyRouteImport } from "./routes/dashboard/settings/privacy";
 import { Route as DashboardSettingsProfileRouteImport } from "./routes/dashboard/settings/profile";
 import { Route as DashboardApplicationsApplicationIdChar123TabChar125RouteImport } from "./routes/dashboard/applications/$applicationId.{-$tab}";
 import { Route as DashboardCareerCoachChar123ConversationIdChar125RouteImport } from "./routes/dashboard/career/coach.{-$conversationId}";
@@ -81,6 +87,11 @@ const AuthRouteRoute = AuthRouteRouteImport.update({
 const DashboardRouteRoute = DashboardRouteRouteImport.update({
   id: "/dashboard",
   path: "/dashboard",
+  getParentRoute: () => rootRouteImport,
+} as any);
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: "/privacy",
+  path: "/privacy",
   getParentRoute: () => rootRouteImport,
 } as any);
 const HomeIndexRoute = HomeIndexRouteImport.update({
@@ -178,9 +189,19 @@ const DashboardIndexRoute = DashboardIndexRouteImport.update({
   path: "/",
   getParentRoute: () => DashboardRouteRoute,
 } as any);
+const DashboardAdminRoute = DashboardAdminRouteImport.update({
+  id: "/admin",
+  path: "/admin",
+  getParentRoute: () => DashboardRouteRoute,
+} as any);
 const DashboardCareerRouteRoute = DashboardCareerRouteRouteImport.update({
   id: "/career",
   path: "/career",
+  getParentRoute: () => DashboardRouteRoute,
+} as any);
+const DashboardChatRoute = DashboardChatRouteImport.update({
+  id: "/chat",
+  path: "/chat",
   getParentRoute: () => DashboardRouteRoute,
 } as any);
 const DashboardCoverLettersRoute = DashboardCoverLettersRouteImport.update({
@@ -191,6 +212,16 @@ const DashboardCoverLettersRoute = DashboardCoverLettersRouteImport.update({
 const DashboardDocumentsRoute = DashboardDocumentsRouteImport.update({
   id: "/documents",
   path: "/documents",
+  getParentRoute: () => DashboardRouteRoute,
+} as any);
+const DashboardLinkedinRoute = DashboardLinkedinRouteImport.update({
+  id: "/linkedin",
+  path: "/linkedin",
+  getParentRoute: () => DashboardRouteRoute,
+} as any);
+const DashboardPromptsRoute = DashboardPromptsRouteImport.update({
+  id: "/prompts",
+  path: "/prompts",
   getParentRoute: () => DashboardRouteRoute,
 } as any);
 const DashboardSettingsRouteRoute = DashboardSettingsRouteRouteImport.update({
@@ -310,6 +341,12 @@ const DashboardSettingsPreferencesRoute =
     path: "/preferences",
     getParentRoute: () => DashboardSettingsRouteRoute,
   } as any);
+const DashboardSettingsPrivacyRoute =
+  DashboardSettingsPrivacyRouteImport.update({
+    id: "/privacy",
+    path: "/privacy",
+    getParentRoute: () => DashboardSettingsRouteRoute,
+  } as any);
 const DashboardSettingsProfileRoute =
   DashboardSettingsProfileRouteImport.update({
     id: "/profile",
@@ -358,6 +395,7 @@ export interface FileRoutesByFullPath {
   "/agent": typeof AgentRouteRouteWithChildren;
   "/auth": typeof AuthRouteRouteWithChildren;
   "/dashboard": typeof DashboardRouteRouteWithChildren;
+  "/privacy": typeof PrivacyRoute;
   "/builder/$resumeId": typeof BuilderResumeIdRouteRouteWithChildren;
   "/dashboard/career": typeof DashboardCareerRouteRouteWithChildren;
   "/dashboard/settings": typeof DashboardSettingsRouteRouteWithChildren;
@@ -375,8 +413,12 @@ export interface FileRoutesByFullPath {
   "/auth/verify-2fa": typeof AuthVerify2faRoute;
   "/auth/verify-2fa-backup": typeof AuthVerify2faBackupRoute;
   "/builder/kit": typeof BuilderKitRoute;
+  "/dashboard/admin": typeof DashboardAdminRoute;
+  "/dashboard/chat": typeof DashboardChatRoute;
   "/dashboard/cover-letters": typeof DashboardCoverLettersRoute;
   "/dashboard/documents": typeof DashboardDocumentsRoute;
+  "/dashboard/linkedin": typeof DashboardLinkedinRoute;
+  "/dashboard/prompts": typeof DashboardPromptsRoute;
   "/dashboard/trash": typeof DashboardTrashRoute;
   "/feedback/$token": typeof FeedbackTokenRoute;
   "/agent/": typeof AgentIndexRoute;
@@ -395,6 +437,7 @@ export interface FileRoutesByFullPath {
   "/dashboard/settings/developer": typeof DashboardSettingsDeveloperRoute;
   "/dashboard/settings/job-search": typeof DashboardSettingsJobSearchRoute;
   "/dashboard/settings/preferences": typeof DashboardSettingsPreferencesRoute;
+  "/dashboard/settings/privacy": typeof DashboardSettingsPrivacyRoute;
   "/dashboard/settings/profile": typeof DashboardSettingsProfileRoute;
   "/builder/$resumeId/": typeof BuilderResumeIdIndexRoute;
   "/dashboard/applications/": typeof DashboardApplicationsIndexRoute;
@@ -409,6 +452,7 @@ export interface FileRoutesByFullPath {
   "/dashboard/career/knowledge/stories/{-$storyId}": typeof DashboardCareerKnowledgeStoriesChar123StoryIdChar125Route;
 }
 export interface FileRoutesByTo {
+  "/privacy": typeof PrivacyRoute;
   "/ats-checker": typeof HomeAtsCheckerRoute;
   "/resume-templates": typeof HomeResumeTemplatesRoute;
   "/agent/$threadId": typeof AgentThreadIdRoute;
@@ -423,8 +467,12 @@ export interface FileRoutesByTo {
   "/auth/verify-2fa": typeof AuthVerify2faRoute;
   "/auth/verify-2fa-backup": typeof AuthVerify2faBackupRoute;
   "/builder/kit": typeof BuilderKitRoute;
+  "/dashboard/admin": typeof DashboardAdminRoute;
+  "/dashboard/chat": typeof DashboardChatRoute;
   "/dashboard/cover-letters": typeof DashboardCoverLettersRoute;
   "/dashboard/documents": typeof DashboardDocumentsRoute;
+  "/dashboard/linkedin": typeof DashboardLinkedinRoute;
+  "/dashboard/prompts": typeof DashboardPromptsRoute;
   "/dashboard/trash": typeof DashboardTrashRoute;
   "/feedback/$token": typeof FeedbackTokenRoute;
   "/": typeof HomeIndexRoute;
@@ -444,6 +492,7 @@ export interface FileRoutesByTo {
   "/dashboard/settings/developer": typeof DashboardSettingsDeveloperRoute;
   "/dashboard/settings/job-search": typeof DashboardSettingsJobSearchRoute;
   "/dashboard/settings/preferences": typeof DashboardSettingsPreferencesRoute;
+  "/dashboard/settings/privacy": typeof DashboardSettingsPrivacyRoute;
   "/dashboard/settings/profile": typeof DashboardSettingsProfileRoute;
   "/builder/$resumeId": typeof BuilderResumeIdIndexRoute;
   "/dashboard/applications": typeof DashboardApplicationsIndexRoute;
@@ -463,6 +512,7 @@ export interface FileRoutesById {
   "/agent": typeof AgentRouteRouteWithChildren;
   "/auth": typeof AuthRouteRouteWithChildren;
   "/dashboard": typeof DashboardRouteRouteWithChildren;
+  "/privacy": typeof PrivacyRoute;
   "/builder/$resumeId": typeof BuilderResumeIdRouteRouteWithChildren;
   "/dashboard/career": typeof DashboardCareerRouteRouteWithChildren;
   "/dashboard/settings": typeof DashboardSettingsRouteRouteWithChildren;
@@ -480,8 +530,12 @@ export interface FileRoutesById {
   "/auth/verify-2fa": typeof AuthVerify2faRoute;
   "/auth/verify-2fa-backup": typeof AuthVerify2faBackupRoute;
   "/builder/kit": typeof BuilderKitRoute;
+  "/dashboard/admin": typeof DashboardAdminRoute;
+  "/dashboard/chat": typeof DashboardChatRoute;
   "/dashboard/cover-letters": typeof DashboardCoverLettersRoute;
   "/dashboard/documents": typeof DashboardDocumentsRoute;
+  "/dashboard/linkedin": typeof DashboardLinkedinRoute;
+  "/dashboard/prompts": typeof DashboardPromptsRoute;
   "/dashboard/trash": typeof DashboardTrashRoute;
   "/feedback/$token": typeof FeedbackTokenRoute;
   "/_home/": typeof HomeIndexRoute;
@@ -501,6 +555,7 @@ export interface FileRoutesById {
   "/dashboard/settings/developer": typeof DashboardSettingsDeveloperRoute;
   "/dashboard/settings/job-search": typeof DashboardSettingsJobSearchRoute;
   "/dashboard/settings/preferences": typeof DashboardSettingsPreferencesRoute;
+  "/dashboard/settings/privacy": typeof DashboardSettingsPrivacyRoute;
   "/dashboard/settings/profile": typeof DashboardSettingsProfileRoute;
   "/builder/$resumeId/": typeof BuilderResumeIdIndexRoute;
   "/dashboard/applications/": typeof DashboardApplicationsIndexRoute;
@@ -521,6 +576,7 @@ export interface FileRouteTypes {
     | "/agent"
     | "/auth"
     | "/dashboard"
+    | "/privacy"
     | "/builder/$resumeId"
     | "/dashboard/career"
     | "/dashboard/settings"
@@ -538,8 +594,12 @@ export interface FileRouteTypes {
     | "/auth/verify-2fa"
     | "/auth/verify-2fa-backup"
     | "/builder/kit"
+    | "/dashboard/admin"
+    | "/dashboard/chat"
     | "/dashboard/cover-letters"
     | "/dashboard/documents"
+    | "/dashboard/linkedin"
+    | "/dashboard/prompts"
     | "/dashboard/trash"
     | "/feedback/$token"
     | "/agent/"
@@ -558,6 +618,7 @@ export interface FileRouteTypes {
     | "/dashboard/settings/developer"
     | "/dashboard/settings/job-search"
     | "/dashboard/settings/preferences"
+    | "/dashboard/settings/privacy"
     | "/dashboard/settings/profile"
     | "/builder/$resumeId/"
     | "/dashboard/applications/"
@@ -572,6 +633,7 @@ export interface FileRouteTypes {
     | "/dashboard/career/knowledge/stories/{-$storyId}";
   fileRoutesByTo: FileRoutesByTo;
   to:
+    | "/privacy"
     | "/ats-checker"
     | "/resume-templates"
     | "/agent/$threadId"
@@ -586,8 +648,12 @@ export interface FileRouteTypes {
     | "/auth/verify-2fa"
     | "/auth/verify-2fa-backup"
     | "/builder/kit"
+    | "/dashboard/admin"
+    | "/dashboard/chat"
     | "/dashboard/cover-letters"
     | "/dashboard/documents"
+    | "/dashboard/linkedin"
+    | "/dashboard/prompts"
     | "/dashboard/trash"
     | "/feedback/$token"
     | "/"
@@ -607,6 +673,7 @@ export interface FileRouteTypes {
     | "/dashboard/settings/developer"
     | "/dashboard/settings/job-search"
     | "/dashboard/settings/preferences"
+    | "/dashboard/settings/privacy"
     | "/dashboard/settings/profile"
     | "/builder/$resumeId"
     | "/dashboard/applications"
@@ -625,6 +692,7 @@ export interface FileRouteTypes {
     | "/agent"
     | "/auth"
     | "/dashboard"
+    | "/privacy"
     | "/builder/$resumeId"
     | "/dashboard/career"
     | "/dashboard/settings"
@@ -642,8 +710,12 @@ export interface FileRouteTypes {
     | "/auth/verify-2fa"
     | "/auth/verify-2fa-backup"
     | "/builder/kit"
+    | "/dashboard/admin"
+    | "/dashboard/chat"
     | "/dashboard/cover-letters"
     | "/dashboard/documents"
+    | "/dashboard/linkedin"
+    | "/dashboard/prompts"
     | "/dashboard/trash"
     | "/feedback/$token"
     | "/_home/"
@@ -663,6 +735,7 @@ export interface FileRouteTypes {
     | "/dashboard/settings/developer"
     | "/dashboard/settings/job-search"
     | "/dashboard/settings/preferences"
+    | "/dashboard/settings/privacy"
     | "/dashboard/settings/profile"
     | "/builder/$resumeId/"
     | "/dashboard/applications/"
@@ -682,6 +755,7 @@ export interface RootRouteChildren {
   AgentRouteRoute: typeof AgentRouteRouteWithChildren;
   AuthRouteRoute: typeof AuthRouteRouteWithChildren;
   DashboardRouteRoute: typeof DashboardRouteRouteWithChildren;
+  PrivacyRoute: typeof PrivacyRoute;
   BuilderResumeIdRouteRoute: typeof BuilderResumeIdRouteRouteWithChildren;
   BuilderKitRoute: typeof BuilderKitRoute;
   FeedbackTokenRoute: typeof FeedbackTokenRoute;
@@ -716,6 +790,13 @@ declare module "@tanstack/react-router" {
       path: "/dashboard";
       fullPath: "/dashboard";
       preLoaderRoute: typeof DashboardRouteRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/privacy": {
+      id: "/privacy";
+      path: "/privacy";
+      fullPath: "/privacy";
+      preLoaderRoute: typeof PrivacyRouteImport;
       parentRoute: typeof rootRouteImport;
     };
     "/_home/": {
@@ -851,11 +932,25 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof DashboardIndexRouteImport;
       parentRoute: typeof DashboardRouteRoute;
     };
+    "/dashboard/admin": {
+      id: "/dashboard/admin";
+      path: "/admin";
+      fullPath: "/dashboard/admin";
+      preLoaderRoute: typeof DashboardAdminRouteImport;
+      parentRoute: typeof DashboardRouteRoute;
+    };
     "/dashboard/career": {
       id: "/dashboard/career";
       path: "/career";
       fullPath: "/dashboard/career";
       preLoaderRoute: typeof DashboardCareerRouteRouteImport;
+      parentRoute: typeof DashboardRouteRoute;
+    };
+    "/dashboard/chat": {
+      id: "/dashboard/chat";
+      path: "/chat";
+      fullPath: "/dashboard/chat";
+      preLoaderRoute: typeof DashboardChatRouteImport;
       parentRoute: typeof DashboardRouteRoute;
     };
     "/dashboard/cover-letters": {
@@ -870,6 +965,20 @@ declare module "@tanstack/react-router" {
       path: "/documents";
       fullPath: "/dashboard/documents";
       preLoaderRoute: typeof DashboardDocumentsRouteImport;
+      parentRoute: typeof DashboardRouteRoute;
+    };
+    "/dashboard/linkedin": {
+      id: "/dashboard/linkedin";
+      path: "/linkedin";
+      fullPath: "/dashboard/linkedin";
+      preLoaderRoute: typeof DashboardLinkedinRouteImport;
+      parentRoute: typeof DashboardRouteRoute;
+    };
+    "/dashboard/prompts": {
+      id: "/dashboard/prompts";
+      path: "/prompts";
+      fullPath: "/dashboard/prompts";
+      preLoaderRoute: typeof DashboardPromptsRouteImport;
       parentRoute: typeof DashboardRouteRoute;
     };
     "/dashboard/settings": {
@@ -1017,6 +1126,13 @@ declare module "@tanstack/react-router" {
       path: "/preferences";
       fullPath: "/dashboard/settings/preferences";
       preLoaderRoute: typeof DashboardSettingsPreferencesRouteImport;
+      parentRoute: typeof DashboardSettingsRouteRoute;
+    };
+    "/dashboard/settings/privacy": {
+      id: "/dashboard/settings/privacy";
+      path: "/privacy";
+      fullPath: "/dashboard/settings/privacy";
+      preLoaderRoute: typeof DashboardSettingsPrivacyRouteImport;
       parentRoute: typeof DashboardSettingsRouteRoute;
     };
     "/dashboard/settings/profile": {
@@ -1182,6 +1298,7 @@ interface DashboardSettingsRouteRouteChildren {
   DashboardSettingsDeveloperRoute: typeof DashboardSettingsDeveloperRoute;
   DashboardSettingsJobSearchRoute: typeof DashboardSettingsJobSearchRoute;
   DashboardSettingsPreferencesRoute: typeof DashboardSettingsPreferencesRoute;
+  DashboardSettingsPrivacyRoute: typeof DashboardSettingsPrivacyRoute;
   DashboardSettingsProfileRoute: typeof DashboardSettingsProfileRoute;
   DashboardSettingsIndexRoute: typeof DashboardSettingsIndexRoute;
   DashboardSettingsAuthenticationIndexRoute: typeof DashboardSettingsAuthenticationIndexRoute;
@@ -1197,6 +1314,7 @@ const DashboardSettingsRouteRouteChildren: DashboardSettingsRouteRouteChildren =
     DashboardSettingsDeveloperRoute: DashboardSettingsDeveloperRoute,
     DashboardSettingsJobSearchRoute: DashboardSettingsJobSearchRoute,
     DashboardSettingsPreferencesRoute: DashboardSettingsPreferencesRoute,
+    DashboardSettingsPrivacyRoute: DashboardSettingsPrivacyRoute,
     DashboardSettingsProfileRoute: DashboardSettingsProfileRoute,
     DashboardSettingsIndexRoute: DashboardSettingsIndexRoute,
     DashboardSettingsAuthenticationIndexRoute:
@@ -1211,8 +1329,12 @@ const DashboardSettingsRouteRouteWithChildren =
 interface DashboardRouteRouteChildren {
   DashboardCareerRouteRoute: typeof DashboardCareerRouteRouteWithChildren;
   DashboardSettingsRouteRoute: typeof DashboardSettingsRouteRouteWithChildren;
+  DashboardAdminRoute: typeof DashboardAdminRoute;
+  DashboardChatRoute: typeof DashboardChatRoute;
   DashboardCoverLettersRoute: typeof DashboardCoverLettersRoute;
   DashboardDocumentsRoute: typeof DashboardDocumentsRoute;
+  DashboardLinkedinRoute: typeof DashboardLinkedinRoute;
+  DashboardPromptsRoute: typeof DashboardPromptsRoute;
   DashboardTrashRoute: typeof DashboardTrashRoute;
   DashboardIndexRoute: typeof DashboardIndexRoute;
   DashboardApplicationsTrashRoute: typeof DashboardApplicationsTrashRoute;
@@ -1225,8 +1347,12 @@ interface DashboardRouteRouteChildren {
 const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
   DashboardCareerRouteRoute: DashboardCareerRouteRouteWithChildren,
   DashboardSettingsRouteRoute: DashboardSettingsRouteRouteWithChildren,
+  DashboardAdminRoute: DashboardAdminRoute,
+  DashboardChatRoute: DashboardChatRoute,
   DashboardCoverLettersRoute: DashboardCoverLettersRoute,
   DashboardDocumentsRoute: DashboardDocumentsRoute,
+  DashboardLinkedinRoute: DashboardLinkedinRoute,
+  DashboardPromptsRoute: DashboardPromptsRoute,
   DashboardTrashRoute: DashboardTrashRoute,
   DashboardIndexRoute: DashboardIndexRoute,
   DashboardApplicationsTrashRoute: DashboardApplicationsTrashRoute,
@@ -1257,6 +1383,7 @@ const rootRouteChildren: RootRouteChildren = {
   AgentRouteRoute: AgentRouteRouteWithChildren,
   AuthRouteRoute: AuthRouteRouteWithChildren,
   DashboardRouteRoute: DashboardRouteRouteWithChildren,
+  PrivacyRoute: PrivacyRoute,
   BuilderResumeIdRouteRoute: BuilderResumeIdRouteRouteWithChildren,
   BuilderKitRoute: BuilderKitRoute,
   FeedbackTokenRoute: FeedbackTokenRoute,

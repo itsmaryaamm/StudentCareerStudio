@@ -1,14 +1,14 @@
 {
-	"name": "Reactive Resume",
-	"short_name": "Reactive Resume",
-	"description": "A free and open-source resume builder.",
+	"name": "Student Career Studio",
+	"short_name": "Career Studio",
+	"description": "Your résumé, LinkedIn and career coach in one place.",
 	"id": "/?source=pwa",
 	"start_url": "/dashboard",
 	"scope": "/",
 	"lang": "en",
 	"display": "standalone",
-	"theme_color": "#F8F7F3",
-	"background_color": "#F8F7F3",
+	"theme_color": "#6d4bd8",
+	"background_color": "#ffffff",
 	"icons": [
 		{ "src": "pwa-64x64.png", "sizes": "64x64", "type": "image/png" },
 		{ "src": "pwa-192x192.png", "sizes": "192x192", "type": "image/png" },
@@ -16,8 +16,8 @@
 		{ "src": "maskable-icon-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
 	],
 	"shortcuts": [
-		{ "name": "Documents", "description": "Your resumes and cover letters", "url": "/dashboard" },
-		{ "name": "Applications", "description": "Track your job applications", "url": "/dashboard/applications" },
+		{ "name": "My résumés", "description": "Your résumés", "url": "/dashboard/documents" },
+		{ "name": "AI Career Chat", "description": "Talk to your career coach", "url": "/dashboard/chat" },
 		{ "name": "Career", "description": "Plan your job search", "url": "/dashboard/career" }
 	],
 	"screenshots": [

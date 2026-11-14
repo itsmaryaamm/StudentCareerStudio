@@ -3507,7 +3507,6 @@ msgstr "Hakemuksen työtila"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/applications/index.tsx
 msgid "Applications"
 msgstr "Hakemukset"
@@ -4517,7 +4516,6 @@ msgstr "Kaappaus ei käytä tekoälyä. Tarkista jokainen kenttä ennen tallenta
 #: src/features/career/career-crumb.tsx
 #: src/features/career/career-page.tsx
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/career/index.tsx
 #: src/routes/dashboard/career/route.tsx
 msgid "Career"
@@ -7523,7 +7521,6 @@ msgstr "Dokumentaatio"
 #: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/documents.tsx
 msgid "Documents"
 msgstr "Asiakirjat"
@@ -9187,8 +9184,8 @@ msgid "Found the role and company on the page. Review the details before saving.
 msgstr "Tehtävä ja yritys löytyivät sivulta. Tarkista tiedot ennen tallentamista."
 
 #: src/features/auth/layout.tsx
-msgid "Free and open source. Your data stays yours."
-msgstr "Ilmainen ja avointa lähdekoodia. Tietosi pysyvät sinun."
+msgid "Founding beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
@@ -10560,6 +10557,11 @@ msgstr "Liity Discordiin"
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "Liity Discord-yhteisöön"
+
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the founding beta"
+msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -15201,6 +15203,10 @@ msgstr "Tulosta tai vie lomake tasoitettuna PDF:nä ennen sen lähettämistä."
 msgid "Privacy"
 msgstr "Yksityisyys"
 
+#: src/routes/dashboard/settings/route.tsx
+msgid "Privacy & data"
+msgstr ""
+
 #: src/features/resume/share/share-panel.tsx
 msgid "Privacy and downloads"
 msgstr "Yksityisyys ja lataukset"
@@ -19096,11 +19102,6 @@ msgstr "Aloita niistä osista, jotka useimmissa ansioluetteloissa on."
 msgid "Start with your resume"
 msgstr "Aloita ansioluettelostasi"
 
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Start your resume"
-msgstr "Aloita ansioluettelosi"
-
 #: src/features/career/offers.tsx
 msgid "Starts"
 msgstr "Alkaa"
@@ -19600,6 +19601,10 @@ msgstr "Kerro johtamastasi tuoteparannuksesta. Mikä oli panoksesi, ja miten mit
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "Kerro tilanteesta, jossa olit eri mieltä kollegan kanssa. Miten ratkaisitte asian?"
+
+#: src/features/auth/layout.tsx
+msgid "Tell your story once. Use it for your résumé and LinkedIn."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Telugu"
@@ -21080,8 +21085,6 @@ msgstr "tänään"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/share/share-panel.tsx
 #: src/routes/builder/letter/-components/write-panel.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
-#: src/routes/dashboard/index.tsx
 msgid "Today"
 msgstr "Tänään"
 
@@ -21443,8 +21446,8 @@ msgid "Two offers, each in its own currency and pay period."
 msgstr "Kaksi tarjousta, kumpikin omassa valuutassaan ja palkkajaksossaan."
 
 #: src/features/auth/layout.tsx
-msgid "Two resumes made with Reactive Resume"
-msgstr "Kaksi Reactive Resumella tehtyä ansioluetteloa"
+msgid "Two résumés made in Student Career Studio"
+msgstr ""
 
 #: src/features/resume/editor/design/entries-group.tsx
 msgid "Two rows: company, then position"
@@ -23630,10 +23633,6 @@ msgstr "ansioluettelosi"
 #: src/routes/builder/letter/-components/download-sheet.tsx
 msgid "your resume and this letter"
 msgstr "ansioluettelosi ja tämä kirje"
-
-#: src/features/auth/layout.tsx
-msgid "Your resume and your job search, in one place."
-msgstr "Ansioluettelosi ja työnhakusi yhdessä paikassa."
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your resume as a web page"

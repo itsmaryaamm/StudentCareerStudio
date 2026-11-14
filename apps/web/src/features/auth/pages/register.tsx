@@ -1,10 +1,11 @@
 import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import { useSelector } from "@tanstack/react-form";
-import { useQueryClient } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { Link, useNavigate, useRouteContext, useRouter, useSearch } from "@tanstack/react-router";
 import { useState } from "react";
 import z from "zod";
+import { Alert } from "@reactive-resume/ui/components/alert";
 import { Button } from "@reactive-resume/ui/components/button";
 import { FormControl, FormDescription, FormItem, FormLabel, FormMessage } from "@reactive-resume/ui/components/form";
 import { Input } from "@reactive-resume/ui/components/input";
@@ -16,6 +17,7 @@ import { SocialAuth } from "../components/social-auth";
 import { getAuthRedirectOptions, getOAuthSignInOptions, isOAuthRedirect } from "../redirect";
 import { PasswordInput } from "@/components/input/password-input";
 import { authClient } from "@/libs/auth/client";
+import { orpc } from "@/libs/orpc/client";
 import { sessionQueryKey } from "@/libs/root-context";
 import { useAppForm } from "@/libs/tanstack-form";
 
@@ -47,7 +49,15 @@ const formSchema = z.object({
 		.string()
 		.min(8, { error: () => t`Use at least 8 characters.` })
 		.max(64, { error: () => t`Use 64 characters or fewer.` }),
+	// Founding beta: only checked when the server asks for a code; the server is what enforces it.
+	inviteCode: z.string().trim().max(64),
 });
+
+/** An invite link looks like /auth/register?invite=CODE. */
+function inviteFromUrl() {
+	if (typeof window === "undefined") return "";
+	return new URLSearchParams(window.location.search).get("invite")?.slice(0, 64) ?? "";
+}
 
 type Props = {
 	disableEmailAuth: boolean;
@@ -64,9 +74,11 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 	const smtpEnabled = useRouteContext({ strict: false }).flags?.smtpEnabled ?? false;
 	// The username is made from the email address unless they ask to choose one.
 	const [ownUsername, setOwnUsername] = useState(false);
+	const { data: beta } = useQuery(orpc.scs.beta.queryOptions());
+	const betaFull = beta?.seatsLeft === 0;
 
 	const form = useAppForm({
-		defaultValues: { name: "", username: "", email: "", password: "" },
+		defaultValues: { name: "", username: "", email: "", password: "", inviteCode: inviteFromUrl() },
 		validators: { onSubmit: formSchema },
 		onSubmit: async ({ value }) => {
 			const toastId = toast.add({ type: "loading", description: t`Signing up…` });
@@ -82,6 +94,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 				displayUsername: value.username,
 				callbackURL: callbackURL ?? "/dashboard",
 				...(!createPrompt ? oauthOptions : {}),
+				fetchOptions: { headers: value.inviteCode ? { "x-beta-code": value.inviteCode } : {} },
 			});
 
 			if (error) {
@@ -133,7 +146,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 						Keep your work
 					</Trans>
 				) : (
-					<Trans comment="Title on the registration page">Start your resume</Trans>
+					<Trans comment="Title on the registration page">Join the founding beta</Trans>
 				)}
 			</AuthTitle>
 			<ConnectingClient callbackURL={callbackURL} register>
@@ -158,6 +171,14 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 						void form.handleSubmit();
 					}}
 				>
+					{beta && (
+						<Alert variant={betaFull ? "warn" : "info"} role="status">
+							{betaFull
+								? `The founding beta is full (${beta.maxSeats} students). Thank you for your interest.`
+								: `Founding beta · ${beta.seatsLeft} of ${beta.maxSeats} free seats left.`}
+						</Alert>
+					)}
+
 					<form.Field name="name">
 						{(field) => (
 							<FormItem data-route-focus hasError={field.state.meta.isTouched && field.state.meta.errors.length > 0}>
@@ -282,13 +303,45 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 						)}
 					</form.Field>
 
-					<Button type="submit" size="lg" className="mt-1 w-full leading-5" disabled={isSubmitting}>
+					{beta?.inviteRequired && (
+						<form.Field name="inviteCode">
+							{(field) => (
+								<FormItem>
+									<FormLabel>Invite code</FormLabel>
+									<FormControl
+										render={
+											<Input
+												maxLength={64}
+												autoComplete="off"
+												name={field.name}
+												value={field.state.value}
+												onBlur={field.handleBlur}
+												onChange={(event) => field.handleChange(event.target.value)}
+											/>
+										}
+									/>
+									<FormDescription>The code from your founding-beta invitation.</FormDescription>
+								</FormItem>
+							)}
+						</form.Field>
+					)}
+
+					<p className="text-[13px] leading-[18px] text-ink-3">
+						By creating an account you agree to the{" "}
+						<a href="/privacy" target="_blank" rel="noreferrer" className="underline">
+							beta privacy notice
+						</a>
+						: your résumé stays private to you, and AI features send only what you choose to Google Gemini.
+					</p>
+
+					<Button type="submit" size="lg" className="mt-1 w-full leading-5" disabled={isSubmitting || betaFull}>
 						<Trans comment="Primary action button label on registration form">Create account</Trans>
 					</Button>
 				</form>
 			)}
 
-			<SocialAuth signUp rule={!disableEmailAuth} />
+			{/* Social sign-up can't carry an invite code, so it is offered only when the beta needs none. */}
+			{!beta?.inviteRequired && <SocialAuth signUp rule={!disableEmailAuth} />}
 
 			<AuthFoot>
 				<Trans>

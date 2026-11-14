@@ -3507,7 +3507,6 @@ msgstr "申请工作区"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/applications/index.tsx
 msgid "Applications"
 msgstr "申请"
@@ -4517,7 +4516,6 @@ msgstr "捕获不使用 AI。保存前请检查每个字段。"
 #: src/features/career/career-crumb.tsx
 #: src/features/career/career-page.tsx
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/career/index.tsx
 #: src/routes/dashboard/career/route.tsx
 msgid "Career"
@@ -7523,7 +7521,6 @@ msgstr "文档"
 #: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/documents.tsx
 msgid "Documents"
 msgstr "文档"
@@ -9187,8 +9184,8 @@ msgid "Found the role and company on the page. Review the details before saving.
 msgstr "已在页面上找到职位和公司。保存前请核对详情。"
 
 #: src/features/auth/layout.tsx
-msgid "Free and open source. Your data stays yours."
-msgstr "免费开源。您的数据始终属于您。"
+msgid "Founding beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
@@ -10560,6 +10557,11 @@ msgstr "加入 Discord"
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "加入 Discord 社区"
+
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the founding beta"
+msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -15201,6 +15203,10 @@ msgstr "在发送之前，把表单打印或导出为扁平化的 PDF。"
 msgid "Privacy"
 msgstr "隐私"
 
+#: src/routes/dashboard/settings/route.tsx
+msgid "Privacy & data"
+msgstr ""
+
 #: src/features/resume/share/share-panel.tsx
 msgid "Privacy and downloads"
 msgstr "隐私和下载"
@@ -19096,11 +19102,6 @@ msgstr "从大多数简历都有的部分开始。"
 msgid "Start with your resume"
 msgstr "从您的简历开始"
 
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Start your resume"
-msgstr "开始制作您的简历"
-
 #: src/features/career/offers.tsx
 msgid "Starts"
 msgstr "入职日期"
@@ -19600,6 +19601,10 @@ msgstr "请讲讲一项您主导的产品改进。您的贡献是什么？您是
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "请讲讲您与同事意见不合的一次经历。您是如何解决的？"
+
+#: src/features/auth/layout.tsx
+msgid "Tell your story once. Use it for your résumé and LinkedIn."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Telugu"
@@ -21080,8 +21085,6 @@ msgstr "今天"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/share/share-panel.tsx
 #: src/routes/builder/letter/-components/write-panel.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
-#: src/routes/dashboard/index.tsx
 msgid "Today"
 msgstr "今天"
 
@@ -21443,8 +21446,8 @@ msgid "Two offers, each in its own currency and pay period."
 msgstr "两份录用通知，各有自己的货币和薪酬周期。"
 
 #: src/features/auth/layout.tsx
-msgid "Two resumes made with Reactive Resume"
-msgstr "使用 Reactive Resume 制作的两份简历"
+msgid "Two résumés made in Student Career Studio"
+msgstr ""
 
 #: src/features/resume/editor/design/entries-group.tsx
 msgid "Two rows: company, then position"
@@ -23630,10 +23633,6 @@ msgstr "你的简历"
 #: src/routes/builder/letter/-components/download-sheet.tsx
 msgid "your resume and this letter"
 msgstr "您的简历和这封求职信"
-
-#: src/features/auth/layout.tsx
-msgid "Your resume and your job search, in one place."
-msgstr "您的简历和求职，尽在一处。"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your resume as a web page"

@@ -19,7 +19,7 @@ async function http(method, path, { body, cookie, headers = {} } = {}) {
 		method,
 		headers: {
 			"content-type": "application/json",
-			origin: "http://localhost:3000",
+			origin: process.env.ORIGIN ?? BASE,
 			...(cookie ? { cookie } : {}),
 			...headers,
 		},
@@ -36,7 +36,7 @@ async function signUp(tag, code = "beta-code-1") {
 		method: "POST",
 		headers: {
 			"content-type": "application/json",
-			origin: "http://localhost:3000",
+			origin: process.env.ORIGIN ?? BASE,
 			...(code ? { "x-beta-code": code } : {}),
 		},
 		body: JSON.stringify({
@@ -54,7 +54,7 @@ async function signUp(tag, code = "beta-code-1") {
 async function signIn(tag) {
 	const res = await fetch(`${BASE}/api/auth/sign-in/email`, {
 		method: "POST",
-		headers: { "content-type": "application/json", origin: "http://localhost:3000" },
+		headers: { "content-type": "application/json", origin: process.env.ORIGIN ?? BASE },
 		body: JSON.stringify({ email: `${tag}@example.com`, password: "Sup3rSecret!pass" }),
 	});
 	return { status: res.status, cookie: (res.headers.getSetCookie?.() ?? []).map((c) => c.split(";")[0]).join("; ") };
@@ -358,7 +358,7 @@ check("feedback saved", r.status === 200 || r.status === 204, JSON.stringify(r))
 const adm = await (async () => {
 	const res = await fetch(`${BASE}/api/auth/sign-in/email`, {
 		method: "POST",
-		headers: { "content-type": "application/json", origin: "http://localhost:3000" },
+		headers: { "content-type": "application/json", origin: process.env.ORIGIN ?? BASE },
 		body: JSON.stringify({ email: adminEmail, password: "Sup3rSecret!pass" }),
 	});
 	return { cookie: (res.headers.getSetCookie?.() ?? []).map((c) => c.split(";")[0]).join("; ") };

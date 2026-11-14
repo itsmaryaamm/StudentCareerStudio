@@ -40,7 +40,9 @@ vi.mock("@tanstack/react-router", () => ({
 		<a href={to} {...props} />
 	),
 }));
-vi.mock("@/libs/orpc/client", () => ({ orpc: { auth: { providers: { list: { queryOptions: () => ({}) } } } } }));
+vi.mock("@/libs/orpc/client", () => ({
+	orpc: { auth: { providers: { list: { queryOptions: () => ({}) } } }, scs: { beta: { queryOptions: () => ({}) } } },
+}));
 vi.mock("@/libs/auth/client", () => ({
 	authClient: {
 		requestPasswordReset: mocks.requestPasswordReset,

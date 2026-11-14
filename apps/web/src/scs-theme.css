@@ -1,0 +1,34 @@
+/*
+ * Student Career Studio identity on top of the Reactive Resume design system:
+ * brand purple #6d4bd8 (hover #5436b8, tint #f4f1fc), Plus Jakarta Sans, bold headings.
+ * Only tokens are overridden, so every component keeps its spacing, states and focus ring.
+ */
+@import "./scs-fonts.css";
+
+:root {
+	--font-ui: "Plus Jakarta Sans", system-ui, sans-serif;
+	--font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+	--accent: oklch(0.52 0.2 285); /* #6d4bd8 */
+	--accent-hover: oklch(0.45 0.19 285); /* #5436b8 */
+	--on-accent: oklch(0.99 0.005 285);
+	--accent-soft: oklch(0.955 0.025 290); /* #f4f1fc */
+	--accent-text: oklch(0.44 0.17 285); /* 6.8:1 on the tint */
+}
+
+.dark {
+	--accent: oklch(0.72 0.14 290);
+	--accent-hover: oklch(0.78 0.13 290);
+	--on-accent: oklch(0.18 0.04 285);
+	--accent-soft: oklch(0.3 0.07 288);
+	--accent-text: oklch(0.84 0.1 290);
+}
+
+/* The design uses bold sans titles where the base system uses a one-weight serif. */
+.t-display,
+.t-big-number,
+.t-root-title,
+.t-page-title,
+.t-section-title {
+	font-weight: 700;
+	letter-spacing: -0.015em;
+}

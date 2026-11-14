@@ -1,12 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Homepage } from "@/features/homepage/page";
-import { getHomepageMeta } from "@/libs/seo";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
-// An instance's root resume (`ROOT_RESUME_ID`) is served by the server as a web page; the app only shows the home.
+// Founding beta: there is no marketing site. Signed-in students go to their dashboard, everyone else to sign in.
 export const Route = createFileRoute("/_home/")({
-	component: Homepage,
-	head: () => {
-		const { title, description } = getHomepageMeta();
-		return { meta: [{ title }, { name: "description", content: description }] };
+	beforeLoad: ({ context }) => {
+		throw redirect({ to: context.session ? "/dashboard" : "/auth/login", replace: true });
 	},
 });

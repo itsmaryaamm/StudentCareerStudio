@@ -3507,7 +3507,6 @@ msgstr "Pracovní prostor žádosti"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/applications/index.tsx
 msgid "Applications"
 msgstr "Žádosti"
@@ -4517,7 +4516,6 @@ msgstr "Zachycení nepoužívá AI. Před uložením zkontrolujte všechna pole.
 #: src/features/career/career-crumb.tsx
 #: src/features/career/career-page.tsx
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/career/index.tsx
 #: src/routes/dashboard/career/route.tsx
 msgid "Career"
@@ -7523,7 +7521,6 @@ msgstr "Dokumentace"
 #: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/documents.tsx
 msgid "Documents"
 msgstr "Dokumenty"
@@ -9187,8 +9184,8 @@ msgid "Found the role and company on the page. Review the details before saving.
 msgstr "Na stránce byla nalezena pozice a společnost. Před uložením zkontrolujte podrobnosti."
 
 #: src/features/auth/layout.tsx
-msgid "Free and open source. Your data stays yours."
-msgstr "Zdarma a open source. Vaše data zůstávají vaše."
+msgid "Founding beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
@@ -10560,6 +10557,11 @@ msgstr "Připojit se na Discord"
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "Připojte se ke komunitě na Discordu"
+
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the founding beta"
+msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -15201,6 +15203,10 @@ msgstr "Před odesláním formulář vytiskněte nebo exportujte do plochého PD
 msgid "Privacy"
 msgstr "Soukromí"
 
+#: src/routes/dashboard/settings/route.tsx
+msgid "Privacy & data"
+msgstr ""
+
 #: src/features/resume/share/share-panel.tsx
 msgid "Privacy and downloads"
 msgstr "Soukromí a stahování"
@@ -19096,11 +19102,6 @@ msgstr "Začněte sekcemi, které má většina životopisů."
 msgid "Start with your resume"
 msgstr "Začněte svým životopisem"
 
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Start your resume"
-msgstr "Začněte svůj životopis"
-
 #: src/features/career/offers.tsx
 msgid "Starts"
 msgstr "Začíná"
@@ -19600,6 +19601,10 @@ msgstr "Řekněte mi o zlepšení produktu, které jste vedli. Jaký byl váš p
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "Řekněte mi o situaci, kdy jste nesouhlasili s kolegou. Jak jste to vyřešili?"
+
+#: src/features/auth/layout.tsx
+msgid "Tell your story once. Use it for your résumé and LinkedIn."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Telugu"
@@ -21080,8 +21085,6 @@ msgstr "dnes"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/share/share-panel.tsx
 #: src/routes/builder/letter/-components/write-panel.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
-#: src/routes/dashboard/index.tsx
 msgid "Today"
 msgstr "Dnes"
 
@@ -21443,8 +21446,8 @@ msgid "Two offers, each in its own currency and pay period."
 msgstr "Dvě nabídky, každá ve vlastní měně a období výplaty."
 
 #: src/features/auth/layout.tsx
-msgid "Two resumes made with Reactive Resume"
-msgstr "Dva životopisy vytvořené v Reactive Resume"
+msgid "Two résumés made in Student Career Studio"
+msgstr ""
 
 #: src/features/resume/editor/design/entries-group.tsx
 msgid "Two rows: company, then position"
@@ -23630,10 +23633,6 @@ msgstr "váš životopis"
 #: src/routes/builder/letter/-components/download-sheet.tsx
 msgid "your resume and this letter"
 msgstr "váš životopis a tento dopis"
-
-#: src/features/auth/layout.tsx
-msgid "Your resume and your job search, in one place."
-msgstr "Váš životopis a hledání práce na jednom místě."
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your resume as a web page"

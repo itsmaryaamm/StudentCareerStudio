@@ -3507,7 +3507,6 @@ msgstr "지원 작업 공간"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/applications/index.tsx
 msgid "Applications"
 msgstr "지원 목록"
@@ -4517,7 +4516,6 @@ msgstr "가져오기에는 AI를 사용하지 않습니다. 저장하기 전에 
 #: src/features/career/career-crumb.tsx
 #: src/features/career/career-page.tsx
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/career/index.tsx
 #: src/routes/dashboard/career/route.tsx
 msgid "Career"
@@ -7523,7 +7521,6 @@ msgstr "문서"
 #: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/documents.tsx
 msgid "Documents"
 msgstr "서류"
@@ -9187,8 +9184,8 @@ msgid "Found the role and company on the page. Review the details before saving.
 msgstr "페이지에서 직무와 회사를 찾았습니다. 저장하기 전에 세부 정보를 검토하세요."
 
 #: src/features/auth/layout.tsx
-msgid "Free and open source. Your data stays yours."
-msgstr "무료 오픈 소스. 데이터는 온전히 내 것입니다."
+msgid "Founding beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
@@ -10560,6 +10557,11 @@ msgstr "Discord 참여하기"
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "Discord 커뮤니티 참여하기"
+
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the founding beta"
+msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -15201,6 +15203,10 @@ msgstr "보내기 전에 양식을 일반 PDF로 인쇄하거나 내보내세요
 msgid "Privacy"
 msgstr "개인정보 보호"
 
+#: src/routes/dashboard/settings/route.tsx
+msgid "Privacy & data"
+msgstr ""
+
 #: src/features/resume/share/share-panel.tsx
 msgid "Privacy and downloads"
 msgstr "개인정보 및 다운로드"
@@ -19096,11 +19102,6 @@ msgstr "대부분의 이력서에 있는 섹션부터 시작하세요."
 msgid "Start with your resume"
 msgstr "이력서로 시작하기"
 
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Start your resume"
-msgstr "이력서 시작하기"
-
 #: src/features/career/offers.tsx
 msgid "Starts"
 msgstr "시작일"
@@ -19600,6 +19601,10 @@ msgstr "주도했던 제품 개선 사례를 말씀해 주세요. 어떻게 기�
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "동료와 의견이 달랐던 때를 말씀해 주세요. 어떻게 해결했나요?"
+
+#: src/features/auth/layout.tsx
+msgid "Tell your story once. Use it for your résumé and LinkedIn."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Telugu"
@@ -21080,8 +21085,6 @@ msgstr "오늘"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/share/share-panel.tsx
 #: src/routes/builder/letter/-components/write-panel.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
-#: src/routes/dashboard/index.tsx
 msgid "Today"
 msgstr "오늘"
 
@@ -21443,8 +21446,8 @@ msgid "Two offers, each in its own currency and pay period."
 msgstr "각각 고유한 통화와 급여 주기를 가진 오퍼 두 개."
 
 #: src/features/auth/layout.tsx
-msgid "Two resumes made with Reactive Resume"
-msgstr "Reactive Resume로 만든 이력서 두 개"
+msgid "Two résumés made in Student Career Studio"
+msgstr ""
 
 #: src/features/resume/editor/design/entries-group.tsx
 msgid "Two rows: company, then position"
@@ -23630,10 +23633,6 @@ msgstr "당신의 이력서"
 #: src/routes/builder/letter/-components/download-sheet.tsx
 msgid "your resume and this letter"
 msgstr "이력서와 이 레터"
-
-#: src/features/auth/layout.tsx
-msgid "Your resume and your job search, in one place."
-msgstr "이력서와 구직 활동을 한곳에서."
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your resume as a web page"

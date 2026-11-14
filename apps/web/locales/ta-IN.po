@@ -3507,7 +3507,6 @@ msgstr "விண்ணப்பப் பணியிடம்"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/applications/index.tsx
 msgid "Applications"
 msgstr "விண்ணப்பங்கள்"
@@ -4517,7 +4516,6 @@ msgstr "பிடித்தல் AI-ஐப் பயன்படுத்த�
 #: src/features/career/career-crumb.tsx
 #: src/features/career/career-page.tsx
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/career/index.tsx
 #: src/routes/dashboard/career/route.tsx
 msgid "Career"
@@ -7523,7 +7521,6 @@ msgstr "ஆவணங்கள்"
 #: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/documents.tsx
 msgid "Documents"
 msgstr "ஆவணங்கள்"
@@ -9187,8 +9184,8 @@ msgid "Found the role and company on the page. Review the details before saving.
 msgstr "பக்கத்தில் பதவியும் நிறுவனமும் கண்டறியப்பட்டன. சேமிக்கும் முன் விவரங்களை மதிப்பாய்வு செய்யவும்."
 
 #: src/features/auth/layout.tsx
-msgid "Free and open source. Your data stays yours."
-msgstr "இலவசம், திறந்த மூலம். உங்கள் தரவு உங்களுடையதே."
+msgid "Founding beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
@@ -10560,6 +10557,11 @@ msgstr "Discord-இல் சேருங்கள்"
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "Discord சமூகத்தில் சேருங்கள்"
+
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the founding beta"
+msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -15201,6 +15203,10 @@ msgstr "அனுப்புவதற்கு முன் படிவத்�
 msgid "Privacy"
 msgstr "தனியுரிமை"
 
+#: src/routes/dashboard/settings/route.tsx
+msgid "Privacy & data"
+msgstr ""
+
 #: src/features/resume/share/share-panel.tsx
 msgid "Privacy and downloads"
 msgstr "தனியுரிமை மற்றும் பதிவிறக்கங்கள்"
@@ -19096,11 +19102,6 @@ msgstr "பெரும்பாலான ரெஸ்யூம்களில�
 msgid "Start with your resume"
 msgstr "உங்கள் ரெஸ்யூமுடன் தொடங்குங்கள்"
 
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Start your resume"
-msgstr "உங்கள் ரெஸ்யூமைத் தொடங்கு"
-
 #: src/features/career/offers.tsx
 msgid "Starts"
 msgstr "தொடக்கம்"
@@ -19600,6 +19601,10 @@ msgstr "நீங்கள் வழிநடத்திய ஒரு தயா
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "சக ஊழியருடன் கருத்து வேறுபட்ட ஒரு சந்தர்ப்பத்தைப் பற்றிச் சொல்லுங்கள். அதை எப்படித் தீர்த்தீர்கள்?"
+
+#: src/features/auth/layout.tsx
+msgid "Tell your story once. Use it for your résumé and LinkedIn."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Telugu"
@@ -21080,8 +21085,6 @@ msgstr "இன்று"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/share/share-panel.tsx
 #: src/routes/builder/letter/-components/write-panel.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
-#: src/routes/dashboard/index.tsx
 msgid "Today"
 msgstr "இன்று"
 
@@ -21443,8 +21446,8 @@ msgid "Two offers, each in its own currency and pay period."
 msgstr "இரண்டு சலுகைகள், ஒவ்வொன்றும் அதன் சொந்த நாணயம் மற்றும் ஊதியக் காலத்தில்."
 
 #: src/features/auth/layout.tsx
-msgid "Two resumes made with Reactive Resume"
-msgstr "Reactive Resume மூலம் உருவாக்கிய இரண்டு ரெஸ்யூம்கள்"
+msgid "Two résumés made in Student Career Studio"
+msgstr ""
 
 #: src/features/resume/editor/design/entries-group.tsx
 msgid "Two rows: company, then position"
@@ -23630,10 +23633,6 @@ msgstr "உங்கள் ரெஸ்யூம்"
 #: src/routes/builder/letter/-components/download-sheet.tsx
 msgid "your resume and this letter"
 msgstr "உங்கள் ரெஸ்யூமும் இந்தக் கடிதமும்"
-
-#: src/features/auth/layout.tsx
-msgid "Your resume and your job search, in one place."
-msgstr "உங்கள் ரெஸ்யூமும் வேலைத் தேடலும், ஒரே இடத்தில்."
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your resume as a web page"

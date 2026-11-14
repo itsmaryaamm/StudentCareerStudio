@@ -3507,7 +3507,6 @@ msgstr "סביבת העבודה של המועמדות"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/applications/index.tsx
 msgid "Applications"
 msgstr "מועמדויות"
@@ -4517,7 +4516,6 @@ msgstr "הקליטה אינה משתמשת ב-AI. בדוק כל שדה לפני 
 #: src/features/career/career-crumb.tsx
 #: src/features/career/career-page.tsx
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/career/index.tsx
 #: src/routes/dashboard/career/route.tsx
 msgid "Career"
@@ -7523,7 +7521,6 @@ msgstr "תיעוד"
 #: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/documents.tsx
 msgid "Documents"
 msgstr "מסמכים"
@@ -9187,8 +9184,8 @@ msgid "Found the role and company on the page. Review the details before saving.
 msgstr "התפקיד והחברה נמצאו בדף. בדוק את הפרטים לפני השמירה."
 
 #: src/features/auth/layout.tsx
-msgid "Free and open source. Your data stays yours."
-msgstr "חינמי וקוד פתוח. הנתונים שלכם נשארים שלכם."
+msgid "Founding beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
@@ -10560,6 +10557,11 @@ msgstr "הצטרפות ל-Discord"
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "הצטרפו לקהילת Discord"
+
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the founding beta"
+msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -15201,6 +15203,10 @@ msgstr "הדפס או ייצא את הטופס ל־PDF שטוח לפני השל�
 msgid "Privacy"
 msgstr "פרטיות"
 
+#: src/routes/dashboard/settings/route.tsx
+msgid "Privacy & data"
+msgstr ""
+
 #: src/features/resume/share/share-panel.tsx
 msgid "Privacy and downloads"
 msgstr "פרטיות והורדות"
@@ -19096,11 +19102,6 @@ msgstr "התחל עם הסעיפים שיש לרוב קורות החיים."
 msgid "Start with your resume"
 msgstr "להתחיל עם קורות החיים שלכם"
 
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Start your resume"
-msgstr "התחל את קורות החיים שלך"
-
 #: src/features/career/offers.tsx
 msgid "Starts"
 msgstr "תאריך התחלה"
@@ -19600,6 +19601,10 @@ msgstr "ספר לי על שיפור מוצר שהובלת. מה הייתה הת�
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "ספר לי על פעם שלא הסכמת עם עמית. איך פתרתם את זה?"
+
+#: src/features/auth/layout.tsx
+msgid "Tell your story once. Use it for your résumé and LinkedIn."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Telugu"
@@ -21080,8 +21085,6 @@ msgstr "היום"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/share/share-panel.tsx
 #: src/routes/builder/letter/-components/write-panel.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
-#: src/routes/dashboard/index.tsx
 msgid "Today"
 msgstr "הַיוֹם"
 
@@ -21443,8 +21446,8 @@ msgid "Two offers, each in its own currency and pay period."
 msgstr "שתי הצעות, כל אחת במטבע ובתקופת תשלום משלה."
 
 #: src/features/auth/layout.tsx
-msgid "Two resumes made with Reactive Resume"
-msgstr "שני קורות חיים שנוצרו עם Reactive Resume"
+msgid "Two résumés made in Student Career Studio"
+msgstr ""
 
 #: src/features/resume/editor/design/entries-group.tsx
 msgid "Two rows: company, then position"
@@ -23630,10 +23633,6 @@ msgstr "קורות החיים שלך"
 #: src/routes/builder/letter/-components/download-sheet.tsx
 msgid "your resume and this letter"
 msgstr "קורות החיים שלכם והמכתב הזה"
-
-#: src/features/auth/layout.tsx
-msgid "Your resume and your job search, in one place."
-msgstr "קורות החיים וחיפוש העבודה שלכם, במקום אחד."
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your resume as a web page"

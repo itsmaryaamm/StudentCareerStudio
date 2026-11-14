@@ -3507,7 +3507,6 @@ msgstr "Ruang kerja permohonan"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/command-palette/pages/resumes.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/applications/index.tsx
 msgid "Applications"
 msgstr "Permohonan"
@@ -4517,7 +4516,6 @@ msgstr "Rakaman tidak menggunakan AI. Semak setiap medan sebelum menyimpan."
 #: src/features/career/career-crumb.tsx
 #: src/features/career/career-page.tsx
 #: src/features/command-palette/pages/navigation.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/career/index.tsx
 #: src/routes/dashboard/career/route.tsx
 msgid "Career"
@@ -7523,7 +7521,6 @@ msgstr "Dokumentasi"
 #: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 #: src/features/trash/trash-page.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
 #: src/routes/dashboard/documents.tsx
 msgid "Documents"
 msgstr "Dokumen"
@@ -9187,8 +9184,8 @@ msgid "Found the role and company on the page. Review the details before saving.
 msgstr "Peranan dan syarikat ditemui pada halaman. Semak butiran sebelum menyimpan."
 
 #: src/features/auth/layout.tsx
-msgid "Free and open source. Your data stays yours."
-msgstr "Percuma dan sumber terbuka. Data anda kekal milik anda."
+msgid "Founding beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
@@ -10560,6 +10557,11 @@ msgstr "Sertai Discord"
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "Sertai komuniti Discord"
+
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the founding beta"
+msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -15201,6 +15203,10 @@ msgstr "Cetak atau eksport borang kepada PDF rata sebelum menghantarnya."
 msgid "Privacy"
 msgstr "Privasi"
 
+#: src/routes/dashboard/settings/route.tsx
+msgid "Privacy & data"
+msgstr ""
+
 #: src/features/resume/share/share-panel.tsx
 msgid "Privacy and downloads"
 msgstr "Privasi dan muat turun"
@@ -19096,11 +19102,6 @@ msgstr "Mulakan dengan bahagian yang ada pada kebanyakan resume."
 msgid "Start with your resume"
 msgstr "Mulakan dengan resume anda"
 
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Start your resume"
-msgstr "Mulakan resume anda"
-
 #: src/features/career/offers.tsx
 msgid "Starts"
 msgstr "Bermula"
@@ -19600,6 +19601,10 @@ msgstr "Ceritakan tentang penambahbaikan produk yang anda terajui. Apakah sumban
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "Ceritakan tentang satu ketika anda tidak bersetuju dengan rakan sekerja. Bagaimana anda menyelesaikannya?"
+
+#: src/features/auth/layout.tsx
+msgid "Tell your story once. Use it for your résumé and LinkedIn."
+msgstr ""
 
 #: src/libs/locale.ts
 msgid "Telugu"
@@ -21080,8 +21085,6 @@ msgstr "hari ini"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/share/share-panel.tsx
 #: src/routes/builder/letter/-components/write-panel.tsx
-#: src/routes/dashboard/-components/app-shell.tsx
-#: src/routes/dashboard/index.tsx
 msgid "Today"
 msgstr "Hari ini"
 
@@ -21443,8 +21446,8 @@ msgid "Two offers, each in its own currency and pay period."
 msgstr "Dua tawaran, setiap satu dalam mata wang dan tempoh gajinya sendiri."
 
 #: src/features/auth/layout.tsx
-msgid "Two resumes made with Reactive Resume"
-msgstr "Dua resume yang dibuat dengan Reactive Resume"
+msgid "Two résumés made in Student Career Studio"
+msgstr ""
 
 #: src/features/resume/editor/design/entries-group.tsx
 msgid "Two rows: company, then position"
@@ -23630,10 +23633,6 @@ msgstr "resume anda"
 #: src/routes/builder/letter/-components/download-sheet.tsx
 msgid "your resume and this letter"
 msgstr "resume anda dan surat ini"
-
-#: src/features/auth/layout.tsx
-msgid "Your resume and your job search, in one place."
-msgstr "Resume dan pencarian kerja anda, di satu tempat."
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your resume as a web page"

@@ -20,7 +20,6 @@ import { MobileTabIndicator } from "@/components/layout/mobile-tab-indicator";
 import { PhoneHeaderActions } from "@/components/layout/phone-header-actions";
 import { useDialogStore } from "@/dialogs/store";
 import { GuestBanner } from "@/features/auth/components/guest-banner";
-import { useNeedsYouCount } from "@/features/career/needs-you";
 import { useCommandPaletteStore } from "@/features/command-palette/store";
 import { DocumentLibraryProvider } from "@/features/documents/library-session";
 import { shortcutOverlayOpen } from "@/features/keyboard-shortcuts/blocking";
@@ -28,13 +27,24 @@ import { LEAD_GROUP } from "@/features/keyboard-shortcuts/groups";
 import { useShortcutSettings } from "@/features/keyboard-shortcuts/settings";
 import { showKeyboardShortcuts } from "@/features/keyboard-shortcuts/store";
 import { isEditableElementFocused } from "@/features/resume/builder/draft";
+import { FeedbackButton } from "@/features/studio/feedback";
+import { UsageCard } from "@/features/studio/shared";
 import { trashedApplicationsQueryOptions } from "@/features/trash/queries";
 import { orpc } from "@/libs/orpc/client";
 
 type NavItem = {
-	to: "/dashboard" | "/dashboard/documents" | "/dashboard/applications" | "/dashboard/career" | "/dashboard/trash";
+	to:
+		| "/dashboard"
+		| "/dashboard/documents"
+		| "/dashboard/linkedin"
+		| "/dashboard/chat"
+		| "/dashboard/prompts"
+		| "/dashboard/admin"
+		| "/dashboard/trash";
 	icon: IconName;
 	label: string;
+	/** Shorter name for the phone tab bar. */
+	short?: string;
 	/** A quiet number at the end of the row. */
 	count?: number;
 	/** A warn badge instead: something here is waiting for the user. */
@@ -43,32 +53,25 @@ type NavItem = {
 
 /** The four places, then Trash. Counts appear once loaded; a zero shows nothing. */
 function useNavItems() {
-	const needsYou = useNeedsYouCount();
 	const { data: counts } = useQuery(orpc.documents.counts.queryOptions());
-	const { data: applicationStats } = useQuery(orpc.applications.stats.queryOptions({}));
+	const { data: studio } = useQuery(orpc.scs.state.queryOptions());
 	const { data: trashedApplications } = useQuery(trashedApplicationsQueryOptions());
 
 	const items: NavItem[] = [
-		{ to: "/dashboard", icon: "house-simple", label: t`Today`, ...(needsYou ? { badge: needsYou } : {}) },
+		{ to: "/dashboard", icon: "house-simple", label: "Home", short: "Home" },
 		{
 			to: "/dashboard/documents",
 			icon: "files",
-			label: t`Documents`,
-			...(counts ? { count: counts.resume + counts.letter } : {}),
+			label: "My résumés",
+			short: "Résumés",
+			...(counts ? { count: counts.resume } : {}),
 		},
-		{
-			to: "/dashboard/applications",
-			icon: "briefcase",
-			label: t`Applications`,
-			...(applicationStats
-				? {
-						count: applicationStats.byStage
-							.filter((row) => row.status !== "closed")
-							.reduce((total, row) => total + row.count, 0),
-					}
-				: {}),
-		},
-		{ to: "/dashboard/career", icon: "compass", label: t`Career` },
+		{ to: "/dashboard/linkedin", icon: "linkedin-logo", label: "LinkedIn Studio", short: "LinkedIn" },
+		{ to: "/dashboard/chat", icon: "sparkle", label: "AI Career Chat", short: "Coach" },
+		{ to: "/dashboard/prompts", icon: "chat-text", label: "Career Prompts", short: "Prompts" },
+		...(studio?.isAdmin
+			? [{ to: "/dashboard/admin", icon: "chart-line-up", label: "Beta dashboard", short: "Admin" } satisfies NavItem]
+			: []),
 	];
 	// Always shown; documents and applications share it.
 	const trash: NavItem = {
@@ -264,8 +267,11 @@ function Sidebar() {
 			className="sticky top-0 flex h-svh flex-col gap-1 border-e border-line bg-bg px-3 pt-4 pb-3 [view-transition-name:app-nav]"
 		>
 			<Link to="/" className="mb-2 flex h-9 items-center gap-2.5 px-2 text-[15px] leading-5 font-semibold">
-				<BrandIcon variant="icon" alt="" className="size-6 shrink-0" />
-				Reactive Resume
+				<BrandIcon variant="icon" alt="" className="size-7 shrink-0 rounded-md" />
+				<span className="flex flex-col leading-tight">
+					Student Career Studio
+					<span className="text-[11px] font-normal text-ink-3">Founding beta</span>
+				</span>
 			</Link>
 
 			<button
@@ -286,6 +292,8 @@ function Sidebar() {
 
 			<div className="flex-1" />
 
+			<UsageCard className="mb-1" />
+			<FeedbackButton className="justify-start" />
 			<NavLink item={trash} current={isCurrent(trash.to)} />
 			<button
 				type="button"
@@ -390,7 +398,7 @@ function Rail() {
 			aria-label={t`Main`}
 			className="sticky top-0 flex h-svh flex-col items-center gap-1 border-e border-line bg-bg pt-4 pb-3 [view-transition-name:app-nav]"
 		>
-			<Link to="/" aria-label="Reactive Resume" className="mb-2 grid size-9 place-items-center rounded-md">
+			<Link to="/" aria-label="Student Career Studio" className="mb-2 grid size-9 place-items-center rounded-md">
 				<BrandIcon variant="icon" alt="" className="size-6" />
 			</Link>
 			<RailTip label={t`Search or jump to…`} icon="magnifying-glass">
@@ -476,9 +484,9 @@ function MobileTabs() {
 	return (
 		<nav
 			aria-label={t`Main`}
-			className="sticky bottom-0 z-30 grid min-h-16 grid-cols-4 border-t border-line bg-bg pb-[env(safe-area-inset-bottom)] [view-transition-name:app-nav]"
+			className="sticky bottom-0 z-30 grid min-h-16 auto-cols-fr grid-flow-col border-t border-line bg-bg pb-[env(safe-area-inset-bottom)] [view-transition-name:app-nav]"
 		>
-			{items.map(({ to, icon, label, badge: waiting }) => {
+			{items.map(({ to, icon, label, short, badge: waiting }) => {
 				const current = isCurrent(to);
 				return (
 					<Link
@@ -493,7 +501,7 @@ function MobileTabs() {
 					>
 						{current && <MobileTabIndicator />}
 						<Icon name={icon} size={24} filled={current} />
-						{label}
+						{short ?? label}
 						{waiting ? (
 							<span className={cn(badge, "absolute start-[calc(50%+7px)] top-1.5")}>{i18n.number(waiting)}</span>
 						) : null}

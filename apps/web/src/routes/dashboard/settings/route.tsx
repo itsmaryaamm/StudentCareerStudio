@@ -21,6 +21,7 @@ type Section = {
 		| "/dashboard/settings/profile"
 		| "/dashboard/settings/preferences"
 		| "/dashboard/settings/ai"
+		| "/dashboard/settings/privacy"
 		| "/dashboard/settings/developer";
 	icon: IconName;
 	label: () => string;
@@ -30,8 +31,7 @@ const SECTIONS: Section[] = [
 	{ to: "/dashboard/settings/account", icon: "user", label: () => t`Account` },
 	{ to: "/dashboard/settings/profile", icon: "identification-card", label: () => t`Application profile` },
 	{ to: "/dashboard/settings/preferences", icon: "sliders-horizontal", label: () => t`Preferences` },
-	{ to: "/dashboard/settings/ai", icon: "sparkle", label: () => t`AI` },
-	{ to: "/dashboard/settings/developer", icon: "code", label: () => t`Developer` },
+	{ to: "/dashboard/settings/privacy", icon: "shield-check", label: () => t`Privacy & data` },
 ];
 
 export const Route = createFileRoute("/dashboard/settings")({
