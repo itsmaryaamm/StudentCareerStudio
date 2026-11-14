@@ -82,6 +82,19 @@ export function reserveUsage(userId: string, kind: UsageKind): Promise<string> {
 			});
 		}
 
+		// Rolling-minute breaker, counted in the database so it holds across instances. Checked before a unit is taken.
+		const [lastMinute] = await tx
+			.select({ n: sql<number>`count(*)::int` })
+			.from(scsAiUsage)
+			.where(and(gte(scsAiUsage.createdAt, new Date(Date.now() - 60_000)), ne(scsAiUsage.status, "error")));
+		if ((lastMinute?.n ?? 0) >= env.SCS_LIMIT_GLOBAL_AI_PER_MINUTE) {
+			throw new ORPCError("SERVICE_UNAVAILABLE", {
+				message:
+					"The coach is busy right now. Nothing was used from your allowance — please try again in a few seconds.",
+				data: { kind, busy: true },
+			});
+		}
+
 		const [row] = await tx
 			.insert(scsAiUsage)
 			.values({ userId, kind, status: "reserved" })

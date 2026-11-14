@@ -236,11 +236,13 @@ export const env = createEnv({
 		// When set, sign-up requires this code (header `x-beta-code`), so strangers can't take the seats.
 		SCS_BETA_INVITE_CODE: z.string().trim().min(1).optional(),
 		// Per user, per UTC day: chat replies and LinkedIn generations from Gemini.
-		SCS_LIMIT_CHAT_PER_DAY: z.coerce.number().int().min(0).default(10),
+		SCS_LIMIT_CHAT_PER_DAY: z.coerce.number().int().min(0).default(7),
 		// Per user, lifetime: document or image analyses.
 		SCS_LIMIT_UPLOADS_TOTAL: z.coerce.number().int().min(0).default(3),
 		// Across all users, per UTC day: a circuit breaker that keeps the shared Gemini key inside its free quota.
 		SCS_LIMIT_GLOBAL_AI_PER_DAY: z.coerce.number().int().min(0).default(450),
+		// Across all users, per rolling minute: stays under Google's 15 requests/minute free limit.
+		SCS_LIMIT_GLOBAL_AI_PER_MINUTE: z.coerce.number().int().min(0).default(12),
 		SCS_UPLOAD_MAX_BYTES: z.coerce.number().int().positive().max(20_971_520).default(4_194_304),
 		// Feature Flags
 		FLAG_DISABLE_SIGNUPS: z.stringbool().default(false),

@@ -97,7 +97,7 @@ const check = (name, ok, extra = "") => {
 	check("W2 the coach remembers earlier turns of the conversation", true);
 	check(
 		"W2 the daily allowance counter went down",
-		await page.getByText("8 of 10 messages left today").first().isVisible(),
+		await page.getByText("5 of 7 messages left today").first().isVisible(),
 	);
 	await page.getByRole("button", { name: "Save to profile" }).first().click();
 	await page.getByText("Verified", { exact: true }).first().waitFor();

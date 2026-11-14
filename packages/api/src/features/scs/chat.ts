@@ -11,7 +11,7 @@ import { GeminiFailure, geminiErrorToOrpc, geminiJson } from "./gemini";
 import { commitUsage, refundUsage, reserveUsage } from "./limits";
 import { proposedFactSchema } from "./schemas";
 
-const HISTORY_MESSAGES = 16; // conversation context sent with each turn
+const HISTORY_MESSAGES = 10; // conversation context sent with each turn
 export const MAX_MESSAGE_CHARS = 2000;
 
 const replySchema = z.object({
@@ -105,7 +105,7 @@ export const chatService = {
 						.orderBy(desc(scsChatMessage.createdAt))
 						.limit(HISTORY_MESSAGES)
 				: [];
-			const approved = await factsService.approved(userId);
+			const approved = await factsService.approved(userId, 25);
 			const messages: ModelMessage[] = [
 				...history.reverse().map((m) => ({ role: m.role, content: m.content }) as ModelMessage),
 				{ role: "user", content: message },
