@@ -39,6 +39,8 @@ services:
         value: "7"
       - key: SCS_LIMIT_UPLOADS_TOTAL
         value: "3"
+      - key: SCS_LIMIT_IMPROVE_PER_DAY
+        value: "8"
       - key: SCS_LIMIT_GLOBAL_AI_PER_MINUTE
         value: "12"
       - key: SCS_LIMIT_GLOBAL_AI_PER_DAY

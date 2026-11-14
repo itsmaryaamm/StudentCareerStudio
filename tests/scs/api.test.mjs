@@ -351,6 +351,90 @@ check(
 	JSON.stringify(r).slice(0, 300),
 );
 
+// ---------- 9b. Résumé knowledge is used everywhere, live (no re-typing) ----------
+const resD = await http("POST", "/resumes", {
+	cookie: D.cookie,
+	body: { name: "D Résumé", slug: `d-res-${run}`, tags: [], withSampleData: true },
+});
+check("D (no chat, no approved facts) has a résumé", resD.status === 200, JSON.stringify(resD));
+const listD = await http("GET", "/scs/facts", { cookie: D.cookie });
+const fromResume = (listD.json ?? []).filter((f) => f.readOnly && f.source === "resume");
+check(
+	"profile shows the résumé's content automatically, read-only",
+	fromResume.length >= 3 && fromResume.every((f) => f.status === "approved" && f.id.startsWith("resume:")),
+	JSON.stringify(listD.json).slice(0, 300),
+);
+check(
+	"résumé-derived facts cannot be edited or deleted as stored facts (no such row)",
+	(await http("DELETE", `/scs/facts/${fromResume[0]?.id}`, { cookie: D.cookie })).status === 404,
+);
+check(
+	"another student's profile does not contain D's résumé content",
+	!JSON.stringify((await http("GET", "/scs/facts", { cookie: B.cookie })).json).includes(
+		fromResume[0]?.text ?? "@@none@@",
+	),
+);
+r = await http("POST", "/scs/linkedin/generate", { cookie: D.cookie, body: { section: "headline" } });
+check(
+	"LinkedIn Studio works from the résumé alone (CONSENT_REQUIRED until accepted)",
+	r.status === 403 && JSON.stringify(r.json).includes("CONSENT_REQUIRED"),
+	JSON.stringify(r),
+);
+await http("POST", "/scs/consent", { cookie: D.cookie });
+r = await http("POST", "/scs/linkedin/generate", { cookie: D.cookie, body: { section: "headline" } });
+check(
+	"…then generates suggestions grounded in the résumé, with no manual input",
+	r.status === 200 && r.json.suggestions.length >= 1,
+	JSON.stringify(r).slice(0, 300),
+);
+const seenD = await (await fetch("http://localhost:4010/__seen")).json();
+check(
+	"the résumé's content was sent to Gemini as the student's profile",
+	/\[(education|experience)\]/.test(seenD.at(-1)?.last ?? ""),
+	seenD.at(-1)?.last,
+);
+r = await http("POST", "/scs/chat/send", { cookie: D.cookie, body: { message: "Hello coach" } });
+const seenC = await (await fetch("http://localhost:4010/__seen")).json();
+check(
+	"the coach also receives the résumé as context (without D approving anything)",
+	r.status === 200 && /\[(education|experience)\]/.test(seenC.at(-1)?.system ?? ""),
+	(seenC.at(-1)?.system ?? "").slice(-200),
+);
+
+// ---------- 9c. Editor "Improve" through the platform AI, own allowance ----------
+const improveBody = {
+	line: "Worked on the website",
+	action: "verb",
+	where: "Experience",
+	context: "Worked on the website",
+};
+r = await http("POST", "/scs/improve", { cookie: A.cookie, body: improveBody });
+check(
+	"improve works for a student who accepted the AI notice",
+	r.status === 200 && r.json.text.length > 5 && typeof r.json.why === "string",
+	JSON.stringify(r),
+);
+const imp = [];
+for (let i = 0; i < 9; i++)
+	imp.push((await http("POST", "/scs/improve", { cookie: D.cookie, body: improveBody })).status);
+check(
+	"improve allowance: 8 per day then 429 (own budget, separate from chat)",
+	imp.slice(0, 8).every((x) => x === 200) && imp[8] === 429,
+	imp.join(","),
+);
+const usageD = await http("GET", "/scs/usage", { cookie: D.cookie });
+check(
+	"improve usage is counted separately from chat",
+	usageD.json.improve.used === 8 && usageD.json.improve.limit === 8,
+	JSON.stringify(usageD.json),
+);
+check(
+	"improve rejects over-long input",
+	(await http("POST", "/scs/improve", { cookie: B.cookie, body: { ...improveBody, line: "x".repeat(2001) } }))
+		.status === 400,
+);
+check("improve requires sign-in", (await http("POST", "/scs/improve", { body: improveBody })).status === 401);
+
 // ---------- 10. Feedback + admin dashboard ----------
 r = await http("POST", "/scs/feedback", {
 	cookie: A.cookie,

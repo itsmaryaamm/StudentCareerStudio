@@ -243,6 +243,8 @@ export const env = createEnv({
 		SCS_LIMIT_GLOBAL_AI_PER_DAY: z.coerce.number().int().min(0).default(450),
 		// Across all users, per rolling minute: stays under Google's 15 requests/minute free limit.
 		SCS_LIMIT_GLOBAL_AI_PER_MINUTE: z.coerce.number().int().min(0).default(12),
+		// Per student per UTC day: "Improve" suggestions in the résumé editor (one short request each).
+		SCS_LIMIT_IMPROVE_PER_DAY: z.coerce.number().int().min(0).default(8),
 		SCS_UPLOAD_MAX_BYTES: z.coerce.number().int().positive().max(20_971_520).default(4_194_304),
 		// Feature Flags
 		FLAG_DISABLE_SIGNUPS: z.stringbool().default(false),

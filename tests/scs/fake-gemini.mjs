@@ -15,7 +15,7 @@ const server = http.createServer(async (req, res) => {
 	seen.push({
 		turns: (json.contents ?? []).length,
 		system: JSON.stringify(json.systemInstruction ?? "").slice(0, 4000),
-		last: last.slice(0, 300),
+		last: last.slice(0, 3000),
 		hasFile,
 	});
 	const reply = (obj) => {
@@ -46,6 +46,12 @@ const server = http.createServer(async (req, res) => {
 		);
 	}
 	await new Promise((r) => setTimeout(r, /SLOW/.test(last) ? 400 : 20));
+	if (/<<<LINE_START>>>/.test(last))
+		return reply({
+			text: "Led a 4-person team to deliver a campus bike-sharing app.",
+			why: "Opens with a stronger verb.",
+			addsFacts: false,
+		});
 	if (hasFile)
 		return reply({
 			summary: "A résumé for a computer science student.",

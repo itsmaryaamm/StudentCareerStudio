@@ -96,9 +96,6 @@ export function DocumentMenu() {
 							if (next === "rename") renameRequested.current = true;
 							else setDialog(next);
 						}}
-						onHelp={() => {
-							helpRequested.current = true;
-						}}
 					/>
 				</DropdownMenu>
 			)}
@@ -221,10 +218,9 @@ function BuilderTagsDialog({ tags: current, locked, onSave, onClose }: BuilderTa
 
 type DocumentMenuItemsProps = {
 	onOpenDialog: (dialog: DocumentDialog) => void;
-	onHelp: () => void;
 };
 
-function DocumentMenuItems({ onOpenDialog, onHelp }: DocumentMenuItemsProps) {
+function DocumentMenuItems({ onOpenDialog }: DocumentMenuItemsProps) {
 	const navigate = useNavigate();
 	const { openDialog } = useDialogStore();
 	const resume = useCurrentResume();
@@ -369,11 +365,6 @@ function DocumentMenuItems({ onOpenDialog, onHelp }: DocumentMenuItemsProps) {
 				<DropdownMenuItem className="sm:hidden" disabled={offline} onClick={() => setSheetTab("download")}>
 					<Icon name="download-simple" />
 					<Trans>More download formats</Trans>
-				</DropdownMenuItem>
-				{/* Tablet keeps help here; desktop uses the question control in the bar. */}
-				<DropdownMenuItem className="lg:hidden pointer-coarse:hidden" onClick={onHelp}>
-					<Icon name="keyboard" />
-					<Trans>Keyboard shortcuts</Trans>
 				</DropdownMenuItem>
 			</DropdownMenuGroup>
 			<DropdownMenuSeparator />

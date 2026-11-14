@@ -57,10 +57,12 @@ it("shows a recoverable lookup error instead of setup, then restores the saved p
 	expect(api.list).toHaveBeenCalledTimes(2);
 });
 
-it("offers setup only after a successful empty provider lookup", async () => {
+it("shows no setup prompt and no error after a successful empty provider lookup", async () => {
 	api.list.mockResolvedValue([]);
 	render(<AiNotice />, { wrapper: Wrapper });
-	await screen.findByRole("button", { name: "Set up AI" });
+	await waitFor(() => expect(api.list).toHaveBeenCalled());
+	// Student Career Studio has no "Set up AI" nag: the choice lives in Settings → AI.
+	expect(screen.queryByRole("button", { name: "Set up AI" })).toBeNull();
 	expect(screen.queryByRole("alert")).toBeNull();
 });
 

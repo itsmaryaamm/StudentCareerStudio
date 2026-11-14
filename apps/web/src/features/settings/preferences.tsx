@@ -8,16 +8,12 @@ import { useRouteContext } from "@tanstack/react-router";
 import { useId, useMemo, useState } from "react";
 import { Button } from "@reactive-resume/ui/components/button";
 import { Icon } from "@reactive-resume/ui/components/icon";
-import { Kbd } from "@reactive-resume/ui/components/kbd";
 import { RadioGroup, RadioGroupItem } from "@reactive-resume/ui/components/radio-group";
-import { Switch } from "@reactive-resume/ui/components/switch";
 import { cn } from "@reactive-resume/utils/style";
 import { SettingsRow, SettingsSection } from "./section";
 import { deviceTimeZone, useSaveTimezone } from "./use-save-timezone";
-import { List, ListRow } from "@/components/calm/list-row";
+import { List } from "@/components/calm/list-row";
 import { Combobox } from "@/components/ui/combobox";
-import { useShortcutSettings } from "@/features/keyboard-shortcuts/settings";
-import { showKeyboardShortcuts } from "@/features/keyboard-shortcuts/store";
 import { LocaleCombobox } from "@/features/locale/combobox";
 import { useTheme } from "@/features/theme/provider";
 import { themeMap } from "@/libs/theme";
@@ -67,47 +63,11 @@ export function PreferencesSettings() {
 					</a>
 				</p>
 			</SettingsSection>
-
-			{/* Touch screens have no shortcut help to open, so the setting would only add noise there. */}
-			<SettingsSection title={<Trans>Keyboard</Trans>} className="pointer-coarse:hidden">
-				<List>
-					<ShortcutsRow />
-					<ListRow
-						render={<button type="button" onClick={(event) => showKeyboardShortcuts(event.currentTarget)} />}
-						title={<Trans>All shortcuts</Trans>}
-						trailing={<Kbd>?</Kbd>}
-						caret
-					/>
-				</List>
-			</SettingsSection>
 		</>
 	);
 }
 
 const pickerClassName = "w-[232px] max-sm:w-full";
-
-/** Single-key shortcuts: the whole row is the switch's label. */
-function ShortcutsRow() {
-	const id = useId();
-	const { characterShortcuts, setCharacterShortcuts } = useShortcutSettings();
-	return (
-		<SettingsRow
-			title={
-				<label htmlFor={id} className="block">
-					<Trans>Single-key shortcuts</Trans>
-				</label>
-			}
-			description={
-				<Trans>
-					Keys such as <Kbd>?</Kbd> <Kbd>N</Kbd> <Kbd>/</Kbd> and <Kbd>1</Kbd>–<Kbd>4</Kbd> for the editor's modes,
-					outside text fields. Turn off if you use speech input.
-				</Trans>
-			}
-		>
-			<Switch id={id} checked={characterShortcuts} onCheckedChange={setCharacterShortcuts} />
-		</SettingsRow>
-	);
-}
 
 // Browsers list canonical zones only: UTC, the default for older accounts, and aliases a device reports are missing.
 const timeZones = Intl.supportedValuesOf("timeZone");

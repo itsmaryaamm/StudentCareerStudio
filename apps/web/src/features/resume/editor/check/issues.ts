@@ -112,6 +112,16 @@ function setAt(draft: ResumeData, pointer: string, value: unknown) {
 
 const HAS_SCHEME = /^[a-z][a-z\d+.-]*:/i;
 
+/** True when a summary-type section holds entries (roles, dates, bullet lists) rather than a short paragraph. */
+function looksLikeEntries(data: ResumeData, sectionId: string): boolean {
+	const section = resolveSection(data, sectionId);
+	if (!section || section.type !== "summary") return false;
+	const html = String((getSectionObject(data, section) as { content?: unknown } | undefined)?.content ?? "");
+	const text = html.replace(/<[^>]+>/g, " ");
+	const years = text.match(/\b(19|20)\d{2}\b/g)?.length ?? 0;
+	return /<li[\s>]/i.test(html) || years >= 2 || /\bpresent\b/i.test(text) || (text.match(/\|/g)?.length ?? 0) >= 2;
+}
+
 type Message = { title: string; body: string; fix: IssueFix; keepLabel?: boolean };
 
 function describeFinding(finding: AtsFinding, data: ResumeData, target: PageMapTarget | null): Message {
@@ -258,6 +268,16 @@ function describeFinding(finding: AtsFinding, data: ResumeData, target: PageMapT
 			};
 		case "NON_STANDARD_SECTION_TITLE": {
 			const title = String(finding.params?.title ?? "");
+			// Clearing the title prints the type's own name. For a "summary" that really holds roles or activities,
+			// that would label leadership work "Summary", so there the student names it for what it holds.
+			const kind = looksLikeEntries(data, section);
+			if (kind) {
+				return {
+					title: t`“${title}” isn't a heading systems look for`,
+					body: t`This section lists roles and activities, so the plain name "Summary" would mislead. Name it for what it holds, such as Experience, Volunteering or Awards, or keep a clear custom name like Leadership.`,
+					fix: write(t`Rename the heading`),
+				};
+			}
 			return {
 				title: t`“${title}” isn't a heading systems look for`,
 				body: t`They look for headings such as Experience, Education and Skills.`,

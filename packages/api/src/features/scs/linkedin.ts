@@ -4,10 +4,9 @@ import { and, eq } from "drizzle-orm";
 import { z } from "zod";
 import { db } from "@reactive-resume/db/client";
 import { scsLinkedinDraft } from "@reactive-resume/db/schema";
+import { runAi } from "./ai-run";
 import { profileContext, requireConsent } from "./chat";
 import { factsService } from "./facts";
-import { GeminiFailure, geminiErrorToOrpc, geminiJson } from "./gemini";
-import { commitUsage, refundUsage, reserveUsage } from "./limits";
 
 const GUIDE: Record<LinkedinSection, { limit: number; brief: string }> = {
 	headline: {
@@ -61,47 +60,36 @@ OUTPUT: return ONLY JSON: {"suggestions":[{"text": string, "basedOn": number[]}]
 export const linkedinService = {
 	async generate(userId: string, input: { section: LinkedinSection; instruction?: string | undefined }) {
 		await requireConsent(userId);
-		const approved = await factsService.approved(userId, 30);
+		const approved = await factsService.forContext(userId, 40);
 		// Checked before quota is taken: a student with nothing approved isn't charged for a refusal.
 		if (approved.length === 0)
 			throw new ORPCError("PRECONDITION_FAILED", {
-				message: "Add or approve at least one fact about yourself first (chat with the coach or import a résumé).",
+				message: "Add or approve at least one fact about yourself first (chat with the coach or create a résumé).",
 				data: { code: "NO_FACTS" },
 			});
 
 		const guide = GUIDE[input.section];
-		const usageId = await reserveUsage(userId, "linkedin");
-		try {
-			const numbered = `<student_profile>\n${approved.map((f, i) => `${i + 1}. [${f.category}] ${f.text}`).join("\n")}\n</student_profile>`;
-			const instruction = input.instruction?.trim().slice(0, 200);
-			const result = await geminiJson({
-				system: SYSTEM,
-				schema: outSchema,
-				messages: [
-					{
-						role: "user",
-						content: `${numbered}\n\nWrite: ${guide.brief}${instruction ? `\nStudent's style request: ${instruction}` : ""}`,
-					},
-				],
-			});
-			await commitUsage(usageId, result.model, result.latencyMs);
-			return {
-				section: input.section,
-				suggestions: result.data.suggestions.map((s) => ({
-					text: s.text.slice(0, guide.limit),
-					basedOn: [...new Set(s.basedOn)]
-						.filter((n) => n >= 1 && n <= approved.length)
-						.map((n) => approved[n - 1]?.text ?? ""),
-				})),
-			};
-		} catch (error) {
-			const failure =
-				error instanceof GeminiFailure
-					? error
-					: new GeminiFailure("internal_error", "Something went wrong. Nothing was used from your allowance.");
-			await refundUsage(usageId, failure.reason);
-			throw geminiErrorToOrpc(failure);
-		}
+		const numbered = `<student_profile>\n${approved.map((f, i) => `${i + 1}. [${f.category}] ${f.text}`).join("\n")}\n</student_profile>`;
+		const instruction = input.instruction?.trim().slice(0, 200);
+		const result = await runAi(userId, "linkedin", {
+			system: SYSTEM,
+			schema: outSchema,
+			messages: [
+				{
+					role: "user",
+					content: `${numbered}\n\nWrite: ${guide.brief}${instruction ? `\nStudent's style request: ${instruction}` : ""}`,
+				},
+			],
+		});
+		return {
+			section: input.section,
+			suggestions: result.data.suggestions.map((s) => ({
+				text: s.text.slice(0, guide.limit),
+				basedOn: [...new Set(s.basedOn)]
+					.filter((n) => n >= 1 && n <= approved.length)
+					.map((n) => approved[n - 1]?.text ?? ""),
+			})),
+		};
 	},
 
 	async drafts(userId: string) {

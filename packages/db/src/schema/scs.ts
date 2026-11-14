@@ -113,7 +113,7 @@ export const scsAiUsage = pg.pgTable(
 			.text("user_id")
 			.notNull()
 			.references(() => user.id, { onDelete: "cascade" }),
-		kind: pg.text("kind").$type<"chat" | "linkedin" | "upload">().notNull(),
+		kind: pg.text("kind").$type<"chat" | "linkedin" | "upload" | "improve">().notNull(),
 		status: pg.text("status").$type<"reserved" | "ok" | "error">().notNull().default("reserved"),
 		error: pg.text("error"),
 		model: pg.text("model"),

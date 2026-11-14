@@ -22,7 +22,7 @@ export class GeminiFailure extends Error {
 	}
 }
 
-function toFailure(error: unknown): GeminiFailure {
+export function toFailure(error: unknown): GeminiFailure {
 	if (error instanceof GeminiFailure) return error;
 	// The SDK retries once and then wraps the last provider error; classify that underlying error.
 	if (RetryError.isInstance(error)) return toFailure(error.lastError);
@@ -62,7 +62,7 @@ export function geminiErrorToOrpc(failure: GeminiFailure): ORPCError<"SERVICE_UN
 	return new ORPCError("SERVICE_UNAVAILABLE", { message: failure.userMessage, data: { reason: failure.reason } });
 }
 
-function extractJson(text: string): unknown {
+export function extractJson(text: string): unknown {
 	const fenceStart = text.indexOf("```");
 	const fenceEnd = fenceStart === -1 ? -1 : text.indexOf("```", fenceStart + 3);
 	const candidate = fenceEnd === -1 ? text : text.slice(fenceStart + 3, fenceEnd);

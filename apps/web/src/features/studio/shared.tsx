@@ -118,9 +118,12 @@ export function UsageCard({ className }: { className?: string }) {
 			<p className="text-[13px] font-semibold text-accent-text">Founding beta · free</p>
 			{isPending || !data ? (
 				<Skeleton className="mt-2 h-10 w-full" />
+			) : data.ownAi ? (
+				<p className="mt-2 text-[13px] text-ink-2">You're using your own AI connection, so we don't limit it.</p>
 			) : (
 				<div className="mt-2 grid gap-2">
 					<Meter used={data.usage.chat.used} limit={data.usage.chat.limit} label="AI messages today" />
+					<Meter used={data.usage.improve.used} limit={data.usage.improve.limit} label="Résumé improvements today" />
 					<Meter used={data.usage.upload.used} limit={data.usage.upload.limit} label="Document analyses" />
 					<p className="text-xs text-ink-3">Daily messages reset at midnight UTC.</p>
 				</div>

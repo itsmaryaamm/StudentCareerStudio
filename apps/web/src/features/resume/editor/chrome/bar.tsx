@@ -1,6 +1,7 @@
 import type { ReactElement, ReactNode } from "react";
 import { t } from "@lingui/core/macro";
 import { Plural, Trans } from "@lingui/react/macro";
+import { useQuery } from "@tanstack/react-query";
 import { Button } from "@reactive-resume/ui/components/button";
 import { ButtonGroup } from "@reactive-resume/ui/components/button-group";
 import { Icon } from "@reactive-resume/ui/components/icon";
@@ -11,11 +12,11 @@ import { useBreakpoint } from "@reactive-resume/ui/hooks/use-breakpoint";
 import { cn } from "@reactive-resume/utils/style";
 import { loadAssistantPanel } from "@/features/assistant/dock";
 import { useAssistantShortcutEnabled } from "@/features/assistant/shortcut";
-import { showKeyboardShortcuts } from "@/features/keyboard-shortcuts/store";
 import { useResumeData, useResumeStore } from "@/features/resume/builder/draft";
 import { BackLink, DrawerControls } from "@/features/resume/editor/chrome";
 import { pendingProposals } from "@/features/resume/editor/proposals/proposals";
 import { useEditorStore } from "@/features/resume/editor/store";
+import { orpc } from "@/libs/orpc/client";
 
 type EditorBarFrameProps = {
 	layout: "desktop" | "tablet" | "mobile";
@@ -73,14 +74,6 @@ export function EditorBarFrame({
 				{history}
 				{layout === "desktop" && <HistoryButton inPanel={historyInPanel} />}
 				<AssistantToggle />
-				{layout === "desktop" && (
-					<IconButton
-						icon="question"
-						label={t`Keyboard shortcuts`}
-						shortcut="?"
-						onClick={(event) => showKeyboardShortcuts(event.currentTarget)}
-					/>
-				)}
 				<span className="ms-1 flex">{children}</span>
 			</div>
 		</header>
@@ -112,6 +105,8 @@ function HistoryButton({ inPanel }: { inPanel: boolean }) {
  * accent-soft while open. Closing the assistant returns focus here (`data-assistant-toggle`).
  */
 function AssistantToggle() {
+	// The Assistant needs a student's own AI connection; without one it would only offer a setup screen.
+	const studio = useQuery(orpc.scs.state.queryOptions());
 	const shortcutEnabled = useAssistantShortcutEnabled();
 	const open = useEditorStore((state) => state.assistantOpen);
 	const setOpen = useEditorStore((state) => state.setAssistantOpen);
@@ -121,6 +116,8 @@ function AssistantToggle() {
 	const applications = useResumeStore((state) => state.proposalApplications);
 	const proposed = data ? pendingProposals(data, assistantProposals, undefined, applications).length : 0;
 	const preload = () => void loadAssistantPanel();
+
+	if (!studio.data?.ownAi) return null;
 
 	if (!labelled) {
 		return (

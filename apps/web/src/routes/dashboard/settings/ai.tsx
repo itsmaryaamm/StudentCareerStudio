@@ -1,7 +1,7 @@
 import { t } from "@lingui/core/macro";
 import { createFileRoute, redirect } from "@tanstack/react-router";
 import { z } from "zod";
-import { AiSettings } from "@/features/settings/ai/page";
+import { AiChoice } from "@/features/studio/ai-choice";
 import { getPageTitle } from "@/libs/seo";
 
 /** Sections that moved to Developer. Old clients (phone apps, MCP, agents) still link to them here by anchor. */
@@ -21,5 +21,5 @@ export const Route = createFileRoute("/dashboard/settings/ai")({
 			replace: true,
 		});
 	},
-	component: AiSettings,
+	component: AiChoice,
 });

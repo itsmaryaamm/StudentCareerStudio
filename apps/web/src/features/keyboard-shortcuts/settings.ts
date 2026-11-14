@@ -1,18 +1,11 @@
 import { create } from "zustand/react";
 
 const storageKey = "character-shortcuts";
-const readEnabled = () => {
-	try {
-		return localStorage.getItem(storageKey) !== "off";
-	} catch {
-		return true;
-	}
-};
-
 type ShortcutSettings = { characterShortcuts: boolean; setCharacterShortcuts: (enabled: boolean) => void };
 
 export const useShortcutSettings = create<ShortcutSettings>((set) => ({
-	characterShortcuts: readEnabled(),
+	// Student Career Studio ships without single-key shortcuts.
+	characterShortcuts: false,
 	setCharacterShortcuts: (enabled) => {
 		set({ characterShortcuts: enabled });
 		try {

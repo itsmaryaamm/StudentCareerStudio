@@ -3,6 +3,7 @@ import { protectedProcedure, publicProcedure } from "../../context";
 import { accountService, adminService, betaInfo, requireAdmin } from "./account";
 import { chatService, MAX_MESSAGE_CHARS } from "./chat";
 import { factsService } from "./facts";
+import { improveService } from "./improve";
 import { linkedinService } from "./linkedin";
 import { factCategorySchema, factSchema, linkedinSectionSchema, usageSchema } from "./schemas";
 import { uploadService } from "./upload";
@@ -52,7 +53,7 @@ export const scsRouter = {
 		list: protectedProcedure
 			.route(route("GET", "/facts", "scsListFacts", "My career profile"))
 			.output(z.array(factSchema))
-			.handler(({ context }) => factsService.list(context.user.id)),
+			.handler(({ context }) => factsService.listWithResume(context.user.id)),
 		add: protectedProcedure
 			.route(route("POST", "/facts", "scsAddFact", "Add a fact to my profile"))
 			.input(z.strictObject({ category: factCategorySchema, text: z.string().trim().min(3).max(300) }))
@@ -130,6 +131,22 @@ export const scsRouter = {
 			.input(z.strictObject({ section: linkedinSectionSchema, content: z.string().max(3000) }))
 			.handler(({ context, input }) => linkedinService.saveDraft(context.user.id, input.section, input.content)),
 	},
+
+	improve: protectedProcedure
+		.route(route("POST", "/improve", "scsImprove", "Suggest a rewrite of one résumé line"))
+		.input(
+			z.strictObject({
+				line: z.string().trim().min(1).max(2000),
+				action: z.enum(["verb", "result", "shorter", "warmer", "custom"]),
+				request: z.string().trim().max(500).optional(),
+				where: z.string().trim().max(200).default(""),
+				context: z.string().max(10_000).default(""),
+			}),
+		)
+		.handler(async ({ context, input }) => ({
+			...(await improveService.run(context.user.id, input)),
+			aiOperationIds: [] as string[],
+		})),
 
 	feedback: {
 		submit: protectedProcedure

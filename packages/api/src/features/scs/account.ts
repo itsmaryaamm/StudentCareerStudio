@@ -13,6 +13,7 @@ import {
 	user,
 } from "@reactive-resume/db/schema";
 import { env } from "@reactive-resume/env/server";
+import { ownAiProvider } from "./ai-run";
 import { isGeminiConfigured } from "./gemini";
 import { startOfUtcDay, usageSummary } from "./limits";
 
@@ -24,6 +25,7 @@ export const accountService = {
 			.from(scsCareerFact)
 			.where(and(eq(scsCareerFact.userId, userId), eq(scsCareerFact.status, "approved")));
 		const [resumes] = await db.select({ n: count() }).from(resume).where(eq(resume.userId, userId));
+		const own = await ownAiProvider(userId);
 		const [account] = await db.select({ role: user.role }).from(user).where(eq(user.id, userId));
 		return {
 			isAdmin: account?.role === "admin",
@@ -34,7 +36,9 @@ export const accountService = {
 			approvedFacts: facts?.n ?? 0,
 			resumeCount: resumes?.n ?? 0,
 			usage: await usageSummary(userId),
-			aiAvailable: isGeminiConfigured(),
+			ownAi: Boolean(own),
+			ownAiLabel: own ? `${own.label} · ${own.model ?? ""}`.trim() : null,
+			aiAvailable: isGeminiConfigured() || Boolean(own),
 		};
 	},
 

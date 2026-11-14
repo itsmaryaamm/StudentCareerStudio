@@ -151,3 +151,32 @@ describe("fragments split off by an import (J2-02)", () => {
 		expect(issuesOf(fixed)).toEqual([]);
 	});
 });
+
+describe("non-standard section titles are content-aware", () => {
+	// A summary section a PDF import filled with roles, titled "Leadership & Activities".
+	const withTitle = (content: string) =>
+		makeResume((resume) => {
+			resume.summary.title = "Leadership & Activities";
+			resume.summary.content = content;
+			resume.metadata.layout.pages = [{ fullWidth: false, main: ["summary", "experience"], sidebar: [] }];
+		});
+
+	it("never relabels a list of roles as 'Summary'", () => {
+		const data = withTitle(
+			"<ul><li>Student Representative, BAIS Advisory Board | Nov 2025 - Present</li><li>President, Sustainability Club | Mar 2025 - Present</li></ul>",
+		);
+		const issue = issuesOf(data).find((entry) => entry.finding.code === "NON_STANDARD_SECTION_TITLE");
+		expect(issue).toBeDefined();
+		if (!issue) return;
+		expect(issue.fix.kind).toBe("write");
+		expect(issue.body).toMatch(/lists roles and activities/);
+	});
+
+	it("still offers the one-step standard heading for a real prose summary", () => {
+		const data = withTitle("<p>Computer science student who builds data tools and enjoys teaching.</p>");
+		const issue = issuesOf(data).find((entry) => entry.finding.code === "NON_STANDARD_SECTION_TITLE");
+		expect(issue).toBeDefined();
+		if (!issue) return;
+		expect(issue.fix.kind).toBe("apply");
+	});
+});

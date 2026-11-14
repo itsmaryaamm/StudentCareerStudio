@@ -231,16 +231,6 @@ function LetterMenu() {
 						<Icon name={isLocked ? "lock-open" : "lock"} />
 						{isLocked ? <Trans>Unlock editing</Trans> : <Trans>Lock editing</Trans>}
 					</DropdownMenuItem>
-					<DropdownMenuSeparator />
-					<DropdownMenuItem
-						className="pointer-coarse:hidden"
-						onClick={() => {
-							helpRequested.current = true;
-						}}
-					>
-						<Icon name="keyboard" />
-						<Trans>Keyboard shortcuts</Trans>
-					</DropdownMenuItem>
 					<DropdownMenuSeparator className="pointer-coarse:hidden" />
 					<DropdownMenuItem variant="destructive" disabled={isLocked} onClick={() => void trash()}>
 						<Icon name="trash" />

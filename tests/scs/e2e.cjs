@@ -170,20 +170,19 @@ const check = (name, ok, extra = "") => {
 
 	// ===== Workflow 4: résumé -> LinkedIn Studio -> generate and copy =====
 	await page.goto(`${BASE}/dashboard/linkedin`);
-	await page.getByRole("button", { name: "Add from my résumés" }).click();
-	await page
-		.getByText(/Found \d+ items? in your résumés/)
-		.first()
-		.waitFor({ timeout: 15000 });
+	// The résumé's content is in the profile automatically: nothing to click, nothing to type, nothing to approve.
+	await page.getByText("From your résumé").first().waitFor({ timeout: 15000 });
 	check(
-		"W4 'Add from my résumés' proposes profile facts from the résumé",
+		"W4 the résumé's content appears in the profile automatically, marked 'From your résumé'",
 		await page
 			.getByText(/King Saud University/)
 			.first()
 			.isVisible(),
 	);
-	await page.getByRole("button", { name: "Save to profile" }).first().click();
-	await page.waitForTimeout(800);
+	check(
+		"W4 LinkedIn Studio asks for no input before suggesting (button enabled immediately)",
+		await page.getByRole("button", { name: /Suggest a headline/ }).isEnabled(),
+	);
 	await page.getByRole("button", { name: /Suggest a headline/ }).click();
 	await page
 		.getByText("Computer Science student building data tools people actually use")

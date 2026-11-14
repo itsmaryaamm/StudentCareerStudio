@@ -4,20 +4,26 @@ import { db } from "@reactive-resume/db/client";
 import { scsAiUsage } from "@reactive-resume/db/schema";
 import { env } from "@reactive-resume/env/server";
 
-export type UsageKind = "chat" | "linkedin" | "upload";
+export type UsageKind = "chat" | "linkedin" | "upload" | "improve";
 
 /** Chat replies and LinkedIn generations share one daily allowance; uploads have their own lifetime allowance. */
 const BUDGET_KINDS: Record<UsageKind, UsageKind[]> = {
 	chat: ["chat", "linkedin"],
 	linkedin: ["chat", "linkedin"],
 	upload: ["upload"],
+	improve: ["improve"],
 };
 
 export const startOfUtcDay = (now = new Date()) =>
 	new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
 export const startOfNextUtcDay = (now = new Date()) => new Date(startOfUtcDay(now).getTime() + 86_400_000);
 
-const limitFor = (kind: UsageKind) => (kind === "upload" ? env.SCS_LIMIT_UPLOADS_TOTAL : env.SCS_LIMIT_CHAT_PER_DAY);
+const limitFor = (kind: UsageKind) =>
+	kind === "upload"
+		? env.SCS_LIMIT_UPLOADS_TOTAL
+		: kind === "improve"
+			? env.SCS_LIMIT_IMPROVE_PER_DAY
+			: env.SCS_LIMIT_CHAT_PER_DAY;
 
 /** Refunded (`error`) calls don't count: a student isn't charged for our failures or Google's. */
 async function countUsed(runner: Pick<typeof db, "select">, userId: string, kind: UsageKind) {
@@ -39,13 +45,19 @@ async function countUsed(runner: Pick<typeof db, "select">, userId: string, kind
 export type UsageSummary = {
 	chat: { used: number; limit: number; resetsAt: string };
 	upload: { used: number; limit: number; resetsAt: null };
+	improve: { used: number; limit: number; resetsAt: string };
 };
 
 export async function usageSummary(userId: string): Promise<UsageSummary> {
-	const [chat, upload] = await Promise.all([countUsed(db, userId, "chat"), countUsed(db, userId, "upload")]);
+	const [chat, upload, improve] = await Promise.all([
+		countUsed(db, userId, "chat"),
+		countUsed(db, userId, "upload"),
+		countUsed(db, userId, "improve"),
+	]);
 	return {
 		chat: { used: chat, limit: env.SCS_LIMIT_CHAT_PER_DAY, resetsAt: startOfNextUtcDay().toISOString() },
 		upload: { used: upload, limit: env.SCS_LIMIT_UPLOADS_TOTAL, resetsAt: null },
+		improve: { used: improve, limit: env.SCS_LIMIT_IMPROVE_PER_DAY, resetsAt: startOfNextUtcDay().toISOString() },
 	};
 }
 
@@ -66,7 +78,9 @@ export function reserveUsage(userId: string, kind: UsageKind): Promise<string> {
 				message:
 					kind === "upload"
 						? `You've used all ${limit} document/image analyses in the founding beta.`
-						: `You've used your ${limit} AI messages for today.${resets}`,
+						: kind === "improve"
+							? `You've used your ${limit} résumé improvements for today.${resets}`
+							: `You've used your ${limit} AI messages for today.${resets}`,
 				data: { kind, limit, used, resetsAt: kind === "upload" ? null : startOfNextUtcDay().toISOString() },
 			});
 		}

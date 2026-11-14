@@ -22,12 +22,24 @@ vi.mock("@/features/settings/integrations/hooks/use-has-usable-ai-provider", () 
 		usableProviders: [{ id: "current-provider", label: "Current AI", model: "main", fastModel: "fast" }],
 	}),
 }));
-vi.mock("@/libs/orpc/client", () => ({ orpc: { ai: { improve: { mutationOptions: () => ({}) } } } }));
+vi.mock("@/libs/orpc/client", () => ({
+	orpc: {
+		ai: { improve: { mutationOptions: () => ({}) } },
+		scs: {
+			state: { queryOptions: () => ({}), key: () => [] },
+			improve: { mutationOptions: () => ({}) },
+			acceptConsent: { mutationOptions: () => ({}) },
+		},
+	},
+}));
 vi.mock("@tanstack/react-query", async (importOriginal) => {
 	const original = await importOriginal<typeof import("@tanstack/react-query")>();
 	const { useState } = await import("react");
 	return {
 		...original,
+		// A student with their own connection never reaches the platform fallback, so the app state is not needed here.
+		useQuery: () => ({ data: { aiAvailable: false } }),
+		useQueryClient: () => ({ invalidateQueries: vi.fn() }),
 		useMutation: () => {
 			const [data, setData] = useState<typeof fixture.result | null>(null);
 			return {

@@ -14,6 +14,7 @@ type Fact = {
 	text: string;
 	status: "proposed" | "approved" | "rejected";
 	source: string;
+	readOnly?: boolean | undefined;
 };
 
 const CATEGORY_LABEL: Record<string, string> = {
@@ -72,6 +73,17 @@ export function FactCard({ fact }: { fact: Fact }) {
 	const [text, setText] = useState(fact.text);
 	const busy = m.approve.isPending || m.reject.isPending || m.edit.isPending || m.remove.isPending;
 	const proposed = fact.status === "proposed";
+
+	if (fact.readOnly)
+		return (
+			<li className="rounded-lg border border-line bg-raised p-3">
+				<div className="flex items-center gap-2">
+					<Badge variant="info">From your résumé</Badge>
+					<span className="text-xs text-ink-3">{CATEGORY_LABEL[fact.category] ?? "Other"}</span>
+				</div>
+				<p className="mt-1.5 text-sm [overflow-wrap:anywhere] text-ink">{fact.text}</p>
+			</li>
+		);
 
 	return (
 		<li
@@ -145,13 +157,7 @@ export function FactCard({ fact }: { fact: Fact }) {
 }
 
 /** The student's shared career profile: what the coach, LinkedIn Studio and the prompt builder all read from. */
-export function ProfilePanel({
-	showImport = true,
-	hideProposed = false,
-}: {
-	showImport?: boolean;
-	hideProposed?: boolean;
-}) {
+export function ProfilePanel({ hideProposed = false }: { hideProposed?: boolean }) {
 	const { data, isPending, error, refetch } = useFacts();
 	const m = useFactMutations();
 	const [draft, setDraft] = useState("");
@@ -169,20 +175,8 @@ export function ProfilePanel({
 				<h2 id="profile-title" className="text-base font-semibold">
 					Your career profile
 				</h2>
-				<span className="text-xs text-ink-3">{approved.length} verified</span>
+				<span className="text-xs text-ink-3">{approved.length} in your profile</span>
 			</div>
-			{showImport && (
-				<Button
-					variant="secondary"
-					size="sm"
-					className="w-fit"
-					disabled={m.importResumes.isPending}
-					aria-busy={m.importResumes.isPending}
-					onClick={() => m.importResumes.mutate({})}
-				>
-					{m.importResumes.isPending ? "Reading your résumés…" : "Add from my résumés"}
-				</Button>
-			)}
 			{proposed.length > 0 && (
 				<div>
 					<h3 className="mb-1.5 text-[13px] font-semibold text-warn-text">To review ({proposed.length})</h3>
@@ -204,7 +198,7 @@ export function ProfilePanel({
 				!data.some((f) => f.status === "proposed") && (
 					<EmptyState
 						title="Your profile is empty"
-						description="Chat with the coach, upload a résumé, or add something you've done. Only what you approve is used."
+						description="Create or import a résumé and it appears here automatically. You can also chat with the coach or add something you've done."
 					/>
 				)
 			)}

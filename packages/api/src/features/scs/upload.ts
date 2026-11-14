@@ -3,10 +3,9 @@ import { z } from "zod";
 import { db } from "@reactive-resume/db/client";
 import { scsChatMessage } from "@reactive-resume/db/schema";
 import { env } from "@reactive-resume/env/server";
+import { runAi } from "./ai-run";
 import { requireConsent } from "./chat";
 import { factsService } from "./facts";
-import { GeminiFailure, geminiErrorToOrpc, geminiJson } from "./gemini";
-import { commitUsage, refundUsage, reserveUsage } from "./limits";
 import { proposedFactSchema } from "./schemas";
 
 const ALLOWED = {
@@ -54,43 +53,32 @@ export const uploadService = {
 		if (!check(bytes))
 			throw new ORPCError("BAD_REQUEST", { message: "That file doesn't look like a valid PDF or image." });
 
-		const usageId = await reserveUsage(userId, "upload");
-		try {
-			const result = await geminiJson({
-				system: SYSTEM,
-				schema: resultSchema,
-				messages: [
-					{
-						role: "user",
-						content: [
-							{ type: "text", text: "Analyze this uploaded file." },
-							{ type: "file", data: bytes, mediaType: input.mimeType },
-						],
-					},
-				],
-			});
-			await commitUsage(usageId, result.model, result.latencyMs);
-			const proposed = await factsService.propose(userId, result.data.facts, "upload");
-			if (input.threadId) {
-				// Only if the thread is the caller's; otherwise skip silently rather than leak existence.
-				const { chatService } = await import("./chat");
-				const own = (await chatService.listThreads(userId)).some((t) => t.id === input.threadId);
-				if (own)
-					await db.insert(scsChatMessage).values({
-						threadId: input.threadId,
-						userId,
-						role: "assistant",
-						content: `I read ${input.filename.slice(0, 80)}: ${result.data.summary}`,
-					});
-			}
-			return { summary: result.data.summary, proposedFacts: proposed };
-		} catch (error) {
-			const failure =
-				error instanceof GeminiFailure
-					? error
-					: new GeminiFailure("internal_error", "Something went wrong. Nothing was used from your allowance.");
-			await refundUsage(usageId, failure.reason);
-			throw geminiErrorToOrpc(failure);
+		const result = await runAi(userId, "upload", {
+			system: SYSTEM,
+			schema: resultSchema,
+			messages: [
+				{
+					role: "user",
+					content: [
+						{ type: "text", text: "Analyze this uploaded file." },
+						{ type: "file", data: bytes, mediaType: input.mimeType },
+					],
+				},
+			],
+		});
+		const proposed = await factsService.propose(userId, result.data.facts, "upload");
+		if (input.threadId) {
+			// Only if the thread is the caller's; otherwise skip silently rather than leak existence.
+			const { chatService } = await import("./chat");
+			const own = (await chatService.listThreads(userId)).some((t) => t.id === input.threadId);
+			if (own)
+				await db.insert(scsChatMessage).values({
+					threadId: input.threadId,
+					userId,
+					role: "assistant",
+					content: `I read ${input.filename.slice(0, 80)}: ${result.data.summary}`,
+				});
 		}
+		return { summary: result.data.summary, proposedFacts: proposed };
 	},
 };

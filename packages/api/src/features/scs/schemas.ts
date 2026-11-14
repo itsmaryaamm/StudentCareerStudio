@@ -20,6 +20,8 @@ export const factSchema = z.object({
 	status: z.enum(["proposed", "approved", "rejected"]),
 	source: z.enum(["chat", "upload", "resume", "manual"]),
 	createdAt: z.string(),
+	/** Derived live from the student's résumés: always current, edited in the résumé editor, never stored. */
+	readOnly: z.boolean().optional(),
 });
 export type Fact = z.infer<typeof factSchema>;
 
@@ -43,4 +45,5 @@ export type LinkedinSection = z.infer<typeof linkedinSectionSchema>;
 export const usageSchema = z.object({
 	chat: z.object({ used: z.number(), limit: z.number(), resetsAt: z.string() }),
 	upload: z.object({ used: z.number(), limit: z.number(), resetsAt: z.null() }),
+	improve: z.object({ used: z.number(), limit: z.number(), resetsAt: z.string() }),
 });

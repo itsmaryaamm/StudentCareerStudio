@@ -183,6 +183,47 @@ const T = 90000;
 	);
 	await shot("l8-linkedin");
 
+	// ----- editor Improve through the platform AI (real Gemini) -----
+	const imp = await page.evaluate(() =>
+		fetch("/api/openapi/scs/improve", {
+			method: "POST",
+			headers: { "content-type": "application/json" },
+			body: JSON.stringify({
+				line: "Worked on the company website",
+				action: "verb",
+				where: "Experience",
+				context: "Worked on the company website",
+			}),
+		}).then(async (r) => ({ status: r.status, body: await r.json() })),
+	);
+	console.log("      improve:", JSON.stringify(imp.body).slice(0, 200));
+	check(
+		"L11 editor Improve returns a real rewrite with a reason (platform AI)",
+		imp.status === 200 &&
+			imp.body.text &&
+			imp.body.text.length > 10 &&
+			imp.body.text !== "Worked on the company website",
+		JSON.stringify(imp),
+	);
+	check("L11b Improve does not invent numbers (the line has none)", !/\d/.test(imp.body.text || ""), imp.body.text);
+
+	// ----- résumé knowledge, no typing: a résumé alone feeds LinkedIn Studio -----
+	const made = await page.evaluate(async () => {
+		const r = await fetch("/api/openapi/resumes", {
+			method: "POST",
+			headers: { "content-type": "application/json" },
+			body: JSON.stringify({ name: "Live", slug: "live-" + Date.now(), tags: [], withSampleData: true }),
+		});
+		return r.status;
+	});
+	check("L12 a résumé can be created", made === 200, made);
+	const facts = await page.evaluate(() => fetch("/api/openapi/scs/facts").then((r) => r.json()));
+	check(
+		"L12b the résumé's content is in the profile automatically (read-only, 'resume' source)",
+		facts.some((f) => f.readOnly && f.source === "resume"),
+		JSON.stringify(facts).slice(0, 200),
+	);
+
 	// ----- usage accounting -----
 	const usage = await page.evaluate(() => fetch("/api/openapi/scs/usage").then((r) => r.json()));
 	console.log("      usage:", JSON.stringify(usage));

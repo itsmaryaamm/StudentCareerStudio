@@ -2,7 +2,7 @@ import type { IconName } from "@reactive-resume/ui/components/icon";
 import type { Editor } from "@tiptap/react";
 import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
-import { useMutation } from "@tanstack/react-query";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEditorState } from "@tiptap/react";
 import { useId, useRef, useState } from "react";
 import { Badge } from "@reactive-resume/ui/components/badge";
@@ -48,7 +48,18 @@ type ImprovePanelProps = {
  */
 export function ImprovePanel({ editor, line, where, onClose, onAccept, kind }: ImprovePanelProps) {
 	const providers = useHasUsableAiProvider();
-	const provider = providers.usableProviders[0];
+	const byo = providers.usableProviders[0];
+	// No key of their own: use the app's Gemini, within the student's daily improve allowance.
+	const studio = useQuery(orpc.scs.state.queryOptions());
+	const queryClient = useQueryClient();
+	const platform = !byo && studio.data?.aiAvailable === true;
+	const needsConsent = platform && !studio.data?.aiConsentAt;
+	const provider =
+		byo ?? (platform ? { id: "scs-platform", label: "Student Career Studio AI", model: "Gemini" } : undefined);
+	const allowConsent = useMutation({
+		...orpc.scs.acceptConsent.mutationOptions(),
+		onSuccess: () => queryClient.invalidateQueries({ queryKey: orpc.scs.state.key() }),
+	});
 	// "custom" asks what to change; "result" asks what the result was, since only the user knows it.
 	const [asking, setAsking] = useState<"custom" | "result" | null>(null);
 	const [request, setRequest] = useState("");
@@ -61,7 +72,9 @@ export function ImprovePanel({ editor, line, where, onClose, onAccept, kind }: I
 			line.to > editor.state.doc.content.size || editor.state.doc.textBetween(line.from, line.to) !== line.text,
 	});
 	const replaced = useRef(false);
-	const improve = useMutation(orpc.ai.improve.mutationOptions());
+	const improveByo = useMutation(orpc.ai.improve.mutationOptions());
+	const improvePlatform = useMutation(orpc.scs.improve.mutationOptions());
+	const improve = platform ? improvePlatform : improveByo;
 	const resultId = useId();
 
 	const letter = kind?.letter === true;
@@ -86,7 +99,18 @@ export function ImprovePanel({ editor, line, where, onClose, onAccept, kind }: I
 	) => {
 		if (!provider) return;
 		setLast({ action, words });
-		improve.mutate({
+		if (platform) {
+			if (action === "posting") return;
+			improvePlatform.mutate({
+				action,
+				line: line.text,
+				where,
+				context: editor.getText(),
+				...(words ? { request: words } : {}),
+			});
+			return;
+		}
+		improveByo.mutate({
 			aiProviderId: provider.id,
 			includeProvenance: true,
 			action,
@@ -173,7 +197,23 @@ export function ImprovePanel({ editor, line, where, onClose, onAccept, kind }: I
 							</li>
 						</ul>
 					)}
-					{!provider ? null : improve.data ? (
+					{needsConsent ? (
+						<div className="grid gap-2 rounded-lg bg-accent-soft px-3 py-2.5 text-[13px]/[18px]">
+							<p>
+								To improve a line, it and the text around it are sent to Google Gemini. On the free tier Google may use
+								API content to improve its products, so keep private details out of your résumé text you improve. Full
+								details are in the privacy notice.
+							</p>
+							<div className="flex gap-2">
+								<Button size="sm" onClick={() => allowConsent.mutate({})} disabled={allowConsent.isPending}>
+									Allow AI for my résumé text
+								</Button>
+								<Button size="sm" variant="ghost" onClick={close}>
+									Not now
+								</Button>
+							</div>
+						</div>
+					) : !provider ? null : improve.data ? (
 						<div className="grid gap-2">
 							<p
 								role="status"
@@ -209,7 +249,7 @@ export function ImprovePanel({ editor, line, where, onClose, onAccept, kind }: I
 								<summary className="cursor-pointer">
 									<Trans>AI request details</Trans>
 								</summary>
-								<AiResultUsage usage={improve.data.aiUsage} />
+								<AiResultUsage usage={"aiUsage" in improve.data ? improve.data.aiUsage : null} />
 							</details>
 						</div>
 					) : improve.isPending ? (

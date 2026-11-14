@@ -22,6 +22,7 @@ Built on Reactive Resume 6.1.1 (MIT). Everything below is implemented in this re
 | `SCS_BETA_INVITE_CODE`                                                                                                                 | –                     | If set, sign-up requires it (share links as `/auth/register?invite=CODE`). Strongly recommended. |
 | `SCS_LIMIT_CHAT_PER_DAY`                                                                                                               | 7                     | Per student per UTC day. Counts chat replies **and** LinkedIn generations.                       |
 | `SCS_LIMIT_UPLOADS_TOTAL`                                                                                                              | 3                     | Per student, lifetime, document/image analyses.                                                  |
+| `SCS_LIMIT_IMPROVE_PER_DAY`                                                                                                            | 8                     | Per student per UTC day: "Improve" suggestions in the résumé editor (separate from chat).        |
 | `SCS_LIMIT_GLOBAL_AI_PER_MINUTE`                                                                                                       | 12                    | Shared rolling-minute breaker (Google free tier: 15/min).                                        |
 | `SCS_LIMIT_GLOBAL_AI_PER_DAY`                                                                                                          | 450                   | Shared circuit breaker so the one key stays inside its free quota.                               |
 | `SCS_UPLOAD_MAX_BYTES`                                                                                                                 | 4 MiB                 | Max upload.                                                                                      |
@@ -48,6 +49,12 @@ pnpm --filter web exec vp test run src/features/studio
 ```
 
 These prove our plumbing. They do **not** prove Gemini's answer quality or your real quota — see `QUOTAS-AND-COSTS.md`.
+
+## How AI works for a student
+
+- **Use mine (default, free, limited):** the app's Gemini key, with the daily allowances above.
+- **Use my own (unlimited):** Settings → AI. A student who connects a tested key of their own is never limited by us (coach, LinkedIn Studio, uploads, Improve all use their key; the Assistant button appears too). Their text goes to _their_ provider.
+- The profile is built live from the student's résumés (read-only, "From your résumé") plus facts they approved in chat, so nothing has to be typed twice.
 
 ## Known gaps before inviting students
 

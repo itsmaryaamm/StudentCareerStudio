@@ -11,7 +11,6 @@ import { useCallback, useEffect, useRef } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@reactive-resume/ui/components/avatar";
 import { BrandIcon } from "@reactive-resume/ui/components/brand-icon";
 import { Icon } from "@reactive-resume/ui/components/icon";
-import { ariaShortcut, formatShortcut, Kbd } from "@reactive-resume/ui/components/kbd";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@reactive-resume/ui/components/tooltip";
 import { useBreakpoint } from "@reactive-resume/ui/hooks/use-breakpoint";
 import { getInitials } from "@reactive-resume/utils/string";
@@ -25,7 +24,6 @@ import { DocumentLibraryProvider } from "@/features/documents/library-session";
 import { shortcutOverlayOpen } from "@/features/keyboard-shortcuts/blocking";
 import { LEAD_GROUP } from "@/features/keyboard-shortcuts/groups";
 import { useShortcutSettings } from "@/features/keyboard-shortcuts/settings";
-import { showKeyboardShortcuts } from "@/features/keyboard-shortcuts/store";
 import { isEditableElementFocused } from "@/features/resume/builder/draft";
 import { FeedbackButton } from "@/features/studio/feedback";
 import { UsageCard } from "@/features/studio/shared";
@@ -254,7 +252,6 @@ const idle = "text-ink-2 hover:bg-hover hover:text-ink";
 function Sidebar() {
 	const { t } = useLingui();
 	const { session } = useRouteContext({ from: "/dashboard" });
-	const characterShortcuts = useShortcutSettings((state) => state.characterShortcuts);
 	const { items, trash } = useNavItems();
 	const isCurrent = useIsCurrent();
 	const matchRoute = useMatchRoute();
@@ -277,13 +274,11 @@ function Sidebar() {
 			<button
 				type="button"
 				data-design="srch"
-				aria-keyshortcuts={ariaShortcut("⌘K")}
 				onClick={() => openPalette(true)}
 				className="mb-3 flex h-9 items-center gap-2 overflow-hidden rounded-md bg-sunken ps-2.5 pe-2 text-start text-sm text-ink-3 transition-colors duration-quick hover:text-ink-2"
 			>
 				<Icon name="magnifying-glass" size={18} />
 				<Trans>Search or jump to…</Trans>
-				<Kbd className="ms-auto bg-bg">{formatShortcut("⌘K")}</Kbd>
 			</button>
 
 			{items.map((item) => (
@@ -295,17 +290,6 @@ function Sidebar() {
 			<UsageCard className="mb-1" />
 			<FeedbackButton className="justify-start" />
 			<NavLink item={trash} current={isCurrent(trash.to)} />
-			<button
-				type="button"
-				id="keyboard-shortcuts-trigger"
-				aria-keyshortcuts={characterShortcuts ? "?" : undefined}
-				onClick={(event) => showKeyboardShortcuts(event.currentTarget)}
-				className={cn(row, idle)}
-			>
-				<Icon name="keyboard" />
-				<Trans>Shortcuts</Trans>
-				{characterShortcuts && <Kbd>?</Kbd>}
-			</button>
 			<Link
 				to="/dashboard/settings"
 				data-design="acct"
@@ -413,15 +397,6 @@ function Rail() {
 			{items.map(place)}
 			<div className="flex-1" />
 			{place(trash)}
-			<RailTip label={t`Shortcuts`} icon="keyboard">
-				<button
-					type="button"
-					id="keyboard-shortcuts-trigger"
-					aria-label={t`Shortcuts`}
-					onClick={(event) => showKeyboardShortcuts(event.currentTarget)}
-					className={cn(railButton, idle)}
-				/>
-			</RailTip>
 			<Tooltip>
 				<TooltipTrigger
 					render={
