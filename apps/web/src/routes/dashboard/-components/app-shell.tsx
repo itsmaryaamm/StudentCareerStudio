@@ -261,7 +261,7 @@ function Sidebar() {
 		<nav
 			data-design="side"
 			aria-label={t`Main`}
-			className="sticky top-0 flex h-svh flex-col gap-1 border-e border-line bg-bg px-3 pt-4 pb-3 [view-transition-name:app-nav]"
+			className="sticky top-0 flex h-svh flex-col gap-1 overflow-y-auto border-e border-line bg-bg px-3 pt-4 pb-3 [view-transition-name:app-nav] [&>*]:shrink-0"
 		>
 			<Link to="/" className="mb-2 flex h-9 items-center gap-2.5 px-2 text-[15px] leading-5 font-semibold">
 				<BrandIcon variant="icon" alt="" className="size-7 shrink-0 rounded-md" />
@@ -287,7 +287,7 @@ function Sidebar() {
 
 			<div className="flex-1" />
 
-			<UsageCard className="mb-1" />
+			<UsageCard compact className="mb-1" />
 			<FeedbackButton className="justify-start" />
 			<NavLink item={trash} current={isCurrent(trash.to)} />
 			<Link

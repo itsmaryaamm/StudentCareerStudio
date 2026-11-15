@@ -85,7 +85,7 @@ export function Meter({ used, limit, label }: { used: number; limit: number; lab
 	return (
 		<div>
 			<div className="flex items-baseline justify-between text-[13px]">
-				<span className="text-ink-2">{label}</span>
+				<span className="whitespace-nowrap text-ink-2">{label}</span>
 				<span className={cn("font-mono text-xs", left === 0 ? "text-danger-text" : "text-ink-3")}>
 					{used} / {limit}
 				</span>
@@ -108,7 +108,7 @@ export function Meter({ used, limit, label }: { used: number; limit: number; lab
 	);
 }
 
-export function UsageCard({ className }: { className?: string }) {
+export function UsageCard({ className, compact = false }: { className?: string; compact?: boolean }) {
 	const { data, isPending } = useStudioState();
 	return (
 		<section
@@ -122,10 +122,22 @@ export function UsageCard({ className }: { className?: string }) {
 				<p className="mt-2 text-[13px] text-ink-2">You're using your own AI connection, so we don't limit it.</p>
 			) : (
 				<div className="mt-2 grid gap-2">
-					<Meter used={data.usage.chat.used} limit={data.usage.chat.limit} label="AI messages today" />
-					<Meter used={data.usage.improve.used} limit={data.usage.improve.limit} label="Résumé improvements today" />
-					<Meter used={data.usage.upload.used} limit={data.usage.upload.limit} label="Document analyses" />
-					<p className="text-xs text-ink-3">Daily messages reset at midnight UTC.</p>
+					<Meter
+						used={data.usage.chat.used}
+						limit={data.usage.chat.limit}
+						label={compact ? "AI messages" : "AI messages today"}
+					/>
+					<Meter
+						used={data.usage.improve.used}
+						limit={data.usage.improve.limit}
+						label={compact ? "Improvements" : "Résumé improvements today"}
+					/>
+					{!compact && (
+						<Meter used={data.usage.upload.used} limit={data.usage.upload.limit} label="Document analyses" />
+					)}
+					<p className="text-xs text-ink-3">
+						{compact ? "Per day, resets midnight UTC." : "Daily messages reset at midnight UTC."}
+					</p>
 				</div>
 			)}
 		</section>
