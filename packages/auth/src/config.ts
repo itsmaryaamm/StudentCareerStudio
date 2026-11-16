@@ -1228,7 +1228,11 @@ const getAuthConfig = () => {
 			google: {
 				enabled: !!env.GOOGLE_CLIENT_ID && !!env.GOOGLE_CLIENT_SECRET,
 				disableSignUp: env.FLAG_DISABLE_SIGNUPS,
-				clientId: env.GOOGLE_CLIENT_ID ?? "",
+				// The web client first (used for the redirect flow); the iOS and Android IDs are also accepted as the
+				// audience of an ID token from Google's native or browser "Sign in with Google" button.
+				clientId: [env.GOOGLE_CLIENT_ID, env.GOOGLE_IOS_CLIENT_ID, env.GOOGLE_ANDROID_CLIENT_ID].filter(
+					(id): id is string => Boolean(id),
+				),
 				clientSecret: env.GOOGLE_CLIENT_SECRET ?? "",
 				mapProfileToUser: createProfileMapper({
 					providerName: "Google",

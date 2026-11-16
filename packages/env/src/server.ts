@@ -158,6 +158,9 @@ export const env = createEnv({
 		// Social Auth (Google)
 		GOOGLE_CLIENT_ID: z.string().min(1).optional(),
 		GOOGLE_CLIENT_SECRET: z.string().min(1).optional(),
+		// Native apps sign in with Google's own SDK and send an ID token; these are their OAuth client IDs (no secret).
+		GOOGLE_IOS_CLIENT_ID: z.string().min(1).optional(),
+		GOOGLE_ANDROID_CLIENT_ID: z.string().min(1).optional(),
 
 		// Social Auth (GitHub)
 		GITHUB_CLIENT_ID: z.string().min(1).optional(),

@@ -167,6 +167,8 @@ export async function betaInfo() {
 	return {
 		maxSeats: env.SCS_BETA_MAX_USERS,
 		seatsLeft: Math.max(0, env.SCS_BETA_MAX_USERS - taken),
+		// Public by design: the browser needs it to draw Google's sign-in button. Null when Google isn't set up.
+		googleClientId: env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET ? env.GOOGLE_CLIENT_ID : null,
 	};
 }
 

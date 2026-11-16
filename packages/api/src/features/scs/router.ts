@@ -26,7 +26,7 @@ const id = z.object({ id: z.string().min(1).max(64) });
 export const scsRouter = {
 	beta: publicProcedure
 		.route(route("GET", "/beta", "scsBetaInfo", "Founding beta seat availability"))
-		.output(z.object({ maxSeats: z.number(), seatsLeft: z.number() }))
+		.output(z.object({ maxSeats: z.number(), seatsLeft: z.number(), googleClientId: z.string().nullable() }))
 		.handler(() => betaInfo()),
 
 	state: protectedProcedure

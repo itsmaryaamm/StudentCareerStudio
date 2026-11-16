@@ -12,6 +12,7 @@ import { cn } from "@reactive-resume/utils/style";
 import { authErrorMessage } from "../error";
 import { getAuthRedirectOptions, getOAuthPasskeyOptions, getOAuthSignInOptions, isOAuthRedirect } from "../redirect";
 import { AuthOr } from "./auth-page";
+import { GoogleSignInButton } from "./google-button";
 import { authClient } from "@/libs/auth/client";
 import { ENTER_CLASS } from "@/libs/motion";
 import { orpc } from "@/libs/orpc/client";
@@ -56,7 +57,10 @@ export function SocialAuth({ signUp = false, rule = true, friendCode = "" }: Soc
 type SocialAuthButtonsProps = { providers: Providers; friendCode: string };
 
 function SocialAuthButtons({ providers, friendCode }: SocialAuthButtonsProps) {
-	const shown = offeredSocial(providers);
+	const { data: info } = useQuery(orpc.scs.beta.queryOptions());
+	// With a Google client ID the browser uses Google's own button (ID token); the redirect button is the fallback.
+	const googleButton = Boolean(info?.googleClientId);
+	const shown = offeredSocial(providers).filter((p) => !(googleButton && p === "google"));
 	const router = useRouter();
 	const queryClient = useQueryClient();
 	const { callbackURL } = useSearch({ from: "/auth" });
@@ -118,6 +122,8 @@ function SocialAuthButtons({ providers, friendCode }: SocialAuthButtonsProps) {
 					<Trans comment="Label for passkey sign-in button">Continue with a passkey</Trans>
 				</Button>
 			)}
+
+			{googleButton && "google" in providers && <GoogleSignInButton friendCode={friendCode} />}
 
 			{shown.map((provider) => (
 				<Button

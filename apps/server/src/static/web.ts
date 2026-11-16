@@ -78,6 +78,8 @@ export function isProfilePath(pathname: string): boolean {
  * its real-user metrics beacon from static.cloudflareinsights.com.
  */
 export function contentSecurityPolicy(html = "") {
+	// Google's "Sign in with Google" button loads a script, a stylesheet and an iframe from accounts.google.com.
+	const googleSignIn = Boolean(env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET);
 	const inlineScripts = html.matchAll(
 		/<script(?![^>]*\bsrc=)(?![^>]*application\/ld\+json)[^>]*>([\s\S]*?)<\/script>/g,
 	);
@@ -89,14 +91,18 @@ export function contentSecurityPolicy(html = "") {
 	);
 	return [
 		"default-src 'self'",
-		["script-src 'self' 'wasm-unsafe-eval' https://static.cloudflareinsights.com", ...hashes].join(" "),
-		"style-src 'self' 'unsafe-inline'",
+		[
+			"script-src 'self' 'wasm-unsafe-eval' https://static.cloudflareinsights.com",
+			...(googleSignIn ? ["https://accounts.google.com/gsi/client"] : []),
+			...hashes,
+		].join(" "),
+		`style-src 'self' 'unsafe-inline'${googleSignIn ? " https://accounts.google.com/gsi/style" : ""}`,
 		"img-src 'self' data: blob: https:",
 		`font-src 'self' data: ${env.FONT_MIRROR_URL ? new URL(env.FONT_MIRROR_URL).origin : "https:"}`,
 		`connect-src 'self' data: blob: https:${env.FONT_MIRROR_URL ? ` ${new URL(env.FONT_MIRROR_URL).origin}` : ""}`,
 		"media-src 'self' data: blob:",
 		"worker-src 'self' blob:",
-		"frame-src 'self' blob:",
+		`frame-src 'self' blob:${googleSignIn ? " https://accounts.google.com/gsi/" : ""}`,
 		"frame-ancestors 'none'",
 		"base-uri 'self'",
 		// Print and template previews show a PDF from a blob: URL, which Chromium's viewer loads as a plugin.
