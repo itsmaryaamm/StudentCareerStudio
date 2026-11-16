@@ -69,7 +69,12 @@ check(
 	beta0.status === 200 && beta0.json.maxSeats === 4 && beta0.json.inviteRequired === true,
 	JSON.stringify(beta0),
 );
-check("sign-up WITHOUT invite code is refused", (await signUp(u("x0"), null)).status === 403);
+const X0 = await signUp(u("x0"), null);
+check("sign-up WITHOUT invite code is allowed (standard account, no seat)", X0.status === 200, JSON.stringify(X0.json));
+check(
+	"a standard account holds no founding seat",
+	Number(psql(`select count(*) from scs_beta_seat where user_id='${X0.id}'`)) === 0,
+);
 check("sign-up with WRONG invite code is refused", (await signUp(u("x1"), "nope")).status === 403);
 const A = await signUp(u("a"));
 const B = await signUp(u("b"));
@@ -411,8 +416,8 @@ const stats = await http("GET", "/scs/admin/stats", { cookie: adm.cookie });
 check(
 	"admin sees stats (users, résumés, AI, errors, feedback)",
 	stats.status === 200 &&
-		stats.json.registeredUsers === 3 &&
-		stats.json.allAccounts === 4 &&
+		stats.json.registeredUsers === 4 &&
+		stats.json.allAccounts === 5 &&
 		stats.json.totalResumes >= 1 &&
 		stats.json.aiTotal >= 10 &&
 		stats.json.aiErrors24h >= 3 &&
@@ -470,9 +475,29 @@ check(
 check("A's résumé is gone", Number(psql(`select count(*) from resume where user_id='${A.id}'`)) === 0);
 check("A can no longer sign in", (await signIn(u("a"))).status !== 200);
 check("deleting A freed a seat", (await http("GET", "/scs/beta")).json.seatsLeft === beforeSeats + 1);
-const late = await signUp(u("late"));
-check("a new student can take the freed seat", late.status === 200, JSON.stringify(late.json));
-
+await http("POST", "/scs/consent", { cookie: X0.cookie });
+r = await http("POST", "/scs/chat/send", { cookie: X0.cookie, body: { message: "hello" } });
+check(
+	"standard account: free AI is refused (ACCESS_REQUIRED) and nothing is used",
+	r.status === 403 &&
+		JSON.stringify(r.json).includes("ACCESS_REQUIRED") &&
+		Number(psql(`select count(*) from scs_ai_usage where user_id='${X0.id}'`)) === 0,
+	JSON.stringify(r),
+);
+check(
+	"standard account: state says no free access",
+	(await http("GET", "/scs/state", { cookie: X0.cookie })).json.freeAccess === false,
+);
+r = await http("PUT", "/scs/access/code", { cookie: X0.cookie, body: { code: "nope" } });
+check("redeem: wrong code refused", r.status === 400, JSON.stringify(r));
+r = await http("PUT", "/scs/access/code", { cookie: X0.cookie, body: { code: "beta-code-1" } });
+check("redeem: right code takes the freed seat", r.status === 200, JSON.stringify(r));
+check(
+	"redeem: free access is now on",
+	(await http("GET", "/scs/state", { cookie: X0.cookie })).json.freeAccess === true,
+);
+r = await http("POST", "/scs/chat/send", { cookie: X0.cookie, body: { message: "hello again" } });
+check("redeem: AI now works", r.status === 200, JSON.stringify(r));
 console.log(`\n${pass.length} passed, ${fail.length} failed`);
 if (fail.length) {
 	console.log("FAILED:", fail);

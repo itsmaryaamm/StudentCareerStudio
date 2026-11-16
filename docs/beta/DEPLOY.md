@@ -6,7 +6,7 @@ I could not do this from the build environment (no network path or credentials f
 2. **Render**: Dashboard -> New -> **Blueprint** -> pick this repo and branch. `render.yaml` creates the web service. When asked, fill:
    - `DATABASE_URL` = the Neon string
    - `GEMINI_API_KEY` = your AI Studio key
-   - `SCS_BETA_INVITE_CODE` = a code you choose
+   - `SCS_BETA_INVITE_CODE` = the free-access code you choose. Sign-up is open to everyone; people who enter this code get free AI (up to 50 seats), others get a standard account with résumé tools only and AI locked until pricing opens or they add their own Gemini key
    - `SMTP_*` = your mail provider (needed for email confirmation and password reset)
    - `GOOGLE_CLIENT_ID/SECRET` = optional, for "Continue with Google"
 3. First deploy builds the Docker image (several minutes) and applies migrations at startup. `APP_URL` is taken from Render's `RENDER_EXTERNAL_URL`; set `APP_URL` yourself if you add a custom domain.

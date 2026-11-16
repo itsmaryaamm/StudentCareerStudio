@@ -1,3 +1,4 @@
+import { ORPCError } from "@orpc/client";
 import { z } from "zod";
 import { protectedProcedure, publicProcedure } from "../../context";
 import { accountService, adminService, betaInfo, requireAdmin } from "./account";
@@ -77,6 +78,18 @@ export const scsRouter = {
 		.route(route("PUT", "/gemini-key", "scsSetOwnGeminiKey", "Use my own Gemini API key"))
 		.input(z.strictObject({ apiKey: z.string().min(1).max(200) }))
 		.handler(({ context, input }) => byokService.set(context.user.id, input.apiKey)),
+	redeemCode: protectedProcedure
+		.route(route("PUT", "/access/code", "scsRedeemCode", "Redeem an invite code for free founding-beta access"))
+		.input(z.strictObject({ code: z.string().trim().min(1).max(64) }))
+		.handler(async ({ context, input }) => {
+			const { redeemBetaCode, BetaClosedError } = await import("@reactive-resume/auth/beta-seats");
+			try {
+				await redeemBetaCode(context.user.id, context.user.email, input.code);
+			} catch (error) {
+				if (error instanceof BetaClosedError) throw new ORPCError("BAD_REQUEST", { message: error.message });
+				throw error;
+			}
+		}),
 	clearOwnKey: protectedProcedure
 		.route(route("DELETE", "/gemini-key", "scsClearOwnGeminiKey", "Stop using my own Gemini key"))
 		.handler(({ context }) => byokService.clear(context.user.id)),

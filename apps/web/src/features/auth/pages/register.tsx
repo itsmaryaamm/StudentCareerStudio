@@ -174,7 +174,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 					<Trans>Create an account and what you made as a guest moves into it.</Trans>
 				) : (
 					<Trans comment="Reassurance under the registration title, repeating the homepage's promise">
-						Free, with no ads and no paywall.
+						Free with an invite code. No ads.
 					</Trans>
 				)}
 			</ConnectingClient>
@@ -194,8 +194,8 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 					{beta && (
 						<Alert variant={betaFull ? "warn" : "info"} role="status">
 							{betaFull
-								? `The founding beta is full (${beta.maxSeats} students). Thank you for your interest.`
-								: `Founding beta · ${beta.seatsLeft} of ${beta.maxSeats} free seats left.`}
+								? `The ${beta.maxSeats} free founding seats are taken. You can still sign up; AI features will be paid.`
+								: `Founding beta · ${beta.seatsLeft} of ${beta.maxSeats} free seats left, for people with an invite code.`}
 						</Alert>
 					)}
 
@@ -327,7 +327,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 						<form.Field name="inviteCode">
 							{(field) => (
 								<FormItem>
-									<FormLabel>Invite code</FormLabel>
+									<FormLabel>Invite code (optional)</FormLabel>
 									<FormControl
 										render={
 											<Input
@@ -340,7 +340,10 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 											/>
 										}
 									/>
-									<FormDescription>The code from your founding-beta invitation.</FormDescription>
+									<FormDescription>
+										Have a code? Use it for free access to the AI coach. Without one, the AI coach is paid (pricing
+										coming soon). You can still build résumés free, and use your own Gemini key.
+									</FormDescription>
 								</FormItem>
 							)}
 						</form.Field>
@@ -354,7 +357,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 						: your résumé stays private to you, and AI features send only what you choose to Google Gemini.
 					</p>
 
-					<Button type="submit" size="lg" className="mt-1 w-full leading-5" disabled={isSubmitting || betaFull}>
+					<Button type="submit" size="lg" className="mt-1 w-full leading-5" disabled={isSubmitting}>
 						<Trans comment="Primary action button label on registration form">Create account</Trans>
 					</Button>
 				</form>

@@ -39,6 +39,7 @@ export const accountService = {
 			resumeCount: resumes?.n ?? 0,
 			usage: await usageSummary(userId),
 			ownKeyPreview: row?.ownGeminiKeyPreview ?? null,
+			freeAccess: await (await import("@reactive-resume/auth/beta-seats")).hasFreeAccess(userId),
 			aiAvailable: isGeminiConfigured() || Boolean(row?.ownGeminiKeyEnc),
 		};
 	},

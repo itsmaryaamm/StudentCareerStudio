@@ -3,6 +3,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { Alert } from "@reactive-resume/ui/components/alert";
 import { Button } from "@reactive-resume/ui/components/button";
+import { Input } from "@reactive-resume/ui/components/input";
 import { Skeleton } from "@reactive-resume/ui/components/skeleton";
 import { cn } from "@reactive-resume/utils/style";
 import { orpc } from "@/libs/orpc/client";
@@ -160,6 +161,7 @@ export function ConsentGate({ children }: { children: React.ReactNode }) {
 				<p>Everything else works. We'll tell you when the coach opens.</p>
 			</Alert>
 		);
+	if (!data.freeAccess && !data.ownKeyPreview) return <AccessCard />;
 	if (data.aiConsentAt) return <>{children}</>;
 	return (
 		<section aria-labelledby="consent-title" className="rounded-xl border border-line bg-accent-soft p-5">
@@ -248,5 +250,57 @@ export function LimitBanner({ onReset, className }: { onReset?: () => void; clas
 				for no daily limit.
 			</p>
 		</div>
+	);
+}
+
+/** Free AI is for people with an invite code. Everyone else can redeem one later, or use their own Gemini key. */
+export function AccessCard({ className }: { className?: string }) {
+	const queryClient = useQueryClient();
+	const [code, setCode] = useState("");
+	const redeem = useMutation({
+		...orpc.scs.redeemCode.mutationOptions(),
+		onSuccess: () => queryClient.invalidateQueries({ queryKey: orpc.scs.state.key() }),
+	});
+	return (
+		<section
+			aria-labelledby="access-title"
+			className={cn("rounded-xl border border-line bg-accent-soft p-4 text-sm", className)}
+		>
+			<h2 id="access-title" className="text-base font-semibold text-accent-text">
+				The AI coach is free with an invite code
+			</h2>
+			<p className="mt-1 text-ink-2">
+				Founding-beta members use it free. Everyone else will pay once pricing opens (coming soon). Your résumé builder
+				is free either way.
+			</p>
+			<form
+				className="mt-3 flex flex-wrap items-end gap-2"
+				onSubmit={(e) => {
+					e.preventDefault();
+					if (code.trim()) redeem.mutate({ code });
+				}}
+			>
+				<div className="grid gap-1">
+					<label htmlFor="access-code" className="text-[13px]">
+						Invite code
+					</label>
+					<Input id="access-code" autoComplete="off" value={code} onChange={(e) => setCode(e.target.value)} />
+				</div>
+				<Button type="submit" disabled={redeem.isPending || !code.trim()}>
+					{redeem.isPending ? "Checking…" : "Unlock free access"}
+				</Button>
+			</form>
+			{redeem.error && (
+				<p role="alert" className="mt-2 text-danger-text">
+					{studioErrorText(redeem.error, "Couldn't use that code.")}
+				</p>
+			)}
+			<p className="mt-3 text-ink-2">
+				No code? Use your own free Gemini key instead.{" "}
+				<a href="/dashboard/settings/privacy" className="text-accent-text underline">
+					Add your key
+				</a>
+			</p>
+		</section>
 	);
 }
