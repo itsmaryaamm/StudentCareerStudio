@@ -10,7 +10,10 @@ import { ChatPage } from "../chat";
  * page makes room for; on phones it is a button that opens it over the page.
  */
 export function SideCoach({ children }: { children: React.ReactNode }) {
-	const [open, setOpen] = useState(true);
+	// Open beside the page on wide screens; on a phone it would cover the page, so it starts as a button.
+	const [open, setOpen] = useState(
+		() => typeof window === "undefined" || window.matchMedia("(min-width: 1024px)").matches,
+	);
 	const { pathname } = useLocation();
 	// The full-page chat already is the coach.
 	// Settings pages need the width, and the full-page chat already is the coach.
@@ -35,7 +38,7 @@ export function SideCoach({ children }: { children: React.ReactNode }) {
 					</div>
 				</aside>
 			) : (
-				<Button className="fixed inset-e-4 bottom-4 z-40 shadow-lg" onClick={() => setOpen(true)}>
+				<Button className="fixed inset-e-4 bottom-24 z-40 shadow-lg lg:bottom-4" onClick={() => setOpen(true)}>
 					<Icon name="sparkle" size={16} /> Career coach
 				</Button>
 			)}
