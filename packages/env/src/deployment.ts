@@ -7,7 +7,9 @@ export function deploymentEnvironment(input: NodeJS.ProcessEnv): NodeJS.ProcessE
 		value("VERCEL_ENV") === "production"
 			? (value("VERCEL_PROJECT_PRODUCTION_URL") ?? value("VERCEL_URL"))
 			: value("VERCEL_URL");
-	const appUrl = value("APP_URL") ?? (vercel && hostname ? `https://${hostname}` : undefined);
+	// Render sets RENDER_EXTERNAL_URL to the service's public address (custom domain once added: set APP_URL instead).
+	const appUrl =
+		value("APP_URL") ?? (vercel && hostname ? `https://${hostname}` : undefined) ?? value("RENDER_EXTERNAL_URL");
 	const hasS3 = value("S3_ACCESS_KEY_ID") && value("S3_SECRET_ACCESS_KEY") && value("S3_BUCKET");
 	// Cloudron addons supply their own variable names: https://docs.cloudron.io/packaging/addons
 	const mailFrom = value("CLOUDRON_MAIL_FROM");
