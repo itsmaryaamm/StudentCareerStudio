@@ -2,7 +2,7 @@
 
 ## Done
 
-- App deployed on Render with the redesign: sign-in/up, chat onboarding, dashboard with career coach, Career Lab (4 missions),
+- App deployed on Render (https://student-career-studio.onrender.com) with the redesign: sign-in/up, chat onboarding, dashboard with career coach, Career Lab (4 missions),
   LinkedIn Studio, Settings, feedback, friend codes, own-AI-key option, phone layout, marketing home page.
 - Free limits per student: 7 messages a day and 3 document reads; friends who join with a code get more (see README).
 - Server-side seat cap (`SCS_BETA_MAX_USERS`, default 50) and a shared daily AI cap (`SCS_LIMIT_GLOBAL_AI_PER_DAY`).
@@ -27,8 +27,8 @@ The app expects to live at the root of a host name (its links, assets, sign-in c
 sub-folder like `/studentcareerstudio` would need a base-path change in the app plus a reverse proxy on maryamimran.com.
 The reliable setup, which takes about five minutes:
 
-1. In Render → the service → Settings → Custom Domains, add `studentcareerstudio.maryamimran.com`.
-2. At your DNS provider add the CNAME record Render shows (name `studentcareerstudio`, value the `.onrender.com` host).
+1. Already done: `studentcareerstudio.maryamimran.com` is added to the Render service (status: unverified until step 2).
+2. At your DNS provider add a CNAME record: name `studentcareerstudio`, value `student-career-studio.onrender.com`.
 3. When Render shows it verified, set the environment variable `APP_URL=https://studentcareerstudio.maryamimran.com`
    (and `https://…` in the Google OAuth client if you use Google). Redeploy.
 4. On maryamimran.com make `/studentcareerstudio` redirect (301) to `https://studentcareerstudio.maryamimran.com`. Where your
