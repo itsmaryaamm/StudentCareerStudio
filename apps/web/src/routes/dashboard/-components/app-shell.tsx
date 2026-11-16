@@ -27,7 +27,7 @@ import { LEAD_GROUP } from "@/features/keyboard-shortcuts/groups";
 import { useShortcutSettings } from "@/features/keyboard-shortcuts/settings";
 import { showKeyboardShortcuts } from "@/features/keyboard-shortcuts/store";
 import { isEditableElementFocused } from "@/features/resume/builder/draft";
-import { FeedbackButton } from "@/features/studio/feedback";
+import { FeedbackButton, FeedbackHost } from "@/features/studio/feedback";
 import { trashedApplicationsQueryOptions } from "@/features/trash/queries";
 import { orpc } from "@/libs/orpc/client";
 
@@ -256,6 +256,7 @@ export function AppShell({ children }: AppShellProps) {
 				<DocumentLibraryProvider>{children}</DocumentLibraryProvider>
 			</main>
 			{tabs && <MobileTabs />}
+			<FeedbackHost />
 		</div>
 	);
 }

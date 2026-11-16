@@ -13,6 +13,7 @@ import {
 	copyText,
 	ErrorBlock,
 	isQuotaError,
+	LimitBanner,
 	LoadingBlock,
 	studioErrorText,
 	useStudioState,
@@ -226,6 +227,8 @@ function SectionEditor({ section, initial, hasFacts }: { section: SectionId; ini
 							</Button>
 						</div>
 					</Alert>
+				) : chatLeft <= 0 && !state?.ownKeyPreview ? (
+					<LimitBanner />
 				) : (
 					<div className="flex flex-wrap gap-2">
 						<Button disabled={generate.isPending || chatLeft <= 0} aria-busy={generate.isPending} onClick={() => run()}>
@@ -253,9 +256,12 @@ function SectionEditor({ section, initial, hasFacts }: { section: SectionId; ini
 							))}
 					</div>
 				)}
-				{generate.error != null && (
-					<Alert variant={isQuotaError(generate.error) ? "warn" : "error"}>{studioErrorText(generate.error)}</Alert>
-				)}
+				{generate.error != null &&
+					(isQuotaError(generate.error) ? (
+						<LimitBanner />
+					) : (
+						<Alert variant="error">{studioErrorText(generate.error)}</Alert>
+					))}
 				<ul className="grid gap-2" aria-live="polite">
 					{suggestions.map((s, i) => (
 						<li key={`${i}-${s.text.slice(0, 20)}`} className="rounded-lg border border-line bg-raised p-3">

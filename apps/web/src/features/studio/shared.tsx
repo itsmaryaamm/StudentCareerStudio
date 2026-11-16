@@ -4,7 +4,9 @@ import { useEffect, useState } from "react";
 import { Alert } from "@reactive-resume/ui/components/alert";
 import { Button } from "@reactive-resume/ui/components/button";
 import { Skeleton } from "@reactive-resume/ui/components/skeleton";
+import { toast } from "@reactive-resume/ui/components/toast";
 import { cn } from "@reactive-resume/utils/style";
+import { useFeedbackDialog } from "./feedback-store";
 import { orpc } from "@/libs/orpc/client";
 
 export const useStudioState = () => useQuery(orpc.scs.state.queryOptions());
@@ -217,6 +219,8 @@ export function LimitBanner({ onReset, className }: { onReset?: () => void; clas
 	const queryClient = useQueryClient();
 	const resetsAt = data?.usage.chat.resetsAt;
 	const left = useCountdown(resetsAt);
+	const referral = data?.referral;
+	const askForFeedback = useFeedbackDialog((s) => s.openOnce);
 	useEffect(() => {
 		if (left === 0) {
 			void queryClient.invalidateQueries({ queryKey: orpc.scs.state.key() });
@@ -224,29 +228,54 @@ export function LimitBanner({ onReset, className }: { onReset?: () => void; clas
 		}
 		// oxlint-disable-next-line react-hooks/exhaustive-deps -- fires once when the countdown reaches zero
 	}, [left === 0]);
+	// The first time someone runs out, it's a good moment to ask how it's going.
+	useEffect(() => {
+		askForFeedback("limit");
+	}, [askForFeedback]);
+
+	const copyInvite = async () => {
+		if (!referral) return;
+		const link = `${window.location.origin}/auth/register?ref=${referral.code}`;
+		toast.add(
+			(await copyText(link))
+				? { description: "Invite link copied" }
+				: { type: "error", description: "Couldn't copy the link." },
+		);
+	};
+
 	return (
-		<div role="status" className={cn("rounded-lg bg-warn-soft p-3 text-sm text-warn-text", className)}>
-			<p className="font-medium">You've used today's free messages.</p>
+		<div
+			role="status"
+			className={cn(
+				"rounded-2xl bg-linear-to-br from-[#7c4df5] to-[#4b1d96] p-5 text-white shadow-[0_20px_50px_-34px_rgba(75,29,150,.6)]",
+				className,
+			)}
+		>
+			<p className="text-[15px] font-semibold">You've used today's free messages</p>
 			{left != null && resetsAt && (
-				<p className="mt-0.5">
-					More in <span className="font-semibold tabular-nums">{formatCountdown(left)}</span>
+				<p className="mt-0.5 text-sm text-[#e6dcff]">
+					Resets in <span className="font-bold text-white tabular-nums">{formatCountdown(left)}</span>
 					<span className="text-xs opacity-80">
 						{" "}
 						(at {new Date(resetsAt).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })})
 					</span>
 				</p>
 			)}
-			<p className="mt-1 text-xs">
-				Don't want to wait?{" "}
-				<a href="/dashboard/settings/privacy" className="underline">
-					Invite a friend for more messages
-				</a>{" "}
-				or{" "}
-				<a href="/dashboard/settings/privacy" className="underline">
-					add your own free AI key
-				</a>{" "}
-				for no daily limit.
+			<p className="mt-2 text-sm text-[#e6dcff]">
+				Or invite a friend for +{referral?.perFriendChat ?? 2} messages a day
 			</p>
+			<div className="mt-3 flex flex-wrap items-center gap-3">
+				<button
+					type="button"
+					onClick={() => void copyInvite()}
+					className="inline-flex h-10 items-center rounded-xl bg-white px-4 text-sm font-semibold text-[#4b1d96] transition hover:bg-[#f3efff] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white active:scale-[.98]"
+				>
+					Copy invite link
+				</button>
+				<a href="/dashboard/settings/privacy" className="text-sm font-semibold text-white underline underline-offset-4">
+					Use your own AI key
+				</a>
+			</div>
 		</div>
 	);
 }

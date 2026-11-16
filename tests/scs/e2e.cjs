@@ -142,6 +142,25 @@ const check = (name, ok, extra = "") => {
 	);
 	await shot("w2-upload");
 
+	// Missions can be attached to the chat; sending them starts the mission with the coach's opener and no AI call.
+	await page.goto(`${BASE}/dashboard/chat`);
+	const usedBefore = (await page.evaluate(() => fetch("/api/openapi/scs/usage").then((r) => r.json()))).chat.used;
+	await page.getByRole("button", { name: "Discover Me" }).first().click();
+	check(
+		"W2 clicking a mission chip attaches it to the message box",
+		await page.getByRole("button", { name: "Remove Discover Me" }).isVisible(),
+	);
+	await page.getByRole("button", { name: "Send", exact: true }).click();
+	await page.getByText(/Starting Discover Me/).waitFor();
+	check(
+		"W2 sending a mission starts it with the coach's opener and a link to the workbook",
+		await page.getByRole("link", { name: "Open the Discover Me workbook" }).isVisible(),
+	);
+	check(
+		"W2 starting a mission used none of the daily messages",
+		(await page.evaluate(() => fetch("/api/openapi/scs/usage").then((r) => r.json()))).chat.used === usedBefore,
+	);
+
 	// ===== Workflow 3: create résumé -> edit -> download a real PDF =====
 	await page.goto(`${BASE}/dashboard/documents`);
 	await page.getByRole("button", { name: "Start blank" }).click();
@@ -336,7 +355,7 @@ const check = (name, ok, extra = "") => {
 	await page.getByLabel("Your message").fill("The coach felt natural. Please add Arabic.");
 	await page.getByRole("button", { name: "Send", exact: true }).click();
 	await page
-		.getByText(/Thank you/)
+		.getByText(/Thanks, feedback sent/)
 		.first()
 		.waitFor({ timeout: 10000 });
 	check("X1 feedback can be sent from the app shell", true);
