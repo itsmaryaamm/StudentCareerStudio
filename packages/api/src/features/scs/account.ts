@@ -178,6 +178,14 @@ export const adminService = {
 			)
 			.then((r) => r.rows as { n: number }[]);
 		const [totalResumes] = await db.select({ n: count() }).from(resume);
+		// Onboarding funnel for students (not admins): finished, or stuck at which step. Counts only.
+		const funnel = await db
+			.execute<{ step: string; n: number }>(
+				sql`select case when s.onboarded_at is not null then 'done' else coalesce(s.onboarding_step, 'not started') end as step, count(*)::int as n
+					from "user" u left join ${scsUserState} s on s.user_id = u.id
+					where u.role is distinct from 'admin' and coalesce(u.is_anonymous, false) = false group by 1`,
+			)
+			.then((r) => r.rows as { step: string; n: number }[]);
 		const ai = await db
 			.select({ kind: scsAiUsage.kind, status: scsAiUsage.status, n: count() })
 			.from(scsAiUsage)
@@ -202,6 +210,7 @@ export const adminService = {
 			maxSeats: env.SCS_BETA_MAX_USERS,
 			usersWithResume: (withResume as unknown as { n: number } | undefined)?.n ?? 0,
 			totalResumes: totalResumes?.n ?? 0,
+			onboarding: funnel,
 			completedResumes: (completed as unknown as { n: number } | undefined)?.n ?? 0,
 			aiToday: ai.map((r) => ({ kind: r.kind, status: r.status, n: r.n })),
 			aiTotal: aiTotal?.n ?? 0,
@@ -227,11 +236,15 @@ export const adminService = {
 			role: string | null;
 			resumes: number;
 			ai: number;
+			step: string;
+			facts: number;
 		}>(sql`
 			select u.id, u.name, u.email, u.created_at, u.role,
+				case when s.onboarded_at is not null then 'done' else coalesce(s.onboarding_step, 'not started') end as step,
+				(select count(*)::int from ${scsCareerFact} f where f.user_id = u.id and f.status = 'approved') as facts,
 				(select count(*)::int from ${resume} r where r.user_id = u.id) as resumes,
 				(select count(*)::int from ${scsAiUsage} a where a.user_id = u.id and a.status <> 'error') as ai
-			from "user" u order by u.created_at desc limit 200`);
+			from "user" u left join ${scsUserState} s on s.user_id = u.id order by u.created_at desc limit 200`);
 		return (
 			rows.rows as {
 				id: string;
@@ -241,6 +254,8 @@ export const adminService = {
 				role: string | null;
 				resumes: number;
 				ai: number;
+				step: string;
+				facts: number;
 			}[]
 		).map((r) => ({
 			id: r.id,
@@ -250,6 +265,8 @@ export const adminService = {
 			isAdmin: r.role === "admin",
 			resumes: r.resumes,
 			aiRequests: r.ai,
+			onboarding: r.step,
+			approvedFacts: r.facts,
 		}));
 	},
 

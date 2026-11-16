@@ -48,12 +48,34 @@ const check = (name, ok, extra = "") => {
 	await page.getByRole("button", { name: "Create account" }).click();
 	await page.waitForURL(/\/dashboard/, { timeout: 15000 });
 	check("W1 sign-up with invite code lands on the dashboard", true);
-	await page.getByText("How would you like to start?").waitFor();
+	// First sign-in is a chat-only onboarding: name -> stage -> what they have -> contact -> guided steps -> dashboard.
+	await page.getByText("What should I call you?").waitFor();
 	check(
-		"W1 first-run onboarding offers Start with AI / Import résumé / Import LinkedIn",
-		(await page.getByRole("button", { name: /Start with AI/ }).isVisible()) &&
-			(await page.getByRole("button", { name: /Import résumé/ }).isVisible()) &&
-			(await page.getByRole("button", { name: /Import LinkedIn/ }).isVisible()),
+		"W1 first sign-in shows only the coach chat (no navigation)",
+		(await page.getByRole("link", { name: "Documents" }).count()) === 0,
+	);
+	await page.getByLabel("Your name").fill("Layla");
+	await page.getByRole("button", { name: "Send", exact: true }).click();
+	await page.getByText("Which stage are you at").waitFor();
+	await page.getByRole("button", { name: "A student looking for a co-op" }).click();
+	await page.getByText("Do you already have any of these?").waitFor();
+	check(
+		"W1 the coach asks what they already have (résumé / LinkedIn / portfolio)",
+		await page.getByRole("button", { name: "A LinkedIn profile" }).isVisible(),
+	);
+	await page.getByRole("button", { name: "A résumé" }).click();
+	await page.getByRole("button", { name: "Continue" }).click();
+	await page.getByText("contact details").waitFor();
+	await page.getByLabel("Phone").fill("555-0100");
+	await page.getByRole("button", { name: "Continue" }).click();
+	await page.getByText("Let's start with your résumé").waitFor();
+	check("W1 the coach starts with the document they have", true);
+	await page.getByRole("button", { name: "Skip this", exact: true }).click();
+	await page.getByRole("button", { name: "Go to my dashboard" }).click();
+	await page.getByText("Welcome, Layla").waitFor();
+	check(
+		"W1 after the chat they reach the dashboard with the coach on the side",
+		await page.getByRole("complementary", { name: "Career coach" }).isVisible(),
 	);
 	await shot("w1-onboarding");
 	// sign out via settings, then sign back in

@@ -38,6 +38,16 @@ export function AdminPage() {
 					sub={`${s.seatsTaken} of ${s.maxSeats} founding seats used`}
 				/>
 				<Stat
+					label="Finished onboarding"
+					value={`${s.onboarding.find((o) => o.step === "done")?.n ?? 0} of ${s.registeredUsers}`}
+					sub={
+						s.onboarding
+							.filter((o) => o.step !== "done")
+							.map((o) => `${o.n} at ${o.step}`)
+							.join(" · ") || "Nobody stuck"
+					}
+				/>
+				<Stat
 					label="Completed résumés"
 					value={s.completedResumes}
 					sub={`${s.totalResumes} total · ${s.usersWithResume} students have one`}
@@ -70,7 +80,7 @@ export function AdminPage() {
 					<ErrorBlock error={users.error} onRetry={() => void users.refetch()} />
 				) : (
 					<div className="overflow-x-auto rounded-xl border border-line">
-						<table className="w-full min-w-[560px] text-start text-sm">
+						<table className="w-full min-w-[720px] text-start text-sm">
 							<thead className="bg-sunken text-[13px] text-ink-3">
 								<tr>
 									<th scope="col" className="p-2.5 text-start">
@@ -81,6 +91,12 @@ export function AdminPage() {
 									</th>
 									<th scope="col" className="p-2.5 text-start">
 										Joined
+									</th>
+									<th scope="col" className="p-2.5 text-start">
+										Onboarding
+									</th>
+									<th scope="col" className="p-2.5 text-end">
+										Facts
 									</th>
 									<th scope="col" className="p-2.5 text-end">
 										Résumés
@@ -98,6 +114,10 @@ export function AdminPage() {
 										</td>
 										<td className="p-2.5 [overflow-wrap:anywhere]">{u.email}</td>
 										<td className="p-2.5">{new Date(u.createdAt).toLocaleDateString()}</td>
+										<td className="p-2.5">
+											{u.onboarding === "done" ? <Badge variant="accent">done</Badge> : u.onboarding}
+										</td>
+										<td className="p-2.5 text-end">{u.approvedFacts}</td>
 										<td className="p-2.5 text-end">{u.resumes}</td>
 										<td className="p-2.5 text-end">{u.aiRequests}</td>
 									</tr>

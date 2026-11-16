@@ -35,11 +35,27 @@ Sign up normally, then on the server:
 `DATABASE_URL=... pnpm scs:make-admin you@example.com`
 Admin is never granted by sign-up, so nobody can claim it by registering your address first. Admin sees counts, names and emails only — never résumé or chat content. The admin role is re-read from the database on every admin call.
 
+## Seeing who has onboarded
+
+Sign in as the admin and open **`/dashboard/admin`**. The "Finished onboarding" card shows how many students are done and
+how many are stuck at which step (`welcome`, `situation`, `inventory`, `contact`, `resume`, `linkedin`, `interview`).
+The student table has an Onboarding column (`done` or the step they stopped at) plus approved-fact and résumé counts.
+Counts only: never chat or résumé content.
+
+## Before inviting the first students
+
+1. Deploy (see `QUOTAS-AND-COSTS.md`) with `APP_URL` equal to the public URL, `AUTH_SECRET`, `ENCRYPTION_SECRET`, `DATABASE_URL`.
+2. Set `GEMINI_API_KEY`, `SCS_BETA_INVITE_CODE`, and `SCS_LIMIT_GLOBAL_AI_PER_DAY` to about 90% of your real Google daily quota.
+3. Configure SMTP (`SMTP_HOST/PORT/USER/PASS/FROM`): confirmation and password-reset emails need it. Without it, students are not asked to confirm and cannot reset passwords.
+4. Optional Google sign-in: `GOOGLE_CLIENT_ID/SECRET`, redirect URI `<APP_URL>/api/auth/callback/google`.
+5. Sign up yourself, run `pnpm scs:make-admin you@example.com`, and walk the onboarding once on the live URL.
+6. Share links as `<APP_URL>/auth/register?invite=CODE`.
+
 ## Tests
 
 ```
 node tests/scs/fake-gemini.mjs &                 # stand-in Gemini on :4010 (NOT Gemini)
-# server: APP_URL=http://localhost:3001 SCS_BETA_MAX_USERS=4 SCS_BETA_INVITE_CODE=beta-code-1 GEMINI_API_KEY=x SCS_GEMINI_BASE_URL=http://localhost:4010/v1beta pnpm start
+# server: APP_URL=http://localhost:3001 SCS_BETA_MAX_USERS=4 SCS_BETA_INVITE_CODE=beta-code-1 SCS_LIMIT_GLOBAL_AI_PER_MINUTE=1000 GEMINI_API_KEY=x SCS_GEMINI_BASE_URL=http://localhost:4010/v1beta pnpm start
 node tests/scs/api.test.mjs                      # 64 server checks: cap races, quotas, privacy, admin, deletion
 # server again with default limits, then:
 node tests/scs/e2e.cjs                           # the five workflows + feedback/export/delete in a real browser
