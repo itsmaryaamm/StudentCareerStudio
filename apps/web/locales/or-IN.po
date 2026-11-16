@@ -2255,10 +2255,6 @@ msgstr "ଏକ ଲିଙ୍କ୍ ସମ୍ପୂର୍ଣ୍ଣ ଠିକଣା
 msgid "A link points somewhere other than the address it shows."
 msgstr "ଏକ ଲିଙ୍କ୍ ଦେଖାଉଥିବା ଠିକଣା ବ୍ୟତୀତ ଅନ୍ୟ କୌଣସି ସ୍ଥାନକୁ ନିର୍ଦ୍ଦେଶ କରେ।"
 
-#: src/features/auth/pages/register.tsx
-msgid "A link to verify your account is on its way. It's optional."
-msgstr "ଆପଣଙ୍କ ଆକାଉଣ୍ଟ ଯାଞ୍ଚ କରିବାକୁ ଏକ ଲିଙ୍କ୍ ଆସୁଛି। ଏହା ବାଧ୍ୟତାମୂଳକ ନୁହେଁ।"
-
 #: src/features/resume/editor/check/writing-tab.tsx
 msgid "A model's opinion, not a verdict. It can be wrong."
 msgstr "ଏକ ମଡେଲର ମତ, ଏକ ନିଷ୍ପତ୍ତି ନୁହେଁ | ଏହା ଭୁଲ ହୋଇପାରେ |"
@@ -3024,7 +3020,6 @@ msgstr "ଆପଣଙ୍କ ଆବଶ୍ୟକତା ତୁଳନାରେ"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/root.tsx
 #: src/routes/dashboard/settings/ai.tsx
-#: src/routes/dashboard/settings/route.tsx
 msgid "AI"
 msgstr "AI"
 
@@ -3986,6 +3981,7 @@ msgstr "ବର୍ତ୍ତମାନ ଫେରିଯାନ୍ତୁ |"
 #. Navigation link on 2FA verification screen
 #: src/features/auth/pages/error.tsx
 #: src/features/auth/pages/forgot-password.tsx
+#: src/features/auth/pages/register.tsx
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Back to sign in"
 msgstr "ସାଇନ୍ ଇନ୍‌କୁ ଫେରନ୍ତୁ"
@@ -4133,6 +4129,10 @@ msgstr "ବଙ୍ଗାଳୀ"
 #: src/features/resume/share/download-tab.tsx
 msgid "Best for applying"
 msgstr "ଆବେଦନ ପାଇଁ ସର୍ବୋତ୍ତମ |"
+
+#: src/features/auth/layout.tsx
+msgid "Beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "Better for columns and tables. The file is sent to your AI connection."
@@ -5434,6 +5434,10 @@ msgstr "ଆପଣଙ୍କ {appName} ଇମେଲ୍ ପରିବର୍ତ୍ତ
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "ଏହା ଆପଣଙ୍କ {appName} ପାଇଁ ଇମେଲ୍ ଠିକଣା ବୋଲି ନିଶ୍ଚିତ କରନ୍ତୁ। ଲିଙ୍କ୍ 1 ଘଣ୍ଟା ପର୍ଯ୍ୟନ୍ତ କାମ କରିବ।"
+
+#: src/features/auth/error.ts
+msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
+msgstr ""
 
 #. Email preview text. appName: Reactive Resume
 #: src/features/auth/email-text.ts
@@ -7408,7 +7412,6 @@ msgstr "ପ୍ରଦାନକାରୀଙ୍କ ବିବରଣୀ: {detail}"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/root.tsx
 #: src/routes/dashboard/settings/developer.tsx
-#: src/routes/dashboard/settings/route.tsx
 msgid "Developer"
 msgstr "ଡେଭଲପର୍"
 
@@ -9183,13 +9186,13 @@ msgstr "ମିଳିଥିବା ବିଜ୍ଞାପନ ଲିଙ୍କ୍‌�
 msgid "Found the role and company on the page. Review the details before saving."
 msgstr "ପୃଷ୍ଠାରେ ଭୂମିକା ଓ କମ୍ପାନୀ ମିଳିଲା। ସେଭ୍ କରିବା ପୂର୍ବରୁ ବିବରଣୀ ସମୀକ୍ଷା କରନ୍ତୁ।"
 
-#: src/features/auth/layout.tsx
-msgid "Founding beta for 50 students. Your résumé stays private to you."
-msgstr ""
-
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
 msgstr "ମାଗଣା ATS ରେଜୁମ୍ ଚେକର୍ |"
+
+#: src/features/auth/pages/login.tsx
+msgid "Free during the beta"
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free resume builder with PDF & Word downloads"
@@ -9216,14 +9219,10 @@ msgstr "ମୁକ୍ତ-ଫର୍ମ"
 msgid "Free, open-source resume builder. Create, update, and share your resume, with PDF and Word downloads, no ads and no paywall."
 msgstr "ମାଗଣା, ମୁକ୍ତ ଉତ୍ସ ରିଜ୍ୟୁମ୍ ତିଆରି ସାଧନ। ଆପଣଙ୍କ ରିଜ୍ୟୁମ୍ ସୃଷ୍ଟି, ଅଦ୍ୟତନ ଓ ସେୟାର୍ କରନ୍ତୁ। PDF ଓ Word ଡାଉନଲୋଡ୍ ସୁବିଧା ସହିତ, ବିଜ୍ଞାପନ ନାହିଁ କିମ୍ବା ଦେୟ ଦେବାର ବାଧ୍ୟତା ନାହିଁ।"
 
-#: src/features/auth/pages/login.tsx
-msgid "Free, with no ads and no paywall"
-msgstr "ମାଗଣା, କୌଣସି ବିଜ୍ଞାପନ ବା ପେୱାଲ୍ ନାହିଁ"
-
 #. Reassurance under the registration title, repeating the homepage's promise
 #: src/features/auth/pages/register.tsx
-msgid "Free, with no ads and no paywall."
-msgstr "ମାଗଣା, କୌଣସି ବିଜ୍ଞାପନ ବା ପେୱାଲ୍ ନାହିଁ।"
+msgid "Free, with no ads."
+msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "Free. The file never leaves your browser."
@@ -10555,14 +10554,14 @@ msgstr "ଚାକିରି"
 msgid "Join Discord"
 msgstr "Discordରେ ଯୋଗ ଦିଅନ୍ତୁ"
 
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the beta"
+msgstr ""
+
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "Discord ସମୁଦାୟରେ ଯୋଗ ଦିଅନ୍ତୁ"
-
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Join the founding beta"
-msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -22339,6 +22338,10 @@ msgstr "ଆପଣଙ୍କ {appName} ପାସୱାର୍ଡ ରିସେଟ୍
 #: src/features/settings/account/profile.tsx
 msgid "We sent a confirmation link to {email}. Open it to finish the change."
 msgstr "ଆମେ {email} କୁ ଏକ ନିଶ୍ଚିତକରଣ ଲିଙ୍କ୍ ପଠାଇଲୁ | ପରିବର୍ତ୍ତନ ଶେଷ କରିବାକୁ ଏହାକୁ ଖୋଲ |"
+
+#: src/features/auth/pages/register.tsx
+msgid "We sent a confirmation link to <0>{confirmEmail}</0>. Open it to activate your account, then sign in. Check spam if it doesn't arrive in a minute."
+msgstr ""
 
 #: src/features/settings/account/profile.tsx
 msgid "We sent a link to {currentEmail} to approve the change. Then open the link we send to {email}."

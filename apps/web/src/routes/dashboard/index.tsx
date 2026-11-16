@@ -19,10 +19,16 @@ export const Route = createFileRoute("/dashboard/")({
 });
 
 function RouteComponent() {
+	const { session } = Route.useRouteContext();
+	const firstName = session.user.name.split(" ")[0] ?? "there";
 	return (
 		<Page>
 			<PageBody>
-				<RootHeader title="Dashboard" subtitle="Your career studio" actions={<PhoneHeaderActions />} />
+				<RootHeader
+					title={`Welcome, ${firstName}`}
+					subtitle="Tell your story once. We'll use it for your résumé and LinkedIn."
+					actions={<PhoneHeaderActions />}
+				/>
 				<HomePage />
 			</PageBody>
 		</Page>

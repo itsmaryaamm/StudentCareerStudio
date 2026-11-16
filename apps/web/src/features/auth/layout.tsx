@@ -26,11 +26,11 @@ export function AuthLayout() {
 				</div>
 			</div>
 
-			<aside className="hidden min-w-0 flex-1 flex-col items-center justify-center border-s border-line bg-sunken xl:flex">
+			<aside className="hidden min-w-0 flex-1 flex-col items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_30%_20%,#7c4df5_0%,#4b1d96_55%,#240a55_100%)] text-white xl:flex">
 				<div
 					role="img"
 					aria-label={t`Two résumés made in Student Career Studio`}
-					className="relative h-[684px] w-[584px]"
+					className="relative h-[684px] w-[584px] scale-[.82]"
 				>
 					<div data-design="paper" className={`${paper} start-0 top-0 -rotate-2 rtl:rotate-2`}>
 						<img src="/templates/thumb/ditto.webp" alt="" className="size-full object-cover" />
@@ -39,11 +39,11 @@ export function AuthLayout() {
 						<img src="/templates/thumb/onyx.webp" alt="" className="size-full object-cover" />
 					</div>
 				</div>
-				<p className="mt-9 text-center t-root-title">
+				<p className="mt-9 max-w-[620px] px-8 text-center text-[34px] leading-[1.15] font-bold tracking-[-0.03em] text-balance">
 					<Trans>Tell your story once. Use it for your résumé and LinkedIn.</Trans>
 				</p>
-				<p className="pt-1.5 text-center t-small text-ink-3">
-					<Trans>Founding beta for 50 students. Your résumé stays private to you.</Trans>
+				<p className="pt-2 text-center text-[15px] text-[#d9ccff]">
+					<Trans>Beta for 50 students. Your résumé stays private to you.</Trans>
 				</p>
 			</aside>
 		</div>

@@ -1,4 +1,4 @@
-import { useLocation } from "@tanstack/react-router";
+import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import { Button } from "@reactive-resume/ui/components/button";
 import { Icon } from "@reactive-resume/ui/components/icon";
@@ -16,22 +16,29 @@ export function SideCoach({ children }: { children: React.ReactNode }) {
 	);
 	const { pathname } = useLocation();
 	// The full-page chat already is the coach.
-	// Settings pages need the width, and the full-page chat already is the coach.
-	if (pathname.startsWith("/dashboard/chat") || pathname.startsWith("/dashboard/settings")) return <>{children}</>;
+	// The coach sits beside the dashboard and LinkedIn Studio only; elsewhere pages keep their full width.
+	if (pathname !== "/dashboard" && !pathname.startsWith("/dashboard/linkedin")) return <>{children}</>;
 
 	return (
 		<>
-			<div className={cn("min-w-0", open && "lg:pe-[380px]")}>{children}</div>
+			<div className={cn("min-w-0", open && "lg:pe-[320px]")}>{children}</div>
 			{open ? (
 				<aside
 					aria-label="Career coach"
-					className="fixed inset-y-0 inset-e-0 z-40 flex w-full flex-col gap-2 border-s border-line bg-bg p-3 sm:w-[380px]"
+					className="fixed inset-y-0 inset-e-0 z-40 flex w-full flex-col gap-2 border-s border-line bg-bg p-3 sm:w-[320px]"
 				>
-					<div className="flex items-center justify-between">
-						<h2 className="text-sm font-semibold">Career coach</h2>
-						<Button variant="ghost" size="icon" aria-label="Hide the career coach" onClick={() => setOpen(false)}>
-							<Icon name="x" size={16} />
-						</Button>
+					<div className="flex items-center justify-between gap-2">
+						<h2 className="flex items-center gap-2 text-[15px] font-semibold">
+							<Icon name="sparkle" size={16} className="text-accent" /> Career coach
+						</h2>
+						<span className="flex items-center gap-1">
+							<Link to="/dashboard/chat" className="text-[13px] font-semibold text-accent hover:underline">
+								Open full chat
+							</Link>
+							<Button variant="ghost" size="icon" aria-label="Hide the career coach" onClick={() => setOpen(false)}>
+								<Icon name="x" size={16} />
+							</Button>
+						</span>
 					</div>
 					<div className="min-h-0 flex-1">
 						<ChatPage compact />

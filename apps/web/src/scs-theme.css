@@ -3,16 +3,24 @@
  * brand purple #6d4bd8 (hover #5436b8, tint #f4f1fc), Plus Jakarta Sans, bold headings.
  * Only tokens are overridden, so every component keeps its spacing, states and focus ring.
  */
+@import "@fontsource-variable/inter/wght.css";
 @import "./scs-fonts.css";
 
 :root {
-	--font-ui: "Plus Jakarta Sans", system-ui, sans-serif;
-	--font-display: "Plus Jakarta Sans", system-ui, sans-serif;
-	--accent: oklch(0.52 0.2 285); /* #6d4bd8 */
-	--accent-hover: oklch(0.45 0.19 285); /* #5436b8 */
-	--on-accent: oklch(0.99 0.005 285);
-	--accent-soft: oklch(0.955 0.025 290); /* #f4f1fc */
-	--accent-text: oklch(0.44 0.17 285); /* 6.8:1 on the tint */
+	/* Redesign palette (design handoff): ink #1A0B3B, muted #6B6585, primary #6C3CF1, app background #F8F6FF. */
+	--bg: #f8f6ff;
+	--sunken: #f3efff;
+	--line: #e8e3f5;
+	--ink: #1a0b3b;
+	--ink-2: #4a4466;
+	--ink-3: #6b6585;
+	--font-ui: "Inter Variable", Inter, "Plus Jakarta Sans", system-ui, sans-serif;
+	--font-display: "Inter Variable", Inter, "Plus Jakarta Sans", system-ui, sans-serif;
+	--accent: #6c3cf1;
+	--accent-hover: #5b2fd8;
+	--on-accent: #ffffff;
+	--accent-soft: #ede9fe;
+	--accent-text: #4b1d96; /* 9:1 on the tint */
 }
 
 .dark {

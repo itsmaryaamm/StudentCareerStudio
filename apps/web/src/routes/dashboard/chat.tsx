@@ -5,7 +5,7 @@ import { ChatPage } from "@/features/studio/chat";
 import { getPageTitle } from "@/libs/seo";
 
 export const Route = createFileRoute("/dashboard/chat")({
-	head: () => ({ meta: [{ title: getPageTitle("AI Career Chat") }] }),
+	head: () => ({ meta: [{ title: getPageTitle("Career Coach") }] }),
 	component: RouteComponent,
 });
 
@@ -14,8 +14,8 @@ function RouteComponent() {
 		<Page>
 			<PageBody>
 				<RootHeader
-					title="AI Career Chat"
-					subtitle="Your Gemini-powered coach. It only saves what you confirm."
+					title="Career Coach"
+					subtitle="Your career coach. It only saves what you confirm."
 					actions={<PhoneHeaderActions />}
 				/>
 				<ChatPage />

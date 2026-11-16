@@ -166,7 +166,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 						Keep your work
 					</Trans>
 				) : (
-					<Trans comment="Title on the registration page">Join the founding beta</Trans>
+					<Trans comment="Title on the registration page">Join the beta</Trans>
 				)}
 			</AuthTitle>
 			<ConnectingClient callbackURL={callbackURL} register>
@@ -194,8 +194,8 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 					{beta && (
 						<Alert variant={betaFull ? "warn" : "info"} role="status">
 							{betaFull
-								? `The founding beta is full (${beta.maxSeats} students). Thank you for your interest.`
-								: `Founding beta · ${beta.seatsLeft} of ${beta.maxSeats} free seats left.`}
+								? `The beta is full (${beta.maxSeats} students). Thank you for your interest.`
+								: `Beta · ${beta.seatsLeft} of ${beta.maxSeats} free seats left.`}
 						</Alert>
 					)}
 
@@ -352,7 +352,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 						<a href="/privacy" target="_blank" rel="noreferrer" className="underline">
 							beta privacy notice
 						</a>
-						: your résumé stays private to you, and AI features send only what you choose to Google Gemini.
+						: your résumé stays private to you, and AI features send only what you choose to Google's AI.
 					</p>
 
 					<Button type="submit" size="lg" className="mt-1 w-full leading-5" disabled={isSubmitting || betaFull}>

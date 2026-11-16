@@ -2,7 +2,7 @@ export function PrivacyNotice() {
 	return (
 		<article className="mx-auto grid max-w-2xl gap-5 px-4 py-10 text-sm leading-6 text-ink-2">
 			<header>
-				<h1 className="text-3xl font-semibold text-ink">Founding beta privacy notice</h1>
+				<h1 className="text-3xl font-semibold text-ink">Beta privacy notice</h1>
 				<p className="mt-1 text-ink-3">
 					Student Career Studio is a free beta for a small group of students. This is how your information is handled.
 				</p>
@@ -28,7 +28,7 @@ export function PrivacyNotice() {
 				</p>
 			</section>
 			<section>
-				<h2 className="text-lg font-semibold text-ink">AI processing by Google Gemini</h2>
+				<h2 className="text-lg font-semibold text-ink">AI processing by Google</h2>
 				<p>
 					When you use the AI coach, LinkedIn suggestions or a document analysis, the text you send, the profile items
 					you approved, and any file you upload are sent to Google's Gemini API to produce the answer. Do not share
@@ -39,9 +39,9 @@ export function PrivacyNotice() {
 				</p>
 			</section>
 			<section>
-				<h2 className="text-lg font-semibold text-ink">Optional: your own Gemini key for the coach</h2>
+				<h2 className="text-lg font-semibold text-ink">Optional: your own AI key for the coach</h2>
 				<p>
-					In Settings → Privacy you can paste your own Google Gemini key. The coach, LinkedIn suggestions and document
+					In Settings → Privacy you can paste your own Google AI key. The coach, LinkedIn suggestions and document
 					reading then run on your key, with no daily limit from us, and your messages are processed under your Google
 					account's terms instead of ours. We store the key encrypted, never show it again, never include it in your
 					download, and delete it when you remove it or delete your account.
@@ -52,7 +52,7 @@ export function PrivacyNotice() {
 				<p>
 					The résumé editor has optional "Assistant" and "Improve" buttons that only work if you connect an AI provider
 					with your own API key. Those requests go from our server to the provider you choose, under that provider's
-					terms, and are not part of our Gemini coach or its limits. Skip them if you are unsure.
+					terms, and are not part of our career coach or its limits. Skip them if you are unsure.
 				</p>
 			</section>
 			<section>

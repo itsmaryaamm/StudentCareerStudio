@@ -2255,10 +2255,6 @@ msgstr "链接不是完整地址"
 msgid "A link points somewhere other than the address it shows."
 msgstr "有一个链接指向的地址和它显示的地址不一致。"
 
-#: src/features/auth/pages/register.tsx
-msgid "A link to verify your account is on its way. It's optional."
-msgstr "验证账户的链接已发出。验证是可选的。"
-
 #: src/features/resume/editor/check/writing-tab.tsx
 msgid "A model's opinion, not a verdict. It can be wrong."
 msgstr "模型的意见，而不是判决。这可能是错误的。"
@@ -3024,7 +3020,6 @@ msgstr "对照您的要求"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/root.tsx
 #: src/routes/dashboard/settings/ai.tsx
-#: src/routes/dashboard/settings/route.tsx
 msgid "AI"
 msgstr "AI"
 
@@ -3986,6 +3981,7 @@ msgstr "回到现在"
 #. Navigation link on 2FA verification screen
 #: src/features/auth/pages/error.tsx
 #: src/features/auth/pages/forgot-password.tsx
+#: src/features/auth/pages/register.tsx
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Back to sign in"
 msgstr "返回登录"
@@ -4133,6 +4129,10 @@ msgstr "孟加拉语"
 #: src/features/resume/share/download-tab.tsx
 msgid "Best for applying"
 msgstr "最适合申请"
+
+#: src/features/auth/layout.tsx
+msgid "Beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "Better for columns and tables. The file is sent to your AI connection."
@@ -5434,6 +5434,10 @@ msgstr "确认此地址以完成您的 {appName} 邮箱更改。链接 1 小时�
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "确认这是您用于 {appName} 的邮箱地址。链接 1 小时内有效。"
+
+#: src/features/auth/error.ts
+msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
+msgstr ""
 
 #. Email preview text. appName: Reactive Resume
 #: src/features/auth/email-text.ts
@@ -7408,7 +7412,6 @@ msgstr "服务提供商的详细信息：{detail}"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/root.tsx
 #: src/routes/dashboard/settings/developer.tsx
-#: src/routes/dashboard/settings/route.tsx
 msgid "Developer"
 msgstr "开发者"
 
@@ -9183,13 +9186,13 @@ msgstr "找到的职位公告链接由 Reactive Resume 读取，必要时还会�
 msgid "Found the role and company on the page. Review the details before saving."
 msgstr "已在页面上找到职位和公司。保存前请核对详情。"
 
-#: src/features/auth/layout.tsx
-msgid "Founding beta for 50 students. Your résumé stays private to you."
-msgstr ""
-
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
 msgstr "免费 ATS 简历检查器"
+
+#: src/features/auth/pages/login.tsx
+msgid "Free during the beta"
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free resume builder with PDF & Word downloads"
@@ -9216,14 +9219,10 @@ msgstr "自由形式"
 msgid "Free, open-source resume builder. Create, update, and share your resume, with PDF and Word downloads, no ads and no paywall."
 msgstr "免费、开源的简历制作工具。创建、更新和分享您的简历，支持 PDF 和 Word 下载，无广告，无付费限制。"
 
-#: src/features/auth/pages/login.tsx
-msgid "Free, with no ads and no paywall"
-msgstr "免费，无广告，无付费墙"
-
 #. Reassurance under the registration title, repeating the homepage's promise
 #: src/features/auth/pages/register.tsx
-msgid "Free, with no ads and no paywall."
-msgstr "免费，无广告，无付费墙。"
+msgid "Free, with no ads."
+msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "Free. The file never leaves your browser."
@@ -10554,14 +10553,14 @@ msgstr "工作机会"
 msgid "Join Discord"
 msgstr "加入 Discord"
 
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the beta"
+msgstr ""
+
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "加入 Discord 社区"
-
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Join the founding beta"
-msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -22336,6 +22335,10 @@ msgstr "我们收到了重置您 {appName} 密码的请求。"
 #: src/features/settings/account/profile.tsx
 msgid "We sent a confirmation link to {email}. Open it to finish the change."
 msgstr "我们向 {email} 发送了确认链接。打开它以完成更改。"
+
+#: src/features/auth/pages/register.tsx
+msgid "We sent a confirmation link to <0>{confirmEmail}</0>. Open it to activate your account, then sign in. Check spam if it doesn't arrive in a minute."
+msgstr ""
 
 #: src/features/settings/account/profile.tsx
 msgid "We sent a link to {currentEmail} to approve the change. Then open the link we send to {email}."

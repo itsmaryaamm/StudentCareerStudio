@@ -2255,10 +2255,6 @@ msgstr "Liên kết không phải là địa chỉ đầy đủ"
 msgid "A link points somewhere other than the address it shows."
 msgstr "Một liên kết trỏ đến nơi khác với địa chỉ mà nó hiển thị."
 
-#: src/features/auth/pages/register.tsx
-msgid "A link to verify your account is on its way. It's optional."
-msgstr "Liên kết xác minh tài khoản đang được gửi đến bạn. Việc này không bắt buộc."
-
 #: src/features/resume/editor/check/writing-tab.tsx
 msgid "A model's opinion, not a verdict. It can be wrong."
 msgstr "Ý kiến ​​của một người mẫu, không phải là một phán quyết. Nó có thể sai."
@@ -3024,7 +3020,6 @@ msgstr "So với yêu cầu của bạn"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/root.tsx
 #: src/routes/dashboard/settings/ai.tsx
-#: src/routes/dashboard/settings/route.tsx
 msgid "AI"
 msgstr "AI"
 
@@ -3986,6 +3981,7 @@ msgstr "Trở lại bây giờ"
 #. Navigation link on 2FA verification screen
 #: src/features/auth/pages/error.tsx
 #: src/features/auth/pages/forgot-password.tsx
+#: src/features/auth/pages/register.tsx
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Back to sign in"
 msgstr "Quay lại đăng nhập"
@@ -4133,6 +4129,10 @@ msgstr "Tiếng Bengal"
 #: src/features/resume/share/download-tab.tsx
 msgid "Best for applying"
 msgstr "Phù hợp nhất để ứng tuyển"
+
+#: src/features/auth/layout.tsx
+msgid "Beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "Better for columns and tables. The file is sent to your AI connection."
@@ -5434,6 +5434,10 @@ msgstr "Hãy xác nhận địa chỉ này để hoàn tất việc thay đổi 
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "Hãy xác nhận đây là địa chỉ email của bạn cho {appName}. Liên kết có hiệu lực trong 1 giờ."
+
+#: src/features/auth/error.ts
+msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
+msgstr ""
 
 #. Email preview text. appName: Reactive Resume
 #: src/features/auth/email-text.ts
@@ -7408,7 +7412,6 @@ msgstr "Chi tiết từ nhà cung cấp: {detail}"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/root.tsx
 #: src/routes/dashboard/settings/developer.tsx
-#: src/routes/dashboard/settings/route.tsx
 msgid "Developer"
 msgstr "Nhà phát triển"
 
@@ -9183,13 +9186,13 @@ msgstr "Các liên kết tin tuyển dụng tìm được sẽ được Reactive
 msgid "Found the role and company on the page. Review the details before saving."
 msgstr "Đã tìm thấy vị trí và công ty trên trang. Hãy xem lại chi tiết trước khi lưu."
 
-#: src/features/auth/layout.tsx
-msgid "Founding beta for 50 students. Your résumé stays private to you."
-msgstr ""
-
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
 msgstr "Trình kiểm tra sơ yếu lý lịch ATS miễn phí"
+
+#: src/features/auth/pages/login.tsx
+msgid "Free during the beta"
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free resume builder with PDF & Word downloads"
@@ -9216,14 +9219,10 @@ msgstr "Hình thức tự do"
 msgid "Free, open-source resume builder. Create, update, and share your resume, with PDF and Word downloads, no ads and no paywall."
 msgstr "Trình tạo sơ yếu lý lịch mã nguồn mở, miễn phí. Tạo, cập nhật và chia sẻ sơ yếu lý lịch của bạn với các bản tải xuống PDF và Word, không có quảng cáo và không có tường phí."
 
-#: src/features/auth/pages/login.tsx
-msgid "Free, with no ads and no paywall"
-msgstr "Miễn phí, không quảng cáo, không tường phí"
-
 #. Reassurance under the registration title, repeating the homepage's promise
 #: src/features/auth/pages/register.tsx
-msgid "Free, with no ads and no paywall."
-msgstr "Miễn phí, không quảng cáo, không tường phí."
+msgid "Free, with no ads."
+msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "Free. The file never leaves your browser."
@@ -10554,14 +10553,14 @@ msgstr "Việc làm"
 msgid "Join Discord"
 msgstr "Tham gia Discord"
 
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the beta"
+msgstr ""
+
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "Tham gia cộng đồng Discord"
-
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Join the founding beta"
-msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -22336,6 +22335,10 @@ msgstr "Chúng tôi đã nhận được yêu cầu đặt lại mật khẩu {a
 #: src/features/settings/account/profile.tsx
 msgid "We sent a confirmation link to {email}. Open it to finish the change."
 msgstr "Chúng tôi đã gửi liên kết xác nhận tới {email}. Mở nó để hoàn tất thay đổi."
+
+#: src/features/auth/pages/register.tsx
+msgid "We sent a confirmation link to <0>{confirmEmail}</0>. Open it to activate your account, then sign in. Check spam if it doesn't arrive in a minute."
+msgstr ""
 
 #: src/features/settings/account/profile.tsx
 msgid "We sent a link to {currentEmail} to approve the change. Then open the link we send to {email}."

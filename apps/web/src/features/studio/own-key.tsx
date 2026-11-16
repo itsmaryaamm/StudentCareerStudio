@@ -17,7 +17,7 @@ export function OwnKeyCard() {
 		onSuccess: async () => {
 			setKey("");
 			await refresh();
-			toast.add({ description: "Your Gemini key is saved. The coach now uses it." });
+			toast.add({ description: "Your AI key is saved. The coach now uses it." });
 		},
 	});
 	const clear = useMutation({
@@ -32,7 +32,7 @@ export function OwnKeyCard() {
 	return (
 		<section aria-labelledby="own-key" className="rounded-xl border border-line bg-raised p-4">
 			<h2 id="own-key" className="text-base font-semibold">
-				Use your own Gemini key (optional)
+				Use your own AI key (optional)
 			</h2>
 			<p className="mt-1 text-sm text-ink-2">
 				Run out of free messages, or want no daily limit? Paste a free key from Google AI Studio. Chat, LinkedIn and
@@ -57,7 +57,7 @@ export function OwnKeyCard() {
 					}}
 				>
 					<label htmlFor="own-key-input" className="text-[13px]">
-						Gemini API key
+						AI key
 					</label>
 					<Input
 						id="own-key-input"

@@ -2255,10 +2255,6 @@ msgstr "Веза није пуна адреса"
 msgid "A link points somewhere other than the address it shows."
 msgstr "Веза води на неко друго место, а не на адресу коју приказује."
 
-#: src/features/auth/pages/register.tsx
-msgid "A link to verify your account is on its way. It's optional."
-msgstr "Веза за потврду налога је на путу. Потврда није обавезна."
-
 #: src/features/resume/editor/check/writing-tab.tsx
 msgid "A model's opinion, not a verdict. It can be wrong."
 msgstr "Мишљење модела, а не пресуда. Може бити погрешно."
@@ -3024,7 +3020,6 @@ msgstr "У односу на ваше захтеве"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/root.tsx
 #: src/routes/dashboard/settings/ai.tsx
-#: src/routes/dashboard/settings/route.tsx
 msgid "AI"
 msgstr "АИ"
 
@@ -3986,6 +3981,7 @@ msgstr "Вратимо се сада"
 #. Navigation link on 2FA verification screen
 #: src/features/auth/pages/error.tsx
 #: src/features/auth/pages/forgot-password.tsx
+#: src/features/auth/pages/register.tsx
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Back to sign in"
 msgstr "Назад на пријављивање"
@@ -4133,6 +4129,10 @@ msgstr "Бенгалски"
 #: src/features/resume/share/download-tab.tsx
 msgid "Best for applying"
 msgstr "Најбоље за пријаву"
+
+#: src/features/auth/layout.tsx
+msgid "Beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "Better for columns and tables. The file is sent to your AI connection."
@@ -5434,6 +5434,10 @@ msgstr "Потврдите ову адресу да бисте довршили 
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "Потврдите да је ово ваша адреса е-поште за {appName}. Веза важи 1 сат."
+
+#: src/features/auth/error.ts
+msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
+msgstr ""
 
 #. Email preview text. appName: Reactive Resume
 #: src/features/auth/email-text.ts
@@ -7408,7 +7412,6 @@ msgstr "Детаљи од провајдера: {detail}"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/root.tsx
 #: src/routes/dashboard/settings/developer.tsx
-#: src/routes/dashboard/settings/route.tsx
 msgid "Developer"
 msgstr "Програмер"
 
@@ -9183,13 +9186,13 @@ msgstr "Пронађене везе огласа читају Reactive Resume и
 msgid "Found the role and company on the page. Review the details before saving."
 msgstr "Улога и компанија су пронађене на страници. Прегледајте детаље пре чувања."
 
-#: src/features/auth/layout.tsx
-msgid "Founding beta for 50 students. Your résumé stays private to you."
-msgstr ""
-
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
 msgstr "Бесплатна провера резимеа ATS"
+
+#: src/features/auth/pages/login.tsx
+msgid "Free during the beta"
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free resume builder with PDF & Word downloads"
@@ -9216,14 +9219,10 @@ msgstr "Слободан облик"
 msgid "Free, open-source resume builder. Create, update, and share your resume, with PDF and Word downloads, no ads and no paywall."
 msgstr "Бесплатан алат за прављење животописа отвореног кода. Креирајте, ажурирајте и делите свој животопис, са PDF и Word преузимања, без огласа и без плаћања."
 
-#: src/features/auth/pages/login.tsx
-msgid "Free, with no ads and no paywall"
-msgstr "Бесплатно, без реклама и без плаћања"
-
 #. Reassurance under the registration title, repeating the homepage's promise
 #: src/features/auth/pages/register.tsx
-msgid "Free, with no ads and no paywall."
-msgstr "Бесплатно, без реклама и без плаћања."
+msgid "Free, with no ads."
+msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "Free. The file never leaves your browser."
@@ -10554,14 +10553,14 @@ msgstr "Послови"
 msgid "Join Discord"
 msgstr "Придружите се на Discord-у"
 
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the beta"
+msgstr ""
+
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "Придружите се Discord заједници"
-
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Join the founding beta"
-msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -22336,6 +22335,10 @@ msgstr "Примили смо захтев за ресетовање ваше л
 #: src/features/settings/account/profile.tsx
 msgid "We sent a confirmation link to {email}. Open it to finish the change."
 msgstr "Послали смо везу за потврду на {email}. Отворите га да бисте завршили промену."
+
+#: src/features/auth/pages/register.tsx
+msgid "We sent a confirmation link to <0>{confirmEmail}</0>. Open it to activate your account, then sign in. Check spam if it doesn't arrive in a minute."
+msgstr ""
 
 #: src/features/settings/account/profile.tsx
 msgid "We sent a link to {currentEmail} to approve the change. Then open the link we send to {email}."

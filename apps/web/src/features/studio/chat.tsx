@@ -254,7 +254,7 @@ function ChatBody({ compact = false }: { compact?: boolean }) {
 					<p className="mx-3 mb-2 text-xs text-ink-3">
 						You've used all {state.usage.upload.limit} free document analyses.{" "}
 						<a href="/dashboard/settings/privacy" className="text-accent-text underline">
-							Add your own Gemini key
+							Add your own AI key
 						</a>{" "}
 						to analyse more.
 					</p>

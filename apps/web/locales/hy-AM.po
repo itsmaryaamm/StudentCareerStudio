@@ -2255,10 +2255,6 @@ msgstr "Հղումը ամբողջական հասցեն չէ"
 msgid "A link points somewhere other than the address it shows."
 msgstr "Հղումը ցույց է տալիս այլ տեղ, քան այն ցույց է տալիս հասցեն:"
 
-#: src/features/auth/pages/register.tsx
-msgid "A link to verify your account is on its way. It's optional."
-msgstr "Ձեր հաշիվը հաստատելու հղումը պատրաստ է: Դա ընտրովի է:"
-
 #: src/features/resume/editor/check/writing-tab.tsx
 msgid "A model's opinion, not a verdict. It can be wrong."
 msgstr "Մոդելի կարծիք, ոչ թե դատավճիռ։ Դա կարող է սխալ լինել։"
@@ -3024,7 +3020,6 @@ msgstr "Ձեր պահանջներին հակառակ"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/root.tsx
 #: src/routes/dashboard/settings/ai.tsx
-#: src/routes/dashboard/settings/route.tsx
 msgid "AI"
 msgstr "AI"
 
@@ -3986,6 +3981,7 @@ msgstr "Վերադարձ դեպի հիմա"
 #. Navigation link on 2FA verification screen
 #: src/features/auth/pages/error.tsx
 #: src/features/auth/pages/forgot-password.tsx
+#: src/features/auth/pages/register.tsx
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Back to sign in"
 msgstr "Վերադառնալ՝ մուտք գործելու համար"
@@ -4133,6 +4129,10 @@ msgstr "բենգալերեն"
 #: src/features/resume/share/download-tab.tsx
 msgid "Best for applying"
 msgstr "Լավագույնը դիմելու համար"
+
+#: src/features/auth/layout.tsx
+msgid "Beta for 50 students. Your résumé stays private to you."
+msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "Better for columns and tables. The file is sent to your AI connection."
@@ -5434,6 +5434,10 @@ msgstr "Հաստատեք այս հասցեն՝ ձեր {appName} էլփոստի �
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "Հաստատեք, որ սա ձեր էլ․ հասցեն է {appName}-ի համար: Հղումը աշխատում է 1 ժամ։"
+
+#: src/features/auth/error.ts
+msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
+msgstr ""
 
 #. Email preview text. appName: Reactive Resume
 #: src/features/auth/email-text.ts
@@ -7408,7 +7412,6 @@ msgstr "Մանրամասները մատակարարից՝ {detail}"
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/root.tsx
 #: src/routes/dashboard/settings/developer.tsx
-#: src/routes/dashboard/settings/route.tsx
 msgid "Developer"
 msgstr "Ծրագրավորող"
 
@@ -9183,13 +9186,13 @@ msgstr "Գտնված տեղադրման հղումները կարդում են R
 msgid "Found the role and company on the page. Review the details before saving."
 msgstr "Էջում գտել է պաշտոնը և ընկերությունը: Դիտեք մանրամասները նախքան պահպանելը:"
 
-#: src/features/auth/layout.tsx
-msgid "Founding beta for 50 students. Your résumé stays private to you."
-msgstr ""
-
 #: src/libs/seo.ts
 msgid "Free ATS resume checker"
 msgstr "Անվճար ATS ռեզյումեի ստուգում"
+
+#: src/features/auth/pages/login.tsx
+msgid "Free during the beta"
+msgstr ""
 
 #: src/libs/seo.ts
 msgid "Free resume builder with PDF & Word downloads"
@@ -9216,14 +9219,10 @@ msgstr "Ազատ ձև"
 msgid "Free, open-source resume builder. Create, update, and share your resume, with PDF and Word downloads, no ads and no paywall."
 msgstr "Անվճար, բաց կոդով ռեզյումե ստեղծող: Ստեղծեք, թարմացրեք և տարածեք ձեր ռեզյումեն՝ PDF և Word ներբեռնումների միջոցով, առանց գովազդի և առանց վճարման:"
 
-#: src/features/auth/pages/login.tsx
-msgid "Free, with no ads and no paywall"
-msgstr "Անվճար, առանց գովազդի և առանց վճարման"
-
 #. Reassurance under the registration title, repeating the homepage's promise
 #: src/features/auth/pages/register.tsx
-msgid "Free, with no ads and no paywall."
-msgstr "Անվճար, առանց գովազդի և առանց վճարման:"
+msgid "Free, with no ads."
+msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "Free. The file never leaves your browser."
@@ -10554,14 +10553,14 @@ msgstr "Աշխատանքներ"
 msgid "Join Discord"
 msgstr "Միացեք Discord-ին"
 
+#. Title on the registration page
+#: src/features/auth/pages/register.tsx
+msgid "Join the beta"
+msgstr ""
+
 #: src/features/homepage/sections.tsx
 msgid "Join the Discord community"
 msgstr "Միացեք Discord համայնքին"
-
-#. Title on the registration page
-#: src/features/auth/pages/register.tsx
-msgid "Join the founding beta"
-msgstr ""
 
 #: src/features/resume/import/read-file.ts
 msgid "JSON read"
@@ -22336,6 +22335,10 @@ msgstr "Մենք հարցում ենք ստացել՝ վերականգնելու
 #: src/features/settings/account/profile.tsx
 msgid "We sent a confirmation link to {email}. Open it to finish the change."
 msgstr "Մենք հաստատման հղում ենք ուղարկել {email} հասցեին: Բացեք այն՝ փոփոխությունն ավարտելու համար:"
+
+#: src/features/auth/pages/register.tsx
+msgid "We sent a confirmation link to <0>{confirmEmail}</0>. Open it to activate your account, then sign in. Check spam if it doesn't arrive in a minute."
+msgstr ""
 
 #: src/features/settings/account/profile.tsx
 msgid "We sent a link to {currentEmail} to approve the change. Then open the link we send to {email}."

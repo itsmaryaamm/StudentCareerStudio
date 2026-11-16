@@ -112,17 +112,14 @@ export function Meter({ used, limit, label }: { used: number; limit: number; lab
 export function UsageCard({ className }: { className?: string }) {
 	const { data, isPending } = useStudioState();
 	return (
-		<section
-			aria-label="Your founding beta allowance"
-			className={cn("rounded-lg border border-line bg-raised p-3", className)}
-		>
-			<p className="text-[13px] font-semibold text-accent-text">Founding beta · free</p>
+		<section aria-label="Your beta allowance" className={cn("rounded-lg border border-line bg-raised p-3", className)}>
+			<p className="text-[13px] font-semibold text-accent-text">Beta · free</p>
 			{isPending || !data ? (
 				<Skeleton className="mt-2 h-10 w-full" />
 			) : (
 				<div className="mt-2 grid gap-2">
 					{data.ownKeyPreview ? (
-						<p className="text-[13px]">Using your own Gemini key: no daily limit from us.</p>
+						<p className="text-[13px]">Using your own AI key: no daily limit from us.</p>
 					) : (
 						<Meter used={data.usage.chat.used} limit={data.usage.chat.limit} label="AI messages today" />
 					)}
@@ -143,7 +140,7 @@ export function UsageCard({ className }: { className?: string }) {
 	);
 }
 
-/** The Gemini data notice. AI calls are refused by the server until it is accepted, so this is not just a banner. */
+/** The AI data notice. AI calls are refused by the server until it is accepted, so this is not just a banner. */
 export function ConsentGate({ children }: { children: React.ReactNode }) {
 	const { data, isPending, error, refetch } = useStudioState();
 	const queryClient = useQueryClient();
@@ -168,8 +165,7 @@ export function ConsentGate({ children }: { children: React.ReactNode }) {
 			</h2>
 			<ul className="mt-2 grid list-disc gap-1.5 ps-5 text-sm text-ink-2">
 				<li>
-					Your messages, approved profile facts, and any file you upload are sent to Google's Gemini API to write
-					replies.
+					Your messages, approved profile facts, and any file you upload are sent to Google's AI to write replies.
 				</li>
 				<li>Uploaded files are read once and discarded. We never store the file itself.</li>
 				<li>Nothing is added to your profile until you approve it.</li>
@@ -247,7 +243,7 @@ export function LimitBanner({ onReset, className }: { onReset?: () => void; clas
 				</a>{" "}
 				or{" "}
 				<a href="/dashboard/settings/privacy" className="underline">
-					add your own free Gemini key
+					add your own free AI key
 				</a>{" "}
 				for no daily limit.
 			</p>

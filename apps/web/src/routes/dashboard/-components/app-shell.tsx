@@ -7,7 +7,7 @@ import { Trans, useLingui } from "@lingui/react/macro";
 import { useHotkey } from "@tanstack/react-hotkeys";
 import { useQuery } from "@tanstack/react-query";
 import { Link, useMatchRoute, useNavigate, useRouteContext, useRouterState } from "@tanstack/react-router";
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@reactive-resume/ui/components/avatar";
 import { BrandIcon } from "@reactive-resume/ui/components/brand-icon";
 import { Icon } from "@reactive-resume/ui/components/icon";
@@ -28,7 +28,6 @@ import { useShortcutSettings } from "@/features/keyboard-shortcuts/settings";
 import { showKeyboardShortcuts } from "@/features/keyboard-shortcuts/store";
 import { isEditableElementFocused } from "@/features/resume/builder/draft";
 import { FeedbackButton } from "@/features/studio/feedback";
-import { UsageCard } from "@/features/studio/shared";
 import { trashedApplicationsQueryOptions } from "@/features/trash/queries";
 import { orpc } from "@/libs/orpc/client";
 
@@ -67,7 +66,7 @@ function useNavItems() {
 			...(counts ? { count: counts.resume } : {}),
 		},
 		{ to: "/dashboard/linkedin", icon: "linkedin-logo", label: "LinkedIn Studio", short: "LinkedIn" },
-		{ to: "/dashboard/chat", icon: "sparkle", label: "AI Career Chat", short: "Coach" },
+		{ to: "/dashboard/chat", icon: "sparkle", label: "Career Coach", short: "Coach" },
 		{ to: "/dashboard/prompts", icon: "chat-text", label: "Career Prompts", short: "Prompts" },
 		...(studio?.isAdmin
 			? [{ to: "/dashboard/admin", icon: "chart-line-up", label: "Beta dashboard", short: "Admin" } satisfies NavItem]
@@ -154,6 +153,22 @@ export function AppShell({ children }: AppShellProps) {
 	};
 	useEffect(() => cancelNew, []);
 	const characterShortcuts = useShortcutSettings((state) => state.characterShortcuts);
+	const [collapsed, setCollapsed] = useState(() => {
+		try {
+			return localStorage.getItem("scs.sidebar") === "collapsed";
+		} catch {
+			return false;
+		}
+	});
+	const toggleSidebar = () =>
+		setCollapsed((was) => {
+			try {
+				localStorage.setItem("scs.sidebar", was ? "open" : "collapsed");
+			} catch {
+				// Remembering it is a convenience.
+			}
+			return !was;
+		});
 	const matchRoute = useMatchRoute();
 	const tabs =
 		breakpoint === "mobile" &&
@@ -208,8 +223,9 @@ export function AppShell({ children }: AppShellProps) {
 
 	return (
 		<div
+			style={{ ["--app-sidebar" as string]: collapsed ? "72px" : "264px" }}
 			className={cn(
-				"grid min-h-svh bg-bg",
+				"grid min-h-svh bg-bg transition-[grid-template-columns] duration-200",
 				breakpoint === "mobile"
 					? tabs
 						? // The bar's height, for anything a page pins above it.
@@ -226,7 +242,8 @@ export function AppShell({ children }: AppShellProps) {
 			>
 				<Trans>Skip to main content</Trans>
 			</a>
-			{breakpoint !== "mobile" && (breakpoint === "tablet" ? <Rail /> : <Sidebar />)}
+			{breakpoint !== "mobile" &&
+				(breakpoint === "tablet" ? <Rail /> : <Sidebar collapsed={collapsed} onToggle={toggleSidebar} />)}
 			<main id="main-content" data-design="main" className="group/main flex min-w-0 flex-col">
 				<GuestBanner />
 				{/* calm: remove once every page with tabs places PhoneHeaderActions in its own header. */}
@@ -251,11 +268,15 @@ const row =
 	"flex min-h-10 items-center gap-3 rounded-md px-2.5 text-start text-sm font-medium transition-[background-color,color,scale] duration-quick ease-enter active:scale-[0.97]";
 const idle = "text-ink-2 hover:bg-hover hover:text-ink";
 
-function Sidebar() {
+const navIdle = "text-[#d2c7f0] hover:bg-white/10 hover:text-white";
+const navActive =
+	"bg-[linear-gradient(90deg,rgba(124,77,245,.55),rgba(124,77,245,.25))] font-semibold text-white shadow-[inset_2px_0_0_#a78bfa]";
+
+/** The purple sidebar: 264px, or 72px with icons only. The logo and the chevron both fold it. */
+function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle: () => void }) {
 	const { t } = useLingui();
 	const { session } = useRouteContext({ from: "/dashboard" });
-	const characterShortcuts = useShortcutSettings((state) => state.characterShortcuts);
-	const { items, trash } = useNavItems();
+	const { items } = useNavItems();
 	const isCurrent = useIsCurrent();
 	const matchRoute = useMatchRoute();
 	const openPalette = useCommandPaletteStore((state) => state.setOpen);
@@ -264,69 +285,141 @@ function Sidebar() {
 		<nav
 			data-design="side"
 			aria-label={t`Main`}
-			className="sticky top-0 flex h-svh flex-col gap-1 border-e border-line bg-bg px-3 pt-4 pb-3 [view-transition-name:app-nav]"
+			// The dark theme's tokens give light text and soft hovers on the purple.
+			className="dark sticky top-0 flex h-svh flex-col gap-1 overflow-hidden bg-[linear-gradient(180deg,#2a0f5e,#1a0a3f)] px-3 pt-4 pb-3 text-white [view-transition-name:app-nav]"
 		>
-			<Link to="/" className="mb-2 flex h-9 items-center gap-2.5 px-2 text-[15px] leading-5 font-semibold">
-				<BrandIcon variant="icon" alt="" className="size-7 shrink-0 rounded-md" />
-				<span className="flex flex-col leading-tight">
-					Student Career Studio
-					<span className="text-[11px] font-normal text-ink-3">Founding beta</span>
-				</span>
-			</Link>
+			<div className="mb-2 flex h-10 items-center gap-2.5 px-1">
+				{collapsed ? (
+					<button
+						type="button"
+						aria-label="Expand the sidebar"
+						title="Student Career Studio"
+						onClick={onToggle}
+						className="grid size-10 shrink-0 place-items-center rounded-lg hover:bg-white/10"
+					>
+						<BrandIcon variant="icon" alt="" className="size-8 rounded-lg" />
+					</button>
+				) : (
+					<>
+						<Link to="/" className="flex min-w-0 flex-1 items-center gap-2 text-sm leading-5 font-semibold">
+							<BrandIcon variant="icon" alt="" className="size-8 shrink-0 rounded-lg" />
+							<span className="flex min-w-0 flex-col leading-tight">
+								<span className="truncate">Student Career Studio</span>
+								<span className="text-[11px] font-normal text-[#d2c7f0]">Beta</span>
+							</span>
+						</Link>
+						<button
+							type="button"
+							aria-label="Collapse the sidebar"
+							onClick={onToggle}
+							className="grid size-7 shrink-0 place-items-center rounded-lg bg-white/10 text-[#d2c7f0] hover:bg-white/20 hover:text-white"
+						>
+							<Icon name="caret-left" size={16} />
+						</button>
+					</>
+				)}
+			</div>
 
-			<button
-				type="button"
-				data-design="srch"
-				aria-keyshortcuts={ariaShortcut("⌘K")}
-				onClick={() => openPalette(true)}
-				className="mb-3 flex h-9 items-center gap-2 overflow-hidden rounded-md bg-sunken ps-2.5 pe-2 text-start text-sm text-ink-3 transition-colors duration-quick hover:text-ink-2"
-			>
-				<Icon name="magnifying-glass" size={18} />
-				<Trans>Search or jump to…</Trans>
-				<Kbd className="ms-auto bg-bg">{formatShortcut("⌘K")}</Kbd>
-			</button>
+			{!collapsed && (
+				<button
+					type="button"
+					data-design="srch"
+					aria-keyshortcuts={ariaShortcut("⌘K")}
+					onClick={() => openPalette(true)}
+					className="mb-3 flex h-9 items-center gap-2 overflow-hidden rounded-[10px] bg-white/10 ps-2.5 pe-2 text-start text-sm text-[#d2c7f0] transition-colors duration-quick hover:bg-white/15"
+				>
+					<Icon name="magnifying-glass" size={18} />
+					<Trans>Search or jump to…</Trans>
+					<Kbd className="ms-auto bg-white/10 text-[#d2c7f0]">{formatShortcut("⌘K")}</Kbd>
+				</button>
+			)}
 
 			{items.map((item) => (
-				<NavLink key={item.to} item={item} current={isCurrent(item.to)} />
+				<NavLink key={item.to} item={item} current={isCurrent(item.to)} collapsed={collapsed} />
 			))}
 
 			<div className="flex-1" />
 
-			<UsageCard className="mb-1" />
-			<FeedbackButton className="justify-start" />
-			<NavLink item={trash} current={isCurrent(trash.to)} />
-			<button
-				type="button"
-				id="keyboard-shortcuts-trigger"
-				aria-keyshortcuts={characterShortcuts ? "?" : undefined}
-				onClick={(event) => showKeyboardShortcuts(event.currentTarget)}
-				className={cn(row, idle)}
+			{!collapsed && <SidebarUsage />}
+			{!collapsed && <FeedbackButton className="justify-start text-[#d2c7f0] hover:bg-white/10 hover:text-white" />}
+			<Link
+				to="/dashboard/settings"
+				title={collapsed ? t`Settings` : undefined}
+				aria-label={collapsed ? t`Settings` : undefined}
+				aria-current={matchRoute({ to: "/dashboard/settings", fuzzy: true }) ? "page" : undefined}
+				className={cn(
+					row,
+					"aria-[current=page]:bg-white/15 aria-[current=page]:text-white",
+					navIdle,
+					collapsed && "justify-center px-0",
+				)}
 			>
-				<Icon name="keyboard" />
-				<Trans>Shortcuts</Trans>
-				{characterShortcuts && <Kbd>?</Kbd>}
-			</button>
+				<Icon name="gear-six" />
+				{!collapsed && <Trans>Settings</Trans>}
+			</Link>
 			<Link
 				to="/dashboard/settings"
 				data-design="acct"
-				aria-current={matchRoute({ to: "/dashboard/settings", fuzzy: true }) ? "page" : undefined}
-				className="group/acct mt-1 flex h-12 items-center gap-2.5 rounded-md px-2 transition-colors duration-quick hover:bg-hover aria-[current=page]:bg-accent-soft"
+				title={collapsed ? session.user.name : undefined}
+				className={cn(
+					"mt-1 flex h-12 items-center gap-2.5 rounded-[10px] px-1.5 transition-colors duration-quick hover:bg-white/10",
+					collapsed && "justify-center",
+				)}
 			>
-				<Avatar className="after:hidden">
-					<AvatarImage src={session.user.image ?? undefined} alt="" />
-					<AvatarFallback className="bg-accent-soft text-accent-text group-aria-[current=page]/acct:bg-bg">
+				<span className="grid size-8 shrink-0 place-items-center overflow-hidden rounded-full bg-[#6c3cf1] text-xs font-bold text-white">
+					{session.user.image ? (
+						<img src={session.user.image} alt="" className="size-full object-cover" />
+					) : (
 						<AccountMark name={session.user.name} guest={!!session.user.isAnonymous} />
-					</AvatarFallback>
-				</Avatar>
-				<span className="flex min-w-0 flex-1 flex-col">
-					<span className="truncate text-sm leading-[18px] font-medium">{session.user.name}</span>
-					<span className="truncate text-xs leading-4 text-ink-3 group-aria-[current=page]/acct:text-ink-2">
-						{session.user.isAnonymous ? <Trans>Not saved to an account</Trans> : <Trans>Settings</Trans>}
-					</span>
+					)}
 				</span>
-				<Icon name="gear-six" size={18} className="text-ink-3" />
+				{!collapsed && (
+					<span className="flex min-w-0 flex-1 flex-col">
+						<span className="truncate text-sm leading-[18px] font-semibold">{session.user.name}</span>
+						<span className="truncate text-xs leading-4 text-[#d2c7f0]">
+							{session.user.isAnonymous ? <Trans>Not saved to an account</Trans> : session.user.email}
+						</span>
+					</span>
+				)}
 			</Link>
 		</nav>
+	);
+}
+
+/** Messages left today, how to get more, and when it's nearly gone the invite button turns solid. */
+function SidebarUsage() {
+	const { data } = useQuery(orpc.scs.state.queryOptions());
+	if (!data) return null;
+	const own = Boolean(data.ownKeyPreview);
+	const { used, limit } = data.usage.chat;
+	const left = Math.max(0, limit - used);
+	const low = !own && left <= 5;
+	return (
+		<section aria-label="Your free allowance" className="mb-1 rounded-xl border border-white/10 bg-white/[0.06] p-3">
+			<div className="flex items-center justify-between text-[12.5px] font-semibold">
+				<span>Beta · free</span>
+				<span className={low ? "text-[#f5b14c]" : "text-[#d2c7f0]"}>{own ? "Own key" : `${left} left today`}</span>
+			</div>
+			{!own && (
+				<div className="mt-2 h-1 overflow-hidden rounded-full bg-white/15" aria-hidden>
+					<div
+						className={cn("h-full rounded-full transition-[width] duration-300", low ? "bg-[#f5b14c]" : "bg-[#8b6cf0]")}
+						style={{ width: `${limit ? (left / limit) * 100 : 0}%` }}
+					/>
+				</div>
+			)}
+			<Link
+				to="/dashboard/settings/privacy"
+				className={cn(
+					"mt-3 flex h-9 w-full items-center justify-center rounded-[10px] text-[13px] font-semibold transition-colors",
+					low
+						? "bg-[#6c3cf1] text-white shadow-[0_8px_20px_-8px_rgba(108,60,241,.7)] hover:bg-[#5b2fd8]"
+						: "bg-white/10 text-white hover:bg-white/20",
+				)}
+			>
+				Invite friends · get more
+			</Link>
+		</section>
 	);
 }
 
@@ -335,20 +428,22 @@ function AccountMark({ name, guest }: { name: string; guest: boolean }) {
 	return guest ? <Icon name="user" size={18} /> : getInitials(name);
 }
 
-function NavLink({ item, current }: { item: NavItem; current: boolean }) {
+function NavLink({ item, current, collapsed }: { item: NavItem; current: boolean; collapsed: boolean }) {
 	return (
 		<Link
 			to={item.to}
+			title={collapsed ? item.label : undefined}
+			aria-label={collapsed ? item.label : undefined}
 			aria-current={current ? "page" : undefined}
-			className={cn(row, current ? "bg-accent-soft text-accent-text" : idle)}
+			className={cn(row, "h-10 rounded-[9px]", current ? navActive : navIdle, collapsed && "justify-center px-0")}
 		>
-			<Icon name={item.icon} filled={current} />
-			{item.label}
-			{item.badge ? (
+			<Icon name={item.icon} filled={false} />
+			{!collapsed && item.label}
+			{!collapsed && item.badge ? (
 				// The pill's padding hangs into the row's own padding, so its digit ends on the same edge as the counts.
 				<span className={cn(badge, "ms-auto -me-[5px]")}>{i18n.number(item.badge)}</span>
-			) : item.count ? (
-				<span className={cn(count, !current && "text-ink-3")}>{i18n.number(item.count)}</span>
+			) : !collapsed && item.count ? (
+				<span className={cn(count, "text-[#d2c7f0]")}>{i18n.number(item.count)}</span>
 			) : null}
 		</Link>
 	);

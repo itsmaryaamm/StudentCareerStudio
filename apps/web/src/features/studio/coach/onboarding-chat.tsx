@@ -527,8 +527,8 @@ export function OnboardingChat() {
 							{needsConsent ? (
 								<div className="grid gap-3 text-sm">
 									<p>
-										To read files and chat, I send your messages and any file you upload to Google's Gemini. Files are
-										read once and never stored, and nothing is saved to your profile until you approve it.{" "}
+										To read files and chat, I send your messages and any file you upload to Google's AI. Files are read
+										once and never stored, and nothing is saved to your profile until you approve it.{" "}
 										<a href="/privacy" target="_blank" rel="noreferrer" className="text-accent-text underline">
 											Privacy notice
 										</a>

@@ -211,7 +211,7 @@ function SectionEditor({ section, initial, hasFacts }: { section: SectionId; ini
 			<section aria-labelledby="sugg-title" className="grid gap-3 rounded-xl border border-line bg-accent-soft/50 p-4">
 				<div className="flex flex-wrap items-center gap-2">
 					<h2 id="sugg-title" className="text-base font-semibold text-accent-text">
-						Gemini suggestions
+						Coach suggestions
 					</h2>
 					<span className="ms-auto text-xs text-ink-3">
 						{state ? `${Math.max(0, chatLeft)} AI messages left today` : ""}

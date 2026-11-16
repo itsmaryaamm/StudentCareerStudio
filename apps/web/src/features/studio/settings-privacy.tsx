@@ -54,7 +54,7 @@ export function PrivacySettings() {
 				</h2>
 				<p className="mt-1 text-sm text-ink-2">
 					The AI coach, LinkedIn suggestions and document analysis send your text and approved profile items to Google
-					Gemini. Uploaded files are read once and never stored.
+					Google's AI. Uploaded files are read once and never stored.
 				</p>
 				<div className="mt-3 flex flex-wrap items-center gap-3">
 					{data.aiConsentAt ? (

@@ -307,7 +307,7 @@ export function LoginPage({ disableEmailAuth, disableSignups, allowGuestLogin, i
 							<ListRow
 								caret
 								title={<Trans>Create an account</Trans>}
-								subtitle={<Trans>Free, with no ads and no paywall</Trans>}
+								subtitle={<Trans>Free during the beta</Trans>}
 								render={<Link to="/auth/register" search={{ callbackURL, reauthenticate }} />}
 							/>
 						)}

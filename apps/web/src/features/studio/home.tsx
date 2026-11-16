@@ -1,10 +1,10 @@
 import type { IconName } from "@reactive-resume/ui/components/icon";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { Link, useNavigate, useRouteContext } from "@tanstack/react-router";
+import { Link, useNavigate } from "@tanstack/react-router";
 import { Button } from "@reactive-resume/ui/components/button";
 import { Icon } from "@reactive-resume/ui/components/icon";
 import { ProfilePanel, useFacts } from "./profile";
-import { Meter, ErrorBlock, LoadingBlock, UsageCard, useStudioState } from "./shared";
+import { Meter, ErrorBlock, LoadingBlock, useStudioState } from "./shared";
 import { useDialogStore } from "@/dialogs/store";
 import { orpc } from "@/libs/orpc/client";
 
@@ -82,7 +82,6 @@ export function Onboarding({ onSkip }: { onSkip: () => void }) {
 }
 
 export function HomePage() {
-	const { session } = useRouteContext({ from: "/dashboard" });
 	const queryClient = useQueryClient();
 	const { data: state, isPending, error, refetch } = useStudioState();
 	const { data: facts } = useFacts();
@@ -96,7 +95,6 @@ export function HomePage() {
 	if (error || !state)
 		return <ErrorBlock error={error} onRetry={() => void refetch()} title="Couldn't load your dashboard" />;
 
-	const firstName = session.user.name.split(" ")[0] ?? "there";
 	const fresh = !state.onboardedAt && state.resumeCount === 0 && state.approvedFacts === 0;
 	if (fresh) return <Onboarding onSkip={() => skip.mutate({ choice: "skip" })} />;
 
@@ -112,11 +110,6 @@ export function HomePage() {
 
 	return (
 		<div className="mt-6 grid gap-6">
-			<div>
-				<h2 className="text-xl font-semibold">Welcome, {firstName}</h2>
-				<p className="mt-1 text-sm text-ink-3">Tell your story once. We'll use it for your résumé and LinkedIn.</p>
-			</div>
-
 			<ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
 				<li>
 					<ActionCard
@@ -143,12 +136,7 @@ export function HomePage() {
 					/>
 				</li>
 				<li>
-					<ActionCard
-						icon="sparkle"
-						title="AI Career Chat"
-						blurb="Uncover experiences you forgot"
-						to="/dashboard/chat"
-					/>
+					<ActionCard icon="sparkle" title="Career Coach" blurb="Uncover experiences you forgot" to="/dashboard/chat" />
 				</li>
 				<li>
 					<ActionCard icon="chat-text" title="Career prompts" blurb="For ChatGPT or Claude" to="/dashboard/prompts" />
@@ -188,7 +176,6 @@ export function HomePage() {
 							))}
 						</ul>
 					</section>
-					<UsageCard />
 				</div>
 			</div>
 		</div>

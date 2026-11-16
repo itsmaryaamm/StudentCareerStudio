@@ -91,7 +91,7 @@ const check = (name, ok, extra = "") => {
 	await shot("w1-signed-back-in");
 
 	// ===== Workflow 2: chat with Gemini -> approve career facts -> see saved profile =====
-	await page.getByRole("link", { name: "AI Career Chat" }).first().click();
+	await page.getByRole("link", { name: "Career Coach" }).first().click();
 	await page.getByText("Before you use the AI coach").waitFor();
 	check("W2 the Gemini data notice is shown before any AI use", true);
 	await shot("w2-consent");
