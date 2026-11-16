@@ -1,8 +1,15 @@
 import { createFileRoute, redirect } from "@tanstack/react-router";
+import { LandingPage } from "@/features/landing/page";
+import { getLandingMeta } from "@/libs/seo";
 
-// Founding beta: there is no marketing site. Signed-in students go to their dashboard, everyone else to sign in.
+// Signed-in students go straight to their dashboard; signed-out visitors get the marketing page.
 export const Route = createFileRoute("/_home/")({
 	beforeLoad: ({ context }) => {
-		throw redirect({ to: context.session ? "/dashboard" : "/auth/login", replace: true });
+		if (context.session) throw redirect({ to: "/dashboard", replace: true });
 	},
+	head: () => {
+		const { title, description } = getLandingMeta();
+		return { meta: [{ title }, { name: "description", content: description }] };
+	},
+	component: LandingPage,
 });

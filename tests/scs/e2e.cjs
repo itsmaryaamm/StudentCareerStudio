@@ -32,9 +32,15 @@ const check = (name, ok, extra = "") => {
 	const shot = (n) => page.screenshot({ path: `${SHOTS}/${n}.png` });
 
 	// ===== Workflow 1: sign up -> save account -> sign back in =====
-	await page.goto(`${BASE}/`);
-	await page.waitForURL(/\/auth\/login/);
-	check("W1 landing redirects a visitor to sign-in", true);
+	await page.goto(`${BASE}/`, { waitUntil: "networkidle" });
+	check(
+		"W1 landing shows a visitor the marketing page, not a redirect",
+		new URL(page.url()).pathname === "/" &&
+			(await page.getByRole("heading", { level: 1, name: "Tell your story once." }).isVisible()),
+	);
+	await page.getByRole("link", { name: "Get started" }).first().click();
+	await page.waitForURL(/\/auth\/register/);
+	check("W1 the landing's Get started link leads to registration", true);
 	await page.goto(`${BASE}/auth/register`);
 	await page.getByLabel("Name", { exact: true }).fill(NAME);
 	await page.getByLabel("Email address").fill(EMAIL);

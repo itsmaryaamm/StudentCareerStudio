@@ -1,5 +1,6 @@
 @import "@reactive-resume/ui/globals.css";
 @import "./features/homepage/landing.css";
+@import "./features/landing/landing.css";
 @import "./scs-theme.css";
 
 /* Check's score ring: the arc eases to a new score, so a fix visibly counts. */

@@ -28,6 +28,13 @@ export const getHomepageMeta = () => ({
 	description: t`Free, open-source resume builder. Create, update, and share your resume, with PDF and Word downloads, no ads and no paywall.`,
 });
 
+/** The signed-out homepage's title and description. Plain English: the page itself is not translated yet. */
+export const getLandingMeta = () => ({
+	title: `Tell your story once | ${appName}`,
+	description:
+		"Tell the career coach what you have done, check each fact, then use it for your résumé, LinkedIn and AI career missions. Free during the beta.",
+});
+
 /** The ATS checker's title and description in the active locale. The prerendered page and the route share them. */
 export const getAtsCheckerMeta = () => ({
 	title: `${t`Free ATS resume checker`} | ${appName}`,

@@ -1,0 +1,121 @@
+/*
+ * The signed-out marketing page (features/landing). Everything is scoped under .scs-landing. Utility classes carry
+ * the layout; this file holds only what they cannot: the brand button, focus rings, keyframes and reduced motion.
+ */
+.scs-landing {
+	font-family: "Figtree Variable", system-ui, sans-serif;
+	background: #fcfbf8;
+	color: #1a0b3b;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Headings and form controls carry their own families in the base styles; the page uses one face. */
+.scs-landing :is(h1, h2, h3, h4, p, button, input, textarea) {
+	font-family: inherit;
+}
+
+html:has(.scs-landing) {
+	scroll-behavior: smooth;
+}
+
+/* The primary button: violet gradient, never pink. */
+.scs-grad {
+	background: linear-gradient(180deg, #7c4df5 0%, #5b2fd1 55%, #3b1a9e 100%);
+	color: #fff;
+	box-shadow:
+		0 1px 0 rgba(255, 255, 255, 0.25) inset,
+		0 10px 24px -8px rgba(76, 36, 180, 0.6);
+}
+
+.scs-grad:hover {
+	color: #fff;
+	filter: brightness(1.06);
+}
+
+.scs-landing :is(a, button, summary):focus-visible {
+	outline: 2px solid #6c3cf1;
+	outline-offset: 3px;
+}
+
+.scs-landing .scs-dark :is(a, button):focus-visible {
+	outline-color: #c9b8fa;
+}
+
+/* A box that holds a text field shows the ring for the whole box. */
+.scs-field:focus-within {
+	outline: 2px solid #6c3cf1;
+	outline-offset: 3px;
+}
+
+/* The "Just start" pill rings as one box on wide screens; on phones the input and button are separate. */
+@media (min-width: 760px) {
+	.scs-pill:focus-within {
+		outline: 2px solid #c9b8fa;
+		outline-offset: 3px;
+	}
+}
+
+@media (max-width: 759px) {
+	.scs-landing .scs-phone-input:focus-visible {
+		outline: 2px solid #c9b8fa;
+		outline-offset: 3px;
+	}
+}
+
+/* Snap carousels on phones: no visible scrollbar, the dots show the position. */
+.scs-track {
+	scrollbar-width: none;
+}
+
+.scs-track::-webkit-scrollbar {
+	display: none;
+}
+
+.scs-landing ::placeholder {
+	color: #6b6585;
+	opacity: 1;
+}
+
+@keyframes scs-float {
+	0%,
+	100% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-9px);
+	}
+}
+
+@keyframes scs-drift {
+	0%,
+	100% {
+		transform: translateX(-3%);
+	}
+	50% {
+		transform: translateX(3%);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	.scs-float {
+		animation: scs-float 7s ease-in-out infinite;
+	}
+
+	.scs-drift {
+		animation: scs-drift 16s ease-in-out infinite;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html:has(.scs-landing) {
+		scroll-behavior: auto;
+	}
+
+	.scs-landing *,
+	.scs-landing *::before,
+	.scs-landing *::after {
+		animation: none !important;
+		transition: none !important;
+		scroll-behavior: auto !important;
+	}
+}
