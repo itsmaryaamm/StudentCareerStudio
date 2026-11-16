@@ -1,11 +1,13 @@
 import type { ReactNode } from "react";
 import { useLingui } from "@lingui/react/macro";
+import { useQuery } from "@tanstack/react-query";
 import { Link, useRouteContext } from "@tanstack/react-router";
 import { Avatar, AvatarFallback, AvatarImage } from "@reactive-resume/ui/components/avatar";
 import { Icon } from "@reactive-resume/ui/components/icon";
 import { getInitials } from "@reactive-resume/utils/string";
 import { cn } from "@reactive-resume/utils/style";
 import { useCommandPaletteStore } from "@/features/command-palette/store";
+import { orpc } from "@/libs/orpc/client";
 
 type PhoneHeaderActionsProps = {
 	className?: string;
@@ -24,12 +26,27 @@ export function PhoneHeaderActions({ className, fallback = false, children }: Ph
 	const { t } = useLingui();
 	const { session } = useRouteContext({ strict: false });
 	const openPalette = useCommandPaletteStore((state) => state.setOpen);
+	// How many free messages are left today; tapping it goes to inviting friends or adding a key.
+	const { data: studio } = useQuery({ ...orpc.scs.state.queryOptions(), enabled: Boolean(session) });
+	const pill = studio
+		? studio.ownKeyPreview
+			? "Own key"
+			: `${Math.max(0, studio.usage.chat.limit - studio.usage.chat.used)} left today`
+		: null;
 
 	return (
 		<div
 			data-phone-header-actions={fallback ? "fallback" : "page"}
 			className={cn("-me-2.5 flex items-center sm:hidden", className)}
 		>
+			{pill && (
+				<Link
+					to="/dashboard/settings/privacy"
+					className="me-1 inline-flex h-8 items-center rounded-full bg-[#ede9fe] px-3 text-[12.5px] font-semibold text-[#4b1d96]"
+				>
+					{pill}
+				</Link>
+			)}
 			<button
 				type="button"
 				aria-label={t`Search or jump to…`}

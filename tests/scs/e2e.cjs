@@ -213,8 +213,8 @@ const check = (name, ok, extra = "") => {
 	);
 	check("W3 the PDF is named sensibly", /\.pdf$/i.test(download.suggestedFilename()), download.suggestedFilename());
 
-	// ===== Workflow 4: résumé -> LinkedIn Studio -> generate and copy =====
-	await page.goto(`${BASE}/dashboard/linkedin`);
+	// ===== Workflow 4: résumé -> profile -> LinkedIn Studio -> improve and copy =====
+	await page.goto(`${BASE}/dashboard`);
 	await page.getByRole("button", { name: "Add from my résumés" }).click();
 	await page
 		.getByText(/Found \d+ items? in your résumés/)
@@ -229,38 +229,59 @@ const check = (name, ok, extra = "") => {
 	);
 	await page.getByRole("button", { name: "Save to profile" }).first().click();
 	await page.waitForTimeout(800);
-	await page.getByRole("button", { name: /Suggest a headline/ }).click();
+
+	await page.goto(`${BASE}/dashboard/linkedin`);
+	await page.getByRole("heading", { name: "Start from your LinkedIn link" }).waitFor();
+	await page.getByLabel("Your LinkedIn profile link").fill("https://example.com/not-linkedin");
+	await page.getByRole("button", { name: "Import" }).click();
+	check(
+		"W4 a link that isn't a LinkedIn profile is refused with a clear message",
+		await page.getByText(/doesn't look like a LinkedIn profile link/).isVisible(),
+	);
+	await page.getByLabel("Your LinkedIn profile link").fill("www.linkedin.com/in/layla-hassan");
+	await page.getByRole("button", { name: "Import" }).click();
+	await page.getByText("0 of 6 sections improved").waitFor();
+	check(
+		"W4 a profile link opens the studio with the six sections",
+		(await page.getByRole("navigation", { name: "LinkedIn sections" }).getByRole("button").count()) === 6,
+	);
+	check("W4 the coach panel lists the headline checks", (await page.getByText("Say what you want next").count()) > 0);
+	await page.getByRole("button", { name: /Rewrite my headline/ }).click();
 	await page
 		.getByText("Computer Science student building data tools people actually use")
 		.first()
 		.waitFor({ timeout: 15000 });
 	check(
-		"W4 Gemini suggestions appear, with 'Based on' provenance",
+		"W4 coach suggestions appear, with 'Based on' provenance",
 		await page
 			.getByText(/Based on:/)
 			.first()
 			.isVisible(),
 	);
 	await shot("w4-suggestions");
-	await page.getByRole("button", { name: "Accept" }).first().click();
+	await page.getByRole("button", { name: "Use", exact: true }).first().click();
 	check(
-		"W4 accepting puts the suggestion in the editable headline",
+		"W4 using a suggestion puts it in the editable headline",
 		(await page.locator("#li-text").inputValue()).startsWith("Computer Science student"),
 	);
-	await page
-		.getByText(/Saved at/)
-		.first()
-		.waitFor({ timeout: 10000 });
+	await page.getByText("Saved", { exact: true }).first().waitFor({ timeout: 10000 });
 	check("W4 the draft autosaves with a visible confirmation", true);
 	await page.getByRole("button", { name: "Copy to clipboard" }).click();
 	const clip = await page.evaluate(() => navigator.clipboard.readText());
 	check("W4 'Copy to clipboard' really copies the headline", clip.startsWith("Computer Science student"), clip);
 	await page.reload();
-	await page.waitForTimeout(800);
+	await page.waitForTimeout(1200);
 	check(
-		"W4 the saved draft is still there after reload",
-		(await page.locator("#li-text").inputValue()).startsWith("Computer Science student"),
+		"W4 the saved draft and link are still there after reload",
+		(await page.locator("#li-text").inputValue()).startsWith("Computer Science student") &&
+			(await page.getByText("linkedin.com/in/layla-hassan").isVisible()),
 	);
+	await page.getByRole("button", { name: "Change link" }).click();
+	check(
+		"W4 'Change link' returns to the link step",
+		await page.getByRole("heading", { name: "Start from your LinkedIn link" }).isVisible(),
+	);
+	await page.getByRole("button", { name: "Keep my current link" }).click();
 
 	// ===== Workflow 5: Career Lab missions for ChatGPT and Claude =====
 	const before = await page.evaluate(() => fetch("/api/openapi/scs/usage").then((r) => r.json()));

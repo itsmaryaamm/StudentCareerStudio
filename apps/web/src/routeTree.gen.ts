@@ -40,6 +40,7 @@ import { Route as DashboardCoverLettersRouteImport } from "./routes/dashboard/co
 import { Route as DashboardDocumentsRouteImport } from "./routes/dashboard/documents";
 import { Route as DashboardLabRouteImport } from "./routes/dashboard/lab";
 import { Route as DashboardLinkedinRouteImport } from "./routes/dashboard/linkedin";
+import { Route as DashboardMoreRouteImport } from "./routes/dashboard/more";
 import { Route as DashboardPromptsRouteImport } from "./routes/dashboard/prompts";
 import { Route as DashboardSettingsRouteRouteImport } from "./routes/dashboard/settings/route";
 import { Route as DashboardTrashRouteImport } from "./routes/dashboard/trash";
@@ -223,6 +224,11 @@ const DashboardLabRoute = DashboardLabRouteImport.update({
 const DashboardLinkedinRoute = DashboardLinkedinRouteImport.update({
   id: "/linkedin",
   path: "/linkedin",
+  getParentRoute: () => DashboardRouteRoute,
+} as any);
+const DashboardMoreRoute = DashboardMoreRouteImport.update({
+  id: "/more",
+  path: "/more",
   getParentRoute: () => DashboardRouteRoute,
 } as any);
 const DashboardPromptsRoute = DashboardPromptsRouteImport.update({
@@ -425,6 +431,7 @@ export interface FileRoutesByFullPath {
   "/dashboard/documents": typeof DashboardDocumentsRoute;
   "/dashboard/lab": typeof DashboardLabRoute;
   "/dashboard/linkedin": typeof DashboardLinkedinRoute;
+  "/dashboard/more": typeof DashboardMoreRoute;
   "/dashboard/prompts": typeof DashboardPromptsRoute;
   "/dashboard/trash": typeof DashboardTrashRoute;
   "/feedback/$token": typeof FeedbackTokenRoute;
@@ -480,6 +487,7 @@ export interface FileRoutesByTo {
   "/dashboard/documents": typeof DashboardDocumentsRoute;
   "/dashboard/lab": typeof DashboardLabRoute;
   "/dashboard/linkedin": typeof DashboardLinkedinRoute;
+  "/dashboard/more": typeof DashboardMoreRoute;
   "/dashboard/prompts": typeof DashboardPromptsRoute;
   "/dashboard/trash": typeof DashboardTrashRoute;
   "/feedback/$token": typeof FeedbackTokenRoute;
@@ -544,6 +552,7 @@ export interface FileRoutesById {
   "/dashboard/documents": typeof DashboardDocumentsRoute;
   "/dashboard/lab": typeof DashboardLabRoute;
   "/dashboard/linkedin": typeof DashboardLinkedinRoute;
+  "/dashboard/more": typeof DashboardMoreRoute;
   "/dashboard/prompts": typeof DashboardPromptsRoute;
   "/dashboard/trash": typeof DashboardTrashRoute;
   "/feedback/$token": typeof FeedbackTokenRoute;
@@ -609,6 +618,7 @@ export interface FileRouteTypes {
     | "/dashboard/documents"
     | "/dashboard/lab"
     | "/dashboard/linkedin"
+    | "/dashboard/more"
     | "/dashboard/prompts"
     | "/dashboard/trash"
     | "/feedback/$token"
@@ -664,6 +674,7 @@ export interface FileRouteTypes {
     | "/dashboard/documents"
     | "/dashboard/lab"
     | "/dashboard/linkedin"
+    | "/dashboard/more"
     | "/dashboard/prompts"
     | "/dashboard/trash"
     | "/feedback/$token"
@@ -727,6 +738,7 @@ export interface FileRouteTypes {
     | "/dashboard/documents"
     | "/dashboard/lab"
     | "/dashboard/linkedin"
+    | "/dashboard/more"
     | "/dashboard/prompts"
     | "/dashboard/trash"
     | "/feedback/$token"
@@ -991,6 +1003,13 @@ declare module "@tanstack/react-router" {
       path: "/linkedin";
       fullPath: "/dashboard/linkedin";
       preLoaderRoute: typeof DashboardLinkedinRouteImport;
+      parentRoute: typeof DashboardRouteRoute;
+    };
+    "/dashboard/more": {
+      id: "/dashboard/more";
+      path: "/more";
+      fullPath: "/dashboard/more";
+      preLoaderRoute: typeof DashboardMoreRouteImport;
       parentRoute: typeof DashboardRouteRoute;
     };
     "/dashboard/prompts": {
@@ -1354,6 +1373,7 @@ interface DashboardRouteRouteChildren {
   DashboardDocumentsRoute: typeof DashboardDocumentsRoute;
   DashboardLabRoute: typeof DashboardLabRoute;
   DashboardLinkedinRoute: typeof DashboardLinkedinRoute;
+  DashboardMoreRoute: typeof DashboardMoreRoute;
   DashboardPromptsRoute: typeof DashboardPromptsRoute;
   DashboardTrashRoute: typeof DashboardTrashRoute;
   DashboardIndexRoute: typeof DashboardIndexRoute;
@@ -1373,6 +1393,7 @@ const DashboardRouteRouteChildren: DashboardRouteRouteChildren = {
   DashboardDocumentsRoute: DashboardDocumentsRoute,
   DashboardLabRoute: DashboardLabRoute,
   DashboardLinkedinRoute: DashboardLinkedinRoute,
+  DashboardMoreRoute: DashboardMoreRoute,
   DashboardPromptsRoute: DashboardPromptsRoute,
   DashboardTrashRoute: DashboardTrashRoute,
   DashboardIndexRoute: DashboardIndexRoute,

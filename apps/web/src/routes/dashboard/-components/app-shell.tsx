@@ -28,6 +28,7 @@ import { useShortcutSettings } from "@/features/keyboard-shortcuts/settings";
 import { showKeyboardShortcuts } from "@/features/keyboard-shortcuts/store";
 import { isEditableElementFocused } from "@/features/resume/builder/draft";
 import { FeedbackButton, FeedbackHost } from "@/features/studio/feedback";
+import { useMobileChrome } from "@/features/studio/mobile-chrome";
 import { trashedApplicationsQueryOptions } from "@/features/trash/queries";
 import { orpc } from "@/libs/orpc/client";
 
@@ -38,6 +39,7 @@ type NavItem = {
 		| "/dashboard/linkedin"
 		| "/dashboard/chat"
 		| "/dashboard/lab"
+		| "/dashboard/more"
 		| "/dashboard/admin"
 		| "/dashboard/trash";
 	icon: IconName;
@@ -170,8 +172,10 @@ export function AppShell({ children }: AppShellProps) {
 			return !was;
 		});
 	const matchRoute = useMatchRoute();
+	const hideTabs = useMobileChrome((state) => state.hideTabs);
 	const tabs =
 		breakpoint === "mobile" &&
+		!hideTabs &&
 		!matchRoute({ to: "/dashboard/applications/$applicationId/{-$tab}", fuzzy: true }) &&
 		!matchRoute({ to: "/dashboard/settings", fuzzy: true });
 
@@ -572,17 +576,25 @@ function RailTip({ label, icon, filled = false, count: value, waiting, children 
 }
 
 /** Phones: Today · Documents · Applications · Career. Search and the account are in each page's header. */
+/** The phone's five places: Home, Coach, Lab, LinkedIn and More. Search and the account are in each page's header. */
+const PHONE_TABS: { to: NavItem["to"]; icon: IconName; label: string }[] = [
+	{ to: "/dashboard", icon: "house-simple", label: "Home" },
+	{ to: "/dashboard/chat", icon: "sparkle", label: "Coach" },
+	{ to: "/dashboard/lab", icon: "compass", label: "Lab" },
+	{ to: "/dashboard/linkedin", icon: "linkedin-logo", label: "LinkedIn" },
+	{ to: "/dashboard/more", icon: "dots-three", label: "More" },
+];
+
 function MobileTabs() {
 	const { t } = useLingui();
-	const { items } = useNavItems();
 	const isCurrent = useIsCurrent();
 
 	return (
 		<nav
 			aria-label={t`Main`}
-			className="sticky bottom-0 z-30 grid min-h-16 auto-cols-fr grid-flow-col border-t border-line bg-bg pb-[env(safe-area-inset-bottom)] [view-transition-name:app-nav]"
+			className="sticky bottom-0 z-30 grid min-h-[60px] auto-cols-fr grid-flow-col border-t border-[#e8e3f5] bg-white pb-[env(safe-area-inset-bottom)] [view-transition-name:app-nav]"
 		>
-			{items.map(({ to, icon, label, short, badge: waiting }) => {
+			{PHONE_TABS.map(({ to, icon, label }) => {
 				const current = isCurrent(to);
 				return (
 					<Link
@@ -591,16 +603,13 @@ function MobileTabs() {
 						aria-current={current ? "page" : undefined}
 						viewTransition={false}
 						className={cn(
-							"relative flex min-h-[63px] min-w-0 flex-col items-center justify-center gap-0.5 text-center text-xs [overflow-wrap:anywhere] transition-[scale] duration-quick ease-enter active:scale-[0.97]",
-							current ? "font-semibold text-accent-text" : "font-medium text-ink-2",
+							"relative flex min-h-[52px] min-w-0 flex-col items-center justify-center gap-0.5 text-center text-[11.5px] transition-[scale] duration-quick ease-enter focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[#6c3cf1] active:scale-[0.97]",
+							current ? "font-semibold text-[#6c3cf1]" : "font-medium text-[#6b6585]",
 						)}
 					>
 						{current && <MobileTabIndicator />}
 						<Icon name={icon} size={24} filled={current} />
-						{short ?? label}
-						{waiting ? (
-							<span className={cn(badge, "absolute start-[calc(50%+7px)] top-1.5")}>{i18n.number(waiting)}</span>
-						) : null}
+						{label}
 					</Link>
 				);
 			})}

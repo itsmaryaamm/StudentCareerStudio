@@ -355,7 +355,11 @@ function ChatBody({ compact = false, mission }: { compact?: boolean; mission?: s
 				) : (
 					<div className="border-t border-[#efebfa]">
 						{!compact && (
-							<div className="flex flex-wrap items-center gap-2 px-4 pt-3" role="group" aria-label="Missions">
+							<div
+								className="flex items-center gap-2 px-4 pt-3 max-md:overflow-x-auto md:flex-wrap"
+								role="group"
+								aria-label="Missions"
+							>
 								<span className="text-[13px] font-medium text-[#6b6585]">Missions</span>
 								{MISSIONS.map((m) => (
 									<button
@@ -367,7 +371,7 @@ function ChatBody({ compact = false, mission }: { compact?: boolean; mission?: s
 										onDragStart={(e) => e.dataTransfer.setData("text/plain", m.id)}
 										onClick={() => setAttached(attached === m.id ? null : m.id)}
 										className={cn(
-											"inline-flex h-9 items-center gap-1.5 rounded-full border px-3.5 text-[13.5px] font-medium text-[#4b1d96] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6c3cf1]",
+											"inline-flex h-11 shrink-0 items-center gap-1.5 rounded-full border px-3.5 text-[13.5px] font-medium text-[#4b1d96] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#6c3cf1] md:h-9",
 											attached === m.id
 												? "border-[#6c3cf1] bg-[#f3efff]"
 												: "border-[#ddd5f2] bg-white hover:border-[#c4b2f5] hover:bg-[#faf8ff]",

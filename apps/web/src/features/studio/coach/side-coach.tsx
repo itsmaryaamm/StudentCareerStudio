@@ -25,7 +25,7 @@ export function SideCoach({ children }: { children: React.ReactNode }) {
 			{open ? (
 				<aside
 					aria-label="Career coach"
-					className="fixed inset-y-0 inset-e-0 z-40 flex w-full flex-col gap-2 border-s border-line bg-bg p-3 sm:w-[320px]"
+					className="fixed inset-y-0 inset-e-0 z-40 flex w-full flex-col gap-2 border-s border-line bg-bg p-3 max-md:hidden sm:w-[320px]"
 				>
 					<div className="flex items-center justify-between gap-2">
 						<h2 className="flex items-center gap-2 text-[15px] font-semibold">
@@ -45,7 +45,10 @@ export function SideCoach({ children }: { children: React.ReactNode }) {
 					</div>
 				</aside>
 			) : (
-				<Button className="fixed inset-e-4 bottom-24 z-40 shadow-lg lg:bottom-4" onClick={() => setOpen(true)}>
+				<Button
+					className="fixed inset-e-4 bottom-24 z-40 shadow-lg max-md:hidden lg:bottom-4"
+					onClick={() => setOpen(true)}
+				>
 					<Icon name="sparkle" size={16} /> Career coach
 				</Button>
 			)}
