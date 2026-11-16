@@ -64,6 +64,7 @@ export const scsRouter = {
 							.optional(),
 						contact: z
 							.strictObject({
+								linkedin: z.string().trim().max(200).optional(),
 								email: z.string().trim().max(120).optional(),
 								phone: z.string().trim().max(40).optional(),
 								portfolio: z.string().trim().max(200).optional(),

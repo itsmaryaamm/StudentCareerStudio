@@ -27,7 +27,14 @@ export type ScsIntake = {
 	has?: { resume?: boolean | undefined; linkedin?: boolean | undefined; portfolio?: boolean | undefined } | undefined;
 	/** Which of the three they named first: the conversation starts with that one. */
 	first?: "resume" | "linkedin" | "portfolio" | undefined;
-	contact?: { email?: string | undefined; phone?: string | undefined; portfolio?: string | undefined } | undefined;
+	contact?:
+		| {
+				email?: string | undefined;
+				phone?: string | undefined;
+				portfolio?: string | undefined;
+				linkedin?: string | undefined;
+		  }
+		| undefined;
 };
 
 /** Consent and onboarding state. AI calls are refused until `aiConsentAt` is set. */

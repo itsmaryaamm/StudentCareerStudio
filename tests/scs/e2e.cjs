@@ -47,15 +47,15 @@ const check = (name, ok, extra = "") => {
 	await page.waitForURL(/\/dashboard/, { timeout: 15000 });
 	check("W1 sign-up lands on the dashboard", true);
 	// First sign-in is a chat-only onboarding: name -> stage -> what they have -> contact -> guided steps -> dashboard.
-	await page.getByText("What should I call you?").waitFor();
+	await page.getByText("Hi, I'm your career coach.").waitFor();
 	check(
 		"W1 first sign-in shows only the coach chat (no navigation)",
 		(await page.getByRole("link", { name: "Documents" }).count()) === 0,
 	);
 	await page.getByLabel("Your name").fill("Layla");
 	await page.getByRole("button", { name: "Send", exact: true }).click();
-	await page.getByText("Which stage are you at").waitFor();
-	await page.getByRole("button", { name: "A student looking for a co-op" }).click();
+	await page.getByText("Where are you at right now").waitFor();
+	await page.getByRole("button", { name: "Looking for a co-op" }).click();
 	await page.getByText("Do you already have any of these?").waitFor();
 	check(
 		"W1 the coach asks what they already have (résumé / LinkedIn / portfolio)",
