@@ -6,7 +6,15 @@ import { Spinner } from "@reactive-resume/ui/components/spinner";
 import { Textarea } from "@reactive-resume/ui/components/textarea";
 import { cn } from "@reactive-resume/utils/style";
 import { FactCard, ProfilePanel, useFacts } from "./profile";
-import { ConsentGate, ErrorBlock, isQuotaError, LoadingBlock, studioErrorText, useStudioState } from "./shared";
+import {
+	ConsentGate,
+	ErrorBlock,
+	isQuotaError,
+	LimitBanner,
+	LoadingBlock,
+	studioErrorText,
+	useStudioState,
+} from "./shared";
 import { orpc } from "@/libs/orpc/client";
 
 const MAX_CHARS = 2000;
@@ -235,22 +243,21 @@ function ChatBody({ compact = false }: { compact?: boolean }) {
 					<div ref={endRef} />
 				</div>
 
-				{sendError != null && (
-					<Alert variant={isQuotaError(sendError) ? "warn" : "error"} className="mx-3 mb-2 w-auto">
+				{quotaHit && !ownKey && <LimitBanner className="mx-3 mb-2" onReset={() => setSendError(null)} />}
+				{sendError != null && !isQuotaError(sendError) && (
+					<Alert variant="error" className="mx-3 mb-2 w-auto">
 						<p>{studioErrorText(sendError)}</p>
-						{isQuotaError(sendError) && (
-							<p className="text-xs">
-								Out of messages?{" "}
-								<a href="/dashboard/settings/privacy" className="underline">
-									Add your own free Gemini key
-								</a>{" "}
-								for no daily limit.
-							</p>
-						)}
-						{!isQuotaError(sendError) && draft && (
-							<p className="text-xs">Your message is still in the box — press Send to retry.</p>
-						)}
+						{draft && <p className="text-xs">Your message is still in the box — press Send to retry.</p>}
 					</Alert>
+				)}
+				{uploadsLeft <= 0 && !ownKey && state && (
+					<p className="mx-3 mb-2 text-xs text-ink-3">
+						You've used all {state.usage.upload.limit} free document analyses.{" "}
+						<a href="/dashboard/settings/privacy" className="text-accent-text underline">
+							Add your own Gemini key
+						</a>{" "}
+						to analyse more.
+					</p>
 				)}
 
 				<form
@@ -297,7 +304,7 @@ function ChatBody({ compact = false }: { compact?: boolean }) {
 							disabled={quotaHit}
 							placeholder={
 								quotaHit
-									? "You've used today's messages. They reset at midnight UTC."
+									? "Out of free messages for now. See the countdown above."
 									: "Tell me about something you've done…"
 							}
 							onChange={(e) => setDraft(e.target.value)}

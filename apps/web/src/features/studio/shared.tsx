@@ -1,5 +1,6 @@
 import { ORPCError } from "@orpc/client";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
 import { Alert } from "@reactive-resume/ui/components/alert";
 import { Button } from "@reactive-resume/ui/components/button";
 import { Skeleton } from "@reactive-resume/ui/components/skeleton";
@@ -188,5 +189,64 @@ export function ConsentGate({ children }: { children: React.ReactNode }) {
 				</p>
 			)}
 		</section>
+	);
+}
+
+/** Milliseconds until `iso`, ticking every second. Null when there is no reset time. */
+export function useCountdown(iso: string | null | undefined) {
+	const [now, setNow] = useState(() => Date.now());
+	useEffect(() => {
+		if (!iso) return;
+		const id = setInterval(() => setNow(Date.now()), 1000);
+		return () => clearInterval(id);
+	}, [iso]);
+	return iso ? Math.max(0, new Date(iso).getTime() - now) : null;
+}
+
+export function formatCountdown(ms: number) {
+	const total = Math.ceil(ms / 1000);
+	const h = Math.floor(total / 3600);
+	const m = Math.floor((total % 3600) / 60);
+	const sec = total % 60;
+	if (h > 0) return `${h}h ${String(m).padStart(2, "0")}m`;
+	return m > 0 ? `${m}m ${String(sec).padStart(2, "0")}s` : `${sec}s`;
+}
+
+/**
+ * Shown when the day's free messages are used up: a live countdown to the reset, and the way to skip the wait.
+ * When the countdown ends it refreshes the student's allowance and calls `onReset`, so the box opens by itself.
+ */
+export function LimitBanner({ onReset, className }: { onReset?: () => void; className?: string }) {
+	const { data } = useStudioState();
+	const queryClient = useQueryClient();
+	const resetsAt = data?.usage.chat.resetsAt;
+	const left = useCountdown(resetsAt);
+	useEffect(() => {
+		if (left === 0) {
+			void queryClient.invalidateQueries({ queryKey: orpc.scs.state.key() });
+			onReset?.();
+		}
+		// oxlint-disable-next-line react-hooks/exhaustive-deps -- fires once when the countdown reaches zero
+	}, [left === 0]);
+	return (
+		<div role="status" className={cn("rounded-lg bg-warn-soft p-3 text-sm text-warn-text", className)}>
+			<p className="font-medium">You've used today's free messages.</p>
+			{left != null && resetsAt && (
+				<p className="mt-0.5">
+					More in <span className="font-semibold tabular-nums">{formatCountdown(left)}</span>
+					<span className="text-xs opacity-80">
+						{" "}
+						(at {new Date(resetsAt).toLocaleTimeString([], { hour: "numeric", minute: "2-digit" })})
+					</span>
+				</p>
+			)}
+			<p className="mt-1 text-xs">
+				Don't want to wait?{" "}
+				<a href="/dashboard/settings/privacy" className="underline">
+					Add your own free Gemini key
+				</a>{" "}
+				for no daily limit.
+			</p>
+		</div>
 	);
 }

@@ -6,10 +6,9 @@ import { Button } from "@reactive-resume/ui/components/button";
 import { Input } from "@reactive-resume/ui/components/input";
 import { Spinner } from "@reactive-resume/ui/components/spinner";
 import { Textarea } from "@reactive-resume/ui/components/textarea";
-import { cn } from "@reactive-resume/utils/style";
 import { Bubble, readAsBase64 } from "../chat";
 import { FactCard, useFacts } from "../profile";
-import { isQuotaError, studioErrorText, useStudioState } from "../shared";
+import { isQuotaError, LimitBanner, studioErrorText, useStudioState } from "../shared";
 import { orpc } from "@/libs/orpc/client";
 
 type Step = "welcome" | "situation" | "inventory" | "contact" | "resume" | "linkedin" | "interview" | "finish";
@@ -323,16 +322,10 @@ export function OnboardingChat() {
 					<div ref={endRef} />
 				</div>
 
-				{error != null && (
-					<p
-						role="alert"
-						className={cn(
-							"mx-3 mb-2 rounded-lg p-2.5 text-sm",
-							quotaHit ? "bg-warn-soft text-warn-text" : "bg-danger-soft text-danger-text",
-						)}
-					>
+				{quotaHit && <LimitBanner className="mx-3 mb-2" onReset={() => setError(null)} />}
+				{error != null && !quotaHit && (
+					<p role="alert" className="mx-3 mb-2 rounded-lg bg-danger-soft p-2.5 text-sm text-danger-text">
 						{studioErrorText(error)}
-						{quotaHit && " You can carry on from your dashboard tomorrow."}
 					</p>
 				)}
 
