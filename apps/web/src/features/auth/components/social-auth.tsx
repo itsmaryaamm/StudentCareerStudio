@@ -29,9 +29,11 @@ type SocialAuthProps = {
 	signUp?: boolean;
 	/** The "or" rule above; off when there's no email form to separate from. */
 	rule?: boolean;
+	/** Founding-beta invite code; sent with the provider redirect so a new Google account can take a seat. */
+	inviteCode?: string;
 };
 
-export function SocialAuth({ signUp = false, rule = true }: SocialAuthProps) {
+export function SocialAuth({ signUp = false, rule = true, inviteCode = "" }: SocialAuthProps) {
 	const { data: all = {}, isLoading } = useQuery(orpc.auth.providers.list.queryOptions());
 	const providers: Providers = signUp
 		? Object.fromEntries(Object.entries(all).filter(([key]) => key !== "passkey"))
@@ -42,14 +44,18 @@ export function SocialAuth({ signUp = false, rule = true }: SocialAuthProps) {
 		<div className={cn(!rule && "mt-7")}>
 			{rule && <AuthOr />}
 			{/* One row: most installations offer one or two providers, so several boxes collapsing reads as a jump. */}
-			{isLoading ? <Skeleton className="h-11 w-full rounded-lg" /> : <SocialAuthButtons providers={providers} />}
+			{isLoading ? (
+				<Skeleton className="h-11 w-full rounded-lg" />
+			) : (
+				<SocialAuthButtons providers={providers} inviteCode={inviteCode} />
+			)}
 		</div>
 	);
 }
 
-type SocialAuthButtonsProps = { providers: Providers };
+type SocialAuthButtonsProps = { providers: Providers; inviteCode: string };
 
-function SocialAuthButtons({ providers }: SocialAuthButtonsProps) {
+function SocialAuthButtons({ providers, inviteCode }: SocialAuthButtonsProps) {
 	const shown = offeredSocial(providers);
 	const router = useRouter();
 	const queryClient = useQueryClient();
@@ -129,6 +135,7 @@ function SocialAuthButtons({ providers }: SocialAuthButtonsProps) {
 								provider,
 								callbackURL: callbackURL ?? "/dashboard",
 								...getOAuthSignInOptions(callbackURL),
+								...(inviteCode.trim() ? { fetchOptions: { headers: { "x-beta-code": inviteCode.trim() } } } : {}),
 							}),
 						)
 					}

@@ -74,6 +74,8 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 	const smtpEnabled = useRouteContext({ strict: false }).flags?.smtpEnabled ?? false;
 	// The username is made from the email address unless they ask to choose one.
 	const [ownUsername, setOwnUsername] = useState(false);
+	// With email delivery on, the account exists but must be confirmed before first sign-in.
+	const [confirmEmail, setConfirmEmail] = useState<string | null>(null);
 	const { data: beta } = useQuery(orpc.scs.beta.queryOptions());
 	const betaFull = beta?.seatsLeft === 0;
 
@@ -120,23 +122,41 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 				}
 				if (isOAuthRedirect(continuation.data)) return;
 			}
+			if (smtpEnabled && !data?.token) {
+				toast.close(toastId);
+				setConfirmEmail(value.email);
+				return;
+			}
 			await queryClient.invalidateQueries({ queryKey: sessionQueryKey });
 			await router.invalidate();
 			// Straight to the dashboard (or the page that sent them here); verifying the email can wait.
-			if (smtpEnabled)
-				toast.add({
-					id: toastId,
-					type: "success",
-					title: t`Check your email`,
-					description: t`A link to verify your account is on its way. It's optional.`,
-					timeout: 10_000,
-				});
-			else toast.close(toastId);
+			toast.close(toastId);
 			void navigate(getAuthRedirectOptions(callbackURL));
 		},
 	});
 
 	const isSubmitting = useSelector(form.store, (state) => state.isSubmitting);
+	const inviteCode = useSelector(form.store, (state) => state.values.inviteCode);
+
+	if (confirmEmail)
+		return (
+			<>
+				<AuthTitle>
+					<Trans>Check your email</Trans>
+				</AuthTitle>
+				<p className="mt-4 text-sm text-ink-2" role="status">
+					<Trans>
+						We sent a confirmation link to <strong>{confirmEmail}</strong>. Open it to activate your account, then sign
+						in. Check spam if it doesn't arrive in a minute.
+					</Trans>
+				</p>
+				<AuthFoot>
+					<Link to="/auth/login" search={{ callbackURL, reauthenticate }}>
+						<Trans>Back to sign in</Trans>
+					</Link>
+				</AuthFoot>
+			</>
+		);
 
 	return (
 		<>
@@ -340,8 +360,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 				</form>
 			)}
 
-			{/* Social sign-up can't carry an invite code, so it is offered only when the beta needs none. */}
-			{!beta?.inviteRequired && <SocialAuth signUp rule={!disableEmailAuth} />}
+			<SocialAuth signUp rule={!disableEmailAuth} inviteCode={inviteCode} />
 
 			<AuthFoot>
 				<Trans>

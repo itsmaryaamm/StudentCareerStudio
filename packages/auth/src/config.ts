@@ -848,7 +848,13 @@ const getAuthConfig = () => {
 						// Founding beta: a seat is reserved server-side before the account exists, so the cap holds
 						// for e-mail, OAuth and any direct API call alike.
 						try {
-							await reserveBetaSeat(user.email, context?.headers?.get("x-beta-code"));
+							// E-mail sign-up sends the code as a header; a Google (OAuth) sign-up carries it in signed state.
+							const oauthInvite = context ? await getOAuthState().catch(() => null) : null;
+							const stateCode = oauthInvite?.serverContext?.betaCode;
+							await reserveBetaSeat(
+								user.email,
+								context?.headers?.get("x-beta-code") ?? (typeof stateCode === "string" ? stateCode : undefined),
+							);
 						} catch (error) {
 							if (error instanceof BetaClosedError)
 								throw new APIError("FORBIDDEN", { message: error.message, code: `BETA_${error.reason.toUpperCase()}` });
@@ -926,10 +932,12 @@ const getAuthConfig = () => {
 					// Keep the device timezone across the provider redirect in server-only state, so the
 					// callback can start a new account there without trusting redirect parameters.
 					const locale = requestLocale(ctx.headers);
-					if (timezone.success || locale)
+					const betaCode = ctx.headers?.get("x-beta-code")?.trim().slice(0, 64);
+					if (timezone.success || locale || betaCode)
 						await addOAuthServerContext({
 							...(timezone.success ? { timezone: timezone.data } : {}),
 							...(locale ? { locale } : {}),
+							...(betaCode ? { betaCode } : {}),
 						});
 				}
 
@@ -1108,7 +1116,9 @@ const getAuthConfig = () => {
 			autoSignIn: true,
 			minPasswordLength: 8,
 			maxPasswordLength: 64,
-			requireEmailVerification: false,
+			// Normal sign-up: with email delivery configured, an address must be confirmed before first sign-in (sign-up
+			// and each blocked sign-in send the link). Without SMTP nothing could be delivered, so don't lock people out.
+			requireEmailVerification: Boolean(env.SMTP_HOST && env.SMTP_USER && env.SMTP_PASS && env.SMTP_FROM),
 			// The reset email says the link works for 1 hour; keep this in step with it.
 			resetPasswordTokenExpiresIn: 60 * 60,
 			disableSignUp: env.FLAG_DISABLE_SIGNUPS || env.FLAG_DISABLE_EMAIL_AUTH,
