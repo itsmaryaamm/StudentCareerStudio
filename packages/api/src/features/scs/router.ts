@@ -40,6 +40,38 @@ export const scsRouter = {
 		.route(route("PUT", "/onboarding", "scsSetOnboarding", "Record the onboarding choice"))
 		.input(z.strictObject({ choice: z.enum(["ai", "resume", "linkedin", "skip"]) }))
 		.handler(({ context, input }) => accountService.setOnboarding(context.user.id, input.choice)),
+	saveIntake: protectedProcedure
+		.route(route("PUT", "/onboarding/intake", "scsSaveIntake", "Save progress of the guided first conversation"))
+		.input(
+			z.strictObject({
+				preferredName: z.string().trim().min(1).max(40).optional(),
+				step: z
+					.enum(["welcome", "situation", "inventory", "contact", "resume", "linkedin", "interview", "done"])
+					.optional(),
+				complete: z.boolean().optional(),
+				intake: z
+					.strictObject({
+						situation: z.string().trim().max(300).optional(),
+						first: z.enum(["resume", "linkedin", "portfolio"]).optional(),
+						has: z
+							.strictObject({
+								resume: z.boolean().optional(),
+								linkedin: z.boolean().optional(),
+								portfolio: z.boolean().optional(),
+							})
+							.optional(),
+						contact: z
+							.strictObject({
+								email: z.string().trim().max(120).optional(),
+								phone: z.string().trim().max(40).optional(),
+								portfolio: z.string().trim().max(200).optional(),
+							})
+							.optional(),
+					})
+					.optional(),
+			}),
+		)
+		.handler(({ context, input }) => accountService.saveIntake(context.user.id, input)),
 	exportData: protectedProcedure
 		.route(route("GET", "/export", "scsExportData", "Download all my data"))
 		.handler(({ context }) => accountService.exportData(context.user.id)),
@@ -101,6 +133,8 @@ export const scsRouter = {
 				z.strictObject({
 					threadId: z.string().min(1).max(64).optional(),
 					message: z.string().max(MAX_MESSAGE_CHARS + 200),
+					/** "interview": the get-to-know-you conversation for a student who has no résumé yet. */
+					mode: z.enum(["interview"]).optional(),
 				}),
 			)
 			.handler(({ context, input }) => chatService.send(context.user.id, input)),

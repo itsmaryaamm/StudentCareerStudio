@@ -22,6 +22,14 @@ export const scsBetaSeat = pg.pgTable(
 	(t) => [pg.index().on(t.reservedAt)],
 );
 
+export type ScsIntake = {
+	situation?: string | undefined;
+	has?: { resume?: boolean | undefined; linkedin?: boolean | undefined; portfolio?: boolean | undefined } | undefined;
+	/** Which of the three they named first: the conversation starts with that one. */
+	first?: "resume" | "linkedin" | "portfolio" | undefined;
+	contact?: { email?: string | undefined; phone?: string | undefined; portfolio?: string | undefined } | undefined;
+};
+
 /** Consent and onboarding state. AI calls are refused until `aiConsentAt` is set. */
 export const scsUserState = pg.pgTable("scs_user_state", {
 	userId: pg
@@ -32,6 +40,10 @@ export const scsUserState = pg.pgTable("scs_user_state", {
 	privacyAckAt: pg.timestamp("privacy_ack_at", { withTimezone: true }),
 	onboardingChoice: pg.text("onboarding_choice").$type<"ai" | "resume" | "linkedin" | "skip">(),
 	onboardedAt: pg.timestamp("onboarded_at", { withTimezone: true }),
+	/** What the student asked to be called, and where the guided first conversation has got to. */
+	preferredName: pg.text("preferred_name"),
+	onboardingStep: pg.text("onboarding_step"),
+	intake: pg.jsonb("intake").$type<ScsIntake>(),
 	createdAt: pg.timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 

@@ -14,9 +14,9 @@ const GREETING =
 	"Hi! I'm your career coach. Tell me about something you've done at university: a project, an event, a club. We'll turn it into strong material, and I won't make anything sound fancier than it was.";
 const ACCEPT = "application/pdf,image/png,image/jpeg,image/webp";
 
-type Msg = { id: string; role: "user" | "assistant"; content: string };
+export type Msg = { id: string; role: "user" | "assistant"; content: string };
 
-function readAsBase64(file: File): Promise<string> {
+export function readAsBase64(file: File): Promise<string> {
 	return new Promise((resolve, reject) => {
 		const reader = new FileReader();
 		reader.onerror = () => reject(new Error("Couldn't read that file."));
@@ -25,7 +25,7 @@ function readAsBase64(file: File): Promise<string> {
 	});
 }
 
-function Bubble({ msg }: { msg: Msg }) {
+export function Bubble({ msg }: { msg: Msg }) {
 	const mine = msg.role === "user";
 	return (
 		<li className={cn("flex", mine ? "justify-end" : "justify-start")}>
@@ -42,18 +42,21 @@ function Bubble({ msg }: { msg: Msg }) {
 	);
 }
 
-export function ChatPage() {
+export function ChatPage({ compact = false }: { compact?: boolean }) {
 	return (
 		<ConsentGate>
-			<ChatBody />
+			<ChatBody compact={compact} />
 		</ConsentGate>
 	);
 }
 
-function ChatBody() {
+function ChatBody({ compact = false }: { compact?: boolean }) {
 	const queryClient = useQueryClient();
 	const { data: state } = useStudioState();
 	const { data: facts } = useFacts();
+	const greeting = state?.preferredName
+		? `Hi ${state.preferredName}! What have you been up to? A project, a class, a club, a job: tell me and we'll turn it into strong material.`
+		: GREETING;
 	const [threadId, setThreadId] = useState<string | undefined>();
 	const [draft, setDraft] = useState("");
 	const [pending, setPending] = useState<string | null>(null);
@@ -144,10 +147,13 @@ function ChatBody() {
 	const quotaHit = isQuotaError(sendError) || (state ? chatLeft <= 0 : false);
 
 	return (
-		<div className="grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_340px]">
+		<div className={compact ? "h-full" : "grid items-start gap-5 lg:grid-cols-[minmax(0,1fr)_340px]"}>
 			<section
 				aria-label="Conversation with your career coach"
-				className="flex min-h-[60svh] flex-col overflow-hidden rounded-xl border border-line bg-raised"
+				className={cn(
+					"flex flex-col overflow-hidden rounded-xl border border-line bg-raised",
+					compact ? "h-full min-h-0" : "min-h-[60svh]",
+				)}
 			>
 				<div className="flex flex-wrap items-center gap-2 border-b border-line px-3 py-2">
 					<label className="sr-only" htmlFor="thread-select">
@@ -187,7 +193,7 @@ function ChatBody() {
 					) : (
 						<div role="log" aria-live="polite" aria-relevant="additions" aria-label="Messages">
 							<ol className="grid gap-3">
-								<Bubble msg={{ id: "hello", role: "assistant", content: GREETING }} />
+								<Bubble msg={{ id: "hello", role: "assistant", content: greeting }} />
 								{messages.map((m) => (
 									<Bubble key={m.id} msg={m} />
 								))}
@@ -304,12 +310,14 @@ function ChatBody() {
 				</form>
 			</section>
 
-			<details className="rounded-xl border border-line bg-raised p-3 lg:open:block" open>
-				<summary className="cursor-pointer text-sm font-semibold lg:hidden">Your career profile</summary>
-				<div className="mt-3 lg:mt-0">
-					<ProfilePanel hideProposed />
-				</div>
-			</details>
+			{!compact && (
+				<details className="rounded-xl border border-line bg-raised p-3 lg:open:block" open>
+					<summary className="cursor-pointer text-sm font-semibold lg:hidden">Your career profile</summary>
+					<div className="mt-3 lg:mt-0">
+						<ProfilePanel hideProposed />
+					</div>
+				</details>
+			)}
 		</div>
 	);
 }

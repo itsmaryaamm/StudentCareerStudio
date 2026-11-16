@@ -4,13 +4,14 @@ Built on Reactive Resume 6.1.1 (MIT). Everything below is implemented in this re
 
 ## What was added on top of Reactive Resume
 
-| Area                                                                                                                 | Where                                                                                 |
-| -------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
-| 50-seat cap + invite code, enforced in the auth hook (advisory-locked seat table)                                    | `packages/auth/src/beta-seats.ts`, `config.ts`                                        |
-| Server-side Gemini (key never reaches the browser), conversation memory, quotas with refunds, shared circuit breaker | `packages/api/src/features/scs/{gemini,limits,chat,upload}.ts`                        |
-| Shared career profile (facts the student approves) feeding chat, LinkedIn Studio, prompts                            | `scs/facts.ts`, `apps/web/src/features/studio/`                                       |
-| LinkedIn Studio, Career Prompts, onboarding, feedback, admin dashboard, privacy notice/settings                      | `apps/web/src/features/studio/`, `routes/dashboard/*`                                 |
-| Schema                                                                                                               | `packages/db/src/schema/scs.ts`, migration `migrations/20261114143008_parallel_beast` |
+| Area                                                                                                                                                                              | Where                                                                                                           |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------- |
+| 50-seat cap + invite code, enforced in the auth hook (advisory-locked seat table)                                                                                                 | `packages/auth/src/beta-seats.ts`, `config.ts`                                                                  |
+| Server-side Gemini (key never reaches the browser), conversation memory, quotas with refunds, shared circuit breaker                                                              | `packages/api/src/features/scs/{gemini,limits,chat,upload}.ts`                                                  |
+| Shared career profile (facts the student approves) feeding chat, LinkedIn Studio, prompts                                                                                         | `scs/facts.ts`, `apps/web/src/features/studio/`                                                                 |
+| LinkedIn Studio, Career Prompts, onboarding, feedback, admin dashboard, privacy notice/settings                                                                                   | `apps/web/src/features/studio/`, `routes/dashboard/*`                                                           |
+| First sign-in: chat-only onboarding (name → stage → what they have → contact → guided résumé/LinkedIn upload, or a get-to-know-you interview), then a side coach on the dashboard | `apps/web/src/features/studio/coach/`, `routes/dashboard/route.tsx`, `scs.saveIntake`, chat `mode: "interview"` |
+| Schema                                                                                                                                                                            | `packages/db/src/schema/scs.ts`, migration `migrations/20261114143008_parallel_beast`                           |
 
 ## Configuration (environment variables)
 
@@ -49,7 +50,7 @@ These prove our plumbing. They do **not** prove Gemini's answer quality or your 
 
 ## Known gaps before inviting students
 
-1. **Real Gemini has not been exercised** (no key in the build environment).
+1. **Real Gemini** was exercised for chat, facts, LinkedIn, PDF upload and the onboarding interview (API + browser, 2026-11-16). Not tested: real quota limits and answer quality at scale.
 2. **No email delivery configured** → no password-reset or verification emails. A student who forgets a password is locked out until you reset it. Configure SMTP (or a free transactional tier) first.
 3. Editor "Assistant"/"Improve"/AI-import buttons are RR's bring-your-own-key AI; students who connect a key send data to _that_ provider (disclosed in the privacy notice). Not covered by our limits.
 4. Many secondary RR strings still say "Reactive Resume" (homepage components, share dialogs, importer text). Auth, shell, titles, manifest and icons are rebranded.

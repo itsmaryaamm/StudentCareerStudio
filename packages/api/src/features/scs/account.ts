@@ -1,3 +1,4 @@
+import type { ScsIntake } from "@reactive-resume/db/schema";
 import { ORPCError } from "@orpc/client";
 import { and, count, desc, eq, gte, sql } from "drizzle-orm";
 import { db } from "@reactive-resume/db/client";
@@ -31,6 +32,9 @@ export const accountService = {
 			privacyAckAt: row?.privacyAckAt?.toISOString() ?? null,
 			onboardingChoice: row?.onboardingChoice ?? null,
 			onboardedAt: row?.onboardedAt?.toISOString() ?? null,
+			preferredName: row?.preferredName ?? null,
+			onboardingStep: row?.onboardingStep ?? null,
+			intake: row?.intake ?? {},
 			approvedFacts: facts?.n ?? 0,
 			resumeCount: resumes?.n ?? 0,
 			usage: await usageSummary(userId),
@@ -56,6 +60,36 @@ export const accountService = {
 			.insert(scsUserState)
 			.values({ userId, onboardingChoice: choice, onboardedAt: now })
 			.onConflictDoUpdate({ target: scsUserState.userId, set: { onboardingChoice: choice, onboardedAt: now } });
+	},
+
+	/** Saves progress of the guided first conversation. `intake` is merged, so each step can send only what is new. */
+	async saveIntake(
+		userId: string,
+		input: {
+			preferredName?: string | undefined;
+			step?: string | undefined;
+			intake?: ScsIntake | undefined;
+			complete?: boolean | undefined;
+		},
+	) {
+		const [row] = await db.select().from(scsUserState).where(eq(scsUserState.userId, userId));
+		const old = row?.intake ?? {};
+		const intake: ScsIntake = {
+			...old,
+			...input.intake,
+			has: { ...old.has, ...input.intake?.has },
+			contact: { ...old.contact, ...input.intake?.contact },
+		};
+		const set = {
+			...(input.preferredName ? { preferredName: input.preferredName } : {}),
+			...(input.step ? { onboardingStep: input.step } : {}),
+			...(input.complete ? { onboardedAt: new Date(), onboardingStep: "done" } : {}),
+			intake,
+		};
+		await db
+			.insert(scsUserState)
+			.values({ userId, ...set })
+			.onConflictDoUpdate({ target: scsUserState.userId, set });
 	},
 
 	/** Everything this feature stores about the student, as JSON they can download. Résumés export from their own page. */
