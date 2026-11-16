@@ -1,25 +1,8 @@
-import { createFileRoute } from "@tanstack/react-router";
-import { Page, PageBody, RootHeader } from "@/components/calm/page";
-import { PhoneHeaderActions } from "@/components/layout/phone-header-actions";
-import { PromptsPage } from "@/features/studio/prompts";
-import { getPageTitle } from "@/libs/seo";
+import { createFileRoute, redirect } from "@tanstack/react-router";
 
+// Career Prompts became the Career Lab; old links and bookmarks land there.
 export const Route = createFileRoute("/dashboard/prompts")({
-	head: () => ({ meta: [{ title: getPageTitle("Career Prompts") }] }),
-	component: RouteComponent,
+	beforeLoad: () => {
+		throw redirect({ to: "/dashboard/lab", replace: true });
+	},
 });
-
-function RouteComponent() {
-	return (
-		<Page>
-			<PageBody>
-				<RootHeader
-					title="Career Prompts"
-					subtitle="Personalized prompts to paste into your own ChatGPT or Claude account."
-					actions={<PhoneHeaderActions />}
-				/>
-				<PromptsPage />
-			</PageBody>
-		</Page>
-	);
-}

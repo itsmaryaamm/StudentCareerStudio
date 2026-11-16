@@ -458,6 +458,7 @@ const left = [
 	"scs_feedback",
 	"scs_linkedin_draft",
 	"scs_user_state",
+	"scs_mission",
 	"scs_beta_seat",
 ].map((t) => [t, Number(psql(`select count(*) from ${t} where user_id='${A.id}'`))]);
 check(
@@ -468,6 +469,54 @@ check(
 check("A's résumé is gone", Number(psql(`select count(*) from resume where user_id='${A.id}'`)) === 0);
 check("A can no longer sign in", (await signIn(u("a"))).status !== 200);
 check("deleting A freed a seat", (await http("GET", "/scs/beta")).json.seatsLeft === beforeSeats + 1);
+// ---------- Career Lab missions ----------
+const mission = {
+	missionId: "discover",
+	name: "Discover Me",
+	answers: { avoid: "Cold calling", proud: ["Organized Tech Week"] },
+	prompt: "STUDENT CAREER STUDIO\nMISSION ID: DISCOVER_ME",
+	templateVersion: 1,
+	selectedFactIds: [],
+};
+r = await http("PUT", "/scs/missions", { cookie: B.cookie, body: mission });
+check("missions: a student can save a mission", r.status === 200 && r.json.name === "Discover Me", JSON.stringify(r));
+const mId = r.json?.id;
+r = await http("PUT", "/scs/missions", { cookie: B.cookie, body: { ...mission, id: mId, name: "Discover Me v2" } });
+check(
+	"missions: saving with an id updates it in place",
+	r.status === 200 && r.json.id === mId && r.json.name === "Discover Me v2",
+);
+check(
+	"missions: list returns it with the saved answers",
+	(await http("GET", "/scs/missions", { cookie: B.cookie })).json?.[0]?.answers?.avoid === "Cold calling",
+);
+r = await http("PUT", "/scs/missions", { cookie: B.cookie, body: { ...mission, missionId: "nope" } });
+check("missions: an unknown mission id is refused", r.status === 400);
+r = await http("PUT", "/scs/missions", { cookie: B.cookie, body: { ...mission, prompt: "x".repeat(15000) } });
+check("missions: an oversized prompt is refused", r.status === 400);
+r = await http("POST", `/scs/missions/${mId}/duplicate`, { cookie: B.cookie });
+check(
+	"missions: duplicate makes a copy",
+	r.status === 200 && r.json.name === "Discover Me v2 (copy)",
+	JSON.stringify(r),
+);
+r = await http("DELETE", `/scs/missions/${mId}`, { cookie: won[0].cookie });
+check("missions: another student can't delete it (404)", r.status === 404, JSON.stringify(r));
+check(
+	"missions: and can't see it",
+	((await http("GET", "/scs/missions", { cookie: won[0].cookie })).json ?? []).length === 0,
+);
+r = await http("PUT", "/scs/missions", { cookie: won[0].cookie, body: { ...mission, id: mId } });
+check("missions: or overwrite it", r.status === 404, JSON.stringify(r));
+r = await http("DELETE", `/scs/missions/${mId}`, { cookie: B.cookie });
+check("missions: the owner can delete it", r.status === 200);
+check(
+	"missions: used none of the AI allowance",
+	Number(
+		psql(`select count(*) from scs_ai_usage where user_id='${B.id}' and kind not in ('chat','linkedin','upload')`),
+	) === 0,
+);
+
 // ---------- Friend codes ----------
 await http("POST", "/scs/consent", { cookie: B.cookie });
 const bState = await http("GET", "/scs/state", { cookie: B.cookie });

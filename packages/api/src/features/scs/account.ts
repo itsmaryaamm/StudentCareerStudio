@@ -10,6 +10,7 @@ import {
 	scsChatThread,
 	scsFeedback,
 	scsLinkedinDraft,
+	scsMission,
 	scsUserState,
 	user,
 } from "@reactive-resume/db/schema";
@@ -110,13 +111,14 @@ export const accountService = {
 
 	/** Everything this feature stores about the student, as JSON they can download. Résumés export from their own page. */
 	async exportData(userId: string) {
-		const [facts, threads, messages, drafts, feedback, state] = await Promise.all([
+		const [facts, threads, messages, drafts, feedback, state, missions] = await Promise.all([
 			db.select().from(scsCareerFact).where(eq(scsCareerFact.userId, userId)),
 			db.select().from(scsChatThread).where(eq(scsChatThread.userId, userId)),
 			db.select().from(scsChatMessage).where(eq(scsChatMessage.userId, userId)),
 			db.select().from(scsLinkedinDraft).where(eq(scsLinkedinDraft.userId, userId)),
 			db.select().from(scsFeedback).where(eq(scsFeedback.userId, userId)),
 			db.select().from(scsUserState).where(eq(scsUserState.userId, userId)),
+			db.select().from(scsMission).where(eq(scsMission.userId, userId)),
 		]);
 		const resumes = await db
 			.select({ id: resume.id, name: resume.name, data: resume.data })
@@ -126,6 +128,7 @@ export const accountService = {
 			exportedAt: new Date().toISOString(),
 			// The sealed key never leaves the server, not even in the student's own download.
 			state: state[0] ? { ...state[0], ownGeminiKeyEnc: undefined } : null,
+			missions,
 			careerProfile: facts,
 			chatThreads: threads,
 			chatMessages: messages,

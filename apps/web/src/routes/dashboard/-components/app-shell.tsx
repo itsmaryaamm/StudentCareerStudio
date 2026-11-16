@@ -37,7 +37,7 @@ type NavItem = {
 		| "/dashboard/documents"
 		| "/dashboard/linkedin"
 		| "/dashboard/chat"
-		| "/dashboard/prompts"
+		| "/dashboard/lab"
 		| "/dashboard/admin"
 		| "/dashboard/trash";
 	icon: IconName;
@@ -67,7 +67,7 @@ function useNavItems() {
 		},
 		{ to: "/dashboard/linkedin", icon: "linkedin-logo", label: "LinkedIn Studio", short: "LinkedIn" },
 		{ to: "/dashboard/chat", icon: "sparkle", label: "Career Coach", short: "Coach" },
-		{ to: "/dashboard/prompts", icon: "chat-text", label: "Career Prompts", short: "Prompts" },
+		{ to: "/dashboard/lab", icon: "compass", label: "Career Lab", short: "Lab" },
 		...(studio?.isAdmin
 			? [{ to: "/dashboard/admin", icon: "chart-line-up", label: "Beta dashboard", short: "Admin" } satisfies NavItem]
 			: []),

@@ -169,7 +169,7 @@ export function OnboardingChat() {
 			case "interview":
 				return `No problem, ${n}. We'll build it by talking, like friends catching up. Who are you, and what do you study (or want to study)?`;
 			case "finish":
-				return `All set, ${n}! Your dashboard has your résumé, LinkedIn Studio and prompts. I'll be on the side if you need me.`;
+				return `All set, ${n}! Your dashboard has your résumé, LinkedIn Studio and the Career Lab. I'll be on the side if you need me.`;
 		}
 	};
 

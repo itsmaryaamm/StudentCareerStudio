@@ -178,3 +178,24 @@ export const scsFeedback = pg.pgTable(
 	},
 	(t) => [pg.index().on(t.createdAt)],
 );
+
+/** A Career Lab mission the student saved: their answers and the prompt built from them. */
+export const scsMission = pg.pgTable(
+	"scs_mission",
+	{
+		id: pg.text("id").primaryKey().$defaultFn(generateId),
+		userId: pg
+			.text("user_id")
+			.notNull()
+			.references(() => user.id, { onDelete: "cascade" }),
+		missionId: pg.text("mission_id").notNull(),
+		name: pg.text("name").notNull(),
+		answers: pg.jsonb("answers").$type<Record<string, string | string[]>>().notNull().default({}),
+		prompt: pg.text("prompt").notNull(),
+		templateVersion: pg.integer("template_version").notNull().default(1),
+		selectedFactIds: pg.jsonb("selected_fact_ids").$type<string[]>().notNull().default([]),
+		createdAt: pg.timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
+		updatedAt: pg.timestamp("updated_at", { withTimezone: true }).notNull().defaultNow(),
+	},
+	(t) => [pg.index().on(t.userId, t.updatedAt)],
+);

@@ -237,45 +237,94 @@ const check = (name, ok, extra = "") => {
 		(await page.locator("#li-text").inputValue()).startsWith("Computer Science student"),
 	);
 
-	// ===== Workflow 5: personalized career prompts for ChatGPT and Claude =====
+	// ===== Workflow 5: Career Lab missions for ChatGPT and Claude =====
 	const before = await page.evaluate(() => fetch("/api/openapi/scs/usage").then((r) => r.json()));
 	await page.goto(`${BASE}/dashboard/prompts`);
-	await page.getByLabel("Roles & interests").fill("data analyst");
-	await page.getByLabel("Location preferences").fill("Riyadh");
-	await page.getByRole("radio", { name: "ChatGPT" }).click();
-	await page.getByRole("button", { name: "Copy prompt" }).click();
-	const gpt = await page.evaluate(() => navigator.clipboard.readText());
+	await page.waitForURL(/\/dashboard\/lab/);
+	check("W5 the old Career Prompts address lands on the Career Lab", true);
+	for (const name of ["Discover Me", "LinkedIn Creator", "Opportunity Scout", "Company Intelligence"])
+		await page.getByRole("heading", { name }).waitFor();
+	check("W5 the Career Lab shows the four missions", true);
+	await page.getByRole("button", { name: "Start mission" }).first().click();
+	await page.getByText("Step 1 of 5").waitFor();
+	await page.getByRole("button", { name: "Let's build my mission" }).click();
+	await page.getByText("Step 2 of 5").waitFor();
 	check(
-		"W5 the ChatGPT prompt includes the student's approved facts and preferences",
+		"W5 the first question is filled in from the verified profile",
+		await page.getByText("From your career profile").first().isVisible(),
+	);
+	// Walk the six questions: required ones need an answer, optional ones can be skipped.
+	await page.getByRole("button", { name: "Next" }).click();
+	await page.getByRole("button", { name: /Organized Tech Week/ }).waitFor();
+	await page.getByRole("button", { name: "Next" }).click();
+	await page.getByRole("button", { name: "Building things" }).click();
+	await page.getByRole("button", { name: "Next" }).click();
+	await page
+		.getByRole("textbox", { name: "What kinds of tasks do you dislike or want to avoid?" })
+		.fill("Cold calling");
+	await page.getByRole("button", { name: "Next" }).click();
+	await page.getByRole("button", { name: "Skip" }).click();
+	await page.getByRole("button", { name: "Skip" }).click();
+	await page.getByText("Step 3 of 5").waitFor();
+	await page.getByLabel(/one result, number or moment/).fill("300 riders in a month");
+	await page.getByRole("button", { name: "Generate my mission" }).click();
+	await page.getByText("Your mission is ready").waitFor();
+	const gpt = await page.getByLabel("Your mission prompt").inputValue();
+	check(
+		"W5 the prompt starts with the required header",
+		gpt.startsWith("STUDENT CAREER STUDIO\nMISSION ID: DISCOVER_ME\nMISSION VERSION: 1\n\nSTART THIS MISSION NOW."),
+		gpt.slice(0, 120),
+	);
+	check(
+		"W5 the prompt carries the verified facts, the answers and the clarification",
 		/Organized Tech Week/.test(gpt) &&
-			/King Saud University/.test(gpt) &&
-			/data analyst/.test(gpt) &&
-			/Riyadh/.test(gpt),
-		gpt.slice(0, 200),
+			/Cold calling/.test(gpt) &&
+			/300 riders in a month/.test(gpt) &&
+			/Building things/.test(gpt),
+		gpt.slice(0, 300),
 	);
-	check("W5 the ChatGPT prompt tells it to browse for current info", /Use web search/.test(gpt));
-	await page.getByRole("radio", { name: "Claude" }).click();
-	await page.getByRole("button", { name: "Copy prompt" }).click();
-	const claude = await page.evaluate(() => navigator.clipboard.readText());
-	check("W5 the Claude prompt is tailored differently", /If web search is available/.test(claude) && claude !== gpt);
 	await page.getByRole("checkbox", { name: /Organized Tech Week/ }).uncheck();
-	await page.getByRole("button", { name: "Copy prompt" }).click();
-	const trimmed = await page.evaluate(() => navigator.clipboard.readText());
+	check("W5 changing what's included marks the prompt out of date", await page.getByText("out of date").isVisible());
+	await page.getByRole("button", { name: "Regenerate it" }).click();
 	check(
-		"W5 an unticked fact is NOT in the copied prompt",
-		!/Organized Tech Week/.test(trimmed) && /King Saud University/.test(trimmed),
+		"W5 an unticked fact is NOT in the regenerated prompt",
+		!/Organized Tech Week/.test(await page.getByLabel("Your mission prompt").inputValue()),
 	);
-	await page.getByRole("radio", { name: /Help me apply/ }).check({ force: true });
-	await page.getByLabel("Paste the job post").fill("Junior data analyst at Acme.");
+	await page.getByRole("button", { name: "Save mission" }).click();
+	await page.getByText("Mission saved to My missions").waitFor();
 	await page.getByRole("button", { name: "Copy prompt" }).click();
+	await page.getByText("Step 5 of 5").waitFor();
+	const copied = await page.evaluate(() => navigator.clipboard.readText());
 	check(
-		"W5 the 'apply' prompt embeds the pasted job post",
-		/Junior data analyst at Acme/.test(await page.evaluate(() => navigator.clipboard.readText())),
+		"W5 Copy prompt puts the mission on the clipboard and reaches the launch step",
+		copied.startsWith("STUDENT CAREER STUDIO"),
 	);
-	await shot("w5-prompts");
+	check(
+		"W5 the launch step is honest that nothing is pasted for you",
+		await page.getByText("Nothing is pasted or controlled automatically").isVisible(),
+	);
+	await shot("w5-lab");
+	await page.goto(`${BASE}/dashboard/lab`);
+	await page.getByRole("heading", { name: "My missions" }).waitFor();
+	await page.getByRole("button", { name: "Duplicate" }).first().waitFor();
+	check(
+		"W5 the saved mission is listed under My missions",
+		await page.getByRole("button", { name: "Open", exact: true }).first().isVisible(),
+	);
+	await page.getByRole("button", { name: "Duplicate" }).first().click();
+	await page.getByText("Discover Me (copy)").waitFor();
+	check("W5 a saved mission can be duplicated", true);
+	await page.getByRole("button", { name: "Delete" }).first().click();
+	await page.waitForTimeout(800);
+	check(
+		"W5 a saved mission can be deleted",
+		(await page.getByText("Discover Me (copy)").count()) +
+			(await page.getByText("Discover Me", { exact: true }).count()) <=
+			2,
+	);
 	const after = await page.evaluate(() => fetch("/api/openapi/scs/usage").then((r) => r.json()));
 	check(
-		"W5 building prompts used none of the AI allowance",
+		"W5 building missions used none of the AI allowance",
 		before.chat.used === after.chat.used && before.upload.used === after.upload.used,
 		JSON.stringify([before.chat, after.chat]),
 	);

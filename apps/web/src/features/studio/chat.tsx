@@ -5,6 +5,7 @@ import { Button } from "@reactive-resume/ui/components/button";
 import { Spinner } from "@reactive-resume/ui/components/spinner";
 import { Textarea } from "@reactive-resume/ui/components/textarea";
 import { cn } from "@reactive-resume/utils/style";
+import { MISSIONS } from "../lab/missions";
 import { FactCard, ProfilePanel, useFacts } from "./profile";
 import {
 	ConsentGate,
@@ -50,15 +51,16 @@ export function Bubble({ msg }: { msg: Msg }) {
 	);
 }
 
-export function ChatPage({ compact = false }: { compact?: boolean }) {
+export function ChatPage({ compact = false, mission }: { compact?: boolean; mission?: string | undefined }) {
 	return (
 		<ConsentGate>
-			<ChatBody compact={compact} />
+			<ChatBody compact={compact} mission={mission} />
 		</ConsentGate>
 	);
 }
 
-function ChatBody({ compact = false }: { compact?: boolean }) {
+function ChatBody({ compact = false, mission }: { compact?: boolean; mission?: string | undefined }) {
+	const lab = MISSIONS.find((m) => m.id === mission);
 	const queryClient = useQueryClient();
 	const { data: state } = useStudioState();
 	const { data: facts } = useFacts();
@@ -107,7 +109,11 @@ function ChatBody({ compact = false }: { compact?: boolean }) {
 		setNotice(null);
 		setPending(message);
 		send.mutate(
-			{ ...(threadId ? { threadId } : {}), message },
+			{
+				...(threadId ? { threadId } : {}),
+				// The first message of a mission conversation says which mission it is.
+				message: lab && !threadId ? `Mission: ${lab.name}. ${message}`.slice(0, MAX_CHARS) : message,
+			},
 			{
 				onSuccess: async (result) => {
 					setThreadId(result.threadId);
@@ -207,6 +213,19 @@ function ChatBody({ compact = false }: { compact?: boolean }) {
 						<div role="log" aria-live="polite" aria-relevant="additions" aria-label="Messages">
 							<ol className="grid gap-3">
 								<Bubble msg={{ id: "hello", role: "assistant", content: greeting }} />
+								{lab && !threadId && (
+									<>
+										<Bubble msg={{ id: "mission", role: "assistant", content: lab.opener }} />
+										<li className="ps-1">
+											<a
+												href={`/dashboard/lab?mission=${lab.id}`}
+												className="text-sm font-semibold text-accent hover:underline"
+											>
+												Open the {lab.name} workbook
+											</a>
+										</li>
+									</>
+								)}
 								{messages.map((m) => (
 									<Bubble key={m.id} msg={m} />
 								))}

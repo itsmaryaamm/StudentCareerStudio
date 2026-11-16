@@ -6,6 +6,7 @@ import { byokService } from "./byok";
 import { chatService, MAX_MESSAGE_CHARS } from "./chat";
 import { factsService } from "./facts";
 import { linkedinService } from "./linkedin";
+import { missionInputSchema, missionsService } from "./missions";
 import { factCategorySchema, factSchema, linkedinSectionSchema, usageSchema } from "./schemas";
 import { uploadService } from "./upload";
 
@@ -105,6 +106,24 @@ export const scsRouter = {
 		.route(route("GET", "/usage", "scsUsage", "My AI allowance"))
 		.output(usageSchema)
 		.handler(async ({ context }) => (await accountService.state(context.user.id)).usage),
+
+	missions: {
+		list: protectedProcedure
+			.route(route("GET", "/missions", "scsListMissions", "My saved Career Lab missions"))
+			.handler(({ context }) => missionsService.list(context.user.id)),
+		save: protectedProcedure
+			.route(route("PUT", "/missions", "scsSaveMission", "Save a Career Lab mission"))
+			.input(missionInputSchema)
+			.handler(({ context, input }) => missionsService.save(context.user.id, input)),
+		duplicate: protectedProcedure
+			.route(route("POST", "/missions/{id}/duplicate", "scsDuplicateMission", "Duplicate a saved mission"))
+			.input(id)
+			.handler(({ context, input }) => missionsService.duplicate(context.user.id, input.id)),
+		delete: protectedProcedure
+			.route(route("DELETE", "/missions/{id}", "scsDeleteMission", "Delete a saved mission"))
+			.input(id)
+			.handler(({ context, input }) => missionsService.remove(context.user.id, input.id)),
+	},
 
 	facts: {
 		list: protectedProcedure

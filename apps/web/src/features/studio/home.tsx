@@ -139,7 +139,7 @@ export function HomePage() {
 					<ActionCard icon="sparkle" title="Career Coach" blurb="Uncover experiences you forgot" to="/dashboard/chat" />
 				</li>
 				<li>
-					<ActionCard icon="chat-text" title="Career prompts" blurb="For ChatGPT or Claude" to="/dashboard/prompts" />
+					<ActionCard icon="compass" title="Career Lab" blurb="AI missions for ChatGPT or Claude" to="/dashboard/lab" />
 				</li>
 				<li>
 					<ActionCard
