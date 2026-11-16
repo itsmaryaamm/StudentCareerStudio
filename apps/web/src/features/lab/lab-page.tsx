@@ -8,6 +8,7 @@ import { toast } from "@reactive-resume/ui/components/toast";
 import { cn } from "@reactive-resume/utils/style";
 import { MISSIONS } from "./missions";
 import { buildPrompt, isPrefilled, resolveAnswer, TEMPLATE_VERSION } from "./prompt";
+import { useMobileChrome } from "@/features/studio/mobile-chrome";
 import { useFacts } from "@/features/studio/profile";
 import { copyText, studioErrorText } from "@/features/studio/shared";
 import { orpc } from "@/libs/orpc/client";
@@ -103,6 +104,13 @@ export function LabPage({ initialMission }: { initialMission?: MissionId | undef
 
 	const mission: Mission = MISSIONS.find((m) => m.id === missionId) ?? (MISSIONS[0] as Mission);
 	const q = mission.qs[Math.min(qi, mission.qs.length - 1)] as Question;
+
+	// On a phone the workbook takes the whole screen: the tab bar steps aside while a mission is open.
+	const setHideTabs = useMobileChrome((state) => state.setHideTabs);
+	useEffect(() => {
+		setHideTabs(view !== "home");
+		return () => setHideTabs(false);
+	}, [view, setHideTabs]);
 
 	// The draft survives a reload, per mission.
 	useEffect(() => {
@@ -307,7 +315,7 @@ export function LabPage({ initialMission }: { initialMission?: MissionId | undef
 	const extra = q.type === "multi" ? chosen.filter((c) => !options.includes(c)) : [];
 
 	return (
-		<div className="mt-6 max-w-[780px]">
+		<div className={cn("mt-6 max-w-[780px]", (view === "work" || view === "refine") && "max-md:pb-24")}>
 			<div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
 				<button type="button" className="font-semibold text-[#6c3cf1] hover:underline" onClick={() => setView("home")}>
 					← Career Lab
@@ -467,7 +475,7 @@ export function LabPage({ initialMission }: { initialMission?: MissionId | undef
 						)}
 					</div>
 
-					<div className="mt-6 flex flex-wrap gap-2">
+					<div className="mt-6 flex flex-wrap gap-2 max-md:fixed max-md:inset-x-0 max-md:bottom-0 max-md:z-40 max-md:border-t max-md:border-[#e8e3f5] max-md:bg-white max-md:p-3 max-md:pb-[calc(12px+env(safe-area-inset-bottom))] max-md:[&>*]:flex-1">
 						<button type="button" className={secondary} onClick={back}>
 							Back
 						</button>
@@ -529,7 +537,7 @@ export function LabPage({ initialMission }: { initialMission?: MissionId | undef
 							</div>
 						))}
 					</div>
-					<div className="mt-6 flex flex-wrap gap-2">
+					<div className="mt-6 flex flex-wrap gap-2 max-md:fixed max-md:inset-x-0 max-md:bottom-0 max-md:z-40 max-md:border-t max-md:border-[#e8e3f5] max-md:bg-white max-md:p-3 max-md:pb-[calc(12px+env(safe-area-inset-bottom))] max-md:[&>*]:flex-1">
 						<button type="button" className={secondary} onClick={back}>
 							Back
 						</button>

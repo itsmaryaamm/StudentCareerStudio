@@ -74,4 +74,5 @@ const server = http.createServer(async (req, res) => {
 	const memory = texts.length > 1 ? `Earlier you said: "${texts[0].slice(0, 60)}". ` : "";
 	reply({ reply: `${memory}Tell me more.`, facts: [] });
 });
-server.listen(4010, () => console.log("fake gemini on :4010"));
+const PORT = Number(process.env.FAKE_GEMINI_PORT ?? 4010);
+server.listen(PORT, () => console.log(`fake gemini on :${PORT}`));
