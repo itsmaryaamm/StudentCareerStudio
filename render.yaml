@@ -1,5 +1,5 @@
-# Student Career Studio on Render (free web service + external Neon Postgres).
-# Create the Neon database first, then: Render dashboard -> New -> Blueprint -> this repo.
+# Student Career Studio on Render (free web service + Render Postgres).
+# Render dashboard -> New -> Blueprint -> this repo. No separate database signup.
 # Fill every "sync: false" value when Render asks. Runbook: docs/beta/DEPLOY.md
 services:
   - type: web
@@ -12,8 +12,10 @@ services:
     envVars:
       - key: PORT
         value: "3000"
-      - key: DATABASE_URL # Neon pooled connection string, ending in ?sslmode=require
-        sync: false
+      - key: DATABASE_URL # Render creates the database below and fills this in
+        fromDatabase:
+          name: scs-db
+          property: connectionString
       - key: AUTH_SECRET
         generateValue: true
       - key: ENCRYPTION_SECRET
@@ -40,3 +42,8 @@ services:
         sync: false
       - key: GOOGLE_CLIENT_SECRET
         sync: false
+
+databases:
+  - name: scs-db
+    databaseName: scs
+    plan: free # Render deletes free databases after 30 days: move to a paid plan (about $6/mo) before then, or export first
