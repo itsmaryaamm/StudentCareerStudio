@@ -49,14 +49,14 @@ const formSchema = z.object({
 		.string()
 		.min(8, { error: () => t`Use at least 8 characters.` })
 		.max(64, { error: () => t`Use 64 characters or fewer.` }),
-	// Founding beta: only checked when the server asks for a code; the server is what enforces it.
-	inviteCode: z.string().trim().max(64),
+	// A friend's code, optional: it gives both of you a bigger free allowance.
+	friendCode: z.string().trim().max(32),
 });
 
-/** An invite link looks like /auth/register?invite=CODE. */
-function inviteFromUrl() {
+/** A friend's link looks like /auth/register?ref=CODE. */
+function friendCodeFromUrl() {
 	if (typeof window === "undefined") return "";
-	return new URLSearchParams(window.location.search).get("invite")?.slice(0, 64) ?? "";
+	return new URLSearchParams(window.location.search).get("ref")?.slice(0, 32) ?? "";
 }
 
 type Props = {
@@ -80,7 +80,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 	const betaFull = beta?.seatsLeft === 0;
 
 	const form = useAppForm({
-		defaultValues: { name: "", username: "", email: "", password: "", inviteCode: inviteFromUrl() },
+		defaultValues: { name: "", username: "", email: "", password: "", friendCode: friendCodeFromUrl() },
 		validators: { onSubmit: formSchema },
 		onSubmit: async ({ value }) => {
 			const toastId = toast.add({ type: "loading", description: t`Signing up…` });
@@ -96,7 +96,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 				displayUsername: value.username,
 				callbackURL: callbackURL ?? "/dashboard",
 				...(!createPrompt ? oauthOptions : {}),
-				fetchOptions: { headers: value.inviteCode ? { "x-beta-code": value.inviteCode } : {} },
+				fetchOptions: { headers: value.friendCode ? { "x-referral-code": value.friendCode } : {} },
 			});
 
 			if (error) {
@@ -136,7 +136,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 	});
 
 	const isSubmitting = useSelector(form.store, (state) => state.isSubmitting);
-	const inviteCode = useSelector(form.store, (state) => state.values.inviteCode);
+	const friendCode = useSelector(form.store, (state) => state.values.friendCode);
 
 	if (confirmEmail)
 		return (
@@ -174,7 +174,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 					<Trans>Create an account and what you made as a guest moves into it.</Trans>
 				) : (
 					<Trans comment="Reassurance under the registration title, repeating the homepage's promise">
-						Free with an invite code. No ads.
+						Free, with no ads.
 					</Trans>
 				)}
 			</ConnectingClient>
@@ -194,8 +194,8 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 					{beta && (
 						<Alert variant={betaFull ? "warn" : "info"} role="status">
 							{betaFull
-								? `The ${beta.maxSeats} free founding seats are taken. You can still sign up; AI features will be paid.`
-								: `Founding beta · ${beta.seatsLeft} of ${beta.maxSeats} free seats left, for people with an invite code.`}
+								? `The founding beta is full (${beta.maxSeats} students). Thank you for your interest.`
+								: `Founding beta · ${beta.seatsLeft} of ${beta.maxSeats} free seats left.`}
 						</Alert>
 					)}
 
@@ -323,31 +323,29 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 						)}
 					</form.Field>
 
-					{beta?.inviteRequired && (
-						<form.Field name="inviteCode">
-							{(field) => (
-								<FormItem>
-									<FormLabel>Invite code (optional)</FormLabel>
-									<FormControl
-										render={
-											<Input
-												maxLength={64}
-												autoComplete="off"
-												name={field.name}
-												value={field.state.value}
-												onBlur={field.handleBlur}
-												onChange={(event) => field.handleChange(event.target.value)}
-											/>
-										}
-									/>
-									<FormDescription>
-										Have a code? Use it for free access to the AI coach. Without one, the AI coach is paid (pricing
-										coming soon). You can still build résumés free, and use your own Gemini key.
-									</FormDescription>
-								</FormItem>
-							)}
-						</form.Field>
-					)}
+					<form.Field name="friendCode">
+						{(field) => (
+							<FormItem>
+								<FormLabel>Friend's code (optional)</FormLabel>
+								<FormControl
+									render={
+										<Input
+											maxLength={32}
+											autoComplete="off"
+											className="uppercase"
+											name={field.name}
+											value={field.state.value}
+											onBlur={field.handleBlur}
+											onChange={(event) => field.handleChange(event.target.value)}
+										/>
+									}
+								/>
+								<FormDescription>
+									Got a code from a friend? You both get extra free AI messages and document reads.
+								</FormDescription>
+							</FormItem>
+						)}
+					</form.Field>
 
 					<p className="text-[13px] leading-[18px] text-ink-3">
 						By creating an account you agree to the{" "}
@@ -357,13 +355,13 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 						: your résumé stays private to you, and AI features send only what you choose to Google Gemini.
 					</p>
 
-					<Button type="submit" size="lg" className="mt-1 w-full leading-5" disabled={isSubmitting}>
+					<Button type="submit" size="lg" className="mt-1 w-full leading-5" disabled={isSubmitting || betaFull}>
 						<Trans comment="Primary action button label on registration form">Create account</Trans>
 					</Button>
 				</form>
 			)}
 
-			<SocialAuth signUp rule={!disableEmailAuth} inviteCode={inviteCode} />
+			<SocialAuth signUp rule={!disableEmailAuth} friendCode={friendCode} />
 
 			<AuthFoot>
 				<Trans>

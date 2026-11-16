@@ -11,8 +11,6 @@ export function authErrorMessage(error: AuthError, fallback: string): string {
 			return t`This sign-in step expired. Sign in again.`;
 		case "EMAIL_NOT_VERIFIED":
 			return t`Confirm your email first. We just sent you a new link; check your inbox and spam folder.`;
-		case "BETA_INVITE":
-			return t`A valid invite code is needed to join the founding beta.`;
 		case "INVALID_TOKEN":
 			return t`This reset link expired or was already used. Send a new link.`;
 		case "INVALID_OTP":

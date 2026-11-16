@@ -8,7 +8,7 @@ import { Spinner } from "@reactive-resume/ui/components/spinner";
 import { Textarea } from "@reactive-resume/ui/components/textarea";
 import { Bubble, readAsBase64 } from "../chat";
 import { FactCard, useFacts } from "../profile";
-import { AccessCard, isQuotaError, LimitBanner, studioErrorText, useStudioState } from "../shared";
+import { isQuotaError, LimitBanner, studioErrorText, useStudioState } from "../shared";
 import { orpc } from "@/libs/orpc/client";
 
 type Step = "welcome" | "situation" | "inventory" | "contact" | "resume" | "linkedin" | "interview" | "finish";
@@ -269,9 +269,7 @@ export function OnboardingChat() {
 	};
 
 	const aiStep = step === "resume" || step === "linkedin" || step === "interview";
-	const hasAccess = Boolean(state?.freeAccess || state?.ownKeyPreview);
-	const needsAccess = aiOn && aiStep && !hasAccess;
-	const needsConsent = aiOn && aiStep && hasAccess && !hasConsent;
+	const needsConsent = aiOn && aiStep && !hasConsent;
 	const quotaHit = isQuotaError(error);
 
 	return (
@@ -332,18 +330,7 @@ export function OnboardingChat() {
 				)}
 
 				<div className="border-t border-line p-3">
-					{needsAccess ? (
-						<div className="grid gap-2">
-							<AccessCard />
-							<Button
-								variant="ghost"
-								className="justify-self-start"
-								onClick={() => (step === "interview" ? go("finish") : afterDocs(step as "resume" | "linkedin"))}
-							>
-								Skip this for now
-							</Button>
-						</div>
-					) : needsConsent ? (
+					{needsConsent ? (
 						<div className="grid gap-2 text-sm">
 							<p>
 								To read files and chat, I send your messages and any file you upload to Google's Gemini. Files are read

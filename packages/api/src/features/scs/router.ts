@@ -26,7 +26,7 @@ const id = z.object({ id: z.string().min(1).max(64) });
 export const scsRouter = {
 	beta: publicProcedure
 		.route(route("GET", "/beta", "scsBetaInfo", "Founding beta seat availability"))
-		.output(z.object({ maxSeats: z.number(), seatsLeft: z.number(), inviteRequired: z.boolean() }))
+		.output(z.object({ maxSeats: z.number(), seatsLeft: z.number() }))
 		.handler(() => betaInfo()),
 
 	state: protectedProcedure
@@ -78,17 +78,21 @@ export const scsRouter = {
 		.route(route("PUT", "/gemini-key", "scsSetOwnGeminiKey", "Use my own Gemini API key"))
 		.input(z.strictObject({ apiKey: z.string().min(1).max(200) }))
 		.handler(({ context, input }) => byokService.set(context.user.id, input.apiKey)),
-	redeemCode: protectedProcedure
-		.route(route("PUT", "/access/code", "scsRedeemCode", "Redeem an invite code for free founding-beta access"))
-		.input(z.strictObject({ code: z.string().trim().min(1).max(64) }))
+	useFriendCode: protectedProcedure
+		.route(route("PUT", "/referral", "scsUseFriendCode", "Enter a friend's code for a bigger allowance"))
+		.input(z.strictObject({ code: z.string().trim().min(1).max(32) }))
 		.handler(async ({ context, input }) => {
-			const { redeemBetaCode, BetaClosedError } = await import("@reactive-resume/auth/beta-seats");
-			try {
-				await redeemBetaCode(context.user.id, context.user.email, input.code);
-			} catch (error) {
-				if (error instanceof BetaClosedError) throw new ORPCError("BAD_REQUEST", { message: error.message });
-				throw error;
-			}
+			const { applyReferral } = await import("@reactive-resume/auth/referrals");
+			const result = await applyReferral(context.user.id, input.code);
+			if (result === "applied") return;
+			throw new ORPCError("BAD_REQUEST", {
+				message:
+					result === "own"
+						? "That's your own code. Share it with a friend instead."
+						: result === "already"
+							? "You've already used a friend's code."
+							: "That code wasn't found. Check it and try again.",
+			});
 		}),
 	clearOwnKey: protectedProcedure
 		.route(route("DELETE", "/gemini-key", "scsClearOwnGeminiKey", "Stop using my own Gemini key"))

@@ -9,7 +9,7 @@ const SEAT_LOCK_KEY = 0x5c5_b3a7; // arbitrary constant: serialises every seat d
 
 export class BetaClosedError extends Error {
 	constructor(
-		public readonly reason: "full" | "invite",
+		public readonly reason: "full",
 		message: string,
 	) {
 		super(message);
@@ -28,14 +28,7 @@ const countedSeats = () =>
  * one transaction, so two simultaneous sign-ups can't both take the last seat. Enforced here on the server,
  * whatever the browser does.
  */
-export async function reserveBetaSeat(email: string, inviteCode: string | null | undefined): Promise<boolean> {
-	const code = inviteCode?.trim() ?? "";
-	if (env.SCS_BETA_INVITE_CODE) {
-		// Sign-up is open. No code means a standard account without a free seat; a wrong code is a typo to report.
-		if (!code) return false;
-		if (code !== env.SCS_BETA_INVITE_CODE) throw new BetaClosedError("invite", "That invite code isn't valid.");
-	}
-
+export async function reserveBetaSeat(email: string): Promise<void> {
 	const normalized = email.trim().toLowerCase();
 	await db.transaction(async (tx) => {
 		await tx.execute(sql`select pg_advisory_xact_lock(${SEAT_LOCK_KEY})`);
@@ -58,26 +51,6 @@ export async function reserveBetaSeat(email: string, inviteCode: string | null |
 		}
 		await tx.insert(scsBetaSeat).values({ email: normalized });
 	});
-	return true;
-}
-
-/** An existing standard account redeems an invite code for a free founding-beta seat. Idempotent. */
-export async function redeemBetaCode(userId: string, email: string, inviteCode: string): Promise<void> {
-	if (await hasFreeAccess(userId)) return;
-	if (!env.SCS_BETA_INVITE_CODE || !inviteCode.trim())
-		throw new BetaClosedError("invite", "That invite code isn't valid.");
-	await reserveBetaSeat(email, inviteCode);
-	await bindBetaSeat(email, userId);
-}
-
-/** Free AI access: a founding-beta seat, or an admin. Everyone else uses their own Gemini key. */
-export async function hasFreeAccess(userId: string): Promise<boolean> {
-	const [seat] = await db.select({ id: scsBetaSeat.id }).from(scsBetaSeat).where(eq(scsBetaSeat.userId, userId));
-	if (seat) return true;
-	const [row] = await db
-		.execute<{ role: string | null }>(sql`select role from "user" where id = ${userId}`)
-		.then((r) => r.rows as { role: string | null }[]);
-	return row?.role === "admin";
 }
 
 /** Bind the reserved seat to the created account. */

@@ -6,13 +6,12 @@ I could not do this from the build environment (no network path or credentials f
 2. **Render**: Dashboard -> New -> **Blueprint** -> pick this repo and branch. `render.yaml` creates the web service. When asked, fill:
    - `DATABASE_URL` = the Neon string
    - `GEMINI_API_KEY` = your AI Studio key
-   - `SCS_BETA_INVITE_CODE` = the free-access code you choose. Sign-up is open to everyone; people who enter this code get free AI (up to 50 seats), others get a standard account with résumé tools only and AI locked until pricing opens or they add their own Gemini key
    - `SMTP_*` = your mail provider (needed for email confirmation and password reset)
    - `GOOGLE_CLIENT_ID/SECRET` = optional, for "Continue with Google"
 3. First deploy builds the Docker image (several minutes) and applies migrations at startup. `APP_URL` is taken from Render's `RENDER_EXTERNAL_URL`; set `APP_URL` yourself if you add a custom domain.
 4. Google sign-in only: in Google Cloud add the redirect URI `https://<your-service>.onrender.com/api/auth/callback/google`.
-5. Open the site, sign up with the invite code, then run once against Neon: `DATABASE_URL=<neon string> pnpm scs:make-admin you@example.com`. Admin page: `/dashboard/admin`.
+5. Open the site, sign up, then run once against Neon: `DATABASE_URL=<neon string> pnpm scs:make-admin you@example.com`. Admin page: `/dashboard/admin`.
 6. Set `SCS_LIMIT_GLOBAL_AI_PER_DAY` to ~90% of the daily quota shown in AI Studio.
-7. Invite link: `https://<your-service>.onrender.com/auth/register?invite=CODE`.
+7. Share the site address. Anyone can sign up (first 50 seats). Each student gets their own friend code in Settings → Privacy: friends who join with it, and the student who shared it, get a bigger free AI allowance.
 
 Free Render sleeps after ~15 minutes idle (30 to 60 s first load) and its disk is wiped on redeploy. Move `plan` to `starter` before real students arrive.

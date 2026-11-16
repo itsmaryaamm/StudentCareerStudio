@@ -22,8 +22,6 @@ services:
         value: local # ephemeral on Render: profile pictures are lost on redeploy
       - key: GEMINI_API_KEY
         sync: false
-      - key: SCS_BETA_INVITE_CODE
-        sync: false
       - key: SCS_BETA_MAX_USERS
         value: "50"
       - key: SCS_LIMIT_GLOBAL_AI_PER_DAY # about 90% of your real Google daily quota

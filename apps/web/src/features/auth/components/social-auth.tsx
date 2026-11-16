@@ -29,11 +29,11 @@ type SocialAuthProps = {
 	signUp?: boolean;
 	/** The "or" rule above; off when there's no email form to separate from. */
 	rule?: boolean;
-	/** Founding-beta invite code; sent with the provider redirect so a new Google account can take a seat. */
-	inviteCode?: string;
+	/** A friend's code; sent with the provider redirect so a new Google account gets the bonus. */
+	friendCode?: string;
 };
 
-export function SocialAuth({ signUp = false, rule = true, inviteCode = "" }: SocialAuthProps) {
+export function SocialAuth({ signUp = false, rule = true, friendCode = "" }: SocialAuthProps) {
 	const { data: all = {}, isLoading } = useQuery(orpc.auth.providers.list.queryOptions());
 	const providers: Providers = signUp
 		? Object.fromEntries(Object.entries(all).filter(([key]) => key !== "passkey"))
@@ -47,15 +47,15 @@ export function SocialAuth({ signUp = false, rule = true, inviteCode = "" }: Soc
 			{isLoading ? (
 				<Skeleton className="h-11 w-full rounded-lg" />
 			) : (
-				<SocialAuthButtons providers={providers} inviteCode={inviteCode} />
+				<SocialAuthButtons providers={providers} friendCode={friendCode} />
 			)}
 		</div>
 	);
 }
 
-type SocialAuthButtonsProps = { providers: Providers; inviteCode: string };
+type SocialAuthButtonsProps = { providers: Providers; friendCode: string };
 
-function SocialAuthButtons({ providers, inviteCode }: SocialAuthButtonsProps) {
+function SocialAuthButtons({ providers, friendCode }: SocialAuthButtonsProps) {
 	const shown = offeredSocial(providers);
 	const router = useRouter();
 	const queryClient = useQueryClient();
@@ -135,7 +135,7 @@ function SocialAuthButtons({ providers, inviteCode }: SocialAuthButtonsProps) {
 								provider,
 								callbackURL: callbackURL ?? "/dashboard",
 								...getOAuthSignInOptions(callbackURL),
-								...(inviteCode.trim() ? { fetchOptions: { headers: { "x-beta-code": inviteCode.trim() } } } : {}),
+								...(friendCode.trim() ? { fetchOptions: { headers: { "x-referral-code": friendCode.trim() } } } : {}),
 							}),
 						)
 					}

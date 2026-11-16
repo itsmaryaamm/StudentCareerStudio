@@ -1,5 +1,5 @@
 // Browser end-to-end test of the five beta workflows, through the real UI.
-// Requires: server on :3001 (SCS_BETA_INVITE_CODE=beta-code-1), stand-in Gemini on :4010, Postgres, playwright.
+// Requires: server on :3001, stand-in Gemini on :4010, Postgres, playwright.
 const { chromium } = require("playwright");
 const fs = require("node:fs");
 const BASE = process.env.BASE || "http://localhost:3001";
@@ -39,15 +39,13 @@ const check = (name, ok, extra = "") => {
 	await page.getByLabel("Name", { exact: true }).fill(NAME);
 	await page.getByLabel("Email address").fill(EMAIL);
 	await page.locator('input[type="password"]').first().fill(PASSWORD);
-	await page.getByLabel("Invite code").fill("wrong-code");
-	await page.getByRole("button", { name: "Create account" }).click();
-	await page.waitForTimeout(1500);
-	check("W1 wrong invite code is rejected in the UI", /\/auth\/register/.test(page.url()));
-	await shot("w1-wrong-code");
-	await page.getByLabel("Invite code").fill("beta-code-1");
+	check(
+		"W1 sign-up needs no invite code and offers an optional friend code",
+		await page.getByLabel("Friend's code (optional)").isVisible(),
+	);
 	await page.getByRole("button", { name: "Create account" }).click();
 	await page.waitForURL(/\/dashboard/, { timeout: 15000 });
-	check("W1 sign-up with invite code lands on the dashboard", true);
+	check("W1 sign-up lands on the dashboard", true);
 	// First sign-in is a chat-only onboarding: name -> stage -> what they have -> contact -> guided steps -> dashboard.
 	await page.getByText("What should I call you?").waitFor();
 	check(

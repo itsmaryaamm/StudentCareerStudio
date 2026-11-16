@@ -1,7 +1,7 @@
 import { ORPCError } from "@orpc/client";
 import { and, eq, gte, inArray, ne, sql } from "drizzle-orm";
 import { db } from "@reactive-resume/db/client";
-import { scsAiUsage } from "@reactive-resume/db/schema";
+import { scsAiUsage, scsUserState } from "@reactive-resume/db/schema";
 import { env } from "@reactive-resume/env/server";
 
 export type UsageKind = "chat" | "linkedin" | "upload";
@@ -17,7 +17,32 @@ export const startOfUtcDay = (now = new Date()) =>
 	new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate()));
 export const startOfNextUtcDay = (now = new Date()) => new Date(startOfUtcDay(now).getTime() + 86_400_000);
 
-const limitFor = (kind: UsageKind) => (kind === "upload" ? env.SCS_LIMIT_UPLOADS_TOTAL : env.SCS_LIMIT_CHAT_PER_DAY);
+/**
+ * A student's allowance: the base limits, plus a bonus for joining with a friend's code, plus a bonus for each friend
+ * who joined with theirs (up to a cap, so nobody can farm unlimited messages from the shared key).
+ */
+export async function allowanceFor(runner: Pick<typeof db, "select">, userId: string) {
+	const [mine] = await runner
+		.select({ by: scsUserState.referredBy })
+		.from(scsUserState)
+		.where(eq(scsUserState.userId, userId));
+	const [friends] = await runner
+		.select({ n: sql<number>`count(*)::int` })
+		.from(scsUserState)
+		.where(eq(scsUserState.referredBy, userId));
+	const rewarded = Math.min(friends?.n ?? 0, env.SCS_REFERRAL_MAX_FRIENDS);
+	const joined = Boolean(mine?.by);
+	const chatBonus = (joined ? env.SCS_REFERRAL_FRIEND_CHAT : 0) + rewarded * env.SCS_REFERRAL_SHARER_CHAT;
+	const uploadBonus = (joined ? env.SCS_REFERRAL_FRIEND_UPLOADS : 0) + rewarded * env.SCS_REFERRAL_SHARER_UPLOADS;
+	return {
+		chat: env.SCS_LIMIT_CHAT_PER_DAY + chatBonus,
+		upload: env.SCS_LIMIT_UPLOADS_TOTAL + uploadBonus,
+		friends: friends?.n ?? 0,
+		joinedWithCode: joined,
+		chatBonus,
+		uploadBonus,
+	};
+}
 
 /** Refunded (`error`) calls don't count: a student isn't charged for our failures or Google's. */
 async function countUsed(runner: Pick<typeof db, "select">, userId: string, kind: UsageKind) {
@@ -42,10 +67,14 @@ export type UsageSummary = {
 };
 
 export async function usageSummary(userId: string): Promise<UsageSummary> {
-	const [chat, upload] = await Promise.all([countUsed(db, userId, "chat"), countUsed(db, userId, "upload")]);
+	const [chat, upload, allowance] = await Promise.all([
+		countUsed(db, userId, "chat"),
+		countUsed(db, userId, "upload"),
+		allowanceFor(db, userId),
+	]);
 	return {
-		chat: { used: chat, limit: env.SCS_LIMIT_CHAT_PER_DAY, resetsAt: startOfNextUtcDay().toISOString() },
-		upload: { used: upload, limit: env.SCS_LIMIT_UPLOADS_TOTAL, resetsAt: null },
+		chat: { used: chat, limit: allowance.chat, resetsAt: startOfNextUtcDay().toISOString() },
+		upload: { used: upload, limit: allowance.upload, resetsAt: null },
 	};
 }
 
@@ -59,7 +88,8 @@ export function reserveUsage(userId: string, kind: UsageKind): Promise<string> {
 		await tx.execute(sql`select pg_advisory_xact_lock(hashtext(${`scs-usage:${userId}`}))`);
 
 		const used = await countUsed(tx, userId, kind);
-		const limit = limitFor(kind);
+		const allowance = await allowanceFor(tx, userId);
+		const limit = kind === "upload" ? allowance.upload : allowance.chat;
 		if (used >= limit) {
 			const resets = kind === "upload" ? "" : ` Your allowance resets at ${startOfNextUtcDay().toUTCString()}.`;
 			throw new ORPCError("TOO_MANY_REQUESTS", {

@@ -233,8 +233,13 @@ export const env = createEnv({
 		SCS_GEMINI_MODEL: z.string().trim().min(1).optional(),
 		// Founding beta: maximum accounts (admins excluded). 0 closes sign-ups.
 		SCS_BETA_MAX_USERS: z.coerce.number().int().min(0).default(50),
-		// When set, sign-up requires this code (header `x-beta-code`), so strangers can't take the seats.
-		SCS_BETA_INVITE_CODE: z.string().trim().min(1).optional(),
+		// Friend codes: a student who joins with a friend's code, and the friend who shared it, both get a bigger allowance.
+		SCS_REFERRAL_FRIEND_CHAT: z.coerce.number().int().min(0).default(3),
+		SCS_REFERRAL_FRIEND_UPLOADS: z.coerce.number().int().min(0).default(2),
+		SCS_REFERRAL_SHARER_CHAT: z.coerce.number().int().min(0).default(2),
+		SCS_REFERRAL_SHARER_UPLOADS: z.coerce.number().int().min(0).default(1),
+		// The sharer is rewarded for at most this many friends.
+		SCS_REFERRAL_MAX_FRIENDS: z.coerce.number().int().min(0).default(5),
 		// Per user, per UTC day: chat replies and LinkedIn generations from Gemini.
 		SCS_LIMIT_CHAT_PER_DAY: z.coerce.number().int().min(0).default(7),
 		// Per user, lifetime: document or image analyses.

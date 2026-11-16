@@ -1,5 +1,5 @@
 // Server-side guarantees for the founding beta. Run against a server started with:
-//   SCS_BETA_MAX_USERS=4 SCS_BETA_INVITE_CODE=beta-code-1 SCS_LIMIT_CHAT_PER_DAY=10 SCS_LIMIT_UPLOADS_TOTAL=3
+//   SCS_BETA_MAX_USERS=4 SCS_LIMIT_CHAT_PER_DAY=10 SCS_LIMIT_UPLOADS_TOTAL=3
 //   GEMINI_API_KEY=fake SCS_GEMINI_BASE_URL=http://localhost:4010/v1beta  (stand-in Gemini: node tests/scs/fake-gemini.mjs)
 import { execFileSync } from "node:child_process";
 
@@ -31,13 +31,13 @@ async function http(method, path, { body, cookie, headers = {} } = {}) {
 	} catch {}
 	return { status: res.status, json, headers: res.headers };
 }
-async function signUp(tag, code = "beta-code-1") {
+async function signUp(tag, code = null) {
 	const res = await fetch(`${BASE}/api/auth/sign-up/email`, {
 		method: "POST",
 		headers: {
 			"content-type": "application/json",
 			origin: process.env.ORIGIN ?? BASE,
-			...(code ? { "x-beta-code": code } : {}),
+			...(code ? { "x-referral-code": code } : {}),
 		},
 		body: JSON.stringify({
 			name: `Student ${tag}`,
@@ -66,19 +66,12 @@ const u = (n) => `s${run}${n}`;
 const beta0 = await http("GET", "/scs/beta");
 check(
 	"beta info is public and reports the cap",
-	beta0.status === 200 && beta0.json.maxSeats === 4 && beta0.json.inviteRequired === true,
+	beta0.status === 200 && beta0.json.maxSeats === 4,
 	JSON.stringify(beta0),
 );
-const X0 = await signUp(u("x0"), null);
-check("sign-up WITHOUT invite code is allowed (standard account, no seat)", X0.status === 200, JSON.stringify(X0.json));
-check(
-	"a standard account holds no founding seat",
-	Number(psql(`select count(*) from scs_beta_seat where user_id='${X0.id}'`)) === 0,
-);
-check("sign-up with WRONG invite code is refused", (await signUp(u("x1"), "nope")).status === 403);
 const A = await signUp(u("a"));
 const B = await signUp(u("b"));
-check("sign-up with invite code works (A,B)", A.status === 200 && B.status === 200, JSON.stringify([A.json, B.json]));
+check("sign-up works (A,B)", A.status === 200 && B.status === 200, JSON.stringify([A.json, B.json]));
 // Two seats left; 6 people race for them. Exactly two may win.
 const race = await Promise.all([1, 2, 3, 4, 5, 6].map((n) => signUp(u(`r${n}`))));
 const won = race.filter((r) => r.status === 200);
@@ -416,8 +409,8 @@ const stats = await http("GET", "/scs/admin/stats", { cookie: adm.cookie });
 check(
 	"admin sees stats (users, résumés, AI, errors, feedback)",
 	stats.status === 200 &&
-		stats.json.registeredUsers === 4 &&
-		stats.json.allAccounts === 5 &&
+		stats.json.registeredUsers === 3 &&
+		stats.json.allAccounts === 4 &&
 		stats.json.totalResumes >= 1 &&
 		stats.json.aiTotal >= 10 &&
 		stats.json.aiErrors24h >= 3 &&
@@ -475,29 +468,39 @@ check(
 check("A's résumé is gone", Number(psql(`select count(*) from resume where user_id='${A.id}'`)) === 0);
 check("A can no longer sign in", (await signIn(u("a"))).status !== 200);
 check("deleting A freed a seat", (await http("GET", "/scs/beta")).json.seatsLeft === beforeSeats + 1);
-await http("POST", "/scs/consent", { cookie: X0.cookie });
-r = await http("POST", "/scs/chat/send", { cookie: X0.cookie, body: { message: "hello" } });
+// ---------- Friend codes ----------
+await http("POST", "/scs/consent", { cookie: B.cookie });
+const bState = await http("GET", "/scs/state", { cookie: B.cookie });
+const bCode = bState.json?.referral?.code;
+check("every student has a friend code", /^[A-Z2-9]{8}$/.test(bCode ?? ""), JSON.stringify(bState.json?.referral));
+const friend = await signUp(u("late"), bCode.toLowerCase());
+check("sign-up with a friend's code works (any case)", friend.status === 200, JSON.stringify(friend.json));
+let fu = await http("GET", "/scs/usage", { cookie: friend.cookie });
 check(
-	"standard account: free AI is refused (ACCESS_REQUIRED) and nothing is used",
-	r.status === 403 &&
-		JSON.stringify(r.json).includes("ACCESS_REQUIRED") &&
-		Number(psql(`select count(*) from scs_ai_usage where user_id='${X0.id}'`)) === 0,
-	JSON.stringify(r),
+	"the friend gets a bigger allowance (10 + 3 messages, 3 + 2 uploads)",
+	fu.json?.chat?.limit === 13 && fu.json?.upload?.limit === 5,
+	JSON.stringify(fu.json),
+);
+let bu = await http("GET", "/scs/usage", { cookie: B.cookie });
+check(
+	"the sharer gets a bonus too (10 + 2 messages, 3 + 1 uploads)",
+	bu.json?.chat?.limit === 12 && bu.json?.upload?.limit === 4,
+	JSON.stringify(bu.json),
 );
 check(
-	"standard account: state says no free access",
-	(await http("GET", "/scs/state", { cookie: X0.cookie })).json.freeAccess === false,
+	"the sharer sees 1 friend joined",
+	(await http("GET", "/scs/state", { cookie: B.cookie })).json.referral.friends === 1,
 );
-r = await http("PUT", "/scs/access/code", { cookie: X0.cookie, body: { code: "nope" } });
-check("redeem: wrong code refused", r.status === 400, JSON.stringify(r));
-r = await http("PUT", "/scs/access/code", { cookie: X0.cookie, body: { code: "beta-code-1" } });
-check("redeem: right code takes the freed seat", r.status === 200, JSON.stringify(r));
+r = await http("PUT", "/scs/referral", { cookie: B.cookie, body: { code: bCode } });
+check("using your own code is refused", r.status === 400, JSON.stringify(r));
+r = await http("PUT", "/scs/referral", { cookie: friend.cookie, body: { code: bCode } });
+check("a friend can't use a code twice", r.status === 400, JSON.stringify(r));
+r = await http("PUT", "/scs/referral", { cookie: B.cookie, body: { code: "ZZZZZZZZ" } });
+check("an unknown code is refused", r.status === 400, JSON.stringify(r));
 check(
-	"redeem: free access is now on",
-	(await http("GET", "/scs/state", { cookie: X0.cookie })).json.freeAccess === true,
+	"a friend code gets the friend no quota used",
+	Number(psql(`select count(*) from scs_ai_usage where user_id='${friend.id}'`)) === 0,
 );
-r = await http("POST", "/scs/chat/send", { cookie: X0.cookie, body: { message: "hello again" } });
-check("redeem: AI now works", r.status === 200, JSON.stringify(r));
 console.log(`\n${pass.length} passed, ${fail.length} failed`);
 if (fail.length) {
 	console.log("FAILED:", fail);

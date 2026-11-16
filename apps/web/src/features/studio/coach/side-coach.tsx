@@ -13,7 +13,8 @@ export function SideCoach({ children }: { children: React.ReactNode }) {
 	const [open, setOpen] = useState(true);
 	const { pathname } = useLocation();
 	// The full-page chat already is the coach.
-	if (pathname.startsWith("/dashboard/chat")) return <>{children}</>;
+	// Settings pages need the width, and the full-page chat already is the coach.
+	if (pathname.startsWith("/dashboard/chat") || pathname.startsWith("/dashboard/settings")) return <>{children}</>;
 
 	return (
 		<>

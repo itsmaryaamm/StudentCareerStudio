@@ -28,15 +28,6 @@ export async function ownGeminiKey(userId: string): Promise<string | null> {
  */
 export async function leaseGemini(userId: string, kind: UsageKind) {
 	const apiKey = await ownGeminiKey(userId);
-	if (!apiKey) {
-		const { hasFreeAccess } = await import("@reactive-resume/auth/beta-seats");
-		if (!(await hasFreeAccess(userId)))
-			throw new ORPCError("FORBIDDEN", {
-				message:
-					"Free AI is for founding-beta members. Enter an invite code, or add your own free Gemini key in Settings → Privacy.",
-				data: { code: "ACCESS_REQUIRED" },
-			});
-	}
 	const id = apiKey ? null : await reserveUsage(userId, kind);
 	return {
 		apiKey: apiKey ?? undefined,

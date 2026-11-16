@@ -54,6 +54,7 @@ import {
 	isUsernameReserved,
 } from "./oauth-profile";
 import { authRateLimitStorage } from "./rate-limit";
+import { applyReferral } from "./referrals";
 import { getTrustedOrigins } from "./trusted-origins";
 
 /** Better Auth's verification tokens carry `updateTo` when they move the account to a new address. */
@@ -848,13 +849,7 @@ const getAuthConfig = () => {
 						// Founding beta: a seat is reserved server-side before the account exists, so the cap holds
 						// for e-mail, OAuth and any direct API call alike.
 						try {
-							// E-mail sign-up sends the code as a header; a Google (OAuth) sign-up carries it in signed state.
-							const oauthInvite = context ? await getOAuthState().catch(() => null) : null;
-							const stateCode = oauthInvite?.serverContext?.betaCode;
-							await reserveBetaSeat(
-								user.email,
-								context?.headers?.get("x-beta-code") ?? (typeof stateCode === "string" ? stateCode : undefined),
-							);
+							await reserveBetaSeat(user.email);
 						} catch (error) {
 							if (error instanceof BetaClosedError)
 								throw new APIError("FORBIDDEN", { message: error.message, code: `BETA_${error.reason.toUpperCase()}` });
@@ -879,8 +874,13 @@ const getAuthConfig = () => {
 						const username = `guest-${generateId().slice(-12)}`;
 						return { data: { ...data, username, displayUsername: username } };
 					},
-					after: async (user) => {
+					after: async (user, context) => {
 						await bindBetaSeat(user.email, user.id);
+						// A friend's code: e-mail sign-up sends it as a header, Google sign-up carries it in signed state.
+						// A wrong code never blocks the sign-up; the student can enter it again in Settings.
+						const oauthState = context ? await getOAuthState().catch(() => null) : null;
+						const code = context?.headers?.get("x-referral-code") ?? oauthState?.serverContext?.referralCode;
+						if (code) await applyReferral(user.id, code).catch(() => undefined);
 					},
 				},
 			},
@@ -932,12 +932,12 @@ const getAuthConfig = () => {
 					// Keep the device timezone across the provider redirect in server-only state, so the
 					// callback can start a new account there without trusting redirect parameters.
 					const locale = requestLocale(ctx.headers);
-					const betaCode = ctx.headers?.get("x-beta-code")?.trim().slice(0, 64);
-					if (timezone.success || locale || betaCode)
+					const referralCode = ctx.headers?.get("x-referral-code")?.trim().slice(0, 32);
+					if (timezone.success || locale || referralCode)
 						await addOAuthServerContext({
 							...(timezone.success ? { timezone: timezone.data } : {}),
 							...(locale ? { locale } : {}),
-							...(betaCode ? { betaCode } : {}),
+							...(referralCode ? { referralCode } : {}),
 						});
 				}
 

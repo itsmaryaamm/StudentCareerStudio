@@ -15,7 +15,7 @@ import {
 } from "@reactive-resume/db/schema";
 import { env } from "@reactive-resume/env/server";
 import { isGeminiConfigured } from "./gemini";
-import { startOfUtcDay, usageSummary } from "./limits";
+import { allowanceFor, startOfUtcDay, usageSummary } from "./limits";
 
 export const accountService = {
 	async state(userId: string) {
@@ -26,7 +26,22 @@ export const accountService = {
 			.where(and(eq(scsCareerFact.userId, userId), eq(scsCareerFact.status, "approved")));
 		const [resumes] = await db.select({ n: count() }).from(resume).where(eq(resume.userId, userId));
 		const [account] = await db.select({ role: user.role }).from(user).where(eq(user.id, userId));
+		const { ensureReferralCode } = await import("@reactive-resume/auth/referrals");
+		const referralCode = await ensureReferralCode(userId);
+		const allowance = await allowanceFor(db, userId);
 		return {
+			referral: {
+				code: referralCode,
+				friends: allowance.friends,
+				maxFriends: env.SCS_REFERRAL_MAX_FRIENDS,
+				joinedWithCode: allowance.joinedWithCode,
+				chatBonus: allowance.chatBonus,
+				uploadBonus: allowance.uploadBonus,
+				perFriendChat: env.SCS_REFERRAL_SHARER_CHAT,
+				perFriendUploads: env.SCS_REFERRAL_SHARER_UPLOADS,
+				forFriendChat: env.SCS_REFERRAL_FRIEND_CHAT,
+				forFriendUploads: env.SCS_REFERRAL_FRIEND_UPLOADS,
+			},
 			isAdmin: account?.role === "admin",
 			aiConsentAt: row?.aiConsentAt?.toISOString() ?? null,
 			privacyAckAt: row?.privacyAckAt?.toISOString() ?? null,
@@ -39,7 +54,6 @@ export const accountService = {
 			resumeCount: resumes?.n ?? 0,
 			usage: await usageSummary(userId),
 			ownKeyPreview: row?.ownGeminiKeyPreview ?? null,
-			freeAccess: await (await import("@reactive-resume/auth/beta-seats")).hasFreeAccess(userId),
 			aiAvailable: isGeminiConfigured() || Boolean(row?.ownGeminiKeyEnc),
 		};
 	},
@@ -153,7 +167,6 @@ export async function betaInfo() {
 	return {
 		maxSeats: env.SCS_BETA_MAX_USERS,
 		seatsLeft: Math.max(0, env.SCS_BETA_MAX_USERS - taken),
-		inviteRequired: Boolean(env.SCS_BETA_INVITE_CODE),
 	};
 }
 

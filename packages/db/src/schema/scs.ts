@@ -45,6 +45,9 @@ export const scsUserState = pg.pgTable("scs_user_state", {
 	onboardingStep: pg.text("onboarding_step"),
 	intake: pg.jsonb("intake").$type<ScsIntake>(),
 	/** Optional: the student's own Gemini key, sealed with the server's encryption secret. Never returned or exported. */
+	/** This student's own shareable friend code, and who (if anyone) shared theirs with them. */
+	referralCode: pg.text("referral_code").unique(),
+	referredBy: pg.text("referred_by").references(() => user.id, { onDelete: "set null" }),
 	ownGeminiKeyEnc: pg.text("own_gemini_key_enc"),
 	ownGeminiKeyPreview: pg.text("own_gemini_key_preview"),
 	createdAt: pg.timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
