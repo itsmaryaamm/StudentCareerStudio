@@ -120,9 +120,22 @@ export function UsageCard({ className }: { className?: string }) {
 				<Skeleton className="mt-2 h-10 w-full" />
 			) : (
 				<div className="mt-2 grid gap-2">
-					<Meter used={data.usage.chat.used} limit={data.usage.chat.limit} label="AI messages today" />
-					<Meter used={data.usage.upload.used} limit={data.usage.upload.limit} label="Document analyses" />
-					<p className="text-xs text-ink-3">Daily messages reset at midnight UTC.</p>
+					{data.ownKeyPreview ? (
+						<p className="text-[13px]">Using your own Gemini key: no daily limit from us.</p>
+					) : (
+						<Meter used={data.usage.chat.used} limit={data.usage.chat.limit} label="AI messages today" />
+					)}
+					{!data.ownKeyPreview && (
+						<>
+							<Meter used={data.usage.upload.used} limit={data.usage.upload.limit} label="Document analyses" />
+							<p className="text-xs text-ink-3">
+								Daily messages reset at midnight UTC.{" "}
+								<a href="/dashboard/settings/privacy" className="text-accent-text underline">
+									Use your own Gemini key
+								</a>
+							</p>
+						</>
+					)}
 				</div>
 			)}
 		</section>

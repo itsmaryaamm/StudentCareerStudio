@@ -22,12 +22,24 @@ export class GeminiFailure extends Error {
 	}
 }
 
-function toFailure(error: unknown): GeminiFailure {
+function toFailure(error: unknown, ownKey = false): GeminiFailure {
 	if (error instanceof GeminiFailure) return error;
 	// The SDK retries once and then wraps the last provider error; classify that underlying error.
-	if (RetryError.isInstance(error)) return toFailure(error.lastError);
+	if (RetryError.isInstance(error)) return toFailure(error.lastError, ownKey);
 	if (APICallError.isInstance(error)) {
 		const status = error.statusCode;
+		if (ownKey && (status === 400 || status === 401 || status === 403)) {
+			return new GeminiFailure(
+				`gemini_${status}_own_key`,
+				"Google rejected your own Gemini key. Check it in Settings → Privacy, or remove it to use the shared coach.",
+			);
+		}
+		if (ownKey && status === 429) {
+			return new GeminiFailure(
+				"gemini_429_own_key",
+				"Your own Gemini key has hit Google's limit. Try again in a minute, or remove it to use the shared coach.",
+			);
+		}
 		if (status === 429) {
 			return new GeminiFailure(
 				"gemini_429_quota",
@@ -88,8 +100,11 @@ export async function geminiJson<T>(input: {
 	messages: ModelMessage[];
 	schema: z.ZodType<T>;
 	signal?: AbortSignal;
+	/** The student's own key. When given, the shared key and the shared limits are not used. */
+	apiKey?: string | undefined;
 }): Promise<{ data: T; model: string; latencyMs: number }> {
-	if (!env.GEMINI_API_KEY) {
+	const apiKey = input.apiKey ?? env.GEMINI_API_KEY;
+	if (!apiKey) {
 		throw new GeminiFailure(
 			"gemini_not_configured",
 			"The AI coach isn't switched on yet. Nothing was used from your allowance.",
@@ -97,7 +112,7 @@ export async function geminiJson<T>(input: {
 	}
 	const modelName = geminiModelName();
 	const google = createGoogleGenerativeAI({
-		apiKey: env.GEMINI_API_KEY,
+		apiKey,
 		...(env.SCS_GEMINI_BASE_URL ? { baseURL: env.SCS_GEMINI_BASE_URL } : {}),
 	});
 	const started = Date.now();
@@ -119,7 +134,7 @@ export async function geminiJson<T>(input: {
 			);
 		return { data: parsed.data, model: modelName, latencyMs: Date.now() - started };
 	} catch (error) {
-		const failure = toFailure(error);
+		const failure = toFailure(error, Boolean(input.apiKey));
 		// Reason code only: never the prompt, the reply, or the provider's message (which can echo input).
 		console.error(`[scs] gemini failure: ${failure.reason}`);
 		throw failure;

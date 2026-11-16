@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { protectedProcedure, publicProcedure } from "../../context";
 import { accountService, adminService, betaInfo, requireAdmin } from "./account";
+import { byokService } from "./byok";
 import { chatService, MAX_MESSAGE_CHARS } from "./chat";
 import { factsService } from "./facts";
 import { linkedinService } from "./linkedin";
@@ -72,6 +73,13 @@ export const scsRouter = {
 			}),
 		)
 		.handler(({ context, input }) => accountService.saveIntake(context.user.id, input)),
+	setOwnKey: protectedProcedure
+		.route(route("PUT", "/gemini-key", "scsSetOwnGeminiKey", "Use my own Gemini API key"))
+		.input(z.strictObject({ apiKey: z.string().min(1).max(200) }))
+		.handler(({ context, input }) => byokService.set(context.user.id, input.apiKey)),
+	clearOwnKey: protectedProcedure
+		.route(route("DELETE", "/gemini-key", "scsClearOwnGeminiKey", "Stop using my own Gemini key"))
+		.handler(({ context }) => byokService.clear(context.user.id)),
 	exportData: protectedProcedure
 		.route(route("GET", "/export", "scsExportData", "Download all my data"))
 		.handler(({ context }) => accountService.exportData(context.user.id)),

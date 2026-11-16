@@ -38,7 +38,8 @@ export const accountService = {
 			approvedFacts: facts?.n ?? 0,
 			resumeCount: resumes?.n ?? 0,
 			usage: await usageSummary(userId),
-			aiAvailable: isGeminiConfigured(),
+			ownKeyPreview: row?.ownGeminiKeyPreview ?? null,
+			aiAvailable: isGeminiConfigured() || Boolean(row?.ownGeminiKeyEnc),
 		};
 	},
 
@@ -108,7 +109,8 @@ export const accountService = {
 			.where(eq(resume.userId, userId));
 		return {
 			exportedAt: new Date().toISOString(),
-			state: state[0] ?? null,
+			// The sealed key never leaves the server, not even in the student's own download.
+			state: state[0] ? { ...state[0], ownGeminiKeyEnc: undefined } : null,
 			careerProfile: facts,
 			chatThreads: threads,
 			chatMessages: messages,

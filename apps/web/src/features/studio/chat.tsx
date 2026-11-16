@@ -81,8 +81,9 @@ function ChatBody({ compact = false }: { compact?: boolean }) {
 			id ? queryClient.invalidateQueries({ queryKey: orpc.scs.chat.messages.key({ input: { id } }) }) : undefined,
 		]);
 
-	const chatLeft = state ? state.usage.chat.limit - state.usage.chat.used : 0;
-	const uploadsLeft = state ? state.usage.upload.limit - state.usage.upload.used : 0;
+	const ownKey = Boolean(state?.ownKeyPreview);
+	const chatLeft = state ? (ownKey ? 999 : state.usage.chat.limit - state.usage.chat.used) : 0;
+	const uploadsLeft = state ? (ownKey ? 999 : state.usage.upload.limit - state.usage.upload.used) : 0;
 	const busy = send.isPending || analyze.isPending;
 	const messages: Msg[] = (history.data ?? []).map((m) => ({ id: m.id, role: m.role, content: m.content }));
 
@@ -177,7 +178,11 @@ function ChatBody({ compact = false }: { compact?: boolean }) {
 						))}
 					</select>
 					<span className="ms-auto text-xs text-ink-3" aria-live="polite">
-						{state ? `${Math.max(0, chatLeft)} of ${state.usage.chat.limit} messages left today` : ""}
+						{state
+							? ownKey
+								? "Using your own key"
+								: `${Math.max(0, chatLeft)} of ${state.usage.chat.limit} messages left today`
+							: ""}
 					</span>
 				</div>
 
@@ -233,6 +238,15 @@ function ChatBody({ compact = false }: { compact?: boolean }) {
 				{sendError != null && (
 					<Alert variant={isQuotaError(sendError) ? "warn" : "error"} className="mx-3 mb-2 w-auto">
 						<p>{studioErrorText(sendError)}</p>
+						{isQuotaError(sendError) && (
+							<p className="text-xs">
+								Out of messages?{" "}
+								<a href="/dashboard/settings/privacy" className="underline">
+									Add your own free Gemini key
+								</a>{" "}
+								for no daily limit.
+							</p>
+						)}
 						{!isQuotaError(sendError) && draft && (
 							<p className="text-xs">Your message is still in the box — press Send to retry.</p>
 						)}

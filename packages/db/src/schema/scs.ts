@@ -44,6 +44,9 @@ export const scsUserState = pg.pgTable("scs_user_state", {
 	preferredName: pg.text("preferred_name"),
 	onboardingStep: pg.text("onboarding_step"),
 	intake: pg.jsonb("intake").$type<ScsIntake>(),
+	/** Optional: the student's own Gemini key, sealed with the server's encryption secret. Never returned or exported. */
+	ownGeminiKeyEnc: pg.text("own_gemini_key_enc"),
+	ownGeminiKeyPreview: pg.text("own_gemini_key_preview"),
 	createdAt: pg.timestamp("created_at", { withTimezone: true }).notNull().defaultNow(),
 });
 

@@ -6,9 +6,9 @@ import { z } from "zod";
 import { db } from "@reactive-resume/db/client";
 import { scsChatMessage, scsChatThread, scsUserState } from "@reactive-resume/db/schema";
 import { env } from "@reactive-resume/env/server";
+import { leaseGemini } from "./byok";
 import { factsService } from "./facts";
 import { GeminiFailure, geminiErrorToOrpc, geminiJson } from "./gemini";
-import { commitUsage, refundUsage, reserveUsage } from "./limits";
 import { proposedFactSchema } from "./schemas";
 
 const HISTORY_MESSAGES = 10; // conversation context sent with each turn
@@ -101,7 +101,7 @@ export const chatService = {
 			throw new ORPCError("BAD_REQUEST", { message: `Keep messages under ${MAX_MESSAGE_CHARS} characters.` });
 
 		const thread = input.threadId ? await ownedThread(userId, input.threadId) : null;
-		const usageId = await reserveUsage(userId, "chat");
+		const lease = await leaseGemini(userId, "chat");
 
 		try {
 			const history = thread
@@ -130,11 +130,12 @@ export const chatService = {
 				{ role: "user", content: message },
 			];
 			const result = await geminiJson({
+				apiKey: lease.apiKey,
 				system: `${SYSTEM}${extra}\n\n${profileContext(approved)}`,
 				messages,
 				schema: replySchema,
 			});
-			await commitUsage(usageId, result.model, result.latencyMs);
+			await lease.commit(result.model, result.latencyMs);
 
 			const created = thread
 				? null
@@ -158,7 +159,7 @@ export const chatService = {
 				error instanceof GeminiFailure
 					? error
 					: new GeminiFailure("internal_error", "Something went wrong. Nothing was used from your allowance.");
-			await refundUsage(usageId, failure.reason);
+			await lease.refund(failure.reason);
 			if (!(error instanceof GeminiFailure))
 				console.error("[scs] chat failure", error instanceof Error ? error.name : "unknown");
 			throw geminiErrorToOrpc(failure);

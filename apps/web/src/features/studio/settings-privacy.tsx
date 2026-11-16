@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button } from "@reactive-resume/ui/components/button";
 import { toast } from "@reactive-resume/ui/components/toast";
 import { FeedbackButton } from "./feedback";
+import { OwnKeyCard } from "./own-key";
 import { ErrorBlock, LoadingBlock, studioErrorText, UsageCard, useStudioState } from "./shared";
 import { client, orpc } from "@/libs/orpc/client";
 
@@ -74,6 +75,7 @@ export function PrivacySettings() {
 					</Link>
 				</p>
 			</section>
+			<OwnKeyCard />
 			<section aria-labelledby="my-data" className="rounded-xl border border-line bg-raised p-4">
 				<h2 id="my-data" className="text-base font-semibold">
 					Your data

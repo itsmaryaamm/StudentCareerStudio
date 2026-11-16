@@ -3,10 +3,10 @@ import { z } from "zod";
 import { db } from "@reactive-resume/db/client";
 import { scsChatMessage } from "@reactive-resume/db/schema";
 import { env } from "@reactive-resume/env/server";
+import { leaseGemini } from "./byok";
 import { requireConsent } from "./chat";
 import { factsService } from "./facts";
 import { GeminiFailure, geminiErrorToOrpc, geminiJson } from "./gemini";
-import { commitUsage, refundUsage, reserveUsage } from "./limits";
 import { proposedFactSchema } from "./schemas";
 
 const ALLOWED = {
@@ -54,9 +54,10 @@ export const uploadService = {
 		if (!check(bytes))
 			throw new ORPCError("BAD_REQUEST", { message: "That file doesn't look like a valid PDF or image." });
 
-		const usageId = await reserveUsage(userId, "upload");
+		const lease = await leaseGemini(userId, "upload");
 		try {
 			const result = await geminiJson({
+				apiKey: lease.apiKey,
 				system: SYSTEM,
 				schema: resultSchema,
 				messages: [
@@ -69,7 +70,7 @@ export const uploadService = {
 					},
 				],
 			});
-			await commitUsage(usageId, result.model, result.latencyMs);
+			await lease.commit(result.model, result.latencyMs);
 			const proposed = await factsService.propose(userId, result.data.facts, "upload");
 			if (input.threadId) {
 				// Only if the thread is the caller's; otherwise skip silently rather than leak existence.
@@ -89,7 +90,7 @@ export const uploadService = {
 				error instanceof GeminiFailure
 					? error
 					: new GeminiFailure("internal_error", "Something went wrong. Nothing was used from your allowance.");
-			await refundUsage(usageId, failure.reason);
+			await lease.refund(failure.reason);
 			throw geminiErrorToOrpc(failure);
 		}
 	},

@@ -238,6 +238,50 @@ check(
 	Number(psql(`select count(*) from scs_ai_usage where user_id='${A.id}' and status<>'error'`)) === 10,
 );
 
+// ---------- 6b. Student's own Gemini key ----------
+const OWN = "AIzaSyOwnKeyForTests_0123456789abcdef";
+r = await http("PUT", "/scs/gemini-key", { cookie: A.cookie, body: { apiKey: "short" } });
+check("own key: obviously malformed key refused", r.status === 400, JSON.stringify(r));
+r = await http("PUT", "/scs/gemini-key", {
+	cookie: A.cookie,
+	body: { apiKey: "badkey_rejected_by_google_0123456789" },
+});
+check(
+	"own key: a key Google rejects is not saved",
+	r.status === 400 && (await http("GET", "/scs/state", { cookie: A.cookie })).json.ownKeyPreview === null,
+	JSON.stringify(r),
+);
+r = await http("PUT", "/scs/gemini-key", { cookie: A.cookie, body: { apiKey: OWN } });
+check(
+	"own key: valid key saved, only a preview comes back",
+	r.status === 200 && !JSON.stringify(r.json).includes(OWN) && r.json.preview?.startsWith("AIza"),
+	JSON.stringify(r),
+);
+check(
+	"own key: stored sealed, never as plaintext",
+	!psql(`select own_gemini_key_enc from scs_user_state where user_id='${A.id}'`).includes("AIza") &&
+		psql(`select own_gemini_key_enc from scs_user_state where user_id='${A.id}'`).startsWith("v1."),
+);
+r = await http("POST", "/scs/chat/send", { cookie: A.cookie, body: { threadId, message: "own key message" } });
+check("own key: chat works after the shared daily limit is used up", r.status === 200, JSON.stringify(r));
+const seenOwn = await (await fetch("http://localhost:4010/__seen")).json();
+check(
+	"own key: the call really was made with the student's key",
+	seenOwn.at(-1)?.last?.includes("own key message") && seenOwn.at(-1)?.key === OWN.slice(0, 12),
+);
+check(
+	"own key: that call used none of the shared allowance",
+	Number(psql(`select count(*) from scs_ai_usage where user_id='${A.id}' and status<>'error'`)) === 10,
+);
+r = await http("GET", "/scs/export", { cookie: A.cookie });
+check(
+	"own key: the data download never includes the key",
+	r.status === 200 && !JSON.stringify(r.json).includes(OWN) && !JSON.stringify(r.json).includes("v1."),
+);
+r = await http("DELETE", "/scs/gemini-key", { cookie: A.cookie });
+r = await http("POST", "/scs/chat/send", { cookie: A.cookie, body: { threadId, message: "after removing the key" } });
+check("own key: removing it returns to the shared limit (429)", r.status === 429, JSON.stringify(r));
+
 // ---------- 7. Uploads (3 per user) ----------
 const pdf = Buffer.from("%PDF-1.4\n1 0 obj<<>>endobj\ntrailer<<>>\n%%EOF").toString("base64");
 const up = (body, c = B.cookie) => http("POST", "/scs/chat/analyze", { cookie: c, body });

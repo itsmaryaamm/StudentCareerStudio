@@ -39,6 +39,15 @@ export function PrivacyNotice() {
 				</p>
 			</section>
 			<section>
+				<h2 className="text-lg font-semibold text-ink">Optional: your own Gemini key for the coach</h2>
+				<p>
+					In Settings → Privacy you can paste your own Google Gemini key. The coach, LinkedIn suggestions and document
+					reading then run on your key, with no daily limit from us, and your messages are processed under your Google
+					account's terms instead of ours. We store the key encrypted, never show it again, never include it in your
+					download, and delete it when you remove it or delete your account.
+				</p>
+			</section>
+			<section>
 				<h2 className="text-lg font-semibold text-ink">Optional editor AI (your own key)</h2>
 				<p>
 					The résumé editor has optional "Assistant" and "Improve" buttons that only work if you connect an AI provider

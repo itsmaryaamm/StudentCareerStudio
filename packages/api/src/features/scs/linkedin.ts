@@ -4,10 +4,10 @@ import { and, eq } from "drizzle-orm";
 import { z } from "zod";
 import { db } from "@reactive-resume/db/client";
 import { scsLinkedinDraft } from "@reactive-resume/db/schema";
+import { leaseGemini } from "./byok";
 import { profileContext, requireConsent } from "./chat";
 import { factsService } from "./facts";
 import { GeminiFailure, geminiErrorToOrpc, geminiJson } from "./gemini";
-import { commitUsage, refundUsage, reserveUsage } from "./limits";
 
 const GUIDE: Record<LinkedinSection, { limit: number; brief: string }> = {
 	headline: {
@@ -70,11 +70,12 @@ export const linkedinService = {
 			});
 
 		const guide = GUIDE[input.section];
-		const usageId = await reserveUsage(userId, "linkedin");
+		const lease = await leaseGemini(userId, "linkedin");
 		try {
 			const numbered = `<student_profile>\n${approved.map((f, i) => `${i + 1}. [${f.category}] ${f.text}`).join("\n")}\n</student_profile>`;
 			const instruction = input.instruction?.trim().slice(0, 200);
 			const result = await geminiJson({
+				apiKey: lease.apiKey,
 				system: SYSTEM,
 				schema: outSchema,
 				messages: [
@@ -84,7 +85,7 @@ export const linkedinService = {
 					},
 				],
 			});
-			await commitUsage(usageId, result.model, result.latencyMs);
+			await lease.commit(result.model, result.latencyMs);
 			return {
 				section: input.section,
 				suggestions: result.data.suggestions.map((s) => ({
@@ -99,7 +100,7 @@ export const linkedinService = {
 				error instanceof GeminiFailure
 					? error
 					: new GeminiFailure("internal_error", "Something went wrong. Nothing was used from your allowance.");
-			await refundUsage(usageId, failure.reason);
+			await lease.refund(failure.reason);
 			throw geminiErrorToOrpc(failure);
 		}
 	},

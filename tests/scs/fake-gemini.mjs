@@ -4,6 +4,12 @@ import http from "node:http";
 
 const seen = []; // last request bodies, for assertions
 const server = http.createServer(async (req, res) => {
+	if (req.method === "GET" && req.url?.startsWith("/v1beta/models")) {
+		// Key check used when a student saves their own key: "badkey…" is rejected, anything else accepted.
+		const key = req.headers["x-goog-api-key"] ?? "";
+		res.statusCode = String(key).startsWith("badkey") ? 400 : 200;
+		return res.end(JSON.stringify({ models: [] }));
+	}
 	if (req.url === "/__seen") return res.end(JSON.stringify(seen.slice(-20)));
 	let body = "";
 	for await (const c of req) body += c;
@@ -13,6 +19,7 @@ const server = http.createServer(async (req, res) => {
 	const hasFile = parts.some((p) => p.inlineData || p.fileData);
 	const last = texts.at(-1) ?? "";
 	seen.push({
+		key: String(req.headers["x-goog-api-key"] ?? "").slice(0, 12),
 		turns: (json.contents ?? []).length,
 		system: JSON.stringify(json.systemInstruction ?? "").slice(0, 4000),
 		last: last.slice(0, 300),
