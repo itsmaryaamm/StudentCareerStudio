@@ -54,9 +54,19 @@ export const sendEmail = async ({ to, subject, react, text }: SendEmailOptions) 
 
 	try {
 		await transport.sendMail(payload);
-	} catch {
-		// SMTP errors can contain credentials or authentication links.
-		console.error("There was an error sending mail.");
+	} catch (error) {
+		// SMTP errors can contain credentials or authentication links, so only the failure's code and the server's
+		// one-line reply are logged, never the message, the address or the key.
+		const { code, responseCode, response } = (error ?? {}) as {
+			code?: unknown;
+			responseCode?: unknown;
+			response?: unknown;
+		};
+		console.error("There was an error sending mail.", {
+			code: typeof code === "string" ? code : undefined,
+			responseCode: typeof responseCode === "number" ? responseCode : undefined,
+			response: typeof response === "string" ? response.split("\n")[0]?.slice(0, 200) : undefined,
+		});
 	}
 };
 
