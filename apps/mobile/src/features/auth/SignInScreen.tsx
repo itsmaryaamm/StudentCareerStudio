@@ -55,7 +55,6 @@ export function SignInScreen({ mode }: { mode: SignInMode }) {
 	// Storyboard captures draw the form as filled in (A2-SignIn).
 	const filled = STORYBOARD && params.filled === "1";
 	const [name, setName] = useState("");
-	const [username, setUsername] = useState("");
 	const [email, setEmail] = useState(params.email ?? "");
 	const [password, setPassword] = useState(filled ? "storyboard" : "");
 	const [reveal, setReveal] = useState(false);
@@ -95,7 +94,7 @@ export function SignInScreen({ mode }: { mode: SignInMode }) {
 	const submit = () => {
 		if (mode === "reset") return void sendReset();
 		if (!email.trim())
-			return fail(mode === "register" ? t`Enter a valid email address.` : t`Enter your email or username.`);
+			return fail(mode === "register" ? t`Enter a valid email address.` : t`Enter your email address.`);
 		if (!password) return fail(t`Enter your password.`);
 		if (mode === "register" && !name.trim()) return fail(t`Enter your name.`);
 		if (mode === "register" && password.length < 8) return fail(t`Use at least 8 characters.`);
@@ -149,30 +148,17 @@ export function SignInScreen({ mode }: { mode: SignInMode }) {
 				{emailAuth ? (
 					<Form>
 						{mode === "register" ? (
-							<>
-								<TextField
-									label={t`Name`}
-									value={name}
-									onChangeText={setName}
-									autoComplete="name"
-									textContentType="name"
-									returnKeyType="next"
-								/>
-								<TextField
-									label={t`Username`}
-									value={username}
-									onChangeText={setUsername}
-									placeholder="john.doe"
-									autoCapitalize="none"
-									autoCorrect={false}
-									autoComplete="username-new"
-									textContentType="username"
-									returnKeyType="next"
-								/>
-							</>
+							<TextField
+								label={t`Name`}
+								value={name}
+								onChangeText={setName}
+								autoComplete="name"
+								textContentType="name"
+								returnKeyType="next"
+							/>
 						) : null}
 						<TextField
-							label={mode === "sign-in" ? t`Email or username` : t`Email address`}
+							label={t`Email address`}
 							value={email}
 							onChangeText={(next) => {
 								setEmail(next);

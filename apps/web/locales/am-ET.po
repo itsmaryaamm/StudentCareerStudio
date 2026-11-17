@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "ቀልጣፋ"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "ኢሜል እና ስልክ ተቀምጠዋል"
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "በዚህ አገልጋይ ላይ የኢሜይል ቅጂዎች አይገኙም። የመተግበሪያ ውስጥ ማሳወቂያዎች አሁንም በዛሬ ውስጥ ይታያሉ።"
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "ኢሜይል ወይም የተጠቃሚ ስም"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "ከላይ ያለውን ሞዴል ለመጠቀም ከመስኮቹ አን�
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "የተቀመጠውን ቁልፍ ለማስቀመጥ ባዶውን ይተውት።"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "ከኢሜልዎ ለመፍጠር ባዶ ይተዉት። በቅንብሮች ውስጥ መቀየር ይችላሉ።"
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "{connectedProvider} ገጽን ማንበብ ሲያቅተው ጥቅም ላ
 msgid "User research"
 msgstr "የተጠቃሚ ምርምር"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "ተራህ"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "የሁለት ደቂቃ መግቢያዎ"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "የተጠቃሚ ስምዎ ከኢሜልዎ የተሠራ ነው። <0>የራስዎን ይምረጡ</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

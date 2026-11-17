@@ -298,11 +298,10 @@ describe("OAuth account creation", () => {
 				<RegisterPage disableEmailAuth={false} />
 			</I18nProvider>,
 		);
-		// The username field shows only when asked for.
-		fireEvent.click(screen.getByRole("button", { name: "Choose your own" }));
+		// There is no username field: the server makes one from the email address.
+		expect(container.querySelector('input[name="username"]')).toBeNull();
 		for (const [name, value] of Object.entries({
 			name: " A ",
-			username: "newuser",
 			email: "new@example.com",
 			password: "password123",
 		})) {

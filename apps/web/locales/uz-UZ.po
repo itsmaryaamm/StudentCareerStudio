@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "Samarali"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "email va telefon saqlandi"
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "Bu serverda email nusxalari mavjud emas. Ilova ichidagi bildirishnomalar Bugun bo'limida baribir ko'rinadi."
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "Email yoki foydalanuvchi nomi"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "Yuqoridagi modeldan foydalanish uchun maydonlarning birini ham bo'sh qol
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "Saqlangan kalitni saqlash uchun bo'sh qoldiring"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "Email manzilingizdan yaratish uchun bo'sh qoldiring. Uni Sozlamalarda o'zgartirishingiz mumkin."
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "{connectedProvider} sahifani o'qiy olmaganda ishlatiladi · hisob kerak 
 msgid "User research"
 msgstr "Foydalanuvchi tadqiqoti"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "Sizning navbatingiz"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "Ikki daqiqalik o'zingizni tanishtirish"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "Foydalanuvchi nomingiz emailingizdan yaratilgan. <0>O'zingiz tanlang</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

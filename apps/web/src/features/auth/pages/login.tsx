@@ -184,9 +184,7 @@ export function LoginPage({ disableEmailAuth, disableSignups, allowGuestLogin, i
 						{(field) => (
 							<FormItem data-route-focus hasError={field.state.meta.isTouched && field.state.meta.errors.length > 0}>
 								<FormLabel>
-									<Trans comment="Label for login identifier input that accepts email or username">
-										Email or username
-									</Trans>
+									<Trans comment="Label for login identifier input that accepts email or username">Email</Trans>
 								</FormLabel>
 								<FormControl
 									render={

@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "មានប្រសិទ្ធភាព"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "បានរក្សាទុកអ៊ីមែល និងទូរ�
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "ច្បាប់ចម្លងតាមអ៊ីមែលមិនមាននៅលើម៉ាស៊ីនមេនេះទេ។ ការជូនដំណឹងក្នុងកម្មវិធីនៅតែបង្ហាញក្នុង ថ្ងៃនេះ។"
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "អ៊ីមែល ឬឈ្មោះអ្នកប្រើ"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "ទុកវាលណាមួយឲ្យទទេ ដើម្បី�
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "ទុក​ទទេ​ដើម្បី​រក្សា​សោ​ដែល​បាន​រក្សា​ទុក"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "ទុកវាទទេ ដើម្បីបង្កើតមួយពីអ៊ីមែលរបស់អ្នក។ អ្នកអាចប្ដូរវានៅក្នុងការកំណត់។"
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "ប្រើពេល {connectedProvider} មិនអាចអានទ
 msgid "User research"
 msgstr "ការស្រាវជ្រាវអ្នកប្រើ"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "វេនរបស់អ្នក។"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "ការណែនាំខ្លួនរយៈពេលពីរនាទីរបស់អ្នក"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "ឈ្មោះអ្នកប្រើរបស់អ្នកត្រូវបានបង្កើតពីអ៊ីមែលរបស់អ្នក។ <0>ជ្រើសរើសដោយខ្លួនឯង</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "കാര്യക്ഷമം"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "ഇമെയിലും ഫോണും സേവ് ചെയ്തു
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "ഇമെയിൽ കോപ്പികൾ ഈ സെർവറിൽ ലഭ്യമല്ല. ഇൻ-ആപ്പ് അറിയിപ്പുകൾ ഇന്ന് ഭാഗത്ത് ഇപ്പോഴും കാണാം."
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "ഇമെയിൽ അല്ലെങ്കിൽ ഉപയോക്തൃനാമം"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "മുകളിലെ മോഡൽ ഉപയോഗിക്കാൻ ഏ
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "സംരക്ഷിച്ച കീ സൂക്ഷിക്കാൻ ശൂന്യമായി വിടുക"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "നിങ്ങളുടെ ഇമെയിലിൽ നിന്ന് ഒന്ന് ഉണ്ടാക്കാൻ ശൂന്യമായി വിടുക. സെറ്റിംഗ്സിൽ ഇത് മാറ്റാം."
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "{connectedProvider}-ന് ഒരു പേജ് വായിക്ക�
 msgid "User research"
 msgstr "ഉപയോക്തൃ ഗവേഷണം"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "നിങ്ങളുടെ ഊഴം"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "നിങ്ങളുടെ രണ്ട് മിനിറ്റ് സ്വയം പരിചയപ്പെടുത്തൽ"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "നിങ്ങളുടെ യൂസർനെയിം നിങ്ങളുടെ ഇമെയിലിൽ നിന്ന് ഉണ്ടാക്കിയതാണ്. <0>സ്വന്തമായി തിരഞ്ഞെടുക്കുക</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

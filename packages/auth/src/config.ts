@@ -35,6 +35,7 @@ import {
 	confirmNewEmail,
 	resetPasswordEmail,
 	verifyEmail,
+	welcomeEmail,
 	verifyEmailChange,
 } from "@reactive-resume/email/templates/auth";
 import { sendEmail } from "@reactive-resume/email/transport";
@@ -1204,6 +1205,19 @@ const getAuthConfig = () => {
 			sendOnSignUp: true,
 			// A blocked sign-in (address not confirmed yet) sends a fresh link, as the sign-in message promises.
 			sendOnSignIn: true,
+			// The first welcome: once, when a new account confirms its address. An address change confirms too, so only
+			// accounts made in the last two days get it.
+			afterEmailVerification: async (user, request) => {
+				const created = user.createdAt instanceof Date ? user.createdAt.getTime() : Date.parse(String(user.createdAt));
+				if (!Number.isFinite(created) || Date.now() - created > 2 * 24 * 60 * 60 * 1000) return;
+				await sendEmail({
+					to: user.email,
+					...welcomeEmail({
+						url: `${env.APP_URL.replace(/\/+$/, "")}/dashboard`,
+						locale: accountEmailLocale(user, request),
+					}),
+				});
+			},
 			autoSignInAfterVerification: true,
 			// The emails say the link works for 1 hour; keep this in step with them.
 			expiresIn: 60 * 60,

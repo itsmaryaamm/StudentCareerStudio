@@ -288,3 +288,32 @@ export function verifyEmailChange({ url, previousEmail, newEmail, locale }: Veri
 		),
 	};
 }
+
+/** Sent once, when a new student has confirmed their address. English only: the first words they read in the product. */
+export function welcomeEmail({ url, locale }: { url: string; locale: Locale }): AuthEmail {
+	const copy = {
+		heading: `Welcome to ${appName}`,
+		intro: `Your email is confirmed and your account is ready. ${appName} is a free beta career coach: tell it what you have done, check each fact, then use it for your résumé, LinkedIn and AI career missions.`,
+		details:
+			"To get started: open the coach and tell it about a project, a job or something you are proud of. Everything stays private to your account, and you can delete it any time in Settings.",
+		action: "Start with the coach",
+		url,
+		outro: "Questions or ideas? Just reply to this email; a real person reads it.",
+	};
+	return {
+		subject: `Welcome to ${appName}`,
+		text: plainText(copy),
+		react: (
+			<AuthEmailLayout
+				locale={locale}
+				preview={`Your ${appName} account is ready`}
+				heading={copy.heading}
+				intro={copy.intro}
+				details={copy.details}
+				actionLabel={copy.action}
+				actionUrl={url}
+				outro={copy.outro}
+			/>
+		),
+	};
+}

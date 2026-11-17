@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "Efektywny"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "zapisano e-mail i telefon"
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "Kopie e-mailowe są niedostępne na tym serwerze. Powiadomienia w aplikacji nadal pojawiają się w sekcji Dzisiaj."
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "E-mail lub nazwa użytkownika"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "Pozostaw dowolne pole puste, aby użyć powyższego modelu. Szybki obsł
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "Pozostaw puste, aby zachować zapisany klucz"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "Pozostaw puste, aby utworzyć ją z adresu e-mail. Można ją zmienić w Ustawieniach."
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "Używane, gdy {connectedProvider} nie może odczytać strony · konto ni
 msgid "User research"
 msgstr "Badania z użytkownikami"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "Twoja kolej"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "Twoja dwuminutowa autoprezentacja"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "Twoja nazwa użytkownika powstaje z adresu e-mail. <0>Wybierz własną</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

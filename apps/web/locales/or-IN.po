@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "ଦକ୍ଷ"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "ଇମେଲ୍ ଓ ଫୋନ୍ ସେଭ୍ ହେଲା"
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "ଏହି ସର୍ଭର୍‌ରେ ଇମେଲ୍ ପ୍ରତିଲିପି ଉପଲବ୍ଧ ନାହିଁ। ଆପ୍ ଭିତର ବିଜ୍ଞପ୍ତି ଆଜିରେ ତଥିବା ଦେଖାଯିବ।"
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "ଇମେଲ୍ କିମ୍ବା ଉପଭୋକ୍ତା ନାମ"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11006,11 +11003,6 @@ msgstr "ଉପରୋକ୍ତ ମଡେଲ୍ ବ୍ୟବହାର କରିବ
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "ସଞ୍ଚିତ ଚାବିକୁ ରଖିବା ପାଇଁ ଖାଲି ଛାଡିଦିଅ |"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "ଆପଣଙ୍କ ଇମେଲରୁ ତିଆରି କରିବାକୁ ଖାଲି ରଖନ୍ତୁ। ଆପଣ ଏହାକୁ ସେଟିଂସରେ ବଦଳାଇପାରିବେ।"
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21943,8 +21935,6 @@ msgstr "{connectedProvider} ଏକ ପେଜ୍ ପଢ଼ିନପାରିଲ�
 msgid "User research"
 msgstr "ଉପଯୋଗକର୍ତ୍ତା ଗବେଷଣା"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23658,10 +23648,6 @@ msgstr "ତୁମର ପାଳି"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "ଆପଣଙ୍କ ଦୁଇ ମିନିଟ୍‌ର ପରିଚୟ"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "ଆପଣଙ୍କ ୟୁଜରନେମ୍ ଆପଣଙ୍କ ଇମେଲରୁ ତିଆରି। <0>ନିଜେ ବାଛନ୍ତୁ</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

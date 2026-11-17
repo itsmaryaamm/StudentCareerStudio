@@ -72,8 +72,6 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 	const navigate = useNavigate();
 	// A server without email sends no verification link, so there's nothing to mention.
 	const smtpEnabled = useRouteContext({ strict: false }).flags?.smtpEnabled ?? false;
-	// The username is made from the email address unless they ask to choose one.
-	const [ownUsername, setOwnUsername] = useState(false);
 	// With email delivery on, the account exists but must be confirmed before first sign-in.
 	const [confirmEmail, setConfirmEmail] = useState<string | null>(null);
 	const { data: beta } = useQuery(orpc.scs.beta.queryOptions());
@@ -91,7 +89,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 				name: value.name.trim(),
 				email: value.email,
 				password: value.password,
-				// Empty asks the server to make one from the email address.
+				// Empty: the server makes one from the email address.
 				username: value.username,
 				displayUsername: value.username,
 				callbackURL: callbackURL ?? "/dashboard",
@@ -242,57 +240,10 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 										/>
 									}
 								/>
-								{!ownUsername && (
-									<FormDescription>
-										<Trans>
-											Your username is made from your email.{" "}
-											<button
-												type="button"
-												className="font-medium text-accent-text underline-offset-4 hover:underline"
-												onClick={() => setOwnUsername(true)}
-											>
-												Choose your own
-											</button>
-										</Trans>
-									</FormDescription>
-								)}
 								<FormMessage errors={field.state.meta.errors} />
 							</FormItem>
 						)}
 					</form.Field>
-
-					{ownUsername && (
-						<form.Field name="username">
-							{(field) => (
-								<FormItem hasError={field.state.meta.isTouched && field.state.meta.errors.length > 0}>
-									<FormLabel>
-										<Trans comment="Label for username input on registration form">Username</Trans>
-									</FormLabel>
-									<FormControl
-										render={
-											<Input
-												minLength={3}
-												maxLength={64}
-												autoComplete="section-register username"
-												autoFocus
-												dir="ltr"
-												name={field.name}
-												value={field.state.value}
-												onBlur={field.handleBlur}
-												onChange={(event) => field.handleChange(event.target.value)}
-											/>
-										}
-									/>
-									<FormDescription>
-										<Trans comment="Hint under the optional username field on registration form">
-											Leave it empty to make one from your email. You can change it in Settings.
-										</Trans>
-									</FormDescription>
-									<FormMessage errors={field.state.meta.errors} />
-								</FormItem>
-							)}
-						</form.Field>
-					)}
 
 					<form.Field name="password">
 						{(field) => (

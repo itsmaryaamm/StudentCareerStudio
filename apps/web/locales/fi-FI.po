@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "Tehokas"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "sähköposti ja puhelin tallennettu"
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "Sähköpostikopioita ei ole käytettissä tällä palvelimella. Sovelluksen sisäiset ilmoitukset näkyvät yhä Tänään-osiossa."
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "Sähköposti tai käyttäjätunnus"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "Jätä kumpikin kenttä tyhjäksi käyttääksesi yllä olevaa mallia. N
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "Jätä tyhjäksi säilyttääksesi tallennettu avain"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "Jätä tyhjäksi, niin nimi luodaan sähköpostistasi. Voit muuttaa sen asetuksissa."
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "Käytetään, kun {connectedProvider} ei pysty lukemaan sivua · tiliä 
 msgid "User research"
 msgstr "Käyttäjätutkimus"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "Sinun vuorosi"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "Kahden minuutin esittelysi"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "Käyttäjänimesi luodaan sähköpostistasi. <0>Valitse oma</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

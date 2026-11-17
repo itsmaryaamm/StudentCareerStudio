@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "มีประสิทธิภาพ"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "บันทึกอีเมลและโทรศัพท์แล
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "สำเนาอีเมลใช้งานไม่ได้บนเซิร์ฟเวอร์นี้ การแจ้งเตือนในแอปยังคงแสดงในหน้าวันนี้"
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "อีเมลหรือชื่อผู้ใช้"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "เว้นช่องใดช่องหนึ่งให้ว่
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "เว้นว่างไว้เพื่อเก็บคีย์ที่บันทึกไว้"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "เว้นว่างไว้เพื่อสร้างจากอีเมลของคุณ คุณเปลี่ยนได้ในการตั้งค่า"
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "ใช้เมื่อ {connectedProvider} อ่านหน้าไ
 msgid "User research"
 msgstr "การวิจัยผู้ใช้"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "ตาของคุณ"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "การแนะนำตัวสองนาทีของคุณ"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "ชื่อผู้ใช้ของคุณสร้างจากอีเมล <0>เลือกชื่อเอง</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "کارآمد"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "ایمیل و تلفن ذخیره شد"
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "نسخه‌های ایمیلی روی این سرور در دسترس نیستند. اعلان‌های داخل برنامه همچنان در «امروز» ظاهر می‌شوند."
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "ایمیل یا نام کاربری"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "برای استفاده از مدل بالا، هر کدام از فیل
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "برای نگه داشتن کلید ذخیره شده خالی بگذارید"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "برای ساخت از روی ایمیل‌تان خالی بگذارید. می‌توانید در تنظیمات تغییرش دهید."
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "وقتی {connectedProvider} نتواند صفحه‌ای را بخوا�
 msgid "User research"
 msgstr "پژوهش کاربر"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "نوبت شماست"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "معرفی دودقیقه‌ای شما"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "نام کاربری شما از ایمیل‌تان ساخته می‌شود. <0>خودتان انتخاب کنید</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

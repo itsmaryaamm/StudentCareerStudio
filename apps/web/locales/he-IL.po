@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "יעיל"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "דוא״ל וטלפון נשמרו"
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "עותקים בדוא״ל אינם זמינים בשרת הזה. התראות בתוך האפליקציה עדיין מופיעות ב„היום”."
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "דוא״ל או שם משתמש"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "השאר אחד מהשדות ריק כדי להשתמש במודל של�
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "השאר ריק כדי לשמור את המפתח השמור"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "השאירו ריק כדי ליצור אחד מכתובת הדוא״ל. אפשר לשנות אותו בהגדרות."
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "משמש כש־{connectedProvider} לא מצליח לקרוא עמוד �
 msgid "User research"
 msgstr "מחקר משתמשים"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "התור שלך"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "הפתיח שלך בשתי דקות"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "שם המשתמש שלכם נוצר מכתובת הדוא״ל. <0>בחרו שם משלכם</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

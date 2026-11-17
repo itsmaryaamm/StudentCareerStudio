@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "Efektīvs"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "e-pasts un tālrunis saglabāti"
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "E-pasta kopijas uz šī servera nav pieejamas. Paziņojumi lietotnē joprojām parādās sadaļā Šodien."
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "E-pasts vai lietotājvārds"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "Atstājiet abus laukus tukšus, lai izmantotu augstāk redzamo modeli. �
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "Atstājiet tukšu, lai saglabātu saglabāto atslēgu"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "Atstājiet tukšu, lai to izveidotu no jūsu e-pasta. To var mainīt iestatījumos."
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "Izmanto, kad {connectedProvider} nevar nolasīt lapu · konts nav nepiec
 msgid "User research"
 msgstr "Lietotāju izpēte"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "Tava kārta"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "Jūsu divu minūšu prezentācija par sevi"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "Jūsu lietotājvārds ir izveidots no jūsu e-pasta. <0>Izvēlieties savu</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

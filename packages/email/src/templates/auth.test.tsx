@@ -1,11 +1,22 @@
 import { describe, expect, it } from "vite-plus/test";
 import { render } from "react-email";
-import { confirmNewEmail, resetPasswordEmail, verifyEmail, verifyEmailChange } from "./auth";
+import { confirmNewEmail, resetPasswordEmail, verifyEmail, verifyEmailChange, welcomeEmail } from "./auth";
 
 /** The opening tag's attributes, in any order. */
 const tag = (html: string, name: string) => html.match(new RegExp(`<${name}\\b[^>]*>`))?.[0] ?? "";
 
 const url = "https://rxresu.me/api/auth/verify-email?token=signed.token-value&callbackURL=%2Fdashboard";
+
+describe("welcome email", () => {
+	it("greets a confirmed student and links to the dashboard", async () => {
+		const email = welcomeEmail({ url: "https://example.test/dashboard", locale: "en-US" });
+		const html = await render(email.react);
+		expect(email.subject).toBe("Welcome to Student Career Studio");
+		expect(html).toContain("https://example.test/dashboard");
+		expect(html).toContain("Start with the coach");
+		expect(email.text).toContain("https://example.test/dashboard");
+	});
+});
 
 describe("account emails", () => {
 	it("keep the English text, link and plain-text copy for an English account", async () => {

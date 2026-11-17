@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "दक्ष"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "इमेल र फोन सुरक्षित"
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "यो सर्भरमा इमेल प्रतिलिपिहरू उपलब्ध छैनन्। इन-एप सूचनाहरू भने ‘आज’ मा देखिन्छन्।"
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "इमेल वा प्रयोगकर्ता नाम"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "माथिको मोडेल प्रयोग गर्न क�
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "बचत गरिएको कुञ्जी राख्न खाली छोड्नुहोस्"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "तपाईंको इमेलबाट बनाउन खाली छोड्नुहोस्। तपाईं यसलाई सेटिङहरूमा बदल्न सक्नुहुन्छ।"
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "{connectedProvider} ले पृष्ठ पढ्न नसक्द�
 msgid "User research"
 msgstr "प्रयोगकर्ता अनुसन्धान"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "तपाईको पालो"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "तपाईंको दुई मिनेटको परिचय"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "तपाईंको प्रयोगकर्ता नाम तपाईंको इमेलबाट बनाइएको हो। <0>आफ्नै छान्नुहोस्</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

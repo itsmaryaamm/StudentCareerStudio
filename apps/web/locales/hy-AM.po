@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "Արդյունավետ"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "էլփոստը և հեռախոսը պահված են"
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "Էլփոստի պատճեններն անհասանելի են այս սերվերում: Ներծրագրային ծանուցումները դեռ հայտնվում են Today-ում:"
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "փոստ կամ օգտվողի անուն"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "Ցանկացած դաշտ թողեք դատարկ՝ վերը նշված 
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "Պահպանված բանալին պահելու համար թողեք դատարկ"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "Թողեք դատարկ՝ ձեր էլ.փոստից մեկը պատրաստելու համար: Դուք կարող եք փոխել այն Կարգավորումներում:"
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "Օգտագործվում է, երբ {connectedProvider}-ը չի կարո
 msgid "User research"
 msgstr "Օգտագործողի հետազոտություն"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "Ձեր հերթն է"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "Ձեր երկու րոպեանոց ներածությունը"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "Ձեր օգտանունը ստեղծվում է ձեր էլ. փոստից։ <0>Ընտրեք ձերը</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

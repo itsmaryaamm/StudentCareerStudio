@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "సమర్థవంతమైన"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "ఈమెయిల్ మరియు ఫోన్ సేవ్ చే�
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "ఈ సర్వర్‌లో ఇమెయిల్ కాపీలు అందుబాటులో లేవు. ఇన్-యాప్ నోటిఫికేషన్‌లు ఇంకా Today‌లో కనిపిస్తాయి."
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "ఇమెయిల్ లేదా యూజర్‌నేమ్"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "ఏ ఫీల్డ్ ఖాళీగా వదిలితే పై �
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "సేవ్ చేసిన కీని ఉంచడానికి ఖాళీగా వదిలివేయండి"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "మీ ఈమెయిల్ నుండి ఒకటి తయారు చేయడానికి ఖాళీగా వదిలేయండి. దీన్ని సెట్టింగులలో మార్చవచ్చు."
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "{connectedProvider} పేజీని చదవలేనప్పుడ
 msgid "User research"
 msgstr "యూజర్ రీసెర్చ్"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "మీ వంతు"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "మీ రెండు నిమిషాల పరిచయం"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "మీ యూజర్‌నేమ్ మీ ఈమెయిల్ నుండి తయారు చేయబడింది. <0>మీ సొంతది ఎంచుకోండి</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"

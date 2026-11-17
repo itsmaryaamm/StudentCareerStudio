@@ -8119,6 +8119,8 @@ msgctxt "Template style tag"
 msgid "Efficient"
 msgstr "Αποδοτικό"
 
+#. Label for login identifier input that accepts email or username
+#: src/features/auth/pages/login.tsx
 #: src/features/resume/editor/check/parser-view.tsx
 #: src/features/resume/editor/write/basics-card.tsx
 #: src/features/settings/account/profile.tsx
@@ -8149,11 +8151,6 @@ msgstr "email και τηλέφωνο αποθηκεύτηκαν"
 #: src/features/career/schedule-sheet.tsx
 msgid "Email copies are unavailable on this server. In-app notifications still appear in Today."
 msgstr "Τα αντίγραφα email δεν είναι διαθέσιμα σε αυτόν τον διακομιστή. Οι ειδοποιήσεις εντός της εφαρμογής εξακολουθούν να εμφανίζονται στο Σήμερα."
-
-#. Label for login identifier input that accepts email or username
-#: src/features/auth/pages/login.tsx
-msgid "Email or username"
-msgstr "Email ή όνομα χρήστη"
 
 #: src/features/settings/profile.tsx
 msgid "email saved"
@@ -11005,11 +11002,6 @@ msgstr "Αφήστε οποιοδήποτε από τα δύο πεδία κεν
 #: src/features/settings/ai/provider-fields.tsx
 msgid "Leave empty to keep the saved key"
 msgstr "Αφήστε κενό για να διατηρήσετε το αποθηκευμένο κλειδί"
-
-#. Hint under the optional username field on registration form
-#: src/features/auth/pages/register.tsx
-msgid "Leave it empty to make one from your email. You can change it in Settings."
-msgstr "Αφήστε το κενό για να δημιουργηθεί από το email σας. Μπορείτε να το αλλάξετε στις Ρυθμίσεις."
 
 #: src/features/resume/editor/write/rich-text-editor-field.tsx
 msgid "Leave it empty to remove the link."
@@ -21940,8 +21932,6 @@ msgstr "Χρησιμοποιείται όταν το {connectedProvider} δεν 
 msgid "User research"
 msgstr "Έρευνα χρηστών"
 
-#. Label for username input on registration form
-#: src/features/auth/pages/register.tsx
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/resume/editor/write/entries.tsx
 #: src/features/settings/account/profile.tsx
@@ -23655,10 +23645,6 @@ msgstr "Σειρά σου"
 #: src/features/career/workspace/prepare.tsx
 msgid "Your two-minute introduction"
 msgstr "Η δίλεπτη παρουσίασή σας"
-
-#: src/features/auth/pages/register.tsx
-msgid "Your username is made from your email. <0>Choose your own</0>"
-msgstr "Το όνομα χρήστη σας δημιουργείται από το email σας. <0>Επιλέξτε δικό σας</0>"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Your web page is live"
