@@ -43,6 +43,7 @@ import { env } from "@reactive-resume/env/server";
 import { defaultLocale, isLocale, localeSchema } from "@reactive-resume/utils/locale";
 import { rateLimitConfig } from "@reactive-resume/utils/rate-limit";
 import { generateId, toUsername } from "@reactive-resume/utils/string";
+import { cleanLine } from "@reactive-resume/utils/text-clean";
 import { timezoneSchema } from "@reactive-resume/utils/timezone";
 import { isAllowedOAuthRedirectUri } from "@reactive-resume/utils/url-security.node";
 import { consumeAttempt } from "./attempt-limit";
@@ -845,6 +846,15 @@ const getAuthConfig = () => {
 
 		databaseHooks: {
 			user: {
+				update: {
+					// oxlint-disable-next-line require-await -- the hook contract is async; this one has nothing to wait for
+					before: async (changes) => {
+						const name = typeof changes.name === "string" ? cleanLine(changes.name).slice(0, 64) : undefined;
+						if (typeof changes.name === "string" && !name)
+							throw new APIError("BAD_REQUEST", { message: "Enter a name." });
+						return { data: { ...changes, ...(name === undefined ? {} : { name }) } };
+					},
+				},
 				create: {
 					before: async (user, context) => {
 						// Founding beta: a seat is reserved server-side before the account exists, so the cap holds
@@ -868,8 +878,10 @@ const getAuthConfig = () => {
 						// sign-up reads it from the OAuth state, because a cross-site callback may arrive without cookies.
 						const fromOAuthLocale = oauthState?.serverContext?.locale;
 						const locale = requestLocale(context?.headers) ?? (isLocale(fromOAuthLocale) ? fromOAuthLocale : undefined);
-						const data = { ...user, ...(timezone ? { timezone } : {}), ...(locale ? { locale } : {}) };
-						if (!user.isAnonymous) return timezone || locale ? { data } : undefined;
+						// A name is shown in emails, the admin list and public pages: store it without markup or hidden characters.
+						const cleanName = cleanLine(String(user.name ?? "")).slice(0, 64) || user.email.split("@")[0] || "Student";
+						const data = { ...user, name: cleanName, ...(timezone ? { timezone } : {}), ...(locale ? { locale } : {}) };
+						if (!user.isAnonymous) return timezone || locale || cleanName !== user.name ? { data } : undefined;
 
 						// Guests sign in without a username. The tail of a UUIDv7 is random; its head is a timestamp.
 						const username = `guest-${generateId().slice(-12)}`;

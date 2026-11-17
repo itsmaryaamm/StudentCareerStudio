@@ -3,6 +3,7 @@ import { and, desc, eq, sql } from "drizzle-orm";
 import { z } from "zod";
 import { db } from "@reactive-resume/db/client";
 import { scsMission } from "@reactive-resume/db/schema";
+import { cleanLine, cleanText } from "@reactive-resume/utils/text-clean";
 
 export const MISSION_IDS = ["discover", "linkedin", "scout", "intel"] as const;
 const MAX_SAVED = 30;
@@ -10,11 +11,20 @@ const MAX_SAVED = 30;
 export const missionInputSchema = z.strictObject({
 	id: z.string().min(1).max(64).optional(),
 	missionId: z.enum(MISSION_IDS),
-	name: z.string().trim().min(1).max(80),
+	name: z.string().max(320).transform(cleanLine).pipe(z.string().min(1).max(80)),
 	answers: z
-		.record(z.string().max(40), z.union([z.string().max(2000), z.array(z.string().max(400)).max(30)]))
+		.record(
+			z
+				.string()
+				.max(40)
+				.regex(/^[A-Za-z0-9_-]+$/),
+			z.union([
+				z.string().max(8000).transform(cleanText).pipe(z.string().max(2000)),
+				z.array(z.string().max(1600).transform(cleanLine).pipe(z.string().max(400))).max(30),
+			]),
+		)
 		.refine((a) => Object.keys(a).length <= 40, "Too many answers"),
-	prompt: z.string().max(14_000),
+	prompt: z.string().max(56_000).transform(cleanText).pipe(z.string().max(14_000)),
 	templateVersion: z.number().int().min(1).max(100).default(1),
 	selectedFactIds: z.array(z.string().max(64)).max(100),
 });

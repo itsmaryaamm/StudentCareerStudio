@@ -19,6 +19,7 @@
 		"./monorepo.node": "./src/monorepo.node.ts",
 		"./queue": "./src/queue.ts",
 		"./rate-limit": "./src/rate-limit.ts",
+		"./text-clean": "./src/text-clean.ts",
 		"./region": "./src/region.ts",
 		"./slug": "./src/slug.ts",
 		"./string": "./src/string.ts",

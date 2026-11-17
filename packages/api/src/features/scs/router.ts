@@ -1,5 +1,13 @@
 import { ORPCError } from "@orpc/client";
 import { z } from "zod";
+import {
+	cleanLine,
+	cleanPhone,
+	cleanPlain,
+	cleanText,
+	looksLikeEmail,
+	safeHttpUrl,
+} from "@reactive-resume/utils/text-clean";
 import { protectedProcedure as baseProtected, publicProcedure } from "../../context";
 import { createBudget } from "../../middleware/rate-limit";
 import { accountService, adminService, betaInfo, requireAdmin } from "./account";
@@ -35,6 +43,64 @@ const ownKeyBudget = strict("scs-own-key", 6, 10 * 60_000);
 const exportBudget = strict("scs-export", 4, 10 * 60_000);
 const writesBudget = strict("scs-writes", 90, 60_000);
 const betaInfoBudget = createBudget("scs-beta-info", { maxRequests: 60, window: 60_000 }, "ip");
+// What students type is cleaned on the way in: hidden characters out, markup out of short fields, links limited to
+// http(s) (and LinkedIn profiles for the LinkedIn field). Length limits apply after cleaning.
+const line = (min: number, max: number) =>
+	z
+		.string()
+		.max(max * 4)
+		.transform(cleanLine)
+		.pipe(z.string().min(min).max(max));
+const plainText = (min: number, max: number) =>
+	z
+		.string()
+		.max(max * 4)
+		.transform(cleanPlain)
+		.pipe(z.string().min(min).max(max));
+const freeText = (max: number) =>
+	z
+		.string()
+		.max(max * 4)
+		.transform(cleanText)
+		.pipe(z.string().max(max));
+const webLink = z
+	.string()
+	.max(600)
+	.transform((value, ctx) => {
+		if (!value.trim()) return "";
+		const url = safeHttpUrl(value);
+		if (!url)
+			ctx.addIssue({ code: "custom", message: "That isn't a valid web link (it must start with http or https)." });
+		return url ?? "";
+	});
+const linkedinLink = z
+	.string()
+	.max(600)
+	.transform((value, ctx) => {
+		if (!value.trim()) return "";
+		const url = safeHttpUrl(value);
+		if (!url || !/^https?:\/\/([a-z]+\.)?linkedin\.com\/in\/[\w%-]+\/?$/i.test(url))
+			ctx.addIssue({ code: "custom", message: "That isn't a LinkedIn profile link (linkedin.com/in/your-name)." });
+		return url ?? "";
+	});
+const emailAddress = z
+	.string()
+	.max(400)
+	.transform((value, ctx) => {
+		const email = cleanLine(value);
+		if (email && !looksLikeEmail(email)) ctx.addIssue({ code: "custom", message: "That isn't a valid email address." });
+		return email;
+	});
+const referralCode = z
+	.string()
+	.max(64)
+	.transform((value) =>
+		value
+			.toUpperCase()
+			.replace(/[^A-Z0-9]/g, "")
+			.slice(0, 32),
+	)
+	.pipe(z.string().min(4).max(32));
 const id = z.object({ id: z.string().min(1).max(64) });
 
 export const scsRouter = {
@@ -62,14 +128,14 @@ export const scsRouter = {
 		.use(writesBudget)
 		.input(
 			z.strictObject({
-				preferredName: z.string().trim().min(1).max(40).optional(),
+				preferredName: line(1, 40).optional(),
 				step: z
 					.enum(["welcome", "situation", "inventory", "contact", "resume", "linkedin", "interview", "done"])
 					.optional(),
 				complete: z.boolean().optional(),
 				intake: z
 					.strictObject({
-						situation: z.string().trim().max(300).optional(),
+						situation: line(0, 300).optional(),
 						first: z.enum(["resume", "linkedin", "portfolio"]).optional(),
 						has: z
 							.strictObject({
@@ -80,10 +146,10 @@ export const scsRouter = {
 							.optional(),
 						contact: z
 							.strictObject({
-								linkedin: z.string().trim().max(200).optional(),
-								email: z.string().trim().max(120).optional(),
-								phone: z.string().trim().max(40).optional(),
-								portfolio: z.string().trim().max(200).optional(),
+								linkedin: linkedinLink.optional(),
+								email: emailAddress.optional(),
+								phone: z.string().max(200).transform(cleanPhone).optional(),
+								portfolio: webLink.optional(),
 							})
 							.optional(),
 					})
@@ -100,7 +166,7 @@ export const scsRouter = {
 		.route(route("PUT", "/referral", "scsUseFriendCode", "Enter a friend's code for a bigger allowance"))
 		.use(friendCodeByAddress)
 		.use(friendCodeBudget)
-		.input(z.strictObject({ code: z.string().trim().min(1).max(32) }))
+		.input(z.strictObject({ code: referralCode }))
 		.handler(async ({ context, input }) => {
 			const { applyReferral } = await import("@reactive-resume/auth/referrals");
 			const result = await applyReferral(context.user.id, input.code);
@@ -153,7 +219,7 @@ export const scsRouter = {
 		add: protectedProcedure
 			.route(route("POST", "/facts", "scsAddFact", "Add a fact to my profile"))
 			.use(writesBudget)
-			.input(z.strictObject({ category: factCategorySchema, text: z.string().trim().min(3).max(300) }))
+			.input(z.strictObject({ category: factCategorySchema, text: line(3, 300) }))
 			.output(factSchema)
 			.handler(({ context, input }) => factsService.add(context.user.id, input.category, input.text)),
 		approve: protectedProcedure
@@ -168,7 +234,7 @@ export const scsRouter = {
 			.handler(({ context, input }) => factsService.setStatus(context.user.id, input.id, "rejected")),
 		edit: protectedProcedure
 			.route(route("PUT", "/facts/{id}", "scsEditFact", "Edit a fact"))
-			.input(id.extend({ text: z.string().trim().min(3).max(300) }))
+			.input(id.extend({ text: line(3, 300) }))
 			.output(factSchema)
 			.handler(({ context, input }) => factsService.edit(context.user.id, input.id, input.text)),
 		delete: protectedProcedure
@@ -198,7 +264,7 @@ export const scsRouter = {
 			.input(
 				z.strictObject({
 					threadId: z.string().min(1).max(64).optional(),
-					message: z.string().max(MAX_MESSAGE_CHARS + 200),
+					message: freeText(MAX_MESSAGE_CHARS + 200),
 					/** "interview": the get-to-know-you conversation for a student who has no résumé yet. */
 					mode: z.enum(["interview"]).optional(),
 				}),
@@ -208,7 +274,7 @@ export const scsRouter = {
 			.route(route("POST", "/chat/analyze", "scsAnalyzeUpload", "Analyze a document or image"))
 			.input(
 				z.strictObject({
-					filename: z.string().min(1).max(200),
+					filename: line(1, 200),
 					mimeType: z.string().max(100),
 					dataBase64: z.string().min(1),
 					threadId: z.string().min(1).max(64).optional(),
@@ -220,7 +286,7 @@ export const scsRouter = {
 	linkedin: {
 		generate: protectedProcedure
 			.route(route("POST", "/linkedin/generate", "scsLinkedinGenerate", "Generate LinkedIn text from my profile"))
-			.input(z.strictObject({ section: linkedinSectionSchema, instruction: z.string().max(200).optional() }))
+			.input(z.strictObject({ section: linkedinSectionSchema, instruction: line(0, 200).optional() }))
 			.handler(({ context, input }) => linkedinService.generate(context.user.id, input)),
 		drafts: protectedProcedure
 			.route(route("GET", "/linkedin/drafts", "scsLinkedinDrafts", "My saved LinkedIn drafts"))
@@ -228,7 +294,7 @@ export const scsRouter = {
 		saveDraft: protectedProcedure
 			.route(route("PUT", "/linkedin/drafts/{section}", "scsLinkedinSaveDraft", "Save a LinkedIn draft"))
 			.use(writesBudget)
-			.input(z.strictObject({ section: linkedinSectionSchema, content: z.string().max(3000) }))
+			.input(z.strictObject({ section: linkedinSectionSchema, content: freeText(3000) }))
 			.handler(({ context, input }) => linkedinService.saveDraft(context.user.id, input.section, input.content)),
 	},
 
@@ -240,8 +306,8 @@ export const scsRouter = {
 				z.strictObject({
 					rating: z.number().int().min(1).max(5),
 					category: z.enum(["bug", "idea", "praise", "other"]),
-					message: z.string().trim().min(3).max(2000),
-					page: z.string().max(120).optional(),
+					message: plainText(3, 2000),
+					page: line(0, 120).optional(),
 				}),
 			)
 			.handler(({ context, input }) => accountService.submitFeedback(context.user.id, input)),

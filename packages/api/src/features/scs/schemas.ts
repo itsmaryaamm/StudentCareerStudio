@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { cleanLine } from "@reactive-resume/utils/text-clean";
 
 export const factCategorySchema = z.enum([
 	"education",
@@ -23,7 +24,11 @@ export const factSchema = z.object({
 });
 export type Fact = z.infer<typeof factSchema>;
 
-export const proposedFactSchema = z.object({ category: factCategorySchema, text: z.string().trim().min(3).max(300) });
+// Facts the AI proposes are cleaned too: whatever it writes, no markup is stored.
+export const proposedFactSchema = z.object({
+	category: factCategorySchema,
+	text: z.string().max(1200).transform(cleanLine).pipe(z.string().min(3).max(300)),
+});
 
 export const linkedinSections = [
 	"headline",

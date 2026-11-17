@@ -31,7 +31,7 @@ async function http(method, path, { body, cookie, headers = {} } = {}) {
 	} catch {}
 	return { status: res.status, json, headers: res.headers };
 }
-async function signUp(tag, code = null) {
+async function signUp(tag, code = null, displayName = null) {
 	const res = await fetch(`${BASE}/api/auth/sign-up/email`, {
 		method: "POST",
 		headers: {
@@ -40,7 +40,7 @@ async function signUp(tag, code = null) {
 			...(code ? { "x-referral-code": code } : {}),
 		},
 		body: JSON.stringify({
-			name: `Student ${tag}`,
+			name: displayName ?? `Student ${tag}`,
 			email: `${tag}@example.com`,
 			password: "Sup3rSecret!pass",
 			username: tag,
@@ -515,6 +515,79 @@ check(
 	Number(
 		psql(`select count(*) from scs_ai_usage where user_id='${B.id}' and kind not in ('chat','linkedin','upload')`),
 	) === 0,
+);
+
+// ---------- Input cleaning ----------
+const P = "<img src=x onerror=alert(1)><script>alert(2)</script>\"'><svg onload=alert(3)>";
+const xssUser = await signUp(u("xss"), null, `Zoe ${P}`.slice(0, 64));
+check(
+	"input: a name typed with HTML is stored without it",
+	xssUser.status === 200 && !/[<>]/.test(xssUser.json?.user?.name ?? "<"),
+	JSON.stringify(xssUser.json?.user?.name),
+);
+r = await http("POST", "/scs/facts", { cookie: B.cookie, body: { category: "other", text: `Built ${P}` } });
+check(
+	"input: a fact typed with HTML is stored without tags",
+	r.status === 200 && !/[<>]/.test(r.json?.text ?? "<"),
+	JSON.stringify(r.json),
+);
+r = await http("POST", "/scs/feedback", {
+	cookie: B.cookie,
+	body: { rating: 4, category: "idea", message: `Nice ${P}\u0000\u202E hidden` },
+});
+const fbText = psql(`select message from scs_feedback where user_id='${B.id}' order by created_at desc limit 1`);
+check(
+	"input: feedback is stored without tags or hidden characters",
+	r.status === 200 &&
+		!/[<>]/.test(fbText) &&
+		!fbText.includes(String.fromCharCode(0)) &&
+		!fbText.includes(String.fromCharCode(0x202e)),
+	fbText,
+);
+r = await http("PUT", "/scs/onboarding/intake", {
+	cookie: B.cookie,
+	body: { intake: { contact: { portfolio: "javascript:alert(1)" } } },
+});
+check("input: a javascript: portfolio link is refused", r.status === 400, JSON.stringify(r).slice(0, 160));
+r = await http("PUT", "/scs/onboarding/intake", {
+	cookie: B.cookie,
+	body: { intake: { contact: { linkedin: "https://evil.example.com/in/x" } } },
+});
+check("input: a non-LinkedIn link in the LinkedIn field is refused", r.status === 400);
+r = await http("PUT", "/scs/onboarding/intake", {
+	cookie: B.cookie,
+	body: {
+		intake: {
+			contact: {
+				portfolio: "example.com/me",
+				linkedin: "www.linkedin.com/in/zoe-b",
+				phone: "+1 (416) 555-0142 call<b>me",
+				email: "zoe@uni.edu",
+			},
+		},
+	},
+});
+const stateAfter = await http("GET", "/scs/state", { cookie: B.cookie });
+check(
+	"input: good contact details are kept, tidied (https added, phone letters and tags dropped)",
+	r.status === 200 &&
+		stateAfter.json?.intake?.contact?.portfolio === "https://example.com/me" &&
+		stateAfter.json?.intake?.contact?.linkedin === "https://www.linkedin.com/in/zoe-b" &&
+		/^[\d+()\-.\s]+$/.test(stateAfter.json?.intake?.contact?.phone ?? "x"),
+	JSON.stringify(stateAfter.json?.intake),
+);
+r = await http("PUT", "/scs/onboarding/intake", { cookie: B.cookie, body: { intake: { contact: { email: P } } } });
+check("input: an email address with markup is refused", r.status === 400);
+r = await http("PUT", "/scs/missions", {
+	cookie: B.cookie,
+	body: { ...mission, name: `Plan ${P}`, answers: { "bad key!": "x" } },
+});
+check("input: odd answer keys are refused", r.status === 400);
+r = await http("PUT", "/scs/missions", { cookie: B.cookie, body: { ...mission, name: `Plan ${P}` } });
+check(
+	"input: a mission name is stored without tags",
+	r.status === 200 && !/[<>]/.test(r.json?.name ?? "<"),
+	JSON.stringify(r.json?.name),
 );
 
 // ---------- Friend codes ----------
