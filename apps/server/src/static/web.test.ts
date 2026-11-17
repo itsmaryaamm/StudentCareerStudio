@@ -199,6 +199,21 @@ describe("web app fallback classification", () => {
 		);
 	});
 
+	it.each(["privacy", "terms", "cookies"])("serves the %s page as the app shell, not a 404", async (path) => {
+		vi.mocked(fs.readFile).mockResolvedValue("<html><head></head><body></body></html>");
+		const response = await handleWebApp(new Request(`https://example.com/${path}`));
+		expect(response.status).toBe(200);
+		expect(response.headers.get("Content-Type")).toBe("text/html; charset=UTF-8");
+		expect(response.headers.get("X-Robots-Tag")).toBeNull();
+	});
+
+	it("serves the thank-you page as a noindex shell", async () => {
+		vi.mocked(fs.readFile).mockResolvedValue("<html><head></head><body></body></html>");
+		const response = await handleWebApp(new Request("https://example.com/thanks"));
+		expect(response.status).toBe(200);
+		expect(response.headers.get("X-Robots-Tag")).toBe("noindex, follow");
+	});
+
 	it.each(["ats-checker", "resume-templates"])(
 		"serves the %s page as an indexable shell rather than a 404",
 		async (path) => {

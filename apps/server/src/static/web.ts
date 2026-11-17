@@ -37,6 +37,9 @@ const prerenderRoot = `${staticRoot}-prerender`;
  * server serves the shell for anything, so this failure only ever shows up once deployed.
  */
 const indexableAppPaths = new Set(["/ats-checker", "/resume-templates"]);
+// The legal pages and the thank-you page are plain app pages: served as the shell, never as a prerendered marketing page.
+const legalAppPaths = new Set(["/privacy", "/terms", "/cookies"]);
+const noindexAppPaths = new Set(["/thanks"]);
 const reservedPublicResumeSegments = new Set<string>(RESERVED_SEGMENTS);
 
 function isAssetPath(pathname: string): boolean {
@@ -325,7 +328,7 @@ export const serveWebDistStatic = env.CLOUDFLARE
 		});
 
 function getFallbackResponseHeaders(pathname: string) {
-	if (pathname === "/" || indexableAppPaths.has(pathname)) {
+	if (pathname === "/" || indexableAppPaths.has(pathname) || legalAppPaths.has(pathname)) {
 		return { "Content-Type": "text/html; charset=UTF-8", ...BASE_SECURITY_HEADERS };
 	}
 	// A feedback link's page is private to whoever holds the link: never indexed, never sent on as a referrer.
@@ -337,7 +340,7 @@ function getFallbackResponseHeaders(pathname: string) {
 			"Referrer-Policy": "no-referrer",
 		};
 	}
-	if (isAppSectionPath(pathname)) {
+	if (isAppSectionPath(pathname) || noindexAppPaths.has(pathname)) {
 		return {
 			"Content-Type": "text/html; charset=UTF-8",
 			"X-Robots-Tag": "noindex, follow",
