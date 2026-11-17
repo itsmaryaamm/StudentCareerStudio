@@ -653,7 +653,7 @@ export function Footer() {
 		<footer className="border-t border-[#E3DCF5] bg-white">
 			<div className="mx-auto flex max-w-[1280px] flex-wrap items-center gap-5 px-6 py-8 text-sm text-[#6B6585] max-[759px]:flex-col max-[759px]:items-start max-[759px]:gap-2.5 max-[759px]:px-[18px] max-[759px]:pt-6 max-[759px]:pb-[110px] max-[759px]:text-[14.5px]">
 				<span className="flex items-center gap-2.5 font-bold text-[#1A0B3B]">
-					<BrandWordmark variant="light" className="h-11" />
+					<BrandWordmark variant="light" className="h-14" />
 				</span>
 				<span>Made by Maryam Imran, for students</span>
 				<nav

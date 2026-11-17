@@ -12,7 +12,7 @@ export function PhoneTopBar() {
 				href="#top"
 				className="flex min-h-11 items-center gap-2 text-[15.5px] font-bold tracking-[-0.02em] whitespace-nowrap text-[#1A0B3B]"
 			>
-				<BrandWordmark variant="light" className="h-10" />
+				<BrandWordmark variant="light" className="h-12" />
 			</a>
 			<span className="flex-1" />
 			<Link
@@ -84,7 +84,7 @@ function PhoneMenuSheet({ onClose }: { onClose: () => void }) {
 		>
 			<div className="flex items-center py-3.5 pr-3 pl-4">
 				<span className="flex items-center gap-2 text-[15.5px] font-bold">
-					<BrandWordmark variant="light" className="h-10" />
+					<BrandWordmark variant="light" className="h-12" />
 				</span>
 				<span className="flex-1" />
 				<button

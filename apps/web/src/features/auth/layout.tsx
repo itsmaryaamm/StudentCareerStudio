@@ -17,7 +17,7 @@ export function AuthLayout() {
 					to="/"
 					className="absolute start-5 top-3 flex items-center gap-2.5 rounded-md px-2 text-[15px] leading-5 font-semibold [view-transition-name:auth-brand]"
 				>
-					<BrandWordmark variant="light" className="h-11" />
+					<BrandWordmark variant="light" className="h-14" />
 				</Link>
 
 				<div className="flex w-full max-w-[412px] flex-col px-4">

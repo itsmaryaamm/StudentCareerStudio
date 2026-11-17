@@ -411,7 +411,7 @@ export function OnboardingChat() {
 
 			<header className="flex items-center justify-between px-5 py-4 sm:px-8">
 				<div className="flex items-center gap-2.5 text-[15px] font-semibold">
-					<BrandWordmark variant="light" className="h-10" />
+					<BrandWordmark variant="light" className="h-12" />
 				</div>
 				<Button
 					variant="ghost"

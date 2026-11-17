@@ -85,7 +85,7 @@ export function HeroNav() {
 				href="#top"
 				className="flex items-center gap-2.5 text-base font-bold tracking-[-0.02em] whitespace-nowrap text-[#1A0B3B]"
 			>
-				<BrandWordmark variant="light" className="h-12" />
+				<BrandWordmark variant="light" className="h-16" />
 			</a>
 			<Links compact={false} />
 			<Actions compact={false} />
@@ -109,7 +109,7 @@ export function FloatingNav() {
 					href="#top"
 					className="flex items-center gap-2 text-[15px] font-bold tracking-[-0.02em] whitespace-nowrap text-[#1A0B3B]"
 				>
-					<BrandWordmark variant="light" className="h-10" />
+					<BrandWordmark variant="light" className="h-12" />
 				</a>
 				<Links compact />
 				<Actions compact />
