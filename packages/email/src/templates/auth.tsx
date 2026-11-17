@@ -25,7 +25,7 @@ void React;
 const appName = "Student Career Studio";
 // A PNG from this installation (mail clients block SVG, and a self-hosted server shouldn't lean on the public site).
 const appUrl = (process.env.APP_URL ?? "https://studentcareerstudio.maryamimran.com").replace(/\/+$/, "");
-const logoUrl = `${appUrl}/email-logo.png`;
+const logoUrl = `${appUrl}/brand/logo-horizontal-800.png`;
 
 // The app's Desk & Paper values, with system fallbacks: a light ground survives clients that force dark mode.
 const colors = {
@@ -82,7 +82,7 @@ function AuthEmailLayout({
 						style={{ backgroundColor: colors.paper, border: `1px solid ${colors.line}` }}
 					>
 						<Section>
-							<Img src={logoUrl} alt={appName} width="40" height="40" className="block rounded-xl" />
+							<Img src={logoUrl} alt={appName} width="200" height="62" className="block" />
 						</Section>
 
 						<Section className="mt-6">
