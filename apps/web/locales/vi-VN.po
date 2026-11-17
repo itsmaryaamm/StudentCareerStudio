@@ -2206,6 +2206,11 @@ msgstr "Có một font được tham chiếu nhưng không được nhúng."
 msgid "A free and open-source resume builder"
 msgstr "Trình xây dựng sơ yếu lý lịch mã nguồn mở và miễn phí"
 
+#. Email footer. author: Maryam Imran, linked
+#: src/features/auth/email-text.ts
+msgid "A free beta by {author}."
+msgstr ""
+
 #. Hero headline, line 1 of 4: A free, open-source / resume builder / and / career manager.
 #: src/features/homepage/hero.tsx
 msgid "A free, open-source"
@@ -2271,11 +2276,6 @@ msgstr "Một ngày dạng số được đọc khác nhau ở mỗi quốc gia.
 #: src/features/ats-checker/messages.ts
 msgid "A page is rotated."
 msgstr "Một trang bị xoay."
-
-#. Email footer. author: Amruth Pillai, linked
-#: src/features/auth/email-text.ts
-msgid "A passion project by {author}."
-msgstr "Một dự án tâm huyết của {author}."
 
 #: src/features/resume/editor/check/job-match.tsx
 msgid "A pasted posting can be saved as an application afterwards."
@@ -3595,7 +3595,7 @@ msgstr "Phê duyệt và tạo bộ hồ sơ"
 msgid "Approve change"
 msgstr "Phê duyệt thay đổi"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Approve changing your {appName} email address"
 msgstr "Phê duyệt việc thay đổi địa chỉ email {appName} của bạn"
@@ -4374,7 +4374,6 @@ msgstr "trước cuối ngày"
 msgid "by feature."
 msgstr "theo tính năng."
 
-#: src/features/auth/email-text.ts
 #: src/features/homepage/footer.tsx
 msgid "By the community, for the community."
 msgstr "Bởi cộng đồng, vì cộng đồng."
@@ -5409,12 +5408,12 @@ msgstr "Xác nhận mật khẩu"
 msgid "Confirm the time, link and who you'll meet. Glance at the resume and letter you sent."
 msgstr "Xác nhận thời gian, đường liên kết và người bạn sẽ gặp. Xem qua sơ yếu lý lịch và thư bạn đã gửi."
 
-#. Email sent to a new address to finish an email change. appName: Reactive Resume
+#. Email sent to a new address to finish an email change. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this address to finish changing your {appName} email. The link works for 1 hour."
 msgstr "Hãy xác nhận địa chỉ này để hoàn tất việc thay đổi email {appName} của bạn. Liên kết có hiệu lực trong 1 giờ."
 
-#. Verification email. appName: Reactive Resume
+#. Verification email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "Hãy xác nhận đây là địa chỉ email của bạn cho {appName}. Liên kết có hiệu lực trong 1 giờ."
@@ -5423,7 +5422,7 @@ msgstr "Hãy xác nhận đây là địa chỉ email của bạn cho {appName}.
 msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm your new {appName} email address"
 msgstr "Xác nhận địa chỉ email {appName} mới của bạn"
@@ -9064,8 +9063,8 @@ msgid "For portals and recruiters that ask for Word. Simpler layout."
 msgstr "Cho các cổng tuyển dụng và nhà tuyển dụng yêu cầu Word. Bố cục đơn giản hơn."
 
 #: src/features/auth/email-text.ts
-msgid "For security, only use links from emails sent by Reactive Resume."
-msgstr "Vì lý do bảo mật, chỉ dùng các liên kết từ email do Reactive Resume gửi."
+msgid "For security, only use links from emails sent by Student Career Studio."
+msgstr ""
 
 #: src/features/career/workspace/debrief.tsx
 msgid "For the next round:"
@@ -16408,7 +16407,7 @@ msgstr "Đặt lại thiết kế về mặc định"
 msgid "Reset password"
 msgstr "Đặt lại mật khẩu"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Reset your {appName} password"
 msgstr "Đặt lại mật khẩu {appName} của bạn"
@@ -18726,7 +18725,7 @@ msgstr "Một số văn bản bị xoay."
 msgid "Some uploaded files were skipped. Check upload-manifest.json in the archive."
 msgstr "Một số tệp đã tải lên bị bỏ qua. Kiểm tra upload-manifest.json trong tệp nén."
 
-#. Email change approval. appName: Reactive Resume; previousEmail and newEmail are email addresses
+#. Email change approval. appName: Student Career Studio; previousEmail and newEmail are email addresses
 #: src/features/auth/email-text.ts
 msgid "Someone asked to change your {appName} email from {previousEmail} to {newEmail}."
 msgstr "Có người đã yêu cầu đổi email {appName} của bạn từ {previousEmail} sang {newEmail}."
@@ -22056,7 +22055,7 @@ msgstr "Hãy xác minh ở đó, rồi thử lại."
 msgid "Verify your email"
 msgstr "Xác minh email của bạn"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Verify your email for {appName}"
 msgstr "Xác minh email của bạn cho {appName}"
@@ -22237,7 +22236,7 @@ msgstr "Các cách nhập không dùng AI"
 msgid "WCAG 2.1 AA"
 msgstr "WCAG 2.1 AA"
 
-#. Password reset email. appName: Reactive Resume
+#. Password reset email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "We received a request to reset your {appName} password."
 msgstr "Chúng tôi đã nhận được yêu cầu đặt lại mật khẩu {appName} của bạn."
@@ -23315,6 +23314,10 @@ msgstr "Tính năng đọc chính tả của trình duyệt đã dừng. Hãy th
 #: src/features/ats-checker/messages.ts
 msgid "Your bullets are drawn with unusual characters."
 msgstr "Các gạch đầu dòng của bạn được tạo bằng những ký tự khác thường."
+
+#: src/features/auth/email-text.ts
+msgid "Your career story, in one place."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/use-editor-hotkeys.ts
 #: src/routes/builder/letter/-components/letter-shell.tsx

@@ -2206,6 +2206,11 @@ msgstr ""
 msgid "A free and open-source resume builder"
 msgstr ""
 
+#. Email footer. author: Maryam Imran, linked
+#: src/features/auth/email-text.ts
+msgid "A free beta by {author}."
+msgstr ""
+
 #. Hero headline, line 1 of 4: A free, open-source / resume builder / and / career manager.
 #: src/features/homepage/hero.tsx
 msgid "A free, open-source"
@@ -2270,11 +2275,6 @@ msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "A page is rotated."
-msgstr ""
-
-#. Email footer. author: Amruth Pillai, linked
-#: src/features/auth/email-text.ts
-msgid "A passion project by {author}."
 msgstr ""
 
 #: src/features/resume/editor/check/job-match.tsx
@@ -3593,7 +3593,7 @@ msgstr ""
 msgid "Approve change"
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Approve changing your {appName} email address"
 msgstr ""
@@ -4372,7 +4372,6 @@ msgstr ""
 msgid "by feature."
 msgstr ""
 
-#: src/features/auth/email-text.ts
 #: src/features/homepage/footer.tsx
 msgid "By the community, for the community."
 msgstr ""
@@ -5407,12 +5406,12 @@ msgstr ""
 msgid "Confirm the time, link and who you'll meet. Glance at the resume and letter you sent."
 msgstr ""
 
-#. Email sent to a new address to finish an email change. appName: Reactive Resume
+#. Email sent to a new address to finish an email change. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this address to finish changing your {appName} email. The link works for 1 hour."
 msgstr ""
 
-#. Verification email. appName: Reactive Resume
+#. Verification email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr ""
@@ -5421,7 +5420,7 @@ msgstr ""
 msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm your new {appName} email address"
 msgstr ""
@@ -9062,7 +9061,7 @@ msgid "For portals and recruiters that ask for Word. Simpler layout."
 msgstr ""
 
 #: src/features/auth/email-text.ts
-msgid "For security, only use links from emails sent by Reactive Resume."
+msgid "For security, only use links from emails sent by Student Career Studio."
 msgstr ""
 
 #: src/features/career/workspace/debrief.tsx
@@ -16405,7 +16404,7 @@ msgstr ""
 msgid "Reset password"
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Reset your {appName} password"
 msgstr ""
@@ -18723,7 +18722,7 @@ msgstr ""
 msgid "Some uploaded files were skipped. Check upload-manifest.json in the archive."
 msgstr ""
 
-#. Email change approval. appName: Reactive Resume; previousEmail and newEmail are email addresses
+#. Email change approval. appName: Student Career Studio; previousEmail and newEmail are email addresses
 #: src/features/auth/email-text.ts
 msgid "Someone asked to change your {appName} email from {previousEmail} to {newEmail}."
 msgstr ""
@@ -22053,7 +22052,7 @@ msgstr ""
 msgid "Verify your email"
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Verify your email for {appName}"
 msgstr ""
@@ -22234,7 +22233,7 @@ msgstr ""
 msgid "WCAG 2.1 AA"
 msgstr ""
 
-#. Password reset email. appName: Reactive Resume
+#. Password reset email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "We received a request to reset your {appName} password."
 msgstr ""
@@ -23311,6 +23310,10 @@ msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Your bullets are drawn with unusual characters."
+msgstr ""
+
+#: src/features/auth/email-text.ts
+msgid "Your career story, in one place."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-components/use-editor-hotkeys.ts

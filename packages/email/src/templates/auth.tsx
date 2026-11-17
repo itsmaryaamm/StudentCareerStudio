@@ -22,23 +22,23 @@ import { authEmailMessages, formatMessage } from "./auth-messages";
 // ponytail: server dev consumes this source through tsx, which emits React.createElement here.
 void React;
 
-const appName = "Reactive Resume";
+const appName = "Student Career Studio";
 // A PNG from this installation (mail clients block SVG, and a self-hosted server shouldn't lean on the public site).
-const appUrl = (process.env.APP_URL ?? "https://rxresu.me").replace(/\/+$/, "");
+const appUrl = (process.env.APP_URL ?? "https://studentcareerstudio.maryamimran.com").replace(/\/+$/, "");
 const logoUrl = `${appUrl}/apple-touch-icon-180x180.png`;
 
 // The app's Desk & Paper values, with system fallbacks: a light ground survives clients that force dark mode.
 const colors = {
-	desk: "#f8f7f3",
+	desk: "#f8f7ff",
 	paper: "#ffffff",
-	line: "#e5e2da",
-	ink: "#1c1b18",
-	muted: "#5f5c55",
-	accent: "#337344",
-	onAccent: "#f7fef8",
+	line: "#e3dcf5",
+	ink: "#1a0b3b",
+	muted: "#6b6585",
+	accent: "#6c3cf1",
+	onAccent: "#ffffff",
 };
 const bodyFont = "Figtree, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
-const headingFont = "'Instrument Serif', Georgia, 'Times New Roman', serif";
+const headingFont = bodyFont;
 
 interface AuthEmailLayoutProps {
 	locale: Locale;
@@ -82,12 +82,12 @@ function AuthEmailLayout({
 						style={{ backgroundColor: colors.paper, border: `1px solid ${colors.line}` }}
 					>
 						<Section>
-							<Img src={logoUrl} alt={appName} width="40" height="40" className="block rounded-md" />
+							<Img src={logoUrl} alt={appName} width="40" height="40" className="block rounded-xl" />
 						</Section>
 
 						<Section className="mt-6">
 							<Heading
-								className="m-0 text-3xl leading-tight font-normal whitespace-break-spaces"
+								className="m-0 text-3xl leading-tight font-bold whitespace-break-spaces"
 								style={{ fontFamily: headingFont }}
 							>
 								{heading}
@@ -138,11 +138,11 @@ function AuthEmailLayout({
 								<Link
 									target="_blank"
 									rel="noopener noreferrer"
-									href="https://amruthpillai.com"
+									href="https://maryamimran.com"
 									className="underline underline-offset-2"
 									style={{ color: colors.muted }}
 								>
-									Amruth Pillai
+									Maryam Imran
 								</Link>
 								{creditAfter}
 							</Text>

@@ -2206,6 +2206,11 @@ msgstr "خط مُشار إليه لكنه غير مُضمَّن."
 msgid "A free and open-source resume builder"
 msgstr "منشئ السيرة الذاتية مجاني ومفتوح المصدر"
 
+#. Email footer. author: Maryam Imran, linked
+#: src/features/auth/email-text.ts
+msgid "A free beta by {author}."
+msgstr ""
+
 #. Hero headline, line 1 of 4: A free, open-source / resume builder / and / career manager.
 #: src/features/homepage/hero.tsx
 msgid "A free, open-source"
@@ -2271,11 +2276,6 @@ msgstr "التاريخ الرقمي يُقرأ بشكل مختلف في بلدا
 #: src/features/ats-checker/messages.ts
 msgid "A page is rotated."
 msgstr "صفحة مُدوَّرة."
-
-#. Email footer. author: Amruth Pillai, linked
-#: src/features/auth/email-text.ts
-msgid "A passion project by {author}."
-msgstr "مشروع شغف من إعداد {author}."
 
 #: src/features/resume/editor/check/job-match.tsx
 msgid "A pasted posting can be saved as an application afterwards."
@@ -3595,7 +3595,7 @@ msgstr "الموافقة وإنشاء الحزمة"
 msgid "Approve change"
 msgstr "الموافقة على التغيير"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Approve changing your {appName} email address"
 msgstr "الموافقة على تغيير عنوان بريدك الإلكتروني في {appName}"
@@ -4374,7 +4374,6 @@ msgstr "بنهاية اليوم"
 msgid "by feature."
 msgstr "حسب الميزة."
 
-#: src/features/auth/email-text.ts
 #: src/features/homepage/footer.tsx
 msgid "By the community, for the community."
 msgstr "من المجتمع وللمجتمع."
@@ -5409,12 +5408,12 @@ msgstr "تأكيد كلمة المرور"
 msgid "Confirm the time, link and who you'll meet. Glance at the resume and letter you sent."
 msgstr "أكّد الموعد والرابط ومن ستقابل. ألقِ نظرة على السيرة الذاتية والخطاب اللذين أرسلتهما."
 
-#. Email sent to a new address to finish an email change. appName: Reactive Resume
+#. Email sent to a new address to finish an email change. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this address to finish changing your {appName} email. The link works for 1 hour."
 msgstr "أكّد هذا العنوان لإكمال تغيير بريدك الإلكتروني في {appName}. يعمل الرابط لمدة ساعة واحدة."
 
-#. Verification email. appName: Reactive Resume
+#. Verification email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "أكّد أن هذا هو عنوان بريدك الإلكتروني في {appName}. يعمل الرابط لمدة ساعة واحدة."
@@ -5423,7 +5422,7 @@ msgstr "أكّد أن هذا هو عنوان بريدك الإلكتروني ف�
 msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm your new {appName} email address"
 msgstr "أكّد عنوان بريدك الإلكتروني الجديد في {appName}"
@@ -9064,8 +9063,8 @@ msgid "For portals and recruiters that ask for Word. Simpler layout."
 msgstr "للبوابات والمسؤولين عن التوظيف الذين يطلبون Word. تخطيط أبسط."
 
 #: src/features/auth/email-text.ts
-msgid "For security, only use links from emails sent by Reactive Resume."
-msgstr "حفاظًا على أمانك، لا تستخدم إلا الروابط الواردة في رسائل البريد المرسلة من Reactive Resume."
+msgid "For security, only use links from emails sent by Student Career Studio."
+msgstr ""
 
 #: src/features/career/workspace/debrief.tsx
 msgid "For the next round:"
@@ -16408,7 +16407,7 @@ msgstr "إعادة تعيين التصميم إلى الافتراضي"
 msgid "Reset password"
 msgstr "إعادة تعيين كلمة المرور"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Reset your {appName} password"
 msgstr "إعادة تعيين كلمة مرور {appName}"
@@ -18726,7 +18725,7 @@ msgstr "بعض النص مُدوَّر."
 msgid "Some uploaded files were skipped. Check upload-manifest.json in the archive."
 msgstr "تم تخطي بعض الملفات المرفوعة. راجع upload-manifest.json داخل الأرشيف."
 
-#. Email change approval. appName: Reactive Resume; previousEmail and newEmail are email addresses
+#. Email change approval. appName: Student Career Studio; previousEmail and newEmail are email addresses
 #: src/features/auth/email-text.ts
 msgid "Someone asked to change your {appName} email from {previousEmail} to {newEmail}."
 msgstr "طلب أحدهم تغيير بريدك الإلكتروني في {appName} من {previousEmail} إلى {newEmail}."
@@ -22056,7 +22055,7 @@ msgstr "أكّده هناك، ثم حاول مجددًا."
 msgid "Verify your email"
 msgstr "تأكيد بريدك الإلكتروني"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Verify your email for {appName}"
 msgstr "تأكيد بريدك الإلكتروني في {appName}"
@@ -22237,7 +22236,7 @@ msgstr "طرق الإدخال بدون ذكاء اصطناعي"
 msgid "WCAG 2.1 AA"
 msgstr "WCAG 2.1 AA"
 
-#. Password reset email. appName: Reactive Resume
+#. Password reset email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "We received a request to reset your {appName} password."
 msgstr "تلقّينا طلبًا لإعادة تعيين كلمة مرور حسابك في {appName}."
@@ -23315,6 +23314,10 @@ msgstr "توقّف الإملاء الصوتي في متصفحك. حاول مر�
 #: src/features/ats-checker/messages.ts
 msgid "Your bullets are drawn with unusual characters."
 msgstr "نقاطك مرسومة بأحرف غير معتادة."
+
+#: src/features/auth/email-text.ts
+msgid "Your career story, in one place."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/use-editor-hotkeys.ts
 #: src/routes/builder/letter/-components/letter-shell.tsx

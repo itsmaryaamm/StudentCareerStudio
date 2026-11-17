@@ -2206,6 +2206,11 @@ msgstr "Nurodytas šriftas, tačiau jis neįterptas."
 msgid "A free and open-source resume builder"
 msgstr "Nemokamas atvirojo kodo gyvenimo aprašymų kūrėjas"
 
+#. Email footer. author: Maryam Imran, linked
+#: src/features/auth/email-text.ts
+msgid "A free beta by {author}."
+msgstr ""
+
 #. Hero headline, line 1 of 4: A free, open-source / resume builder / and / career manager.
 #: src/features/homepage/hero.tsx
 msgid "A free, open-source"
@@ -2271,11 +2276,6 @@ msgstr "Skaitmeninė data skirtingose šalyse skaitoma skirtingai."
 #: src/features/ats-checker/messages.ts
 msgid "A page is rotated."
 msgstr "Puslapis yra pasuktas."
-
-#. Email footer. author: Amruth Pillai, linked
-#: src/features/auth/email-text.ts
-msgid "A passion project by {author}."
-msgstr "Entuziastingas projektas, kurį sukūrė {author}."
 
 #: src/features/resume/editor/check/job-match.tsx
 msgid "A pasted posting can be saved as an application afterwards."
@@ -3595,7 +3595,7 @@ msgstr "Patvirtinti ir sukurti paketą"
 msgid "Approve change"
 msgstr "Patvirtinti pakeitimą"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Approve changing your {appName} email address"
 msgstr "Patvirtinkite savo {appName} el. pašto adreso keitimą"
@@ -4374,7 +4374,6 @@ msgstr "iki dienos pabaigos"
 msgid "by feature."
 msgstr "pagal funkciją."
 
-#: src/features/auth/email-text.ts
 #: src/features/homepage/footer.tsx
 msgid "By the community, for the community."
 msgstr "Bendruomenės ir bendruomenei."
@@ -5409,12 +5408,12 @@ msgstr "Patvirtinkite slaptažodį"
 msgid "Confirm the time, link and who you'll meet. Glance at the resume and letter you sent."
 msgstr "Patikrinkite laiką, nuorodą ir su kuo susitiksite. Peržvelkite išsiųstą gyvenimo aprašymą ir laišką."
 
-#. Email sent to a new address to finish an email change. appName: Reactive Resume
+#. Email sent to a new address to finish an email change. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this address to finish changing your {appName} email. The link works for 1 hour."
 msgstr "Patvirtinkite šį adresą, kad užbaigtumėte {appName} el. pašto keitimą. Nuoroda veikia 1 valandą."
 
-#. Verification email. appName: Reactive Resume
+#. Verification email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "Patvirtinkite, kad tai jūsų el. pašto adresas, skirtas {appName}. Nuoroda veikia 1 valandą."
@@ -5423,7 +5422,7 @@ msgstr "Patvirtinkite, kad tai jūsų el. pašto adresas, skirtas {appName}. Nuo
 msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm your new {appName} email address"
 msgstr "Patvirtinkite naująjį {appName} el. pašto adresą"
@@ -9064,8 +9063,8 @@ msgid "For portals and recruiters that ask for Word. Simpler layout."
 msgstr "Portalams ir įdarbintojams, kurie prašo Word failo. Paprastesnis maketas."
 
 #: src/features/auth/email-text.ts
-msgid "For security, only use links from emails sent by Reactive Resume."
-msgstr "Saugumo sumetimais naudokite tik nuorodas iš Reactive Resume išsiųstų el. laiškų."
+msgid "For security, only use links from emails sent by Student Career Studio."
+msgstr ""
 
 #: src/features/career/workspace/debrief.tsx
 msgid "For the next round:"
@@ -16408,7 +16407,7 @@ msgstr "Atkurti numatytąjį dizainą"
 msgid "Reset password"
 msgstr "Atkurti slaptažodį"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Reset your {appName} password"
 msgstr "Iš naujo nustatykite savo {appName} slaptažodį"
@@ -18726,7 +18725,7 @@ msgstr "Dalis teksto pasukta."
 msgid "Some uploaded files were skipped. Check upload-manifest.json in the archive."
 msgstr "Kai kurie įkelti failai praleisti. Patikrinkite archyve esantį upload-manifest.json."
 
-#. Email change approval. appName: Reactive Resume; previousEmail and newEmail are email addresses
+#. Email change approval. appName: Student Career Studio; previousEmail and newEmail are email addresses
 #: src/features/auth/email-text.ts
 msgid "Someone asked to change your {appName} email from {previousEmail} to {newEmail}."
 msgstr "Kažkas paprašė pakeisti jūsų {appName} el. paštą iš {previousEmail} į {newEmail}."
@@ -22056,7 +22055,7 @@ msgstr "Patvirtinkite jį ten, tada bandykite dar kartą."
 msgid "Verify your email"
 msgstr "Patvirtinkite savo el. paštą"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Verify your email for {appName}"
 msgstr "Patvirtinkite savo {appName} el. paštą"
@@ -22237,7 +22236,7 @@ msgstr "Būdai be DI"
 msgid "WCAG 2.1 AA"
 msgstr "WCAG 2.1 AA"
 
-#. Password reset email. appName: Reactive Resume
+#. Password reset email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "We received a request to reset your {appName} password."
 msgstr "Gavome prašymą iš naujo nustatyti jūsų {appName} slaptažodį."
@@ -23315,6 +23314,10 @@ msgstr "Jūsų naršyklės diktavimas sustojo. Bandykite dar kartą arba įveski
 #: src/features/ats-checker/messages.ts
 msgid "Your bullets are drawn with unusual characters."
 msgstr "Jūsų punktai pažymėti neįprastais simboliais."
+
+#: src/features/auth/email-text.ts
+msgid "Your career story, in one place."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/use-editor-hotkeys.ts
 #: src/routes/builder/letter/-components/letter-shell.tsx

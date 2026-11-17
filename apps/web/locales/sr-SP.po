@@ -2206,6 +2206,11 @@ msgstr "Фонт је наведен, али није уграђен."
 msgid "A free and open-source resume builder"
 msgstr "Бесплатан креатор резимеа отвореног кода"
 
+#. Email footer. author: Maryam Imran, linked
+#: src/features/auth/email-text.ts
+msgid "A free beta by {author}."
+msgstr ""
+
 #. Hero headline, line 1 of 4: A free, open-source / resume builder / and / career manager.
 #: src/features/homepage/hero.tsx
 msgid "A free, open-source"
@@ -2271,11 +2276,6 @@ msgstr "Нумерички датум се различито чита у раз
 #: src/features/ats-checker/messages.ts
 msgid "A page is rotated."
 msgstr "Страница је ротирана."
-
-#. Email footer. author: Amruth Pillai, linked
-#: src/features/auth/email-text.ts
-msgid "A passion project by {author}."
-msgstr "Пројекат из страсти аутора {author}."
 
 #: src/features/resume/editor/check/job-match.tsx
 msgid "A pasted posting can be saved as an application afterwards."
@@ -3595,7 +3595,7 @@ msgstr "Одобри и направи пакет"
 msgid "Approve change"
 msgstr "Одобри промену"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Approve changing your {appName} email address"
 msgstr "Одобрите промену адресе е-поште за {appName}"
@@ -4374,7 +4374,6 @@ msgstr "до краја дана"
 msgid "by feature."
 msgstr "по функцији."
 
-#: src/features/auth/email-text.ts
 #: src/features/homepage/footer.tsx
 msgid "By the community, for the community."
 msgstr "Од заједнице, за заједницу."
@@ -5409,12 +5408,12 @@ msgstr "Потврдите лозинку"
 msgid "Confirm the time, link and who you'll meet. Glance at the resume and letter you sent."
 msgstr "Потврдите време, линк и са ким ћете се састати. Баците поглед на резиме и писмо које сте послали."
 
-#. Email sent to a new address to finish an email change. appName: Reactive Resume
+#. Email sent to a new address to finish an email change. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this address to finish changing your {appName} email. The link works for 1 hour."
 msgstr "Потврдите ову адресу да бисте довршили промену е-поште за {appName}. Веза важи 1 сат."
 
-#. Verification email. appName: Reactive Resume
+#. Verification email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "Потврдите да је ово ваша адреса е-поште за {appName}. Веза важи 1 сат."
@@ -5423,7 +5422,7 @@ msgstr "Потврдите да је ово ваша адреса е-поште 
 msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm your new {appName} email address"
 msgstr "Потврдите нову адресу е-поште за {appName}"
@@ -9064,8 +9063,8 @@ msgid "For portals and recruiters that ask for Word. Simpler layout."
 msgstr "За портале и регрутере који траже Word. Једноставнији распоред."
 
 #: src/features/auth/email-text.ts
-msgid "For security, only use links from emails sent by Reactive Resume."
-msgstr "Из безбедносних разлога користите само везе из е-порука које шаље Reactive Resume."
+msgid "For security, only use links from emails sent by Student Career Studio."
+msgstr ""
 
 #: src/features/career/workspace/debrief.tsx
 msgid "For the next round:"
@@ -16408,7 +16407,7 @@ msgstr "Врати дизајн на подразумевано"
 msgid "Reset password"
 msgstr "Ресетуј лозинку"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Reset your {appName} password"
 msgstr "Ресетујте лозинку за {appName}"
@@ -18726,7 +18725,7 @@ msgstr "Део текста је ротиран."
 msgid "Some uploaded files were skipped. Check upload-manifest.json in the archive."
 msgstr "Неке отпремљене датотеке су прескочене. Проверите upload-manifest.json у архиви."
 
-#. Email change approval. appName: Reactive Resume; previousEmail and newEmail are email addresses
+#. Email change approval. appName: Student Career Studio; previousEmail and newEmail are email addresses
 #: src/features/auth/email-text.ts
 msgid "Someone asked to change your {appName} email from {previousEmail} to {newEmail}."
 msgstr "Неко је затражио промену ваше е-поште за {appName} са {previousEmail} на {newEmail}."
@@ -22056,7 +22055,7 @@ msgstr "Потврдите тамо, па покушајте поново."
 msgid "Verify your email"
 msgstr "Верификујте е-пошту"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Verify your email for {appName}"
 msgstr "Верификујте е-пошту за {appName}"
@@ -22237,7 +22236,7 @@ msgstr "Начини увоза без AI"
 msgid "WCAG 2.1 AA"
 msgstr "WCAG 2.1 AA"
 
-#. Password reset email. appName: Reactive Resume
+#. Password reset email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "We received a request to reset your {appName} password."
 msgstr "Примили смо захтев за ресетовање ваше лозинке за {appName}."
@@ -23315,6 +23314,10 @@ msgstr "Диктирање у прегледачу је заустављено. 
 #: src/features/ats-checker/messages.ts
 msgid "Your bullets are drawn with unusual characters."
 msgstr "Ваше ставке су исцртане необичним знаковима."
+
+#: src/features/auth/email-text.ts
+msgid "Your career story, in one place."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/use-editor-hotkeys.ts
 #: src/routes/builder/letter/-components/letter-shell.tsx

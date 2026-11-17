@@ -2206,6 +2206,11 @@ msgstr "एक फाँट संदर्भित आहे पण एम्�
 msgid "A free and open-source resume builder"
 msgstr "एक विनामूल्य आणि मुक्त स्रोत रेझ्युमे बिल्डर"
 
+#. Email footer. author: Maryam Imran, linked
+#: src/features/auth/email-text.ts
+msgid "A free beta by {author}."
+msgstr ""
+
 #. Hero headline, line 1 of 4: A free, open-source / resume builder / and / career manager.
 #: src/features/homepage/hero.tsx
 msgid "A free, open-source"
@@ -2271,11 +2276,6 @@ msgstr "आकडेवारी तारीख वेगवेगळ्या 
 #: src/features/ats-checker/messages.ts
 msgid "A page is rotated."
 msgstr "एक पान फिरवलेले आहे."
-
-#. Email footer. author: Amruth Pillai, linked
-#: src/features/auth/email-text.ts
-msgid "A passion project by {author}."
-msgstr "{author} चा एक छंदाचा प्रकल्प."
 
 #: src/features/resume/editor/check/job-match.tsx
 msgid "A pasted posting can be saved as an application afterwards."
@@ -3595,7 +3595,7 @@ msgstr "मंजूर करा आणि पैकेट तयार कर�
 msgid "Approve change"
 msgstr "बदल मंजूर करा"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Approve changing your {appName} email address"
 msgstr "तुमचा {appName} ईमेल पत्ता बदलणे मंजूर करा"
@@ -4374,7 +4374,6 @@ msgstr "दिवस संपेपर्यंत"
 msgid "by feature."
 msgstr "वैशिष्ट्यानुसार."
 
-#: src/features/auth/email-text.ts
 #: src/features/homepage/footer.tsx
 msgid "By the community, for the community."
 msgstr "समुदायाकडून, समुदायासाठी."
@@ -5409,12 +5408,12 @@ msgstr "पासवर्डची पुष्टी करा"
 msgid "Confirm the time, link and who you'll meet. Glance at the resume and letter you sent."
 msgstr "वेळ, लिंक आणि तुम्ही कोणाला भेटणार ते निश्चित करा. तुम्ही पाठवलेला रेझ्युमे आणि पत्र एकदा पाहून घ्या."
 
-#. Email sent to a new address to finish an email change. appName: Reactive Resume
+#. Email sent to a new address to finish an email change. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this address to finish changing your {appName} email. The link works for 1 hour."
 msgstr "तुमचा {appName} ईमेल बदल पूर्ण करण्यासाठी हा पत्ता खात्री करा. दुवा 1 तास काम करतो."
 
-#. Verification email. appName: Reactive Resume
+#. Verification email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "हा तुमचा {appName} साठीचा ईमेल पत्ता आहे याची खात्री करा. दुवा 1 तास काम करतो."
@@ -5423,7 +5422,7 @@ msgstr "हा तुमचा {appName} साठीचा ईमेल पत�
 msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm your new {appName} email address"
 msgstr "तुमचा नवीन {appName} ईमेल पत्ता खात्री करा"
@@ -9064,8 +9063,8 @@ msgid "For portals and recruiters that ask for Word. Simpler layout."
 msgstr "Word मागणाऱ्या पोर्टल आणि रिक्रूटर्ससाठी. सोपी मांडणी."
 
 #: src/features/auth/email-text.ts
-msgid "For security, only use links from emails sent by Reactive Resume."
-msgstr "सुरक्षेसाठी फक्त Reactive Resume ने पाठवलेल्या ईमेलमधील दुवेच वापरा."
+msgid "For security, only use links from emails sent by Student Career Studio."
+msgstr ""
 
 #: src/features/career/workspace/debrief.tsx
 msgid "For the next round:"
@@ -16408,7 +16407,7 @@ msgstr "डिझाइन डीफॉल्टवर रीसेट करा
 msgid "Reset password"
 msgstr "पासवर्ड रीसेट करा"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Reset your {appName} password"
 msgstr "तुमचा {appName} पासवर्ड रीसेट करा"
@@ -18726,7 +18725,7 @@ msgstr "काही मजकूर फिरवलेला आहे."
 msgid "Some uploaded files were skipped. Check upload-manifest.json in the archive."
 msgstr "अपलोड केलेल्या काही फायली वगळल्या गेल्या. संग्रहातील upload-manifest.json तपासा."
 
-#. Email change approval. appName: Reactive Resume; previousEmail and newEmail are email addresses
+#. Email change approval. appName: Student Career Studio; previousEmail and newEmail are email addresses
 #: src/features/auth/email-text.ts
 msgid "Someone asked to change your {appName} email from {previousEmail} to {newEmail}."
 msgstr "कोणीतरी तुमचा {appName} ईमेल {previousEmail} पासून {newEmail} कडे बदलण्याची विनंती करते."
@@ -22056,7 +22055,7 @@ msgstr "तिथे ते सत्यापित करा, नंतर प
 msgid "Verify your email"
 msgstr "तुमचा ईमेल सत्यापित करा"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Verify your email for {appName}"
 msgstr "{appName} साठी तुमचा ईमेल सत्यापित करा"
@@ -22237,7 +22236,7 @@ msgstr "AI शिवाय सुरुवातीचे मार्ग"
 msgid "WCAG 2.1 AA"
 msgstr "WCAG 2.1 AA"
 
-#. Password reset email. appName: Reactive Resume
+#. Password reset email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "We received a request to reset your {appName} password."
 msgstr "तुमचा {appName} पासवर्ड रीसेट करण्याची विनंती आम्हाला मिळाली आहे."
@@ -23315,6 +23314,10 @@ msgstr "तुमच्या ब्राउझरचे डिक्टेश�
 #: src/features/ats-checker/messages.ts
 msgid "Your bullets are drawn with unusual characters."
 msgstr "तुमचे बुलेट्स असामान्य अक्षरांनी काढलेले आहेत."
+
+#: src/features/auth/email-text.ts
+msgid "Your career story, in one place."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/use-editor-hotkeys.ts
 #: src/routes/builder/letter/-components/letter-shell.tsx

@@ -5,7 +5,7 @@
 		"We received a request to reset your {appName} password.": "Ons het ’n versoek ontvang om jou {appName}-wagwoord te herstel.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Die skakel werk vir 1 uur. Herstel meld jou op elke toestel af en verwyder jou pasleutels, API-sleutels en gekoppelde toeps. As jy nie hiervoor gevra het nie, ignoreer hierdie e-pos; jou wagwoord bly dieselfde.",
 		"Create new password": "Skep nuwe wagwoord",
-		"For security, only use links from emails sent by Reactive Resume.": "Vir sekuriteit, gebruik slegs skakels uit e-posboodskappe wat deur Reactive Resume gestuur is.",
+		"For security, only use links from emails sent by Student Career Studio.": "Vir sekuriteit, gebruik slegs skakels uit e-posboodskappe wat deur Student Career Studio gestuur is.",
 		"Verify your email": "Verifieer jou e-pos",
 		"Verify your email for {appName}": "Verifieer jou e-pos vir {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Bevestig dat hierdie jou e-posadres vir {appName} is. Die skakel werk vir 1 uur.",
@@ -26,8 +26,8 @@
 		"Approve change": "Keur wysiging goed",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "As jy nie hierdie verandering versoek het nie, ignoreer hierdie e-pos en verander jou wagwoord. Die adres op die rekening sal nie sonder jou goedkeuring verander nie.",
 		"If the button does not work, copy and paste this link into your browser:": "As die knoppie nie werk nie, kopieer en plak hierdie skakel in jou blaaier:",
-		"By the community, for the community.": "Deur die gemeenskap, vir die gemeenskap.",
-		"A passion project by {author}.": "’n Passieprojek deur {author}."
+		"Your career story, in one place.": "Deur die gemeenskap, vir die gemeenskap.",
+		"A free beta by {author}.": "’n Passieprojek deur {author}."
 	},
 	"am-ET": {
 		"Reset your password": "የይለፍ ቃልዎን ዳግም ያስጀምሩ",
@@ -35,7 +35,7 @@
 		"We received a request to reset your {appName} password.": "የ{appName} የይለፍ ቃልዎን ዳግም ለማስጀመር ጥያቄ ደርሶናል።",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "አገናኙ ለ1 ሰዓት ይሠራል። ዳግም ማስጀመር ከሁሉም መሣሪያዎች ያስወጣዎታል እንዲሁም ፓስኪዎችዎን፣ API ቁልፎችዎን እና የተገናኙ መተግበሪያዎችን ያስወግዳል። ይህንን ካልጠየቁ፣ ይህንን ኢሜይል ችላ ይበሉ፤ የይለፍ ቃልዎ አይቀየርም።",
 		"Create new password": "አዲስ የይለፍ ቃል ፍጠር",
-		"For security, only use links from emails sent by Reactive Resume.": "ለደህንነት ሲባል፣ በReactive Resume ከተላኩ ኢሜይሎች የሚመጡ አገናኞችን ብቻ ይጠቀሙ።",
+		"For security, only use links from emails sent by Student Career Studio.": "ለደህንነት ሲባል፣ በStudent Career Studio ከተላኩ ኢሜይሎች የሚመጡ አገናኞችን ብቻ ይጠቀሙ።",
 		"Verify your email": "ኢሜይልዎን ያረጋግጡ",
 		"Verify your email for {appName}": "ለ{appName} ኢሜይልዎን ያረጋግጡ",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "ይህ ለ{appName} የእርስዎ ኢሜይል አድራሻ መሆኑን ያረጋግጡ። አገናኙ ለ1 ሰዓት ይሠራል።",
@@ -56,8 +56,8 @@
 		"Approve change": "ለውጡን አጽድቅ",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "ይህንን ለውጥ ካልጠየቁ፣ ይህንን ኢሜይል ችላ ይበሉ እና የይለፍ ቃልዎን ይቀይሩ። በመለያው ላይ ያለው አድራሻ ያለ እርስዎ ማጽደቅ አይቀየርም።",
 		"If the button does not work, copy and paste this link into your browser:": "አዝራሩ ካልሠራ፣ ይህንን አገናኝ ቀድተው በአሳሽዎ ውስጥ ይለጥፉ፦",
-		"By the community, for the community.": "በማህበረሰቡ፣ ለማህበረሰቡ።",
-		"A passion project by {author}.": "በ{author} የተሰራ የፍቅር ፕሮጀክት።"
+		"Your career story, in one place.": "በማህበረሰቡ፣ ለማህበረሰቡ።",
+		"A free beta by {author}.": "በ{author} የተሰራ የፍቅር ፕሮጀክት።"
 	},
 	"ar-SA": {
 		"Reset your password": "إعادة تعيين كلمة المرور",
@@ -65,7 +65,7 @@
 		"We received a request to reset your {appName} password.": "تلقّينا طلبًا لإعادة تعيين كلمة مرور حسابك في {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "يعمل الرابط لمدة ساعة واحدة. تؤدي إعادة التعيين إلى تسجيل خروجك من كل الأجهزة وإزالة مفاتيح المرور ومفاتيح API والتطبيقات المتصلة. إذا لم تطلب ذلك، فتجاهل هذا البريد؛ ستبقى كلمة مرورك كما هي.",
 		"Create new password": "إنشاء كلمة مرور جديدة",
-		"For security, only use links from emails sent by Reactive Resume.": "حفاظًا على أمانك، لا تستخدم إلا الروابط الواردة في رسائل البريد المرسلة من Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "حفاظًا على أمانك، لا تستخدم إلا الروابط الواردة في رسائل البريد المرسلة من Student Career Studio.",
 		"Verify your email": "تأكيد بريدك الإلكتروني",
 		"Verify your email for {appName}": "تأكيد بريدك الإلكتروني في {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "أكّد أن هذا هو عنوان بريدك الإلكتروني في {appName}. يعمل الرابط لمدة ساعة واحدة.",
@@ -86,8 +86,8 @@
 		"Approve change": "الموافقة على التغيير",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "إن لم تطلب هذا التغيير، فتجاهل هذه الرسالة وغيّر كلمة مرورك. لن يتغيّر عنوان الحساب دون موافقتك.",
 		"If the button does not work, copy and paste this link into your browser:": "إذا لم يعمل الزر، فانسخ هذا الرابط والصقه في متصفحك:",
-		"By the community, for the community.": "من المجتمع وللمجتمع.",
-		"A passion project by {author}.": "مشروع شغف من إعداد {author}."
+		"Your career story, in one place.": "من المجتمع وللمجتمع.",
+		"A free beta by {author}.": "مشروع شغف من إعداد {author}."
 	},
 	"az-AZ": {
 		"Reset your password": "Parolunuzu sıfırlayın",
@@ -95,7 +95,7 @@
 		"We received a request to reset your {appName} password.": "{appName} parolunuzu sıfırlama sorğusu aldıq.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Keçid 1 saat işləyir. Sıfırlama sizi hər cihazdan çıxarır və keçid açarlarınızı, API açarlarınızı və qoşulmuş tətbiqlərinizi silir. Bunu siz istəməmisinizsə, bu e-poçtu nəzərə almayın; parolunuz eyni qalır.",
 		"Create new password": "Yeni parol yaradın",
-		"For security, only use links from emails sent by Reactive Resume.": "Təhlükəsizlik üçün yalnız Reactive Resume-nin göndərdiyi e-poçtlardakı keçidlərdən istifadə edin.",
+		"For security, only use links from emails sent by Student Career Studio.": "Təhlükəsizlik üçün yalnız Student Career Studio-nin göndərdiyi e-poçtlardakı keçidlərdən istifadə edin.",
 		"Verify your email": "E-poçtunuzu təsdiqləyin",
 		"Verify your email for {appName}": "{appName} üçün e-poçtunuzu təsdiqləyin",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Bunun {appName} üçün e-poçt ünvanınız olduğunu təsdiqləyin. Keçid 1 saat işləyir.",
@@ -116,8 +116,8 @@
 		"Approve change": "Dəyişikliyi təsdiqlə",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Bu dəyişikliyi siz istəməmisinizsə, bu e-poçtu nəzərə almayın və parolunuzu dəyişin. Hesabdakı ünvan sizin təsdiqiniz olmadan dəyişməyəcək.",
 		"If the button does not work, copy and paste this link into your browser:": "Düymə işləmirsə, bu keçidi kopyalayıb brauzerinizə yapışdırın:",
-		"By the community, for the community.": "İcma tərəfindən, icma üçün.",
-		"A passion project by {author}.": "{author} tərəfindən yaradılmış həvəs layihəsidir."
+		"Your career story, in one place.": "İcma tərəfindən, icma üçün.",
+		"A free beta by {author}.": "{author} tərəfindən yaradılmış həvəs layihəsidir."
 	},
 	"bg-BG": {
 		"Reset your password": "Нулирайте паролата си",
@@ -125,7 +125,7 @@
 		"We received a request to reset your {appName} password.": "Получихме заявка за възстановяване на паролата ви за {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Връзката е активна 1 час. Възстановяването ви извежда от всяко устройство и премахва ключовете ви за достъп, API ключовете и свързаните приложения. Ако не сте поискали това, игнорирайте имейла; паролата ви остава същата.",
 		"Create new password": "Създайте нова парола",
-		"For security, only use links from emails sent by Reactive Resume.": "От съображения за сигурност използвайте само връзки от имейли, изпратени от Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "От съображения за сигурност използвайте само връзки от имейли, изпратени от Student Career Studio.",
 		"Verify your email": "Потвърдете имейла си",
 		"Verify your email for {appName}": "Потвърдете имейла си за {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Потвърдете, че това е имейл адресът ви за {appName}. Връзката е активна 1 час.",
@@ -146,8 +146,8 @@
 		"Approve change": "Одобрете промяната",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Ако не сте поискали тази промяна, игнорирайте имейла и сменете паролата си. Адресът на акаунта няма да се промени без вашето одобрение.",
 		"If the button does not work, copy and paste this link into your browser:": "Ако бутонът не работи, копирайте и поставете тази връзка в браузъра си:",
-		"By the community, for the community.": "От общността, за общността.",
-		"A passion project by {author}.": "Проект по душа на {author}."
+		"Your career story, in one place.": "От общността, за общността.",
+		"A free beta by {author}.": "Проект по душа на {author}."
 	},
 	"bn-BD": {
 		"Reset your password": "আপনার পাসওয়ার্ড রিসেট করুন",
@@ -155,7 +155,7 @@
 		"We received a request to reset your {appName} password.": "আপনার {appName} পাসওয়ার্ড রিসেটের একটি অনুরোধ পেয়েছি।",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "লিঙ্কটি ১ ঘণ্টা কাজ করবে। রিসেট করলে আপনি প্রতিটি ডিভাইস থেকে সাইন আউট হবেন এবং আপনার পাসকি, API কী ও কানেক্ট করা অ্যাপ মুছে যাবে। আপনি এটি চাননি থাকলে, এই ইমেইলটি উপেক্ষা করুন; আপনার পাসওয়ার্ড আগের মতোই থাকবে।",
 		"Create new password": "নতুন পাসওয়ার্ড তৈরি করুন",
-		"For security, only use links from emails sent by Reactive Resume.": "নিরাপত্তার জন্য, শুধু Reactive Resume-এর পাঠানো ইমেইলের লিঙ্কগুলো ব্যবহার করুন।",
+		"For security, only use links from emails sent by Student Career Studio.": "নিরাপত্তার জন্য, শুধু Student Career Studio-এর পাঠানো ইমেইলের লিঙ্কগুলো ব্যবহার করুন।",
 		"Verify your email": "আপনার ইমেইল যাচাই করুন",
 		"Verify your email for {appName}": "{appName}-এর জন্য আপনার ইমেইল যাচাই করুন",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "নিশ্চিত করুন এটি আপনার {appName}-এর ইমেইল ঠিকানা। লিঙ্কটি ১ ঘণ্টা কাজ করবে।",
@@ -176,8 +176,8 @@
 		"Approve change": "পরিবর্তন অনুমোদন করুন",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "আপনি এই পরিবর্তনের অনুরোধ না করে থাকলে, এই ইমেইলটি উপেক্ষা করুন এবং আপনার পাসওয়ার্ড বদলান। আপনার অনুমোদন ছাড়া অ্যাকাউন্টের ঠিকানা পরিবর্তন হবে না।",
 		"If the button does not work, copy and paste this link into your browser:": "বোতামটি কাজ না করলে, এই লিঙ্কটি কপি করে আপনার ব্রাউজারে পেস্ট করুন:",
-		"By the community, for the community.": "কমিউনিটির তৈরি, কমিউনিটির জন্য।",
-		"A passion project by {author}.": "{author} এর একটি প্যাশন প্রকল্প।"
+		"Your career story, in one place.": "কমিউনিটির তৈরি, কমিউনিটির জন্য।",
+		"A free beta by {author}.": "{author} এর একটি প্যাশন প্রকল্প।"
 	},
 	"ca-ES": {
 		"Reset your password": "Restableix la contrasenya",
@@ -185,7 +185,7 @@
 		"We received a request to reset your {appName} password.": "Hem rebut una sol·licitud per restablir la teva contrasenya de {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "L'enllaç funciona durant 1 hora. Restablir tanca la sessió a tots els dispositius i elimina les claus d'accés, les claus d'API i les aplicacions connectades. Si no ho has demanat, ignora aquest correu; la teva contrasenya es manté igual.",
 		"Create new password": "Crea una contrasenya nova",
-		"For security, only use links from emails sent by Reactive Resume.": "Per seguretat, utilitza només enllaços de correus enviats per Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Per seguretat, utilitza només enllaços de correus enviats per Student Career Studio.",
 		"Verify your email": "Verifica el teu correu",
 		"Verify your email for {appName}": "Verifica el teu correu de {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Confirma que aquesta és la teva adreça de correu de {appName}. L'enllaç funciona durant 1 hora.",
@@ -206,8 +206,8 @@
 		"Approve change": "Aprova el canvi",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Si no has demanat aquest canvi, ignora aquest correu i canvia la contrasenya. L'adreça del compte no canviarà sense la teva aprovació.",
 		"If the button does not work, copy and paste this link into your browser:": "Si el botó no funciona, copia i enganxa aquest enllaç al navegador:",
-		"By the community, for the community.": "De la comunitat i per a la comunitat.",
-		"A passion project by {author}.": "Un projecte fet amb passió per {author}."
+		"Your career story, in one place.": "De la comunitat i per a la comunitat.",
+		"A free beta by {author}.": "Un projecte fet amb passió per {author}."
 	},
 	"cs-CZ": {
 		"Reset your password": "Obnovte své heslo",
@@ -215,7 +215,7 @@
 		"We received a request to reset your {appName} password.": "Obdrželi jsme žádost o reset vašeho hesla do {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Odkaz funguje 1 hodinu. Reset vás odhlásí na všech zařízeních a odstraní vaše passkeys, klíče API a připojené aplikace. Pokud jste o to nežádali, tento e-mail ignorujte; vaše heslo zůstává stejné.",
 		"Create new password": "Vytvořit nové heslo",
-		"For security, only use links from emails sent by Reactive Resume.": "Kvůli bezpečnosti používejte jen odkazy z e-mailů odeslaných službou Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Kvůli bezpečnosti používejte jen odkazy z e-mailů odeslaných službou Student Career Studio.",
 		"Verify your email": "Ověřte svůj e-mail",
 		"Verify your email for {appName}": "Ověřte svůj e-mail pro {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Potvrďte, že toto je vaše e-mailová adresa pro {appName}. Odkaz funguje 1 hodinu.",
@@ -236,8 +236,8 @@
 		"Approve change": "Schválit změnu",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Pokud jste tuto změnu nežádali, tento e-mail ignorujte a změňte si heslo. Adresa na účtu se bez vašeho schválení nezmění.",
 		"If the button does not work, copy and paste this link into your browser:": "Pokud tlačítko nefunguje, zkopírujte tento odkaz a vložte jej do prohlížeče:",
-		"By the community, for the community.": "Vytvořeno komunitou pro komunitu.",
-		"A passion project by {author}.": "Osobní projekt z nadšení od {author}."
+		"Your career story, in one place.": "Vytvořeno komunitou pro komunitu.",
+		"A free beta by {author}.": "Osobní projekt z nadšení od {author}."
 	},
 	"da-DK": {
 		"Reset your password": "Nulstil din adgangskode",
@@ -245,7 +245,7 @@
 		"We received a request to reset your {appName} password.": "Vi har modtaget en anmodning om at nulstille din {appName}-adgangskode.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Linket virker i 1 time. Nulstilling logger dig ud på alle enheder og fjerner dine passkeys, API-nøgler og forbundne apps. Har du ikke bedt om dette, kan du ignorere e-mailen; din adgangskode forbliver uændret.",
 		"Create new password": "Opret ny adgangskode",
-		"For security, only use links from emails sent by Reactive Resume.": "For sikkerheds skyld: Brug kun links fra e-mails sendt af Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "For sikkerheds skyld: Brug kun links fra e-mails sendt af Student Career Studio.",
 		"Verify your email": "Bekræft din e-mail",
 		"Verify your email for {appName}": "Bekræft din e-mail til {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Bekræft, at dette er din e-mailadresse til {appName}. Linket virker i 1 time.",
@@ -266,8 +266,8 @@
 		"Approve change": "Godkend ændring",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Har du ikke bedt om denne ændring, kan du ignorere denne e-mail og ændre din adgangskode. Adressen på kontoen ændres ikke uden din godkendelse.",
 		"If the button does not work, copy and paste this link into your browser:": "Hvis knappen ikke virker, kan du kopiere og indsætte dette link i din browser:",
-		"By the community, for the community.": "Af fællesskabet, for fællesskabet.",
-		"A passion project by {author}.": "Et pasionsprojekt af {author}."
+		"Your career story, in one place.": "Af fællesskabet, for fællesskabet.",
+		"A free beta by {author}.": "Et pasionsprojekt af {author}."
 	},
 	"de-DE": {
 		"Reset your password": "Setzen Sie Ihr Passwort zurück",
@@ -275,7 +275,7 @@
 		"We received a request to reset your {appName} password.": "Wir haben eine Anfrage erhalten, Ihr {appName}-Passwort zurückzusetzen.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Der Link ist 1 Stunde gültig. Das Zurücksetzen meldet Sie auf jedem Gerät ab und entfernt Ihre Passkeys, API-Schlüssel und verbundenen Apps. Wenn Sie das nicht angefordert haben, ignorieren Sie diese E-Mail; Ihr Passwort bleibt unverändert.",
 		"Create new password": "Neues Passwort erstellen",
-		"For security, only use links from emails sent by Reactive Resume.": "Aus Sicherheitsgründen verwenden Sie nur Links aus E-Mails, die von Reactive Resume gesendet wurden.",
+		"For security, only use links from emails sent by Student Career Studio.": "Aus Sicherheitsgründen verwenden Sie nur Links aus E-Mails, die von Student Career Studio gesendet wurden.",
 		"Verify your email": "Bestätigen Sie Ihre E-Mail-Adresse",
 		"Verify your email for {appName}": "Bestätigen Sie Ihre E-Mail-Adresse für {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Bestätigen Sie, dass dies Ihre E-Mail-Adresse für {appName} ist. Der Link ist 1 Stunde gültig.",
@@ -296,8 +296,8 @@
 		"Approve change": "Änderung genehmigen",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Wenn Sie diese Änderung nicht angefordert haben, ignorieren Sie diese E-Mail und ändern Sie Ihr Passwort. Die Adresse im Konto ändert sich nicht ohne Ihre Genehmigung.",
 		"If the button does not work, copy and paste this link into your browser:": "Funktioniert die Schaltfläche nicht, kopieren Sie diesen Link und fügen Sie ihn in Ihren Browser ein:",
-		"By the community, for the community.": "Von der Gemeinschaft, für die Gemeinschaft.",
-		"A passion project by {author}.": "Ein Herzensprojekt von {author}."
+		"Your career story, in one place.": "Von der Gemeinschaft, für die Gemeinschaft.",
+		"A free beta by {author}.": "Ein Herzensprojekt von {author}."
 	},
 	"el-GR": {
 		"Reset your password": "Επαναφορά κωδικού πρόσβασης",
@@ -305,7 +305,7 @@
 		"We received a request to reset your {appName} password.": "Λάβαμε αίτημα επαναφοράς του κωδικού πρόσβασής σας στο {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Ο σύνδεσμος ισχύει για 1 ώρα. Η επαναφορά σας αποσυνδέει από κάθε συσκευή και αφαιρεί τα κλειδιά πρόσβασής σας, τα κλειδιά API και τις συνδεδεμένες εφαρμογές. Αν δεν το ζητήσατε εσείς, αγνοήστε αυτό το email· ο κωδικός πρόσβασής σας παραμένει ο ίδιος.",
 		"Create new password": "Δημιουργία νέου κωδικού πρόσβασης",
-		"For security, only use links from emails sent by Reactive Resume.": "Για λόγους ασφαλείας, χρησιμοποιήστε μόνο συνδέσμους από email που έστειλε το Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Για λόγους ασφαλείας, χρησιμοποιήστε μόνο συνδέσμους από email που έστειλε το Student Career Studio.",
 		"Verify your email": "Επαληθεύστε το email σας",
 		"Verify your email for {appName}": "Επαληθεύστε το email σας για το {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Επιβεβαιώστε ότι αυτή είναι η διεύθυνση email σας για το {appName}. Ο σύνδεσμος ισχύει για 1 ώρα.",
@@ -326,8 +326,8 @@
 		"Approve change": "Έγκριση αλλαγής",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Αν δεν ζητήσατε εσείς αυτή την αλλαγή, αγνοήστε αυτό το email και αλλάξτε τον κωδικό πρόσβασής σας. Η διεύθυνση του λογαριασμού δεν θα αλλάξει χωρίς την έγκρισή σας.",
 		"If the button does not work, copy and paste this link into your browser:": "Αν το κουμπί δεν λειτουργεί, αντιγράψτε και επικολλήστε αυτόν τον σύνδεσμο στο πρόγραμμα περιήγησής σας:",
-		"By the community, for the community.": "Από την κοινότητα, για την κοινότητα.",
-		"A passion project by {author}.": "Ένα εγχείρημα από αγάπη για τη δημιουργία από τον/την {author}."
+		"Your career story, in one place.": "Από την κοινότητα, για την κοινότητα.",
+		"A free beta by {author}.": "Ένα εγχείρημα από αγάπη για τη δημιουργία από τον/την {author}."
 	},
 	"en-GB": {
 		"Reset your password": "Reset your password",
@@ -335,7 +335,7 @@
 		"We received a request to reset your {appName} password.": "We received a request to reset your {appName} password.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.",
 		"Create new password": "Create new password",
-		"For security, only use links from emails sent by Reactive Resume.": "For security, only use links from emails sent by Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "For security, only use links from emails sent by Student Career Studio.",
 		"Verify your email": "Verify your email",
 		"Verify your email for {appName}": "Verify your email for {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Confirm this is your email address for {appName}. The link works for 1 hour.",
@@ -356,8 +356,8 @@
 		"Approve change": "Approve change",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.",
 		"If the button does not work, copy and paste this link into your browser:": "If the button does not work, copy and paste this link into your browser:",
-		"By the community, for the community.": "By the community, for the community.",
-		"A passion project by {author}.": "A passion project by {author}."
+		"Your career story, in one place.": "Your career story, in one place.",
+		"A free beta by {author}.": "A free beta by {author}."
 	},
 	"es-ES": {
 		"Reset your password": "Restablecer tu contraseña",
@@ -365,7 +365,7 @@
 		"We received a request to reset your {appName} password.": "Recibimos una solicitud para restablecer tu contraseña de {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "El enlace funciona durante 1 hora. Restablecer cierra tu sesión en todos los dispositivos y elimina tus passkeys, tus claves de API y tus aplicaciones conectadas. Si no lo pediste, ignora este correo; tu contraseña no cambia.",
 		"Create new password": "Crear contraseña nueva",
-		"For security, only use links from emails sent by Reactive Resume.": "Por seguridad, usa solo enlaces de correos enviados por Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Por seguridad, usa solo enlaces de correos enviados por Student Career Studio.",
 		"Verify your email": "Verifica tu correo electrónico",
 		"Verify your email for {appName}": "Verifica tu correo electrónico para {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Confirma que esta es tu dirección de correo electrónico de {appName}. El enlace funciona durante 1 hora.",
@@ -386,8 +386,8 @@
 		"Approve change": "Aprobar el cambio",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Si no pediste este cambio, ignora este correo y cambia tu contraseña. La dirección de la cuenta no cambiará sin tu aprobación.",
 		"If the button does not work, copy and paste this link into your browser:": "Si el botón no funciona, copia y pega este enlace en tu navegador:",
-		"By the community, for the community.": "Por la comunidad, para la comunidad.",
-		"A passion project by {author}.": "Un proyecto hecho con pasión de {author}."
+		"Your career story, in one place.": "Por la comunidad, para la comunidad.",
+		"A free beta by {author}.": "Un proyecto hecho con pasión de {author}."
 	},
 	"fa-IR": {
 		"Reset your password": "تنظیم مجدد گذرواژهٔ شما",
@@ -395,7 +395,7 @@
 		"We received a request to reset your {appName} password.": "درخواستی برای بازنشانی گذرواژهٔ {appName} شما دریافت کردیم.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "لینک ۱ ساعت کار می‌کند. بازنشانی شما را از همهٔ دستگاه‌ها خارج می‌کند و کلیدهای عبور، کلیدهای API و برنامه‌های متصل‌تان را حذف می‌کند. اگر این را درخواست نکرده‌اید، این ایمیل را نادیده بگیرید؛ گذرواژهٔ شما همان می‌ماند.",
 		"Create new password": "ساخت گذرواژهٔ جدید",
-		"For security, only use links from emails sent by Reactive Resume.": "برای امنیت، فقط از لینک‌های ایمیل‌هایی که Reactive Resume فرستاده استفاده کنید.",
+		"For security, only use links from emails sent by Student Career Studio.": "برای امنیت، فقط از لینک‌های ایمیل‌هایی که Student Career Studio فرستاده استفاده کنید.",
 		"Verify your email": "تأیید ایمیل شما",
 		"Verify your email for {appName}": "تأیید ایمیل شما برای {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "تأیید کنید که این نشانی ایمیل شما در {appName} است. لینک ۱ ساعت کار می‌کند.",
@@ -416,8 +416,8 @@
 		"Approve change": "تأیید تغییر",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "اگر این تغییر را درخواست نکرده‌اید، این ایمیل را نادیده بگیرید و گذرواژهٔ خود را عوض کنید. نشانی حساب بدون تأیید شما تغییر نمی‌کند.",
 		"If the button does not work, copy and paste this link into your browser:": "اگر دکمه کار نکرد، این لینک را کپی و در مرورگر خود بچسبانید:",
-		"By the community, for the community.": "از جامعه، برای جامعه.",
-		"A passion project by {author}.": "پروژه‌ای پرشور از {author}."
+		"Your career story, in one place.": "از جامعه، برای جامعه.",
+		"A free beta by {author}.": "پروژه‌ای پرشور از {author}."
 	},
 	"fi-FI": {
 		"Reset your password": "Palauta salasanasi",
@@ -425,7 +425,7 @@
 		"We received a request to reset your {appName} password.": "Saimme pyynnön nollata {appName}-salasanasi.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Linkki on voimassa 1 tunnin. Nollaus kirjaa sinut ulos joka laitteelta ja poistaa passkeyt, API-avaimet ja yhdistetyt sovellukset. Jos et pyytänyt tätä, ohita tämä sähköposti; salasanasi pysyy samana.",
 		"Create new password": "Luo uusi salasana",
-		"For security, only use links from emails sent by Reactive Resume.": "Turvallisuussyistä käytä vain Reactive Resumen lähettämistä sähköposteista saatuja linkkejä.",
+		"For security, only use links from emails sent by Student Career Studio.": "Turvallisuussyistä käytä vain Student Career Studion lähettämistä sähköposteista saatuja linkkejä.",
 		"Verify your email": "Vahvista sähköpostisi",
 		"Verify your email for {appName}": "Vahvista {appName}-sähköpostisi",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Vahvista, että tämä on {appName}-sähköpostiosoitteesi. Linkki on voimassa 1 tunnin.",
@@ -446,8 +446,8 @@
 		"Approve change": "Hyväksy muutos",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Jos et pyytänyt tätä muutosta, ohitä tämä sähköposti ja vaihda salasanasi. Tilin osoite ei vaihdu ilman hyväksyntääsi.",
 		"If the button does not work, copy and paste this link into your browser:": "Jos painike ei toimi, kopioi ja liitä tämä linkki selaimeesi:",
-		"By the community, for the community.": "Yhteisöltä yhteisölle.",
-		"A passion project by {author}.": "Harrastusprojekti, jonka {author} on tehnyt."
+		"Your career story, in one place.": "Yhteisöltä yhteisölle.",
+		"A free beta by {author}.": "Harrastusprojekti, jonka {author} on tehnyt."
 	},
 	"fr-FR": {
 		"Reset your password": "Réinitialisez votre mot de passe",
@@ -455,7 +455,7 @@
 		"We received a request to reset your {appName} password.": "Nous avons reçu une demande de réinitialisation du mot de passe de votre compte {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Le lien est valable 1 heure. La réinitialisation vous déconnecte de tous les appareils et supprime vos clés d'accès, clés API et applications connectées. Si vous n'êtes pas à l'origine de cette demande, ignorez cet e-mail ; votre mot de passe reste inchangé.",
 		"Create new password": "Créer un nouveau mot de passe",
-		"For security, only use links from emails sent by Reactive Resume.": "Par sécurité, n'utilisez que les liens des e-mails envoyés par Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Par sécurité, n'utilisez que les liens des e-mails envoyés par Student Career Studio.",
 		"Verify your email": "Vérifiez votre e-mail",
 		"Verify your email for {appName}": "Vérifiez votre e-mail pour {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Confirmez qu'il s'agit bien de votre adresse e-mail pour {appName}. Le lien est valable 1 heure.",
@@ -476,8 +476,8 @@
 		"Approve change": "Approuver la modification",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Si vous n'êtes pas à l'origine de ce changement, ignorez cet e-mail et changez votre mot de passe. L'adresse du compte ne changera pas sans votre approbation.",
 		"If the button does not work, copy and paste this link into your browser:": "Si le bouton ne fonctionne pas, copiez et collez ce lien dans votre navigateur :",
-		"By the community, for the community.": "Par la communauté, pour la communauté.",
-		"A passion project by {author}.": "Un projet passion par {author}."
+		"Your career story, in one place.": "Par la communauté, pour la communauté.",
+		"A free beta by {author}.": "Un projet passion par {author}."
 	},
 	"he-IL": {
 		"Reset your password": "איפוס הסיסמה שלך",
@@ -485,7 +485,7 @@
 		"We received a request to reset your {appName} password.": "קיבלנו בקשה לאפס את הסיסמה שלך ב-{appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "הקישור פעיל למשך שעה אחת. האיפוס מנתק אותך מכל מכשיר ומסיר את מפתחות הגישה, מפתחות ה-API והאפליקציות המחוברות שלך. אם לא ביקשת זאת, התעלם מהודעה זו; הסיסמה שלך תישאר כפי שהיא.",
 		"Create new password": "צור סיסמה חדשה",
-		"For security, only use links from emails sent by Reactive Resume.": "למען האבטחה, השתמש רק בקישורים מהודעות דוא״ל שנשלחו על ידי Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "למען האבטחה, השתמש רק בקישורים מהודעות דוא״ל שנשלחו על ידי Student Career Studio.",
 		"Verify your email": "אמת את הדוא״ל שלך",
 		"Verify your email for {appName}": "אמת את הדוא״ל שלך ב-{appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "אשר שזו כתובת הדוא״ל שלך ב-{appName}. הקישור פעיל למשך שעה אחת.",
@@ -506,8 +506,8 @@
 		"Approve change": "אשר את השינוי",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "אם לא ביקשת את השינוי הזה, התעלם מהודעה זו ושנה את הסיסמה שלך. הכתובת בחשבון לא תשתנה בלי האישור שלך.",
 		"If the button does not work, copy and paste this link into your browser:": "אם הכפתור לא עובד, העתק והדבק את הקישור הזה בדפדפן:",
-		"By the community, for the community.": "מהקהילה, למען הקהילה.",
-		"A passion project by {author}.": "פרויקט מתוך אהבה מאת {author}."
+		"Your career story, in one place.": "מהקהילה, למען הקהילה.",
+		"A free beta by {author}.": "פרויקט מתוך אהבה מאת {author}."
 	},
 	"hi-IN": {
 		"Reset your password": "अपना पासवर्ड रीसेट करें",
@@ -515,7 +515,7 @@
 		"We received a request to reset your {appName} password.": "हमें आपका {appName} पासवर्ड रीसेट करने का अनुरोध मिला है।",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "लिंक 1 घंटे तक काम करता है। रीसेट करने से आप हर डिवाइस से साइन आउट हो जाते हैं और आपकी पासकी, API कुंजियाँ और जुड़े ऐप हट जाते हैं। यदि आपने यह नहीं माँगा था, तो इस ईमेल को नज़रअंदाज़ करें; आपका पासवर्ड वैसा ही रहेगा।",
 		"Create new password": "नया पासवर्ड बनाएँ",
-		"For security, only use links from emails sent by Reactive Resume.": "सुरक्षा के लिए केवल Reactive Resume द्वारा भेजे गए ईमेल के लिंक ही उपयोग करें।",
+		"For security, only use links from emails sent by Student Career Studio.": "सुरक्षा के लिए केवल Student Career Studio द्वारा भेजे गए ईमेल के लिंक ही उपयोग करें।",
 		"Verify your email": "अपना ईमेल सत्यापित करें",
 		"Verify your email for {appName}": "{appName} के लिए अपना ईमेल सत्यापित करें",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "पुष्टि करें कि यह आपका {appName} के लिए ईमेल पता है। लिंक 1 घंटे तक काम करता है।",
@@ -536,8 +536,8 @@
 		"Approve change": "बदलाव को मंज़ूरी दें",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "यदि आपने यह बदलाव नहीं माँगा था, तो इस ईमेल को नज़रअंदाज़ करें और अपना पासवर्ड बदलें। आपकी मंज़ूरी के बिना खाते का पता नहीं बदलेगा।",
 		"If the button does not work, copy and paste this link into your browser:": "यदि बटन काम नहीं करता, तो यह लिंक कॉपी करके अपने ब्राउज़र में पेस्ट करें:",
-		"By the community, for the community.": "समुदाय द्वारा, समुदाय के लिए।",
-		"A passion project by {author}.": "एक जुनूनी परियोजना — {author}।"
+		"Your career story, in one place.": "समुदाय द्वारा, समुदाय के लिए।",
+		"A free beta by {author}.": "एक जुनूनी परियोजना — {author}।"
 	},
 	"hu-HU": {
 		"Reset your password": "Jelszó visszaállítása",
@@ -545,7 +545,7 @@
 		"We received a request to reset your {appName} password.": "Kérés érkezett a(z) {appName} jelszavad visszaállítására.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "A link 1 óráig érvényes. A visszaállítás minden eszközön kijelentkeztet, és eltávolítja a passkey-jeidet, API-kulcsaidat és a kapcsolódó alkalmazásokat. Ha nem te kérted, hagyd figyelmen kívül ezt az e-mailt; a jelszavad változatlan marad.",
 		"Create new password": "Új jelszó létrehozása",
-		"For security, only use links from emails sent by Reactive Resume.": "A biztonság érdekében csak a Reactive Resume által küldött e-mailekben lévő linkeket használd.",
+		"For security, only use links from emails sent by Student Career Studio.": "A biztonság érdekében csak a Student Career Studio által küldött e-mailekben lévő linkeket használd.",
 		"Verify your email": "Erősítsd meg az e-mail-címedet",
 		"Verify your email for {appName}": "Erősítsd meg az e-mail-címedet a(z) {appName} alkalmazásban",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Erősítsd meg, hogy ez az e-mail-címed a(z) {appName} alkalmazásban. A link 1 óráig érvényes.",
@@ -566,8 +566,8 @@
 		"Approve change": "Változtatás jóváhagyása",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Ha nem te kérted ezt a változtatást, hagyd figyelmen kívül ezt az e-mailt, és változtass jelszót. A fiók címe a jóváhagyásod nélkül nem változik meg.",
 		"If the button does not work, copy and paste this link into your browser:": "Ha a gomb nem működik, másold be ezt a linket a böngésződbe:",
-		"By the community, for the community.": "A közösség által, a közösségért.",
-		"A passion project by {author}.": "Szenvedélyprojekt. Készítette: {author}."
+		"Your career story, in one place.": "A közösség által, a közösségért.",
+		"A free beta by {author}.": "Szenvedélyprojekt. Készítette: {author}."
 	},
 	"hy-AM": {
 		"Reset your password": "Վերականգնել ձեր գաղտնաբառը",
@@ -575,7 +575,7 @@
 		"We received a request to reset your {appName} password.": "Մենք հարցում ենք ստացել՝ վերականգնելու ձեր {appName} գաղտնաբառը:",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Հղումը գործում է 1 ժամ: Վերակայումը ձեզ դուրս է բերում բոլոր սարքերից և հեռացնում ձեր passkey-ները, API բանալիներն ու միացված հավելվածները: Եթե դուք դա չեք խնդրել, անտեսեք այս նամակը, ձեր գաղտնաբառը կմնա նույնը:",
 		"Create new password": "Ստեղծեք նոր գաղտնաբառ",
-		"For security, only use links from emails sent by Reactive Resume.": "Անվտանգության համար օգտագործեք միայն Reactive Resume-ի կողմից ուղարկված նամակների հղումները:",
+		"For security, only use links from emails sent by Student Career Studio.": "Անվտանգության համար օգտագործեք միայն Student Career Studio-ի կողմից ուղարկված նամակների հղումները:",
 		"Verify your email": "Ստուգեք ձեր էլ",
 		"Verify your email for {appName}": "Հաստատեք ձեր էլ․ հասցեն {appName}-ի համար",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Հաստատեք, որ սա ձեր էլ․ հասցեն է {appName}-ի համար: Հղումը աշխատում է 1 ժամ։",
@@ -596,8 +596,8 @@
 		"Approve change": "Հաստատել փոփոխությունը",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Եթե ​​դուք չեք խնդրել այս փոփոխությունը, անտեսեք այս էլ․ հասցեն և փոխեք ձեր գաղտնաբառը։ Հաշվի հասցեն չի փոխվի առանց ձեր հաստատման:",
 		"If the button does not work, copy and paste this link into your browser:": "Եթե ​​կոճակը չի աշխատում, պատճենեք և տեղադրեք այս հղումը ձեր բրաուզերում.",
-		"By the community, for the community.": "Համայնքի կողմից, համայնքի համար:",
-		"A passion project by {author}.": "Կրքոտ նախագիծ {author}-ի կողմից:"
+		"Your career story, in one place.": "Համայնքի կողմից, համայնքի համար:",
+		"A free beta by {author}.": "Կրքոտ նախագիծ {author}-ի կողմից:"
 	},
 	"id-ID": {
 		"Reset your password": "Atur ulang kata sandi Anda",
@@ -605,7 +605,7 @@
 		"We received a request to reset your {appName} password.": "Kami menerima permintaan untuk mengatur ulang kata sandi {appName} Anda.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Tautan berlaku selama 1 jam. Mengatur ulang mengeluarkan Anda di semua perangkat dan menghapus passkey, kunci API, serta aplikasi tersambung Anda. Jika Anda tidak meminta ini, abaikan email ini; kata sandi Anda tetap sama.",
 		"Create new password": "Buat kata sandi baru",
-		"For security, only use links from emails sent by Reactive Resume.": "Untuk keamanan, gunakan hanya tautan dari email yang dikirim oleh Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Untuk keamanan, gunakan hanya tautan dari email yang dikirim oleh Student Career Studio.",
 		"Verify your email": "Verifikasi email Anda",
 		"Verify your email for {appName}": "Verifikasi email Anda untuk {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Konfirmasi bahwa ini alamat email Anda untuk {appName}. Tautan berlaku selama 1 jam.",
@@ -626,8 +626,8 @@
 		"Approve change": "Setujui perubahan",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Jika Anda tidak meminta perubahan ini, abaikan email ini dan ubah kata sandi Anda. Alamat pada akun tidak akan berubah tanpa persetujuan Anda.",
 		"If the button does not work, copy and paste this link into your browser:": "Jika tombol tidak berfungsi, salin dan tempel tautan ini ke peramban Anda:",
-		"By the community, for the community.": "Oleh komunitas, untuk komunitas.",
-		"A passion project by {author}.": "Sebuah proyek yang lahir dari kecintaan, oleh {author}."
+		"Your career story, in one place.": "Oleh komunitas, untuk komunitas.",
+		"A free beta by {author}.": "Sebuah proyek yang lahir dari kecintaan, oleh {author}."
 	},
 	"it-IT": {
 		"Reset your password": "Reimposta la tua password",
@@ -635,7 +635,7 @@
 		"We received a request to reset your {appName} password.": "Abbiamo ricevuto una richiesta di reimpostare la tua password di {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Il collegamento vale per 1 ora. Il reset termina l'accesso su ogni dispositivo e rimuove passkey, chiavi API e app collegate. Se non l'hai richiesta, ignora questa email; la tua password resta invariata.",
 		"Create new password": "Crea una nuova password",
-		"For security, only use links from emails sent by Reactive Resume.": "Per sicurezza, usa solo i collegamenti delle email inviate da Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Per sicurezza, usa solo i collegamenti delle email inviate da Student Career Studio.",
 		"Verify your email": "Verifica la tua email",
 		"Verify your email for {appName}": "Verifica la tua email per {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Conferma che questo è il tuo indirizzo email per {appName}. Il collegamento vale per 1 ora.",
@@ -656,8 +656,8 @@
 		"Approve change": "Approva la modifica",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Se non hai richiesto questa modifica, ignora questa email e cambia la tua password. L'indirizzo sull'account non cambierà senza la tua approvazione.",
 		"If the button does not work, copy and paste this link into your browser:": "Se il pulsante non funziona, copia e incolla questo collegamento nel browser:",
-		"By the community, for the community.": "Dalla comunità, per la comunità.",
-		"A passion project by {author}.": "Un progetto nato dalla passione di {author}."
+		"Your career story, in one place.": "Dalla comunità, per la comunità.",
+		"A free beta by {author}.": "Un progetto nato dalla passione di {author}."
 	},
 	"ja-JP": {
 		"Reset your password": "パスワードをリセット",
@@ -665,7 +665,7 @@
 		"We received a request to reset your {appName} password.": "{appName} のパスワードのリセットがリクエストされました。",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "リンクの有効期限は 1 時間です。リセットすると、すべてのデバイスからサインアウトし、パスキー、API キー、接続済みのアプリが削除されます。心当たりがない場合は、このメールを無視してください。パスワードは変更されません。",
 		"Create new password": "新しいパスワードを作成",
-		"For security, only use links from emails sent by Reactive Resume.": "安全のため、Reactive Resume から送信されたメールのリンクだけを使ってください。",
+		"For security, only use links from emails sent by Student Career Studio.": "安全のため、Student Career Studio から送信されたメールのリンクだけを使ってください。",
 		"Verify your email": "メールアドレスを確認してください",
 		"Verify your email for {appName}": "{appName} のメールアドレスを確認してください",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "これが {appName} で使うあなたのメールアドレスであることを確認してください。リンクの有効期限は 1 時間です。",
@@ -686,8 +686,8 @@
 		"Approve change": "変更を承認",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "この変更をリクエストしていない場合は、このメールを無視してパスワードを変更してください。承認しない限り、アカウントのアドレスは変更されません。",
 		"If the button does not work, copy and paste this link into your browser:": "ボタンが機能しない場合は、このリンクをコピーしてブラウザーに貼り付けてください:",
-		"By the community, for the community.": "コミュニティによる、コミュニティのためのプロジェクト。",
-		"A passion project by {author}.": "{author} による情熱のプロジェクト。"
+		"Your career story, in one place.": "コミュニティによる、コミュニティのためのプロジェクト。",
+		"A free beta by {author}.": "{author} による情熱のプロジェクト。"
 	},
 	"km-KH": {
 		"Reset your password": "កំណត់​ពាក្យសម្ងាត់​របស់​អ្នក​ឡើងវិញ",
@@ -695,7 +695,7 @@
 		"We received a request to reset your {appName} password.": "យើងបានទទួលសំណើកំណត់ពាក្យសម្ងាត់ {appName} របស់អ្នកឡើងវិញ។",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "តំណនេះប្រើបានរយៈពេល 1 ម៉ោង។ ការកំណត់ឡើងវិញនឹងចាកចេញពីគ្រប់ឧបករណ៍ ហើយដកចេញកូនសោកំណត់អត្តសញ្ញាណ កូនសោ API និងកម្មវិធីដែលបានតភ្ជាប់របស់អ្នក។ ប្រសិនបើអ្នកមិនបានស្នើសុំរឿងនេះទេ សូមមិនអើពើអ៊ីមែលនេះ; ពាក្យសម្ងាត់របស់អ្នកនៅដដែល។",
 		"Create new password": "បង្កើតពាក្យសម្ងាត់ថ្មី",
-		"For security, only use links from emails sent by Reactive Resume.": "ដើម្បីសុវត្ថិភាព សូមប្រើតែតំណពីអ៊ីមែលដែលផ្ញើដោយ Reactive Resume ប៉ុណ្ណោះ។",
+		"For security, only use links from emails sent by Student Career Studio.": "ដើម្បីសុវត្ថិភាព សូមប្រើតែតំណពីអ៊ីមែលដែលផ្ញើដោយ Student Career Studio ប៉ុណ្ណោះ។",
 		"Verify your email": "ផ្ទៀងផ្ទាត់អ៊ីមែលរបស់អ្នក",
 		"Verify your email for {appName}": "ផ្ទៀងផ្ទាត់អ៊ីមែលរបស់អ្នកសម្រាប់ {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "បញ្ជាក់ថានេះជាអាសយដ្ឋានអ៊ីមែលរបស់អ្នកសម្រាប់ {appName}។ តំណនេះប្រើបានរយៈពេល 1 ម៉ោង។",
@@ -716,8 +716,8 @@
 		"Approve change": "យល់ព្រមការផ្លាស់ប្តូរ",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "ប្រសិនបើអ្នកមិនបានស្នើសុំការផ្លាស់ប្តូរនេះទេ សូមមិនអើពើអ៊ីមែលនេះ ហើយប្តូរពាក្យសម្ងាត់របស់អ្នក។ អាសយដ្ឋាននៅលើគណនីនឹងមិនផ្លាស់ប្តូរដោយគ្មានការយល់ព្រមរបស់អ្នកទេ។",
 		"If the button does not work, copy and paste this link into your browser:": "ប្រសិនបើប៊ូតុងមិនដំណើរការ សូមចម្លង ហើយបិទភ្ជាប់តំណនេះទៅក្នុងកម្មវិធីរុករករបស់អ្នក៖",
-		"By the community, for the community.": "ដោយ​សហគមន៍ សម្រាប់​សហគមន៍។",
-		"A passion project by {author}.": "គម្រោងចំណង់ចំណូលចិត្តដោយ {author}។"
+		"Your career story, in one place.": "ដោយ​សហគមន៍ សម្រាប់​សហគមន៍។",
+		"A free beta by {author}.": "គម្រោងចំណង់ចំណូលចិត្តដោយ {author}។"
 	},
 	"kn-IN": {
 		"Reset your password": "ನಿಮ್ಮ ಪಾಸ್‌ವರ್ಡ್ ಅನ್ನು ಮರುಹೊಂದಿಸಿ",
@@ -725,7 +725,7 @@
 		"We received a request to reset your {appName} password.": "ನಿಮ್ಮ {appName} ಗುಪ್ತಪದವನ್ನು ಮರುಹೊಂದಿಸುವ ವಿನಂದನೆ ನಮಗೆ ಬಂದಿದೆ.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "ಲಿಂಕ್ 1 ಗಂಟೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ. ಮರುಹೊಂದಿಸುವುದು ಪ್ರತಿ ಸಾಧನದಲ್ಲೂ ನಿಮ್ಮನ್ನು ಸೈನ್ ಔಟ್ ಮಾಡುತ್ತದೆ ಮತ್ತು ನಿಮ್ಮ ಪಾಸ್‌ಕೀಗಳು, API ಕೀಗಳು ಮತ್ತು ಕನೆಕ್ಟ್ ಆದ ಆಪ್‌ಗಳನ್ನು ತೆಗೆದುಹಾಕುತ್ತದೆ. ನೀವು ಇದನ್ನು ಕೋರದಿದ್ದರೆ, ಈ ಇಮೇಲ್ ಕಡೆಗೆ ನೋಡದೆ ಇರಿ; ನಿಮ್ಮ ಗುಪ್ತಪದ ಹಾಗೆಯೇ ಇರುತ್ತದೆ.",
 		"Create new password": "ಹೊಸ ಗುಪ್ತಪದ ರಚಿಸಿ",
-		"For security, only use links from emails sent by Reactive Resume.": "ಭದ್ರತೆಗಾಗಿ, Reactive Resume ಕಳುಹಿಸಿದ ಇಮೇಲ್‌ಗಳಲ್ಲಿನ ಲಿಂಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಬಳಸಿ.",
+		"For security, only use links from emails sent by Student Career Studio.": "ಭದ್ರತೆಗಾಗಿ, Student Career Studio ಕಳುಹಿಸಿದ ಇಮೇಲ್‌ಗಳಲ್ಲಿನ ಲಿಂಕ್‌ಗಳನ್ನು ಮಾತ್ರ ಬಳಸಿ.",
 		"Verify your email": "ನಿಮ್ಮ ಇಮೇಲ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ",
 		"Verify your email for {appName}": "{appName} ಗಾಗಿ ನಿಮ್ಮ ಇಮೇಲ್ ಅನ್ನು ದೃಢೀಕರಿಸಿ",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "ಇದು {appName} ಗೆ ನಿಮ್ಮ ಇಮೇಲ್ ವಿಳಾಸವೆಂದು ದೃಢೀಕರಿಸಿ. ಲಿಂಕ್ 1 ಗಂಟೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ.",
@@ -746,8 +746,8 @@
 		"Approve change": "ಬದಲಾವಣೆಯನ್ನು ಅನುಮೋದಿಸಿ",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "ಈ ಬದಲಾವಣೆಯನ್ನು ನೀವು ಕೋರದಿದ್ದರೆ, ಈ ಇಮೇಲ್ ಕಡೆಗೆ ನೋಡದೆ ಇರಿ ಮತ್ತು ನಿಮ್ಮ ಗುಪ್ತಪದವನ್ನು ಬದಲಾಯಿಸಿ. ನಿಮ್ಮ ಅನುಮೋದನೆ ಇಲ್ಲದೆ ಖಾತೆಯ ವಿಳಾಸ ಬದಲಾಗುವುದಿಲ್ಲ.",
 		"If the button does not work, copy and paste this link into your browser:": "ಬಟನ್ ಕೆಲಸ ಮಾಡದಿದ್ದರೆ, ಈ ಲಿಂಕ್ ಅನ್ನು ನಕಲಿಸಿ ನಿಮ್ಮ ಬ್ರೌಸರ್‌ನಲ್ಲಿ ಅಂಟಿಸಿ:",
-		"By the community, for the community.": "ಸಮುದಾಯದಿಂದ, ಸಮುದಾಯಕ್ಕಾಗಿ.",
-		"A passion project by {author}.": "{author} ಅವರ ಒಂದು ಉತ್ಸಾಹದ ಯೋಜನೆ."
+		"Your career story, in one place.": "ಸಮುದಾಯದಿಂದ, ಸಮುದಾಯಕ್ಕಾಗಿ.",
+		"A free beta by {author}.": "{author} ಅವರ ಒಂದು ಉತ್ಸಾಹದ ಯೋಜನೆ."
 	},
 	"ko-KR": {
 		"Reset your password": "비밀번호 재설정",
@@ -755,7 +755,7 @@
 		"We received a request to reset your {appName} password.": "{appName} 비밀번호 재설정 요청을 받았습니다.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "링크는 1시간 동안 유효합니다. 재설정하면 모든 기기에서 로그아웃되고 패스키, API 키, 연결된 앱이 삭제됩니다. 요청하지 않았다면 이 이메일을 무시하세요. 비밀번호는 그대로 유지됩니다.",
 		"Create new password": "새 비밀번호 만들기",
-		"For security, only use links from emails sent by Reactive Resume.": "보안을 위해 Reactive Resume에서 보낸 이메일의 링크만 사용하세요.",
+		"For security, only use links from emails sent by Student Career Studio.": "보안을 위해 Student Career Studio에서 보낸 이메일의 링크만 사용하세요.",
 		"Verify your email": "이메일을 인증하세요",
 		"Verify your email for {appName}": "{appName} 이메일을 인증하세요",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "{appName}에서 사용할 이메일 주소가 맞는지 확인하세요. 링크는 1시간 동안 유효합니다.",
@@ -776,8 +776,8 @@
 		"Approve change": "변경 승인",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "이 변경을 요청하지 않았다면 이 이메일을 무시하고 비밀번호를 변경하세요. 승인 없이는 계정의 주소가 변경되지 않습니다.",
 		"If the button does not work, copy and paste this link into your browser:": "버튼이 작동하지 않으면 이 링크를 복사해 브라우저에 붙여넣으세요:",
-		"By the community, for the community.": "커뮤니티에 의해, 커뮤니티를 위해.",
-		"A passion project by {author}.": "{author}의 열정 프로젝트입니다."
+		"Your career story, in one place.": "커뮤니티에 의해, 커뮤니티를 위해.",
+		"A free beta by {author}.": "{author}의 열정 프로젝트입니다."
 	},
 	"lt-LT": {
 		"Reset your password": "Atkurkite slaptažodį",
@@ -785,7 +785,7 @@
 		"We received a request to reset your {appName} password.": "Gavome prašymą iš naujo nustatyti jūsų {appName} slaptažodį.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Nuoroda veikia 1 valandą. Atkūrimas atjungs jus kiekviename įrenginyje ir pašalins jūsų passkey, API raktus ir prijungtas programas. Jei to neprašėte, ignoruokite šį el. laišką; jūsų slaptažodis lieka nepakeistas.",
 		"Create new password": "Sukurti naują slaptažodį",
-		"For security, only use links from emails sent by Reactive Resume.": "Saugumo sumetimais naudokite tik nuorodas iš Reactive Resume išsiųstų el. laiškų.",
+		"For security, only use links from emails sent by Student Career Studio.": "Saugumo sumetimais naudokite tik nuorodas iš Student Career Studio išsiųstų el. laiškų.",
 		"Verify your email": "Patvirtinkite savo el. paštą",
 		"Verify your email for {appName}": "Patvirtinkite savo {appName} el. paštą",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Patvirtinkite, kad tai jūsų el. pašto adresas, skirtas {appName}. Nuoroda veikia 1 valandą.",
@@ -806,8 +806,8 @@
 		"Approve change": "Patvirtinti pakeitimą",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Jei šio keitimo neprašėte, ignoruokite šį el. laišką ir pasikeiskite slaptažodį. Paskyros adresas be jūsų patvirtinimo nepasikeis.",
 		"If the button does not work, copy and paste this link into your browser:": "Jei mygtukas neveikia, nukopijuokite šią nuorodą ir įklijuokite ją į naršyklę:",
-		"By the community, for the community.": "Bendruomenės ir bendruomenei.",
-		"A passion project by {author}.": "Entuziastingas projektas, kurį sukūrė {author}."
+		"Your career story, in one place.": "Bendruomenės ir bendruomenei.",
+		"A free beta by {author}.": "Entuziastingas projektas, kurį sukūrė {author}."
 	},
 	"lv-LV": {
 		"Reset your password": "Atiestatīt paroli",
@@ -815,7 +815,7 @@
 		"We received a request to reset your {appName} password.": "Saņēmām pieprasījumu atiestatīt jūsu {appName} paroli.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Saite ir derīga 1 stundu. Atiestatīšana izraksta jūs no visām ierīcēm un noņem jūsu piekļuves atslēgas, API atslēgas un savienotās lietotnes. Ja jūs to neprasījāt, ignorējiet šo e-pastu; jūsu parole nemainās.",
 		"Create new password": "Izveidot jaunu paroli",
-		"For security, only use links from emails sent by Reactive Resume.": "Drošības labad izmantojiet tikai saites no e-pastiem, ko sūta Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Drošības labad izmantojiet tikai saites no e-pastiem, ko sūta Student Career Studio.",
 		"Verify your email": "Apstipriniet savu e-pastu",
 		"Verify your email for {appName}": "Apstipriniet savu e-pastu {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Apstipriniet, ka šī ir jūsu {appName} e-pasta adrese. Saite ir derīga 1 stundu.",
@@ -836,8 +836,8 @@
 		"Approve change": "Apstiprināt izmaiņu",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Ja jūs šo maiņu nepieprasījāt, ignorējiet šo e-pastu un mainiet savu paroli. Adrese kontā nemainīsies bez jūsu apstiprinājuma.",
 		"If the button does not work, copy and paste this link into your browser:": "Ja poga nedarbojas, nokopējiet un ielīmējiet šo saiti pārlūkprogrammā:",
-		"By the community, for the community.": "No kopienas kopienai.",
-		"A passion project by {author}.": "Aizraujošs projekts, ko veido {author}."
+		"Your career story, in one place.": "No kopienas kopienai.",
+		"A free beta by {author}.": "Aizraujošs projekts, ko veido {author}."
 	},
 	"ml-IN": {
 		"Reset your password": "നിങ്ങളുടെ പാസ്‌വേഡ് റീസെറ്റ് ചെയ്യുക",
@@ -845,7 +845,7 @@
 		"We received a request to reset your {appName} password.": "നിങ്ങളുടെ {appName} പാസ്‌വേഡ് റീസെറ്റ് ചെയ്യാനുള്ള ഒരു അഭ്യർത്ഥന ഞങ്ങൾക്ക് ലഭിച്ചു.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "ലിങ്ക് 1 മണിക്കൂർ പ്രാവർത്തികമാണ്. റീസെറ്റ് ചെയ്യുന്നത് എല്ലാ ഉപകരണങ്ങളിലും നിങ്ങളെ സൈൻ ഔട്ട് ചെയ്യിക്കുകയും നിങ്ങളുടെ പാസ്‌കീകൾ, API കീകൾ, കണക്ട് ചെയ്ത ആപ്പുകൾ എന്നിവ നീക്കം ചെയ്യുകയും ചെയ്യും. ഇത് നിങ്ങൾ ആവശ്യപ്പെട്ടതല്ലെങ്കിൽ, ഈ ഇമെയിൽ അവഗണിക്കുക; നിങ്ങളുടെ പാസ്‌വേഡ് അതേപടി തുടരും.",
 		"Create new password": "പുതിയ പാസ്‌വേഡ് ഉണ്ടാക്കുക",
-		"For security, only use links from emails sent by Reactive Resume.": "സുരക്ഷയ്ക്കായി, Reactive Resume അയച്ച ഇമെയിലുകളിലെ ലിങ്കുകൾ മാത്രം ഉപയോഗിക്കുക.",
+		"For security, only use links from emails sent by Student Career Studio.": "സുരക്ഷയ്ക്കായി, Student Career Studio അയച്ച ഇമെയിലുകളിലെ ലിങ്കുകൾ മാത്രം ഉപയോഗിക്കുക.",
 		"Verify your email": "നിങ്ങളുടെ ഇമെയിൽ വെരിഫൈ ചെയ്യുക",
 		"Verify your email for {appName}": "{appName}-നായി നിങ്ങളുടെ ഇമെയിൽ വെരിഫൈ ചെയ്യുക",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "ഇത് {appName}-നുള്ള നിങ്ങളുടെ ഇമെയിൽ വിലാസമാണെന്ന് ഉറപ്പാക്കുക. ലിങ്ക് 1 മണിക്കൂർ പ്രാവർത്തികമാണ്.",
@@ -866,8 +866,8 @@
 		"Approve change": "മാറ്റം അംഗീകരിക്കുക",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "ഈ മാറ്റം നിങ്ങൾ ആവശ്യപ്പെട്ടതല്ലെങ്കിൽ, ഈ ഇമെയിൽ അവഗണിച്ച് നിങ്ങളുടെ പാസ്‌വേഡ് മാറ്റുക. നിങ്ങളുടെ അംഗീകാരമില്ലാതെ അക്കൗൺ്റ്റിലെ വിലാസം മാറില്ല.",
 		"If the button does not work, copy and paste this link into your browser:": "ബട്ടൺ പ്രവർത്തിക്കുന്നില്ലെങ്കിൽ, ഈ ലിങ്ക് പകർത്തി നിങ്ങളുടെ ബ്രൗസറിൽ ഒട്ടിക്കുക:",
-		"By the community, for the community.": "സമൂഹത്താൽ, സമൂഹത്തിനായി.",
-		"A passion project by {author}.": "{author}-ൻ്റെ ഒരു താൽപര്യ പ്രോജക്ട്."
+		"Your career story, in one place.": "സമൂഹത്താൽ, സമൂഹത്തിനായി.",
+		"A free beta by {author}.": "{author}-ൻ്റെ ഒരു താൽപര്യ പ്രോജക്ട്."
 	},
 	"mr-IN": {
 		"Reset your password": "तुमचा पासवर्ड रीसेट करा",
@@ -875,7 +875,7 @@
 		"We received a request to reset your {appName} password.": "तुमचा {appName} पासवर्ड रीसेट करण्याची विनंती आम्हाला मिळाली आहे.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "दुवा 1 तास काम करतो. रीसेटमुळे तुम्ही प्रत्येक डिव्हाइसवरून साइन आउट होता आणि तुमच्या पासकीज, API कीज आणि कनेक्ट केलेल्या अ‍ॅप्स काढल्या जातात. हे तुम्ही मागवले नसेल, तर हा ईमेल दुर्लक्ष करा; तुमचा पासवर्ड तसाच राहतो.",
 		"Create new password": "नवीन पासवर्ड तयार करा",
-		"For security, only use links from emails sent by Reactive Resume.": "सुरक्षेसाठी फक्त Reactive Resume ने पाठवलेल्या ईमेलमधील दुवेच वापरा.",
+		"For security, only use links from emails sent by Student Career Studio.": "सुरक्षेसाठी फक्त Student Career Studio ने पाठवलेल्या ईमेलमधील दुवेच वापरा.",
 		"Verify your email": "तुमचा ईमेल सत्यापित करा",
 		"Verify your email for {appName}": "{appName} साठी तुमचा ईमेल सत्यापित करा",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "हा तुमचा {appName} साठीचा ईमेल पत्ता आहे याची खात्री करा. दुवा 1 तास काम करतो.",
@@ -896,8 +896,8 @@
 		"Approve change": "बदल मंजूर करा",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "हा बदल तुम्ही मागवला नसेल, तर हा ईमेल दुर्लक्ष करा आणि पासवर्ड बदला. तुमच्या मंजुरीशिवाय खात्यावरचा पत्ता बदलणार नाही.",
 		"If the button does not work, copy and paste this link into your browser:": "बटण काम करत नसेल, तर हा दुवा कॉपी करून ब्राउझरमध्ये चिकटवा:",
-		"By the community, for the community.": "समुदायाकडून, समुदायासाठी.",
-		"A passion project by {author}.": "{author} चा एक छंदाचा प्रकल्प."
+		"Your career story, in one place.": "समुदायाकडून, समुदायासाठी.",
+		"A free beta by {author}.": "{author} चा एक छंदाचा प्रकल्प."
 	},
 	"ms-MY": {
 		"Reset your password": "Tetapkan semula kata laluan anda",
@@ -905,7 +905,7 @@
 		"We received a request to reset your {appName} password.": "Kami menerima permintaan untuk menetapkan semula kata laluan {appName} anda.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Pautan tersebut berfungsi selama 1 jam. Penetapan semula melog keluarkan anda di setiap peranti dan membuang passkey, kunci API serta aplikasi bersambung anda. Jika anda tidak meminta ini, abaikan e-mel ini; kata laluan anda tidak berubah.",
 		"Create new password": "Cipta kata laluan baharu",
-		"For security, only use links from emails sent by Reactive Resume.": "Untuk keselamatan, gunakan hanya pautan daripada e-mel yang dihantar oleh Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Untuk keselamatan, gunakan hanya pautan daripada e-mel yang dihantar oleh Student Career Studio.",
 		"Verify your email": "Sahkan e-mel anda",
 		"Verify your email for {appName}": "Sahkan e-mel anda untuk {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Sahkan ini ialah alamat e-mel anda untuk {appName}. Pautan tersebut berfungsi selama 1 jam.",
@@ -926,8 +926,8 @@
 		"Approve change": "Luluskan perubahan",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Jika anda tidak meminta perubahan ini, abaikan e-mel ini dan tukar kata laluan anda. Alamat pada akaun tidak akan berubah tanpa kelulusan anda.",
 		"If the button does not work, copy and paste this link into your browser:": "Jika butang tidak berfungsi, salin dan tampal pautan ini ke dalam pelayar anda:",
-		"By the community, for the community.": "Oleh komuniti, untuk komuniti.",
-		"A passion project by {author}.": "Projek dipacu minat oleh {author}."
+		"Your career story, in one place.": "Oleh komuniti, untuk komuniti.",
+		"A free beta by {author}.": "Projek dipacu minat oleh {author}."
 	},
 	"ne-NP": {
 		"Reset your password": "तपाईंको पासवर्ड रिसेट गर्नुहोस्",
@@ -935,7 +935,7 @@
 		"We received a request to reset your {appName} password.": "तपाईंको {appName} पासवर्ड रिसेट गर्न अनुरोध प्राप्त भयो।",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "लिङ्क 1 घण्टासम्म काम गर्छ। रिसेटले तपाईंलाई हरेक डिभाइसमा साइन आउट गराउँछ र तपाईंका पासकीहरू, API कुञ्जीहरू र जोडिएका एपहरू हटाउँछ। तपाईंले यो अनुरोध नगरेको भए, यो इमेल उपेक्षा गर्नुहोस्; तपाईंको पासवर्ड उही रहन्छ।",
 		"Create new password": "नयाँ पासवर्ड बनाउनुहोस्",
-		"For security, only use links from emails sent by Reactive Resume.": "सुरक्षाका लागि, Reactive Resume ले पठाएका इमेलका लिङ्कहरू मात्र प्रयोग गर्नुहोस्।",
+		"For security, only use links from emails sent by Student Career Studio.": "सुरक्षाका लागि, Student Career Studio ले पठाएका इमेलका लिङ्कहरू मात्र प्रयोग गर्नुहोस्।",
 		"Verify your email": "तपाईंको इमेल प्रमाणित गर्नुहोस्",
 		"Verify your email for {appName}": "{appName} का लागि तपाईंको इमेल प्रमाणित गर्नुहोस्",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "यो तपाईंको {appName} को इमेल ठेगाना हो भनी पुष्टि गर्नुहोस्। लिङ्क 1 घण्टासम्म काम गर्छ।",
@@ -956,8 +956,8 @@
 		"Approve change": "परिवर्तन स्वीकृत गर्नुहोस्",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "तपाईंले यो परिवर्तन अनुरोध नगरेको भए, यो इमेल उपेक्षा गर्नुहोस् र आफ्नो पासवर्ड बदल्नुहोस्। तपाईंको स्वीकृति बिना खाताको ठेगाना परिवर्तन हुँदैन।",
 		"If the button does not work, copy and paste this link into your browser:": "बटनले काम नगरे, यो लिङ्क कपी गरेर ब्राउजरमा टाँस्नुहोस्:",
-		"By the community, for the community.": "समुदायबाट, समुदायकै लागि।",
-		"A passion project by {author}.": "{author} को रुचिको परियोजना।"
+		"Your career story, in one place.": "समुदायबाट, समुदायकै लागि।",
+		"A free beta by {author}.": "{author} को रुचिको परियोजना।"
 	},
 	"nl-NL": {
 		"Reset your password": "Reset uw wachtwoord",
@@ -965,7 +965,7 @@
 		"We received a request to reset your {appName} password.": "We hebben een verzoek ontvangen om je {appName}-wachtwoord opnieuw in te stellen.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "De link is 1 uur geldig. Een reset logt je op elk apparaat uit en verwijdert je passkeys, API-sleutels en verbonden apps. heb je dit niet aangevraagd, negeer dan deze e-mail; je wachtwoord blijft hetzelfde.",
 		"Create new password": "Nieuw wachtwoord aanmaken",
-		"For security, only use links from emails sent by Reactive Resume.": "Voor je veiligheid: gebruik alleen links uit e-mails die door Reactive Resume zijn verstuurd.",
+		"For security, only use links from emails sent by Student Career Studio.": "Voor je veiligheid: gebruik alleen links uit e-mails die door Student Career Studio zijn verstuurd.",
 		"Verify your email": "Verifieer je e-mail",
 		"Verify your email for {appName}": "Verifieer je e-mail voor {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Bevestig dat dit je e-mailadres voor {appName} is. De link is 1 uur geldig.",
@@ -986,8 +986,8 @@
 		"Approve change": "Wijziging goedkeuren",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Heb je deze wijziging niet aangevraagd, negeer dan deze e-mail en wijzig je wachtwoord. Het adres op het account verandert niet zonder jouw goedkeuring.",
 		"If the button does not work, copy and paste this link into your browser:": "Werkt de knop niet, kopieer en plak dan deze link in je browser:",
-		"By the community, for the community.": "Door de gemeenschap, voor de gemeenschap.",
-		"A passion project by {author}.": "Een passieproject van {author}."
+		"Your career story, in one place.": "Door de gemeenschap, voor de gemeenschap.",
+		"A free beta by {author}.": "Een passieproject van {author}."
 	},
 	"no-NO": {
 		"Reset your password": "Tilbakestill passordet ditt",
@@ -995,7 +995,7 @@
 		"We received a request to reset your {appName} password.": "Vi mottok en forespørsel om å tilbakestille {appName}-passordet ditt.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Lenken fungerer i 1 time. Tilbakestilling logger deg ut på alle enheter og fjerner passnøkler, API-nøkler og tilkoblede apper. Hvis du ikke ba om dette, kan du ignorere e-posten; passordet ditt forblir uendret.",
 		"Create new password": "Opprett nytt passord",
-		"For security, only use links from emails sent by Reactive Resume.": "Av sikkerhetshensyn: bruk bare lenker fra e-poster sendt av Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Av sikkerhetshensyn: bruk bare lenker fra e-poster sendt av Student Career Studio.",
 		"Verify your email": "Bekreft e-postadressen din",
 		"Verify your email for {appName}": "Bekreft e-postadressen din for {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Bekreft at dette er e-postadressen din for {appName}. Lenken fungerer i 1 time.",
@@ -1016,8 +1016,8 @@
 		"Approve change": "Godkjenn endringen",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Hvis du ikke har bedt om denne endringen, kan du ignorere denne e-posten og endre passordet ditt. Adressen på kontoen endres ikke uten din godkjenning.",
 		"If the button does not work, copy and paste this link into your browser:": "Hvis knappen ikke virker, kopier og lim inn denne lenken i nettleseren din:",
-		"By the community, for the community.": "Av fellesskapet, for fellesskapet.",
-		"A passion project by {author}.": "Et lidenskapsprosjekt av {author}."
+		"Your career story, in one place.": "Av fellesskapet, for fellesskapet.",
+		"A free beta by {author}.": "Et lidenskapsprosjekt av {author}."
 	},
 	"or-IN": {
 		"Reset your password": "ଆପଣଙ୍କ ପାସୱାର୍ଡ ରିସେଟ୍ କରନ୍ତୁ",
@@ -1025,7 +1025,7 @@
 		"We received a request to reset your {appName} password.": "ଆପଣଙ୍କ {appName} ପାସୱାର୍ଡ ରିସେଟ୍ କରିବାର ଏକ ଅନୁରୋଧ ଆମେ ପାଇଲୁ।",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "ଲିଙ୍କ୍ 1 ଘଣ୍ଟା ପର୍ଯ୍ୟନ୍ତ କାମ କରିବ। ରିସେଟ୍ କଲେ ଆପଣ ପ୍ରତ୍ୟେକ ଡିଭାଇସ୍‌ରୁ ସାଇନ୍ ଆଉଟ୍ ହୋଇଯିବେ ଏବଂ ଆପଣଙ୍କ ପାସକି, API କି ଏବଂ ସଂଯୁକ୍ତ ଆପ୍‌ଗୁଡ଼ିକ ହଟିଯିବେ। ଆପଣ ଏହା ମାଗି ନାହାନ୍ତି ତେଲେ, ଏହି ଇମେଲ୍ ଅଗ୍ରାହ୍ୟ କରନ୍ତୁ; ଆପଣଙ୍କ ପାସୱାର୍ଡ ସେପରି ରହିବ।",
 		"Create new password": "ନୂତନ ପାସୱାର୍ଡ ସୃଷ୍ଟି କରନ୍ତୁ",
-		"For security, only use links from emails sent by Reactive Resume.": "ସୁରକ୍ଷା ପାଇଁ, କେବଳ Reactive Resume ପଠାଇଥିବା ଇମେଲ୍‌ର ଲିଙ୍କ୍ ବ୍ୟବହାର କରନ୍ତୁ।",
+		"For security, only use links from emails sent by Student Career Studio.": "ସୁରକ୍ଷା ପାଇଁ, କେବଳ Student Career Studio ପଠାଇଥିବା ଇମେଲ୍‌ର ଲିଙ୍କ୍ ବ୍ୟବହାର କରନ୍ତୁ।",
 		"Verify your email": "ଆପଣଙ୍କ ଇମେଲ୍ ଯାଞ୍ଚ କରନ୍ତୁ",
 		"Verify your email for {appName}": "{appName} ପାଇଁ ଆପଣଙ୍କ ଇମେଲ୍ ଯାଞ୍ଚ କରନ୍ତୁ",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "ଏହା ଆପଣଙ୍କ {appName} ପାଇଁ ଇମେଲ୍ ଠିକଣା ବୋଲି ନିଶ୍ଚିତ କରନ୍ତୁ। ଲିଙ୍କ୍ 1 ଘଣ୍ଟା ପର୍ଯ୍ୟନ୍ତ କାମ କରିବ।",
@@ -1046,8 +1046,8 @@
 		"Approve change": "ପରିବର୍ତ୍ତନକୁ ଅନୁମତି ଦିଅନ୍ତୁ",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "ଆପଣ ଏହି ପରିବର୍ତ୍ତନ ଅନୁରୋଧ କରି ନାହାନ୍ତି ତେଲେ, ଏହି ଇମେଲ୍ ଅଗ୍ରାହ୍ୟ କରନ୍ତୁ ଏବଂ ନିଜର ପାସୱାର୍ଡ ବଦଳାନ୍ତୁ। ଆପଣଙ୍କ ଅନୁମତି ବିନା ଖାତାର ଠିକଣା ବଦଳିବ ନାହିଁ।",
 		"If the button does not work, copy and paste this link into your browser:": "ବଟନ୍ କାମ ନକରିଲେ, ଏହି ଲିଙ୍କ୍ କପି କରି ଆପଣଙ୍କ ବ୍ରାଉଜର୍‌ରେ ପେଷ୍ଟ କରନ୍ତୁ:",
-		"By the community, for the community.": "ସମୁଦାୟ ଦ୍ୱାରା, ସମୁଦାୟ ପାଇଁ।",
-		"A passion project by {author}.": "{author}ଙ୍କ ଦ୍ୱାରା ନିର୍ମିତ ଏକ ପ୍ରେମର ପ୍ରକଳ୍ପ।"
+		"Your career story, in one place.": "ସମୁଦାୟ ଦ୍ୱାରା, ସମୁଦାୟ ପାଇଁ।",
+		"A free beta by {author}.": "{author}ଙ୍କ ଦ୍ୱାରା ନିର୍ମିତ ଏକ ପ୍ରେମର ପ୍ରକଳ୍ପ।"
 	},
 	"pl-PL": {
 		"Reset your password": "Zresetuj swoje hasło",
@@ -1055,7 +1055,7 @@
 		"We received a request to reset your {appName} password.": "Otrzymaliśmy prośbę o zresetowanie Twojego hasła w {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Link działa przez 1 godzinę. Resetowanie wyloguje Cię ze wszystkich urządzeń i usunie Twoje passkeys, klucze API i połączone aplikacje. Jeśli to nie Ty o to prosiłeś, zignoruj ten e-mail; Twoje hasło pozostanie bez zmian.",
 		"Create new password": "Utwórz nowe hasło",
-		"For security, only use links from emails sent by Reactive Resume.": "Ze względów bezpieczeństwa używaj tylko linków z e-maili wysłanych przez Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Ze względów bezpieczeństwa używaj tylko linków z e-maili wysłanych przez Student Career Studio.",
 		"Verify your email": "Zweryfikuj swój e-mail",
 		"Verify your email for {appName}": "Zweryfikuj swój e-mail w {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Potwierdź, że to Twój adres e-mail w {appName}. Link działa przez 1 godzinę.",
@@ -1076,8 +1076,8 @@
 		"Approve change": "Zatwierdź zmianę",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Jeśli to nie Ty prosiłeś o tę zmianę, zignoruj ten e-mail i zmień hasło. Adres przypisany do konta nie zmieni się bez Twojej zgody.",
 		"If the button does not work, copy and paste this link into your browser:": "Jeśli przycisk nie działa, skopiuj ten link i wklej go do przeglądarki:",
-		"By the community, for the community.": "Stworzone przez społeczność dla społeczności.",
-		"A passion project by {author}.": "Projekt z pasji autorstwa {author}."
+		"Your career story, in one place.": "Stworzone przez społeczność dla społeczności.",
+		"A free beta by {author}.": "Projekt z pasji autorstwa {author}."
 	},
 	"pt-BR": {
 		"Reset your password": "Redefinir a sua senha",
@@ -1085,7 +1085,7 @@
 		"We received a request to reset your {appName} password.": "Recebemos uma solicitação para redefinir sua senha do {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "O link funciona por 1 hora. A redefinição desconecta você em todos os dispositivos e remove suas passkeys, chaves de API e aplicativos conectados. Se você não pediu isto, ignore este e-mail; sua senha continua a mesma.",
 		"Create new password": "Criar nova senha",
-		"For security, only use links from emails sent by Reactive Resume.": "Por segurança, use apenas links de e-mails enviados pelo Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Por segurança, use apenas links de e-mails enviados pelo Student Career Studio.",
 		"Verify your email": "Verifique seu e-mail",
 		"Verify your email for {appName}": "Verifique seu e-mail para o {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Confirme que este é o seu endereço de e-mail do {appName}. O link funciona por 1 hora.",
@@ -1106,8 +1106,8 @@
 		"Approve change": "Aprovar alteração",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Se você não solicitou esta alteração, ignore este e-mail e altere sua senha. O endereço da conta não mudará sem a sua aprovação.",
 		"If the button does not work, copy and paste this link into your browser:": "Se o botão não funcionar, copie e cole este link no seu navegador:",
-		"By the community, for the community.": "Construída pela comunidade para a comunidade.",
-		"A passion project by {author}.": "Um projeto feito com paixão por {author}."
+		"Your career story, in one place.": "Construída pela comunidade para a comunidade.",
+		"A free beta by {author}.": "Um projeto feito com paixão por {author}."
 	},
 	"pt-PT": {
 		"Reset your password": "Repor a sua senha",
@@ -1115,7 +1115,7 @@
 		"We received a request to reset your {appName} password.": "Recebemos um pedido para repor a sua palavra-passe do {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "O link é válido durante 1 hora. A reposição termina a sua sessão em todos os dispositivos e remove as suas chaves de acesso, chaves API e aplicações ligadas. Se não pediu isto, ignore este email; a sua palavra-passe mantém-se.",
 		"Create new password": "Criar nova palavra-passe",
-		"For security, only use links from emails sent by Reactive Resume.": "Por segurança, use apenas links de emails enviados pelo Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Por segurança, use apenas links de emails enviados pelo Student Career Studio.",
 		"Verify your email": "Verifique o seu email",
 		"Verify your email for {appName}": "Verifique o seu email para o {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Confirme que este é o seu endereço de email para o {appName}. O link é válido durante 1 hora.",
@@ -1136,8 +1136,8 @@
 		"Approve change": "Aprovar alteração",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Se não pediu esta alteração, ignore este email e altere a sua palavra-passe. O endereço da conta não será alterado sem a sua aprovação.",
 		"If the button does not work, copy and paste this link into your browser:": "Se o botão não funcionar, copie e cole este link no seu navegador:",
-		"By the community, for the community.": "Pela comunidade, para a comunidade.",
-		"A passion project by {author}.": "Um projeto pessoal de {author}."
+		"Your career story, in one place.": "Pela comunidade, para a comunidade.",
+		"A free beta by {author}.": "Um projeto pessoal de {author}."
 	},
 	"ro-RO": {
 		"Reset your password": "Resetați-vă parola",
@@ -1145,7 +1145,7 @@
 		"We received a request to reset your {appName} password.": "Am primit o cerere de resetare a parolei {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Linkul este valabil 1 oră. Resetarea vă deconectează de pe toate dispozitivele și elimină cheile de acces, cheile API și aplicațiile conectate. Dacă nu ați cerut acest lucru, ignorați acest e-mail; parola rămâne aceeași.",
 		"Create new password": "Creați o parolă nouă",
-		"For security, only use links from emails sent by Reactive Resume.": "Din motive de securitate, folosiți doar linkuri din e-mailurile trimise de Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Din motive de securitate, folosiți doar linkuri din e-mailurile trimise de Student Career Studio.",
 		"Verify your email": "Verificați-vă e-mailul",
 		"Verify your email for {appName}": "Verificați-vă e-mailul pentru {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Confirmați că aceasta este adresa dvs. de e-mail pentru {appName}. Linkul este valabil 1 oră.",
@@ -1166,8 +1166,8 @@
 		"Approve change": "Aprobați modificarea",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Dacă nu ați solicitat această schimbare, ignorați acest e-mail și schimbați-vă parola. Adresa contului nu se va schimba fără aprobarea dvs.",
 		"If the button does not work, copy and paste this link into your browser:": "Dacă butonul nu funcționează, copiați și lipiți acest link în browser:",
-		"By the community, for the community.": "Construit de comunitate, pentru comunitate.",
-		"A passion project by {author}.": "Un proiect din pasiune de {author}."
+		"Your career story, in one place.": "Construit de comunitate, pentru comunitate.",
+		"A free beta by {author}.": "Un proiect din pasiune de {author}."
 	},
 	"ru-RU": {
 		"Reset your password": "Сбросить пароль",
@@ -1175,7 +1175,7 @@
 		"We received a request to reset your {appName} password.": "Мы получили запрос на сброс вашего пароля в {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Ссылка действует 1 час. Сброс завершает сеансы на всех устройствах и удаляет ваши ключи доступа (passkeys), API-ключи и подключённые приложения. Если вы этого не запрашивали, проигнорируйте это письмо; ваш пароль не изменится.",
 		"Create new password": "Создайте новый пароль",
-		"For security, only use links from emails sent by Reactive Resume.": "В целях безопасности используйте только ссылки из писем, отправленных Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "В целях безопасности используйте только ссылки из писем, отправленных Student Career Studio.",
 		"Verify your email": "Подтвердите свой email",
 		"Verify your email for {appName}": "Подтвердите свой email для {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Подтвердите, что это ваш адрес электронной почты для {appName}. Ссылка действует 1 час.",
@@ -1196,8 +1196,8 @@
 		"Approve change": "Подтвердить изменение",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Если вы не запрашивали это изменение, проигнорируйте это письмо и смените пароль. Адрес аккаунта не изменится без вашего подтверждения.",
 		"If the button does not work, copy and paste this link into your browser:": "Если кнопка не работает, скопируйте эту ссылку и вставьте её в браузер:",
-		"By the community, for the community.": "Продукт сообщества для сообщества.",
-		"A passion project by {author}.": "Проект, сделанный с любовью, от {author}."
+		"Your career story, in one place.": "Продукт сообщества для сообщества.",
+		"A free beta by {author}.": "Проект, сделанный с любовью, от {author}."
 	},
 	"sk-SK": {
 		"Reset your password": "Obnov svoje heslo",
@@ -1205,7 +1205,7 @@
 		"We received a request to reset your {appName} password.": "Dostali sme žiadosť o obnovenie vášho hesla pre {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Odkaz platí 1 hodinu. Obnovenie vás odhlási na všetkých zariadeniach a odstráni vaše passkeys, API kľúče a pripojené aplikácie. Ak ste o to nežiadali, ignorujte tento e-mail; vaše heslo zostane rovnaké.",
 		"Create new password": "Vytvoriť nové heslo",
-		"For security, only use links from emails sent by Reactive Resume.": "Z bezpečnostných dôvodov používajte len odkazy z e-mailov, ktoré poslal Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Z bezpečnostných dôvodov používajte len odkazy z e-mailov, ktoré poslal Student Career Studio.",
 		"Verify your email": "Overte svoj e-mail",
 		"Verify your email for {appName}": "Overte svoj e-mail pre {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Potvrďte, že toto je vaša e-mailová adresa pre {appName}. Odkaz platí 1 hodinu.",
@@ -1226,8 +1226,8 @@
 		"Approve change": "Schváliť zmenu",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Ak ste o túto zmenu nežiadali, ignorujte tento e-mail a zmeňte si heslo. Adresa účtu sa bez vášho schválenia nezmení.",
 		"If the button does not work, copy and paste this link into your browser:": "Ak tlačidlo nefunguje, skopírujte a vložte tento odkaz do prehliadača:",
-		"By the community, for the community.": "Komunitou vytvorené pre komunitu.",
-		"A passion project by {author}.": "Srdcový projekt, ktorý vytvoril {author}."
+		"Your career story, in one place.": "Komunitou vytvorené pre komunitu.",
+		"A free beta by {author}.": "Srdcový projekt, ktorý vytvoril {author}."
 	},
 	"sl-SI": {
 		"Reset your password": "Ponastavite svoje geslo",
@@ -1235,7 +1235,7 @@
 		"We received a request to reset your {appName} password.": "Prejeli smo zahtevo za ponastavitev vašega gesla za {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Povezava deluje 1 uro. Ponastavitev vas odjavi v vseh napravah ter odstrani vaše passkeys, ključe API in povezane aplikacije. Če tega niste zahtevali, prezrite to e-poštno sporočilo; vaše geslo ostane enako.",
 		"Create new password": "Ustvari novo geslo",
-		"For security, only use links from emails sent by Reactive Resume.": "Zaradi varnosti uporabljajte samo povezave iz e-poštnih sporočil, ki jih pošlje Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Zaradi varnosti uporabljajte samo povezave iz e-poštnih sporočil, ki jih pošlje Student Career Studio.",
 		"Verify your email": "Potrdite svojo e-pošto",
 		"Verify your email for {appName}": "Potrdite svojo e-pošto za {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Potrdite, da je to vaš e-poštni naslov za {appName}. Povezava deluje 1 uro.",
@@ -1256,8 +1256,8 @@
 		"Approve change": "Odobri spremembo",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Če te spremembe niste zahtevali, prezrite to e-poštno sporočilo in spremenite geslo. Naslov računa se brez vaše odobritve ne bo spremenil.",
 		"If the button does not work, copy and paste this link into your browser:": "Če gumb ne deluje, kopirajte to povezavo in jo prilepite v brskalnik:",
-		"By the community, for the community.": "Od skupnosti, za skupnost.",
-		"A passion project by {author}.": "Strastni projekt avtorja {author}."
+		"Your career story, in one place.": "Od skupnosti, za skupnost.",
+		"A free beta by {author}.": "Strastni projekt avtorja {author}."
 	},
 	"sq-AL": {
 		"Reset your password": "Rivendosni fjalëkalimin tuaj",
@@ -1265,7 +1265,7 @@
 		"We received a request to reset your {appName} password.": "Morëm një kërkesë për të rikthyer fjalëkalimin tënd të {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Lidhja funksionon për 1 orë. Rikthimi të çkyç në çdo pajisje dhe tua hep çelësat e kalimit, çelësat API dhe aplikacionet e lidhura. Nëse nuk e kërkove këtë, injoroje këtë email; fjalëkalimi yt mbetet i njëjtë.",
 		"Create new password": "Krijo një fjalëkalim të re",
-		"For security, only use links from emails sent by Reactive Resume.": "Për sigurinë, përdor vetëm lidhje nga email-et e dërguara nga Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Për sigurinë, përdor vetëm lidhje nga email-et e dërguara nga Student Career Studio.",
 		"Verify your email": "Verifiko email-in tënd",
 		"Verify your email for {appName}": "Verifiko email-in tënd për {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Konfirmo që kjo është adresa e email-it tënd për {appName}. Lidhja funksionon për 1 orë.",
@@ -1286,8 +1286,8 @@
 		"Approve change": "Aprovo ndryshimin",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Nëse nuk e kërkove këtë ndryshim, injoroje këtë email dhe ndrysho fjalëkalimin tënd. Adresa e llogarisë nuk do të ndryshojë pa aprovimin tënd.",
 		"If the button does not work, copy and paste this link into your browser:": "Nëse butoni nuk punon, kopjoje dhe ngjite këtë lidhje në shfletuesin tënd:",
-		"By the community, for the community.": "Nga komuniteti, për komunitetin.",
-		"A passion project by {author}.": "Një projekt nga pasioni i {author}."
+		"Your career story, in one place.": "Nga komuniteti, për komunitetin.",
+		"A free beta by {author}.": "Një projekt nga pasioni i {author}."
 	},
 	"sr-SP": {
 		"Reset your password": "Ресетујте своју лозинку",
@@ -1295,7 +1295,7 @@
 		"We received a request to reset your {appName} password.": "Примили смо захтев за ресетовање ваше лозинке за {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Веза важи 1 сат. Ресетовање вас одјављује са свих уређаја и уклања ваше кључеве за приступ, API кључеве и повезане апликације. Ако ово нисте тражили, занемарите ову е-поруку; ваша лозинка остаје иста.",
 		"Create new password": "Направите нову лозинку",
-		"For security, only use links from emails sent by Reactive Resume.": "Из безбедносних разлога користите само везе из е-порука које шаље Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Из безбедносних разлога користите само везе из е-порука које шаље Student Career Studio.",
 		"Verify your email": "Верификујте е-пошту",
 		"Verify your email for {appName}": "Верификујте е-пошту за {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Потврдите да је ово ваша адреса е-поште за {appName}. Веза важи 1 сат.",
@@ -1316,8 +1316,8 @@
 		"Approve change": "Одобри промену",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Ако нисте затражили ову промену, занемарите ову е-поруку и промените лозинку. Адреса налога се неће променити без вашег одобрења.",
 		"If the button does not work, copy and paste this link into your browser:": "Ако дугме не ради, копирајте и налепите ову везу у прегледач:",
-		"By the community, for the community.": "Од заједнице, за заједницу.",
-		"A passion project by {author}.": "Пројекат из страсти аутора {author}."
+		"Your career story, in one place.": "Од заједнице, за заједницу.",
+		"A free beta by {author}.": "Пројекат из страсти аутора {author}."
 	},
 	"sv-SE": {
 		"Reset your password": "Återställ ditt lösenord",
@@ -1325,7 +1325,7 @@
 		"We received a request to reset your {appName} password.": "Vi fick en begäran om att återställa ditt {appName}-lösenord.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Länken fungerar i 1 timme. En återställning loggar ut dig på alla enheter och tar bort dina passkeys, API-nycklar och anslutna appar. Om du inte har bett om det här, ignorera mejlet; ditt lösenord förblir detsamma.",
 		"Create new password": "Skapa nytt lösenord",
-		"For security, only use links from emails sent by Reactive Resume.": "Av säkerhetsskäl, använd bara länkar från mejl skickade av Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "Av säkerhetsskäl, använd bara länkar från mejl skickade av Student Career Studio.",
 		"Verify your email": "Verifiera din e-post",
 		"Verify your email for {appName}": "Verifiera din e-post för {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Bekräfta att det här är din e-postadress för {appName}. Länken fungerar i 1 timme.",
@@ -1346,8 +1346,8 @@
 		"Approve change": "Godkänn ändring",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Om du inte har begärt den här ändringen, ignorera mejlet och byt ditt lösenord. Adressen på kontot ändras inte utan ditt godkännande.",
 		"If the button does not work, copy and paste this link into your browser:": "Om knappen inte fungerar, kopiera och klistra in den här länken i din webbläsare:",
-		"By the community, for the community.": "Av gemenskapen, för gemenskapen.",
-		"A passion project by {author}.": "Ett passionerat projekt av {author}."
+		"Your career story, in one place.": "Av gemenskapen, för gemenskapen.",
+		"A free beta by {author}.": "Ett passionerat projekt av {author}."
 	},
 	"ta-IN": {
 		"Reset your password": "உங்கள் கடவுச்சொல்லை மீட்டமைக்கவும்",
@@ -1355,7 +1355,7 @@
 		"We received a request to reset your {appName} password.": "உங்கள் {appName} கடவுச்சொல்லை மீட்டமைக்க ஒரு கோரிக்கை பெறப்பட்டது.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "இணைப்பு 1 மணி நேரம் வேலை செய்யும். மீட்டமைப்பு ஒவ்வொரு சாதனத்திலும் உங்களை வெளியேற்றி, உங்கள் பாஸ் கீகள், API விசைகள், இணைத்த ஆப்கள் அனைத்தையும் நீக்கும். இதை நீங்கள் கோரவில்லையென்றால், இந்த மின்னஞ்சலைப் புறக்கணிக்கவும்; உங்கள் கடவுச்சொல் மாறாது.",
 		"Create new password": "புதிய கடவுச்சொல்லை உருவாக்கு",
-		"For security, only use links from emails sent by Reactive Resume.": "பாதுகாப்புக்காக, Reactive Resume அனுப்பிய மின்னஞ்சல்களில் உள்ள இணைப்புகளை மட்டுமே பயன்படுத்தவும்.",
+		"For security, only use links from emails sent by Student Career Studio.": "பாதுகாப்புக்காக, Student Career Studio அனுப்பிய மின்னஞ்சல்களில் உள்ள இணைப்புகளை மட்டுமே பயன்படுத்தவும்.",
 		"Verify your email": "உங்கள் மின்னஞ்சலை உறுதிப்படுத்தவும்",
 		"Verify your email for {appName}": "உங்கள் {appName} மின்னஞ்சலை உறுதிப்படுத்து",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "இதுவே உங்கள் {appName} மின்னஞ்சல் முகவரி என உறுதிப்படுத்தவும். இணைப்பு 1 மணி நேரம் வேலை செய்யும்.",
@@ -1376,8 +1376,8 @@
 		"Approve change": "மாற்றத்திற்கு ஒப்புதல் அளி",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "இந்த மாற்றத்தை நீங்கள் கோரவில்லையென்றால், இந்த மின்னஞ்சலைப் புறக்கணித்து உங்கள் கடவுச்சொல்லை மாற்றவும். உங்கள் ஒப்புதல் இன்றி கணக்கின் முகவரி மாறாது.",
 		"If the button does not work, copy and paste this link into your browser:": "பொத்தான் வேலை செய்யவில்லையெனில், இந்த இணைப்பை நகலெடுத்து உலாவியில் ஒட்டவும்:",
-		"By the community, for the community.": "சமூகத்தால், சமூகத்திற்காக.",
-		"A passion project by {author}.": "{author} உருவாக்கிய ஒரு ஆர்வத் திட்டம்."
+		"Your career story, in one place.": "சமூகத்தால், சமூகத்திற்காக.",
+		"A free beta by {author}.": "{author} உருவாக்கிய ஒரு ஆர்வத் திட்டம்."
 	},
 	"te-IN": {
 		"Reset your password": "మీ పాస్‌వర్డ్‌ను రీసెట్ చేయండి",
@@ -1385,7 +1385,7 @@
 		"We received a request to reset your {appName} password.": "మీ {appName} పాస్‌వర్డ్ రీసెట్ చేయాలని ఒక అభ్యర్థన అందింది.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "లింక్ ఒక గంట పాటు పనిచేస్తుంది. రీసెట్ చేయడం వల్ల మీరు ప్రతి పరికరం నుంచీ సైన్ అవుట్ అవుతారు; మీ పాస్‌కీలు, API కీలు, కనెక్టెడ్ యాప్‌లు తొలగించబడతాయి. ఇది మీరు అడగలేదా అనుకుంటే, ఈ ఇమెయిల్ వదిలివేయండి; మీ పాస్‌వర్డ్ అలాగే ఉంటుంది.",
 		"Create new password": "కొత్త పాస్‌వర్డ్ సృష్టించండి",
-		"For security, only use links from emails sent by Reactive Resume.": "భద్రత కోసం, Reactive Resume పంపిన ఇమెయిల్‌ల లోని లింక్‌లను మాత్రమే ఉపయోగించండి.",
+		"For security, only use links from emails sent by Student Career Studio.": "భద్రత కోసం, Student Career Studio పంపిన ఇమెయిల్‌ల లోని లింక్‌లను మాత్రమే ఉపయోగించండి.",
 		"Verify your email": "మీ ఇమెయిల్‌ను ధృవీకరించండి",
 		"Verify your email for {appName}": "{appName} కోసం మీ ఇమెయిల్‌ను ధృవీకరించండి",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "ఇది {appName} కోసం మీ ఇమెయిల్ చిరునామానేనని నిర్ధారించండి. లింక్ ఒక గంట పాటు పనిచేస్తుంది.",
@@ -1406,8 +1406,8 @@
 		"Approve change": "మార్పును ఆమోదించండి",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "ఈ మార్పు మీరు అడగలేదా అనుకుంటే, ఈ ఇమెయిల్‌ను పట్టించుకోకండి మరియు మీ పాస్‌వర్డ్ మార్చుకోండి. మీ ఆమోదం లేకుండా ఖాతా చిరునామా మారదు.",
 		"If the button does not work, copy and paste this link into your browser:": "బటన్ పనిచేయకపోతే, ఈ లింక్‌ను కాపీ చేసి మీ బ్రౌజర్‌లో పేస్ట్ చేయండి:",
-		"By the community, for the community.": "కమ్యూనిటీ కోసం, కమ్యూనిటీ చేత.",
-		"A passion project by {author}.": "{author} చేసిన, మక్కువతో కూడిన ఒక ప్రాజెక్ట్."
+		"Your career story, in one place.": "కమ్యూనిటీ కోసం, కమ్యూనిటీ చేత.",
+		"A free beta by {author}.": "{author} చేసిన, మక్కువతో కూడిన ఒక ప్రాజెక్ట్."
 	},
 	"th-TH": {
 		"Reset your password": "รีเซ็ตรหัสผ่านของคุณ",
@@ -1415,7 +1415,7 @@
 		"We received a request to reset your {appName} password.": "เราได้รับคำขอรีเซ็ตรหัสผ่าน {appName} ของคุณ",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "ลิงก์ใช้งานได้ 1 ชั่วโมง การรีเซ็ตจะนำคุณออกจากระบบทุกอุปกรณ์ และลบพาสคีย์ กุญแจ API และแอปที่เชื่อมต่อ หากคุณไม่ได้ขอสิ่งนี้ ให้ละเว้นอีเมลนี้ รหัสผ่านของคุณจะไม่เปลี่ยนแปลง",
 		"Create new password": "สร้างรหัสผ่านใหม่",
-		"For security, only use links from emails sent by Reactive Resume.": "เพื่อความปลอดภัย ใช้เฉพาะลิงก์จากอีเมลที่ส่งโดย Reactive Resume",
+		"For security, only use links from emails sent by Student Career Studio.": "เพื่อความปลอดภัย ใช้เฉพาะลิงก์จากอีเมลที่ส่งโดย Student Career Studio",
 		"Verify your email": "ยืนยันอีเมลของคุณ",
 		"Verify your email for {appName}": "ยืนยันอีเมลของคุณสำหรับ {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "ยืนยันว่านี่คือที่อยู่อีเมลของคุณสำหรับ {appName} ลิงก์ใช้งานได้ 1 ชั่วโมง",
@@ -1436,8 +1436,8 @@
 		"Approve change": "อนุมัติการเปลี่ยนแปลง",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "หากคุณไม่ได้ขอการเปลี่ยนแปลงนี้ ให้ละเว้นอีเมลนี้และเปลี่ยนรหัสผ่านของคุณ ที่อยู่อีเมลในบัญชีจะไม่เปลี่ยนแปลงหากไม่ได้รับการอนุมัติจากคุณ",
 		"If the button does not work, copy and paste this link into your browser:": "หากปุ่มไม่ทำงาน คัดลอกแล้ววางลิงก์นี้ในเบราว์เซอร์ของคุณ:",
-		"By the community, for the community.": "โดยชุมชน เพื่อชุมชน",
-		"A passion project by {author}.": "โปรเจกต์จากความหลงใหลโดย {author}"
+		"Your career story, in one place.": "โดยชุมชน เพื่อชุมชน",
+		"A free beta by {author}.": "โปรเจกต์จากความหลงใหลโดย {author}"
 	},
 	"tr-TR": {
 		"Reset your password": "Şifrenizi sıfırlayın",
@@ -1445,7 +1445,7 @@
 		"We received a request to reset your {appName} password.": "{appName} parolanızı sıfırlama isteği aldık.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Bağlantı 1 saat geçerlidir. Sıfırlama sizi her cihazdan çıkarır ve passkey'lerinizi, API anahtarlarınızı ve bağlı uygulamalarınızı kaldırır. Bunu siz istemediyseniz bu e-postayı yok sayın; parolanız aynı kalır.",
 		"Create new password": "Yeni parola oluştur",
-		"For security, only use links from emails sent by Reactive Resume.": "Güvenliğiniz için yalnızca Reactive Resume tarafından gönderilen e-postalardaki bağlantıları kullanın.",
+		"For security, only use links from emails sent by Student Career Studio.": "Güvenliğiniz için yalnızca Student Career Studio tarafından gönderilen e-postalardaki bağlantıları kullanın.",
 		"Verify your email": "E-postanızı doğrulayın",
 		"Verify your email for {appName}": "{appName} için e-postanızı doğrulayın",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Bu adresin {appName} hesabınızın e-posta adresi olduğunu onaylayın. Bağlantı 1 saat geçerlidir.",
@@ -1466,8 +1466,8 @@
 		"Approve change": "Değişikliği onayla",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Bu değişikliği siz istemediyseniz bu e-postayı yok sayın ve parolanızı değiştirin. Hesaptaki adres onayınız olmadan değişmez.",
 		"If the button does not work, copy and paste this link into your browser:": "Düğme çalışmazsa, bu bağlantıyı kopyalayıp tarayıcınıza yapıştırın:",
-		"By the community, for the community.": "Topluluk tarafından topluluk için oluşturuldu.",
-		"A passion project by {author}.": "{author}'nin bir tutku projesi."
+		"Your career story, in one place.": "Topluluk tarafından topluluk için oluşturuldu.",
+		"A free beta by {author}.": "{author}'nin bir tutku projesi."
 	},
 	"uk-UA": {
 		"Reset your password": "Скинути пароль",
@@ -1475,7 +1475,7 @@
 		"We received a request to reset your {appName} password.": "Ми отримали запит на скидання пароля до {appName}.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Посилання дійсне 1 годину. Скидання виконає вихід на всіх пристроях і видалить ваші ключі доступу, ключі API та підключені застосунки. Якщо ви цього не запитували, проігноруйте цей лист; ваш пароль залишиться тим самим.",
 		"Create new password": "Створити новий пароль",
-		"For security, only use links from emails sent by Reactive Resume.": "З міркувань безпеки використовуйте лише посилання з листів, надісланих Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "З міркувань безпеки використовуйте лише посилання з листів, надісланих Student Career Studio.",
 		"Verify your email": "Підтвердьте ел. пошту",
 		"Verify your email for {appName}": "Підтвердьте ел. пошту для {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Підтвердьте, що це ваша адреса електронної пошти для {appName}. Посилання дійсне 1 годину.",
@@ -1496,8 +1496,8 @@
 		"Approve change": "Схвалити зміну",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Якщо ви не запитували цю зміну, проігноруйте цей лист і змініть пароль. Адреса облікового запису не зміниться без вашого схвалення.",
 		"If the button does not work, copy and paste this link into your browser:": "Якщо кнопка не працює, скопіюйте це посилання та вставте його в браузер:",
-		"By the community, for the community.": "Спільнотою, для спільноти.",
-		"A passion project by {author}.": "Проєкт-захоплення від {author}."
+		"Your career story, in one place.": "Спільнотою, для спільноти.",
+		"A free beta by {author}.": "Проєкт-захоплення від {author}."
 	},
 	"uz-UZ": {
 		"Reset your password": "Parolingizni tiklang",
@@ -1505,7 +1505,7 @@
 		"We received a request to reset your {appName} password.": "{appName} parolingizni tiklash bo'yicha so'rov oldik.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Havola 1 soat ishlaydi. Tiklash sizni har bir qurilmadan chiqaradi va o'tish kalitlari, API kalitlari va ulangan ilovalaringizni olib tashlaydi. Agar buni siz so'ramagan bo'lsangiz, bu emailni e'tiborsiz qoldiring; parolingiz o'zgarmaydi.",
 		"Create new password": "Yangi parol yaratish",
-		"For security, only use links from emails sent by Reactive Resume.": "Xavfsizlik uchun faqat Reactive Resume yuborgan email xabarlardagi havolalardan foydalaning.",
+		"For security, only use links from emails sent by Student Career Studio.": "Xavfsizlik uchun faqat Student Career Studio yuborgan email xabarlardagi havolalardan foydalaning.",
 		"Verify your email": "Emailingizni tasdiqlang",
 		"Verify your email for {appName}": "{appName} uchun emailingizni tasdiqlang",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Bu {appName} uchun email manzilingiz ekanini tasdiqlang. Havola 1 soat ishlaydi.",
@@ -1526,8 +1526,8 @@
 		"Approve change": "O'zgarishni tasdiqlash",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Agar bu o'zgarishni siz so'ramagan bo'lsangiz, bu emailni e'tiborsiz qoldiring va parolingizni o'zgartiring. Hisobdagi manzil sizning tasdiqlashingizsiz o'zgarmaydi.",
 		"If the button does not work, copy and paste this link into your browser:": "Agar tugma ishlamasa, bu havolani nusxalab brauzeringizga joylashtiring:",
-		"By the community, for the community.": "Jamiyat tomonidan, jamiyat uchun.",
-		"A passion project by {author}.": "{author} tomonidan shavq bilan yaratilgan loyiha."
+		"Your career story, in one place.": "Jamiyat tomonidan, jamiyat uchun.",
+		"A free beta by {author}.": "{author} tomonidan shavq bilan yaratilgan loyiha."
 	},
 	"vi-VN": {
 		"Reset your password": "Đặt lại mật khẩu",
@@ -1535,7 +1535,7 @@
 		"We received a request to reset your {appName} password.": "Chúng tôi đã nhận được yêu cầu đặt lại mật khẩu {appName} của bạn.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "Liên kết có hiệu lực trong 1 giờ. Việc đặt lại sẽ đăng xuất bạn trên mọi thiết bị và xóa khóa truy cập, khóa API và các ứng dụng đã kết nối của bạn. Nếu bạn không yêu cầu điều này, hãy bỏ qua email này; mật khẩu của bạn vẫn giữ nguyên.",
 		"Create new password": "Tạo mật khẩu mới",
-		"For security, only use links from emails sent by Reactive Resume.": "Vì lý do bảo mật, chỉ dùng các liên kết từ email do Reactive Resume gửi.",
+		"For security, only use links from emails sent by Student Career Studio.": "Vì lý do bảo mật, chỉ dùng các liên kết từ email do Student Career Studio gửi.",
 		"Verify your email": "Xác minh email của bạn",
 		"Verify your email for {appName}": "Xác minh email của bạn cho {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Hãy xác nhận đây là địa chỉ email của bạn cho {appName}. Liên kết có hiệu lực trong 1 giờ.",
@@ -1556,8 +1556,8 @@
 		"Approve change": "Phê duyệt thay đổi",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "Nếu bạn không yêu cầu thay đổi này, hãy bỏ qua email này và đổi mật khẩu. Địa chỉ của tài khoản sẽ không thay đổi nếu không có sự phê duyệt của bạn.",
 		"If the button does not work, copy and paste this link into your browser:": "Nếu nút không hoạt động, hãy sao chép và dán liên kết này vào trình duyệt của bạn:",
-		"By the community, for the community.": "Bởi cộng đồng, vì cộng đồng.",
-		"A passion project by {author}.": "Một dự án tâm huyết của {author}."
+		"Your career story, in one place.": "Bởi cộng đồng, vì cộng đồng.",
+		"A free beta by {author}.": "Một dự án tâm huyết của {author}."
 	},
 	"zh-CN": {
 		"Reset your password": "重置密码",
@@ -1565,7 +1565,7 @@
 		"We received a request to reset your {appName} password.": "我们收到了重置您 {appName} 密码的请求。",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "链接 1 小时内有效。重置会让您在所有设备上退出登录，并移除您的通行密钥、API 密钥和已连接的应用。如果这不是您的请求，请忽略此邮件；您的密码将保持不变。",
 		"Create new password": "创建新密码",
-		"For security, only use links from emails sent by Reactive Resume.": "为了安全，请只使用 Reactive Resume 发送的邮件中的链接。",
+		"For security, only use links from emails sent by Student Career Studio.": "为了安全，请只使用 Student Career Studio 发送的邮件中的链接。",
 		"Verify your email": "验证您的邮箱",
 		"Verify your email for {appName}": "验证您用于 {appName} 的邮箱",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "确认这是您用于 {appName} 的邮箱地址。链接 1 小时内有效。",
@@ -1586,8 +1586,8 @@
 		"Approve change": "批准更改",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "如果您没有请求此更改，请忽略此邮件并更改密码。未经您批准，账户上的地址不会更改。",
 		"If the button does not work, copy and paste this link into your browser:": "如果按钮无效，请将此链接复制并粘贴到浏览器中：",
-		"By the community, for the community.": "由社群贡献，为社群服务。",
-		"A passion project by {author}.": "{author} 的热爱之作。"
+		"Your career story, in one place.": "由社群贡献，为社群服务。",
+		"A free beta by {author}.": "{author} 的热爱之作。"
 	},
 	"zh-TW": {
 		"Reset your password": "重設您的密碼",
@@ -1595,7 +1595,7 @@
 		"We received a request to reset your {appName} password.": "我們收到了重設您 {appName} 密碼的請求。",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "連結在 1 小時內有效。重設會將您從所有裝置登出，並移除您的通行金鑰、API 金鑰和已連結的應用程式。如果這不是您提出的要求，請忽略這封電子郵件；您的密碼不會變更。",
 		"Create new password": "建立新密碼",
-		"For security, only use links from emails sent by Reactive Resume.": "為了安全起見，請只使用 Reactive Resume 寄出的電子郵件中的連結。",
+		"For security, only use links from emails sent by Student Career Studio.": "為了安全起見，請只使用 Student Career Studio 寄出的電子郵件中的連結。",
 		"Verify your email": "驗證您的電子郵件",
 		"Verify your email for {appName}": "驗證您用於 {appName} 的電子郵件",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "確認這是您用於 {appName} 的電子郵件地址。連結在 1 小時內有效。",
@@ -1616,8 +1616,8 @@
 		"Approve change": "核准變更",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "如果您沒有要求此變更，請忽略這封電子郵件並變更您的密碼。未經您的核准，帳戶上的地址不會變更。",
 		"If the button does not work, copy and paste this link into your browser:": "如果按鈕無法使用，請將此連結複製並貼到瀏覽器中：",
-		"By the community, for the community.": "來自社區，服務社區。",
-		"A passion project by {author}.": "{author} 的熱情之作。"
+		"Your career story, in one place.": "來自社區，服務社區。",
+		"A free beta by {author}.": "{author} 的熱情之作。"
 	},
 	"zu-ZA": {
 		"Reset your password": "Reset your password",
@@ -1625,7 +1625,7 @@
 		"We received a request to reset your {appName} password.": "We received a request to reset your {appName} password.",
 		"The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.": "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.",
 		"Create new password": "Create new password",
-		"For security, only use links from emails sent by Reactive Resume.": "For security, only use links from emails sent by Reactive Resume.",
+		"For security, only use links from emails sent by Student Career Studio.": "For security, only use links from emails sent by Student Career Studio.",
 		"Verify your email": "Verify your email",
 		"Verify your email for {appName}": "Verify your email for {appName}",
 		"Confirm this is your email address for {appName}. The link works for 1 hour.": "Confirm this is your email address for {appName}. The link works for 1 hour.",
@@ -1646,7 +1646,7 @@
 		"Approve change": "Approve change",
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.": "If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.",
 		"If the button does not work, copy and paste this link into your browser:": "If the button does not work, copy and paste this link into your browser:",
-		"By the community, for the community.": "By the community, for the community.",
-		"A passion project by {author}.": "A passion project by {author}."
+		"Your career story, in one place.": "Your career story, in one place.",
+		"A free beta by {author}.": "A free beta by {author}."
 	}
 }

@@ -2206,6 +2206,11 @@ msgstr "폰트가 참조되었지만 임베드되지 않았습니다."
 msgid "A free and open-source resume builder"
 msgstr "무료 오픈 소스 이력서 작성 도구"
 
+#. Email footer. author: Maryam Imran, linked
+#: src/features/auth/email-text.ts
+msgid "A free beta by {author}."
+msgstr ""
+
 #. Hero headline, line 1 of 4: A free, open-source / resume builder / and / career manager.
 #: src/features/homepage/hero.tsx
 msgid "A free, open-source"
@@ -2271,11 +2276,6 @@ msgstr "숫자로만 된 날짜는 국가마다 다르게 해석됩니다."
 #: src/features/ats-checker/messages.ts
 msgid "A page is rotated."
 msgstr "페이지가 회전되어 있습니다."
-
-#. Email footer. author: Amruth Pillai, linked
-#: src/features/auth/email-text.ts
-msgid "A passion project by {author}."
-msgstr "{author}의 열정 프로젝트입니다."
 
 #: src/features/resume/editor/check/job-match.tsx
 msgid "A pasted posting can be saved as an application afterwards."
@@ -3595,7 +3595,7 @@ msgstr "승인하고 패킷 만들기"
 msgid "Approve change"
 msgstr "변경 승인"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Approve changing your {appName} email address"
 msgstr "{appName} 이메일 주소 변경 승인"
@@ -4374,7 +4374,6 @@ msgstr "오늘 중"
 msgid "by feature."
 msgstr "기능별."
 
-#: src/features/auth/email-text.ts
 #: src/features/homepage/footer.tsx
 msgid "By the community, for the community."
 msgstr "커뮤니티에 의해, 커뮤니티를 위해."
@@ -5409,12 +5408,12 @@ msgstr "비밀번호 확인"
 msgid "Confirm the time, link and who you'll meet. Glance at the resume and letter you sent."
 msgstr "시간, 링크, 만날 사람을 확인하세요. 보낸 이력서와 커버레터를 훑어보세요."
 
-#. Email sent to a new address to finish an email change. appName: Reactive Resume
+#. Email sent to a new address to finish an email change. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this address to finish changing your {appName} email. The link works for 1 hour."
 msgstr "이 주소를 확인하면 {appName} 이메일 변경이 완료됩니다. 링크는 1시간 동안 유효합니다."
 
-#. Verification email. appName: Reactive Resume
+#. Verification email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "{appName}에서 사용할 이메일 주소가 맞는지 확인하세요. 링크는 1시간 동안 유효합니다."
@@ -5423,7 +5422,7 @@ msgstr "{appName}에서 사용할 이메일 주소가 맞는지 확인하세요.
 msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm your new {appName} email address"
 msgstr "새 {appName} 이메일 주소를 확인하세요"
@@ -9064,8 +9063,8 @@ msgid "For portals and recruiters that ask for Word. Simpler layout."
 msgstr "Word 파일을 요구하는 포털과 채용 담당자용. 더 단순한 레이아웃."
 
 #: src/features/auth/email-text.ts
-msgid "For security, only use links from emails sent by Reactive Resume."
-msgstr "보안을 위해 Reactive Resume에서 보낸 이메일의 링크만 사용하세요."
+msgid "For security, only use links from emails sent by Student Career Studio."
+msgstr ""
 
 #: src/features/career/workspace/debrief.tsx
 msgid "For the next round:"
@@ -16408,7 +16407,7 @@ msgstr "디자인을 기본값으로 초기화"
 msgid "Reset password"
 msgstr "비밀번호 재설정"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Reset your {appName} password"
 msgstr "{appName} 비밀번호 재설정"
@@ -18726,7 +18725,7 @@ msgstr "일부 텍스트가 회전되어 있습니다."
 msgid "Some uploaded files were skipped. Check upload-manifest.json in the archive."
 msgstr "일부 업로드한 파일을 건너뛰었습니다. 압축 파일의 upload-manifest.json을 확인하세요."
 
-#. Email change approval. appName: Reactive Resume; previousEmail and newEmail are email addresses
+#. Email change approval. appName: Student Career Studio; previousEmail and newEmail are email addresses
 #: src/features/auth/email-text.ts
 msgid "Someone asked to change your {appName} email from {previousEmail} to {newEmail}."
 msgstr "누군가 {appName} 이메일을 {previousEmail}에서 {newEmail}(으)로 변경하도록 요청했습니다."
@@ -22056,7 +22055,7 @@ msgstr "그곳에서 인증한 후 다시 시도하세요."
 msgid "Verify your email"
 msgstr "이메일을 인증하세요"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Verify your email for {appName}"
 msgstr "{appName} 이메일을 인증하세요"
@@ -22237,7 +22236,7 @@ msgstr "AI 없이 가져오는 방법"
 msgid "WCAG 2.1 AA"
 msgstr "WCAG 2.1 AA"
 
-#. Password reset email. appName: Reactive Resume
+#. Password reset email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "We received a request to reset your {appName} password."
 msgstr "{appName} 비밀번호 재설정 요청을 받았습니다."
@@ -23315,6 +23314,10 @@ msgstr "브라우저 받아쓰기가 중지되었습니다. 다시 시도하거�
 #: src/features/ats-checker/messages.ts
 msgid "Your bullets are drawn with unusual characters."
 msgstr "항목이 특이한 문자로 표시되어 있습니다."
+
+#: src/features/auth/email-text.ts
+msgid "Your career story, in one place."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/use-editor-hotkeys.ts
 #: src/routes/builder/letter/-components/letter-shell.tsx

@@ -2206,6 +2206,11 @@ msgstr "ஒரு எழுத்துரு குறிப்பிடப்�
 msgid "A free and open-source resume builder"
 msgstr "இலவச மற்றும் திறந்த மூல ரெஸ்யூம் பில்டர்"
 
+#. Email footer. author: Maryam Imran, linked
+#: src/features/auth/email-text.ts
+msgid "A free beta by {author}."
+msgstr ""
+
 #. Hero headline, line 1 of 4: A free, open-source / resume builder / and / career manager.
 #: src/features/homepage/hero.tsx
 msgid "A free, open-source"
@@ -2271,11 +2276,6 @@ msgstr "எண் வடிவ தேதி வெவ்வேறு நாட�
 #: src/features/ats-checker/messages.ts
 msgid "A page is rotated."
 msgstr "ஒரு பக்கம் சுழற்றப்பட்டுள்ளது."
-
-#. Email footer. author: Amruth Pillai, linked
-#: src/features/auth/email-text.ts
-msgid "A passion project by {author}."
-msgstr "{author} உருவாக்கிய ஒரு ஆர்வத் திட்டம்."
 
 #: src/features/resume/editor/check/job-match.tsx
 msgid "A pasted posting can be saved as an application afterwards."
@@ -3595,7 +3595,7 @@ msgstr "ஒப்புதல் அளித்துத் தொகுப்�
 msgid "Approve change"
 msgstr "மாற்றத்திற்கு ஒப்புதல் அளி"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Approve changing your {appName} email address"
 msgstr "உங்கள் {appName} மின்னஞ்சல் முகவரியை மாற்றுவதற்கு ஒப்புதல் அளிக்கவும்"
@@ -4374,7 +4374,6 @@ msgstr "நாள் முடிவுக்குள்"
 msgid "by feature."
 msgstr "அம்சம் வாரியாக."
 
-#: src/features/auth/email-text.ts
 #: src/features/homepage/footer.tsx
 msgid "By the community, for the community."
 msgstr "சமூகத்தால், சமூகத்திற்காக."
@@ -5409,12 +5408,12 @@ msgstr "கடவுச்சொல்லை உறுதிப்படுத�
 msgid "Confirm the time, link and who you'll meet. Glance at the resume and letter you sent."
 msgstr "நேரம், இணைப்பு, நீங்கள் சந்திக்கப் போகிறவர்கள் ஆகியவற்றை உறுதிசெய்யவும். நீங்கள் அனுப்பிய ரெஸ்யூமையும் கடிதத்தையும் ஒருமுறை பாருங்கள்."
 
-#. Email sent to a new address to finish an email change. appName: Reactive Resume
+#. Email sent to a new address to finish an email change. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this address to finish changing your {appName} email. The link works for 1 hour."
 msgstr "உங்கள் {appName} மின்னஞ்சலை மாற்றி முடிக்க இந்த முகவரியை உறுதிப்படுத்தவும். இணைப்பு 1 மணி நேரம் வேலை செய்யும்."
 
-#. Verification email. appName: Reactive Resume
+#. Verification email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "இதுவே உங்கள் {appName} மின்னஞ்சல் முகவரி என உறுதிப்படுத்தவும். இணைப்பு 1 மணி நேரம் வேலை செய்யும்."
@@ -5423,7 +5422,7 @@ msgstr "இதுவே உங்கள் {appName} மின்னஞ்சல
 msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm your new {appName} email address"
 msgstr "உங்கள் புதிய {appName} மின்னஞ்சல் முகவரியை உறுதிப்படுத்தவும்"
@@ -9064,8 +9063,8 @@ msgid "For portals and recruiters that ask for Word. Simpler layout."
 msgstr "Word கேட்கும் போர்டல்கள் மற்றும் பணியமர்த்துபவர்களுக்கு. எளிமையான தளவமைப்பு."
 
 #: src/features/auth/email-text.ts
-msgid "For security, only use links from emails sent by Reactive Resume."
-msgstr "பாதுகாப்புக்காக, Reactive Resume அனுப்பிய மின்னஞ்சல்களில் உள்ள இணைப்புகளை மட்டுமே பயன்படுத்தவும்."
+msgid "For security, only use links from emails sent by Student Career Studio."
+msgstr ""
 
 #: src/features/career/workspace/debrief.tsx
 msgid "For the next round:"
@@ -16408,7 +16407,7 @@ msgstr "வடிவமைப்பை இயல்புநிலைக்க�
 msgid "Reset password"
 msgstr "கடவுச்சொல்லை மீட்டமை"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Reset your {appName} password"
 msgstr "உங்கள் {appName} கடவுச்சொல்லை மீட்டமை"
@@ -18726,7 +18725,7 @@ msgstr "சில உரை சுழற்றப்பட்டுள்ளத�
 msgid "Some uploaded files were skipped. Check upload-manifest.json in the archive."
 msgstr "பதிவேற்றிய சில கோப்புகள் தவிர்க்கப்பட்டன. காப்பகத்திலுள்ள upload-manifest.json-ஐப் பார்க்கவும்."
 
-#. Email change approval. appName: Reactive Resume; previousEmail and newEmail are email addresses
+#. Email change approval. appName: Student Career Studio; previousEmail and newEmail are email addresses
 #: src/features/auth/email-text.ts
 msgid "Someone asked to change your {appName} email from {previousEmail} to {newEmail}."
 msgstr "உங்கள் {appName} மின்னஞ்சலை {previousEmail}-இலிருந்து {newEmail}-ஆக மாற்ற ஒருவர் கோரியுள்ளார்."
@@ -22056,7 +22055,7 @@ msgstr "அங்கே சரிபார்த்து, மீண்டும
 msgid "Verify your email"
 msgstr "உங்கள் மின்னஞ்சலை உறுதிப்படுத்தவும்"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Verify your email for {appName}"
 msgstr "உங்கள் {appName} மின்னஞ்சலை உறுதிப்படுத்து"
@@ -22237,7 +22236,7 @@ msgstr "AI இல்லாமல் வழிகள்"
 msgid "WCAG 2.1 AA"
 msgstr "WCAG 2.1 AA"
 
-#. Password reset email. appName: Reactive Resume
+#. Password reset email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "We received a request to reset your {appName} password."
 msgstr "உங்கள் {appName} கடவுச்சொல்லை மீட்டமைக்க ஒரு கோரிக்கை பெறப்பட்டது."
@@ -23315,6 +23314,10 @@ msgstr "உங்கள் உலாவியின் குரல் தட்
 #: src/features/ats-checker/messages.ts
 msgid "Your bullets are drawn with unusual characters."
 msgstr "உங்கள் புல்லட் புள்ளிகள் அசாதாரண எழுத்துக்களால் வரையப்பட்டுள்ளன."
+
+#: src/features/auth/email-text.ts
+msgid "Your career story, in one place."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/use-editor-hotkeys.ts
 #: src/routes/builder/letter/-components/letter-shell.tsx

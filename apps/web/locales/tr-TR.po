@@ -2206,6 +2206,11 @@ msgstr "Bir yazı tipine başvuruluyor ancak gömülü değil."
 msgid "A free and open-source resume builder"
 msgstr "Ücretsiz ve açık kaynaklı bir özgeçmiş oluşturucu"
 
+#. Email footer. author: Maryam Imran, linked
+#: src/features/auth/email-text.ts
+msgid "A free beta by {author}."
+msgstr ""
+
 #. Hero headline, line 1 of 4: A free, open-source / resume builder / and / career manager.
 #: src/features/homepage/hero.tsx
 msgid "A free, open-source"
@@ -2271,11 +2276,6 @@ msgstr "Sayısal bir tarih farklı ülkelerde farklı okunur."
 #: src/features/ats-checker/messages.ts
 msgid "A page is rotated."
 msgstr "Bir sayfa döndürülmüş."
-
-#. Email footer. author: Amruth Pillai, linked
-#: src/features/auth/email-text.ts
-msgid "A passion project by {author}."
-msgstr "{author}'nin bir tutku projesi."
 
 #: src/features/resume/editor/check/job-match.tsx
 msgid "A pasted posting can be saved as an application afterwards."
@@ -3595,7 +3595,7 @@ msgstr "Onayla ve paket oluştur"
 msgid "Approve change"
 msgstr "Değişikliği onayla"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Approve changing your {appName} email address"
 msgstr "{appName} e-posta adresinizi değiştirmeyi onaylayın"
@@ -4374,7 +4374,6 @@ msgstr "gün sonuna kadar"
 msgid "by feature."
 msgstr "özelliğe göre."
 
-#: src/features/auth/email-text.ts
 #: src/features/homepage/footer.tsx
 msgid "By the community, for the community."
 msgstr "Topluluk tarafından topluluk için oluşturuldu."
@@ -5409,12 +5408,12 @@ msgstr "Şifreyi onayla"
 msgid "Confirm the time, link and who you'll meet. Glance at the resume and letter you sent."
 msgstr "Saati, bağlantıyı ve kimlerle görüşeceğinizi teyit edin. Gönderdiğiniz özgeçmişe ve ön yazıya bir göz atın."
 
-#. Email sent to a new address to finish an email change. appName: Reactive Resume
+#. Email sent to a new address to finish an email change. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this address to finish changing your {appName} email. The link works for 1 hour."
 msgstr "{appName} e-posta adresinizi değiştirmeyi tamamlamak için bu adresi onaylayın. Bağlantı 1 saat geçerlidir."
 
-#. Verification email. appName: Reactive Resume
+#. Verification email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "Bu adresin {appName} hesabınızın e-posta adresi olduğunu onaylayın. Bağlantı 1 saat geçerlidir."
@@ -5423,7 +5422,7 @@ msgstr "Bu adresin {appName} hesabınızın e-posta adresi olduğunu onaylayın.
 msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm your new {appName} email address"
 msgstr "Yeni {appName} e-posta adresinizi onaylayın"
@@ -9064,8 +9063,8 @@ msgid "For portals and recruiters that ask for Word. Simpler layout."
 msgstr "Word isteyen portallar ve işe alım uzmanları için. Daha sade düzen."
 
 #: src/features/auth/email-text.ts
-msgid "For security, only use links from emails sent by Reactive Resume."
-msgstr "Güvenliğiniz için yalnızca Reactive Resume tarafından gönderilen e-postalardaki bağlantıları kullanın."
+msgid "For security, only use links from emails sent by Student Career Studio."
+msgstr ""
 
 #: src/features/career/workspace/debrief.tsx
 msgid "For the next round:"
@@ -16408,7 +16407,7 @@ msgstr "Tasarımı varsayılana sıfırla"
 msgid "Reset password"
 msgstr "Şifreyi sıfırla"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Reset your {appName} password"
 msgstr "{appName} parolanızı sıfırlayın"
@@ -18726,7 +18725,7 @@ msgstr "Bazı metinler döndürülmüş."
 msgid "Some uploaded files were skipped. Check upload-manifest.json in the archive."
 msgstr "Yüklenen bazı dosyalar atlandı. Arşivdeki upload-manifest.json dosyasını kontrol edin."
 
-#. Email change approval. appName: Reactive Resume; previousEmail and newEmail are email addresses
+#. Email change approval. appName: Student Career Studio; previousEmail and newEmail are email addresses
 #: src/features/auth/email-text.ts
 msgid "Someone asked to change your {appName} email from {previousEmail} to {newEmail}."
 msgstr "Birisi {appName} e-posta adresinizi {previousEmail} adresinden {newEmail} adresine değiştirmek istedi."
@@ -22056,7 +22055,7 @@ msgstr "Orada doğrulayın, ardından tekrar deneyin."
 msgid "Verify your email"
 msgstr "E-postanızı doğrulayın"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Verify your email for {appName}"
 msgstr "{appName} için e-postanızı doğrulayın"
@@ -22237,7 +22236,7 @@ msgstr "Yapay zeka olmadan yollar"
 msgid "WCAG 2.1 AA"
 msgstr "WCAG 2.1 AA"
 
-#. Password reset email. appName: Reactive Resume
+#. Password reset email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "We received a request to reset your {appName} password."
 msgstr "{appName} parolanızı sıfırlama isteği aldık."
@@ -23315,6 +23314,10 @@ msgstr "Tarayıcınızın sesle yazma özelliği durdu. Tekrar deneyin veya ceva
 #: src/features/ats-checker/messages.ts
 msgid "Your bullets are drawn with unusual characters."
 msgstr "Madde işaretleriniz alışılmadık karakterlerle çizilmiş."
+
+#: src/features/auth/email-text.ts
+msgid "Your career story, in one place."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/use-editor-hotkeys.ts
 #: src/routes/builder/letter/-components/letter-shell.tsx

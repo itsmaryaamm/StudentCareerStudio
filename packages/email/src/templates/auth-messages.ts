@@ -12,7 +12,7 @@ const ENGLISH = {
 	resetDetails:
 		"The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same.",
 	resetAction: "Create new password",
-	resetOutro: "For security, only use links from emails sent by Reactive Resume.",
+	resetOutro: "For security, only use links from emails sent by Student Career Studio.",
 	verifySubject: "Verify your email",
 	verifyPreview: "Verify your email for {appName}",
 	verifyIntro: "Confirm this is your email address for {appName}. The link works for 1 hour.",
@@ -34,8 +34,8 @@ const ENGLISH = {
 	changeOutro:
 		"If you did not request this change, ignore this email and change your password. The address on the account will not change without your approval.",
 	linkFallback: "If the button does not work, copy and paste this link into your browser:",
-	community: "By the community, for the community.",
-	credit: "A passion project by {author}.",
+	community: "Your career story, in one place.",
+	credit: "A free beta by {author}.",
 };
 
 export type AuthEmailMessages = typeof ENGLISH;

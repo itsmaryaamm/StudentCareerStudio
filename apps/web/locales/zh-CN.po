@@ -2206,6 +2206,11 @@ msgstr "有一款字体被引用但未嵌入。"
 msgid "A free and open-source resume builder"
 msgstr "免费的开源简历生成器"
 
+#. Email footer. author: Maryam Imran, linked
+#: src/features/auth/email-text.ts
+msgid "A free beta by {author}."
+msgstr ""
+
 #. Hero headline, line 1 of 4: A free, open-source / resume builder / and / career manager.
 #: src/features/homepage/hero.tsx
 msgid "A free, open-source"
@@ -2271,11 +2276,6 @@ msgstr "数字格式的日期在不同国家的读法不同。"
 #: src/features/ats-checker/messages.ts
 msgid "A page is rotated."
 msgstr "有一页被旋转了。"
-
-#. Email footer. author: Amruth Pillai, linked
-#: src/features/auth/email-text.ts
-msgid "A passion project by {author}."
-msgstr "{author} 的热爱之作。"
 
 #: src/features/resume/editor/check/job-match.tsx
 msgid "A pasted posting can be saved as an application afterwards."
@@ -3595,7 +3595,7 @@ msgstr "批准并创建材料包"
 msgid "Approve change"
 msgstr "批准更改"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Approve changing your {appName} email address"
 msgstr "批准更改您的 {appName} 邮箱地址"
@@ -4374,7 +4374,6 @@ msgstr "当天结束前"
 msgid "by feature."
 msgstr "按功能。"
 
-#: src/features/auth/email-text.ts
 #: src/features/homepage/footer.tsx
 msgid "By the community, for the community."
 msgstr "由社群贡献，为社群服务。"
@@ -5409,12 +5408,12 @@ msgstr "确认密码"
 msgid "Confirm the time, link and who you'll meet. Glance at the resume and letter you sent."
 msgstr "确认时间、链接和面试官。浏览一下您发送的简历和求职信。"
 
-#. Email sent to a new address to finish an email change. appName: Reactive Resume
+#. Email sent to a new address to finish an email change. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this address to finish changing your {appName} email. The link works for 1 hour."
 msgstr "确认此地址以完成您的 {appName} 邮箱更改。链接 1 小时内有效。"
 
-#. Verification email. appName: Reactive Resume
+#. Verification email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm this is your email address for {appName}. The link works for 1 hour."
 msgstr "确认这是您用于 {appName} 的邮箱地址。链接 1 小时内有效。"
@@ -5423,7 +5422,7 @@ msgstr "确认这是您用于 {appName} 的邮箱地址。链接 1 小时内有�
 msgid "Confirm your email first. We just sent you a new link; check your inbox and spam folder."
 msgstr ""
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Confirm your new {appName} email address"
 msgstr "确认您的新 {appName} 邮箱地址"
@@ -9064,8 +9063,8 @@ msgid "For portals and recruiters that ask for Word. Simpler layout."
 msgstr "适用于要求 Word 的招聘门户和招聘人员。布局更简单。"
 
 #: src/features/auth/email-text.ts
-msgid "For security, only use links from emails sent by Reactive Resume."
-msgstr "为了安全，请只使用 Reactive Resume 发送的邮件中的链接。"
+msgid "For security, only use links from emails sent by Student Career Studio."
+msgstr ""
 
 #: src/features/career/workspace/debrief.tsx
 msgid "For the next round:"
@@ -16408,7 +16407,7 @@ msgstr "将设计重置为默认值"
 msgid "Reset password"
 msgstr "重置密码"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Reset your {appName} password"
 msgstr "重置您的 {appName} 密码"
@@ -18726,7 +18725,7 @@ msgstr "有些文字被旋转了。"
 msgid "Some uploaded files were skipped. Check upload-manifest.json in the archive."
 msgstr "部分上传的文件已跳过。请查看压缩包中的 upload-manifest.json。"
 
-#. Email change approval. appName: Reactive Resume; previousEmail and newEmail are email addresses
+#. Email change approval. appName: Student Career Studio; previousEmail and newEmail are email addresses
 #: src/features/auth/email-text.ts
 msgid "Someone asked to change your {appName} email from {previousEmail} to {newEmail}."
 msgstr "有人请求将您的 {appName} 邮箱从 {previousEmail} 更改为 {newEmail}。"
@@ -22056,7 +22055,7 @@ msgstr "请在那里验证，然后重试。"
 msgid "Verify your email"
 msgstr "验证您的邮箱"
 
-#. Email preview text. appName: Reactive Resume
+#. Email preview text. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "Verify your email for {appName}"
 msgstr "验证您用于 {appName} 的邮箱"
@@ -22237,7 +22236,7 @@ msgstr "无需 AI 的导入方式"
 msgid "WCAG 2.1 AA"
 msgstr "WCAG 2.1 AA"
 
-#. Password reset email. appName: Reactive Resume
+#. Password reset email. appName: Student Career Studio
 #: src/features/auth/email-text.ts
 msgid "We received a request to reset your {appName} password."
 msgstr "我们收到了重置您 {appName} 密码的请求。"
@@ -23315,6 +23314,10 @@ msgstr "浏览器听写已停止。请重试，或输入您的回答。"
 #: src/features/ats-checker/messages.ts
 msgid "Your bullets are drawn with unusual characters."
 msgstr "你的项目符号使用了不常见的字符。"
+
+#: src/features/auth/email-text.ts
+msgid "Your career story, in one place."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-components/use-editor-hotkeys.ts
 #: src/routes/builder/letter/-components/letter-shell.tsx
