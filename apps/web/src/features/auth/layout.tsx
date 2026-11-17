@@ -1,7 +1,7 @@
 import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import { Link, Outlet } from "@tanstack/react-router";
-import { BrandIcon } from "@reactive-resume/ui/components/brand-icon";
+import { BrandWordmark } from "@/components/brand-wordmark";
 
 const paper = "absolute h-[600px] w-[400px] overflow-hidden rounded-paper bg-paper shadow-page";
 
@@ -15,10 +15,9 @@ export function AuthLayout() {
 			<div className="relative flex min-w-0 flex-1 flex-col items-center justify-center py-15">
 				<Link
 					to="/"
-					className="absolute start-5 top-4 flex h-9 items-center gap-2.5 rounded-md px-2 text-[15px] leading-5 font-semibold [view-transition-name:auth-brand]"
+					className="absolute start-5 top-3 flex items-center gap-2.5 rounded-md px-2 text-[15px] leading-5 font-semibold [view-transition-name:auth-brand]"
 				>
-					<BrandIcon variant="icon" alt="" className="size-6 shrink-0" />
-					Student Career Studio
+					<BrandWordmark variant="light" className="h-11" />
 				</Link>
 
 				<div className="flex w-full max-w-[412px] flex-col px-4">

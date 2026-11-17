@@ -9,6 +9,7 @@ import { cn } from "@reactive-resume/utils/style";
 import { readAsBase64 } from "../chat";
 import { FactCard, useFacts } from "../profile";
 import { isQuotaError, LimitBanner, studioErrorText, useStudioState } from "../shared";
+import { BrandWordmark } from "@/components/brand-wordmark";
 import { ENTER_CLASS } from "@/libs/motion";
 import { orpc } from "@/libs/orpc/client";
 
@@ -410,10 +411,7 @@ export function OnboardingChat() {
 
 			<header className="flex items-center justify-between px-5 py-4 sm:px-8">
 				<div className="flex items-center gap-2.5 text-[15px] font-semibold">
-					<span className="grid size-8 place-items-center rounded-xl bg-linear-to-br from-[#6d4df0] to-[#a07df7] text-white">
-						<Icon name="sparkle" size={16} />
-					</span>
-					Student Career Studio
+					<BrandWordmark variant="light" className="h-10" />
 				</div>
 				<Button
 					variant="ghost"

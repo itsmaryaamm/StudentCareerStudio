@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { MENU_ITEMS } from "./content";
 import { scrollToSection, useStartButtonVisible } from "./hooks";
-import { BrandMark } from "./nav";
+import { BrandWordmark } from "@/components/brand-wordmark";
 
 /** The sticky glass bar at the top of a phone: the logo and "Log in", nothing in the hard-to-reach corners. */
 export function PhoneTopBar() {
@@ -12,8 +12,7 @@ export function PhoneTopBar() {
 				href="#top"
 				className="flex min-h-11 items-center gap-2 text-[15.5px] font-bold tracking-[-0.02em] whitespace-nowrap text-[#1A0B3B]"
 			>
-				<BrandMark size={28} />
-				Student Career Studio
+				<BrandWordmark variant="light" className="h-10" />
 			</a>
 			<span className="flex-1" />
 			<Link
@@ -85,8 +84,7 @@ function PhoneMenuSheet({ onClose }: { onClose: () => void }) {
 		>
 			<div className="flex items-center py-3.5 pr-3 pl-4">
 				<span className="flex items-center gap-2 text-[15.5px] font-bold">
-					<BrandMark size={28} />
-					Student Career Studio
+					<BrandWordmark variant="light" className="h-10" />
 				</span>
 				<span className="flex-1" />
 				<button

@@ -16,6 +16,7 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@reactive-resume/ui/com
 import { useBreakpoint } from "@reactive-resume/ui/hooks/use-breakpoint";
 import { getInitials } from "@reactive-resume/utils/string";
 import { cn } from "@reactive-resume/utils/style";
+import { BrandWordmark } from "@/components/brand-wordmark";
 import { MobileTabIndicator } from "@/components/layout/mobile-tab-indicator";
 import { PhoneHeaderActions } from "@/components/layout/phone-header-actions";
 import { useDialogStore } from "@/dialogs/store";
@@ -307,11 +308,8 @@ function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle: () => 
 				) : (
 					<>
 						<Link to="/" className="flex min-w-0 flex-1 items-center gap-2 text-sm leading-5 font-semibold">
-							<BrandIcon variant="icon" alt="" className="size-8 shrink-0 rounded-lg" />
-							<span className="flex min-w-0 flex-col leading-tight">
-								<span className="truncate">Student Career Studio</span>
-								<span className="text-[11px] font-normal text-[#d2c7f0]">Beta</span>
-							</span>
+							<BrandWordmark variant="dark" className="h-10 shrink-0" />
+							<span className="rounded-full bg-white/10 px-2 py-0.5 text-[11px] font-normal text-[#d2c7f0]">Beta</span>
 						</Link>
 						<button
 							type="button"

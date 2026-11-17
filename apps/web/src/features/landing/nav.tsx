@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { BrandIcon } from "@reactive-resume/ui/components/brand-icon";
 import { useIsPhone, useScrolledPast } from "./hooks";
 import { ServicesMenu } from "./services-menu";
+import { BrandWordmark } from "@/components/brand-wordmark";
 
 const arrow = (
 	<svg
@@ -84,8 +85,7 @@ export function HeroNav() {
 				href="#top"
 				className="flex items-center gap-2.5 text-base font-bold tracking-[-0.02em] whitespace-nowrap text-[#1A0B3B]"
 			>
-				<BrandMark size={32} />
-				Student Career Studio
+				<BrandWordmark variant="light" className="h-12" />
 			</a>
 			<Links compact={false} />
 			<Actions compact={false} />
@@ -109,8 +109,7 @@ export function FloatingNav() {
 					href="#top"
 					className="flex items-center gap-2 text-[15px] font-bold tracking-[-0.02em] whitespace-nowrap text-[#1A0B3B]"
 				>
-					<BrandMark size={26} />
-					Student Career Studio
+					<BrandWordmark variant="light" className="h-10" />
 				</a>
 				<Links compact />
 				<Actions compact />
