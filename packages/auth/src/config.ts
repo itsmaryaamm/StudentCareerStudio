@@ -1202,6 +1202,8 @@ const getAuthConfig = () => {
 
 		emailVerification: {
 			sendOnSignUp: true,
+			// A blocked sign-in (address not confirmed yet) sends a fresh link, as the sign-in message promises.
+			sendOnSignIn: true,
 			autoSignInAfterVerification: true,
 			// The emails say the link works for 1 hour; keep this in step with them.
 			expiresIn: 60 * 60,
