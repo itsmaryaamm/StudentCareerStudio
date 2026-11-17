@@ -25,7 +25,7 @@ void React;
 const appName = "Student Career Studio";
 // A PNG from this installation (mail clients block SVG, and a self-hosted server shouldn't lean on the public site).
 const appUrl = (process.env.APP_URL ?? "https://studentcareerstudio.maryamimran.com").replace(/\/+$/, "");
-const logoUrl = `${appUrl}/brand/logo-horizontal-800.png`;
+const logoUrl = `${appUrl}/brand/logo-horizontal-800.png?v=2`;
 
 // The app's Desk & Paper values, with system fallbacks: a light ground survives clients that force dark mode.
 const colors = {

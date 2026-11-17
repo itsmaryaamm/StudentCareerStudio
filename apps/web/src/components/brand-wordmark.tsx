@@ -12,7 +12,7 @@ export function BrandWordmark({ variant = "auto", className }: Props) {
 	if (variant !== "auto") {
 		return (
 			<img
-				src={`/brand/logo-horizontal${variant === "dark" ? "-dark-bg" : ""}-800.png`}
+				src={`/brand/logo-horizontal${variant === "dark" ? "-dark-bg" : ""}-800.png?v=2`}
 				alt={alt}
 				className={cn("block h-12 w-auto", className)}
 			/>
@@ -21,11 +21,15 @@ export function BrandWordmark({ variant = "auto", className }: Props) {
 	return (
 		<>
 			<img
-				src="/brand/logo-horizontal-dark-bg-800.png"
+				src="/brand/logo-horizontal-dark-bg-800.png?v=2"
 				alt={alt}
 				className={cn("hidden h-12 w-auto dark:block", className)}
 			/>
-			<img src="/brand/logo-horizontal-800.png" alt={alt} className={cn("block h-12 w-auto dark:hidden", className)} />
+			<img
+				src="/brand/logo-horizontal-800.png?v=2"
+				alt={alt}
+				className={cn("block h-12 w-auto dark:hidden", className)}
+			/>
 		</>
 	);
 }
