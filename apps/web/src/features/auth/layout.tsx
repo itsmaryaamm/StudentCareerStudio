@@ -33,10 +33,10 @@ export function AuthLayout() {
 					className="relative h-[684px] w-[584px] scale-[.82]"
 				>
 					<div data-design="paper" className={`${paper} start-0 top-0 -rotate-2 rtl:rotate-2`}>
-						<img src="/templates/thumb/ditto.webp" alt="" className="size-full object-cover" />
+						<MockResume />
 					</div>
 					<div data-design="paper" className={`${paper} end-0 bottom-0`}>
-						<img src="/templates/thumb/onyx.webp" alt="" className="size-full object-cover" />
+						<MockResume sidebar />
 					</div>
 				</div>
 				<p className="mt-9 max-w-[620px] px-8 text-center text-[34px] leading-[1.15] font-bold tracking-[-0.03em] text-balance">
@@ -46,6 +46,41 @@ export function AuthLayout() {
 					<Trans>Beta for 50 students. Your résumé stays private to you.</Trans>
 				</p>
 			</aside>
+		</div>
+	);
+}
+
+const line = "h-[7px] rounded-full bg-[#e3e0ee]";
+
+/** A résumé drawn in plain boxes: a name, no photo and no one's real details. */
+function MockResume({ sidebar = false }: { sidebar?: boolean }) {
+	const block = (title: string, widths: string[]) => (
+		<div className="mt-6">
+			<div className="text-[11px] font-bold tracking-wider text-[#4b1d96] uppercase">{title}</div>
+			<div className="mt-2 h-px bg-[#d9d4ea]" />
+			<div className="mt-3 space-y-2">
+				{widths.map((w, i) => (
+					<div key={i} className={line} style={{ width: w }} />
+				))}
+			</div>
+		</div>
+	);
+	return (
+		<div aria-hidden className="flex size-full text-[#1c1530]">
+			{sidebar && (
+				<div className="w-[34%] bg-[#f1edfb] px-5 pt-10">
+					{block("Skills", ["90%", "70%", "80%", "60%"])}
+					{block("Languages", ["65%", "55%"])}
+				</div>
+			)}
+			<div className="min-w-0 flex-1 px-8 pt-10">
+				<div className="text-[26px] leading-none font-bold tracking-tight">Your Name</div>
+				<div className="mt-2 text-[12px] text-[#6b6485]">Student · your.name@email.com · City</div>
+				{block("Summary", ["100%", "96%", "70%"])}
+				{block("Experience", ["55%", "100%", "92%", "85%", "50%", "98%", "88%"])}
+				{block("Education", ["60%", "80%", "45%"])}
+				{!sidebar && block("Skills", ["75%", "60%"])}
+			</div>
 		</div>
 	);
 }
