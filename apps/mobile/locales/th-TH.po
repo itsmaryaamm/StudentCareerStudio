@@ -2924,10 +2924,6 @@ msgstr "ที่อยู่อีเมล"
 msgid "Email address won't be recognized"
 msgstr "ที่อยู่อีเมลจะไม่ได้รับการยอมรับ"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "อีเมลหรือชื่อผู้ใช้"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "อีเมล โทรศัพท์ ลิงก์"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "ป้อนรหัส"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "ป้อนอีเมลหรือชื่อผู้ใช้"
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "ใช้กรอกแบบฟอร์มงานและฉบั
 msgid "Used to find new roles and to judge fit."
 msgstr "ใช้ค้นหาตำแหน่งใหม่และประเมินความเหมาะสม"
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

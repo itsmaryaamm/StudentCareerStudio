@@ -2924,10 +2924,6 @@ msgstr "Alamat email"
 msgid "Email address won't be recognized"
 msgstr "Alamat email tidak akan dikenali"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "Email atau nama pengguna"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "Email, telepon, tautan"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Masukkan kode"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Masukkan email atau nama pengguna."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Digunakan untuk mengisi formulir lamaran dan draf. Hanya informasi yang 
 msgid "Used to find new roles and to judge fit."
 msgstr "Digunakan untuk mencari posisi baru dan menilai kecocokan."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

@@ -2924,10 +2924,6 @@ msgstr "ईमेल पता"
 msgid "Email address won't be recognized"
 msgstr "ईमेल पता पहचाना नहीं जाएगा"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "ईमेल या यूज़रनेम"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "ईमेल, फ़ोन, लिंक"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "कोड डालें"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "अपना ईमेल या उपयोगकर्ता नाम डालें।"
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "नौकरी के फ़ॉर्म और मसौदे भर�
 msgid "Used to find new roles and to judge fit."
 msgstr "नए पद खोजने और उपयुक्तता परखने के लिए उपयोग होता है।"
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

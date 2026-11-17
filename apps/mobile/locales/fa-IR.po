@@ -2924,10 +2924,6 @@ msgstr "آدرس ایمیل"
 msgid "Email address won't be recognized"
 msgstr "آدرس ایمیل شناسایی نخواهد شد"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "ایمیل یا نام کاربری"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "ایمیل، تلفن، پیوندها"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "کد را وارد کنید"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "ایمیل یا نام کاربری خود را وارد کنید."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "برای تکمیل فرم‌های شغلی و پیش‌نویس‌ها
 msgid "Used to find new roles and to judge fit."
 msgstr "برای یافتن فرصت‌های جدید و سنجش تناسب استفاده می‌شود."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

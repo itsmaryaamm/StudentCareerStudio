@@ -2924,10 +2924,6 @@ msgstr "Email address"
 msgid "Email address won't be recognized"
 msgstr "Email address won't be recognized"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "Email or username"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "Email, phone, links"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Enter the code"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Enter your email or username."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Used to fill job forms and drafts. Only what you add here."
 msgid "Used to find new roles and to judge fit."
 msgstr "Used to find new roles and to judge fit."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

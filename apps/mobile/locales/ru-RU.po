@@ -2924,10 +2924,6 @@ msgstr "Адрес электронной почты"
 msgid "Email address won't be recognized"
 msgstr "Адрес электронной почты не будет распознан"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "Email или имя пользователя"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "Эл. почта, телефон, ссылки"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Введите код"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Введите эл. почту или имя пользователя."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Для заполнения анкет и черновиков. Толь
 msgid "Used to find new roles and to judge fit."
 msgstr "Для поиска вакансий и оценки соответствия."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

@@ -2924,10 +2924,6 @@ msgstr "E‑mailová adresa"
 msgid "Email address won't be recognized"
 msgstr "E-mailová adresa nebude rozpoznaná"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "E-mail alebo používateľské meno"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "E-mail, telefón, odkazy"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Zadajte kód"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Zadajte e-mail alebo používateľské meno."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Na vypĺňanie formulárov a konceptov. Iba to, čo sem pridáte."
 msgid "Used to find new roles and to judge fit."
 msgstr "Na hľadanie pozícií a posúdenie vhodnosti."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

@@ -2924,10 +2924,6 @@ msgstr "E-postadress"
 msgid "Email address won't be recognized"
 msgstr "E-postadressen kommer inte att kännas igen"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "E-post eller användarnamn"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "E-post, telefon, länkar"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Ange koden"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Ange e-post eller användarnamn."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Används till jobbformulär och utkast. Bara det du lägger till här."
 msgid "Used to find new roles and to judge fit."
 msgstr "Används för att hitta nya tjänster och bedöma matchning."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

@@ -2924,10 +2924,6 @@ msgstr "E‑poçt ünvanı"
 msgid "Email address won't be recognized"
 msgstr "E-poçt ünvanı tanınmayacaq"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "E-poçt və ya istifadəçi adı"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "E-poçt, telefon, keçidlər"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Kodu daxil edin"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "E-poçtunuzu və ya istifadəçi adınızı daxil edin."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "İş formaları və qaralamaları doldurmaq üçün istifadə olunur. Ya
 msgid "Used to find new roles and to judge fit."
 msgstr "Yeni vəzifələr tapmaq və uyğunluğu qiymətləndirmək üçün istifadə olunur."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

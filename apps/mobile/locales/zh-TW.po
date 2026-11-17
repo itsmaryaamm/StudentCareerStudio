@@ -2924,10 +2924,6 @@ msgstr "電子郵件地址"
 msgid "Email address won't be recognized"
 msgstr "電子郵件地址將無法被識別"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "電子郵件或使用者名稱"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "電子郵件、電話、連結"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "輸入驗證碼"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "輸入電子郵件或使用者名稱。"
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "用於填寫求職表單和草稿。僅使用你在這裡新增的內容
 msgid "Used to find new roles and to judge fit."
 msgstr "用於尋找新職位和判斷適合程度。"
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

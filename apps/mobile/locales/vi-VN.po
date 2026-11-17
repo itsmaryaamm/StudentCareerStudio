@@ -2924,10 +2924,6 @@ msgstr "Địa chỉ email"
 msgid "Email address won't be recognized"
 msgstr "Địa chỉ email sẽ không được nhận diện"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "Email hoặc tên người dùng"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "Email, điện thoại, liên kết"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Nhập mã"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Nhập email hoặc tên người dùng."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Dùng để điền biểu mẫu và bản nháp. Chỉ nội dung bạn
 msgid "Used to find new roles and to judge fit."
 msgstr "Dùng tìm vị trí mới và đánh giá độ phù hợp."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

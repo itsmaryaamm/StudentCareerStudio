@@ -2924,10 +2924,6 @@ msgstr "Email manzili"
 msgid "Email address won't be recognized"
 msgstr "Elektron pochta manzili aniqlanmaydi"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "Email yoki foydalanuvchi nomi"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "Email, telefon, havolalar"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Kodni kiriting"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Email yoki foydalanuvchi nomini kiriting."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Anketa va qoralamalarni to‘ldirish uchun. Faqat shu yerga qo‘shganla
 msgid "Used to find new roles and to judge fit."
 msgstr "Yangi lavozim topish va moslikni baholash uchun."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

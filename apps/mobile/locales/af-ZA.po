@@ -2924,10 +2924,6 @@ msgstr "E-posadres"
 msgid "Email address won't be recognized"
 msgstr "E-posadres sal nie herken word nie"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "E-pos of gebruikersnaam"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "E-pos, foon, skakels"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Voer die kode in"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Voer jou e-posadres of gebruikersnaam in."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Word gebruik om werksaansoekvorms en konsepte in te vul. Net wat jy hier
 msgid "Used to find new roles and to judge fit."
 msgstr "Word gebruik om nuwe poste te vind en geskiktheid te beoordeel."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

@@ -2924,10 +2924,6 @@ msgstr "Alamat e-mel"
 msgid "Email address won't be recognized"
 msgstr "Alamat e-mel tidak akan dikenali"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "E-mel atau nama pengguna"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "E-mel, telefon, pautan"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Masukkan kod"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Masukkan e-mel atau nama pengguna anda."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Digunakan untuk mengisi borang permohonan dan draf. Hanya maklumat yang 
 msgid "Used to find new roles and to judge fit."
 msgstr "Digunakan untuk mencari jawatan baharu dan menilai kesesuaian."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

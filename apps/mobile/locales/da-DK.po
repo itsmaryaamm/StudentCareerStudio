@@ -2924,10 +2924,6 @@ msgstr "E-mailadresse"
 msgid "Email address won't be recognized"
 msgstr "E-mailadressen bliver ikke genkendt"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "E-mail eller brugernavn"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "E-mail, telefon, links"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Indtast koden"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Indtast din e-mail eller dit brugernavn."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Bruges til at udfylde ans√∏gningsformularer og udkast. Kun det, du tilf√
 msgid "Used to find new roles and to judge fit."
 msgstr "Bruges til at finde nye stillinger og vurdere match."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

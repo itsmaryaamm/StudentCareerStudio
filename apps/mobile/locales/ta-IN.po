@@ -2924,10 +2924,6 @@ msgstr "மின்னஞ்சல் முகவரி"
 msgid "Email address won't be recognized"
 msgstr "மின்னஞ்சல் முகவரி அங்கீகரிக்கப்படாது"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "மின்னஞ்சல் அல்லது பயனர்பெயர்"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "மின்னஞ்சல், தொலைபேசி, இணைப்புகள்"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "குறியீட்டை உள்ளிடவும்"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "மின்னஞ்சல் அல்லது பயனர்பெயரை உள்ளிடவும்."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "விண்ணப்பப் படிவங்கள் மற்ற�
 msgid "Used to find new roles and to judge fit."
 msgstr "புதிய பதவிகளைக் கண்டறியவும் பொருத்தத்தை மதிப்பிடவும் பயன்படும்."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

@@ -2924,10 +2924,6 @@ msgstr "عنوان البريد الإلكتروني"
 msgid "Email address won't be recognized"
 msgstr "لن يتم التعرف على عنوان البريد الإلكتروني"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "البريد الإلكتروني أو اسم المستخدم"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "البريد والهاتف والروابط"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "أدخل الرمز"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "أدخل بريدك الإلكتروني أو اسم المستخدم."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "يُستخدم لملء نماذج التوظيف والمسودات. م
 msgid "Used to find new roles and to judge fit."
 msgstr "يُستخدم للعثور على وظائف جديدة وتقييم الملاءمة."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

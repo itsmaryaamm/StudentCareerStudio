@@ -2924,10 +2924,6 @@ msgstr "Διεύθυνση email"
 msgid "Email address won't be recognized"
 msgstr "Η διεύθυνση email δεν θα αναγνωριστεί"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "Email ή όνομα χρήστη"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "Email, τηλέφωνο, σύνδεσμοι"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Εισαγάγετε τον κωδικό"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Εισαγάγετε email ή όνομα χρήστη."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Χρησιμοποιείται σε φόρμες εργασίας και
 msgid "Used to find new roles and to judge fit."
 msgstr "Χρησιμοποιείται για εύρεση νέων θέσεων και αξιολόγηση καταλληλότητας."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

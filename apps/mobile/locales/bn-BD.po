@@ -2924,10 +2924,6 @@ msgstr "ইমেইল ঠিকানা"
 msgid "Email address won't be recognized"
 msgstr "ইমেইল ঠিকানা চেনা যাবে না"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "ইমেইল বা ইউজারনেম"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "ইমেইল, ফোন, লিংক"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "কোড লিখুন"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "ইমেইল বা ব্যবহারকারীর নাম লিখুন।"
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "চাকরির ফর্ম ও খসড়া পূরণে ব�
 msgid "Used to find new roles and to judge fit."
 msgstr "নতুন পদ খোঁজা ও উপযুক্ততা বিচারে ব্যবহৃত।"
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

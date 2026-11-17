@@ -2924,10 +2924,6 @@ msgstr "이메일 주소"
 msgid "Email address won't be recognized"
 msgstr "이메일 주소가 인식되지 않습니다"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "이메일 또는 사용자 이름"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "이메일, 전화, 링크"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "코드 입력"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "이메일 또는 사용자 이름을 입력하세요."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "채용 양식과 초안 작성에 사용됩니다. 여기에 추가한 �
 msgid "Used to find new roles and to judge fit."
 msgstr "새 직무 탐색과 적합도 판단에 사용됩니다."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

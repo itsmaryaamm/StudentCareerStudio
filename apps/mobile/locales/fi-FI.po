@@ -2924,10 +2924,6 @@ msgstr "Sähköpostiosoite"
 msgid "Email address won't be recognized"
 msgstr "Sähköpostiosoitetta ei tunnisteta"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "Sähköposti tai käyttäjätunnus"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "Sähköposti, puhelin, linkit"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Syötä koodi"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Syötä sähköpostiosoitteesi tai käyttäjätunnuksesi."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Käytetään hakulomakkeiden ja luonnosten täyttämiseen. Vain tähän 
 msgid "Used to find new roles and to judge fit."
 msgstr "Käytetään uusien tehtävien etsimiseen ja sopivuuden arviointiin."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

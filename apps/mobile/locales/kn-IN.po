@@ -2924,10 +2924,6 @@ msgstr "ಇಮೇಲ್ ವಿಳಾಸ"
 msgid "Email address won't be recognized"
 msgstr "ಇಮೇಲ್ ವಿಳಾಸವನ್ನು ಗುರುತಿಸಲಾಗುವುದಿಲ್ಲ"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "ಇಮೇಲ್ ಅಥವಾ ಬಳಕೆದಾರ ಹೆಸರು"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "ಇಮೇಲ್, ಫೋನ್, ಲಿಂಕ್‌ಗಳು"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "ಕೋಡ್ ನಮೂದಿಸಿ"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "ಇಮೇಲ್ ಅಥವಾ ಬಳಕೆದಾರ ಹೆಸರು ನಮೂದಿಸಿ."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "ಅರ್ಜಿ ನಮೂನೆಗಳು ಮತ್ತು ಕರಡು �
 msgid "Used to find new roles and to judge fit."
 msgstr "ಹೊಸ ಹುದ್ದೆ ಹುಡುಕಲು ಮತ್ತು ಹೊಂದಾಣಿಕೆ ನಿರ್ಣಯಿಸಲು ಬಳಸುತ್ತದೆ."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"

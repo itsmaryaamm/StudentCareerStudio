@@ -2924,10 +2924,6 @@ msgstr "E-pasta adrese"
 msgid "Email address won't be recognized"
 msgstr "E-pasta adrese netiks atpazīta"
 
-#: src/features/auth/SignInScreen.tsx
-msgid "Email or username"
-msgstr "E-pasts vai lietotājvārds"
-
 #: src/features/public/ats.tsx
 msgid "Email, phone, links"
 msgstr "E-pasts, tālrunis, saites"
@@ -3005,8 +3001,8 @@ msgid "Enter the code"
 msgstr "Ievadiet kodu"
 
 #: src/features/auth/SignInScreen.tsx
-msgid "Enter your email or username."
-msgstr "Ievadiet e-pastu vai lietotājvārdu."
+msgid "Enter your email address."
+msgstr ""
 
 #: src/features/auth/SignInScreen.tsx
 msgid "Enter your name."
@@ -8022,7 +8018,6 @@ msgstr "Izmanto darba anketām un melnrakstiem. Tikai to, ko pievienojat šeit."
 msgid "Used to find new roles and to judge fit."
 msgstr "Izmanto jaunu amatu atrašanai un piemērotības vērtēšanai."
 
-#: src/features/auth/SignInScreen.tsx
 #: src/features/builder/shared/model.ts
 #: src/features/settings/AccountScreen.tsx
 msgid "Username"
