@@ -25,7 +25,7 @@ void React;
 const appName = "Student Career Studio";
 // A PNG from this installation (mail clients block SVG, and a self-hosted server shouldn't lean on the public site).
 const appUrl = (process.env.APP_URL ?? "https://studentcareerstudio.maryamimran.com").replace(/\/+$/, "");
-const logoUrl = `${appUrl}/apple-touch-icon-180x180.png`;
+const logoUrl = `${appUrl}/email-logo.png`;
 
 // The app's Desk & Paper values, with system fallbacks: a light ground survives clients that force dark mode.
 const colors = {
