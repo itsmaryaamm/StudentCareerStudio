@@ -11,6 +11,10 @@ export const RESERVED_SEGMENTS = [
 	"templates",
 	"ats-checker",
 	"resume-templates",
+	"privacy",
+	"terms",
+	"cookies",
+	"thanks",
 ] as const;
 
 /**

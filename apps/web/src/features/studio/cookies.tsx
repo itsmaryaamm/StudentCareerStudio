@@ -37,6 +37,14 @@ export function CookieNotice() {
 				</p>
 			</section>
 			<section>
+				<h2 className="text-lg font-semibold text-ink">Visit counts</h2>
+				<p>
+					We may count page visits with a privacy-friendly analytics tool that sets no cookies and stores no personal
+					identifiers. It does not follow you across other sites, and it respects your browser&rsquo;s Do Not Track
+					setting.
+				</p>
+			</section>
+			<section>
 				<h2 className="text-lg font-semibold text-ink">Your choices</h2>
 				<p>
 					You can clear cookies and storage in your browser at any time; you will be signed out. Blocking the essential

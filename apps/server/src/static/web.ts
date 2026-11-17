@@ -11,7 +11,6 @@ import { isAppSectionPath, isFeedbackPath, RESERVED_SEGMENTS } from "@reactive-r
 import { defaultLocale, getLocaleAlternates, languageTag, localizedUrl } from "@reactive-resume/utils/locale";
 import { escapeHtml } from "@reactive-resume/utils/string";
 import { getPageLocale } from "./locale";
-import { CONTEXT7_ASK_URL } from "./seo";
 
 function resolveWebDistPath() {
 	const candidates = [
@@ -80,6 +79,7 @@ export function isProfilePath(pathname: string): boolean {
 export function contentSecurityPolicy(html = "") {
 	// Google's "Sign in with Google" button loads a script, a stylesheet and an iframe from accounts.google.com.
 	const googleSignIn = Boolean(env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET);
+	const analyticsOrigin = env.UMAMI_SCRIPT_URL && env.UMAMI_WEBSITE_ID ? new URL(env.UMAMI_SCRIPT_URL).origin : "";
 	const inlineScripts = html.matchAll(
 		/<script(?![^>]*\bsrc=)(?![^>]*application\/ld\+json)[^>]*>([\s\S]*?)<\/script>/g,
 	);
@@ -94,6 +94,7 @@ export function contentSecurityPolicy(html = "") {
 		[
 			"script-src 'self' 'wasm-unsafe-eval' https://static.cloudflareinsights.com",
 			...(googleSignIn ? ["https://accounts.google.com/gsi/client"] : []),
+			...(analyticsOrigin ? [analyticsOrigin] : []),
 			...hashes,
 		].join(" "),
 		`style-src 'self' 'unsafe-inline'${googleSignIn ? " https://accounts.google.com/gsi/style" : ""}`,
@@ -111,7 +112,6 @@ export function contentSecurityPolicy(html = "") {
 }
 
 export const BASE_SECURITY_HEADERS = {
-	Link: `<${CONTEXT7_ASK_URL}>; rel="search"; type="text/plain"; title="Search rxresu.me"`,
 	"X-Frame-Options": "DENY",
 	"X-Content-Type-Options": "nosniff",
 	"Referrer-Policy": "strict-origin-when-cross-origin",
@@ -141,15 +141,16 @@ function preloadLinks(html: string) {
  * any resume-derived markup goes in, so text that slipped past escaping could never allow itself.
  */
 function htmlResponse(html: string, headers: Record<string, string>, template = html) {
-	const verification = new URL(CONTEXT7_ASK_URL).searchParams.get("siteKey") ?? "";
-	const body = html.replace(
-		"</head>",
-		() => `<meta name="context7-site-verification" content="${verification}"></head>`,
-	);
+	const analytics =
+		env.UMAMI_SCRIPT_URL && env.UMAMI_WEBSITE_ID
+			? `<script defer src="${escapeHtml(env.UMAMI_SCRIPT_URL)}" data-website-id="${escapeHtml(env.UMAMI_WEBSITE_ID)}" data-do-not-track="true"></script>`
+			: "";
+	const body = analytics ? html.replace("</head>", () => `${analytics}</head>`) : html;
+	const link = [headers.Link, ...preloadLinks(template)].filter(Boolean).join(", ");
 	return new Response(body, {
 		headers: {
 			...headers,
-			Link: [headers.Link, ...preloadLinks(template)].filter(Boolean).join(", "),
+			...(link ? { Link: link } : {}),
 			// Pages name the current build's assets, so a release purges this tag from Cloudflare's cache
 			// (.github/workflows/docker-publish.yml).
 			"Cache-Tag": "html",
@@ -158,51 +159,39 @@ function htmlResponse(html: string, headers: Record<string, string>, template = 
 	});
 }
 
-const githubUrl = "https://github.com/reactive-resume/reactive-resume";
 // The English copy, for a build without prerendered pages; a prerendered page carries its own locale's title and
 // description, and the social cards reuse them.
 const ROOT_TITLE = "Tell your story once | Student Career Studio";
 const ROOT_DESCRIPTION =
 	"Tell the career coach what you have done, check each fact, then use it for your résumé, LinkedIn and AI career missions. Free during the beta.";
-const ATS_CHECKER_TITLE = "Free ATS resume checker | Reactive Resume";
+const ATS_CHECKER_TITLE = "Free ATS resume checker | Student Career Studio";
 const ATS_CHECKER_DESCRIPTION =
 	"Check whether software can read your resume PDF. Runs entirely in your browser, so your file is never uploaded.";
-const TEMPLATES_TITLE = "Free resume templates with PDF examples | Reactive Resume";
+const TEMPLATES_TITLE = "Free resume templates with PDF examples | Student Career Studio";
 const TEMPLATES_DESCRIPTION =
 	"Browse free resume templates, compare one-column and two-column layouts, and download sample PDFs. Customize your resume and export to PDF or Word.";
 
 type StructuredData = Record<string, unknown>;
 
-/** Who makes Reactive Resume, referenced by id from every page's structured data. */
+/** Who makes Student Career Studio, referenced by id from every page's structured data. */
 function organization(origin: string): StructuredData {
 	return {
 		"@type": "Organization",
 		"@id": `${origin}/#organization`,
-		name: "Reactive Resume",
+		name: "Student Career Studio",
 		url: `${origin}/`,
-		contactPoint: { "@type": "ContactPoint", contactType: "support", email: "amruth@rxresu.me" },
+		contactPoint: { "@type": "ContactPoint", contactType: "support", email: "hello@maryamimran.com" },
 		logo: { "@type": "ImageObject", url: `${origin}/pwa-512x512.png`, width: 512, height: 512 },
-		sameAs: [
-			githubUrl,
-			"https://www.linkedin.com/company/reactive-resume",
-			"https://opencollective.com/reactive-resume",
-			"https://www.reddit.com/r/reactiveresume",
-			"https://discord.gg/aSyA5ZSxpb",
-			"https://crowdin.com/project/reactive-resume",
-		],
 	};
 }
 
 const FEATURE_LIST = [
-	"Resume editor with a live page preview",
-	`${templateSchema.options.length} templates`,
-	"PDF, Word (DOCX), Markdown and JSON export",
-	"Import from PDF, LinkedIn and JSON Resume, or Word with an AI provider",
-	"ATS readability checker",
-	"Public or password-protected sharing links",
-	"Cover letters and a job application tracker",
-	"Optional AI assistant with your own API key",
-	"Self-hosting with Docker",
+	"Chat-first career coach",
+	"Fact-checked career profile",
+	"Résumé builder with PDF and Word export",
+	"LinkedIn profile suggestions",
+	"AI career missions",
+	"Private to each student",
 ];
 
 /** The page's own words, as its prerendered HTML has them in the visitor's language, for the structured data. */
@@ -216,7 +205,7 @@ const decodeHtml = (value: string) =>
 		.replace(/&gt;/g, ">")
 		.replace(/&amp;/g, "&");
 
-// "ATS Checker | Reactive Resume" → "ATS Checker": the page's name without the site's.
+// "ATS Checker | Student Career Studio" → "ATS Checker": the page's name without the site's.
 const pageName = (title: string) => decodeHtml(title).split(" | ")[0]?.trim() || decodeHtml(title);
 
 function homepageStructuredData(origin: string, text: PageText): StructuredData {
@@ -228,13 +217,13 @@ function homepageStructuredData(origin: string, text: PageText): StructuredData 
 			{
 				"@type": "WebSite",
 				"@id": `${origin}/#website`,
-				name: "Reactive Resume",
+				name: "Student Career Studio",
 				url: rootUrl,
 				publisher: { "@id": `${origin}/#organization` },
 			},
 			{
 				"@type": ["SoftwareApplication", "WebApplication"],
-				name: "Reactive Resume",
+				name: "Student Career Studio",
 				url: rootUrl,
 				description: decodeHtml(text.description),
 				inLanguage: languageTag(text.locale),
@@ -242,7 +231,6 @@ function homepageStructuredData(origin: string, text: PageText): StructuredData 
 				operatingSystem: "Web",
 				isAccessibleForFree: true,
 				offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-				license: `${githubUrl}/blob/main/LICENSE`,
 				publisher: { "@id": `${origin}/#organization` },
 				// The feature list is written in English; other languages leave it out rather than mix languages.
 				...(text.locale === defaultLocale ? { featureList: FEATURE_LIST } : {}),
@@ -266,7 +254,7 @@ function atsCheckerStructuredData(origin: string, text: PageText): StructuredDat
 				operatingSystem: "Web",
 				isAccessibleForFree: true,
 				offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
-				isPartOf: { "@type": "WebSite", "@id": `${origin}/#website`, name: "Reactive Resume", url: `${origin}/` },
+				isPartOf: { "@type": "WebSite", "@id": `${origin}/#website`, name: "Student Career Studio", url: `${origin}/` },
 				provider: { "@id": `${origin}/#organization` },
 			},
 		],
@@ -385,7 +373,7 @@ const prerenderedPages: Record<
 	"/ats-checker": {
 		name: "ats-checker",
 		meta: { title: ATS_CHECKER_TITLE, description: ATS_CHECKER_DESCRIPTION },
-		image: "/opengraph/ats-checker.png",
+		image: "/opengraph/banner.jpg",
 		structuredData: atsCheckerStructuredData,
 	},
 	"/resume-templates": {

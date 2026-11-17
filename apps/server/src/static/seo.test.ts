@@ -13,16 +13,18 @@ vi.mock("@reactive-resume/api/features/resume/web-page", () => ({
 
 const { handleLlms, handlePagesSitemap, handleResumesSitemap } = await import("./seo");
 
-it("keeps search documentation in llms.txt with instance-local product and API links", async () => {
+it("serves llms.txt with instance-local product and legal links", async () => {
 	mocks.env.APP_URL = "https://resume.example.test/";
 	try {
 		const response = handleLlms();
 		const text = await response.text();
 		expect(response.headers.get("Content-Type")).toBe("text/plain; charset=UTF-8");
-		expect(text).toContain("## Search\n\nThis site has a search endpoint: https://context7.com/api/v2/ask?");
+		expect(text).toContain("# Student Career Studio");
 		expect(text).toContain("[Homepage](https://resume.example.test/)");
 		expect(text).toContain("[Get started](https://resume.example.test/dashboard)");
-		expect(text).toContain("[OpenAPI specification](https://resume.example.test/openapi.json)");
+		expect(text).toContain("[Privacy notice](https://resume.example.test/privacy)");
+		expect(text).not.toContain("context7");
+		expect(text).not.toContain("Reactive Resume");
 		expect(text).not.toContain("https://rxresu.me");
 	} finally {
 		mocks.env.APP_URL = "https://rxresu.me/";
@@ -51,10 +53,10 @@ describe("localized sitemap", () => {
 		const locations = entries.map((entry) => entry.loc);
 
 		expect(response.headers.get("Content-Type")).toBe("application/xml; charset=UTF-8");
-		// Three public pages, one entry per supported locale; x-default shares English's URL.
-		expect(entries).toHaveLength(3 * supportedLocales.length);
+		// Four public pages, one entry per supported locale; x-default shares English's URL.
+		expect(entries).toHaveLength(4 * supportedLocales.length);
 		expect(new Set(locations).size).toBe(entries.length);
-		for (const path of ["/", "/ats-checker", "/resume-templates"]) {
+		for (const path of ["/", "/privacy", "/terms", "/cookies"]) {
 			const base = `https://rxresu.me${path}`;
 			expect(locations).toContain(base);
 			const group = entries.filter((entry) => entry.loc?.split("?")[0] === base);

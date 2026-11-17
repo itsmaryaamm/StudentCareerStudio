@@ -120,6 +120,13 @@ export const env = createEnv({
 		// Behind a CDN or host that always sets one header with the visitor's address (Render sets CF-Connecting-IP), name it
 		// here. Rate limits then count each visitor, not the host's proxy. Only use it when the app is reachable solely
 		// through that proxy; the proxy must overwrite any value the visitor sends.
+		// Optional cookieless analytics (Umami): both set turns it on. Nothing loads without them.
+		UMAMI_SCRIPT_URL: z.url({ protocol: /^https$/ }).optional(),
+		UMAMI_WEBSITE_ID: z
+			.string()
+			.trim()
+			.regex(/^[A-Za-z0-9-]{8,64}$/, "UMAMI_WEBSITE_ID must be the website ID")
+			.optional(),
 		CLIENT_IP_HEADER: z
 			.string()
 			.trim()

@@ -40,9 +40,6 @@ it("builds font-src with the application and configured mirror origins", () => {
 	}
 });
 
-const searchLink =
-	'<https://context7.com/api/v2/ask?siteKey=ask_b3fd9335a63f1b21b1a814ac>; rel="search"; type="text/plain"; title="Search rxresu.me"';
-
 describe("web app fallback classification", () => {
 	beforeEach(() => {
 		vi.clearAllMocks();
@@ -54,18 +51,18 @@ describe("web app fallback classification", () => {
 		["https://rxresu.me", "https://resume.example.test"].flatMap((origin) =>
 			["/", "/ats-checker", "/resume-templates", "/dashboard", "/auth/login"].map((path) => ({ origin, path })),
 		),
-	)("keeps search discovery declarative on $origin $path", async ({ origin, path }) => {
+	)("serves pages without third-party search hooks on $origin $path", async ({ origin, path }) => {
 		mocks.env.APP_URL = origin;
 		vi.mocked(fs.readFile).mockResolvedValue('<html><head></head><body><div id="app"></div></body></html>');
 		const response = await handleWebApp(new Request(`${origin}${path}`));
 		const html = await response.text();
-		expect(html).toContain('<meta name="context7-site-verification" content="ask_b3fd9335a63f1b21b1a814ac"></head>');
+		expect(html).not.toContain("context7");
 		expect(html).not.toContain("data-context7-ask");
 		expect(html).not.toContain("Page index:");
 		expect(html).not.toContain("This site has a search endpoint:");
-		expect(response.headers.get("Link")).toBe(searchLink);
+		expect(response.headers.get("Link")).toBeNull();
 		const head = await handleWebApp(new Request(`${origin}${path}`, { method: "HEAD" }));
-		expect(head.headers.get("Link")).toBe(searchLink);
+		expect(head.headers.get("Link")).toBeNull();
 		expect(await head.text()).toBe("");
 	});
 
@@ -93,7 +90,7 @@ describe("web app fallback classification", () => {
 		expect(html).toContain(
 			'<meta property="og:description" content="Reactive Resume is a free and open-source resume builder that makes it easy to create, update, and share your resume.">',
 		);
-		expect(html).toContain('"contactType":"support","email":"amruth@rxresu.me"');
+		expect(html).toContain('"contactType":"support","email":"hello@maryamimran.com"');
 		expect(html).not.toContain("utm_source");
 
 		const dashboardResponse = await handleWebApp(new Request("https://example.com/dashboard"));
@@ -264,7 +261,7 @@ describe("web app fallback classification", () => {
 
 		expect(response.headers.get("Cache-Tag")).toBe("html");
 		expect(response.headers.get("Link")).toBe(
-			`${searchLink}, </assets/index-a.css>; rel=preload; as=style; crossorigin, </assets/figtree-b.woff2>; rel=preload; as=font; crossorigin`,
+			`</assets/index-a.css>; rel=preload; as=style; crossorigin, </assets/figtree-b.woff2>; rel=preload; as=font; crossorigin`,
 		);
 	});
 
