@@ -82,7 +82,14 @@ function AuthEmailLayout({
 						style={{ backgroundColor: colors.paper, border: `1px solid ${colors.line}` }}
 					>
 						<Section>
-							<Img src={logoUrl} alt={appName} width="200" height="62" className="block" />
+							<Img
+								src={logoUrl}
+								alt={appName}
+								width="240"
+								height="61"
+								style={{ width: "240px", height: "auto" }}
+								className="block"
+							/>
 						</Section>
 
 						<Section className="mt-6">
