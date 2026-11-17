@@ -180,3 +180,20 @@ export const feedbackCommentRateLimit = createRatelimitMiddleware<ContextWithHea
 	limiter: productionLimiter(feedbackCommentLimiter),
 	key: ({ context }) => `feedback-comment:${getClientKey(context.trustedClient)}`,
 });
+
+/**
+ * A rate limit for a named budget: `maxRequests` per `window` milliseconds, counted per signed-in account ("user") or per
+ * visitor address ("ip"). Active in production, like the others.
+ */
+export function createBudget(
+	name: string,
+	config: { maxRequests: number; window: number },
+	by: "user" | "ip" = "user",
+) {
+	const limiter = createRateLimiter(name, config);
+	return createRatelimitMiddleware<ContextWithHeaders, unknown>({
+		limiter: productionLimiter(limiter),
+		key: ({ context }) =>
+			by === "user" ? `${name}:${getUserKey(context)}` : `${name}:${getClientKey(context.trustedClient)}`,
+	});
+}

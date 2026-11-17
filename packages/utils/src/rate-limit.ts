@@ -13,9 +13,9 @@ export const rateLimitConfig = {
 			window: 60,
 			max: 60,
 			customRules: {
-				"/sign-in/email": { window: 60, max: 5 },
-				"/sign-in/username": { window: 60, max: 5 },
-				"/sign-up/email": { window: 60, max: 3 },
+				"/sign-in/email": { window: 60, max: 20 },
+				"/sign-in/username": { window: 60, max: 20 },
+				"/sign-up/email": { window: 60, max: 12 },
 				"/sign-in/anonymous": { window: 60, max: 3 },
 				"/request-password-reset": { window: 600, max: 3 },
 				"/send-verification-email": { window: 600, max: 3 },
@@ -39,6 +39,9 @@ export const rateLimitConfig = {
 			maxRequests: 1000,
 		},
 	},
+	// Failed or repeated sign-ins against ONE account, whatever address they come from (a classroom shares one address, so
+	// the per-address limits above are loose; this is what stops guessing a password).
+	signInAttemptsPerAccount: { window: 15 * 60, max: 10 },
 	orpc: {
 		resumePassword: { maxRequests: 5, window: 10 * 60 * 1000 },
 		pdfExport: { maxRequests: 5, window: 60 * 1000 },

@@ -1,6 +1,7 @@
 import { ORPCError } from "@orpc/client";
 import { z } from "zod";
-import { protectedProcedure, publicProcedure } from "../../context";
+import { protectedProcedure as baseProtected, publicProcedure } from "../../context";
+import { createBudget } from "../../middleware/rate-limit";
 import { accountService, adminService, betaInfo, requireAdmin } from "./account";
 import { byokService } from "./byok";
 import { chatService, MAX_MESSAGE_CHARS } from "./chat";
@@ -22,11 +23,24 @@ const route = (
 	operationId,
 	summary,
 });
+// Every signed-in call is counted per account. Calls that cost something, or that could be used to guess or spam, get
+// their own smaller budget on top. AI replies are also limited by the daily allowance in limits.ts.
+const general = createBudget("scs-general", { maxRequests: 180, window: 60_000 });
+const protectedProcedure = baseProtected.use(general);
+const strict = (name: string, maxRequests: number, window: number) => createBudget(name, { maxRequests, window });
+const friendCodeBudget = strict("scs-friend-code", 10, 10 * 60_000);
+const friendCodeByAddress = createBudget("scs-friend-code-ip", { maxRequests: 40, window: 60 * 60_000 }, "ip");
+const feedbackBudget = strict("scs-feedback", 5, 10 * 60_000);
+const ownKeyBudget = strict("scs-own-key", 6, 10 * 60_000);
+const exportBudget = strict("scs-export", 4, 10 * 60_000);
+const writesBudget = strict("scs-writes", 90, 60_000);
+const betaInfoBudget = createBudget("scs-beta-info", { maxRequests: 60, window: 60_000 }, "ip");
 const id = z.object({ id: z.string().min(1).max(64) });
 
 export const scsRouter = {
 	beta: publicProcedure
 		.route(route("GET", "/beta", "scsBetaInfo", "Founding beta seat availability"))
+		.use(betaInfoBudget)
 		.output(z.object({ maxSeats: z.number(), seatsLeft: z.number(), googleClientId: z.string().nullable() }))
 		.handler(() => betaInfo()),
 
@@ -45,6 +59,7 @@ export const scsRouter = {
 		.handler(({ context, input }) => accountService.setOnboarding(context.user.id, input.choice)),
 	saveIntake: protectedProcedure
 		.route(route("PUT", "/onboarding/intake", "scsSaveIntake", "Save progress of the guided first conversation"))
+		.use(writesBudget)
 		.input(
 			z.strictObject({
 				preferredName: z.string().trim().min(1).max(40).optional(),
@@ -78,10 +93,13 @@ export const scsRouter = {
 		.handler(({ context, input }) => accountService.saveIntake(context.user.id, input)),
 	setOwnKey: protectedProcedure
 		.route(route("PUT", "/gemini-key", "scsSetOwnGeminiKey", "Use my own Gemini API key"))
+		.use(ownKeyBudget)
 		.input(z.strictObject({ apiKey: z.string().min(1).max(200) }))
 		.handler(({ context, input }) => byokService.set(context.user.id, input.apiKey)),
 	useFriendCode: protectedProcedure
 		.route(route("PUT", "/referral", "scsUseFriendCode", "Enter a friend's code for a bigger allowance"))
+		.use(friendCodeByAddress)
+		.use(friendCodeBudget)
 		.input(z.strictObject({ code: z.string().trim().min(1).max(32) }))
 		.handler(async ({ context, input }) => {
 			const { applyReferral } = await import("@reactive-resume/auth/referrals");
@@ -101,6 +119,7 @@ export const scsRouter = {
 		.handler(({ context }) => byokService.clear(context.user.id)),
 	exportData: protectedProcedure
 		.route(route("GET", "/export", "scsExportData", "Download all my data"))
+		.use(exportBudget)
 		.handler(({ context }) => accountService.exportData(context.user.id)),
 	usage: protectedProcedure
 		.route(route("GET", "/usage", "scsUsage", "My AI allowance"))
@@ -113,6 +132,7 @@ export const scsRouter = {
 			.handler(({ context }) => missionsService.list(context.user.id)),
 		save: protectedProcedure
 			.route(route("PUT", "/missions", "scsSaveMission", "Save a Career Lab mission"))
+			.use(writesBudget)
 			.input(missionInputSchema)
 			.handler(({ context, input }) => missionsService.save(context.user.id, input)),
 		duplicate: protectedProcedure
@@ -132,6 +152,7 @@ export const scsRouter = {
 			.handler(({ context }) => factsService.list(context.user.id)),
 		add: protectedProcedure
 			.route(route("POST", "/facts", "scsAddFact", "Add a fact to my profile"))
+			.use(writesBudget)
 			.input(z.strictObject({ category: factCategorySchema, text: z.string().trim().min(3).max(300) }))
 			.output(factSchema)
 			.handler(({ context, input }) => factsService.add(context.user.id, input.category, input.text)),
@@ -206,6 +227,7 @@ export const scsRouter = {
 			.handler(({ context }) => linkedinService.drafts(context.user.id)),
 		saveDraft: protectedProcedure
 			.route(route("PUT", "/linkedin/drafts/{section}", "scsLinkedinSaveDraft", "Save a LinkedIn draft"))
+			.use(writesBudget)
 			.input(z.strictObject({ section: linkedinSectionSchema, content: z.string().max(3000) }))
 			.handler(({ context, input }) => linkedinService.saveDraft(context.user.id, input.section, input.content)),
 	},
@@ -213,6 +235,7 @@ export const scsRouter = {
 	feedback: {
 		submit: protectedProcedure
 			.route(route("POST", "/feedback", "scsSubmitFeedback", "Send feedback to the beta team"))
+			.use(feedbackBudget)
 			.input(
 				z.strictObject({
 					rating: z.number().int().min(1).max(5),

@@ -43,6 +43,11 @@ import { handleResumePdfDownload } from "./resume-pdf";
 type ServerEnvironment = { Bindings: HttpBindings | Http2Bindings };
 
 const getTrustedClient = (context: Context<ServerEnvironment>, proxies: BlockList): string => {
+	// A host that names its visitor-address header (CLIENT_IP_HEADER) is believed, if the value is a real address.
+	if (env.CLIENT_IP_HEADER) {
+		const named = context.req.header(env.CLIENT_IP_HEADER)?.split(",")[0]?.trim();
+		if (named && isIP(named)) return named;
+	}
 	try {
 		const address = getConnInfo(context).remote.address?.trim();
 		if (!address || !isIP(address)) return "unknown";

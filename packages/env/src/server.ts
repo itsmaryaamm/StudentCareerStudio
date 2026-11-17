@@ -117,6 +117,14 @@ export const env = createEnv({
 		// OlaCV API token: with FLAG_OLACV_SUGGESTION, Share checks which .cv names are free before suggesting one.
 		OLACV_API_KEY: z.string().trim().min(1).optional(),
 		SERVER_PORT: z.coerce.number().int().min(1).max(65535).default(3001),
+		// Behind a CDN or host that always sets one header with the visitor's address (Render sets CF-Connecting-IP), name it
+		// here. Rate limits then count each visitor, not the host's proxy. Only use it when the app is reachable solely
+		// through that proxy; the proxy must overwrite any value the visitor sends.
+		CLIENT_IP_HEADER: z
+			.string()
+			.trim()
+			.regex(/^[A-Za-z0-9-]+$/, "CLIENT_IP_HEADER must be a header name")
+			.optional(),
 		TRUSTED_PROXIES: commaList(
 			z.string().refine((range) => {
 				const [address, prefix, ...rest] = range.split("/");

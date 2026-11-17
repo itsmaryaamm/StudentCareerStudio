@@ -45,6 +45,7 @@ import { rateLimitConfig } from "@reactive-resume/utils/rate-limit";
 import { generateId, toUsername } from "@reactive-resume/utils/string";
 import { timezoneSchema } from "@reactive-resume/utils/timezone";
 import { isAllowedOAuthRedirectUri } from "@reactive-resume/utils/url-security.node";
+import { consumeAttempt } from "./attempt-limit";
 import { generateBackupCodes } from "./backup-codes";
 import { BetaClosedError, bindBetaSeat, reserveBetaSeat } from "./beta-seats";
 import {
@@ -938,6 +939,39 @@ const getAuthConfig = () => {
 							...(timezone.success ? { timezone: timezone.data } : {}),
 							...(locale ? { locale } : {}),
 							...(referralCode ? { referralCode } : {}),
+						});
+				}
+
+				// Guessing one account's password, or mail-bombing one address, is limited per account, whatever the address.
+				if (isRateLimitEnabled && ctx.body && (ctx.path === "/sign-in/email" || ctx.path === "/sign-in/username")) {
+					const who = String(ctx.body.email ?? ctx.body.username ?? "")
+						.trim()
+						.toLowerCase()
+						.slice(0, 200);
+					const attempt = who
+						? await consumeAttempt(`sign-in:${who}`, rateLimitConfig.signInAttemptsPerAccount)
+						: { allowed: true };
+					if (!attempt.allowed)
+						throw new APIError("TOO_MANY_REQUESTS", {
+							message: "Too many sign-in attempts for this account. Wait a few minutes, or reset your password.",
+						});
+				}
+				if (
+					isRateLimitEnabled &&
+					ctx.body &&
+					typeof ctx.body.email === "string" &&
+					(ctx.path === "/request-password-reset" || ctx.path === "/send-verification-email")
+				) {
+					const attempt = await consumeAttempt(
+						`mail:${ctx.path}:${ctx.body.email.trim().toLowerCase().slice(0, 200)}`,
+						{
+							window: 60 * 60,
+							max: 4,
+						},
+					);
+					if (!attempt.allowed)
+						throw new APIError("TOO_MANY_REQUESTS", {
+							message: "Too many emails requested for this address. Try again later.",
 						});
 				}
 
