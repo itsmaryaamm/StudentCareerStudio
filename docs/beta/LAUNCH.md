@@ -37,3 +37,22 @@ The reliable setup, which takes about five minutes:
    on Cloudflare.
    Students then use either address. If you really need the address to stay `maryamimran.com/studentcareerstudio` while they
    browse, that is the base-path project mentioned above; ask for it separately.
+
+## Security (audited)
+
+- No API keys or secrets in the browser bundle. Student Gemini keys are stored server-side and never sent back.
+- Cross-user access sweep (`tests/scs/idor-sweep.mjs`): no route lets one student read or change another's data.
+- Rate limits (`tests/scs/rate-limit.mjs`): sign-in 20/min per IP plus 10 failed tries per account per 15 min; sign-up 12/min; emails 4/hour per address; scs endpoints budgeted per user or IP. On Render set `CLIENT_IP_HEADER=CF-Connecting-IP` (already in render.yaml) or every visitor shares one bucket.
+- Every form and API input is cleaned (tags, hidden characters, non-http links removed): `packages/utils/src/text-clean.ts`.
+- Passkeys removed. Sign-in is email + password, or Google.
+
+## Lock down the database (needs your database owner login)
+
+1. Create the app role: `CREATE ROLE scs_app LOGIN PASSWORD '<long random>';`
+2. Run `docs/beta/DATABASE-HARDENING.sql` as the owner (safe to re-run after deploys that add tables).
+3. On Render: `DATABASE_URL` = scs_app connection string, `DATABASE_MIGRATION_URL` = owner connection string.
+4. Redeploy and check sign-in still works.
+
+## Google sign-in
+
+Create a Web OAuth client (see `GOOGLE-SIGNIN.md`), then set `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` on Render.
