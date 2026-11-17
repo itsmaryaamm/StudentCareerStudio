@@ -3,7 +3,7 @@ import { Trans } from "@lingui/react/macro";
 import { Link, Outlet } from "@tanstack/react-router";
 import { BrandIcon } from "@reactive-resume/ui/components/brand-icon";
 
-const paper = "absolute h-[614px] w-[434px] overflow-hidden rounded-paper bg-paper shadow-page";
+const paper = "absolute h-[600px] w-[400px] overflow-hidden rounded-paper bg-paper shadow-page";
 
 /**
  * Every sign-in page is the same left half: the logo where the app sidebar has it, one 380px column, one title size.
@@ -26,17 +26,19 @@ export function AuthLayout() {
 				</div>
 			</div>
 
-			<aside className="hidden min-w-0 flex-1 flex-col items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_30%_20%,#7c4df5_0%,#4b1d96_55%,#240a55_100%)] text-white xl:flex">
-				<div
-					role="img"
-					aria-label={t`Two résumés made in Student Career Studio`}
-					className="relative h-[684px] w-[584px] scale-[.82]"
-				>
-					<div data-design="paper" className={`${paper} start-0 top-0 -rotate-2 rtl:rotate-2`}>
-						<MockResume />
-					</div>
-					<div data-design="paper" className={`${paper} end-0 bottom-0`}>
-						<MockResume sidebar />
+			<aside className="sticky top-0 hidden h-svh min-w-0 flex-1 flex-col items-center justify-center overflow-hidden bg-[radial-gradient(circle_at_30%_20%,#7c4df5_0%,#4b1d96_55%,#240a55_100%)] text-white xl:flex">
+				<div className="flex h-[540px] items-start justify-center [@media(max-height:680px)]:h-[285px] [@media(max-height:800px)]:h-[355px] [@media(max-height:940px)]:h-[445px]">
+					<div
+						role="img"
+						aria-label={t`Two résumés made in Student Career Studio`}
+						className="relative h-[670px] w-[640px] origin-top scale-[.8] [@media(max-height:680px)]:scale-[.42] [@media(max-height:800px)]:scale-[.52] [@media(max-height:940px)]:scale-[.66]"
+					>
+						<div data-design="paper" className={`${paper} start-0 top-0 -rotate-2 rtl:rotate-2`}>
+							<MockResume />
+						</div>
+						<div data-design="paper" className={`${paper} end-0 bottom-0`}>
+							<MockResume sidebar />
+						</div>
 					</div>
 				</div>
 				<p className="mt-9 max-w-[620px] px-8 text-center text-[34px] leading-[1.15] font-bold tracking-[-0.03em] text-balance">
