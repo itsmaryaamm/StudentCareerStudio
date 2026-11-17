@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# limbă} few {# limbi} other {# de limbi}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# blocat} few {# blocate} other {# blocate}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# cheie de acces} few {# chei de acces} other {# de chei de acces}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# profil} few {# profiluri} other {# de profiluri}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 comentariu, rezolvat"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 cheie de acces · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10–11 se citește cel mai bine"
@@ -2263,10 +2255,6 @@ msgstr "O parere a modelului, nu un verdict. Poate fi greșit."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "pe lună"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Un nume te ajută să deosebești cheile de acces, de exemplu „Laptop de serviciu”."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Adăugați o locație"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Adăugați o ofertă mai nouă"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Adăugați o cheie de acces"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Continuă"
 msgid "Continue as guest"
 msgstr "Continuă ca invitat"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Continuați cu o cheie de acces"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Contrast pe alb"
@@ -5851,10 +5830,6 @@ msgstr "Nu s-a putut adăuga faptul. Încearcă din nou."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Candidatura nu a putut fi adăugată. Încearcă din nou."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Nu s-a putut adăuga cheia de acces. Încearcă din nou."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Nu s-a putut reține. Încercați din nou."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Nu s-a putut elimina din Candidaturi. Încearcă din nou."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Nu s-a putut elimina cheia de acces. Încearcă din nou."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Documentul nu a putut fi redenumit. Încearcă din nou."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Nu s-a putut redenumi cheia de acces. Încearcă din nou."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Păstrați codurile mele"
 msgid "Keep on one page"
 msgstr "Rămâneți pe o singură pagină"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Păstrați cheia de acces"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Păstrați parola"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Malayalam"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Gestionați"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Gestionați cheile de acces"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Denumiți CV-ul așa cum este acum"
 msgid "Name the story"
 msgstr "Denumiți povestea"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Denumiți această cheie de acces"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Denumiți, colorați și ordonați etapele prin care trec candidaturile."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Nume, e-mail, parolă, chei de acces, datele dvs."
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Parțial susținut"
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Chei de acces"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Cheile de acces necesită un e-mail verificat, pe care acest server nu îl poate trimite."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Parola a fost schimbată"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Parola a fost schimbată. Ați fost deconectat peste tot; autentificați-vă, apoi adăugați din nou cheile de acces sau cheile API."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Remote, hibrid, un oraș…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Elimina"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Eliminați „{label}”?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Elimini „{name}”?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Eliminați {country}"
 msgid "Remove {label}…"
 msgstr "Eliminați {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Eliminați {name}"
@@ -16175,10 +16114,6 @@ msgstr "Elimină fișierul"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Eliminați linkul {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Elimină cheia de acces"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Elimină documentele, candidaturile și Cunoștințele. Acțiunea nu poa
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Redenumiți"
@@ -16267,10 +16201,6 @@ msgstr "Redenumiți"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Redenumiți {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Redenumiți {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Salvați linkul"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Salvați mesajul fără AI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Salvează numele"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Autentifică-te pentru a salva"
 msgid "Sign in with {0}"
 msgstr "Autentificați-vă cu {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Autentificați-vă cu o cheie de acces"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Autentificați-vă cu un cont existent."
@@ -18545,10 +18467,6 @@ msgstr "Autentificați-vă cu un cont existent."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Conectați-vă cu contul care a deschis aceste setări."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Conectați-vă cu amprenta digitală, chipul sau PIN-ul dispozitivului"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Linkul deschide CV-ul așa cum este acum. Editările ulterioare nu sunt partajate, așa că fiecare comentariu se referă la această versiune."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Linkul este valabil 1 oră. Resetarea vă deconectează de pe toate dispozitivele și elimină cheile de acces, cheile API și aplicațiile conectate. Dacă nu ați cerut acest lucru, ignorați acest e-mail; parola rămâne aceeași."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Acest pas de autentificare a expirat. Autentifică-te din nou."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Această acțiune vă deconectează peste tot și elimină cheile de acces, cheile API și aplicațiile conectate."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Deblocați editarea"
 msgid "unnamed key"
 msgstr "cheie fără nume"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Cheie de acces fără nume"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Până atunci, Pregătire pentru interviu are planul dvs., introducerea și întrebările de pus."
@@ -22150,10 +22064,6 @@ msgstr "Verificați-vă e-mailul pentru {appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Verificați mai întâi e-mailul în Setări"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Verificați-vă e-mailul pentru a adăuga o cheie de acces."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "loc de muncă nemenționat"
 msgid "Works without AI or new research"
 msgstr "Funcționează fără AI sau cercetare nouă"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Funcționează fără parolă, dacă ați adăugat una"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Merită întrebat"
@@ -23246,10 +23152,6 @@ msgstr "Puteți continua să editați. Modifică sincronizarea când ești din n
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Puteți păstra până la 30 de întrebări de candidatură."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Nu vă mai puteți autentifica cu această cheie de acces. Parola și celelalte chei de acces funcționează în continuare."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

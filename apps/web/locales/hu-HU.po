@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# nyelv} other {# nyelv}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# zárolva} other {# zárolva}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# passkey} other {# passkey}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# profil} other {# profil}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 megjegyzés, kész"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 passkey · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10–11 olvasható a legjobban"
@@ -2263,10 +2255,6 @@ msgstr "Modell véleménye, nem ítélet. Lehet, hogy rossz."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "egy hónap"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "A név segít megkülönböztetni a passkeyeket, például „Munkahelyi laptop”."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Hely hozzáadása"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Újabb ajánlat hozzáadása"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Passkey hozzáadása"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Tovább"
 msgid "Continue as guest"
 msgstr "Folytatás vendégként"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Folytatás passkey-vel"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Kontraszt fehéren"
@@ -5851,10 +5830,6 @@ msgstr "Nem sikerült hozzáadni a tényt. Próbáld újra."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Nem sikerült hozzáadni a jelentkezést. Próbáld újra."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Nem sikerült hozzáadni a jelszót. Próbáld újra."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Nem sikerült megjegyezni. Próbáld újra."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Nem sikerült eltávolítani a Jelentkezésekből. Próbáld újra."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Nem sikerült eltávolítani a jelszót. Próbáld újra."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Nem sikerült átnevezni a dokumentumot. Próbáld újra."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Nem sikerült átnevezni a passkeyt. Próbáld újra."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Megtartom a kódjaimat"
 msgid "Keep on one page"
 msgstr "Maradj egy oldalon"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Passkey megtartása"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Jelszó megtartása"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "malajálam"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Kezelés"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Passkey-k kezelése"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Az önéletrajz elnevezése a jelenlegi állapotában"
 msgid "Name the story"
 msgstr "Nevezd el a történetet"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Nevezze el ezt a jelszót"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Nevezd el, színezd és rendezd sorba a szakaszokat, amelyeken a jelentkezéseid végighaladnak."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Név, e-mail, jelszó, passkey-k, az adataid"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Részben alátámasztva"
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Passkeys"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "A passkey-k megerősített e-mail-címet igényelnek, amit ez a szerver nem tud elküldeni."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Jelszó módosítva"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "A jelszó megváltozott. Mindenhol ki lettél jelentkezve; jelentkezz be, majd add hozzá újra a passkey-jeidet és az API-kulcsaidat."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Távoli, hibrid, város…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Távolítsa el"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Eltávolítod ezt: „{label}”?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Eltávolítod: „{name}”?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "{country} eltávolítása"
 msgid "Remove {label}…"
 msgstr "{label} eltávolítása…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "{name} eltávolítása"
@@ -16175,10 +16114,6 @@ msgstr "Fájl eltávolítása"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "{0}. link eltávolítása"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Passkey eltávolítása"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Eltávolítja a dokumentumaidat, jelentkezéseidet és a Tudástárat. E
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Átnevezés"
@@ -16267,10 +16201,6 @@ msgstr "Átnevezés"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "{label} átnevezése"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "{name} átnevezése"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Link mentése"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Üzenet mentése AI nélkül"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Név mentése"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Bejelentkezés a mentéshez"
 msgid "Sign in with {0}"
 msgstr "Bejelentkezés ezzel: {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Bejelentkezés passkey-vel"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Jelentkezz be egy meglévő fiókkal."
@@ -18545,10 +18467,6 @@ msgstr "Jelentkezz be egy meglévő fiókkal."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Jelentkezzen be azzal a fiókkal, amely megnyitotta ezeket a beállításokat."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Jelentkezzen be ujjlenyomatával, arcával vagy az eszköz PIN-kódjával"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "A link az önéletrajz mostani állapotában nyitja meg. A későbbi szerkesztések nincsenek megosztva, így minden hozzászólás ehhez a verzióhoz szól."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "A link 1 óráig érvényes. A visszaállítás minden eszközön kijelentkeztet, és eltávolítja a passkey-jeidet, API-kulcsaidat és a kapcsolódó alkalmazásokat. Ha nem te kérted, hagyd figyelmen kívül ezt az e-mailt; a jelszavad változatlan marad."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Ez a bejelentkezési lépés lejárt. Jelentkezz be újra."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Ez mindenhol kijelentkeztet, és eltávolítja a passkey-idet, API-kulcsaidat és csatlakoztatott alkalmazásaidat."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Szerkesztés feloldása"
 msgid "unnamed key"
 msgstr "névtelen kulcs"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Névtelen passkey"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Addig az Interjúfelkészülés tartalmazza a tervedet, a nyitódarabodat és a felteendő kérdéseket."
@@ -22150,10 +22064,6 @@ msgstr "Erősítsd meg az e-mail-címedet a(z) {appName} alkalmazásban"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Előbb erősítsd meg az e-mail-címedet a Beállításokban"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Passkey hozzáadásához erősítsd meg az e-mail-címedet."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "munkavégzés helye nincs megadva"
 msgid "Works without AI or new research"
 msgstr "AI és új kutatás nélkül is működik"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Jelszó nélkül is működik, ha hozzáadtál egyet"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Érdemes megkérdezni"
@@ -23246,10 +23152,6 @@ msgstr "Folytathatod a szerkesztést. A módosítások szinkronizálódnak, amik
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Legfeljebb 30 jelentkezési kérdést tárolhatsz."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Ezzel a passkey-vel már nem tudsz bejelentkezni. A jelszavad és a többi passkey továbbra is működik."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

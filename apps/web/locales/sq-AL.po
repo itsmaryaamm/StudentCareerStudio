@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# gjuhë} other {# gjuhë}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# i kyçur} other {# të kyçur}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# çelës kalimi} other {# çelësa kalimi}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# profil} other {# profile}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 koment, i zgjidhur"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 çelës kalimi · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 deri në 11 lexohet më mirë"
@@ -2263,10 +2255,6 @@ msgstr "Mendimi i një modeli, jo verdikti. Mund të jetë e gabuar."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "një muaj"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Një emër të ndihmon të dallosh çelësat e kalimit, si \"Laptopi i punës\"."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Shto një vendndodhje"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Shto një ofertë më të re"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Shto një çelës kalimi"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Vazhdo"
 msgid "Continue as guest"
 msgstr "Vazhdo si mysafir"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Vazhdo me çelës kalimi"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Kontrasti mbi të bardhë"
@@ -5851,10 +5830,6 @@ msgstr "Ai fakt nuk mund të shtohej. Provoni përsëri."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Aplikimi nuk mund të shtohej. Provoni përsëri."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Nuk mund të shtohej çelësi i kalimit. Provo sërish."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Kjo nuk mund të mbahej mend. Provoni përsëri."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Nuk mund të hiqej nga Aplikimet. Provoni përsëri."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Çelësi i kalimit nuk mund të hiqej. Provo sërish."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Dokumenti nuk mund të riemërtohej. Provoni përsëri."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Çelësi i kalimit nuk mund të riemërtohej. Provoni përsëri."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Mbaji kodet e mia"
 msgid "Keep on one page"
 msgstr "Mbajeni në një faqe"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Mbaj çelësin e kalimit"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Mbaje fjalëkalimin"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Malajalam"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Menaxho"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Menaxho çelësat e kalimit"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Emërto CV-në siç është tani"
 msgid "Name the story"
 msgstr "Emërtojeni historinë"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Emërtojeni këtë çelës kalimi"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Emërtoni, ngjyrosni dhe renditni fazat nëpër të cilat kalojnë aplikimet tuaja."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Emri, emaili, fjalëkalimi, çelësat e kalimit, të dhënat tuaja"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Pjesërisht e mbështetur"
 msgid "Passkey"
 msgstr "Çelësi i kalimit"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Çelësa të kalimit"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Çelësat e kalimit kanë nevojë për një email të verifikuar, të cilin ky server nuk mund ta dërgojë."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Fjalëkalimi u ndryshua"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Fjalëkalimi u ndryshua. Je i çkyçur kudo; kyçu, pastaj shto përsëri çdo çelës kalimi ose çelës API."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Në distancë, hibrid, një qytet…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Hiq"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Të hiqet “{label}”?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Të hiqet \"{name}\"?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Hiq {country}"
 msgid "Remove {label}…"
 msgstr "Hiq {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Hiq {name}"
@@ -16175,10 +16114,6 @@ msgstr "Hiq skedarin"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Hiq lidhjen {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Hiq çelësin e kalimit"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Heq dokumentet, aplikimet dhe Njohuritë tuaja. Kjo nuk mund të zhbëhe
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Riemërto"
@@ -16267,10 +16201,6 @@ msgstr "Riemërto"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Riemërto {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Riemërto {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Ruaj lidhjen"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Ruaj mesazhin pa IA"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Ruaj emrin"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Hyr për ta ruajtur"
 msgid "Sign in with {0}"
 msgstr "Kyçu me {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Kyçu me çelës kalimi"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Kyçuni me një llogari ekzistuese."
@@ -18545,10 +18467,6 @@ msgstr "Kyçuni me një llogari ekzistuese."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Hyni me llogarinë që hapi këto cilësime."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Identifikohu me gjurmën e gishtit, fytyrën ose kodin PIN të pajisjes"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Lidhja hap CV-në ashtu siç është tani. Redaktimet e mëvonshme nuk ndahen, kështu që çdo koment është për këtë version."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Lidhja funksionon për 1 orë. Rikthimi të çkyç në çdo pajisje dhe tua hep çelësat e kalimit, çelësat API dhe aplikacionet e lidhura. Nëse nuk e kërkove këtë, injoroje këtë email; fjalëkalimi yt mbetet i njëjtë."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Ky hap hyrjeje ka skaduar. Hyni sërish."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Kjo ju nxjerr nga kudo dhe heq çelësat e kalimit, çelësat API dhe aplikacionet e lidhura."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Zhblloko redaktimin"
 msgid "unnamed key"
 msgstr "çelës pa emër"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Çelës kalimi i paemëruar"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Deri atëherë, Përgatitja për intervistë ka planin tënd, hyrjen tënde dhe pyetjet për t'u bërë."
@@ -22150,10 +22064,6 @@ msgstr "Verifiko email-in tënd për {appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Verifikoni fillimisht email-in te Parametrat"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Verifikoni emailin për të shtuar një çelës kalimi."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "vendi i punës nuk është përcaktuar"
 msgid "Works without AI or new research"
 msgstr "Funksionon pa AI ose kërkime të reja"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Funksionon pa fjalëkalimin tuaj, nëse keni shtuar një"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Ia vlen të pyesni"
@@ -23246,10 +23152,6 @@ msgstr "Mund të vazhdoni të redaktoni. Ndryshon sinkronizimin kur të jeni pë
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Mund të mbani deri në 30 pyetje aplikimi."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Nuk mund të kyçeni më me këtë çelës kalimi. Fjalëkalimi dhe çelësat e tjerë të kalimit funksionojnë ende."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

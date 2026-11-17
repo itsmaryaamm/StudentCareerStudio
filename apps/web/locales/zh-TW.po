@@ -1252,10 +1252,6 @@ msgstr "{count, plural, other {# 種語言}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, other {已鎖定 # 份}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, other {# 個通行金鑰}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, other {# 個個人檔案}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 則留言，已處理"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 個通行金鑰 · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 到 11 最易閱讀"
@@ -2263,10 +2255,6 @@ msgstr "模型的意見，而不是判決。這可能是錯誤的。"
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "每月"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "名稱可以幫助您區分通行金鑰，例如「工作筆電」。"
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "新增地點"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "新增較新的錄取條件"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "新增通行金鑰"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "繼續"
 msgid "Continue as guest"
 msgstr "以訪客身分繼續"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "使用通行金鑰繼續"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "白底對比"
@@ -5851,10 +5830,6 @@ msgstr "無法新增該事實。請再試一次。"
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "無法新增應徵紀錄。請再試一次。"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "無法新增密鑰。再試一次。"
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "無法記住該內容。請重試。"
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "無法將其從「應徵紀錄」中移除。請再試一次。"
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "無法刪除密鑰。再試一次。"
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "無法重新命名文件。請再試一次。"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "無法重新命名通行金鑰。請再試一次。"
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "保留我的備用碼"
 msgid "Keep on one page"
 msgstr "保留在一頁上"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "保留通行金鑰"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "保留密碼"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "馬拉雅拉姆語"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "管理"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "管理通行金鑰"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "為目前狀態的履歷命名"
 msgid "Name the story"
 msgstr "為故事命名"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "命名此密鑰"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "為應徵紀錄經歷的階段命名、設定顏色和排序。"
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "姓名、電子郵件、密碼、通行金鑰、你的資料"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "部分有證據"
 msgid "Passkey"
 msgstr "通行金鑰"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "通行金鑰"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "通行金鑰需要已驗證的電子郵件，但此伺服器無法寄送電子郵件。"
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "密碼已變更"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "密碼已變更。您已從所有裝置登出；請重新登入，然後再次新增通行金鑰或 API 金鑰。"
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "遠端、混合、一座城市…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "消除"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "移除「{label}」？"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "移除「{name}」？"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "刪除 {country}"
 msgid "Remove {label}…"
 msgstr "移除{label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "移除 {name}"
@@ -16175,10 +16114,6 @@ msgstr "移除檔案"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "移除連結 {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "移除通行金鑰"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "移除你的文件、應徵紀錄和知識庫。此操作無法復原。
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "重新命名"
@@ -16267,10 +16201,6 @@ msgstr "重新命名"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "重新命名{label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "重新命名 {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "儲存連結"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "不使用 AI 儲存訊息"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "儲存名稱"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "登入以儲存"
 msgid "Sign in with {0}"
 msgstr "使用 {0} 登入"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "使用通行金鑰登入"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "使用現有帳號登入。"
@@ -18545,10 +18467,6 @@ msgstr "使用現有帳號登入。"
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "請使用開啟這些設定的帳戶登入。"
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "使用您的指紋、臉部或裝置 PIN 碼登錄"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "連結會開啟目前狀態的履歷。之後的編輯不會分享，因此每則留言都是針對這個版本。"
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "連結在 1 小時內有效。重設會將您從所有裝置登出，並移除您的通行金鑰、API 金鑰和已連結的應用程式。如果這不是您提出的要求，請忽略這封電子郵件；您的密碼不會變更。"
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "此登入步驟已過期。請重新登入。"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "這會讓你在所有裝置上登出，並移除你的通行金鑰、API 金鑰和已連接的應用程式。"
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "解鎖編輯"
 msgid "unnamed key"
 msgstr "未命名金鑰"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "未命名通行金鑰"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "在那之前，「面試準備」中有您的計畫、開場白和要提出的問題。"
@@ -22150,10 +22064,6 @@ msgstr "驗證您用於 {appName} 的電子郵件"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "請先在設定中驗證您的電子郵件"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "請先驗證你的電子郵件，才能新增通行金鑰。"
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "未說明工作地點"
 msgid "Works without AI or new research"
 msgstr "不需要 AI 或新的研究"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "不需要你的密碼即可使用（如果你有設定密碼）"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "值得一問"
@@ -23246,10 +23152,6 @@ msgstr "您可以繼續編輯。當您重新上線時變更同步。下載和共
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "最多可保存 30 個應徵問題。"
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "你無法再使用此通行金鑰登入。你的密碼和其他通行金鑰仍可使用。"
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

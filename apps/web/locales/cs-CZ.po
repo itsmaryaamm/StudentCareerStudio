@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# jazyk} few {# jazyky} many {# jazyků} other {# j
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# uzamčen} few {# uzamčeny} many {# uzamčeno} other {# uzamčeno}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# passkey} few {# passkey} many {# passkey} other {# passkey}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# profil} few {# profily} many {# profilů} other {# profilů}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 komentář, vyřešeno"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 passkey · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "Nejlépe se čte 10 až 11"
@@ -2263,10 +2255,6 @@ msgstr "Názor modelky, ne verdikt. Může to být špatně."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "měsíc"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Název vám pomůže passkeys rozlišit, například „Pracovní notebook“."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Přidejte místo"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Přidat novější nabídku"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Přidat passkey"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Pokračovat"
 msgid "Continue as guest"
 msgstr "Pokračovat jako host"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Pokračovat s passkey"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Kontrast na bílé"
@@ -5851,10 +5830,6 @@ msgstr "Tento fakt se nepodařilo přidat. Zkuste to znovu."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Žádost se nepodařilo přidat. Zkuste to znovu."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Nepodařilo se přidat přístupový klíč. Zkuste to znovu."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Nepodařilo se zapamatovat. Zkuste to znovu."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Nepodařilo se odebrat ze Žádostí. Zkuste to znovu."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Přístupový klíč se nepodařilo odebrat. Zkuste to znovu."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Dokument se nepodařilo přejmenovat. Zkuste to znovu."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Passkey se nepodařilo přejmenovat. Zkuste to znovu."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Ponechat moje kódy"
 msgid "Keep on one page"
 msgstr "Držte se na jedné stránce"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Ponechat passkey"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Ponechat heslo"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Malajálamština"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Spravovat"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Spravovat passkey"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Pojmenovat životopis v jeho současném stavu"
 msgid "Name the story"
 msgstr "Pojmenujte příběh"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Pojmenujte tento přístupový klíč"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Pojmenujte, obarvěte a seřaďte fáze, kterými vaše žádosti procházejí."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Jméno, e-mail, heslo, passkey, vaše data"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Částečně doloženo"
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Passkeys"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Passkeys vyžadují ověřený e-mail, který tento server nedokáže odeslat."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Heslo změněno"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Heslo změněno. Jste odhlášeni všude; přihlaste se a znovu přidejte passkeys a klíče API."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Vzdáleně, hybridně, město…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Odstranit"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Odebrat „{label}“?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Odebrat „{name}“?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Odebrat {country}"
 msgid "Remove {label}…"
 msgstr "Odebrat {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Odebrat {name}"
@@ -16175,10 +16114,6 @@ msgstr "Odebrat soubor"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Odebrat odkaz {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Odebrat passkey"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Odebere vaše dokumenty, žádosti a Znalosti. Tuto akci nelze vrátit z
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Přejmenovat"
@@ -16267,10 +16201,6 @@ msgstr "Přejmenovat"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Přejmenovat {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Přejmenovat {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Uložit odkaz"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Uložit zprávu bez AI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Uložit jméno"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Přihlásit se pro uložení"
 msgid "Sign in with {0}"
 msgstr "Přihlásit se přes {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Přihlásit se pomocí passkey"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Přihlaste se existujícím účtem."
@@ -18545,10 +18467,6 @@ msgstr "Přihlaste se existujícím účtem."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Přihlaste se účtem, který otevřel tato nastavení."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Přihlaste se pomocí kódu PIN otisku prstu, obličeje nebo zařízení"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Odkaz otevře životopis v jeho aktuální podobě. Pozdější úpravy se nesdílejí, takže se každý komentář týká této verze."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Odkaz funguje 1 hodinu. Reset vás odhlásí na všech zařízeních a odstraní vaše passkeys, klíče API a připojené aplikace. Pokud jste o to nežádali, tento e-mail ignorujte; vaše heslo zůstává stejné."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Tento krok přihlášení vypršel. Přihlaste se znovu."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Tímto se všude odhlásíte a odeberou se vaše passkey, klíče API a připojené aplikace."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Odemknout úpravy"
 msgid "unnamed key"
 msgstr "klíč bez názvu"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Nejmenovaný přístupový klíč"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Do té doby má Příprava na pohovor váš plán, váš úvodní proslov i otázky, které máte položit."
@@ -22150,10 +22064,6 @@ msgstr "Ověřte svůj e-mail pro {appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Nejdřív si v Nastavení ověřte e-mail"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Pro přidání passkey ověřte svůj e-mail."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "pracoviště neuvedeno"
 msgid "Works without AI or new research"
 msgstr "Funguje bez AI i bez nového průzkumu"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Funguje i bez hesla, pokud jste ho přidali"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Stojí za to se zeptat"
@@ -23246,10 +23152,6 @@ msgstr "Můžete pokračovat v úpravách. Změny se synchronizují, když budet
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Můžete mít až 30 otázek k žádosti."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Pomocí tohoto passkey se už nemůžete přihlásit. Vaše heslo a ostatní passkey stále fungují."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

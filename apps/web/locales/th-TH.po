@@ -1252,10 +1252,6 @@ msgstr "{count, plural, other {# ภาษา}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, other {ล็อก # รายการ}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, other {# พาสคีย์}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, other {# โปรไฟล์}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 ความคิดเห็น เสร็จแล้ว"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 พาสคีย์ · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 ถึง 11 อ่านง่ายที่สุด"
@@ -2263,10 +2255,6 @@ msgstr "ความคิดเห็นของนางแบบ ไม่�
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "ต่อเดือน"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "ชื่อช่วยให้คุณแยกแยะพาสคีย์ได้ เช่น “แล็ปท็อปที่ทำงาน”"
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "เพิ่มสถานที่"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "เพิ่มข้อเสนอที่ใหม่กว่า"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "เพิ่มพาสคีย์"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "ทำต่อ"
 msgid "Continue as guest"
 msgstr "ดำเนินการต่อในฐานะผู้เยี่ยมชม"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "ดำเนินการต่อด้วยพาสคีย์"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "คอนทราสต์บนพื้นขาว"
@@ -5851,10 +5830,6 @@ msgstr "เพิ่มข้อเท็จจริงนั้นไม่ไ
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "เพิ่มใบสมัครไม่ได้ ลองอีกครั้ง"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "ไม่สามารถเพิ่มรหัสผ่าน ลองอีกครั้ง"
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "จดจำสิ่งนั้นไม่ได้ ลองอี�
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "นำออกจากใบสมัครไม่ได้ ลองอีกครั้ง"
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "ไม่สามารถลบรหัสผ่านได้ ลองอีกครั้ง"
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "เปลี่ยนชื่อเอกสารไม่ได้ ลองอีกครั้ง"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "เปลี่ยนชื่อพาสคีย์ไม่ได้ ลองอีกครั้ง"
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "เก็บรหัสของฉันไว้"
 msgid "Keep on one page"
 msgstr "เอาไว้หน้าเดียว"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "เก็บพาสคีย์ไว้"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "คงรหัสผ่านเดิม"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "มาลายาลัม"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "จัดการ"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "จัดการพาสคีย์"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "ตั้งชื่อเรซูเม่ตามสถานะป
 msgid "Name the story"
 msgstr "ตั้งชื่อเรื่องราว"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "ตั้งชื่อรหัสผ่านนี้"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "ตั้งชื่อ สี และลำดับของขั้นตอนที่ใบสมัครของคุณผ่าน"
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "ชื่อ อีเมล รหัสผ่าน พาสคีย์ ข้อมูลของคุณ"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "มีหลักฐานบางส่วน"
 msgid "Passkey"
 msgstr "พาสคีย์"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "พาสคีย์"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "พาสคีย์ต้องใช้อีเมลที่ยืนยันแล้ว ซึ่งเซิร์ฟเวอร์นี้ส่งให้ไม่ได้"
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "เปลี่ยนรหัสผ่านแล้ว"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "เปลี่ยนรหัสผ่านแล้ว คุณถูกนำออกจากระบบทุกที่แล้ว ให้เข้าสู่ระบบอีกครั้ง แล้วเพิ่มพาสคีย์หรือกุญแจ API ที่มีอยู่ใหม่"
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "รีโมต, ไฮบริด, เมือง…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "ลบ"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "นำ “{label}” ออกหรือไม่?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "นำ “{name}” ออกไหม"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "ลบ {country}"
 msgid "Remove {label}…"
 msgstr "นำ {label} ออก…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "ลบ {name}"
@@ -16175,10 +16114,6 @@ msgstr "ลบไฟล์"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "ลบลิงก์ที่ {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "นำพาสคีย์ออก"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "ลบเอกสาร ใบสมัคร และคลังค�
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "เปลี่ยนชื่อ"
@@ -16267,10 +16201,6 @@ msgstr "เปลี่ยนชื่อ"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "เปลี่ยนชื่อ {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "เปลี่ยนชื่อ {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "บันทึกลิงก์"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "บันทึกข้อความโดยไม่ใช้ AI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "บันทึกชื่อ"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "ลงชื่อเข้าใช้เพื่อบันทึก
 msgid "Sign in with {0}"
 msgstr "เข้าสู่ระบบด้วย {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "เข้าสู่ระบบด้วยพาสคีย์"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "เข้าสู่ระบบด้วยบัญชีที่มีอยู่"
@@ -18545,10 +18467,6 @@ msgstr "เข้าสู่ระบบด้วยบัญชีที่ม
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "ลงชื่อเข้าใช้ด้วยบัญชีที่เปิดการตั้งค่าเหล่านี้"
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "ลงชื่อเข้าใช้ด้วยลายนิ้วมือ ใบหน้า หรือ PIN ของอุปกรณ์"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "ลิงก์จะเปิดเรซูเม่ตามสถานะปัจจุบัน การแก้ไขภายหลังจะไม่ถูกแบ่งปัน ความคิดเห็นทุกข้อจึงเกี่ยวกับเวอร์ชันนี้"
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "ลิงก์ใช้งานได้ 1 ชั่วโมง การรีเซ็ตจะนำคุณออกจากระบบทุกอุปกรณ์ และลบพาสคีย์ กุญแจ API และแอปที่เชื่อมต่อ หากคุณไม่ได้ขอสิ่งนี้ ให้ละเว้นอีเมลนี้ รหัสผ่านของคุณจะไม่เปลี่ยนแปลง"
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "ขั้นตอนลงชื่อเข้าใช้นี้หมดอายุ โปรดลงชื่อเข้าใช้อีกครั้ง"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "การดำเนินการนี้จะออกจากระบบทุกอุปกรณ์และลบพาสคีย์ คีย์ API และแอปที่เชื่อมต่อของคุณ"
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "ปลดล็อคการแก้ไข"
 msgid "unnamed key"
 msgstr "คีย์ที่ไม่มีชื่อ"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "พาสคีย์ที่ไม่ระบุชื่อ"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "ก่อนถึงเวลานั้น การเตรียมสัมภาษณ์มีแผนของคุณ คำเปิด และคำถามที่ควรถามอยู่แล้ว"
@@ -22150,10 +22064,6 @@ msgstr "ยืนยันอีเมลของคุณสำหรับ {a
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "ยืนยันอีเมลของคุณในการตั้งค่าก่อน"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "ยืนยันอีเมลของคุณเพื่อเพิ่มพาสคีย์"
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "ไม่ระบุสถานที่ทำงาน"
 msgid "Works without AI or new research"
 msgstr "ใช้งานได้โดยไม่ต้องใช้ AI หรือการค้นคว้าใหม่"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "ใช้ได้โดยไม่ต้องใช้รหัสผ่าน หากคุณเพิ่มไว้"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "ควรถาม"
@@ -23246,10 +23152,6 @@ msgstr "คุณสามารถแก้ไขต่อได้ เปล�
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "คุณเก็บคำถามในใบสมัครได้สูงสุด 30 ข้อ"
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "คุณจะเข้าสู่ระบบด้วยพาสคีย์นี้ไม่ได้อีก รหัสผ่านและพาสคีย์อื่นของคุณยังใช้ได้"
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

@@ -1252,10 +1252,6 @@ msgstr "{count, plural, other {言語 # 件}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, other {# 件をロック}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, other {パスキー # 件}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, other {プロフィール # 件}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "コメント 1 件、対応済み"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "パスキー 1 件 · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10〜11 が最も読みやすい"
@@ -2263,10 +2255,6 @@ msgstr "モデルの意見であり、評決ではありません。それは間
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "/月"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "「職場のラップトップ」のように名前を付けると、パスキーを区別するのに役立ちます。"
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "場所を追加する"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "新しいオファーを追加"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "パスキーを追加"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "続行"
 msgid "Continue as guest"
 msgstr "ゲストとして続ける"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "パスキーで続行"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "白地でのコントラスト"
@@ -5851,10 +5830,6 @@ msgstr "その事実を追加できませんでした。もう一度お試しく
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "応募を追加できませんでした。もう一度お試しください。"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "パスキーを追加できませんでした。もう一度やり直してください。"
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "記憶できませんでした。もう一度お試しください。"
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "応募から削除できませんでした。もう一度お試しください。"
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "パスキーを削除できませんでした。もう一度やり直してください。"
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "書類の名前を変更できませんでした。もう一度お試しください。"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "パスキーの名前を変更できませんでした。もう一度お試しください。"
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "今のコードを使い続ける"
 msgid "Keep on one page"
 msgstr "1 ページにまとめてください"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "パスキーを残す"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "パスワードを維持"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "マラヤーラム語"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "管理"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "パスキーを管理"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "現在のレジュメに名前を付ける"
 msgid "Name the story"
 msgstr "ストーリーに名前を付ける"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "このパスキーに名前を付けます"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "応募が進むステージの名前、色、順序を設定します。"
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "名前、メール、パスワード、パスキー、データ"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "一部裏付けあり"
 msgid "Passkey"
 msgstr "パスキー"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "パスキー"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "パスキーには確認済みのメールアドレスが必要ですが、このサーバーはメールを送信できません。"
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "パスワードを変更しました"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "パスワードを変更しました。すべてのデバイスからサインアウトしました。サインインしてから、パスキーや API キーを再度追加してください。"
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "リモート、ハイブリッド、都市名…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "取り除く"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "「{label}」を削除しますか？"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "「{name}」を削除しますか？"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "{country} を削除します"
 msgid "Remove {label}…"
 msgstr "{label}を削除…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "{name} を削除"
@@ -16175,10 +16114,6 @@ msgstr "ファイルを削除"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "リンク {0} を削除"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "パスキーを削除"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "書類、応募、ナレッジを削除します。この操作は元に
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "名前の変更"
@@ -16267,10 +16201,6 @@ msgstr "名前の変更"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "{label}の名前を変更"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "{name} の名前を変更"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "リンクを保存"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "AI を使わずにメッセージを保存"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "名前を保存"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "保存するにはサインイン"
 msgid "Sign in with {0}"
 msgstr "{0} でサインイン"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "パスキーでサインイン"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "既存のアカウントでサインインしてください。"
@@ -18545,10 +18467,6 @@ msgstr "既存のアカウントでサインインしてください。"
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "この設定を開いたアカウントでログインしてください。"
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "指紋、顔、またはデバイスの PIN を使用してサインインします"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "リンクを開くと、現時点のレジュメが表示されます。その後の編集は共有されないため、すべてのコメントはこのバージョンに対するものになります。"
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "リンクの有効期限は 1 時間です。リセットすると、すべてのデバイスからサインアウトし、パスキー、API キー、接続済みのアプリが削除されます。心当たりがない場合は、このメールを無視してください。パスワードは変更されません。"
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "このサインイン手順の有効期限が切れました。再度サインインしてください。"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "すべての場所からサインアウトし、パスキー、API キー、接続済みのアプリを削除します。"
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "編集のロックを解除する"
 msgid "unnamed key"
 msgstr "名前のないキー"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "名前なしのパスキー"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "それまでは、面接対策でプラン、冒頭の自己紹介、こちらからする質問を確認できます。"
@@ -22150,10 +22064,6 @@ msgstr "{appName} のメールアドレスを確認してください"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "先に設定でメールアドレスを確認してください"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "パスキーを追加するにはメールアドレスを確認してください。"
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "勤務形態の記載なし"
 msgid "Works without AI or new research"
 msgstr "AIや新たな調査なしで使えます"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "パスワードを設定している場合も、パスワードなしで使えます"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "確認したいこと"
@@ -23246,10 +23152,6 @@ msgstr "編集を続けることができます。オンラインに戻ると変
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "応募の質問は30件まで保持できます。"
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "このパスキーではサインインできなくなります。パスワードと他のパスキーは引き続き使えます。"
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# taal} other {# tale}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# gesluit} other {# gesluit}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# pasleutel} other {# pasleutels}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# profiel} other {# profiele}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 opmerking, afgehandel"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 pasleutel · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 tot 11 lees die beste"
@@ -2263,10 +2255,6 @@ msgstr "'n Model se mening, nie 'n uitspraak nie. Dit kan verkeerd wees."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "’n maand"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "'n Naam help jou om pasleutels van mekaar te onderskei, soos “Werkskootrekenaar”."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Voeg 'n ligging by"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Voeg ’n nuwer aanbod by"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Voeg ’n pasleutel by"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Gaan voort"
 msgid "Continue as guest"
 msgstr "Gaan voort as gas"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Gaan voort met ’n pasleutel"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Kontras op wit"
@@ -5851,10 +5830,6 @@ msgstr "Kon nie daardie feit byvoeg nie. Probeer weer."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Kon nie die aansoek byvoeg nie. Probeer weer."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Kon nie die wagwoord byvoeg nie. Probeer weer."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Kon dit nie onthou nie. Probeer weer."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Kon dit nie uit Aansoeke verwyder nie. Probeer weer."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Kon nie die wagwoord verwyder nie. Probeer weer."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Kon nie die dokument hernoem nie. Probeer weer."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Kon nie die pasleutel hernoem nie. Probeer weer."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Hou my kodes"
 msgid "Keep on one page"
 msgstr "Hou op een bladsy"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Hou pasleutel"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Hou wagwoord"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Malabaars"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Bestuur"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Bestuur pasleutels"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Benoem die CV soos dit nou is"
 msgid "Name the story"
 msgstr "Gee die storie 'n naam"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Noem hierdie wagwoordsleutel"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Benoem, kleur en orden die fases waardeur jou aansoeke beweeg."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Naam, e-pos, wagwoord, pasleutels, jou data"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Gedeeltelik gestaaf"
 msgid "Passkey"
 msgstr "Pasleutel"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Pasleutels"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Pasleutels benodig ’n geverifieerde e-pos, wat hierdie bediener nie kan stuur nie."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Wagwoord verander"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Wagwoord verander. Jy is orals afgemeld; meld aan, en voeg dan weer pasleutels of API-sleutels by."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Afstand, Hibriede, ’n stad…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Verwyder"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Verwyder “{label}”?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Verwyder “{name}”?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Verwyder {country}"
 msgid "Remove {label}…"
 msgstr "Verwyder {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Verwyder {name}"
@@ -16175,10 +16114,6 @@ msgstr "Verwyder lêer"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Verwyder skakel {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Verwyder pasleutel"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Verwyder jou dokumente, aansoeke en Kennis. Dit kan nie ongedaan gemaak 
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Hernoem"
@@ -16267,10 +16201,6 @@ msgstr "Hernoem"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Hernoem {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Hernoem {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Bewaar skakel"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Bewaar boodskap sonder KI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Stoor naam"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Meld aan om te stoor"
 msgid "Sign in with {0}"
 msgstr "Meld aan met {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Meld aan met ’n pasleutel"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Meld aan met ’n bestaande rekening."
@@ -18545,10 +18467,6 @@ msgstr "Meld aan met ’n bestaande rekening."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Meld aan met die rekening wat hierdie instellings oopgemaak het."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Meld aan met jou vingerafdruk, gesig of toestel-PIN"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Die skakel maak die CV oop soos dit nou is. Latere wysigings word nie gedeel nie, so elke opmerking gaan oor hierdie weergawe."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Die skakel werk vir 1 uur. Herstel meld jou op elke toestel af en verwyder jou pasleutels, API-sleutels en gekoppelde toeps. As jy nie hiervoor gevra het nie, ignoreer hierdie e-pos; jou wagwoord bly dieselfde."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Hierdie aanmeldstap het verval. Meld weer aan."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Dit meld jou oral af en verwyder jou pasleutels, API-sleutels en gekoppelde toepassings."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Ontsluit redigering"
 msgid "unnamed key"
 msgstr "naamlose sleutel"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Onbenoemde pasleutel"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Tot dan het Onderhoudvoorbereiding jou plan, jou opening en die vrae om te vra."
@@ -22150,10 +22064,6 @@ msgstr "Verifieer jou e-pos vir {appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Verifieer eers jou e-pos in Instellings"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Verifieer jou e-pos om ’n pasleutel by te voeg."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "werkplek nie vermeld nie"
 msgid "Works without AI or new research"
 msgstr "Werk sonder KI of nuwe navorsing"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Werk sonder jou wagwoord, as jy een bygevoeg het"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Die moeite werd om te vra"
@@ -23246,10 +23152,6 @@ msgstr "Jy kan aanhou redigeer. Veranderinge sinkroniseer wanneer jy weer aanlyn
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Jy kan tot 30 aansoekvrae hou."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Jy kan nie meer met hierdie pasleutel aanmeld nie. Jou wagwoord en ander pasleutels werk steeds."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

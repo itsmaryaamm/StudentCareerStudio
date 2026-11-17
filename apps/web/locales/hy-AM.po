@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# լեզու} other {# լեզուներ}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# կողպված է} other {# կողպված է}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# passkey} other {# passkey}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# պրոֆիլ} other {# պրոֆիլներ}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 մեկնաբանություն, արված է"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 passkey · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10-ից 11-ը լավագույնն է"
@@ -2263,10 +2255,6 @@ msgstr "Մոդելի կարծիք, ոչ թե դատավճիռ։ Դա կարող 
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "մեկ ամիս"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Անունն օգնում է տարբերակել passkey-ները, օրինակ՝ «Աշխատանքային նոութբուք»։"
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Ավելացրեք տեղադրություն"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Ավելացրեք ավելի նոր առաջարկ"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Ավելացնել Passkey"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Շարունակել"
 msgid "Continue as guest"
 msgstr "Շարունակեք որպես հյուր"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Շարունակել passkey-ով"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Հակադրություն սպիտակի վրա"
@@ -5851,10 +5830,6 @@ msgstr "Չհաջողվեց ավելացնել այդ փաստը: Նորից փո
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Չհաջողվեց ավելացնել դիմումը: Նորից փորձեք:"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Չհաջողվեց ավելացնել passkey-ը։ Նորից փորձեք։"
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Չէի կարող հիշել դա: Նորից փորձեք:"
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Չհաջողվեց հեռացնել այն Դիմումներից: Նորից փորձեք:"
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Չհաջողվեց հեռացնել passkey-ը։ Նորից փորձեք։"
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Չհաջողվեց վերանվանել փաստաթուղթը: Նորից փորձեք:"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Չհաջողվեց վերանվանել passkey-ը։ Նորից փորձեք։"
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Պահպանեք իմ ծածկագրերը"
 msgid "Keep on one page"
 msgstr "Պահել մեկ էջում"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Պահպանել passkey-ը"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Պահպանեք գաղտնաբառը"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "մալայալամ"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Կառավարել"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Կառավարել Passkey-ները"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Անվանեք ռեզյումեն այնպես, ինչպես հիմա է
 msgid "Name the story"
 msgstr "Անվանեք պատմությունը"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Անվանել այս passkey-ը"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Անվանեք, գունավորեք և պատվիրեք այն փուլերը, որոնցով անցնում են ձեր դիմումները:"
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Անուն, էլփոստ, գաղտնաբառ, passkey-ներ, ձեր տվյալները"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Մասնակի աջակցություն"
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Passkey-ներ"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Գաղտնաբառերի համար անհրաժեշտ է ստուգված էլ.փոստ, որը այս սերվերը չի կարող ուղարկել:"
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Գաղտնաբառը փոխվել է"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Գաղտնաբառը փոխվել է։ Դուք դուրս եք եկել բոլոր սարքերից։ Մուտք գործեք, ապա նորից ավելացրեք ձեր passkey-ները կամ API բանալիները։"
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Հեռավոր, հիբրիդ, քաղաք…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Հեռացնել"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Հեռացնե՞լ «{label}»-ը:"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Հեռացնե՞լ «{name}»-ը:"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Հեռացնել {country}"
 msgid "Remove {label}…"
 msgstr "Հեռացնել {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Հեռացնել {name}"
@@ -16175,10 +16114,6 @@ msgstr "Հեռացնել ֆայլը"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Հեռացնել հղումը {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Հեռացնել Passkey-ը"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Հեռացնում է ձեր փաստաթղթերը, դիմումներ�
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Վերանվանել"
@@ -16267,10 +16201,6 @@ msgstr "Վերանվանել"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Վերանվանել {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Վերանվանել {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Պահպանել հղումը"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Պահպանել հաղորդագրությունը առանց AI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Պահպանել անունը"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Մուտք գործեք՝ պահպանելու համար"
 msgid "Sign in with {0}"
 msgstr "Մուտք գործեք {0}-ով"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Մուտք գործել Passkey-ով"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Մուտք գործեք գոյություն ունեցող հաշիվով:"
@@ -18545,10 +18467,6 @@ msgstr "Մուտք գործեք գոյություն ունեցող հաշիվո
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Մուտք գործեք այն հաշիվով, որը բացել է այս կարգավորումները:"
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Մուտք գործեք ձեր մատնահետքով, դեմքի կամ սարքի PIN-ով"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Հղումը բացում է ռեզյումեն այնպես, ինչպես հիմա է: Հետագայում խմբագրումները չեն տարածվում, ուստի յուրաքանչյուր մեկնաբանություն վերաբերում է այս տարբերակին:"
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Հղումը գործում է 1 ժամ: Վերակայումը ձեզ դուրս է բերում բոլոր սարքերից և հեռացնում ձեր passkey-ները, API բանալիներն ու միացված հավելվածները: Եթե դուք դա չեք խնդրել, անտեսեք այս նամակը, ձեր գաղտնաբառը կմնա նույնը:"
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Մուտքի այս քայլի ժամկետը սպառվել է: Նորից մուտք գործեք:"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Սա ձեզ դուրս կբերի բոլոր սարքերից և կհեռացնի ձեր passkey-ները, API բանալիները և միացված հավելվածները։"
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Բացել խմբագրումը"
 msgid "unnamed key"
 msgstr "անանուն բանալի"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Անանուն passkey"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Մինչ այդ, հարցազրույցի նախապատրաստումն ունի ձեր ծրագիրը, ձեր բացումը և տալու հարցերը:"
@@ -22150,10 +22064,6 @@ msgstr "Հաստատեք ձեր էլ․ հասցեն {appName}-ի համար"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Սկզբում հաստատեք ձեր էլ.փոստը Կարգավորումներում"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Հաստատեք ձեր էլփոստի հասցեն՝ passkey ավելացնելու համար։"
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "աշխատավայրը նշված չէ"
 msgid "Works without AI or new research"
 msgstr "Աշխատում է առանց AI կամ նոր հետազոտության"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Աշխատում է առանց ձեր գաղտնաբառի, եթե ավելացրել եք"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Արժե հարցնել"
@@ -23246,10 +23152,6 @@ msgstr "Դուք կարող եք շարունակել խմբագրումը: Փո
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Դուք կարող եք պահել մինչև 30 դիմումի հարցեր:"
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Այս passkey-ով այլևս չեք կարող մուտք գործել։ Ձեր գաղտնաբառը և մյուս passkey-ները դեռ աշխատում են։"
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

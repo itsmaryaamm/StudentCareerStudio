@@ -1252,10 +1252,6 @@ msgstr "{count, plural, other {# bahasa}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, other {# dikunci}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, other {# passkey}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, other {# profil}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 komen, selesai"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 passkey · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 hingga 11 paling mudah dibaca"
@@ -2263,10 +2255,6 @@ msgstr "Pendapat model, bukan keputusan. Ia boleh menjadi salah."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "sebulan"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Nama membantu anda membezakan kunci laluan, seperti “Komputer riba kerja”."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Tambah lokasi"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Tambah tawaran baharu"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Tambah passkey"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Teruskan"
 msgid "Continue as guest"
 msgstr "Teruskan sebagai tetamu"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Teruskan dengan passkey"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Kontras pada putih"
@@ -5851,10 +5830,6 @@ msgstr "Tidak dapat menambah fakta itu. Cuba lagi."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Tidak dapat menambah permohonan. Cuba lagi."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Tidak dapat menambah kunci laluan. Cuba lagi."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Tidak dapat mengingati itu. Cuba lagi."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Tidak dapat mengalih keluarnya daripada Permohonan. Cuba lagi."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Tidak dapat mengalih keluar kunci laluan. Cuba lagi."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Tidak dapat menamakan semula dokumen. Cuba lagi."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Tidak dapat menamakan semula kunci laluan. Cuba lagi."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Kekalkan kod saya"
 msgid "Keep on one page"
 msgstr "Simpan pada satu muka surat"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Kekalkan passkey"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Kekalkan kata laluan"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Malayalam"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Urus"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Urus passkey"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Namakan resume seperti sekarang"
 msgid "Name the story"
 msgstr "Namakan cerita"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Namakan kunci laluan ini"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Namakan, warnakan dan susun peringkat yang dilalui oleh permohonan anda."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Nama, e-mel, kata laluan, passkey, data anda"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Disokong sebahagian"
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Passkey"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Passkey memerlukan e-mel yang disahkan, yang pelayan ini tidak dapat menghantarnya."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Kata laluan ditukar"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Kata laluan berubah. Anda dilog keluarkan di semua tempat; log masuk, kemudian tambahkan semula mana-mana passkey atau kunci API."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Jauh, Hibrid, sebuah bandar…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Alih keluar"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Buang “{label}”?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Alih keluar “{name}”?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Alih keluar {country}"
 msgid "Remove {label}…"
 msgstr "Buang {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Alih keluar {name}"
@@ -16175,10 +16114,6 @@ msgstr "Alih keluar fail"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Buang pautan {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Alih keluar kunci laluan"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Mengalih keluar dokumen, permohonan dan Pengetahuan anda. Tindakan ini t
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Namakan semula"
@@ -16267,10 +16201,6 @@ msgstr "Namakan semula"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Namakan semula {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Namakan semula {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Simpan pautan"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Simpan mesej tanpa AI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Simpan nama"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Log masuk untuk menyimpan"
 msgid "Sign in with {0}"
 msgstr "Log masuk dengan {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Log masuk dengan passkey"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Log masuk dengan akaun sedia ada."
@@ -18545,10 +18467,6 @@ msgstr "Log masuk dengan akaun sedia ada."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Log masuk dengan akaun yang membuka tetapan ini."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Log masuk dengan cap jari, muka atau PIN peranti anda"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Pautan membuka resume seperti keadaannya sekarang. Suntingan kemudian tidak dikongsi, jadi setiap komen adalah tentang versi ini."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Pautan tersebut berfungsi selama 1 jam. Penetapan semula melog keluarkan anda di setiap peranti dan membuang passkey, kunci API serta aplikasi bersambung anda. Jika anda tidak meminta ini, abaikan e-mel ini; kata laluan anda tidak berubah."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Langkah log masuk ini tamat tempoh. Log masuk semula."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Ini akan melog keluar anda di semua tempat dan mengalih keluar passkey, kunci API dan aplikasi bersambung anda."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Buka kunci penyuntingan"
 msgid "unnamed key"
 msgstr "kunci tanpa nama"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Kunci laluan tanpa nama"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Sehingga itu, Persediaan temu duga mempunyai rancangan anda, pembukaan anda dan soalan untuk ditanya."
@@ -22150,10 +22064,6 @@ msgstr "Sahkan e-mel anda untuk {appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Sahkan e-mel anda dalam Tetapan dahulu"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Sahkan e-mel anda untuk menambah passkey."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "tempat kerja tidak dinyatakan"
 msgid "Works without AI or new research"
 msgstr "Berfungsi tanpa AI atau penyelidikan baharu"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Berfungsi tanpa kata laluan anda, jika anda menambahnya"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Wajar ditanya"
@@ -23246,10 +23152,6 @@ msgstr "Anda boleh terus mengedit. Perubahan disegerakkan apabila anda kembali d
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Anda boleh menyimpan sehingga 30 soalan permohonan."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Anda tidak lagi boleh log masuk dengan passkey ini. Kata laluan dan passkey lain anda masih berfungsi."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

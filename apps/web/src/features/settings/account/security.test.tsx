@@ -44,9 +44,6 @@ vi.mock("@/libs/auth/client", () => ({
 		listAccounts: listAccountsMock,
 		unlinkAccount: unlinkMock,
 		linkSocial: linkMock,
-		passkey: {
-			listUserPasskeys: async () => ({ data: [] }),
-		},
 	},
 }));
 

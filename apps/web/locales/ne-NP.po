@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# भाषा} other {# भाषाहरू}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# लक गरियो} other {# लक गरिए}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# पासकी} other {# पासकीहरू}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# प्रोफाइल} other {# प्रोफाइलहरू}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "१ टिप्पणी, सकियो"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "१ पासकी · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "१० देखि ११ सबैभन्दा राम्रो पढिन्छ"
@@ -2263,10 +2255,6 @@ msgstr "मोडेलको विचार, निर्णय होइन�
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "एक महिना"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "एउटा नामले तपाईंलाई \"वर्क ल्यापटप\" जस्ता पासकुञ्जीहरू अलग गर्न मद्दत गर्छ।"
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "स्थान थप्नुहोस्"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "नयाँ प्रस्ताव थप्नुहोस्"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "पासकी थप्नुहोस्"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "जारी राख्नुहोस्"
 msgid "Continue as guest"
 msgstr "अतिथिको रूपमा जारी राख्नुहोस्"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "पासकीसँग जारी राख्नुहोस्"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "सेतोमा कन्ट्रास्ट"
@@ -5851,10 +5830,6 @@ msgstr "त्यो तथ्य थप्न सकिएन। पुन: प
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "आवेदन थप्न सकिएन। पुन: प्रयास गर्नुहोस्।"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "पासकी थप्न सकिएन। पुन: प्रयास गर्नुहोस्।"
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "त्यो सम्झन सकिएन। फेरि प्र�
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "यसलाई आवेदनहरूबाट हटाउन सकिएन। पुन: प्रयास गर्नुहोस्।"
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "पासकी हटाउन सकिएन। पुन: प्रयास गर्नुहोस्।"
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "कागजातको नाम परिवर्तन गर्न सकिएन। पुन: प्रयास गर्नुहोस्।"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "पासकीको नाम परिवर्तन गर्न सकिएन। पुन: प्रयास गर्नुहोस्।"
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "मेरा कोडहरू राख्नुहोस्"
 msgid "Keep on one page"
 msgstr "एक पृष्ठमा राख्नुहोस्"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "पासकी राख्नुहोस्"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "पासवर्ड राख्नुहोस्"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "मलयालम"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "व्यवस्थापन गर्नुहोस्"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "पासकीहरू व्यवस्थापन गर्नुहोस्"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "बायोडाटालाई अहिलेकै अवस्थ�
 msgid "Name the story"
 msgstr "कथाको नाम राख्नुहोस्"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "यो पासकी नाम दिनुहोस्"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "तपाईंका आवेदनहरू गुज्रने चरणहरूलाई नाम, रङ र क्रम दिनुहोस्।"
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "नाम, इमेल, पासवर्ड, पासकी, तपाईंको डेटा"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "आंशिक रूपमा समर्थित"
 msgid "Passkey"
 msgstr "पासकी"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "पासकीहरू"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "पासकीहरूलाई प्रमाणित इमेल चाहिन्छ, जुन यो सर्भरले पठाउन सक्दैन।"
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "पासवर्ड परिवर्तन गरियो"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "पासवर्ड परिवर्तन भयो। तपाईं सबै ठाउँबाट साइन आउट हुनुभयो; साइन इन गर्नुहोस्, अनि आवश्यक पासकी वा API कुञ्जीहरू फेरि थप्नुहोस्।"
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "रिमोट, हाइब्रिड, शहर…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "हटाउनुहोस्"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "“{label}” हटाउने?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "“{name}” हटाउने?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "हटाउनुहोस् {country}"
 msgid "Remove {label}…"
 msgstr "{label} हटाउनुहोस्…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "{name} हटाउनुहोस्"
@@ -16175,10 +16114,6 @@ msgstr "फाइल हटाउनुहोस्"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "लिङ्क {0} हटाउनुहोस्"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "पासकी हटाउनुहोस्"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "तपाईंका कागजात, आवेदन र ज्ञ�
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "पुन: नामाकरण गर्नुहोस्"
@@ -16267,10 +16201,6 @@ msgstr "पुन: नामाकरण गर्नुहोस्"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "{label} को नाम बदल्नुहोस्"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "{name} को नाम बदल्नुहोस्"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "लिङ्क सुरक्षित गर्नुहोस्"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "AI बिना सन्देश सुरक्षित गर्नुहोस्"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "नाम सुरक्षित गर्नुहोस्"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "सुरक्षित गर्न साइन इन गर्न�
 msgid "Sign in with {0}"
 msgstr "{0} सँग साइन इन गर्नुहोस्"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "पासकीसँग साइन इन गर्नुहोस्"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "भइरहेको खाताबाट साइन इन गर्नुहोस्।"
@@ -18545,10 +18467,6 @@ msgstr "भइरहेको खाताबाट साइन इन गर�
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "यी सेटिङहरू खोलेको खाताबाट साइन इन गर्नुहोस्।"
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "आफ्नो फिंगरप्रिन्ट, अनुहार वा यन्त्र PIN मार्फत साइन इन गर्नुहोस्"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "लिङ्कले बायोडाटा अहिले जस्तो छ त्यस्तै खोल्छ। पछिल्ला सम्पादनहरू साझा गरिँदैनन्, त्यसैले हरेक टिप्पणी यो संस्करणबारे हुन्छ।"
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "लिङ्क 1 घण्टासम्म काम गर्छ। रिसेटले तपाईंलाई हरेक डिभाइसमा साइन आउट गराउँछ र तपाईंका पासकीहरू, API कुञ्जीहरू र जोडिएका एपहरू हटाउँछ। तपाईंले यो अनुरोध नगरेको भए, यो इमेल उपेक्षा गर्नुहोस्; तपाईंको पासवर्ड उही रहन्छ।"
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "यो साइन-इन चरणको म्याद सकियो। फेरि साइन इन गर्नुहोस्।"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "यसले तपाईंलाई सबैतिरबाट साइन आउट गराउँछ र तपाईंका पासकी, API कुञ्जी र जोडिएका एपहरू हटाउँछ।"
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "सम्पादन अनलक गर्नुहोस्"
 msgid "unnamed key"
 msgstr "अज्ञात कुञ्जी"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "अनाम पासकी"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "त्यो समयसम्म अन्तर्वार्ता तयारीसँग तपाईंको योजना, तपाईंको सुरुवात र सोध्नुपर्ने प्रश्नहरू हुन्छन्।"
@@ -22150,10 +22064,6 @@ msgstr "{appName} का लागि तपाईंको इमेल प्�
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "पहिले सेटिङहरूमा आफ्नो इमेल प्रमाणित गर्नुहोस्"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "पासकी थप्न आफ्नो इमेल प्रमाणित गर्नुहोस्।"
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "कार्यस्थल उल्लेख छैन"
 msgid "Works without AI or new research"
 msgstr "AI वा नयाँ अनुसन्धानबिना काम गर्छ"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "तपाईंले पासवर्ड थप्नुभएको छ भने, त्यसबिना पनि चल्छ"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "सोध्न लायक"
@@ -23246,10 +23152,6 @@ msgstr "तपाईं सम्पादन जारी राख्न स�
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "तपाईं ३० वटासम्म आवेदन प्रश्नहरू राख्न सक्नुहुन्छ।"
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "तपाईं अब यो पासकीले साइन इन गर्न सक्नुहुन्न। तपाईंको पासवर्ड र अन्य पासकीहरू अझै चल्छन्।"
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

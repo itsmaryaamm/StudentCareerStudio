@@ -202,7 +202,6 @@ export function MoreItems() {
 							t`Photo`,
 							t`Password`,
 							t`Two-step verification`,
-							t`Passkeys`,
 							t`Export data`,
 							t`Delete account`,
 							t`Sign out`,

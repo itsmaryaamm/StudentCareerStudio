@@ -1252,10 +1252,6 @@ msgstr "{count, plural, other {# ភាសា}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, other {បានចាក់សោ #}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, other {កូនសោកំណត់អត្តសញ្ញាណ #}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, other {# ប្រវត្តិបណ្ដាញសង្គម}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "មតិ 1 រួចរាល់"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "កូនសោកំណត់អត្តសញ្ញាណ 1 · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 ដល់ 11 អានស្រួលបំផុត"
@@ -2263,10 +2255,6 @@ msgstr "គំនិតរបស់តារាម៉ូដែល មិនម�
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "មួយខែ"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "ឈ្មោះមួយជួយអ្នកបែងចែកកូនសោកំណត់អត្តសញ្ញាណពីគ្នា ដូចជា “កុំព្យូទ័រយួរដៃការងារ”។"
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "បន្ថែមទីតាំង"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "បន្ថែមការផ្តល់ការងារថ្មីជាង"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "បន្ថែមកូនសោកំណត់អត្តសញ្ញាណ"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "បន្ត"
 msgid "Continue as guest"
 msgstr "បន្តជាភ្ញៀវ"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "បន្តជាមួយកូនសោកំណត់អត្តសញ្ញាណ"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "កម្រិតពណ៌ផ្ទុយលើផ្ទៃស"
@@ -5851,10 +5830,6 @@ msgstr "មិនអាចបន្ថែមការពិតនោះបាន
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "មិនអាចបន្ថែមពាក្យសុំបានទេ។ ព្យាយាមម្តងទៀត។"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "មិនអាចបន្ថែមលេខសម្ងាត់បានទេ។ ព្យាយាមម្តងទៀត។"
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "មិនអាចចងចាំវាបានទេ។ សូមព�
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "មិនអាចដកវាចេញពីពាក្យសុំបានទេ។ ព្យាយាមម្តងទៀត។"
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "មិនអាចដកលេខសម្ងាត់ចេញបានទេ។ ព្យាយាមម្តងទៀត។"
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "មិនអាចប្តូរឈ្មោះឯកសារបានទេ។ ព្យាយាមម្តងទៀត។"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "មិនអាចប្តូរឈ្មោះកូនសោកំណត់អត្តសញ្ញាណបានទេ។ ព្យាយាមម្តងទៀត។"
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "រក្សាកូដរបស់ខ្ញុំ"
 msgid "Keep on one page"
 msgstr "ទុកមួយទំព័រ"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "រក្សាកូនសោកំណត់អត្តសញ្ញាណ"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "រក្សាពាក្យសម្ងាត់"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Malayalam"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "គ្រប់គ្រង"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "គ្រប់គ្រងកូនសោកំណត់អត្តសញ្ញាណ"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "ដាក់ឈ្មោះប្រវត្តិរូបសង្ខ
 msgid "Name the story"
 msgstr "ដាក់ឈ្មោះរឿង"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "ដាក់ឈ្មោះលេខសម្ងាត់នេះ។"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "ដាក់ឈ្មោះ ពណ៌ និងលំដាប់ដំណាក់កាលដែលពាក្យសុំរបស់អ្នកឆ្លងកាត់។"
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "ឈ្មោះ អ៊ីមែល ពាក្យសម្ងាត់ កូនសោកំណត់អត្តសញ្ញាណ ទិន្នន័យរបស់អ្នក"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "មានភស្តុតាងគាំទ្រខ្លះ"
 msgid "Passkey"
 msgstr "កូនសោកំណត់អត្តសញ្ញាណ"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "កូនសោកំណត់អត្តសញ្ញាណ"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "កូនសោកំណត់អត្តសញ្ញាណត្រូវការអ៊ីមែលដែលបានផ្ទៀងផ្ទាត់ ដែលម៉ាស៊ីនមេនេះមិនអាចផ្ញើបានទេ។"
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "បានប្តូរពាក្យសម្ងាត់"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "បានប្តូរពាក្យសម្ងាត់។ អ្នកត្រូវបានចាកចេញពីគ្រប់ទីកន្លែង; សូមចូល បន្ទាប់មកបន្ថែមកូនសោកំណត់អត្តសញ្ញាណ ឬកូនសោ API ម្ដងទៀត។"
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "ពីចម្ងាយ, កូនកាត់, ទីក្រុង�
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "ដកចេញ"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "លុប “{label}” ចេញ?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "ដក “{name}” ចេញ?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "លុប {country}"
 msgid "Remove {label}…"
 msgstr "លុប {label} ចេញ…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "ដក {name} ចេញ"
@@ -16175,10 +16114,6 @@ msgstr "យកឯកសារចេញ"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "ដកតំណ {0} ចេញ"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "ដកកូនសោកំណត់អត្តសញ្ញាណចេញ"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "ដកឯកសារ ពាក្យសុំ និងចំណេះ�
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "ប្តូរឈ្មោះ"
@@ -16267,10 +16201,6 @@ msgstr "ប្តូរឈ្មោះ"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "ប្ដូរឈ្មោះ {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "ប្ដូរឈ្មោះ {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "រក្សាទុកតំណ"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "រក្សាទុកសារដោយគ្មាន AI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "រក្សាទុកឈ្មោះ"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "ចូលដើម្បីរក្សាទុក"
 msgid "Sign in with {0}"
 msgstr "ចូលជាមួយ {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "ចូលជាមួយកូនសោកំណត់អត្តសញ្ញាណ"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "ចូលជាមួយគណនីដែលមានស្រាប់។"
@@ -18545,10 +18467,6 @@ msgstr "ចូលជាមួយគណនីដែលមានស្រាប់
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "ចូលដោយប្រើគណនីដែលបានបើកការកំណត់ទាំងនេះ។"
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "ចូលដោយប្រើស្នាមម្រាមដៃ មុខ ឬលេខ PIN ឧបករណ៍របស់អ្នក។"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "តំណនេះបើកប្រវត្តិរូបសង្ខេបដូចដែលវាមានឥឡូវនេះ។ ការកែពេលក្រោយមិនត្រូវបានចែករំលែកទេ ដូច្នេះគ្រប់មតិយោបល់គឺអំពីកំណែនេះ។"
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "តំណនេះប្រើបានរយៈពេល 1 ម៉ោង។ ការកំណត់ឡើងវិញនឹងចាកចេញពីគ្រប់ឧបករណ៍ ហើយដកចេញកូនសោកំណត់អត្តសញ្ញាណ កូនសោ API និងកម្មវិធីដែលបានតភ្ជាប់របស់អ្នក។ ប្រសិនបើអ្នកមិនបានស្នើសុំរឿងនេះទេ សូមមិនអើពើអ៊ីមែលនេះ; ពាក្យសម្ងាត់របស់អ្នកនៅដដែល។"
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "ជំហានចូលនេះផុតកំណត់។ សូមចូលម្ដងទៀត។"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "សកម្មភាពនេះចាកចេញពីគ្រប់កន្លែង ហើយដកកូនសោកំណត់អត្តសញ្ញាណ សោ API និងកម្មវិធីដែលបានភ្ជាប់របស់អ្នកចេញ។"
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "ដោះសោការកែសម្រួល"
 msgid "unnamed key"
 msgstr "សោគ្មានឈ្មោះ"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Passkey គ្មានឈ្មោះ"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "រហូតដល់ពេលនោះ ការត្រៀមសម្ភាសន៍មានផែនការ ការចាប់ផ្តើម និងសំណួរដែលត្រូវសួររបស់អ្នក។"
@@ -22150,10 +22064,6 @@ msgstr "ផ្ទៀងផ្ទាត់អ៊ីមែលរបស់អ្ន
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "ផ្ទៀងផ្ទាត់អ៊ីមែលរបស់អ្នកក្នុងការកំណត់ជាមុនសិន"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "ផ្ទៀងផ្ទាត់អ៊ីមែលរបស់អ្នកដើម្បីបន្ថែមកូនសោកំណត់អត្តសញ្ញាណ។"
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "មិនបានបញ្ជាក់កន្លែងធ្វើក
 msgid "Works without AI or new research"
 msgstr "ដំណើរការដោយគ្មាន AI ឬការស្រាវជ្រាវថ្មី"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "ដំណើរការដោយគ្មានពាក្យសម្ងាត់របស់អ្នក ប្រសិនបើអ្នកបានបន្ថែមវា"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "គួរសួរ"
@@ -23246,10 +23152,6 @@ msgstr "អ្នកអាចបន្តកែសម្រួល។ ការ�
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "អ្នកអាចរក្សាទុកសំណួរពាក្យសុំបានរហូតដល់ 30។"
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "អ្នកមិនអាចចូលជាមួយកូនសោកំណត់អត្តសញ្ញាណនេះទៀតទេ។ ពាក្យសម្ងាត់ និងកូនសោកំណត់អត្តសញ្ញាណផ្សេងទៀតរបស់អ្នកនៅតែដំណើរការ។"
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

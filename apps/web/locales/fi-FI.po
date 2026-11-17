@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# kieli} other {# kieltä}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# lukittu} other {# lukittu}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# passkey} other {# passkeyta}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# profiili} other {# profiilia}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 kommentti, käsitelty"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 passkey · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10–11 on luettavin"
@@ -2263,10 +2255,6 @@ msgstr "Mallin mielipide, ei tuomio. Se voi olla väärin."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "kuukausi"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Nimi auttaa erottamaan passkeyt toisistaan, esimerkiksi ”Työläppäri”."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Lisää sijainti"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Lisää uudempi tarjous"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Lisää passkey"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Jatka"
 msgid "Continue as guest"
 msgstr "Jatka vieraana"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Jatka passkeyllä"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Kontrasti valkoisella"
@@ -5851,10 +5830,6 @@ msgstr "Faktaa ei voitu lisätä. Yritä uudelleen."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Hakemusta ei voitu lisätä. Yritä uudelleen."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Salasanaa ei voitu lisätä. Yritä uudelleen."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Muistaminen epäonnistui. Yritä uudelleen."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Poistaminen hakemuksista epäonnistui. Yritä uudelleen."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Salasanaa ei voitu poistaa. Yritä uudelleen."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Asiakirjaa ei voitu nimetä uudelleen. Yritä uudelleen."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Passkeyta ei voitu nimetä uudelleen. Yritä uudelleen."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Pidä koodini"
 msgid "Keep on one page"
 msgstr "Pysy yhdellä sivulla"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Säilytä passkey"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Säilytä salasana"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "malajalam"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Hallinnoi"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Hallinnoi passkeyta"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Nimeä ansioluettelo nykyisessä muodossaan"
 msgid "Name the story"
 msgstr "Nimeä tarina"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Nimeä tämä salasana"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Nimeä, väritä ja järjestä vaiheet, joiden läpi hakemuksesi kulkevat."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Nimi, sähköposti, salasana, passkeyt, tietosi"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Osittain tuettu"
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Passkeys"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Passkeyt vaativat vahvistetun sähköpostin, jota tämä palvelin ei voi lähettää."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Salasana vaihdettu"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Salasana vaihdettu. Sinut on kirjattu ulos kaikkialta; kirjaudu sisään ja lisää sitten passkeyt ja API-avaimet uudelleen."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Etä, hybridi, kaupunki…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Poistaa"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Poistetaanko ”{label}”?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Poistetaanko ”{name}”?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Poista {country}"
 msgid "Remove {label}…"
 msgstr "Poista {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Poista {name}"
@@ -16175,10 +16114,6 @@ msgstr "Poista tiedosto"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Poista linkki {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Poista passkey"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Poistaa asiakirjasi, hakemuksesi ja Tietopankin. Tätä ei voi kumota."
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Nimeä uudelleen"
@@ -16267,10 +16201,6 @@ msgstr "Nimeä uudelleen"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Nimeä uudelleen: {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Nimeä uudelleen: {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Tallenna linkki"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Tallenna viesti ilman tekoälyä"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Tallenna nimi"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Kirjaudu tallentaaksesi"
 msgid "Sign in with {0}"
 msgstr "Kirjaudu sisään: {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Kirjaudu sisään passkeyllä"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Kirjaudu sisään olemassa olevalla tilillä."
@@ -18545,10 +18467,6 @@ msgstr "Kirjaudu sisään olemassa olevalla tilillä."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Kirjaudu sisään tilillä, joka avasi nämä asetukset."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Kirjaudu sisään sormenjäljelläsi, kasvojesi tai laitteen PIN-koodilla"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Linkki avaa ansioluettelon sen nykyisessä tilassa. Myöhempiä muutoksia ei jaeta, joten jokainen kommentti koskee tätä versiota."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Linkki on voimassa 1 tunnin. Nollaus kirjaa sinut ulos joka laitteelta ja poistaa passkeyt, API-avaimet ja yhdistetyt sovellukset. Jos et pyytänyt tätä, ohita tämä sähköposti; salasanasi pysyy samana."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Tämä kirjautumisvaihe on vanhentunut. Kirjaudu uudelleen."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Tämä kirjaa sinut ulos kaikkialta ja poistaa passkeysi, API-avaimesi ja yhdistetyt sovelluksesi."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Avaa muokkaus"
 msgid "unnamed key"
 msgstr "nimetön avain"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Nimetön kulkuavain"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Siihen mennessä Haastatteluun valmistautuminen sisältää suunnitelmasi, avauksesi ja esitettävät kysymykset."
@@ -22150,10 +22064,6 @@ msgstr "Vahvista {appName}-sähköpostisi"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Vahvista ensin sähköpostisi asetuksissa"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Vahvista sähköpostisi lisätäksesi passkeyn."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "työskentelypaikkaa ei mainittu"
 msgid "Works without AI or new research"
 msgstr "Toimii ilman tekoälyä tai uutta tutkimusta"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Toimii ilman salasanaasi, jos lisäsit sellaisen"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Kannattaa kysyä"
@@ -23246,10 +23152,6 @@ msgstr "Voit jatkaa muokkaamista. Muutokset synkronoidaan, kun olet taas online-
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Voit pitää enintään 30 hakemuskysymystä."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Et voi enää kirjautua sisään tällä passkeyllä. Salasanasi ja muut passkeysi toimivat edelleen."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

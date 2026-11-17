@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# sprog} other {# sprog}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# låst} other {# låst}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# adgangsnøgle} other {# adgangsnøgler}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# profil} other {# profiler}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 kommentar, klaret"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 adgangsnøgle · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 til 11 læses bedst"
@@ -2263,10 +2255,6 @@ msgstr "En models mening, ikke en dom. Det kan være forkert."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "en måned"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Et navn hjælper dig med at skelne passkeys fra hinanden, f.eks. “Arbejdslaptop”."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Tilføj en placering"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Tilføj et nyere tilbud"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Tilføj en adgangsnøgle"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Fortsæt"
 msgid "Continue as guest"
 msgstr "Fortsæt som gæst"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Fortsæt med en adgangsnøgle"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Kontrast på hvid"
@@ -5851,10 +5830,6 @@ msgstr "Kunne ikke tilføje den fakta. Prøv igen."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Kunne ikke tilføje ansøgningen. Prøv igen."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Adgangsnøglen kunne ikke tilføjes. Prøv igen."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Kunne ikke huske det. Prøv igen."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Kunne ikke fjerne den fra Ansøgninger. Prøv igen."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Kunne ikke fjerne adgangsnøglen. Prøv igen."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Kunne ikke omdøbe dokumentet. Prøv igen."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Kunne ikke omdøbe passkeyen. Prøv igen."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Behold mine koder"
 msgid "Keep on one page"
 msgstr "Hold dig på én side"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Behold adgangsnøgle"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Behold adgangskode"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Malayalam"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Administrér"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Administrér adgangsnøgler"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Navngiv CV'et, som det er nu"
 msgid "Name the story"
 msgstr "Navngiv historien"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Navngiv denne adgangsnøgle"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Navngiv, farvelæg og ordn de faser, dine ansøgninger går igennem."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Navn, e-mail, adgangskode, adgangsnøgler, dine data"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Delvist underbygget"
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Nøgler"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Passkeys kræver en bekræftet e-mail, som denne server ikke kan sende."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Adgangskode ændret"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Adgangskoden er ændret. Du er logget ud overalt; log ind, og tilføj dine passkeys eller API-nøgler igen."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Remote, hybrid, en by…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Fjerne"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Fjern »{label}«?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Fjern “{name}”?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Fjern {country}"
 msgid "Remove {label}…"
 msgstr "Fjern {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Fjern {name}"
@@ -16175,10 +16114,6 @@ msgstr "Fjern fil"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Fjern link {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Fjern passkey"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Fjerner dine dokumenter, ansøgninger og Viden. Dette kan ikke fortrydes
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Omdøb"
@@ -16267,10 +16201,6 @@ msgstr "Omdøb"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Omdøb {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Omdøb {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Gem link"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Gem besked uden AI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Gem navn"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Log ind for at gemme"
 msgid "Sign in with {0}"
 msgstr "Log ind med {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Log ind med en adgangsnøgle"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Log ind med en eksisterende konto."
@@ -18545,10 +18467,6 @@ msgstr "Log ind med en eksisterende konto."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Log ind med den konto, der åbnede disse indstillinger."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Log ind med dit fingeraftryk, ansigt eller enhedens pinkode"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Linket åbner CV'et, som det er nu. Senere redigeringer deles ikke, så alle kommentarer gælder denne version."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Linket virker i 1 time. Nulstilling logger dig ud på alle enheder og fjerner dine passkeys, API-nøgler og forbundne apps. Har du ikke bedt om dette, kan du ignorere e-mailen; din adgangskode forbliver uændret."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Dette logintrin er udløbet. Log ind igen."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Dette logger dig ud overalt og fjerner dine adgangsnøgler, API-nøgler og forbundne apps."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Lås redigering op"
 msgid "unnamed key"
 msgstr "unavngiven nøgle"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Unavngivet passkey"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Indtil da har Interviewforberedelse din plan, din åbning og de spørgsmål, du skal stille."
@@ -22150,10 +22064,6 @@ msgstr "Bekræft din e-mail til {appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Bekræft først din e-mail i Indstillinger"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Bekræft din e-mail for at tilføje en adgangsnøgle."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "arbejdssted ikke angivet"
 msgid "Works without AI or new research"
 msgstr "Virker uden AI eller ny research"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Virker uden din adgangskode, hvis du har tilføjet en"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Værd at spørge om"
@@ -23246,10 +23152,6 @@ msgstr "Du kan fortsætte med at redigere. Ændringer synkroniseres, når du er 
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Du kan have op til 30 ansøgningsspørgsmål."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Du kan ikke længere logge ind med denne adgangsnøgle. Din adgangskode og andre adgangsnøgler virker stadig."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

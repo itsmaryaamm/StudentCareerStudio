@@ -2,9 +2,9 @@ import type { QueryClient } from "@tanstack/react-query";
 import { t } from "@lingui/core/macro";
 import { Trans } from "@lingui/react/macro";
 import { useSelector } from "@tanstack/react-form";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { Link, useNavigate, useRouter, useSearch } from "@tanstack/react-router";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import z from "zod";
 import { Button } from "@reactive-resume/ui/components/button";
 import { FormControl, FormItem, FormLabel, FormMessage } from "@reactive-resume/ui/components/form";
@@ -16,11 +16,10 @@ import { ConnectingClient } from "../components/connecting-client";
 import { GuestTransferNote } from "../components/guest-banner";
 import { SocialAuth } from "../components/social-auth";
 import { authErrorMessage } from "../error";
-import { getAuthRedirectOptions, getOAuthPasskeyOptions, getOAuthSignInOptions, isOAuthRedirect } from "../redirect";
+import { getAuthRedirectOptions, getOAuthSignInOptions, isOAuthRedirect } from "../redirect";
 import { List, ListRow } from "@/components/calm/list-row";
 import { PasswordInput } from "@/components/input/password-input";
 import { authClient } from "@/libs/auth/client";
-import { orpc } from "@/libs/orpc/client";
 import { sessionQueryKey } from "@/libs/root-context";
 import { useAppForm } from "@/libs/tanstack-form";
 
@@ -119,11 +118,8 @@ export function LoginPage({ disableEmailAuth, disableSignups, allowGuestLogin, i
 	const navigate = useNavigate();
 	const queryClient = useQueryClient();
 
-	const hasStartedConditionalPasskeyRef = useRef(false);
 	const passwordRef = useRef<HTMLDivElement>(null);
 	const [wrongDetails, setWrongDetails] = useState(false);
-
-	const { data: providers = {} } = useQuery(orpc.auth.providers.list.queryOptions());
 
 	const form = useAppForm({
 		defaultValues: { identifier: "", password: "" },
@@ -160,29 +156,6 @@ export function LoginPage({ disableEmailAuth, disableSignups, allowGuestLogin, i
 		onError: (error) =>
 			toast.add({ type: "error", description: error.message || t`Couldn't continue as a guest. Try again.` }),
 	});
-
-	useEffect(() => {
-		if (!("passkey" in providers)) return;
-		if (!("PublicKeyCredential" in window)) return;
-		if (!PublicKeyCredential.isConditionalMediationAvailable) return;
-		if (hasStartedConditionalPasskeyRef.current) return;
-
-		hasStartedConditionalPasskeyRef.current = true;
-
-		void PublicKeyCredential.isConditionalMediationAvailable().then(async (isAvailable) => {
-			if (!isAvailable) return;
-
-			const { data, error } = await authClient.signIn.passkey({
-				autoFill: true,
-				...getOAuthPasskeyOptions(callbackURL),
-			});
-			if (error || isOAuthRedirect(data)) return;
-
-			await queryClient.invalidateQueries({ queryKey: sessionQueryKey });
-			await router.invalidate();
-			void navigate(getAuthRedirectOptions(callbackURL));
-		});
-	}, [providers, router, navigate, callbackURL, queryClient]);
 
 	const guestOffered = allowGuestLogin && !getOAuthSignInOptions(callbackURL).oauth_query;
 

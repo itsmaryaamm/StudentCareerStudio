@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# dil} other {# dil}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# kilitlendi} other {# kilitlendi}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# passkey} other {# passkey}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# profil} other {# profil}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 yorum, tamamlandı"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 passkey · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "En iyi okunan: 10 ile 11"
@@ -2263,10 +2255,6 @@ msgstr "Bir modelin görüşü, bir karar değil. Yanlış olabilir."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "bir ay"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "“İş dizüstü bilgisayarı” gibi bir ad, geçiş anahtarlarını birbirinden ayırmanıza yardımcı olur."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Konum ekle"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Daha yeni bir teklif ekle"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Passkey ekle"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Devam et"
 msgid "Continue as guest"
 msgstr "Misafir olarak devam et"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Passkey ile devam et"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Beyaz üzerinde kontrast"
@@ -5851,10 +5830,6 @@ msgstr "Bu bilgi eklenemedi. Tekrar deneyin."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Başvuru eklenemedi. Tekrar deneyin."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Şifre eklenemedi. Tekrar deneyin."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Bu hatırlanamadı. Tekrar deneyin."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Başvurulardan kaldırılamadı. Tekrar deneyin."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Şifre anahtarı kaldırılamadı. Tekrar deneyin."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Belge yeniden adlandırılamadı. Tekrar deneyin."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Geçiş anahtarı yeniden adlandırılamadı. Tekrar deneyin."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Kodlarımı koru"
 msgid "Keep on one page"
 msgstr "Tek sayfada devam et"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Passkey kalsın"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Parolayı koru"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Malayalamca"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Yönet"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Passkey'leri yönet"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Özgeçmişin şu anki hâline ad verin"
 msgid "Name the story"
 msgstr "Hikayeye ad ver"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Bu şifre anahtarına ad verin"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Başvurularınızın geçtiği aşamalara ad, renk ve sıra verin."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Ad, e-posta, parola, passkey'ler, verileriniz"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Kısmen kanıtlı"
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Geçiş anahtarları"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Passkey'ler, bu sunucunun gönderemeyeceği doğrulanmış bir e-posta gerektirir."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Şifre değiştirildi"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Parola değiştirildi. Her yerden çıkış yaptınız; giriş yapın, ardından passkey'lerinizi ve API anahtarlarınızı yeniden ekleyin."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Uzaktan, Hibrit, bir şehir…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Kaldırmak"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "“{label}” kaldırılsın mı?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "“{name}” kaldırılsın mı?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "{country}'ı kaldır"
 msgid "Remove {label}…"
 msgstr "{label} aşamasını kaldır…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "{name} öğesini kaldır"
@@ -16175,10 +16114,6 @@ msgstr "Dosyayı kaldır"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "{0}. bağlantıyı kaldır"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Geçiş anahtarını kaldır"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Belgelerinizi, başvurularınızı ve Bilgi Bankanızı kaldırır. Bu i
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Yeniden isimlendirmek"
@@ -16267,10 +16201,6 @@ msgstr "Yeniden isimlendirmek"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "{label} öğesini yeniden adlandır"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "{name} öğesini yeniden adlandır"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Bağlantıyı kaydet"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Mesajı yapay zeka olmadan kaydet"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Adı kaydet"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Kaydetmek için giriş yapın"
 msgid "Sign in with {0}"
 msgstr "{0} ile giriş yap"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Passkey ile giriş yap"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Mevcut bir hesapla giriş yapın."
@@ -18545,10 +18467,6 @@ msgstr "Mevcut bir hesapla giriş yapın."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Bu ayarları açan hesapla oturum açın."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Parmak iziniz, yüzünüz veya cihaz PIN'inizle oturum açın"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Bağlantı, özgeçmişi şu anki hâliyle açar. Sonraki düzenlemeler paylaşılmaz; bu yüzden her yorum bu sürüm hakkındadır."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Bağlantı 1 saat geçerlidir. Sıfırlama sizi her cihazdan çıkarır ve passkey'lerinizi, API anahtarlarınızı ve bağlı uygulamalarınızı kaldırır. Bunu siz istemediyseniz bu e-postayı yok sayın; parolanız aynı kalır."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Bu giriş adımının süresi doldu. Yeniden giriş yapın."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Bu işlem her yerde çıkış yapmanızı sağlar ve passkey'lerinizi, API anahtarlarınızı ve bağlı uygulamalarınızı kaldırır."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Düzenlemenin kilidini açın"
 msgid "unnamed key"
 msgstr "adsız anahtar"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "İsimsiz geçiş anahtarı"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "O zamana kadar Görüşme hazırlığında planınız, açılışınız ve soracağınız sorular hazır olur."
@@ -22150,10 +22064,6 @@ msgstr "{appName} için e-postanızı doğrulayın"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Önce Ayarlar'da e-postanızı doğrulayın"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Passkey eklemek için e-postanızı doğrulayın."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "çalışma yeri belirtilmemiş"
 msgid "Works without AI or new research"
 msgstr "Yapay zeka veya yeni araştırma olmadan çalışır"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Parola eklediyseniz parolanız olmadan çalışır"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Sormaya değer"
@@ -23246,10 +23152,6 @@ msgstr "Düzenlemeye devam edebilirsiniz. Tekrar çevrimiçi olduğunuzda senkro
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "En fazla 30 başvuru sorusu tutabilirsiniz."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Artık bu passkey ile giriş yapamazsınız. Parolanız ve diğer passkey'leriniz çalışmaya devam eder."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

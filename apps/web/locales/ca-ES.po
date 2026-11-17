@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# idioma} other {# idiomes}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# bloquejat} other {# bloquejats}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# clau d'accés} other {# claus d'accés}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# perfil} other {# perfils}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 comentari, resolt"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 clau d'accés · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "De 10 a 11 es llegeix millor"
@@ -2263,10 +2255,6 @@ msgstr "L'opinió d'un model, no un veredicte. Pot estar malament."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "un mes"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Un nom us ajuda a distingir les claus d'accés, com ara «Portàtil de la feina»."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Afegeix una ubicació"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Afegeix una oferta més recent"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Afegeix una clau d'accés"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Continua"
 msgid "Continue as guest"
 msgstr "Continua com a convidat"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Continua amb una clau d'accés"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Contrast sobre blanc"
@@ -5851,10 +5830,6 @@ msgstr "No s'ha pogut afegir aquest fet. Torneu-ho a provar."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "No s'ha pogut afegir la candidatura. Torneu-ho a provar."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "No s'ha pogut afegir la clau de pas. Torna-ho a provar."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "No s'ha pogut recordar. Torneu-ho a provar."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "No s'ha pogut treure de Candidatures. Torneu-ho a provar."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "No s'ha pogut eliminar la clau d'accés. Torna-ho a provar."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "No s'ha pogut canviar el nom del document. Torneu-ho a provar."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "No s'ha pogut canviar el nom de la clau d'accés. Torneu-ho a provar."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Conserva els meus codis"
 msgid "Keep on one page"
 msgstr "Mantingueu-vos en una pàgina"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Mantén la clau d'accés"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Conserva la contrasenya"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Malaiàlam"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Gestiona"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Gestiona les claus d'accés"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Posa nom al currículum tal com és ara"
 msgid "Name the story"
 msgstr "Poseu nom a la història"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Anomena aquesta clau d'accés"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Posa nom, color i ordre a les etapes per les quals passen les teves candidatures."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Nom, correu, contrasenya, claus d'accés, les teves dades"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Avalat en part"
 msgid "Passkey"
 msgstr "Clau d'accés"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Claus d'accés"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Les claus d'accés necessiten un correu verificat, i aquest servidor no el pot enviar."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "S'ha canviat la contrasenya"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Contrasenya canviada. S'ha tancat la sessió a tot arreu; inicia sessió i torna a afegir les claus d'accés o d'API."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Remot, híbrid, una ciutat…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Eliminar"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Voleu eliminar «{label}»?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Voleu treure «{name}»?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Elimina {country}"
 msgid "Remove {label}…"
 msgstr "Elimina {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Treu {name}"
@@ -16175,10 +16114,6 @@ msgstr "Elimina el fitxer"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Elimina l'enllaç {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Elimina la clau d'accés"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Elimina els teus documents, candidatures i Coneixements. No es pot desfe
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Canvia el nom"
@@ -16267,10 +16201,6 @@ msgstr "Canvia el nom"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Canvia el nom de {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Canvia el nom de {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Desa l'enllaç"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Desa el missatge sense IA"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Desa el nom"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Inicia la sessió per desar"
 msgid "Sign in with {0}"
 msgstr "Inicia sessió amb {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Inicia sessió amb una clau d'accés"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Inicia sessió amb un compte existent."
@@ -18545,10 +18467,6 @@ msgstr "Inicia sessió amb un compte existent."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Inicia la sessió amb el compte que ha obert aquesta configuració."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Inicieu la sessió amb l'empremta digital, la cara o el PIN del dispositiu"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "L'enllaç obre el currículum tal com és ara. Les edicions posteriors no es comparteixen, per tant cada comentari és sobre aquesta versió."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "L'enllaç funciona durant 1 hora. Restablir tanca la sessió a tots els dispositius i elimina les claus d'accés, les claus d'API i les aplicacions connectades. Si no ho has demanat, ignora aquest correu; la teva contrasenya es manté igual."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Aquest pas d’inici de sessió ha caducat. Torna a iniciar la sessió."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Això tanca la sessió a tot arreu i elimina les teves claus d'accés, claus d'API i aplicacions connectades."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Desbloqueja l'edició"
 msgid "unnamed key"
 msgstr "clau sense nom"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Clau d'accés sense nom"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Fins llavors, la Preparació d'entrevistes té el teu pla, la teva presentació i les preguntes a fer."
@@ -22150,10 +22064,6 @@ msgstr "Verifica el teu correu de {appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Primer verifiqueu el correu a Configuració"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Verifica el teu correu per afegir una clau d'accés."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "lloc de treball no indicat"
 msgid "Works without AI or new research"
 msgstr "Funciona sense IA ni recerca nova"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Funciona sense la contrasenya, si n'has afegit una"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Val la pena preguntar"
@@ -23246,10 +23152,6 @@ msgstr "Podeu seguir editant. Canvia la sincronització quan tornis a estar conn
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Podeu conservar fins a 30 preguntes de candidatura."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Ja no pots iniciar sessió amb aquesta clau d'accés. La contrasenya i les altres claus d'accés continuen funcionant."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

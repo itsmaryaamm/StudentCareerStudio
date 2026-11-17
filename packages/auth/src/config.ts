@@ -12,7 +12,6 @@ import { apiKey } from "@better-auth/api-key";
 import { drizzleAdapter } from "@better-auth/drizzle-adapter/relations-v2";
 import { dash } from "@better-auth/infra";
 import { oauthProvider } from "@better-auth/oauth-provider";
-import { passkey } from "@better-auth/passkey";
 import { compare, hash } from "bcryptjs";
 import { APIError, betterAuth } from "better-auth";
 import {
@@ -1313,7 +1312,6 @@ const getAuthConfig = () => {
 			openAPI({ disableDefaultReference: true }),
 			jwt({ disableSettingJwtHeader: true }),
 			admin(),
-			passkey(),
 			genericOAuth({ config: authConfigs }),
 			twoFactor({
 				issuer: "Reactive Resume",

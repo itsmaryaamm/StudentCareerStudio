@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# idioma} other {# idiomas}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# bloqueado} other {# bloqueados}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# passkey} other {# passkeys}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# perfil} other {# perfiles}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 comentario, resuelto"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 passkey · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "Entre 10 y 11 se lee mejor"
@@ -2263,10 +2255,6 @@ msgstr "La opinión de un modelo, no un veredicto. Puede estar mal."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "un mes"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Un nombre te ayuda a distinguir las claves de acceso, como «Portátil del trabajo»."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Agregar una ubicación"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Añadir una oferta más reciente"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Añadir una passkey"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Continuar"
 msgid "Continue as guest"
 msgstr "Continuar como invitado"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Continuar con una passkey"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Contraste sobre blanco"
@@ -5851,10 +5830,6 @@ msgstr "No se pudo añadir ese dato. Inténtalo de nuevo."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "No se pudo añadir la candidatura. Inténtalo de nuevo."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "No se pudo agregar la clave de acceso. Intentar otra vez."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "No se pudo recordar. Vuelve a intentarlo."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "No se pudo quitar de Candidaturas. Inténtalo de nuevo."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "No se pudo eliminar la clave de acceso. Intentar otra vez."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "No se pudo cambiar el nombre del documento. Inténtalo de nuevo."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "No se pudo cambiar el nombre de la clave de acceso. Inténtalo de nuevo."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Conservar mis códigos"
 msgid "Keep on one page"
 msgstr "Mantener en una página"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Conservar passkey"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Conservar contraseña"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Malayalam"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Gestionar"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Gestionar passkeys"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Pon nombre al currículum tal como está ahora"
 msgid "Name the story"
 msgstr "Ponle nombre a la historia"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Nombra esta clave de acceso"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Pon nombre, color y orden a las etapas por las que pasan tus candidaturas."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Nombre, correo, contraseña, passkeys, tus datos"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Respaldado en parte"
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Passkeys"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Los passkeys necesitan un correo electrónico verificado, y este servidor no puede enviarlo."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Contraseña cambiada"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Contraseña cambiada. Se ha cerrado tu sesión en todas partes; inicia sesión y vuelve a añadir tus passkeys o claves de API."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Remoto, híbrido, una ciudad…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Eliminar"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "¿Eliminar «{label}»?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "¿Quitar «{name}»?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Eliminar {country}"
 msgid "Remove {label}…"
 msgstr "Eliminar {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Quitar {name}"
@@ -16175,10 +16114,6 @@ msgstr "Eliminar archivo"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Quitar el enlace {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Quitar clave de acceso"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Quita tus documentos, candidaturas y Conocimiento. Esta acción no se pu
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Rebautizar"
@@ -16267,10 +16201,6 @@ msgstr "Rebautizar"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Renombrar {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Renombrar {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Guardar enlace"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Guardar el mensaje sin IA"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Guardar nombre"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Iniciar sesión para guardar"
 msgid "Sign in with {0}"
 msgstr "Iniciar sesión con {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Iniciar sesión con una passkey"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Inicia sesión con una cuenta existente."
@@ -18545,10 +18467,6 @@ msgstr "Inicia sesión con una cuenta existente."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Inicia sesión con la cuenta que abrió estos ajustes."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Inicie sesión con su huella digital, rostro o PIN del dispositivo"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "El enlace abre el currículum tal como está ahora. Las ediciones posteriores no se comparten, así que cada comentario se refiere a esta versión."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "El enlace funciona durante 1 hora. Restablecer cierra tu sesión en todos los dispositivos y elimina tus passkeys, tus claves de API y tus aplicaciones conectadas. Si no lo pediste, ignora este correo; tu contraseña no cambia."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Este paso de inicio de sesión ha caducado. Inicia sesión de nuevo."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Esto cierra tu sesión en todas partes y quita tus passkeys, claves de API y aplicaciones conectadas."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Desbloquear edición"
 msgid "unnamed key"
 msgstr "clave sin nombre"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Clave de acceso sin nombre"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Hasta entonces, Preparación de entrevistas tiene tu plan, tu presentación y las preguntas que hacer."
@@ -22150,10 +22064,6 @@ msgstr "Verifica tu correo electrónico para {appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Primero verifica tu correo en Configuración"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Verifica tu correo para añadir una passkey."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "lugar de trabajo no indicado"
 msgid "Works without AI or new research"
 msgstr "Funciona sin IA ni nueva investigación"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Funciona sin tu contraseña, si añadiste una"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Conviene preguntar"
@@ -23246,10 +23152,6 @@ msgstr "Puedes seguir editando. Los cambios se sincronizan cuando vuelves a esta
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Puedes tener hasta 30 preguntas de candidatura."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Ya no puedes iniciar sesión con esta passkey. Tu contraseña y tus otras passkeys siguen funcionando."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

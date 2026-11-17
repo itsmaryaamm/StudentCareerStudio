@@ -1252,10 +1252,6 @@ msgstr "{count, plural, other {# ngôn ngữ}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, other {# đã khóa}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, other {# khóa truy cập}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, other {# hồ sơ mạng}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 bình luận, đã xử lý"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 khóa truy cập · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 đến 11 dễ đọc nhất"
@@ -2263,10 +2255,6 @@ msgstr "Ý kiến ​​của một người mẫu, không phải là một phá
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "một tháng"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Tên giúp bạn phân biệt các khóa truy cập, chẳng hạn như “Máy tính xách tay làm việc”."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Thêm vị trí"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Thêm lời đề nghị mới hơn"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Thêm khóa truy cập"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Tiếp tục"
 msgid "Continue as guest"
 msgstr "Tiếp tục với tư cách khách"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Tiếp tục bằng khóa truy cập"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Độ tương phản trên nền trắng"
@@ -5851,10 +5830,6 @@ msgstr "Không thể thêm dữ kiện đó. Hãy thử lại."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Không thể thêm hồ sơ ứng tuyển. Hãy thử lại."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Không thể thêm mật mã. Hãy thử lại."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Không thể ghi nhớ điều đó. Hãy thử lại."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Không thể xóa khỏi Hồ sơ ứng tuyển. Hãy thử lại."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Không thể xóa mật mã. Hãy thử lại."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Không thể đổi tên tài liệu. Hãy thử lại."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Không thể đổi tên khóa truy cập. Hãy thử lại."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Giữ mã của tôi"
 msgid "Keep on one page"
 msgstr "Giữ trên một trang"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Giữ khóa truy cập"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Giữ mật khẩu"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Tiếng Malayalam"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Quản lý"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Quản lý khóa truy cập"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Đặt tên cho sơ yếu lý lịch như hiện tại"
 msgid "Name the story"
 msgstr "Đặt tên câu chuyện"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Đặt tên cho mật mã này"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Đặt tên, màu và thứ tự cho các giai đoạn mà hồ sơ ứng tuyển của bạn trải qua."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Tên, email, mật khẩu, khóa truy cập, dữ liệu của bạn"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Có bằng chứng một phần"
 msgid "Passkey"
 msgstr "Khóa truy cập"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Khóa truy cập"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Khóa truy cập cần email đã xác minh, nhưng máy chủ này không thể gửi email."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Đã đổi mật khẩu"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Đã đổi mật khẩu. Bạn đã bị đăng xuất khỏi mọi nơi; hãy đăng nhập, rồi thêm lại khóa truy cập hoặc khóa API nếu có."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Từ xa, Kết hợp, một thành phố…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Di dời"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Xóa “{label}”?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Xóa “{name}”?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Xóa {country}"
 msgid "Remove {label}…"
 msgstr "Xóa {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Xóa {name}"
@@ -16175,10 +16114,6 @@ msgstr "Xóa tệp"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Xóa liên kết {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Xóa khóa truy cập"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Xóa tài liệu, hồ sơ ứng tuyển và Kiến thức của bạn. 
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Đổi tên"
@@ -16267,10 +16201,6 @@ msgstr "Đổi tên"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Đổi tên {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Đổi tên {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Lưu liên kết"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Lưu tin nhắn không dùng AI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Lưu tên"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Đăng nhập để lưu"
 msgid "Sign in with {0}"
 msgstr "Đăng nhập bằng {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Đăng nhập bằng khóa truy cập"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Đăng nhập bằng tài khoản hiện có."
@@ -18545,10 +18467,6 @@ msgstr "Đăng nhập bằng tài khoản hiện có."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Đăng nhập bằng tài khoản đã mở các cài đặt này."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Đăng nhập bằng vân tay, khuôn mặt hoặc mã PIN thiết bị của bạn"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Liên kết mở sơ yếu lý lịch như hiện tại. Các chỉnh sửa sau này không được chia sẻ, nên mọi bình luận đều là về phiên bản này."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Liên kết có hiệu lực trong 1 giờ. Việc đặt lại sẽ đăng xuất bạn trên mọi thiết bị và xóa khóa truy cập, khóa API và các ứng dụng đã kết nối của bạn. Nếu bạn không yêu cầu điều này, hãy bỏ qua email này; mật khẩu của bạn vẫn giữ nguyên."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Bước đăng nhập này đã hết hạn. Hãy đăng nhập lại."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Thao tác này đăng xuất bạn khỏi mọi nơi và xóa khóa truy cập, khóa API và ứng dụng đã kết nối của bạn."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Mở khóa chỉnh sửa"
 msgid "unnamed key"
 msgstr "khóa không có tên"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Khóa truy cập không có tên"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Cho đến lúc đó, Chuẩn bị phỏng vấn có kế hoạch, phần mở đầu và các câu hỏi nên hỏi của bạn."
@@ -22150,10 +22064,6 @@ msgstr "Xác minh email của bạn cho {appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Hãy xác minh email trong Cài đặt trước"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Hãy xác minh email để thêm khóa truy cập."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "không nêu nơi làm việc"
 msgid "Works without AI or new research"
 msgstr "Hoạt động không cần AI hay nghiên cứu mới"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Hoạt động không cần mật khẩu, nếu bạn đã thêm"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Nên hỏi"
@@ -23246,10 +23152,6 @@ msgstr "Bạn có thể tiếp tục chỉnh sửa. Đồng bộ hóa các thay 
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Bạn có thể giữ tối đa 30 câu hỏi ứng tuyển."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Bạn không thể đăng nhập bằng khóa truy cập này nữa. Mật khẩu và các khóa truy cập khác vẫn hoạt động."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

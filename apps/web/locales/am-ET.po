@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# ቋንቋ} other {# ቋንቋዎች}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# ተቆልፏል} other {# ተቆልፈዋል}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# ፓስኪ} other {# ፓስኪዎች}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# ፕሮፋይል} other {# ፕሮፋይሎች}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 አስተያየት፣ ተጠናቋል"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 ፓስኪ · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "ከ10 እስከ 11 በደንብ ይነበባል"
@@ -2263,10 +2255,6 @@ msgstr "የአንድ ሞዴል አስተያየት, ፍርድ አይደለም. �
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "በወር"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "ስም የይለፍ ቁልፎችን ለመለየት ይረዳዎታል፣ ለምሳሌ “የሥራ ላፕቶፕ”።"
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "ቦታ ያክሉ"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "አዲስ ቅናሽ አክል"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "ፓስኪ ያክሉ"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "ቀጥል"
 msgid "Continue as guest"
 msgstr "እንደ እንግዳ ይቀጥሉ"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "በፓስኪ ይቀጥሉ"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "በነጭ ላይ ያለ ንፅፅር"
@@ -5851,10 +5830,6 @@ msgstr "ያንን እውነታ ማከል አልተቻለም። እንደገና �
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "ማመልከቻውን ማከል አልተቻለም። እንደገና ይሞክሩ።"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "የይለፍ ቁልፉን ማከል አልተቻለም። እንደገና ይሞክሩ።"
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "ያንን ማስታወስ አልተቻለም። እንደገና ይሞ�
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "ከማመልከቻዎች ማስወገድ አልተቻለም። እንደገና ይሞክሩ።"
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "የይለፍ ቁልፉን ማስወገድ አልተቻለም። እንደገና ይሞክሩ።"
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "ሰነዱን እንደገና መሰየም አልተቻለም። እንደገና ይሞክሩ።"
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "የይለፍ ቁልፉን እንደገና መሰየም አልተቻለም። እንደገና ይሞክሩ።"
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "ኮዶቼን አቆይ"
 msgid "Keep on one page"
 msgstr "በአንድ ገጽ ላይ አቆይ"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "ፓስኪውን አቆይ"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "የይለፍ ቃሉን አቆይ"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "ማላያላምኛ"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "አስተዳድር"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "ፓስኪዎችን አስተዳድር"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "የስራ ልምድ ማስረጃውን አሁን እንዳለ ይሰይ�
 msgid "Name the story"
 msgstr "ለታሪኩ ስም ይስጡ"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "ይህን የይለፍ ቃል ይሰይሙ"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "ማመልከቻዎችዎ የሚያልፉባቸውን ደረጃዎች ይሰይሙ፣ ቀለም ይስጡ እና ቅደም ተከተል ያስይዙ።"
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "ስም፣ ኢሜል፣ የይለፍ ቃል፣ ፓስኪዎች፣ ውሂብዎ"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "በከፊል የተደገፈ"
 msgid "Passkey"
 msgstr "ፓስኪ"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "ፓስኪዎች"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "ፓስኪዎች የተረጋገጠ ኢሜይል ያስፈልጋቸዋል፤ ይህ አገልጋይ ደግሞ ኢሜይል መላክ አይችልም።"
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "የይለፍ ቃል ተቀይሯል"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "የይለፍ ቃሉ ተቀይሯል። ከሁሉም ቦታ ወጥተዋል፤ ይግቡ፣ ከዚያ ማንኛውንም ፓስኪ ወይም API ቁልፍ እንደገና ያክሉ።"
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "ርቀት, ሃይብሪድ, ከተማ…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "አስወግድ"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "“{label}”ን ይወገድ?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "“{name}” ይወገድ?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "አስወግድ {country}"
 msgid "Remove {label}…"
 msgstr "{label}ን ያስወግዱ…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "{name}ን አስወግድ"
@@ -16175,10 +16114,6 @@ msgstr "ፋይል አስወግድ"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "አገናኝ {0}ን አስወግድ"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "የይለፍ ቁልፉን አስወግድ"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "ሰነዶችዎን፣ ማመልከቻዎችዎን እና እውቀትዎ
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "እንደገና ይሰይሙ"
@@ -16267,10 +16201,6 @@ msgstr "እንደገና ይሰይሙ"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "{label}ን እንደገና ሰይም"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "{name}ን እንደገና ሰይም"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "አገናኙን አስቀምጥ"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "መልዕክቱን ያለ AI አስቀምጥ"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "ስሙን አስቀምጥ"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "ለማስቀመጥ ይግቡ"
 msgid "Sign in with {0}"
 msgstr "በ{0} ግባ"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "በፓስኪ ግባ"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "ባለ መለያ ይግቡ።"
@@ -18545,10 +18467,6 @@ msgstr "ባለ መለያ ይግቡ።"
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "እነዚህን ቅንብሮች በከፈተው መለያ ይግቡ።"
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "በእርስዎ የጣት አሻራ፣ ፊት ወይም መሣሪያ ፒን ይግቡ"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "አገናኙ የስራ ልምድ ማስረጃውን አሁን ባለበት ሁኔታ ይከፍታል። በኋላ የሚደረጉ ማስተካከያዎች አይጋሩም፤ ስለዚህ እያንዳንዱ አስተያየት ስለዚህ ስሪት ነው።"
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "አገናኙ ለ1 ሰዓት ይሠራል። ዳግም ማስጀመር ከሁሉም መሣሪያዎች ያስወጣዎታል እንዲሁም ፓስኪዎችዎን፣ API ቁልፎችዎን እና የተገናኙ መተግበሪያዎችን ያስወግዳል። ይህንን ካልጠየቁ፣ ይህንን ኢሜይል ችላ ይበሉ፤ የይለፍ ቃልዎ አይቀየርም።"
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "ይህ የመግቢያ ደረጃ አብቅቷል። እንደገና ይግቡ።"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "ይህ በሁሉም ቦታ ያስወጣዎታል እና ፓስኪዎችዎን፣ API ቁልፎችዎን እና የተገናኙ መተግበሪያዎችን ያስወግዳል።"
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "አርትዖትን ይክፈቱ"
 msgid "unnamed key"
 msgstr "ስም የሌለው ቁልፍ"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "ስም የሌለው ፓስኪ"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "እስከዚያው ድረስ፣ የቃለ መጠይቅ ዝግጅት ዕቅድዎን፣ የመክፈቻ ንግግርዎን እና የሚጠየቁ ጥያቄዎችን ይዟል።"
@@ -22150,10 +22064,6 @@ msgstr "ለ{appName} ኢሜይልዎን ያረጋግጡ"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "መጀመሪያ ኢሜልዎን በቅንብሮች ውስጥ ያረጋግጡ"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "ፓስኪ ለማከል ኢሜልዎን ያረጋግጡ።"
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "የሥራ ቦታ አልተገለጸም"
 msgid "Works without AI or new research"
 msgstr "ያለ AI ወይም አዲስ ምርምር ይሠራል"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "የይለፍ ቃል ካከሉ፣ ያለ እሱ ይሠራል"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "መጠየቅ የሚገባው"
@@ -23246,10 +23152,6 @@ msgstr "ማረምዎን መቀጠል ይችላሉ። ወደ መስመር ላይ 
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "እስከ 30 የማመልከቻ ጥያቄዎችን ማስቀመጥ ይችላሉ።"
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "ከእንግዲህ በዚህ ፓስኪ መግባት አይችሉም። የይለፍ ቃልዎ እና ሌሎች ፓስኪዎች አሁንም ይሠራሉ።"
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

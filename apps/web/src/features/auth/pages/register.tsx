@@ -361,7 +361,7 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 				</form>
 			)}
 
-			<SocialAuth signUp rule={!disableEmailAuth} friendCode={friendCode} />
+			<SocialAuth rule={!disableEmailAuth} friendCode={friendCode} />
 
 			<AuthFoot>
 				<Trans>

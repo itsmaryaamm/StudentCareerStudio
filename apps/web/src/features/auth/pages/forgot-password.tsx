@@ -182,15 +182,6 @@ function WaysBackIn({ expired }: { expired: boolean }) {
 				<Trans>Other ways back in</Trans>
 			</h2>
 			<List cap>
-				{"passkey" in providers && (
-					<ListRow
-						caret
-						leading={<Icon name="fingerprint" size={18} className="text-ink-2" />}
-						title={<Trans>Sign in with a passkey</Trans>}
-						subtitle={<Trans>Works without your password, if you added one</Trans>}
-						render={signIn}
-					/>
-				)}
 				{social.length > 0 && (
 					<ListRow
 						caret

@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# kalba} few {# kalbos} many {# kalbos} other {# ka
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {Užrakinta: #} few {Užrakinta: #} many {Užrakinta: #} other {Užrakinta: #}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# prieigos raktas} few {# prieigos raktai} many {# prieigos rakto} other {# prieigos raktų}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# profilis} few {# profiliai} many {# profilio} other {# profilių}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 komentaras, išspręstas"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 prieigos raktas · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "Geriausiai skaitoma 10–11"
@@ -2263,10 +2255,6 @@ msgstr "Modelio nuomonė, o ne nuosprendis. Tai gali būti neteisinga."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "per mėnesį"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Pavadinimas padeda atskirti prieigos raktus, pvz., „Darbo nešiojamasis kompiuteris“."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Pridėti vietą"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Pridėti naujesnį pasiūlymą"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Pridėti prieigos raktą"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Tęsti"
 msgid "Continue as guest"
 msgstr "Tęsti kaip svečias"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Tęsti su prieigos raktu"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Kontrastas ant balto fono"
@@ -5851,10 +5830,6 @@ msgstr "Nepavyko pridėti šio fakto. Bandykite dar kartą."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Nepavyko pridėti paraiškos. Bandykite dar kartą."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Nepavyko pridėti slaptažodžio. Bandykite dar kartą."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Nepavyko to įsiminti. Bandykite dar kartą."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Nepavyko pašalinti iš paraiškų. Bandykite dar kartą."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Nepavyko pašalinti prieigos rakto. Bandykite dar kartą."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Nepavyko pervardyti dokumento. Bandykite dar kartą."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Nepavyko pervardyti prieigos rakto. Bandykite dar kartą."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Palikti mano kodus"
 msgid "Keep on one page"
 msgstr "Laikykitės viename puslapyje"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Palikti prieigos raktą"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Palikti slaptažodį"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Malajalių"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Tvarkyti"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Tvarkyti prieigos raktus"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Pavadinti dabartinę gyvenimo aprašymo būseną"
 msgid "Name the story"
 msgstr "Pavadinkite istoriją"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Pavadinkite šį prieigos raktą"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Pavadinkite, nuspalvinkite ir išrikiuokite etapus, per kuriuos keliauja jūsų paraiškos."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Vardas, el. paštas, slaptažodis, prieigos raktai, jūsų duomenys"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Iš dalies pagrįsta"
 msgid "Passkey"
 msgstr "Passkey"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Passkeys"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Passkey reikalauja patvirtinto el. pašto, kurio šis serveris negali išsiųsti."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Slaptažodis pakeistas"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Slaptažodis pakeistas. Esate atjungti visur; prisijunkite ir vėl pridėkite passkey bei API raktus."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Nuotolinis, hibridinis, miestas…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Pašalinti"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Pašalinti „{label}“?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Pašalinti „{name}“?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Pašalinti {country}"
 msgid "Remove {label}…"
 msgstr "Pašalinti {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Pašalinti {name}"
@@ -16175,10 +16114,6 @@ msgstr "Pašalinti failą"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Pašalinti {0} nuorodą"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Pašalinti prieigos raktą"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Pašalina jūsų dokumentus, paraiškas ir Žinias. To atšaukti negalim
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Pervardyti"
@@ -16267,10 +16201,6 @@ msgstr "Pervardyti"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Pervardyti „{label}“"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Pervardyti {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Išsaugoti nuorodą"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Išsaugoti pranešimą be DI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Išsaugoti pavadinimą"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Prisijunkite, kad išsaugotumėte"
 msgid "Sign in with {0}"
 msgstr "Prisijungti per {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Prisijungti su prieigos raktu"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Prisijunkite su esama paskyra."
@@ -18545,10 +18467,6 @@ msgstr "Prisijunkite su esama paskyra."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Prisijunkite paskyra, kuri atidarė šiuos nustatymus."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Prisijunkite naudodami piršto atspaudą, veidą arba įrenginio PIN kodą"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Nuoroda atidaro gyvenimo aprašymą tokį, koks jis yra dabar. Vėlesniais pakeitimais nesidalijama, todėl kiekvienas komentaras yra apie šią versiją."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Nuoroda veikia 1 valandą. Atkūrimas atjungs jus kiekviename įrenginyje ir pašalins jūsų passkey, API raktus ir prijungtas programas. Jei to neprašėte, ignoruokite šį el. laišką; jūsų slaptažodis lieka nepakeistas."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Šis prisijungimo žingsnis nebegalioja. Prisijunkite iš naujo."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Taip atsijungsite visuose įrenginiuose ir bus pašalinti jūsų prieigos raktai, API raktai ir prijungtos programos."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Atrakinti redagavimą"
 msgid "unnamed key"
 msgstr "raktas be pavadinimo"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Neįvardytas passkey"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Iki tada Pasiruošimas pokalbiui turi jūsų planą, įžangą ir klausimus, kurių klausti."
@@ -22150,10 +22064,6 @@ msgstr "Patvirtinkite savo {appName} el. paštą"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Pirmiausia patvirtinkite el. paštą nustatymuose"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Patvirtinkite el. paštą, kad galėtumėte pridėti prieigos raktą."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "darbo vieta nenurodyta"
 msgid "Works without AI or new research"
 msgstr "Veikia be AI ar naujo tyrimo"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Veikia be jūsų slaptažodžio, jei jį pridėjote"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Verta paklausti"
@@ -23246,10 +23152,6 @@ msgstr "Galite toliau redaguoti. Pakeitimai sinchronizuojami, kai vėl prisijung
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Galite laikyti iki 30 paraiškos klausimų."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Su šiuo prieigos raktu nebegalite prisijungti. Jūsų slaptažodis ir kiti prieigos raktai vis dar veikia."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

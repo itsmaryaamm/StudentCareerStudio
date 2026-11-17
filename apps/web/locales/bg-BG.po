@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# език} other {# езика}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# заключен} other {# заключени}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# ключ за достъп} other {# ключа за достъп}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# профил} other {# профила}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 коментар, приключен"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 ключ за достъп · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 до 11 се чете най-добре"
@@ -2263,10 +2255,6 @@ msgstr "Мнение на модел, а не присъда. Може да е �
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "месец"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Името ви помага да различавате ключовете за достъп, например „Работен лаптоп“."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Добавяне на местоположение"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Добавете по-нова оферта"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Добавяне на ключ за достъп"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Продължи"
 msgid "Continue as guest"
 msgstr "Продължи като гост"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Продължаване с ключ за достъп"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Контраст върху бяло"
@@ -5851,10 +5830,6 @@ msgstr "Фактът не можа да бъде добавен. Опитайт�
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Кандидатурата не можа да бъде добавена. Опитайте отново."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Ключът за достъп не можа да се добави. Опитайте отново."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Това не можа да бъде запомнено. Опитайт�
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Не можа да бъде премахнато от Кандидатури. Опитайте отново."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Ключът за достъп не можа да бъде премахнат. Опитайте отново."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Документът не можа да бъде преименуван. Опитайте отново."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Ключът за достъп не можа да бъде преименуван. Опитайте отново."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Запазете моите кодове"
 msgid "Keep on one page"
 msgstr "Запазете на една страница"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Запазване на ключа за достъп"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Запазете паролата"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Малаялам"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Управление"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Управление на ключовете за достъп"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Именувайте автобиографията в сегашния 
 msgid "Name the story"
 msgstr "Наименувайте историята"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Назовете този ключ за достъп"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Задайте име, цвят и ред на етапите, през които минават кандидатурите ви."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Име, имейл, парола, ключове за достъп, вашите данни"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Частично подкрепено"
 msgid "Passkey"
 msgstr "Ключ за достъп"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Ключове за достъп"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Ключовете за достъп се нуждаят от потвърден имейл, а този сървър не може да изпраща."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Паролата е сменена"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Паролата е сменена. Излязохте навсякъде; влезте и добавете отново ключовете за достъп и API ключовете."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Дистанционно, хибридно, град…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Премахнете"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Премахване на „{label}“?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Премахване на „{name}“?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Премахни {country}"
 msgid "Remove {label}…"
 msgstr "Премахни {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Премахване на {name}"
@@ -16175,10 +16114,6 @@ msgstr "Премахване на файл"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Премахнете връзка {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Премахване на ключа за достъп"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Премахва вашите документи, кандидатури
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Преименуване"
@@ -16267,10 +16201,6 @@ msgstr "Преименуване"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Преименуване на {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Преименуване на {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Запазете връзката"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Запазете съобщението без AI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Запазване на името"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Влезте, за да запазите"
 msgid "Sign in with {0}"
 msgstr "Вход с {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Вход с ключ за достъп"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Влезте със съществуващ акаунт."
@@ -18545,10 +18467,6 @@ msgstr "Влезте със съществуващ акаунт."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Влезте с акаунта, който отвори тези настройки."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Влезте с вашия пръстов отпечатък, лице или ПИН на устройството"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Връзката отваря автобиографията такава, каквато е сега. По-късните редакции не се споделят, така че всеки коментар е за тази версия."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Връзката е активна 1 час. Възстановяването ви извежда от всяко устройство и премахва ключовете ви за достъп, API ключовете и свързаните приложения. Ако не сте поискали това, игнорирайте имейла; паролата ви остава същата."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Тази стъпка за влизане е изтекла. Влезте отново."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Това ви извежда от акаунта навсякъде и премахва ключовете ви за достъп, API ключовете и свързаните приложения."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Отключете редактирането"
 msgid "unnamed key"
 msgstr "ключ без име"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Неназован ключ за достъп"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Дотогава Подготовка за интервю има плана ви, встъпителното ви представяне и въпросите, които да зададете."
@@ -22150,10 +22064,6 @@ msgstr "Потвърдете имейла си за {appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Първо потвърдете имейла си в Настройки"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Потвърдете имейла си, за да добавите ключ за достъп."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "работното място не е посочено"
 msgid "Works without AI or new research"
 msgstr "Работи без AI и без ново проучване"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Работи без паролата ви, ако сте добавили такава"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Струва си да попитате"
@@ -23246,10 +23152,6 @@ msgstr "Можете да продължите да редактирате. Пр
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Можете да пазите до 30 въпроса от кандидатурата."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Вече не можете да влизате с този ключ за достъп. Паролата ви и другите ключове за достъп продължават да работят."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

@@ -10,7 +10,7 @@ import { Skeleton } from "@reactive-resume/ui/components/skeleton";
 import { toast } from "@reactive-resume/ui/components/toast";
 import { cn } from "@reactive-resume/utils/style";
 import { authErrorMessage } from "../error";
-import { getAuthRedirectOptions, getOAuthPasskeyOptions, getOAuthSignInOptions, isOAuthRedirect } from "../redirect";
+import { getOAuthSignInOptions, isOAuthRedirect } from "../redirect";
 import { AuthOr } from "./auth-page";
 import { GoogleSignInButton } from "./google-button";
 import { authClient } from "@/libs/auth/client";
@@ -22,24 +22,20 @@ type Providers = RouterOutput["auth"]["providers"]["list"];
 const SOCIAL = ["apple", "custom", "google", "github", "linkedin"] as const;
 type Social = (typeof SOCIAL)[number];
 
-/** The providers this server offers besides a passkey, in the order the buttons show them. */
+/** The providers this server offers besides email, in the order the buttons show them. */
 export const offeredSocial = (providers: Providers) => SOCIAL.filter((key) => key in providers);
 
 type SocialAuthProps = {
-	/** On sign-up a passkey can't help: it only signs in an account that already has one. */
-	signUp?: boolean;
 	/** The "or" rule above; off when there's no email form to separate from. */
 	rule?: boolean;
 	/** A friend's code; sent with the provider redirect so a new Google account gets the bonus. */
 	friendCode?: string;
 };
 
-export function SocialAuth({ signUp = false, rule = true, friendCode = "" }: SocialAuthProps) {
+export function SocialAuth({ rule = true, friendCode = "" }: SocialAuthProps) {
 	const { data: all = {}, isLoading } = useQuery(orpc.auth.providers.list.queryOptions());
-	const providers: Providers = signUp
-		? Object.fromEntries(Object.entries(all).filter(([key]) => key !== "passkey"))
-		: all;
-	if (!isLoading && !("passkey" in providers) && offeredSocial(providers).length === 0) return null;
+	const providers: Providers = all;
+	if (!isLoading && offeredSocial(providers).length === 0) return null;
 
 	return (
 		<div className={cn(!rule && "mt-7")}>
@@ -70,7 +66,6 @@ function SocialAuthButtons({ providers, friendCode }: SocialAuthButtonsProps) {
 			data?: unknown;
 			error: { code?: string | undefined; message?: string | undefined; status?: number | undefined } | null;
 		}>,
-		isPasskey = false,
 	) => {
 		const toastId = toast.add({ type: "loading", description: t`Signing in…` });
 		const { data, error } = await fn();
@@ -86,7 +81,6 @@ function SocialAuthButtons({ providers, friendCode }: SocialAuthButtonsProps) {
 		if (isOAuthRedirect(data)) return;
 		await queryClient.invalidateQueries({ queryKey: sessionQueryKey });
 		await router.invalidate();
-		if (isPasskey) void router.navigate(getAuthRedirectOptions(callbackURL));
 	};
 
 	const mark: Record<Social, React.ReactNode> = {
@@ -106,23 +100,6 @@ function SocialAuthButtons({ providers, friendCode }: SocialAuthButtonsProps) {
 
 	return (
 		<div className={cn(ENTER_CLASS, "grid grid-cols-2 gap-3")}>
-			{"passkey" in providers && (
-				<Button
-					variant="secondary"
-					size="lg"
-					className="col-span-2 leading-5"
-					onClick={() =>
-						runSignIn(
-							() => authClient.signIn.passkey({ autoFill: false, ...getOAuthPasskeyOptions(callbackURL) }),
-							true,
-						)
-					}
-				>
-					<Icon name="fingerprint" />
-					<Trans comment="Label for passkey sign-in button">Continue with a passkey</Trans>
-				</Button>
-			)}
-
 			{googleButton && "google" in providers && <GoogleSignInButton friendCode={friendCode} />}
 
 			{shown.map((provider) => (

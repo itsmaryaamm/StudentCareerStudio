@@ -20,7 +20,7 @@ type ProviderList = Partial<Record<AuthProvider, string>>;
 
 const providers = {
 	list: (): ProviderList => {
-		const providers: ProviderList = { credential: "Password", passkey: "Passkey" };
+		const providers: ProviderList = { credential: "Password" };
 
 		if (env.APPLE_CLIENT_ID && env.APPLE_CLIENT_SECRET) providers.apple = "Apple";
 		if (env.GOOGLE_CLIENT_ID && env.GOOGLE_CLIENT_SECRET) providers.google = "Google";

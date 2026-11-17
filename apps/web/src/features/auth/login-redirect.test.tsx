@@ -13,7 +13,6 @@ const mocks = vi.hoisted(() => ({
 	email: vi.fn(),
 	username: vi.fn(),
 	social: vi.fn(),
-	passkey: vi.fn(),
 	verifyTotp: vi.fn(),
 	verifyBackupCode: vi.fn(),
 	signup: vi.fn(),
@@ -26,7 +25,7 @@ vi.mock("@tanstack/react-query", () => ({
 	useQuery: (options: { queryKey?: unknown[] }) =>
 		options.queryKey?.[0] === "oauth-client-name"
 			? { data: "Docs example client" }
-			: { data: { google: "Google", github: "GitHub", linkedin: "LinkedIn", custom: "SSO", passkey: true } },
+			: { data: { google: "Google", github: "GitHub", linkedin: "LinkedIn", custom: "SSO" } },
 	useQueryClient: () => mocks.queryClient,
 	useMutation: () => ({ mutate: vi.fn(), isPending: false }),
 }));
@@ -49,7 +48,7 @@ vi.mock("@/libs/auth/client", () => ({
 		signUp: { email: mocks.signup },
 		oauth2: { continue: mocks.continueOAuth },
 		twoFactor: { verifyTotp: mocks.verifyTotp, verifyBackupCode: mocks.verifyBackupCode },
-		signIn: { email: mocks.email, username: mocks.username, social: mocks.social, passkey: mocks.passkey },
+		signIn: { email: mocks.email, username: mocks.username, social: mocks.social },
 	},
 }));
 vi.mock("@reactive-resume/ui/components/toast", () => ({ toast: { add: vi.fn(), close: vi.fn() } }));
@@ -68,7 +67,6 @@ beforeEach(() => {
 		mocks.email,
 		mocks.username,
 		mocks.social,
-		mocks.passkey,
 		mocks.verifyTotp,
 		mocks.verifyBackupCode,
 		mocks.signup,
@@ -162,14 +160,6 @@ describe("OAuth callback after sign-in", () => {
 	it("names the application waiting for the sign-in", () => {
 		renderLogin();
 		expect(screen.getByText("Sign in to connect Docs example client.")).toBeTruthy();
-	});
-
-	it("resumes the callback after passkey sign-in", async () => {
-		renderLogin();
-		fireEvent.click(screen.getByRole("button", { name: "Continue with a passkey" }));
-		await waitFor(() =>
-			expect(mocks.navigate).toHaveBeenCalledWith({ href: mocks.callbackURL, reloadDocument: true, replace: true }),
-		);
 	});
 
 	it("carries the callback into two-factor verification", async () => {

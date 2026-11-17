@@ -67,7 +67,7 @@ export function SettingsRoot() {
 						render={<Link to="/dashboard/settings/account" viewTransition={pushTransition} />}
 						leading={<Icon name="user" />}
 						title={<Trans>Account</Trans>}
-						subtitle={<Trans>Name, email, password, passkeys, your data</Trans>}
+						subtitle={<Trans>Name, email, password, your data</Trans>}
 						caret
 					/>
 					<ListRow

@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# ഭാഷ} other {# ഭാഷകൾ}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# ലോക്ക് ചെയ്തു} other {# ലോക്ക് ചെയ്തു}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# പാസ്‌കീ} other {# പാസ്‌കീകൾ}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# പ്രൊഫൈൽ} other {# പ്രൊഫൈലുകൾ}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 കമന്റ്, പൂർത്തിയായി"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 പാസ്‌കീ · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 മുതൽ 11 വരെ വായിക്കാൻ ഏറ്റവും നല്ലത്"
@@ -2263,10 +2255,6 @@ msgstr "ഒരു മോഡലിൻ്റെ അഭിപ്രായം, ഒ�
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "ഒരു മാസം"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "“വർക്ക് ലാപ്‌ടോപ്പ്” പോലെ, പാസ്‌കീകൾ തമ്മിൽ വേർതിരിച്ചറിയാൻ ഒരു പേര് സഹായിക്കുന്നു."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "ഒരു ലൊക്കേഷൻ ചേർക്കുക"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "ഒരു പുതിയ ഓഫർ ചേർക്കുക"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "പാസ്‌കീ ചേർക്കുക"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "തുടരുക"
 msgid "Continue as guest"
 msgstr "അതിഥിയായി തുടരുക"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "പാസ്‌കീ ഉപയോഗിച്ച് തുടരുക"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "വെള്ളയിലെ കോൺട്രാസ്റ്റ്"
@@ -5851,10 +5830,6 @@ msgstr "ആ വസ്തുത ചേർക്കാനായില്ല. വ�
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "അപേക്ഷ ചേർക്കാനായില്ല. വീണ്ടും ശ്രമിക്കുക."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "പാസ്കീ ചേർക്കാനായില്ല. വീണ്ടും ശ്രമിക്കുക."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "അത് ഓർമ്മിക്കാനായില്ല. വീണ
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "അപേക്ഷകളിൽ നിന്ന് നീക്കം ചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കുക."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "പാസ്കീ നീക്കം ചെയ്യാനായില്ല. വീണ്ടും ശ്രമിക്കുക."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "പ്രമാണത്തിന്റെ പേര് മാറ്റാനായില്ല. വീണ്ടും ശ്രമിക്കുക."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "പാസ്‌കീയുടെ പേര് മാറ്റാനായില്ല. വീണ്ടും ശ്രമിക്കുക."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "എൻ്റെ കോഡുകൾ നിലനിർത്തുക"
 msgid "Keep on one page"
 msgstr "ഒരു പേജിൽ സൂക്ഷിക്കുക"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "പാസ്‌കീ നിലനിർത്തുക"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "പാസ്‌വേഡ് നിലനിർത്തുക"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "മലയാളം"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "നിയന്ത്രിക്കുക"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "പാസ്‌കീകൾ നിയന്ത്രിക്കുക"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "റെസ്യൂമെയ്ക്ക് ഇപ്പോഴത്ത�
 msgid "Name the story"
 msgstr "കഥയ്ക്ക് പേര് നൽകുക"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "ഈ പാസ്‌കീക്ക് പേര് നൽകുക"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "നിങ്ങളുടെ അപേക്ഷകൾ കടന്നുപോകുന്ന സ്റ്റേജുകൾക്ക് പേരും നിറവും ക്രമവും നൽകുക."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "പേര്, ഇമെയിൽ, പാസ്‌വേഡ്, പാസ്‌കീകൾ, നിങ്ങളുടെ ഡാറ്റ"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "ഭാഗികമായി പിന്തുണയുണ്ട്"
 msgid "Passkey"
 msgstr "പാസ്‌കീ"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "പാസ്‌കീകൾ"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "പാസ്‌കീകൾക്ക് വെരിഫൈ ചെയ്ത ഇമെയിൽ ആവശ്യമാണ്; ഈ സെർവറിന് അത് അയയ്ക്കാനാവില്ല."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "പാസ്‌വേഡ് മാറ്റി"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "പാസ്‌വേഡ് മാറ്റി. നിങ്ങൾ എല്ലിടത്തുനിന്നും സൈൻ ഔട്ട് ചെയ്തു; സൈൻ ഇൻ ചെയ്ത്, പാസ്‌കീകളോ API കീകളോ വീണ്ടും ചേർക്കുക."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "റിമോട്ട്, ഹൈബ്രിഡ്, ഒരു നഗര�
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "നീക്കം ചെയ്യുക"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "“{label}” നീക്കം ചെയ്യണോ?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "“{name}” നീക്കം ചെയ്യണോ?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "നീക്കം ചെയ്യുക {country}"
 msgid "Remove {label}…"
 msgstr "{label} നീക്കം ചെയ്യുക…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "{name} നീക്കം ചെയ്യുക"
@@ -16175,10 +16114,6 @@ msgstr "ഫയൽ നീക്കംചെയ്യുക"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "ലിങ്ക് {0} നീക്കുക"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "പാസ്‌കീ നീക്കം ചെയ്യുക"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "നിങ്ങളുടെ പ്രമാണങ്ങളും അപ�
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "പേരുമാറ്റുക"
@@ -16267,10 +16201,6 @@ msgstr "പേരുമാറ്റുക"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "{label} പേരുമാറ്റുക"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "{name} പേരുമാറ്റുക"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "ലിങ്ക് സേവ് ചെയ്യുക"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "AI ഇല്ലാതെ സന്ദേശം സേവ് ചെയ്യുക"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "പേര് സേവ് ചെയ്യുക"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "സംരക്ഷിക്കാൻ സൈൻ ഇൻ ചെയ്യു
 msgid "Sign in with {0}"
 msgstr "{0} ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "പാസ്‌കീ ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "നിലവിലുള്ള അക്കൗണ്ട് ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക."
@@ -18545,10 +18467,6 @@ msgstr "നിലവിലുള്ള അക്കൗണ്ട് ഉപയോ�
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "ഈ ക്രമീകരണങ്ങൾ തുറന്ന അക്കൗണ്ട് ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "നിങ്ങളുടെ വിരലടയാളം, മുഖം അല്ലെങ്കിൽ ഉപകരണ പിൻ ഉപയോഗിച്ച് സൈൻ ഇൻ ചെയ്യുക"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "ലിങ്ക് റെസ്യൂമെ ഇപ്പോഴുള്ളതുപോലെ തുറക്കുന്നു. പിന്നീടുള്ള തിരുത്തലുകൾ പങ്കിടപ്പെടുന്നില്ല; അതിനാൽ ഓരോ കമൻ്റും ഈ പതിപ്പിനെക്കുറിച്ചാണ്."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "ലിങ്ക് 1 മണിക്കൂർ പ്രാവർത്തികമാണ്. റീസെറ്റ് ചെയ്യുന്നത് എല്ലാ ഉപകരണങ്ങളിലും നിങ്ങളെ സൈൻ ഔട്ട് ചെയ്യിക്കുകയും നിങ്ങളുടെ പാസ്‌കീകൾ, API കീകൾ, കണക്ട് ചെയ്ത ആപ്പുകൾ എന്നിവ നീക്കം ചെയ്യുകയും ചെയ്യും. ഇത് നിങ്ങൾ ആവശ്യപ്പെട്ടതല്ലെങ്കിൽ, ഈ ഇമെയിൽ അവഗണിക്കുക; നിങ്ങളുടെ പാസ്‌വേഡ് അതേപടി തുടരും."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "ഈ സൈൻ ഇൻ ഘട്ടം കാലഹരണപ്പെട്ടു. വീണ്ടും സൈൻ ഇൻ ചെയ്യുക."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "ഇത് എല്ലായിടത്തുനിന്നും നിങ്ങളെ സൈൻ ഔട്ട് ചെയ്യുകയും നിങ്ങളുടെ പാസ്‌കീകൾ, API കീകൾ, കണക്റ്റ് ചെയ്ത ആപ്പുകൾ എന്നിവ നീക്കം ചെയ്യുകയും ചെയ്യും."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "എഡിറ്റിംഗ് അൺലോക്ക് ചെയ്യ�
 msgid "unnamed key"
 msgstr "പേരില്ലാത്ത കീ"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "പേരില്ലാത്ത പാസ്‌കീ"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "അതുവരെ, അഭിമുഖ തയ്യാറെടുപ്പിന് നിങ്ങളുടെ പദ്ധതി, നിങ്ങളുടെ ഓപ്പണിംഗ്, ചോദിക്കാനുള്ള ചോദ്യങ്ങൾ എന്നിവയുണ്ട്."
@@ -22150,10 +22064,6 @@ msgstr "{appName}-നായി നിങ്ങളുടെ ഇമെയിൽ �
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "ആദ്യം സെറ്റിംഗ്സിൽ നിങ്ങളുടെ ഇമെയിൽ സ്ഥിരീകരിക്കുക"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "പാസ്‌കീ ചേർക്കാൻ നിങ്ങളുടെ ഇമെയിൽ സ്ഥിരീകരിക്കുക."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "ജോലിസ്ഥലം പറഞ്ഞിട്ടില്ല"
 msgid "Works without AI or new research"
 msgstr "AI അല്ലെങ്കിൽ പുതിയ ഗവേഷണം ഇല്ലാതെ പ്രവർത്തിക്കും"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "നിങ്ങളുടെ പാസ്‌വേഡ് ഇല്ലാതെ പ്രവർത്തിക്കും, നിങ്ങൾ ഒന്ന് ചേർത്തിട്ടുണ്ടെങ്കിൽ"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "ചോദിക്കേണ്ടത്"
@@ -23246,10 +23152,6 @@ msgstr "നിങ്ങൾക്ക് എഡിറ്റിംഗ് തുട�
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "നിങ്ങൾക്ക് പരമാവധി 30 അപേക്ഷാ ചോദ്യങ്ങൾ സൂക്ഷിക്കാം."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "ഈ പാസ്‌കീ ഉപയോഗിച്ച് ഇനി സൈൻ ഇൻ ചെയ്യാനാവില്ല. നിങ്ങളുടെ പാസ്‌വേഡും മറ്റ് പാസ്‌കീകളും പ്രവർത്തിക്കും."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# שפה} other {# שפות}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# נעול} other {# נעולים}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# מפתח גישה} other {# מפתחות גישה}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# פרופיל} other {# פרופילים}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "הערה אחת, טופלה"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "מפתח גישה אחד · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 עד 11 הכי קריא"
@@ -2263,10 +2255,6 @@ msgstr "דעה של דוגמנית, לא פסק דין. זה יכול להיות
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "לחודש"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "שם עוזר לך להבדיל בין מפתחות גישה, כמו \"מחשב נייד לעבודה\"."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "הוסף מיקום"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "הוסף הצעה חדשה יותר"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "להוסיף מפתח גישה"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "המשך"
 msgid "Continue as guest"
 msgstr "המשך כאורח"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "להמשיך עם מפתח גישה"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "ניגודיות על לבן"
@@ -5851,10 +5830,6 @@ msgstr "לא ניתן היה להוסיף את העובדה. נסה שוב."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "לא ניתן היה להוסיף את המועמדות. נסה שוב."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "לא ניתן להוסיף את המפתח. נסה שוב."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "לא ניתן היה לזכור את זה. נסה שוב."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "לא ניתן היה להסיר מהמועמדויות. נסה שוב."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "לא ניתן היה להסיר את המפתח. נסה שוב."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "לא ניתן היה לשנות את שם המסמך. נסה שוב."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "לא ניתן היה לשנות את שם מפתח הגישה. נסה שוב."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "השאר את הקודים שלי"
 msgid "Keep on one page"
 msgstr "שמור על עמוד אחד"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "להשאיר את מפתח הגישה"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "השאר את הסיסמה"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "מליאלאם"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "ניהול"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "לנהל מפתחות גישה"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "לתת שם לקורות החיים כפי שהם עכשיו"
 msgid "Name the story"
 msgstr "תן שם לסיפור"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "תן שם למפתח הסיסמה הזה"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "תנו שם, צבע וסדר לשלבים שהמועמדויות שלכם עוברות."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "שם, דוא״ל, סיסמה, מפתחות גישה, הנתונים שלכם"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "נתמך חלקית"
 msgid "Passkey"
 msgstr "מפתח גישה"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "מפתחות גישה"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "מפתחות גישה דורשים דוא״ל מאומת, והשרת הזה אינו יכול לשלוח דוא״ל."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "הסיסמה שונתה"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "הסיסמה שונתה. נותקת מכל המכשירים; היכנס, ואז הוסף שוב מפתחות גישה או מפתחות API."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "מרחוק, היברידי, עיר…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "לְהַסִיר"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "להסיר את „{label}”?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "להסיר את \"{name}\"?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "הסר {country}"
 msgid "Remove {label}…"
 msgstr "הסרת {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "להסיר את {name}"
@@ -16175,10 +16114,6 @@ msgstr "הסר קובץ"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "הסר קישור {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "הסרת מפתח גישה"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "מסיר את המסמכים, המועמדויות ומאגר הידע �
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "שנה שם"
@@ -16267,10 +16201,6 @@ msgstr "שנה שם"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "לשנות את השם של {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "לשנות את השם של {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "שמור קישור"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "שמור הודעה בלי AI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "שמירת השם"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "יש להיכנס כדי לשמור"
 msgid "Sign in with {0}"
 msgstr "כניסה עם {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "כניסה עם מפתח גישה"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "היכנסו עם חשבון קיים."
@@ -18545,10 +18467,6 @@ msgstr "היכנסו עם חשבון קיים."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "יש להיכנס באמצעות החשבון שפתח את ההגדרות האלה."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "היכנס באמצעות טביעת האצבע, הפנים או ה-PIN של המכשיר"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "הקישור פותח את קורות החיים כפי שהם עכשיו. עריכות מאוחרות יותר אינן משותפות, כך שכל תגובה מתייחסת לגרסה הזו."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "הקישור פעיל למשך שעה אחת. האיפוס מנתק אותך מכל מכשיר ומסיר את מפתחות הגישה, מפתחות ה-API והאפליקציות המחוברות שלך. אם לא ביקשת זאת, התעלם מהודעה זו; הסיסמה שלך תישאר כפי שהיא."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "תוקף שלב הכניסה פג. יש להיכנס מחדש."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "פעולה זו מנתקת אתכם מכל המכשירים ומסירה את מפתחות הגישה, מפתחות ה־API והאפליקציות המחוברות שלכם."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "בטל נעילת עריכה"
 msgid "unnamed key"
 msgstr "מפתח ללא שם"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "מפתח גישה ללא שם"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "עד אז, ב„הכנה לראיון” תמצא את התוכנית שלך, את הפתיחה ואת השאלות שכדאי לשאול."
@@ -22150,10 +22064,6 @@ msgstr "אמת את הדוא״ל שלך ב-{appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "אמת קודם את כתובת הדוא״ל שלך בהגדרות"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "אמתו את הדוא״ל שלכם כדי להוסיף מפתח גישה."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "מקום העבודה לא צוין"
 msgid "Works without AI or new research"
 msgstr "עובד בלי AI ובלי מחקר חדש"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "עובד בלי הסיסמה שלכם, אם הוספתם אחת"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "שווה לשאול"
@@ -23246,10 +23152,6 @@ msgstr "אתה יכול להמשיך לערוך. השינויים מסתנכרנ
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "אפשר לשמור עד 30 שאלות מועמדות."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "כבר אי אפשר להיכנס עם מפתח הגישה הזה. הסיסמה ומפתחות הגישה האחרים שלכם עדיין עובדים."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

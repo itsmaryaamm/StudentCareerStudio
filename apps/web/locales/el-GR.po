@@ -1252,10 +1252,6 @@ msgstr "{count, plural, one {# γλώσσα} other {# γλώσσες}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, one {# κλειδωμένο} other {# κλειδωμένα}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, one {# κλειδί πρόσβασης} other {# κλειδιά πρόσβασης}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, one {# προφίλ} other {# προφίλ}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 σχόλιο, ολοκληρωμένο"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 κλειδί πρόσβασης · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "Το 10 έως 11 διαβάζεται καλύτερα"
@@ -2263,10 +2255,6 @@ msgstr "Η γνώμη ενός μοντέλου, όχι μια ετυμηγορ�
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "ένας μήνας"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Ένα όνομα σας βοηθά να ξεχωρίζετε τα κλειδιά πρόσβασης, π.χ. «Φορητός εργασίας»."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Προσθήκη τοποθεσίας"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Προσθήκη νεότερης προσφοράς"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Προσθήκη κλειδιού πρόσβασης"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Συνέχεια"
 msgid "Continue as guest"
 msgstr "Συνέχεια ως επισκέπτης"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Συνέχεια με κλειδί πρόσβασης"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Αντίθεση σε λευκό"
@@ -5851,10 +5830,6 @@ msgstr "Δεν ήταν δυνατή η προσθήκη του γεγονότο
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Δεν ήταν δυνατή η προσθήκη της αίτησης. Προσπαθήστε ξανά."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Δεν ήταν δυνατή η προσθήκη του κλειδιού πρόσβασης. Προσπαθήστε ξανά."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Δεν ήταν δυνατή η απομνημόνευση. Δοκιμά
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Δεν ήταν δυνατή η αφαίρεση από τις Αιτήσεις. Προσπαθήστε ξανά."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Δεν ήταν δυνατή η αφαίρεση του κλειδιού πρόσβασης. Προσπαθήστε ξανά."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Δεν ήταν δυνατή η μετονομασία του εγγράφου. Προσπαθήστε ξανά."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Δεν ήταν δυνατή η μετονομασία του κλειδιού πρόσβασης. Προσπαθήστε ξανά."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Διατήρηση των κωδικών μου"
 msgid "Keep on one page"
 msgstr "Διατήρηση σε μία σελίδα"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Διατήρηση κλειδιού πρόσβασης"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Διατήρηση κωδικού πρόσβασης"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Μαλαγιαλάμ"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Διαχείριση"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Διαχείριση κλειδιών πρόσβασης"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Ονομάστε το βιογραφικό όπως είναι τώρα"
 msgid "Name the story"
 msgstr "Δώστε όνομα στην ιστορία"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Ονομάστε αυτό το κλειδί πρόσβασης"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Ονομάστε, χρωματίστε και ταξινομήστε τα στάδια από τα οποία περνούν οι αιτήσεις σας."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Όνομα, email, κωδικός, κλειδιά πρόσβασης, τα δεδομένα σας"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Μερικώς τεκμηριωμένο"
 msgid "Passkey"
 msgstr "Κλειδί πρόσβασης"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Passkeys"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Τα κλειδιά πρόσβασης χρειάζονται επαληθευμένο email, το οποίο αυτός ο διακομιστής δεν μπορεί να στείλει."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Ο κωδικός πρόσβασης άλλαξε"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Ο κωδικός πρόσβασης άλλαξε. Έχετε αποσυνδεθεί παντού· συνδεθείτε και προσθέστε ξανά τυχόν κλειδιά πρόσβασης ή κλειδιά API."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Απομακρυσμένα, Υβριδικά, μια πόλη…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Αφαιρώ"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Κατάργηση του «{label}»;"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Κατάργηση του «{name}»;"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Κατάργηση {country}"
 msgid "Remove {label}…"
 msgstr "Κατάργηση του {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Αφαίρεση {name}"
@@ -16175,10 +16114,6 @@ msgstr "Αφαίρεση αρχείου"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Αφαίρεση συνδέσμου {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Κατάργηση κλειδιού πρόσβασης"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Αφαιρεί τα έγγραφα, τις αιτήσεις και τη 
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Μετονομάζω"
@@ -16267,10 +16201,6 @@ msgstr "Μετονομάζω"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Μετονομασία {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Μετονομασία {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Αποθήκευση συνδέσμου"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Αποθήκευση μηνύματος χωρίς AI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Αποθήκευση ονόματος"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Συνδεθείτε για αποθήκευση"
 msgid "Sign in with {0}"
 msgstr "Σύνδεση με {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Σύνδεση με κλειδί πρόσβασης"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Συνδεθείτε με υπάρχοντα λογαριασμό."
@@ -18545,10 +18467,6 @@ msgstr "Συνδεθείτε με υπάρχοντα λογαριασμό."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Συνδεθείτε με τον λογαριασμό που άνοιξε αυτές τις ρυθμίσεις."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Συνδεθείτε με το δακτυλικό σας αποτύπωμα, το πρόσωπο ή το PIN της συσκευής σας"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Ο σύνδεσμος ανοίγει το βιογραφικό όπως είναι τώρα. Οι μεταγενέστερες επεξεργασίες δεν κοινοποιούνται, οπότε κάθε σχόλιο αφορά αυτή την έκδοση."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Ο σύνδεσμος ισχύει για 1 ώρα. Η επαναφορά σας αποσυνδέει από κάθε συσκευή και αφαιρεί τα κλειδιά πρόσβασής σας, τα κλειδιά API και τις συνδεδεμένες εφαρμογές. Αν δεν το ζητήσατε εσείς, αγνοήστε αυτό το email· ο κωδικός πρόσβασής σας παραμένει ο ίδιος."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Αυτό το βήμα σύνδεσης έληξε. Συνδεθείτε ξανά."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Αυτό σας αποσυνδέει παντού και αφαιρεί τα κλειδιά πρόσβασης, τα κλειδιά API και τις συνδεδεμένες εφαρμογές σας."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Ξεκλείδωμα επεξεργασίας"
 msgid "unnamed key"
 msgstr "κλειδί χωρίς όνομα"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Ανώνυμο κλειδί πρόσβασης"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Μέχρι τότε, η προετοιμασία συνέντευξης έχει το πλάνο σας, τον εισαγωγικό σας λόγο και τις ερωτήσεις που θα κάνετε."
@@ -22150,10 +22064,6 @@ msgstr "Επαληθεύστε το email σας για το {appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Επαληθεύστε πρώτα το email σας στις Ρυθμίσεις"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Επαληθεύστε το email σας για να προσθέσετε κλειδί πρόσβασης."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "ο χώρος εργασίας δεν αναφέρεται"
 msgid "Works without AI or new research"
 msgstr "Λειτουργεί χωρίς AI ή νέα έρευνα"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Λειτουργεί χωρίς τον κωδικό σας, αν έχετε προσθέσει"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Αξίζει να ρωτήσετε"
@@ -23246,10 +23152,6 @@ msgstr "Μπορείτε να συνεχίσετε να επεξεργάζεστ
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Μπορείτε να κρατήσετε έως 30 ερωτήσεις αίτησης."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Δεν μπορείτε πλέον να συνδεθείτε με αυτό το κλειδί πρόσβασης. Ο κωδικός σας και τα άλλα κλειδιά πρόσβασης εξακολουθούν να λειτουργούν."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

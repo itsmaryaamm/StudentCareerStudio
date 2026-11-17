@@ -1252,10 +1252,6 @@ msgstr "{count, plural, zero {# valodas} one {# valoda} other {# valodas}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, zero {# bloķēti} one {# bloķēts} other {# bloķēti}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, zero {# piekļuves atslēgas} one {# piekļuves atslēga} other {# piekļuves atslēgas}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, zero {# profili} one {# profils} other {# profili}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 komentārs, izskatīts"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "1 piekļuves atslēga · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "Vislabāk lasāms 10 līdz 11"
@@ -2263,10 +2255,6 @@ msgstr "Modeļa viedoklis, nevis spriedums. Tas var būt nepareizi."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "mēnesī"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "Nosaukums palīdz atšķirt piekļuves atslēgas, piemēram, “Darba klēpjdators”."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "Pievienojiet atrašanās vietu"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "Pievienot jaunāku piedāvājumu"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "Pievienot piekļuves atslēgu"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "Turpināt"
 msgid "Continue as guest"
 msgstr "Turpināt kā viesim"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "Turpināt ar piekļuves atslēgu"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "Kontrasts uz balta"
@@ -5851,10 +5830,6 @@ msgstr "Nevarēja pievienot šo faktu. Mēģiniet vēlreiz."
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "Nevarēja pievienot pieteikumu. Mēģiniet vēlreiz."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "Nevarēja pievienot ieejas atslēgu. Mēģiniet vēlreiz."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "Nevarēja to atcerēties. Mēģiniet vēlreiz."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "Nevarēja noņemt no pieteikumiem. Mēģiniet vēlreiz."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "Nevarēja noņemt ieejas atslēgu. Mēģiniet vēlreiz."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "Nevarēja pārdēvēt dokumentu. Mēģiniet vēlreiz."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "Nevarēja pārdēvēt piekļuves atslēgu. Mēģiniet vēlreiz."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "Paturēt manus kodus"
 msgid "Keep on one page"
 msgstr "Palieciet vienā lapā"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "Paturēt piekļuves atslēgu"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "Paturēt paroli"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "Malajalu"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "Pārvaldīt"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "Pārvaldīt piekļuves atslēgas"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "Nosauciet CV tādu, kāds tas ir tagad"
 msgid "Name the story"
 msgstr "Nosauciet stāstu"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "Nosauciet šo ieejas atslēgu"
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "Nosauciet, iekrāsojiet un sakārtojiet posmus, caur kuriem iet jūsu pieteikumi."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "Vārds, e-pasts, parole, piekļuves atslēgas, jūsu dati"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "Daļēji pamatots"
 msgid "Passkey"
 msgstr "Piekļuves atslēga"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "Piekļuves atslēgas"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "Piekļuves atslēgām nepieciešams apstiprināts e-pasts, ko šis serveris nevar nosūtīt."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "Parole nomainīta"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "Parole mainīta. Esat izrakstījies visur; piesakieties un pēc tam atkal pievienojiet piekļuves atslēgas vai API atslēgas."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "Attālināti, hibrīdi, pilsēta…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "Noņemt"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "Noņemt “{label}”?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "Vai noņemt “{name}”?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "Noņemt {country}"
 msgid "Remove {label}…"
 msgstr "Noņemt {label}…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "Noņemt {name}"
@@ -16175,10 +16114,6 @@ msgstr "Noņemt failu"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "Noņemt saiti {0}"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "Noņemt piekļuves atslēgu"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "Noņem jūsu dokumentus, pieteikumus un Zināšanas. To nevar atsaukt."
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "Pārdēvēt"
@@ -16267,10 +16201,6 @@ msgstr "Pārdēvēt"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "Pārdēvēt {label}"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "Pārdēvēt {name}"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "Saglabāt saiti"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "Saglabāt ziņu bez AI"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "Saglabāt nosaukumu"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "Pierakstieties, lai saglabātu"
 msgid "Sign in with {0}"
 msgstr "Pieteikties ar {0}"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "Pieteikties ar piekļuves atslēgu"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "Piesakieties ar esošu kontu."
@@ -18545,10 +18467,6 @@ msgstr "Piesakieties ar esošu kontu."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "Pierakstieties ar kontu, kas atvēra šos iestatījumus."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "Pierakstieties ar pirksta nospiedumu, seju vai ierīces PIN"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "Saite atver CV tādu, kāds tas ir tagad. Vēlākie labojumi netiek kopīgoti, tāpēc katrs komentārs attiecas uz šo versiju."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "Saite ir derīga 1 stundu. Atiestatīšana izraksta jūs no visām ierīcēm un noņem jūsu piekļuves atslēgas, API atslēgas un savienotās lietotnes. Ja jūs to neprasījāt, ignorējiet šo e-pastu; jūsu parole nemainās."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "Šī pierakstīšanās darbība ir beigusies. Pierakstieties vēlreiz."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "Tas jūs atsaka visās ierīcēs un noņem jūsu piekļuves atslēgas, API atslēgas un pievienotās lietotnes."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "Atbloķējiet rediģēšanu"
 msgid "unnamed key"
 msgstr "nenosaukta atslēga"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "Nenosaukta piekļuves atslēga"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "Līdz tam Sagatavošanās intervijai satur jūsu plānu, jūsu iesākumu un jautājumus, ko uzdot."
@@ -22150,10 +22064,6 @@ msgstr "Apstipriniet savu e-pastu {appName}"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "Vispirms verificējiet savu e-pastu iestatījumos"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "Verificējiet savu e-pastu, lai pievienotu piekļuves atslēgu."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "darba vieta nav norādīta"
 msgid "Works without AI or new research"
 msgstr "Darbojas bez AI vai jaunas izpētes"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "Darbojas bez paroles, ja tādu pievienojāt"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "Vērts pajautāt"
@@ -23246,10 +23152,6 @@ msgstr "Varat turpināt rediģēt. Izmaiņas tiek sinhronizētas, kad atkal esat
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "Varat saglabāt līdz 30 pieteikuma jautājumiem."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "Ar šo piekļuves atslēgu vairs nevar pieteikties. Jūsu parole un citas piekļuves atslēgas joprojām darbojas."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."

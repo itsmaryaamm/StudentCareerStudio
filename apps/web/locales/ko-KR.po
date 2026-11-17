@@ -1252,10 +1252,6 @@ msgstr "{count, plural, other {언어 #개}}"
 msgid "{count, plural, one {# locked} other {# locked}}"
 msgstr "{count, plural, other {#개 잠금}}"
 
-#: src/features/settings/account/security.tsx
-msgid "{count, plural, one {# passkey} other {# passkeys}}"
-msgstr "{count, plural, other {패스키 #개}}"
-
 #: src/features/resume/editor/write/outline.tsx
 msgid "{count, plural, one {# profile} other {# profiles}}"
 msgstr "{count, plural, other {프로필 #개}}"
@@ -2003,10 +1999,6 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "댓글 1개, 처리됨"
 
-#: src/features/settings/account/security.tsx
-msgid "1 passkey · {first}"
-msgstr "패스키 1개 · {first}"
-
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10~11이 가장 읽기 좋습니다"
@@ -2263,10 +2255,6 @@ msgstr "평결이 아닌 모델의 의견입니다. 틀릴 수도 있습니다."
 #: src/features/career/offer-entry.tsx
 msgid "a month"
 msgstr "(월간)"
-
-#: src/features/settings/account/security.tsx
-msgid "A name helps you tell passkeys apart, like “Work laptop”."
-msgstr "“업무용 노트북”처럼 이름을 붙이면 패스키를 구분하기 쉽습니다."
 
 #: src/features/settings/ai/page.tsx
 msgid "A new fact is saved to Knowledge only after you agree"
@@ -2603,10 +2591,6 @@ msgstr "위치 추가"
 #: src/features/career/offer-entry.tsx
 msgid "Add a newer offer"
 msgstr "더 최근 오퍼 추가"
-
-#: src/features/settings/account/security.tsx
-msgid "Add a passkey"
-msgstr "패스키 추가"
 
 #: src/dialogs/auth/set-password.tsx
 msgid "Add a password as another way to sign in. Your other sign-in methods and devices stay as they are."
@@ -5639,11 +5623,6 @@ msgstr "계속"
 msgid "Continue as guest"
 msgstr "게스트로 계속하기"
 
-#. Label for passkey sign-in button
-#: src/features/auth/components/social-auth.tsx
-msgid "Continue with a passkey"
-msgstr "패스키로 계속"
-
 #: src/features/resume/editor/design/style-groups.tsx
 msgid "Contrast on white"
 msgstr "흰 바탕 대비"
@@ -5851,10 +5830,6 @@ msgstr "해당 사실을 추가할 수 없습니다. 다시 시도해 보세요.
 #: src/features/applications/components/application-form-sheet.tsx
 msgid "Couldn't add the application. Try again."
 msgstr "지원을 추가할 수 없습니다. 다시 시도해 보세요."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't add the passkey. Try again."
-msgstr "암호키를 추가할 수 없습니다. 다시 시도해 보세요."
 
 #: src/features/assistant/conversation.tsx
 #: src/features/career/coach-thread.tsx
@@ -6306,17 +6281,9 @@ msgstr "기억하지 못했습니다. 다시 시도하세요."
 msgid "Couldn't remove it from Applications. Try again."
 msgstr "지원 목록에서 제거할 수 없습니다. 다시 시도해 보세요."
 
-#: src/features/settings/account/security.tsx
-msgid "Couldn't remove the passkey. Try again."
-msgstr "암호키를 제거할 수 없습니다. 다시 시도해 보세요."
-
 #: src/features/documents/inline-name-input.tsx
 msgid "Couldn't rename the document. Try again."
 msgstr "서류 이름을 변경할 수 없습니다. 다시 시도해 보세요."
-
-#: src/features/settings/account/security.tsx
-msgid "Couldn't rename the passkey. Try again."
-msgstr "패스키 이름을 변경할 수 없습니다. 다시 시도해 보세요."
 
 #: src/features/career/coach.tsx
 msgid "Couldn't rename this conversation. Try again."
@@ -10679,10 +10646,6 @@ msgstr "내 코드 유지"
 msgid "Keep on one page"
 msgstr "한 페이지에 계속"
 
-#: src/features/settings/account/security.tsx
-msgid "Keep passkey"
-msgstr "패스키 유지"
-
 #: src/features/resume/share/share-panel.tsx
 msgid "Keep password"
 msgstr "비밀번호 유지"
@@ -11798,14 +11761,9 @@ msgid "Malayalam"
 msgstr "말라얄람어"
 
 #: src/features/career/today.tsx
-#: src/features/settings/account/security.tsx
 #: src/features/settings/account/sessions.tsx
 msgid "Manage"
 msgstr "관리"
-
-#: src/features/settings/account/security.tsx
-msgid "Manage passkeys"
-msgstr "패스키 관리"
 
 #: src/features/settings/account/sessions.tsx
 msgid "Manage sessions"
@@ -12434,17 +12392,13 @@ msgstr "현재 상태의 이력서에 이름 붙이기"
 msgid "Name the story"
 msgstr "스토리 제목 입력"
 
-#: src/features/settings/account/security.tsx
-msgid "Name this passkey"
-msgstr "이 패스키의 이름을 지정하세요."
-
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Name, color and order the stages your applications move through."
 msgstr "지원이 거쳐 가는 단계의 이름, 색상, 순서를 정하세요."
 
 #: src/features/settings/root.tsx
-msgid "Name, email, password, passkeys, your data"
-msgstr "이름, 이메일, 비밀번호, 패스키, 내 데이터"
+msgid "Name, email, password, your data"
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Name, email, phone and location are found, and links are full addresses."
@@ -14454,15 +14408,6 @@ msgstr "일부 뒷받침됨"
 msgid "Passkey"
 msgstr "패스키"
 
-#: src/features/command-palette/pages/navigation.tsx
-#: src/features/settings/account/security.tsx
-msgid "Passkeys"
-msgstr "패스키"
-
-#: src/features/settings/account/security.tsx
-msgid "Passkeys need a verified email, which this server can't send."
-msgstr "패스키를 사용하려면 인증된 이메일이 필요하지만, 이 서버는 이메일을 보낼 수 없습니다."
-
 #. Authentication provider display name in account settings
 #. Label for password input on login form
 #. Label for password input on registration form
@@ -14485,8 +14430,8 @@ msgid "Password changed"
 msgstr "비밀번호가 변경되었습니다"
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "Password changed. You're signed out everywhere; sign in, then add any passkeys or API keys again."
-msgstr "비밀번호가 변경되었습니다. 모든 기기에서 로그아웃되었습니다. 로그인한 후 패스키나 API 키를 다시 추가하세요."
+msgid "Password changed. You're signed out everywhere; sign in, then add any API keys again."
+msgstr ""
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Password removed"
@@ -16110,17 +16055,12 @@ msgstr "원격, 하이브리드, 도시…"
 
 #: src/features/applications/components/detail/contacts.tsx
 #: src/features/resume/share/custom-domain-field.tsx
-#: src/features/settings/account/security.tsx
 msgid "Remove"
 msgstr "제거하다"
 
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Remove “{label}”?"
 msgstr "“{label}”을 삭제할까요?"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove “{name}”?"
-msgstr "“{name}”을(를) 제거할까요?"
 
 #. placeholder {0}: attachment.filename
 #: src/features/assistant/conversation.tsx
@@ -16142,7 +16082,6 @@ msgstr "{country} 제거"
 msgid "Remove {label}…"
 msgstr "{label} 삭제…"
 
-#: src/features/settings/account/security.tsx
 #: src/features/settings/profile.tsx
 msgid "Remove {name}"
 msgstr "{name} 제거"
@@ -16175,10 +16114,6 @@ msgstr "파일 제거"
 #: src/features/settings/profile.tsx
 msgid "Remove link {0}"
 msgstr "링크 {0} 삭제"
-
-#: src/features/settings/account/security.tsx
-msgid "Remove passkey"
-msgstr "패스키 제거"
 
 #: src/features/resume/share/share-panel.tsx
 msgid "Remove password"
@@ -16259,7 +16194,6 @@ msgstr "서류, 지원 내역, 지식을 제거합니다. 이 작업은 되돌�
 #: src/features/documents/document-actions.tsx
 #: src/features/resume/editor/write/section-view.tsx
 #: src/features/resume/share/history-tab.tsx
-#: src/features/settings/account/security.tsx
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename"
 msgstr "이름 바꾸기"
@@ -16267,10 +16201,6 @@ msgstr "이름 바꾸기"
 #: src/features/applications/components/manage-lanes-sheet.tsx
 msgid "Rename {label}"
 msgstr "{label} 이름 변경"
-
-#: src/features/settings/account/security.tsx
-msgid "Rename {name}"
-msgstr "{name} 이름 변경"
 
 #: src/routes/builder/letter/-components/letter-bar.tsx
 msgid "Rename letter"
@@ -17218,10 +17148,6 @@ msgstr "링크 저장"
 #: src/features/career/workspace/messages.tsx
 msgid "Save message without AI"
 msgstr "AI 없이 메시지 저장"
-
-#: src/features/settings/account/security.tsx
-msgid "Save name"
-msgstr "이름 저장"
 
 #: src/features/career/offer-entry.tsx
 msgid "Save offer"
@@ -18534,10 +18460,6 @@ msgstr "저장하려면 로그인"
 msgid "Sign in with {0}"
 msgstr "{0}(으)로 로그인"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Sign in with a passkey"
-msgstr "패스키로 로그인"
-
 #: src/features/auth/pages/error.tsx
 msgid "Sign in with an existing account."
 msgstr "기존 계정으로 로그인하세요."
@@ -18545,10 +18467,6 @@ msgstr "기존 계정으로 로그인하세요."
 #: src/routes/dashboard/settings/route.tsx
 msgid "Sign in with the account that opened these settings."
 msgstr "이 설정을 연 계정으로 로그인하세요."
-
-#: src/features/settings/account/security.tsx
-msgid "Sign in with your fingerprint, face or device PIN"
-msgstr "지문, 얼굴 또는 장치 PIN으로 로그인"
 
 #: src/features/command-palette/pages/navigation.tsx
 #: src/features/settings/account/page.tsx
@@ -20118,8 +20036,8 @@ msgid "The link opens the resume as it is now. Later edits aren't shared, so eve
 msgstr "링크는 현재 상태의 이력서를 엽니다. 이후 편집은 공유되지 않으므로 모든 댓글은 이 버전에 대한 것입니다."
 
 #: src/features/auth/email-text.ts
-msgid "The link works for 1 hour. Resetting signs you out on every device and removes your passkeys, API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
-msgstr "링크는 1시간 동안 유효합니다. 재설정하면 모든 기기에서 로그아웃되고 패스키, API 키, 연결된 앱이 삭제됩니다. 요청하지 않았다면 이 이메일을 무시하세요. 비밀번호는 그대로 유지됩니다."
+msgid "The link works for 1 hour. Resetting signs you out on every device and removes your API keys and connected apps. If you didn't ask for this, ignore this email; your password stays the same."
+msgstr ""
 
 #: src/features/career/workspace/messages.tsx
 msgid "the linked cover letter"
@@ -20915,8 +20833,8 @@ msgid "This sign-in step expired. Sign in again."
 msgstr "이 로그인 단계가 만료되었습니다. 다시 로그인하세요."
 
 #: src/features/auth/pages/reset-password.tsx
-msgid "This signs you out everywhere and removes your passkeys, API keys and connected apps."
-msgstr "모든 곳에서 로그아웃되고 패스키, API 키, 연결된 앱이 제거됩니다."
+msgid "This signs you out everywhere and removes your API keys and connected apps."
+msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "This story has no facts in use here. Link a fact to it in Knowledge, or switch its facts on, to practice it."
@@ -21640,10 +21558,6 @@ msgstr "편집 잠금 해제"
 msgid "unnamed key"
 msgstr "이름 없는 키"
 
-#: src/features/settings/account/security.tsx
-msgid "Unnamed passkey"
-msgstr "이름 없는 패스키"
-
 #: src/features/career/workspace/debrief.tsx
 msgid "Until then, Interview prep has your plan, your opening and the questions to ask."
 msgstr "그때까지 면접 준비에서 계획, 첫인사, 물어볼 질문을 확인할 수 있습니다."
@@ -22150,10 +22064,6 @@ msgstr "{appName} 이메일을 인증하세요"
 #: src/features/career/schedule-sheet.tsx
 msgid "Verify your email in Settings first"
 msgstr "먼저 설정에서 이메일을 인증하세요"
-
-#: src/features/settings/account/security.tsx
-msgid "Verify your email to add a passkey."
-msgstr "패스키를 추가하려면 이메일을 인증하세요."
 
 #: src/features/auth/pages/verify-2fa.tsx
 msgid "Verifying backup code…"
@@ -22991,10 +22901,6 @@ msgstr "근무지 미기재"
 msgid "Works without AI or new research"
 msgstr "AI나 새 리서치 없이 작동"
 
-#: src/features/auth/pages/forgot-password.tsx
-msgid "Works without your password, if you added one"
-msgstr "비밀번호를 추가했더라도 비밀번호 없이 작동합니다"
-
 #: src/features/career/workspace/fit.tsx
 msgid "Worth asking"
 msgstr "물어볼 만한 것"
@@ -23246,10 +23152,6 @@ msgstr "계속 편집할 수 있습니다. 다시 온라인 상태가 되면 변
 #: src/features/career/workspace/apply.tsx
 msgid "You can keep up to 30 application questions."
 msgstr "지원서 질문은 최대 30개까지 보관할 수 있습니다."
-
-#: src/features/settings/account/security.tsx
-msgid "You can no longer sign in with this passkey. Your password and other passkeys still work."
-msgstr "이 패스키로 더 이상 로그인할 수 없습니다. 비밀번호와 다른 패스키는 계속 사용할 수 있습니다."
 
 #: src/features/auth/pages/error.tsx
 msgid "You canceled the sign-in before it finished."
