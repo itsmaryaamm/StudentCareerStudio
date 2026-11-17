@@ -166,7 +166,7 @@ function htmlResponse(html: string, headers: Record<string, string>, template = 
 // description, and the social cards reuse them.
 const ROOT_TITLE = "Tell your story once | Student Career Studio";
 const ROOT_DESCRIPTION =
-	"Tell the career coach what you have done, check each fact, then use it for your résumé, LinkedIn and AI career missions. Free during the beta.";
+	"Tell the coach your story once. Get your résumé, LinkedIn and career missions from it. Free beta for students.";
 const ATS_CHECKER_TITLE = "Free ATS resume checker | Student Career Studio";
 const ATS_CHECKER_DESCRIPTION =
 	"Check whether software can read your resume PDF. Runs entirely in your browser, so your file is never uploaded.";

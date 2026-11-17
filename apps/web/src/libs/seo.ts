@@ -32,7 +32,7 @@ export const getHomepageMeta = () => ({
 export const getLandingMeta = () => ({
 	title: `Tell your story once | ${appName}`,
 	description:
-		"Tell the career coach what you have done, check each fact, then use it for your résumé, LinkedIn and AI career missions. Free during the beta.",
+		"Tell the coach your story once. Get your résumé, LinkedIn and career missions from it. Free beta for students.",
 });
 
 /** The ATS checker's title and description in the active locale. The prerendered page and the route share them. */
