@@ -74,7 +74,7 @@ export async function renderPage(name: PrerenderedPage, locale: Locale) {
 			<QueryClientProvider client={new QueryClient()}>
 				<I18nProvider i18n={i18n}>
 					<IconContext.Provider value={iconContextValue}>
-						<ThemeProvider theme="system">
+						<ThemeProvider theme="light">
 							<DirectionProvider direction={dir}>{page.render()}</DirectionProvider>
 						</ThemeProvider>
 					</IconContext.Provider>

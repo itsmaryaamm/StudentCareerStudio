@@ -11,7 +11,7 @@ export type Theme = z.infer<typeof themeSchema>;
 export type ResolvedTheme = "light" | "dark";
 
 const storageKey = "theme";
-const defaultTheme: Theme = "system";
+const defaultTheme: Theme = "light";
 
 export const systemDarkQuery = "(prefers-color-scheme: dark)";
 

@@ -12,8 +12,10 @@ import { Route as rootRouteImport } from "./routes/__root";
 import { Route as HomeRouteRouteImport } from "./routes/_home/route";
 import { Route as AgentRouteRouteImport } from "./routes/agent/route";
 import { Route as AuthRouteRouteImport } from "./routes/auth/route";
+import { Route as CookiesRouteImport } from "./routes/cookies";
 import { Route as DashboardRouteRouteImport } from "./routes/dashboard/route";
 import { Route as PrivacyRouteImport } from "./routes/privacy";
+import { Route as TermsRouteImport } from "./routes/terms";
 import { Route as HomeIndexRouteImport } from "./routes/_home/index";
 import { Route as HomeAtsCheckerRouteImport } from "./routes/_home/ats-checker";
 import { Route as HomeResumeTemplatesRouteImport } from "./routes/_home/resume-templates";
@@ -86,6 +88,11 @@ const AuthRouteRoute = AuthRouteRouteImport.update({
   path: "/auth",
   getParentRoute: () => rootRouteImport,
 } as any);
+const CookiesRoute = CookiesRouteImport.update({
+  id: "/cookies",
+  path: "/cookies",
+  getParentRoute: () => rootRouteImport,
+} as any);
 const DashboardRouteRoute = DashboardRouteRouteImport.update({
   id: "/dashboard",
   path: "/dashboard",
@@ -94,6 +101,11 @@ const DashboardRouteRoute = DashboardRouteRouteImport.update({
 const PrivacyRoute = PrivacyRouteImport.update({
   id: "/privacy",
   path: "/privacy",
+  getParentRoute: () => rootRouteImport,
+} as any);
+const TermsRoute = TermsRouteImport.update({
+  id: "/terms",
+  path: "/terms",
   getParentRoute: () => rootRouteImport,
 } as any);
 const HomeIndexRoute = HomeIndexRouteImport.update({
@@ -407,7 +419,9 @@ export interface FileRoutesByFullPath {
   "/agent": typeof AgentRouteRouteWithChildren;
   "/auth": typeof AuthRouteRouteWithChildren;
   "/dashboard": typeof DashboardRouteRouteWithChildren;
+  "/cookies": typeof CookiesRoute;
   "/privacy": typeof PrivacyRoute;
+  "/terms": typeof TermsRoute;
   "/builder/$resumeId": typeof BuilderResumeIdRouteRouteWithChildren;
   "/dashboard/career": typeof DashboardCareerRouteRouteWithChildren;
   "/dashboard/settings": typeof DashboardSettingsRouteRouteWithChildren;
@@ -466,7 +480,9 @@ export interface FileRoutesByFullPath {
   "/dashboard/career/knowledge/stories/{-$storyId}": typeof DashboardCareerKnowledgeStoriesChar123StoryIdChar125Route;
 }
 export interface FileRoutesByTo {
+  "/cookies": typeof CookiesRoute;
   "/privacy": typeof PrivacyRoute;
+  "/terms": typeof TermsRoute;
   "/ats-checker": typeof HomeAtsCheckerRoute;
   "/resume-templates": typeof HomeResumeTemplatesRoute;
   "/agent/$threadId": typeof AgentThreadIdRoute;
@@ -528,7 +544,9 @@ export interface FileRoutesById {
   "/agent": typeof AgentRouteRouteWithChildren;
   "/auth": typeof AuthRouteRouteWithChildren;
   "/dashboard": typeof DashboardRouteRouteWithChildren;
+  "/cookies": typeof CookiesRoute;
   "/privacy": typeof PrivacyRoute;
+  "/terms": typeof TermsRoute;
   "/builder/$resumeId": typeof BuilderResumeIdRouteRouteWithChildren;
   "/dashboard/career": typeof DashboardCareerRouteRouteWithChildren;
   "/dashboard/settings": typeof DashboardSettingsRouteRouteWithChildren;
@@ -594,7 +612,9 @@ export interface FileRouteTypes {
     | "/agent"
     | "/auth"
     | "/dashboard"
+    | "/cookies"
     | "/privacy"
+    | "/terms"
     | "/builder/$resumeId"
     | "/dashboard/career"
     | "/dashboard/settings"
@@ -653,7 +673,9 @@ export interface FileRouteTypes {
     | "/dashboard/career/knowledge/stories/{-$storyId}";
   fileRoutesByTo: FileRoutesByTo;
   to:
+    | "/cookies"
     | "/privacy"
+    | "/terms"
     | "/ats-checker"
     | "/resume-templates"
     | "/agent/$threadId"
@@ -714,7 +736,9 @@ export interface FileRouteTypes {
     | "/agent"
     | "/auth"
     | "/dashboard"
+    | "/cookies"
     | "/privacy"
+    | "/terms"
     | "/builder/$resumeId"
     | "/dashboard/career"
     | "/dashboard/settings"
@@ -779,7 +803,9 @@ export interface RootRouteChildren {
   AgentRouteRoute: typeof AgentRouteRouteWithChildren;
   AuthRouteRoute: typeof AuthRouteRouteWithChildren;
   DashboardRouteRoute: typeof DashboardRouteRouteWithChildren;
+  CookiesRoute: typeof CookiesRoute;
   PrivacyRoute: typeof PrivacyRoute;
+  TermsRoute: typeof TermsRoute;
   BuilderResumeIdRouteRoute: typeof BuilderResumeIdRouteRouteWithChildren;
   BuilderKitRoute: typeof BuilderKitRoute;
   FeedbackTokenRoute: typeof FeedbackTokenRoute;
@@ -809,6 +835,13 @@ declare module "@tanstack/react-router" {
       preLoaderRoute: typeof AuthRouteRouteImport;
       parentRoute: typeof rootRouteImport;
     };
+    "/cookies": {
+      id: "/cookies";
+      path: "/cookies";
+      fullPath: "/cookies";
+      preLoaderRoute: typeof CookiesRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
     "/dashboard": {
       id: "/dashboard";
       path: "/dashboard";
@@ -821,6 +854,13 @@ declare module "@tanstack/react-router" {
       path: "/privacy";
       fullPath: "/privacy";
       preLoaderRoute: typeof PrivacyRouteImport;
+      parentRoute: typeof rootRouteImport;
+    };
+    "/terms": {
+      id: "/terms";
+      path: "/terms";
+      fullPath: "/terms";
+      preLoaderRoute: typeof TermsRouteImport;
       parentRoute: typeof rootRouteImport;
     };
     "/_home/": {
@@ -1425,7 +1465,9 @@ const rootRouteChildren: RootRouteChildren = {
   AgentRouteRoute: AgentRouteRouteWithChildren,
   AuthRouteRoute: AuthRouteRouteWithChildren,
   DashboardRouteRoute: DashboardRouteRouteWithChildren,
+  CookiesRoute: CookiesRoute,
   PrivacyRoute: PrivacyRoute,
+  TermsRoute: TermsRoute,
   BuilderResumeIdRouteRoute: BuilderResumeIdRouteRouteWithChildren,
   BuilderKitRoute: BuilderKitRoute,
   FeedbackTokenRoute: FeedbackTokenRoute,

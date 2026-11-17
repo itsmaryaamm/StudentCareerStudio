@@ -349,6 +349,10 @@ export function RegisterPage({ disableEmailAuth, isGuest = false }: Props) {
 
 					<p className="text-[13px] leading-[18px] text-ink-3">
 						By creating an account you agree to the{" "}
+						<a href="/terms" target="_blank" rel="noreferrer" className="underline">
+							terms of use
+						</a>{" "}
+						and the{" "}
 						<a href="/privacy" target="_blank" rel="noreferrer" className="underline">
 							beta privacy notice
 						</a>

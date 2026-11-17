@@ -657,7 +657,24 @@ export function Footer() {
 					Student Career Studio
 				</span>
 				<span>Made by Maryam Imran, for students</span>
-				<nav aria-label="Footer" className="ml-auto flex gap-5 max-[759px]:hidden">
+				<nav
+					aria-label="Legal"
+					className="ml-auto flex gap-5 max-[759px]:ml-0 max-[759px]:flex-wrap max-[759px]:gap-x-4 max-[759px]:gap-y-1"
+				>
+					<a href="/privacy" className="text-[#4B3F73] hover:text-[#6C3CF1]">
+						Privacy notice
+					</a>
+					<a href="/terms" className="text-[#4B3F73] hover:text-[#6C3CF1]">
+						Terms of use
+					</a>
+					<a href="/cookies" className="text-[#4B3F73] hover:text-[#6C3CF1]">
+						Cookies
+					</a>
+					<a href="mailto:hello@maryamimran.com" className="text-[#4B3F73] hover:text-[#6C3CF1]">
+						Contact
+					</a>
+				</nav>
+				<nav aria-label="Footer" className="flex gap-5 max-[759px]:hidden">
 					<a href="#how" className="text-[#4B3F73] hover:text-[#6C3CF1]">
 						How it works
 					</a>

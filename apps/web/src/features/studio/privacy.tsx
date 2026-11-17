@@ -82,6 +82,50 @@ export function PrivacyNotice() {
 					Features, limits and availability may change, and the beta may end with notice by email.
 				</p>
 			</section>
+			<section>
+				<h2 className="text-lg font-semibold text-ink">Who we are and how to reach us</h2>
+				<p>
+					Student Career Studio is run by Maryam Imran. For any privacy question, access, correction or deletion
+					request, write to{" "}
+					<a href="mailto:hello@maryamimran.com" className="underline">
+						hello@maryamimran.com
+					</a>
+					. You can also do most of it yourself in Settings.
+				</p>
+			</section>
+			<section>
+				<h2 className="text-lg font-semibold text-ink">Services that handle your data</h2>
+				<ul className="list-disc ps-5">
+					<li>Render hosts the app and Neon hosts the database, both only to run the service.</li>
+					<li>
+						Google processes AI requests, and Google sign-in if you choose it (we receive your name, email and profile
+						picture link).
+					</li>
+					<li>Brevo delivers our emails (verification and password reset) to your address.</li>
+				</ul>
+				<p>We do not sell your information and we do not show ads.</p>
+			</section>
+			<section>
+				<h2 className="text-lg font-semibold text-ink">How long we keep it</h2>
+				<p>
+					Until you delete your account, then it is erased from the live service. Backups at our hosts may keep a copy
+					for a short time longer before they expire. Sign-in and security logs are kept briefly to stop abuse.
+				</p>
+			</section>
+			<section>
+				<h2 className="text-lg font-semibold text-ink">Age and cookies</h2>
+				<p>
+					The service is for people aged 16 and over. We use only essential cookies; see the{" "}
+					<a href="/cookies" className="underline">
+						cookie notice
+					</a>{" "}
+					and the{" "}
+					<a href="/terms" className="underline">
+						terms of use
+					</a>
+					.
+				</p>
+			</section>
 			<p className="text-ink-3">
 				Student Career Studio is built on Reactive Resume (MIT licence) and is not affiliated with its authors.
 			</p>
