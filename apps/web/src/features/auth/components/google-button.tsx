@@ -89,7 +89,7 @@ export function GoogleSignInButton({ friendCode = "", oneTap = false, callbackUR
 						if (error) {
 							toast.add({
 								type: "error",
-								description: authErrorMessage(error, "Couldn't sign in with Google. Try again."),
+								description: `${authErrorMessage(error, "Couldn't sign in with Google. Try again.")}${error.code ? ` (${error.code})` : ""}`,
 								id: toastId,
 							});
 							return;
