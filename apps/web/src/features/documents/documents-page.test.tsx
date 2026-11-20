@@ -50,12 +50,20 @@ vi.mock("@tanstack/react-router", () => ({
 	Link: ({ children }: { children: React.ReactNode }) => <a href="/dashboard">{children}</a>,
 	useNavigate: () => requests.navigate,
 	useRouter: () => ({ subscribe: () => () => {} }),
+	useRouteContext: () => ({ session: { user: { name: "Test Student", email: "student@example.com" } } }),
 }));
+vi.mock("@/features/studio/profile", () => ({ useFacts: () => ({ data: [] }) }));
+vi.mock("@/features/studio/shared", () => ({ useStudioState: () => ({ data: undefined }) }));
 vi.mock("@/hooks/use-confirm", () => ({ useConfirm: () => vi.fn() }));
 vi.mock("@/components/layout/phone-header-actions", () => ({ PhoneHeaderActions: () => null }));
 vi.mock("./use-start-document", () => ({
 	IMPORT_ACCEPT: ".pdf,.docx,.json",
-	useStartDocument: () => ({ newLetter: requests.newLetter, creating: false }),
+	useStartDocument: () => ({
+		newLetter: requests.newLetter,
+		startBlank: vi.fn(),
+		fromProfile: vi.fn(),
+		creating: false,
+	}),
 }));
 vi.mock("./document-actions", () => ({
 	TagsDialog: () => null,
@@ -456,7 +464,7 @@ it("an empty Letters tab offers to make one instead of clearing filters", async 
 	expect(requests.newLetter).toHaveBeenCalledOnce();
 });
 
-it("first run's Choose a file opens the file picker, then imports the chosen file", async () => {
+it("first run's Upload my résumé opens the file picker, then imports the chosen file", async () => {
 	i18n.loadAndActivate({ locale: "en-US", messages: {} });
 	const client = new QueryClient({ defaultOptions: { queries: { staleTime: Infinity, retry: false } } });
 	const input = {
@@ -486,7 +494,7 @@ it("first run's Choose a file opens the file picker, then imports the chosen fil
 		</I18nProvider>,
 	);
 
-	fireEvent.click(await screen.findByRole("button", { name: "Choose a file" }));
+	fireEvent.click(await screen.findByRole("button", { name: "Upload my résumé" }));
 	expect(pick).toHaveBeenCalledOnce();
 	expect(useDialogStore.getState().open).toBe(false);
 
@@ -529,11 +537,11 @@ it.each([0, 1])("recovers the correct empty state after a failed counts request 
 	);
 	expect(await screen.findByRole("alert")).toBeVisible();
 	fireEvent.click(screen.getByRole("button", { name: "Try again" }));
-	if (trash === 0) expect(await screen.findByRole("button", { name: "Choose a file" })).toBeVisible();
+	if (trash === 0) expect(await screen.findByRole("button", { name: "Upload my résumé" })).toBeVisible();
 	else {
 		expect(await screen.findByRole("heading", { name: "No documents" })).toBeVisible();
 		expect(await screen.findByText("Trash has 1 document.")).toBeVisible();
-		expect(screen.queryByRole("button", { name: "Choose a file" })).toBeNull();
+		expect(screen.queryByRole("button", { name: "Upload my résumé" })).toBeNull();
 	}
 });
 

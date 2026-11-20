@@ -1399,6 +1399,10 @@ msgstr "{earlier} · rakstīts"
 msgid "{entries, plural, one {# entry} other {# entries}}"
 msgstr "{entries, plural, one {# ieraksts} other {# ieraksti}}"
 
+#: src/features/documents/documents-page.tsx
+msgid "{entries, plural, one {Uses the # thing you approved. Each one becomes a line you can edit.} other {Uses the # things you approved. Each one becomes a line you can edit.}}"
+msgstr ""
+
 #: src/features/resume/editor/check/issues.ts
 msgid "{entry} doesn't say when. Dates place it on your timeline."
 msgstr "{entry} nenorāda, kad. Datumi ievieto to jūsu laika skalā."
@@ -1999,6 +2003,10 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 komentārs, izskatīts"
 
+#: src/features/documents/documents-page.tsx
+msgid "1. Check it."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "Vislabāk lasāms 10 līdz 11"
@@ -2033,6 +2041,10 @@ msgstr "2 stundas iepriekš"
 msgid "2–3 sentences reads best"
 msgstr "Vislabāk izlasāmi 2–3 teikumi"
 
+#: src/features/documents/documents-page.tsx
+msgid "2. Pick a look."
+msgstr ""
+
 #: src/features/homepage/check.tsx
 #: src/features/homepage/sheet.tsx
 msgid "2013 – 2017"
@@ -2059,6 +2071,10 @@ msgstr "24 stundas iepriekš"
 #: src/features/homepage/prepare.tsx
 msgid "3 supported · 1 partly · 1 missing"
 msgstr "3 pamatoti · 1 daļēji · 1 trūkst"
+
+#: src/features/documents/documents-page.tsx
+msgid "3. Download."
+msgstr ""
 
 #: src/features/settings/ai/api-keys.tsx
 msgid "30 days"
@@ -3045,10 +3061,6 @@ msgstr "AI funkcijas izmanto jūsu pakalpojumu sniedzēju. Atslēga serverī tie
 msgid "AI is ready"
 msgstr "MI ir gatavs"
 
-#: src/features/documents/import/import-page.tsx
-msgid "AI optional"
-msgstr "AI nav obligāts"
-
 #: src/features/command-palette/pages/navigation.tsx
 msgid "AI providers"
 msgstr "AI nodrošinātāji"
@@ -3255,6 +3267,10 @@ msgstr "Iegultu fontu nevarēja nolasīt."
 #: src/features/documents/import/import-page.tsx
 msgid "An empty resume to type or paste into, section by section."
 msgstr "Tukšs CV, kurā rakstīt vai ielīmēt, sadaļu pa sadaļai."
+
+#: src/features/documents/documents-page.tsx
+msgid "An empty résumé. You type in each part yourself."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "An entry has no dates"
@@ -4291,6 +4307,14 @@ msgstr "Pārlūkojiet bezmaksas CV veidnes, salīdziniet vienas un divu sleju iz
 msgid "Build a professional resume, download it as PDF or Word, and manage your job search in one place. Free templates, no ads, no paywall."
 msgstr "Izveidojiet profesionālu CV, lejupielādējiet to PDF vai Microsoft Word formātā un pārvaldiet savu darba meklēšanu vienuviet. Bezmaksas veidnes, bez reklāmām, bez maksas sienas."
 
+#: src/features/documents/documents-page.tsx
+msgid "Build it from what I told the coach"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Build my résumé"
+msgstr ""
+
 #: src/features/homepage/marketing-layout.tsx
 #: src/features/homepage/ui.tsx
 msgid "Build your resume"
@@ -4870,7 +4894,6 @@ msgid "Choose a document; review your question before sending"
 msgstr "Izvēlieties dokumentu; pirms nosūtīšanas pārskatiet savu jautājumu"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 msgid "Choose a file"
 msgstr "Izvēlieties failu"
@@ -5077,6 +5100,10 @@ msgstr "Notīriet uzrunu vai noslēguma frāzi, lai to izlaistu. Notīrot noslē
 #: src/features/resume/editor/write/write-panel.tsx
 msgid "Click any block on the page to edit it."
 msgstr "Noklikšķiniet uz jebkura bloka lapā, lai to rediģētu."
+
+#: src/features/documents/documents-page.tsx
+msgid "Click any part of the page to fix it."
+msgstr ""
 
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Click anything on the page to style it. The rule you're in is outlined on the page."
@@ -6189,6 +6216,10 @@ msgstr "Nevarēja pārvietot dokumentu uz atkritni. Mēģiniet vēlreiz."
 #: src/features/assistant/accept-on-copy.ts
 msgid "Couldn't move this conversation to a copy."
 msgstr "Neizdevās pārvietot šo sarunu uz kopiju."
+
+#: src/features/resume/import/read-file.ts
+msgid "Couldn't open this Word file. Try saving it again as .docx, or as a PDF."
+msgstr ""
 
 #: src/features/career/workspace/application-packet.tsx
 msgid "Couldn't prepare the packet. Reload and review again."
@@ -9813,6 +9844,10 @@ msgstr "Ungāru"
 msgid "Hyphenation"
 msgstr "Vārdu sadalīšana"
 
+#: src/features/documents/documents-page.tsx
+msgid "I already have a résumé"
+msgstr ""
+
 #. placeholder {0}: document.posting.company
 #: src/features/assistant/assistant-panel.tsx
 msgid "I can see this {kind} and the {0} posting. Ask how you fit, or get a follow-up email or interview prep."
@@ -10029,14 +10064,6 @@ msgstr "Importējiet esošo, un katra sadaļa tiks sakārtota, lai jūs to pilnv
 #: src/features/documents/documents-page.tsx
 msgid "Import the one you have, or start blank."
 msgstr "Importējiet jau esošo vai sāciet no jauna."
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Choose a PDF, Word or JSON file."
-msgstr "Importējiet esošo CV, un katra sadaļa tiks sakārtota, lai jūs to pilnveidotu, vai sāciet no tukšas lapas. Izvēlieties PDF, Word vai JSON failu."
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Drop a PDF, Word or JSON file anywhere here."
-msgstr "Importējiet esošo CV, un katra sadaļa tiks sakārtota, lai jūs to pilnveidotu, vai sāciet no tukšas lapas. Nometiet PDF, Word vai JSON failu jebkurā vietā šeit."
 
 #: src/features/applications/components/detail/activity.tsx
 #: src/features/documents/import/import-page.tsx
@@ -11068,6 +11095,10 @@ msgstr "Garums nav trūkums, un nepastāv universāls vienas lapas noteikums. Sa
 #: src/features/assistant/conversation.tsx
 msgid "Let the assistant search facts and stories you share with all applications, read-only"
 msgstr "Atļaujiet asistentam meklēt faktos un stāstos, kurus kopīgojat ar visiem pieteikumiem, tikai lasīšanas režīmā"
+
+#: src/features/documents/documents-page.tsx
+msgid "Let's make your résumé"
+msgstr ""
 
 #: src/features/settings/ai/mcp.tsx
 msgid "Lets an AI client work with your documents and applications. Sign in from the client, or use an API key."
@@ -12319,6 +12350,10 @@ msgstr "Klusināta sānjosla"
 msgid "My job was to find out why, without adding support work."
 msgstr "Mans uzdevums bija noskaidrot iemeslu, nepalielinot atbalsta darba apjomu."
 
+#: src/features/documents/use-start-document.ts
+msgid "My résumé"
+msgstr ""
+
 #. Label for full name input on registration form
 #: src/dialogs/resume/index.tsx
 #: src/features/applications/components/detail/contacts.tsx
@@ -12437,10 +12472,6 @@ msgstr "gandrīz melns teksts uz balta"
 #: src/routes/builder/$resumeId/-components/design-panel.tsx
 msgid "Near-black text on white prints cleanly and is what applicant tracking systems expect."
 msgstr "Gandrīz melns teksts uz balta fona drukājas tīri, un to sagaida pretendentu atlases sistēmas."
-
-#: src/features/documents/import/import-page.tsx
-msgid "Needs AI"
-msgstr "Nepieciešams AI"
 
 #: src/features/assistant/chat-chrome.tsx
 #: src/features/settings/ai/providers.tsx
@@ -13683,10 +13714,6 @@ msgstr "Šajā pieteikumā, ar jautājumu, jūsu atbildi un to, kā tā tika uzt
 msgid "On this device"
 msgstr "Šajā ierīcē"
 
-#: src/features/documents/import/import-page.tsx
-msgid "On this device, or with AI for columns and tables. A scanned PDF has no text to read on this device."
-msgstr "Šajā ierīcē vai ar AI kolonnām un tabulām. Skenētā PDF nav teksta, ko nolasīt šajā ierīcē."
-
 #: src/features/assistant/assistant-panel.tsx
 msgid "On this resume, without AI"
 msgstr "Šajā CV, bez AI"
@@ -14070,6 +14097,18 @@ msgstr "Atveras ar jūsu vārdu un kontaktinformāciju. Vispirms nekas nav jāai
 msgctxt "Template style tag"
 msgid "Operations"
 msgstr "Operācijas"
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 1"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 2"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 3"
+msgstr ""
 
 #: src/features/career/knowledge/stories.tsx
 #: src/features/career/workspace/prepare-review.tsx
@@ -14543,10 +14582,6 @@ msgstr "PDF lejupielāde ieslēgta"
 msgid "PDF import"
 msgstr "PDF importēšana"
 
-#: src/features/documents/import/import-page.tsx
-msgid "PDF, JSON and LinkedIn files import on this device without it."
-msgstr "PDF, JSON un LinkedIn faili tiek importēti šajā ierīcē bez tā."
-
 #: src/features/homepage/faq.tsx
 msgid "PDF, Word (DOCX), Markdown and JSON. The JSON export imports back into any Reactive Resume, including one you host yourself, so your data is never locked in."
 msgstr "PDF, Word (DOCX), Markdown un JSON. JSON eksports tiek importēts atpakaļ jebkurā Reactive Resume, tostarp tajā, kuru mitināt pats, tāpēc jūsu dati nekad netiek bloķēti."
@@ -14678,6 +14713,10 @@ msgstr "Izvēlieties vienu formātu un izmantojiet to visur."
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the background color"
 msgstr "Izvēlēties fona krāsu"
+
+#: src/features/documents/documents-page.tsx
+msgid "Pick the easiest way for you. You can change everything afterwards."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the text color"
@@ -15047,6 +15086,10 @@ msgstr "Sākotnējie iestatījumi"
 #: src/components/input/chip-input.tsx
 msgid "Press <0>{RETURN_KEY}</0> to add or save the current keyword."
 msgstr "Nospiediet <0>{RETURN_KEY}</0>, lai pievienotu vai saglabātu pašreizējo atslēgvārdu."
+
+#: src/features/documents/documents-page.tsx
+msgid "Press Download PDF when you're happy."
+msgstr ""
 
 #. placeholder {0}: templates[previewTemplate].name
 #: src/routes/builder/$resumeId/-components/page-canvas.tsx
@@ -15540,6 +15583,14 @@ msgstr "Nolasīšana nosūta šo darba sludinājumu uz {0} · {1}. Publiskās sa
 msgid "Read on this device"
 msgstr "Nolasīt šajā ierīcē"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. A scanned PDF (really a photo) has no text to read."
+msgstr ""
+
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. Save an older .doc file as .docx first."
+msgstr ""
+
 #: src/features/settings/ai/api-keys.tsx
 msgid "Read only"
 msgstr "Tikai lasīšanas piekļuve"
@@ -15588,10 +15639,6 @@ msgstr "Izlasiet pašmitināšanas rokasgrāmatu"
 #: src/features/documents/import/import-page.tsx
 msgid "Read with AI"
 msgstr "Lasīt ar AI"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Read with your AI connection. Save an older .doc file as .docx first."
-msgstr "Nolasīt ar jūsu AI savienojumu. Vecāku .doc failu vispirms saglabājiet kā .docx."
 
 #: src/features/auth/pages/consent.tsx
 msgid "Read your email address."
@@ -15694,10 +15741,6 @@ msgstr "Lasa to, ko kopīgojāt"
 #: src/features/applications/components/add-application-dialog.tsx
 msgid "Reading without AI couldn't be confirmed. Retry, update your server, or enter the details manually."
 msgstr "Neizdevās apstiprināt lasīšanu bez MI. Mēģiniet vēlreiz, atjauniniet serveri vai ievadiet informāciju manuāli."
-
-#: src/features/resume/import/read-file.ts
-msgid "Reading Word files needs an AI provider. Set one up in Settings, or import a PDF or JSON file instead."
-msgstr "Word failu lasīšanai nepieciešams AI nodrošinātājs. Iestatiet to sadaļā Iestatījumi vai importējiet PDF vai JSON failu."
 
 #: src/features/settings/ai/web-access.tsx
 msgid "Reading works"
@@ -18952,6 +18995,10 @@ msgstr "Sāciet katru ar konkrētu darbības vārdu: izveidoja, vadīja, samazin
 msgid "Start from"
 msgstr "Sāciet no"
 
+#: src/features/documents/documents-page.tsx
+msgid "Start from a blank page"
+msgstr ""
+
 #: src/features/documents/new-document-dialog.tsx
 msgid "Start from an earlier letter"
 msgstr "Sākt no iepriekšējas vēstules"
@@ -19448,6 +19495,10 @@ msgstr "Mājas uzdevums"
 msgid "Talk it through with the coach"
 msgstr "Pārrunājiet to ar konsultantu"
 
+#: src/features/documents/documents-page.tsx
+msgid "Talk to the coach"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Tamil"
 msgstr "Tamilu"
@@ -19509,6 +19560,10 @@ msgstr "Pastāstiet par produkta uzlabojumu, ko vadījāt. Kāds bija jūsu iegu
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "Pastāstiet par gadījumu, kad nepiekritāt kolēģim. Kā jūs to atrisinājāt?"
+
+#: src/features/documents/documents-page.tsx
+msgid "Tell the coach what you've done and approve it. Then it can fill your résumé for you."
+msgstr ""
 
 #: src/features/auth/layout.tsx
 msgid "Tell your story once. Use it for your résumé and LinkedIn."
@@ -19637,6 +19692,10 @@ msgstr "atrasts teksta slānis · 1 kolonna"
 #: src/features/resume/editor/check/parser-view.tsx
 msgid "text layer found · 2 columns"
 msgstr "atrasts teksta slānis · 2 kolonnas"
+
+#: src/features/resume/import/read-file.ts
+msgid "text read"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Text sits in the header or footer area."
@@ -19937,6 +19996,10 @@ msgstr "LinkedIn nosūtītais datu arhīvs tiek nolasīts šajā ierīcē."
 #: src/features/documents/import/import-page.tsx
 msgid "The data archive LinkedIn sends you. Read on this device."
 msgstr "LinkedIn nosūtītais datu arhīvs. Tiek nolasīts šajā ierīcē."
+
+#: src/features/documents/documents-page.tsx
+msgid "The Design tab changes colours and layout."
+msgstr ""
 
 #: src/features/ats-checker/checker.tsx
 msgid "The details"
@@ -20852,6 +20915,10 @@ msgstr "Šī versija"
 msgid "This week"
 msgstr "Šonedēļ"
 
+#: src/features/resume/import/read-file.ts
+msgid "This Word file has no text to read. Try saving it as a PDF, or start blank and paste sections in."
+msgstr ""
+
 #: src/features/career/workspace/shell.tsx
 msgid "This workspace couldn't be loaded."
 msgstr "Šo darba telpu nevarēja ielādēt."
@@ -21175,7 +21242,6 @@ msgid "Try {0}"
 msgstr "Izmēģiniet {0}"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 msgid "Try a sample"
 msgstr "Izmēģiniet paraugu"
 
@@ -21634,9 +21700,17 @@ msgstr "Tiek atjaunināts jūsu CV…"
 msgid "Upload .csv"
 msgstr "Augšupielādēt .csv"
 
+#: src/features/documents/documents-page.tsx
+msgid "Upload my résumé"
+msgstr ""
+
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Upload photo"
 msgstr "Augšupielādēt fotoattēlu"
+
+#: src/features/documents/documents-page.tsx
+msgid "Upload your PDF or Word file. We read it for you, and you check it before anything is saved."
+msgstr ""
 
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Uploading photo…"
@@ -22826,10 +22900,6 @@ msgid "Without one, you fill in the recipient yourself and drafting uses only yo
 msgstr "Bez tā jūs pats aizpildāt adresātu, un sastādīšanai tiek izmantots tikai jūsu CV."
 
 #: src/features/documents/import/import-page.tsx
-msgid "Word files and scanned PDFs are read with AI."
-msgstr "Word faili un skenēti PDF tiek nolasīti ar AI."
-
-#: src/features/documents/import/import-page.tsx
 msgid "Word files are read with AI. The file is sent to your AI connection."
 msgstr "Word faili tiek nolasīti ar AI. Fails tiek nosūtīts jūsu AI savienojumam."
 
@@ -23548,6 +23618,10 @@ msgstr "Jūsu CV ir dublēts."
 msgid "Your resume has been updated."
 msgstr "Jūsu CV ir atjaunināts."
 
+#: src/features/documents/import/import-page.tsx
+msgid "Your résumé is read on this device, for free. Nothing is sent anywhere."
+msgstr ""
+
 #: src/libs/orpc/ai-consent.ts
 msgid "Your resume text, selected passages, and check findings."
 msgstr "Jūsu CV teksts, atlasītie fragmenti un pārbaudes atklājumi."
@@ -23559,10 +23633,6 @@ msgstr "Jūsu CV izmanto vārdus \"I\" un \"my\"."
 #: src/features/homepage/share.tsx
 msgid "Your resume, live at"
 msgstr "Jūsu CV, tiešraide plkst"
-
-#: src/features/documents/documents-page.tsx
-msgid "Your resumes and cover letters live here"
-msgstr "Šeit glabājas jūsu CV un motivācijas vēstules"
 
 #: src/features/ai/set-up-ai.tsx
 msgid "Your saved connections need attention. Fix them in <0>Settings › AI</0>, or add one here."

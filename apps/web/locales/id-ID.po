@@ -1399,6 +1399,10 @@ msgstr "{earlier} · diketik"
 msgid "{entries, plural, one {# entry} other {# entries}}"
 msgstr "{entries, plural, one {Entri #} other {Entri #}}"
 
+#: src/features/documents/documents-page.tsx
+msgid "{entries, plural, one {Uses the # thing you approved. Each one becomes a line you can edit.} other {Uses the # things you approved. Each one becomes a line you can edit.}}"
+msgstr ""
+
 #: src/features/resume/editor/check/issues.ts
 msgid "{entry} doesn't say when. Dates place it on your timeline."
 msgstr "{entry} tidak menyebutkan kapan. Tanggal letakkan di timeline Anda."
@@ -1999,6 +2003,10 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 komentar, selesai"
 
+#: src/features/documents/documents-page.tsx
+msgid "1. Check it."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 sampai 11 paling mudah dibaca"
@@ -2033,6 +2041,10 @@ msgstr "2 jam sebelumnya"
 msgid "2–3 sentences reads best"
 msgstr "2–3 kalimat paling baik dibaca"
 
+#: src/features/documents/documents-page.tsx
+msgid "2. Pick a look."
+msgstr ""
+
 #: src/features/homepage/check.tsx
 #: src/features/homepage/sheet.tsx
 msgid "2013 – 2017"
@@ -2059,6 +2071,10 @@ msgstr "24 jam sebelumnya"
 #: src/features/homepage/prepare.tsx
 msgid "3 supported · 1 partly · 1 missing"
 msgstr "3 didukung · 1 sebagian · 1 kurang"
+
+#: src/features/documents/documents-page.tsx
+msgid "3. Download."
+msgstr ""
 
 #: src/features/settings/ai/api-keys.tsx
 msgid "30 days"
@@ -3045,10 +3061,6 @@ msgstr "Fitur AI menggunakan penyedia Anda sendiri. Kunci dienkripsi di server d
 msgid "AI is ready"
 msgstr "AI siap"
 
-#: src/features/documents/import/import-page.tsx
-msgid "AI optional"
-msgstr "AI opsional"
-
 #: src/features/command-palette/pages/navigation.tsx
 msgid "AI providers"
 msgstr "Penyedia AI"
@@ -3255,6 +3267,10 @@ msgstr "Font yang disematkan tidak dapat dibaca."
 #: src/features/documents/import/import-page.tsx
 msgid "An empty resume to type or paste into, section by section."
 msgstr "CV kosong untuk diketik atau ditempel, bagian demi bagian."
+
+#: src/features/documents/documents-page.tsx
+msgid "An empty résumé. You type in each part yourself."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "An entry has no dates"
@@ -4291,6 +4307,14 @@ msgstr "Telusuri templat CV gratis, bandingkan tata letak satu kolom dan dua kol
 msgid "Build a professional resume, download it as PDF or Word, and manage your job search in one place. Free templates, no ads, no paywall."
 msgstr "Buat CV profesional, unduh sebagai PDF atau Microsoft Word, dan kelola pencarian kerja Anda di satu tempat. Templat gratis, tanpa iklan, tanpa paywall."
 
+#: src/features/documents/documents-page.tsx
+msgid "Build it from what I told the coach"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Build my résumé"
+msgstr ""
+
 #: src/features/homepage/marketing-layout.tsx
 #: src/features/homepage/ui.tsx
 msgid "Build your resume"
@@ -4870,7 +4894,6 @@ msgid "Choose a document; review your question before sending"
 msgstr "Pilih dokumen; tinjau pertanyaan Anda sebelum mengirim"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 msgid "Choose a file"
 msgstr "Pilih file"
@@ -5077,6 +5100,10 @@ msgstr "Kosongkan salam pembuka atau salam penutup untuk menghilangkannya. Mengo
 #: src/features/resume/editor/write/write-panel.tsx
 msgid "Click any block on the page to edit it."
 msgstr "Klik blok mana pun di halaman untuk mengeditnya."
+
+#: src/features/documents/documents-page.tsx
+msgid "Click any part of the page to fix it."
+msgstr ""
 
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Click anything on the page to style it. The rule you're in is outlined on the page."
@@ -6189,6 +6216,10 @@ msgstr "Tidak dapat memindahkan dokumen ke Sampah. Coba lagi."
 #: src/features/assistant/accept-on-copy.ts
 msgid "Couldn't move this conversation to a copy."
 msgstr "Percakapan ini tidak dapat dipindahkan ke salinan."
+
+#: src/features/resume/import/read-file.ts
+msgid "Couldn't open this Word file. Try saving it again as .docx, or as a PDF."
+msgstr ""
 
 #: src/features/career/workspace/application-packet.tsx
 msgid "Couldn't prepare the packet. Reload and review again."
@@ -9813,6 +9844,10 @@ msgstr "Hungaria"
 msgid "Hyphenation"
 msgstr "Pemisahan kata dengan tanda hubung"
 
+#: src/features/documents/documents-page.tsx
+msgid "I already have a résumé"
+msgstr ""
+
 #. placeholder {0}: document.posting.company
 #: src/features/assistant/assistant-panel.tsx
 msgid "I can see this {kind} and the {0} posting. Ask how you fit, or get a follow-up email or interview prep."
@@ -10029,14 +10064,6 @@ msgstr "Impor yang Anda miliki dan setiap bagian ditata untuk Anda sempurnakan, 
 #: src/features/documents/documents-page.tsx
 msgid "Import the one you have, or start blank."
 msgstr "Impor yang sudah Anda punya, atau mulai dari kosong."
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Choose a PDF, Word or JSON file."
-msgstr "Impor CV yang Anda miliki dan setiap bagian ditata untuk Anda sempurnakan, atau mulai dari halaman kosong. Pilih file PDF, Word, atau JSON."
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Drop a PDF, Word or JSON file anywhere here."
-msgstr "Impor CV yang Anda miliki dan setiap bagian ditata untuk Anda sempurnakan, atau mulai dari halaman kosong. Letakkan file PDF, Word, atau JSON di mana saja di sini."
 
 #: src/features/applications/components/detail/activity.tsx
 #: src/features/documents/import/import-page.tsx
@@ -11068,6 +11095,10 @@ msgstr "Panjang bukan cacat, dan tidak ada aturan satu halaman yang berlaku univ
 #: src/features/assistant/conversation.tsx
 msgid "Let the assistant search facts and stories you share with all applications, read-only"
 msgstr "Biarkan asisten menelusuri fakta dan cerita yang Anda bagikan ke semua lamaran, hanya-baca"
+
+#: src/features/documents/documents-page.tsx
+msgid "Let's make your résumé"
+msgstr ""
 
 #: src/features/settings/ai/mcp.tsx
 msgid "Lets an AI client work with your documents and applications. Sign in from the client, or use an API key."
@@ -12319,6 +12350,10 @@ msgstr "Bilah sisi lembut"
 msgid "My job was to find out why, without adding support work."
 msgstr "Tugas saya adalah mencari tahu penyebabnya, tanpa menambah beban tim dukungan."
 
+#: src/features/documents/use-start-document.ts
+msgid "My résumé"
+msgstr ""
+
 #. Label for full name input on registration form
 #: src/dialogs/resume/index.tsx
 #: src/features/applications/components/detail/contacts.tsx
@@ -12437,10 +12472,6 @@ msgstr "teks hampir hitam di atas putih"
 #: src/routes/builder/$resumeId/-components/design-panel.tsx
 msgid "Near-black text on white prints cleanly and is what applicant tracking systems expect."
 msgstr "Teks hampir hitam di atas putih tercetak dengan bersih dan sesuai harapan sistem pelacakan pelamar (ATS)."
-
-#: src/features/documents/import/import-page.tsx
-msgid "Needs AI"
-msgstr "Membutuhkan AI"
 
 #: src/features/assistant/chat-chrome.tsx
 #: src/features/settings/ai/providers.tsx
@@ -13683,10 +13714,6 @@ msgstr "Di lamaran ini, beserta pertanyaan, jawaban Anda, dan bagaimana hasilnya
 msgid "On this device"
 msgstr "Di perangkat ini"
 
-#: src/features/documents/import/import-page.tsx
-msgid "On this device, or with AI for columns and tables. A scanned PDF has no text to read on this device."
-msgstr "Di perangkat ini, atau dengan AI untuk kolom dan tabel. PDF hasil pindaian tidak memiliki teks untuk dibaca di perangkat ini."
-
 #: src/features/assistant/assistant-panel.tsx
 msgid "On this resume, without AI"
 msgstr "Di CV ini, tanpa AI"
@@ -14070,6 +14097,18 @@ msgstr "Terbuka dengan nama dan detail kontak Anda. Tidak perlu mengisi apa pun 
 msgctxt "Template style tag"
 msgid "Operations"
 msgstr "Operasional"
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 1"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 2"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 3"
+msgstr ""
 
 #: src/features/career/knowledge/stories.tsx
 #: src/features/career/workspace/prepare-review.tsx
@@ -14543,10 +14582,6 @@ msgstr "Unduhan PDF aktif"
 msgid "PDF import"
 msgstr "Impor PDF"
 
-#: src/features/documents/import/import-page.tsx
-msgid "PDF, JSON and LinkedIn files import on this device without it."
-msgstr "File PDF, JSON, dan LinkedIn diimpor di perangkat ini tanpanya."
-
 #: src/features/homepage/faq.tsx
 msgid "PDF, Word (DOCX), Markdown and JSON. The JSON export imports back into any Reactive Resume, including one you host yourself, so your data is never locked in."
 msgstr "PDF, Word (DOCX), Markdown Dan JSON. Itu JSON ekspor impor kembali ke mana pun Reactive Resume, termasuk yang Anda host sendiri, sehingga data Anda tidak pernah terkunci."
@@ -14678,6 +14713,10 @@ msgstr "Pilih satu format dan gunakan di mana pun."
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the background color"
 msgstr "Pilih warna latar belakang"
+
+#: src/features/documents/documents-page.tsx
+msgid "Pick the easiest way for you. You can change everything afterwards."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the text color"
@@ -15047,6 +15086,10 @@ msgstr "Preset"
 #: src/components/input/chip-input.tsx
 msgid "Press <0>{RETURN_KEY}</0> to add or save the current keyword."
 msgstr "Tekan <0>{RETURN_KEY}</0> untuk menambahkan atau menyimpan kata kunci saat ini."
+
+#: src/features/documents/documents-page.tsx
+msgid "Press Download PDF when you're happy."
+msgstr ""
 
 #. placeholder {0}: templates[previewTemplate].name
 #: src/routes/builder/$resumeId/-components/page-canvas.tsx
@@ -15540,6 +15583,14 @@ msgstr "Baca mengirim lowongan ini ke {0} · {1}. Tautan publik juga dikirim ke 
 msgid "Read on this device"
 msgstr "Baca di perangkat ini"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. A scanned PDF (really a photo) has no text to read."
+msgstr ""
+
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. Save an older .doc file as .docx first."
+msgstr ""
+
 #: src/features/settings/ai/api-keys.tsx
 msgid "Read only"
 msgstr "Akses hanya baca"
@@ -15588,10 +15639,6 @@ msgstr "Baca panduan hosting mandiri"
 #: src/features/documents/import/import-page.tsx
 msgid "Read with AI"
 msgstr "Baca dengan AI"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Read with your AI connection. Save an older .doc file as .docx first."
-msgstr "Dibaca dengan koneksi AI Anda. Simpan file .doc lama sebagai .docx terlebih dahulu."
 
 #: src/features/auth/pages/consent.tsx
 msgid "Read your email address."
@@ -15694,10 +15741,6 @@ msgstr "Membaca yang Anda bagikan"
 #: src/features/applications/components/add-application-dialog.tsx
 msgid "Reading without AI couldn't be confirmed. Retry, update your server, or enter the details manually."
 msgstr "Pembacaan tanpa AI belum dapat dipastikan. Coba lagi, perbarui server Anda, atau masukkan detail secara manual."
-
-#: src/features/resume/import/read-file.ts
-msgid "Reading Word files needs an AI provider. Set one up in Settings, or import a PDF or JSON file instead."
-msgstr "Membaca file Word memerlukan penyedia AI. Siapkan satu di Pengaturan, atau impor file PDF atau JSON."
 
 #: src/features/settings/ai/web-access.tsx
 msgid "Reading works"
@@ -18952,6 +18995,10 @@ msgstr "Mulai setiap poin dengan kata kerja yang konkret: membangun, memimpin, m
 msgid "Start from"
 msgstr "Mulai dari"
 
+#: src/features/documents/documents-page.tsx
+msgid "Start from a blank page"
+msgstr ""
+
 #: src/features/documents/new-document-dialog.tsx
 msgid "Start from an earlier letter"
 msgstr "Mulai dari surat sebelumnya"
@@ -19448,6 +19495,10 @@ msgstr "Tugas yang dikerjakan di rumah"
 msgid "Talk it through with the coach"
 msgstr "Bicarakan dengan coach"
 
+#: src/features/documents/documents-page.tsx
+msgid "Talk to the coach"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Tamil"
 msgstr "Tamil"
@@ -19509,6 +19560,10 @@ msgstr "Ceritakan tentang peningkatan produk yang Anda pimpin. Apa kontribusi An
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "Ceritakan saat Anda tidak sependapat dengan rekan kerja. Bagaimana Anda menyelesaikannya?"
+
+#: src/features/documents/documents-page.tsx
+msgid "Tell the coach what you've done and approve it. Then it can fill your résumé for you."
+msgstr ""
 
 #: src/features/auth/layout.tsx
 msgid "Tell your story once. Use it for your résumé and LinkedIn."
@@ -19637,6 +19692,10 @@ msgstr "lapisan teks ditemukan · 1 kolom"
 #: src/features/resume/editor/check/parser-view.tsx
 msgid "text layer found · 2 columns"
 msgstr "lapisan teks ditemukan · 2 kolom"
+
+#: src/features/resume/import/read-file.ts
+msgid "text read"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Text sits in the header or footer area."
@@ -19937,6 +19996,10 @@ msgstr "Arsip data yang dikirim LinkedIn kepada Anda dibaca di perangkat ini."
 #: src/features/documents/import/import-page.tsx
 msgid "The data archive LinkedIn sends you. Read on this device."
 msgstr "Arsip data yang dikirim LinkedIn kepada Anda. Dibaca di perangkat ini."
+
+#: src/features/documents/documents-page.tsx
+msgid "The Design tab changes colours and layout."
+msgstr ""
 
 #: src/features/ats-checker/checker.tsx
 msgid "The details"
@@ -20852,6 +20915,10 @@ msgstr "Versi ini"
 msgid "This week"
 msgstr "Minggu ini"
 
+#: src/features/resume/import/read-file.ts
+msgid "This Word file has no text to read. Try saving it as a PDF, or start blank and paste sections in."
+msgstr ""
+
 #: src/features/career/workspace/shell.tsx
 msgid "This workspace couldn't be loaded."
 msgstr "Ruang kerja ini tidak dapat dimuat."
@@ -21175,7 +21242,6 @@ msgid "Try {0}"
 msgstr "Coba {0}"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 msgid "Try a sample"
 msgstr "Coba sampel"
 
@@ -21634,9 +21700,17 @@ msgstr "Memperbarui resume Anda…"
 msgid "Upload .csv"
 msgstr "Unggah .csv"
 
+#: src/features/documents/documents-page.tsx
+msgid "Upload my résumé"
+msgstr ""
+
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Upload photo"
 msgstr "Unggah foto"
+
+#: src/features/documents/documents-page.tsx
+msgid "Upload your PDF or Word file. We read it for you, and you check it before anything is saved."
+msgstr ""
 
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Uploading photo…"
@@ -22826,10 +22900,6 @@ msgid "Without one, you fill in the recipient yourself and drafting uses only yo
 msgstr "Tanpanya, Anda mengisi sendiri penerimanya dan penyusunannya hanya menggunakan resume Anda."
 
 #: src/features/documents/import/import-page.tsx
-msgid "Word files and scanned PDFs are read with AI."
-msgstr "File Word dan PDF hasil pindaian dibaca dengan AI."
-
-#: src/features/documents/import/import-page.tsx
 msgid "Word files are read with AI. The file is sent to your AI connection."
 msgstr "File Word dibaca dengan AI. File dikirim ke koneksi AI Anda."
 
@@ -23548,6 +23618,10 @@ msgstr "Resume Anda telah diduplikasi."
 msgid "Your resume has been updated."
 msgstr "Resume Anda telah diperbarui."
 
+#: src/features/documents/import/import-page.tsx
+msgid "Your résumé is read on this device, for free. Nothing is sent anywhere."
+msgstr ""
+
 #: src/libs/orpc/ai-consent.ts
 msgid "Your resume text, selected passages, and check findings."
 msgstr "Teks CV Anda, bagian yang dipilih, dan temuan pemeriksaan."
@@ -23559,10 +23633,6 @@ msgstr "Resume Anda menggunakan \"I\" dan \"my\"."
 #: src/features/homepage/share.tsx
 msgid "Your resume, live at"
 msgstr "Resume Anda, tinggal di"
-
-#: src/features/documents/documents-page.tsx
-msgid "Your resumes and cover letters live here"
-msgstr "CV dan surat lamaran Anda ada di sini"
 
 #: src/features/ai/set-up-ai.tsx
 msgid "Your saved connections need attention. Fix them in <0>Settings › AI</0>, or add one here."

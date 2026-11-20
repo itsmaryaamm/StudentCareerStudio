@@ -1399,6 +1399,10 @@ msgstr "{earlier} · টাইপ করা"
 msgid "{entries, plural, one {# entry} other {# entries}}"
 msgstr "{entries, plural, one {# এন্ট্রি} other {# এন্ট্রি}}"
 
+#: src/features/documents/documents-page.tsx
+msgid "{entries, plural, one {Uses the # thing you approved. Each one becomes a line you can edit.} other {Uses the # things you approved. Each one becomes a line you can edit.}}"
+msgstr ""
+
 #: src/features/resume/editor/check/issues.ts
 msgid "{entry} doesn't say when. Dates place it on your timeline."
 msgstr "{entry} কখন বলে না। তারিখগুলি আপনার টাইমলাইনে এটি রাখুন।"
@@ -1999,6 +2003,10 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "১টি মন্তব্য, সম্পন্ন"
 
+#: src/features/documents/documents-page.tsx
+msgid "1. Check it."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "১০ থেকে ১১ সবচেয়ে ভালো পড়া যায়"
@@ -2033,6 +2041,10 @@ msgstr "২ ঘণ্টা আগে"
 msgid "2–3 sentences reads best"
 msgstr "২-৩ বাক্য সবচেয়ে ভাল পড়া"
 
+#: src/features/documents/documents-page.tsx
+msgid "2. Pick a look."
+msgstr ""
+
 #: src/features/homepage/check.tsx
 #: src/features/homepage/sheet.tsx
 msgid "2013 – 2017"
@@ -2059,6 +2071,10 @@ msgstr "২৪ ঘণ্টা আগে"
 #: src/features/homepage/prepare.tsx
 msgid "3 supported · 1 partly · 1 missing"
 msgstr "৩টি সমর্থিত · ১টি আংশিক · ১টি অনুপস্থিত"
+
+#: src/features/documents/documents-page.tsx
+msgid "3. Download."
+msgstr ""
 
 #: src/features/settings/ai/api-keys.tsx
 msgid "30 days"
@@ -3045,10 +3061,6 @@ msgstr "AI ফিচারগুলো আপনার নিজের প্র
 msgid "AI is ready"
 msgstr "AI প্রস্তুত"
 
-#: src/features/documents/import/import-page.tsx
-msgid "AI optional"
-msgstr "AI ঐচ্ছিক"
-
 #: src/features/command-palette/pages/navigation.tsx
 msgid "AI providers"
 msgstr "এআই প্রদানকারী"
@@ -3255,6 +3267,10 @@ msgstr "একটি এমবেড করা ফন্ট পড়া যা�
 #: src/features/documents/import/import-page.tsx
 msgid "An empty resume to type or paste into, section by section."
 msgstr "বিভাগ ধরে ধরে লেখা বা পেস্ট করার জন্য একটি খালি জীবনবৃত্তান্ত।"
+
+#: src/features/documents/documents-page.tsx
+msgid "An empty résumé. You type in each part yourself."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "An entry has no dates"
@@ -4291,6 +4307,14 @@ msgstr "ফ্রি সিভি টেমপ্লেট ব্রাউজ �
 msgid "Build a professional resume, download it as PDF or Word, and manage your job search in one place. Free templates, no ads, no paywall."
 msgstr "একটি পেশাদার সিভি তৈরি করুন, এটি PDF বা Microsoft Word হিসাবে ডাউনলোড করুন এবং এক জায়গায় আপনার কাজের সন্ধান পরিচালনা করুন। বিনামূল্যে টেমপ্লেট, কোন বিজ্ঞাপন, কোন paywall."
 
+#: src/features/documents/documents-page.tsx
+msgid "Build it from what I told the coach"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Build my résumé"
+msgstr ""
+
 #: src/features/homepage/marketing-layout.tsx
 #: src/features/homepage/ui.tsx
 msgid "Build your resume"
@@ -4870,7 +4894,6 @@ msgid "Choose a document; review your question before sending"
 msgstr "একটি নথি বেছে নিন; পাঠানোর আগে আপনার প্রশ্ন পর্যালোচনা করুন"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 msgid "Choose a file"
 msgstr "একটি ফাইল নির্বাচন করুন"
@@ -5077,6 +5100,10 @@ msgstr "সম্ভাষণ বা সমাপনী বাদ দিতে �
 #: src/features/resume/editor/write/write-panel.tsx
 msgid "Click any block on the page to edit it."
 msgstr "সম্পাদনা করতে পৃষ্ঠার যেকোনো ব্লকে ক্লিক করুন।"
+
+#: src/features/documents/documents-page.tsx
+msgid "Click any part of the page to fix it."
+msgstr ""
 
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Click anything on the page to style it. The rule you're in is outlined on the page."
@@ -6189,6 +6216,10 @@ msgstr "নথিটি ট্র্যাশে সরানো যায়ন
 #: src/features/assistant/accept-on-copy.ts
 msgid "Couldn't move this conversation to a copy."
 msgstr "এই কথোপকথনটি একটি কপিতে সরানো যায়নি।"
+
+#: src/features/resume/import/read-file.ts
+msgid "Couldn't open this Word file. Try saving it again as .docx, or as a PDF."
+msgstr ""
 
 #: src/features/career/workspace/application-packet.tsx
 msgid "Couldn't prepare the packet. Reload and review again."
@@ -9813,6 +9844,10 @@ msgstr "হাঙ্গেরিয়ান"
 msgid "Hyphenation"
 msgstr "হাইফেনেশন"
 
+#: src/features/documents/documents-page.tsx
+msgid "I already have a résumé"
+msgstr ""
+
 #. placeholder {0}: document.posting.company
 #: src/features/assistant/assistant-panel.tsx
 msgid "I can see this {kind} and the {0} posting. Ask how you fit, or get a follow-up email or interview prep."
@@ -10029,14 +10064,6 @@ msgstr "আপনার যেটি আছে সেটি ইমপোর্�
 #: src/features/documents/documents-page.tsx
 msgid "Import the one you have, or start blank."
 msgstr "আপনার কাছে যেটি আছে সেটি ইমপোর্ট করুন, বা খালি শুরু করুন।"
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Choose a PDF, Word or JSON file."
-msgstr "আপনার জীবনবৃত্তান্তটি ইমপোর্ট করুন, প্রতিটি বিভাগ সাজিয়ে দেওয়া হবে আপনার পরিমার্জনের জন্য, অথবা একটি খালি পৃষ্ঠা থেকে শুরু করুন। একটি PDF, Word বা JSON ফাইল বেছে নিন।"
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Drop a PDF, Word or JSON file anywhere here."
-msgstr "আপনার জীবনবৃত্তান্তটি ইমপোর্ট করুন, প্রতিটি বিভাগ সাজিয়ে দেওয়া হবে আপনার পরিমার্জনের জন্য, অথবা একটি খালি পৃষ্ঠা থেকে শুরু করুন। এখানে যেকোনো জায়গায় একটি PDF, Word বা JSON ফাইল ছাড়ুন।"
 
 #: src/features/applications/components/detail/activity.tsx
 #: src/features/documents/import/import-page.tsx
@@ -11068,6 +11095,10 @@ msgstr "দৈর্ঘ্য কোনো ত্রুটি নয়, এব�
 #: src/features/assistant/conversation.tsx
 msgid "Let the assistant search facts and stories you share with all applications, read-only"
 msgstr "সহকারীকে সব আবেদনের সঙ্গে শেয়ার করা তথ্য ও গল্প খুঁজতে দিন, শুধুই পঠন"
+
+#: src/features/documents/documents-page.tsx
+msgid "Let's make your résumé"
+msgstr ""
 
 #: src/features/settings/ai/mcp.tsx
 msgid "Lets an AI client work with your documents and applications. Sign in from the client, or use an API key."
@@ -12319,6 +12350,10 @@ msgstr "হালকা সাইডবার"
 msgid "My job was to find out why, without adding support work."
 msgstr "আমার কাজ ছিল সাপোর্টের কাজ না বাড়িয়ে কারণটা খুঁজে বের করা।"
 
+#: src/features/documents/use-start-document.ts
+msgid "My résumé"
+msgstr ""
+
 #. Label for full name input on registration form
 #: src/dialogs/resume/index.tsx
 #: src/features/applications/components/detail/contacts.tsx
@@ -12437,10 +12472,6 @@ msgstr "সাদার উপর প্রায়-কালো লেখা"
 #: src/routes/builder/$resumeId/-components/design-panel.tsx
 msgid "Near-black text on white prints cleanly and is what applicant tracking systems expect."
 msgstr "সাদার উপর প্রায়-কালো লেখা পরিষ্কারভাবে ছাপা হয় এবং আবেদনকারী ট্র্যাকিং সিস্টেম এটিই আশা করে।"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Needs AI"
-msgstr "AI প্রয়োজন"
 
 #: src/features/assistant/chat-chrome.tsx
 #: src/features/settings/ai/providers.tsx
@@ -13683,10 +13714,6 @@ msgstr "এই আবেদনে, প্রশ্ন, আপনার উত্
 msgid "On this device"
 msgstr "এই ডিভাইসে"
 
-#: src/features/documents/import/import-page.tsx
-msgid "On this device, or with AI for columns and tables. A scanned PDF has no text to read on this device."
-msgstr "এই ডিভাইসে, অথবা কলাম ও টেবিলের জন্য AI দিয়ে। স্ক্যান করা PDF-এ এই ডিভাইসে পড়ার মতো কোনো লেখা নেই।"
-
 #: src/features/assistant/assistant-panel.tsx
 msgid "On this resume, without AI"
 msgstr "এই জীবনবৃত্তান্তে, AI ছাড়া"
@@ -14070,6 +14097,18 @@ msgstr "আপনার নাম ও যোগাযোগের বিবর�
 msgctxt "Template style tag"
 msgid "Operations"
 msgstr "অপারেশনস"
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 1"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 2"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 3"
+msgstr ""
 
 #: src/features/career/knowledge/stories.tsx
 #: src/features/career/workspace/prepare-review.tsx
@@ -14543,10 +14582,6 @@ msgstr "PDF ডাউনলোড চালু"
 msgid "PDF import"
 msgstr "PDF আমদানি"
 
-#: src/features/documents/import/import-page.tsx
-msgid "PDF, JSON and LinkedIn files import on this device without it."
-msgstr "PDF, JSON ও LinkedIn ফাইল এটি ছাড়াই এই ডিভাইসে ইমপোর্ট হয়।"
-
 #: src/features/homepage/faq.tsx
 msgid "PDF, Word (DOCX), Markdown and JSON. The JSON export imports back into any Reactive Resume, including one you host yourself, so your data is never locked in."
 msgstr "PDF, Word (DOCX), Markdown এবং JSON। JSON রপ্তানি যেকোন Reactive Resume-এ আবার আমদানি করে, যার মধ্যে আপনি নিজে হোস্ট করেন, তাই আপনার ডেটা কখনই লক করা হয় না।"
@@ -14678,6 +14713,10 @@ msgstr "একটি ফরম্যাট বেছে নিয়ে সব�
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the background color"
 msgstr "পটভূমির রং বেছে নিন"
+
+#: src/features/documents/documents-page.tsx
+msgid "Pick the easiest way for you. You can change everything afterwards."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the text color"
@@ -15047,6 +15086,10 @@ msgstr "প্রিসেটসমূহ"
 #: src/components/input/chip-input.tsx
 msgid "Press <0>{RETURN_KEY}</0> to add or save the current keyword."
 msgstr "বর্তমান কীওয়ার্ড যোগ বা সংরক্ষণ করতে <0>{RETURN_KEY}</0> চাপুন।"
+
+#: src/features/documents/documents-page.tsx
+msgid "Press Download PDF when you're happy."
+msgstr ""
 
 #. placeholder {0}: templates[previewTemplate].name
 #: src/routes/builder/$resumeId/-components/page-canvas.tsx
@@ -15540,6 +15583,14 @@ msgstr "পড়ুন বেছে নিলে এই চাকরির ব�
 msgid "Read on this device"
 msgstr "এই ডিভাইসে পড়ুন"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. A scanned PDF (really a photo) has no text to read."
+msgstr ""
+
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. Save an older .doc file as .docx first."
+msgstr ""
+
 #: src/features/settings/ai/api-keys.tsx
 msgid "Read only"
 msgstr "শুধুমাত্র-পঠন অ্যাক্সেস"
@@ -15588,10 +15639,6 @@ msgstr "স্ব-হোস্টিং গাইড পড়ুন"
 #: src/features/documents/import/import-page.tsx
 msgid "Read with AI"
 msgstr "AI দিয়ে পড়ুন"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Read with your AI connection. Save an older .doc file as .docx first."
-msgstr "আপনার AI সংযোগ দিয়ে পড়া হয়। পুরোনো .doc ফাইল আগে .docx হিসেবে সংরক্ষণ করুন।"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Read your email address."
@@ -15694,10 +15741,6 @@ msgstr "আপনার শেয়ার করা বিষয় পড়�
 #: src/features/applications/components/add-application-dialog.tsx
 msgid "Reading without AI couldn't be confirmed. Retry, update your server, or enter the details manually."
 msgstr "AI ছাড়া পড়া সম্ভব কি না নিশ্চিত করা যায়নি। আবার চেষ্টা করুন, সার্ভার আপডেট করুন অথবা তথ্য হাতে লিখুন।"
-
-#: src/features/resume/import/read-file.ts
-msgid "Reading Word files needs an AI provider. Set one up in Settings, or import a PDF or JSON file instead."
-msgstr "Word ফাইল পড়ার জন্য একজন AI প্রদানকারীর প্রয়োজন। সেটিংসে একটি সেট আপ করুন বা পরিবর্তে একটি PDF বা JSON ফাইল আমদানি করুন৷"
 
 #: src/features/settings/ai/web-access.tsx
 msgid "Reading works"
@@ -18952,6 +18995,10 @@ msgstr "প্রতিটি একটি সুনির্দিষ্ট ক
 msgid "Start from"
 msgstr "থেকে শুরু করুন"
 
+#: src/features/documents/documents-page.tsx
+msgid "Start from a blank page"
+msgstr ""
+
 #: src/features/documents/new-document-dialog.tsx
 msgid "Start from an earlier letter"
 msgstr "আগের একটি লেটার থেকে শুরু করুন"
@@ -19448,6 +19495,10 @@ msgstr "বাড়িতে করার কাজ"
 msgid "Talk it through with the coach"
 msgstr "কোচের সাথে আলোচনা করুন"
 
+#: src/features/documents/documents-page.tsx
+msgid "Talk to the coach"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Tamil"
 msgstr "তামিল"
@@ -19509,6 +19560,10 @@ msgstr "আপনার নেতৃত্বে হওয়া একটি �
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "এমন একটি সময়ের কথা বলুন যখন কোনো সহকর্মীর সাথে আপনার মতের অমিল হয়েছিল। কীভাবে তা মিটিয়েছিলেন?"
+
+#: src/features/documents/documents-page.tsx
+msgid "Tell the coach what you've done and approve it. Then it can fill your résumé for you."
+msgstr ""
 
 #: src/features/auth/layout.tsx
 msgid "Tell your story once. Use it for your résumé and LinkedIn."
@@ -19637,6 +19692,10 @@ msgstr "টেক্সট লেয়ার পাওয়া গেছে ·
 #: src/features/resume/editor/check/parser-view.tsx
 msgid "text layer found · 2 columns"
 msgstr "টেক্সট লেয়ার পাওয়া গেছে · ২ কলাম"
+
+#: src/features/resume/import/read-file.ts
+msgid "text read"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Text sits in the header or footer area."
@@ -19937,6 +19996,10 @@ msgstr "LinkedIn আপনাকে যে ডেটা আর্কাইভ �
 #: src/features/documents/import/import-page.tsx
 msgid "The data archive LinkedIn sends you. Read on this device."
 msgstr "LinkedIn আপনাকে যে ডেটা আর্কাইভ পাঠায়। এই ডিভাইসে পড়া হয়।"
+
+#: src/features/documents/documents-page.tsx
+msgid "The Design tab changes colours and layout."
+msgstr ""
 
 #: src/features/ats-checker/checker.tsx
 msgid "The details"
@@ -20852,6 +20915,10 @@ msgstr "এই সংস্করণ"
 msgid "This week"
 msgstr "এই সপ্তাহ"
 
+#: src/features/resume/import/read-file.ts
+msgid "This Word file has no text to read. Try saving it as a PDF, or start blank and paste sections in."
+msgstr ""
+
 #: src/features/career/workspace/shell.tsx
 msgid "This workspace couldn't be loaded."
 msgstr "এই ওয়ার্কস্পেসটি লোড করা যায়নি।"
@@ -21175,7 +21242,6 @@ msgid "Try {0}"
 msgstr "{0} চেষ্টা করুন"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 msgid "Try a sample"
 msgstr "একটি নমুনা চেষ্টা করুন"
 
@@ -21634,9 +21700,17 @@ msgstr "আপনার জীবনবৃত্তান্ত আপডেট 
 msgid "Upload .csv"
 msgstr ".csv ফাইল আপলোড করুন"
 
+#: src/features/documents/documents-page.tsx
+msgid "Upload my résumé"
+msgstr ""
+
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Upload photo"
 msgstr "ছবি আপলোড করুন"
+
+#: src/features/documents/documents-page.tsx
+msgid "Upload your PDF or Word file. We read it for you, and you check it before anything is saved."
+msgstr ""
 
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Uploading photo…"
@@ -22826,10 +22900,6 @@ msgid "Without one, you fill in the recipient yourself and drafting uses only yo
 msgstr "একটি ছাড়া, আপনি নিজেই প্রাপক পূরণ করেন এবং ড্রাফটিং শুধুমাত্র আপনার জীবনবৃত্তান্ত ব্যবহার করে।"
 
 #: src/features/documents/import/import-page.tsx
-msgid "Word files and scanned PDFs are read with AI."
-msgstr "Word ফাইল ও স্ক্যান করা PDF AI দিয়ে পড়া হয়।"
-
-#: src/features/documents/import/import-page.tsx
 msgid "Word files are read with AI. The file is sent to your AI connection."
 msgstr "Word ফাইল AI দিয়ে পড়া হয়। ফাইলটি আপনার AI সংযোগে পাঠানো হয়।"
 
@@ -23548,6 +23618,10 @@ msgstr "আপনার জীবনবৃত্তান্তের অনু�
 msgid "Your resume has been updated."
 msgstr "আপনার জীবনবৃত্তান্ত আপডেট করা হয়েছে।"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Your résumé is read on this device, for free. Nothing is sent anywhere."
+msgstr ""
+
 #: src/libs/orpc/ai-consent.ts
 msgid "Your resume text, selected passages, and check findings."
 msgstr "আপনার জীবনবৃত্তান্তের টেক্সট, নির্বাচিত অংশগুলো এবং যাচাইয়ের ফলাফল।"
@@ -23559,10 +23633,6 @@ msgstr "আপনার জীবনবৃত্তান্তে \"I\" এব�
 #: src/features/homepage/share.tsx
 msgid "Your resume, live at"
 msgstr "আপনার জীবনবৃত্তান্ত, লাইভ এ"
-
-#: src/features/documents/documents-page.tsx
-msgid "Your resumes and cover letters live here"
-msgstr "আপনার জীবনবৃত্তান্ত ও কভার লেটার এখানে থাকে"
 
 #: src/features/ai/set-up-ai.tsx
 msgid "Your saved connections need attention. Fix them in <0>Settings › AI</0>, or add one here."

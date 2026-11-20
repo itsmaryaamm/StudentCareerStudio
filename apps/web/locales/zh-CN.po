@@ -1399,6 +1399,10 @@ msgstr "{earlier} · 文字"
 msgid "{entries, plural, one {# entry} other {# entries}}"
 msgstr "{entries, plural, one {#条目} other {# 条目}}"
 
+#: src/features/documents/documents-page.tsx
+msgid "{entries, plural, one {Uses the # thing you approved. Each one becomes a line you can edit.} other {Uses the # things you approved. Each one becomes a line you can edit.}}"
+msgstr ""
+
 #: src/features/resume/editor/check/issues.ts
 msgid "{entry} doesn't say when. Dates place it on your timeline."
 msgstr "{entry} 没有说何时。日期将其放在您的时间轴上。"
@@ -1999,6 +2003,10 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 条评论，已处理"
 
+#: src/features/documents/documents-page.tsx
+msgid "1. Check it."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 到 11 最易阅读"
@@ -2033,6 +2041,10 @@ msgstr "提前 2 小时"
 msgid "2–3 sentences reads best"
 msgstr "2-3 句话阅读效果最佳"
 
+#: src/features/documents/documents-page.tsx
+msgid "2. Pick a look."
+msgstr ""
+
 #: src/features/homepage/check.tsx
 #: src/features/homepage/sheet.tsx
 msgid "2013 – 2017"
@@ -2059,6 +2071,10 @@ msgstr "提前 24 小时"
 #: src/features/homepage/prepare.tsx
 msgid "3 supported · 1 partly · 1 missing"
 msgstr "3 项有证据 · 1 项部分 · 1 项缺失"
+
+#: src/features/documents/documents-page.tsx
+msgid "3. Download."
+msgstr ""
 
 #: src/features/settings/ai/api-keys.tsx
 msgid "30 days"
@@ -3045,10 +3061,6 @@ msgstr "AI 功能使用您自己的服务提供商。密钥在服务器上加密
 msgid "AI is ready"
 msgstr "AI 已就绪"
 
-#: src/features/documents/import/import-page.tsx
-msgid "AI optional"
-msgstr "AI 可选"
-
 #: src/features/command-palette/pages/navigation.tsx
 msgid "AI providers"
 msgstr "人工智能提供商"
@@ -3255,6 +3267,10 @@ msgstr "有一款嵌入的字体无法读取。"
 #: src/features/documents/import/import-page.tsx
 msgid "An empty resume to type or paste into, section by section."
 msgstr "空白简历，可逐个部分输入或粘贴。"
+
+#: src/features/documents/documents-page.tsx
+msgid "An empty résumé. You type in each part yourself."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "An entry has no dates"
@@ -4291,6 +4307,14 @@ msgstr "浏览免费的简历模板，比较一栏和两栏布局，并下载示
 msgid "Build a professional resume, download it as PDF or Word, and manage your job search in one place. Free templates, no ads, no paywall."
 msgstr "制作一份专业的简历，将其下载为 PDF 或 Microsoft Word，然后在一个地方管理您的求职。免费模板，无广告，无付费专区。"
 
+#: src/features/documents/documents-page.tsx
+msgid "Build it from what I told the coach"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Build my résumé"
+msgstr ""
+
 #: src/features/homepage/marketing-layout.tsx
 #: src/features/homepage/ui.tsx
 msgid "Build your resume"
@@ -4870,7 +4894,6 @@ msgid "Choose a document; review your question before sending"
 msgstr "选择一个文档；发送前请检查您的问题"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 msgid "Choose a file"
 msgstr "选择一个文件"
@@ -5077,6 +5100,10 @@ msgstr "清空称呼或结束语即可省略。清空结束语也会移除自动
 #: src/features/resume/editor/write/write-panel.tsx
 msgid "Click any block on the page to edit it."
 msgstr "点击页面上的任意区块进行编辑。"
+
+#: src/features/documents/documents-page.tsx
+msgid "Click any part of the page to fix it."
+msgstr ""
 
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Click anything on the page to style it. The rule you're in is outlined on the page."
@@ -6189,6 +6216,10 @@ msgstr "无法将文档移至垃圾箱。请重试。"
 #: src/features/assistant/accept-on-copy.ts
 msgid "Couldn't move this conversation to a copy."
 msgstr "无法将此对话移至副本。"
+
+#: src/features/resume/import/read-file.ts
+msgid "Couldn't open this Word file. Try saving it again as .docx, or as a PDF."
+msgstr ""
 
 #: src/features/career/workspace/application-packet.tsx
 msgid "Couldn't prepare the packet. Reload and review again."
@@ -9813,6 +9844,10 @@ msgstr "匈牙利语"
 msgid "Hyphenation"
 msgstr "连字符"
 
+#: src/features/documents/documents-page.tsx
+msgid "I already have a résumé"
+msgstr ""
+
 #. placeholder {0}: document.posting.company
 #: src/features/assistant/assistant-panel.tsx
 msgid "I can see this {kind} and the {0} posting. Ask how you fit, or get a follow-up email or interview prep."
@@ -10029,14 +10064,6 @@ msgstr "导入您已有的简历，每个部分都会排好供您完善，或从
 #: src/features/documents/documents-page.tsx
 msgid "Import the one you have, or start blank."
 msgstr "导入您已有的，或从空白开始。"
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Choose a PDF, Word or JSON file."
-msgstr "导入您已有的简历，每个部分都会排好供您完善，或从空白页开始。请选择 PDF、Word 或 JSON 文件。"
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Drop a PDF, Word or JSON file anywhere here."
-msgstr "导入您已有的简历，每个部分都会排好供您完善，或从空白页开始。将 PDF、Word 或 JSON 文件拖放到此处任意位置。"
 
 #: src/features/applications/components/detail/activity.tsx
 #: src/features/documents/import/import-page.tsx
@@ -11068,6 +11095,10 @@ msgstr "长度本身不是缺陷，也没有放之四海皆准的一页纸规则
 #: src/features/assistant/conversation.tsx
 msgid "Let the assistant search facts and stories you share with all applications, read-only"
 msgstr "允许助手以只读方式搜索您与所有申请共享的事实和故事"
+
+#: src/features/documents/documents-page.tsx
+msgid "Let's make your résumé"
+msgstr ""
 
 #: src/features/settings/ai/mcp.tsx
 msgid "Lets an AI client work with your documents and applications. Sign in from the client, or use an API key."
@@ -12319,6 +12350,10 @@ msgstr "柔和侧栏"
 msgid "My job was to find out why, without adding support work."
 msgstr "我的任务是找出原因，同时不增加支持工作。"
 
+#: src/features/documents/use-start-document.ts
+msgid "My résumé"
+msgstr ""
+
 #. Label for full name input on registration form
 #: src/dialogs/resume/index.tsx
 #: src/features/applications/components/detail/contacts.tsx
@@ -12437,10 +12472,6 @@ msgstr "白底近黑文字"
 #: src/routes/builder/$resumeId/-components/design-panel.tsx
 msgid "Near-black text on white prints cleanly and is what applicant tracking systems expect."
 msgstr "白底近黑文字打印清晰，也是申请人跟踪系统所期望的。"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Needs AI"
-msgstr "需要 AI"
 
 #: src/features/assistant/chat-chrome.tsx
 #: src/features/settings/ai/providers.tsx
@@ -13683,10 +13714,6 @@ msgstr "保存在此申请中，包括问题、您的回答以及效果"
 msgid "On this device"
 msgstr "在此设备上"
 
-#: src/features/documents/import/import-page.tsx
-msgid "On this device, or with AI for columns and tables. A scanned PDF has no text to read on this device."
-msgstr "在此设备上读取，或使用 AI 处理分栏和表格。扫描版 PDF 没有可在此设备上读取的文本。"
-
 #: src/features/assistant/assistant-panel.tsx
 msgid "On this resume, without AI"
 msgstr "在这份简历上，不使用 AI"
@@ -14070,6 +14097,18 @@ msgstr "从您的姓名和联系方式开始。无需先填写任何内容。"
 msgctxt "Template style tag"
 msgid "Operations"
 msgstr "运营"
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 1"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 2"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 3"
+msgstr ""
 
 #: src/features/career/knowledge/stories.tsx
 #: src/features/career/workspace/prepare-review.tsx
@@ -14543,10 +14582,6 @@ msgstr "PDF 下载已开启"
 msgid "PDF import"
 msgstr "导入 PDF"
 
-#: src/features/documents/import/import-page.tsx
-msgid "PDF, JSON and LinkedIn files import on this device without it."
-msgstr "PDF、JSON 和 LinkedIn 文件无需它即可在此设备上导入。"
-
 #: src/features/homepage/faq.tsx
 msgid "PDF, Word (DOCX), Markdown and JSON. The JSON export imports back into any Reactive Resume, including one you host yourself, so your data is never locked in."
 msgstr "PDF, Word （DOCX), Markdown 和 JSON。这 JSON 出口进口回到任何 Reactive Resume，包括您自己托管的数据，因此您的数据永远不会被锁定。"
@@ -14678,6 +14713,10 @@ msgstr "选定一种格式，并在所有地方保持一致。"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the background color"
 msgstr "选择背景颜色"
+
+#: src/features/documents/documents-page.tsx
+msgid "Pick the easiest way for you. You can change everything afterwards."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the text color"
@@ -15047,6 +15086,10 @@ msgstr "预设"
 #: src/components/input/chip-input.tsx
 msgid "Press <0>{RETURN_KEY}</0> to add or save the current keyword."
 msgstr "按 <0>{RETURN_KEY}</0> 添加或保存当前关键词。"
+
+#: src/features/documents/documents-page.tsx
+msgid "Press Download PDF when you're happy."
+msgstr ""
 
 #. placeholder {0}: templates[previewTemplate].name
 #: src/routes/builder/$resumeId/-components/page-canvas.tsx
@@ -15540,6 +15583,14 @@ msgstr "读取会将此职位公告发送到 {0} · {1}。公开链接还会发�
 msgid "Read on this device"
 msgstr "在此设备上读取"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. A scanned PDF (really a photo) has no text to read."
+msgstr ""
+
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. Save an older .doc file as .docx first."
+msgstr ""
+
 #: src/features/settings/ai/api-keys.tsx
 msgid "Read only"
 msgstr "只读"
@@ -15588,10 +15639,6 @@ msgstr "阅读自托管指南"
 #: src/features/documents/import/import-page.tsx
 msgid "Read with AI"
 msgstr "使用 AI 读取"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Read with your AI connection. Save an older .doc file as .docx first."
-msgstr "使用您的 AI 连接读取。请先将较旧的 .doc 文件另存为 .docx。"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Read your email address."
@@ -15694,10 +15741,6 @@ msgstr "正在阅读您分享的内容"
 #: src/features/applications/components/add-application-dialog.tsx
 msgid "Reading without AI couldn't be confirmed. Retry, update your server, or enter the details manually."
 msgstr "无法确认是否支持不使用 AI 读取。请重试、更新服务器或手动输入详细信息。"
-
-#: src/features/resume/import/read-file.ts
-msgid "Reading Word files needs an AI provider. Set one up in Settings, or import a PDF or JSON file instead."
-msgstr "读取 Word 文件需要 AI 提供者。在“设置”中进行设置，或者导入 PDF 或 JSON 文件。"
 
 #: src/features/settings/ai/web-access.tsx
 msgid "Reading works"
@@ -18952,6 +18995,10 @@ msgstr "每一条都以具体的动词开头：搭建、领导、降低、迁移
 msgid "Start from"
 msgstr "开始于"
 
+#: src/features/documents/documents-page.tsx
+msgid "Start from a blank page"
+msgstr ""
+
 #: src/features/documents/new-document-dialog.tsx
 msgid "Start from an earlier letter"
 msgstr "从以前的求职信开始"
@@ -19448,6 +19495,10 @@ msgstr "居家作业"
 msgid "Talk it through with the coach"
 msgstr "与教练讨论"
 
+#: src/features/documents/documents-page.tsx
+msgid "Talk to the coach"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Tamil"
 msgstr "泰米尔语"
@@ -19509,6 +19560,10 @@ msgstr "请讲讲一项您主导的产品改进。您的贡献是什么？您是
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "请讲讲您与同事意见不合的一次经历。您是如何解决的？"
+
+#: src/features/documents/documents-page.tsx
+msgid "Tell the coach what you've done and approve it. Then it can fill your résumé for you."
+msgstr ""
 
 #: src/features/auth/layout.tsx
 msgid "Tell your story once. Use it for your résumé and LinkedIn."
@@ -19637,6 +19692,10 @@ msgstr "找到文本层 · 1 栏"
 #: src/features/resume/editor/check/parser-view.tsx
 msgid "text layer found · 2 columns"
 msgstr "找到文本层 · 2 栏"
+
+#: src/features/resume/import/read-file.ts
+msgid "text read"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Text sits in the header or footer area."
@@ -19937,6 +19996,10 @@ msgstr "LinkedIn 发送给您的数据存档会在此设备上读取。"
 #: src/features/documents/import/import-page.tsx
 msgid "The data archive LinkedIn sends you. Read on this device."
 msgstr "LinkedIn 发送给您的数据存档。在此设备上读取。"
+
+#: src/features/documents/documents-page.tsx
+msgid "The Design tab changes colours and layout."
+msgstr ""
 
 #: src/features/ats-checker/checker.tsx
 msgid "The details"
@@ -20852,6 +20915,10 @@ msgstr "此版本"
 msgid "This week"
 msgstr "本周"
 
+#: src/features/resume/import/read-file.ts
+msgid "This Word file has no text to read. Try saving it as a PDF, or start blank and paste sections in."
+msgstr ""
+
 #: src/features/career/workspace/shell.tsx
 msgid "This workspace couldn't be loaded."
 msgstr "无法加载此工作区。"
@@ -21175,7 +21242,6 @@ msgid "Try {0}"
 msgstr "尝试{0}"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 msgid "Try a sample"
 msgstr "尝试样品"
 
@@ -21634,9 +21700,17 @@ msgstr "正在更新你的简历…"
 msgid "Upload .csv"
 msgstr "上传 .csv"
 
+#: src/features/documents/documents-page.tsx
+msgid "Upload my résumé"
+msgstr ""
+
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Upload photo"
 msgstr "上传照片"
+
+#: src/features/documents/documents-page.tsx
+msgid "Upload your PDF or Word file. We read it for you, and you check it before anything is saved."
+msgstr ""
 
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Uploading photo…"
@@ -22826,10 +22900,6 @@ msgid "Without one, you fill in the recipient yourself and drafting uses only yo
 msgstr "如果没有，您需要自己填写收件人，并且起草时仅使用您的简历。"
 
 #: src/features/documents/import/import-page.tsx
-msgid "Word files and scanned PDFs are read with AI."
-msgstr "Word 文件和扫描版 PDF 使用 AI 读取。"
-
-#: src/features/documents/import/import-page.tsx
 msgid "Word files are read with AI. The file is sent to your AI connection."
 msgstr "Word 文件使用 AI 读取。文件会发送到您的 AI 连接。"
 
@@ -23548,6 +23618,10 @@ msgstr "你的简历已复制。"
 msgid "Your resume has been updated."
 msgstr "你的简历已更新。"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Your résumé is read on this device, for free. Nothing is sent anywhere."
+msgstr ""
+
 #: src/libs/orpc/ai-consent.ts
 msgid "Your resume text, selected passages, and check findings."
 msgstr "您的简历文本、所选段落和检查结果。"
@@ -23559,10 +23633,6 @@ msgstr "你的简历使用了“我”和“我的”这类词。"
 #: src/features/homepage/share.tsx
 msgid "Your resume, live at"
 msgstr "您的简历，居住地址"
-
-#: src/features/documents/documents-page.tsx
-msgid "Your resumes and cover letters live here"
-msgstr "您的简历和求职信都在这里"
 
 #: src/features/ai/set-up-ai.tsx
 msgid "Your saved connections need attention. Fix them in <0>Settings › AI</0>, or add one here."

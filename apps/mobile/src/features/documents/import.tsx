@@ -5,7 +5,6 @@ import { useFocusEffect, useLocalSearchParams, useRouter } from "expo-router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { View } from "react-native";
 import Animated from "react-native-reanimated";
-import { needsAIChoice } from "./import-mode";
 import { CollectionState } from "./shared";
 import {
 	createImportedResume,
@@ -110,8 +109,6 @@ function ScopedImportScreen() {
 			if (picked.canceled || !picked.assets[0] || !current()) return;
 			const asset = picked.assets[0];
 			setSelectedFile(asset);
-			if (needsAIChoice(asset.name, ai))
-				throw new Error(t`Word import needs AI. For a local import, export a PDF or JSON file instead.`);
 			setError(undefined);
 			setReading(true);
 			const result = await importer.read(asset, {

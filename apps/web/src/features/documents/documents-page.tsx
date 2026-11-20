@@ -6,7 +6,7 @@ import { t } from "@lingui/core/macro";
 import { Plural, Trans, useLingui } from "@lingui/react/macro";
 import { useHotkey } from "@tanstack/react-hotkeys";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { Link, useNavigate, useRouter } from "@tanstack/react-router";
+import { Link, useNavigate, useRouteContext, useRouter } from "@tanstack/react-router";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { useDebounceValue } from "usehooks-ts";
 import { Button } from "@reactive-resume/ui/components/button";
@@ -34,6 +34,7 @@ import { cn } from "@reactive-resume/utils/style";
 import { LinkApplicationDialog, TagsDialog, useBatchActions } from "./document-actions";
 import { DocumentCard, DocumentRow } from "./document-card";
 import { documentKey } from "./filter";
+import { buildProfileOperations, countProfileEntries } from "./from-profile";
 import { LibraryError } from "./library-error";
 import { useDocumentHistory } from "./library-session";
 import { useNewDocumentsStore } from "./new-documents";
@@ -55,6 +56,8 @@ import { useDialogStore } from "@/dialogs/store";
 import { useShortcutSettings } from "@/features/keyboard-shortcuts/settings";
 import { useShortcutsPage } from "@/features/keyboard-shortcuts/store";
 import { isEditableElementFocused } from "@/features/resume/builder/draft";
+import { useFacts } from "@/features/studio/profile";
+import { useStudioState } from "@/features/studio/shared";
 import { isImeComposing } from "@/libs/keyboard";
 import { orpc } from "@/libs/orpc/client";
 
@@ -766,13 +769,31 @@ type FirstRunProps = {
 	trashCount: number;
 };
 
-/** The first visit: import is the filled button here, and only here. Choose a file opens the file picker itself. */
+/** The first visit: three plain ways to get a résumé, the easiest first. */
 function FirstRun({ onFile, trashCount }: FirstRunProps) {
-	const { startBlank, trySample, creating } = useStartDocument();
+	const { startBlank, fromProfile, creating } = useStartDocument();
 	const inputRef = useRef<HTMLInputElement>(null);
+	const { session } = useRouteContext({ from: "/dashboard" });
+	const { data: facts } = useFacts();
+	const { data: state } = useStudioState();
+	const approved = (facts ?? []).filter((fact) => fact.status === "approved");
+	const entries = countProfileEntries(approved);
+	const contact = (state?.intake as { contact?: { email?: string; phone?: string; linkedin?: string } } | undefined)
+		?.contact;
 
+	const buildFromProfile = () =>
+		void fromProfile(
+			buildProfileOperations(approved, {
+				name: session.user.name,
+				email: contact?.email || session.user.email,
+				phone: contact?.phone,
+				linkedin: contact?.linkedin,
+			}),
+		);
+
+	const card = "grid gap-3 rounded-2xl border border-line bg-surface p-5 text-start";
 	return (
-		<section className="pt-5 transition-[opacity,translate] duration-emphasized ease-enter starting:translate-y-2 starting:opacity-0">
+		<section className="mx-auto max-w-3xl pt-6 transition-[opacity,translate] duration-emphasized ease-enter starting:translate-y-2 starting:opacity-0">
 			<input
 				ref={inputRef}
 				type="file"
@@ -785,45 +806,101 @@ function FirstRun({ onFile, trashCount }: FirstRunProps) {
 					if (file) onFile(file);
 				}}
 			/>
-			<EmptyState
-				title={<Trans>Your resumes and cover letters live here</Trans>}
-				description={
-					// Touch can't drop files, so it reads "Choose" there.
-					<>
-						<span className="pointer-coarse:hidden">
-							<Trans>
-								Import the resume you have and every section is laid out for you to refine, or start from a blank page.
-								Drop a PDF, Word or JSON file anywhere here.
-							</Trans>
-						</span>
-						<span className="hidden pointer-coarse:inline">
-							<Trans>
-								Import the resume you have and every section is laid out for you to refine, or start from a blank page.
-								Choose a PDF, Word or JSON file.
-							</Trans>
-						</span>
-					</>
-				}
-				action={
-					<Button onClick={() => inputRef.current?.click()}>
+			<h2 className="t-page-title">
+				<Trans>Let's make your résumé</Trans>
+			</h2>
+			<p className="mt-1 text-ink-2">
+				<Trans>Pick the easiest way for you. You can change everything afterwards.</Trans>
+			</p>
+
+			<div className="mt-6 grid gap-4 sm:grid-cols-3">
+				<div className={card}>
+					<span className="text-xs font-semibold tracking-wide text-accent-text uppercase">
+						<Trans>Option 1</Trans>
+					</span>
+					<h3 className="t-heading">
+						<Trans>I already have a résumé</Trans>
+					</h3>
+					<p className="text-sm text-ink-2">
+						<Trans>Upload your PDF or Word file. We read it for you, and you check it before anything is saved.</Trans>
+					</p>
+					<Button disabled={creating} onClick={() => inputRef.current?.click()}>
 						<Icon name="file-arrow-up" size={18} />
-						<Trans>Choose a file</Trans>
+						<Trans>Upload my résumé</Trans>
 					</Button>
-				}
-				secondary={
-					<>
-						{/* A peer of importing, not a footnote: many people start from nothing. */}
-						<Button variant="secondary" disabled={creating} onClick={() => void startBlank()}>
-							<Trans>Start blank</Trans>
-						</Button>
-						<Button variant="ghost" disabled={creating} onClick={() => void trySample()}>
-							<Trans>Try a sample</Trans>
-						</Button>
-					</>
-				}
-			/>
+				</div>
+
+				<div className={card}>
+					<span className="text-xs font-semibold tracking-wide text-accent-text uppercase">
+						<Trans>Option 2</Trans>
+					</span>
+					<h3 className="t-heading">
+						<Trans>Build it from what I told the coach</Trans>
+					</h3>
+					{entries > 0 ? (
+						<>
+							<p className="text-sm text-ink-2">
+								<Plural
+									value={entries}
+									one="Uses the # thing you approved. Each one becomes a line you can edit."
+									other="Uses the # things you approved. Each one becomes a line you can edit."
+								/>
+							</p>
+							<Button variant="secondary" disabled={creating} onClick={buildFromProfile}>
+								<Trans>Build my résumé</Trans>
+							</Button>
+						</>
+					) : (
+						<>
+							<p className="text-sm text-ink-2">
+								<Trans>Tell the coach what you've done and approve it. Then it can fill your résumé for you.</Trans>
+							</p>
+							<Button variant="secondary" render={<Link to="/dashboard/chat" />}>
+								<Trans>Talk to the coach</Trans>
+							</Button>
+						</>
+					)}
+				</div>
+
+				<div className={card}>
+					<span className="text-xs font-semibold tracking-wide text-accent-text uppercase">
+						<Trans>Option 3</Trans>
+					</span>
+					<h3 className="t-heading">
+						<Trans>Start from a blank page</Trans>
+					</h3>
+					<p className="text-sm text-ink-2">
+						<Trans>An empty résumé. You type in each part yourself.</Trans>
+					</p>
+					<Button variant="secondary" disabled={creating} onClick={() => void startBlank()}>
+						<Trans>Start blank</Trans>
+					</Button>
+				</div>
+			</div>
+
+			<ol className="mt-8 grid gap-2 text-sm text-ink-2 sm:grid-cols-3">
+				<li>
+					<strong className="text-ink">
+						<Trans>1. Check it.</Trans>
+					</strong>{" "}
+					<Trans>Click any part of the page to fix it.</Trans>
+				</li>
+				<li>
+					<strong className="text-ink">
+						<Trans>2. Pick a look.</Trans>
+					</strong>{" "}
+					<Trans>The Design tab changes colours and layout.</Trans>
+				</li>
+				<li>
+					<strong className="text-ink">
+						<Trans>3. Download.</Trans>
+					</strong>{" "}
+					<Trans>Press Download PDF when you're happy.</Trans>
+				</li>
+			</ol>
+
 			{trashCount > 0 && (
-				<p className="mt-4 flex flex-wrap items-center gap-x-2 text-sm text-ink-2">
+				<p className="mt-6 flex flex-wrap items-center gap-x-2 text-sm text-ink-2">
 					<Plural value={trashCount} one="Trash has # document." other="Trash has # documents." />
 					<Link to="/dashboard/trash" className="font-medium underline underline-offset-2">
 						<Trans>Open Trash</Trans>

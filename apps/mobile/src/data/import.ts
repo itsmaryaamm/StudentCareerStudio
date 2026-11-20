@@ -121,6 +121,16 @@ export async function readImportFile(file: DocumentPickerAsset, options: ImportO
 			onStep?.("parsing");
 			const { parseLinkedInExport } = await import("@reactive-resume/import/linkedin");
 			data = parseLinkedInExport(await source.bytes());
+		} else if (extension === "docx" && !options.ai && !options.connection) {
+			// No AI connection at all: a Word file's text is read and sorted into sections on the device, free.
+			onStep?.("parsing");
+			const text = extractDocxText(await source.bytes());
+			check();
+			if (!text.trim()) throw new DocumentImportError("unreadable", file);
+			const { parseResumeText } = await import("@reactive-resume/import/plain-text");
+			data = parseResumeText(text);
+			lines = text.split("\n");
+			compared = true;
 		} else if (extension === "pdf" || extension === "docx") {
 			if (options.ai || extension === "docx") {
 				if (!options.connection || !(await ensureApproved("file", options.connection)))

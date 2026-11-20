@@ -1399,6 +1399,10 @@ msgstr ""
 msgid "{entries, plural, one {# entry} other {# entries}}"
 msgstr ""
 
+#: src/features/documents/documents-page.tsx
+msgid "{entries, plural, one {Uses the # thing you approved. Each one becomes a line you can edit.} other {Uses the # things you approved. Each one becomes a line you can edit.}}"
+msgstr ""
+
 #: src/features/resume/editor/check/issues.ts
 msgid "{entry} doesn't say when. Dates place it on your timeline."
 msgstr ""
@@ -1999,6 +2003,10 @@ msgstr ""
 msgid "1 comment, done"
 msgstr ""
 
+#: src/features/documents/documents-page.tsx
+msgid "1. Check it."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr ""
@@ -2033,6 +2041,10 @@ msgstr ""
 msgid "2–3 sentences reads best"
 msgstr ""
 
+#: src/features/documents/documents-page.tsx
+msgid "2. Pick a look."
+msgstr ""
+
 #: src/features/homepage/check.tsx
 #: src/features/homepage/sheet.tsx
 msgid "2013 – 2017"
@@ -2058,6 +2070,10 @@ msgstr ""
 
 #: src/features/homepage/prepare.tsx
 msgid "3 supported · 1 partly · 1 missing"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "3. Download."
 msgstr ""
 
 #: src/features/settings/ai/api-keys.tsx
@@ -3043,10 +3059,6 @@ msgstr ""
 msgid "AI is ready"
 msgstr "AI is ready"
 
-#: src/features/documents/import/import-page.tsx
-msgid "AI optional"
-msgstr ""
-
 #: src/features/command-palette/pages/navigation.tsx
 msgid "AI providers"
 msgstr ""
@@ -3252,6 +3264,10 @@ msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "An empty resume to type or paste into, section by section."
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "An empty résumé. You type in each part yourself."
 msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
@@ -4289,6 +4305,14 @@ msgstr ""
 msgid "Build a professional resume, download it as PDF or Word, and manage your job search in one place. Free templates, no ads, no paywall."
 msgstr ""
 
+#: src/features/documents/documents-page.tsx
+msgid "Build it from what I told the coach"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Build my résumé"
+msgstr ""
+
 #: src/features/homepage/marketing-layout.tsx
 #: src/features/homepage/ui.tsx
 msgid "Build your resume"
@@ -4868,7 +4892,6 @@ msgid "Choose a document; review your question before sending"
 msgstr ""
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 msgid "Choose a file"
 msgstr ""
@@ -5074,6 +5097,10 @@ msgstr ""
 
 #: src/features/resume/editor/write/write-panel.tsx
 msgid "Click any block on the page to edit it."
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Click any part of the page to fix it."
 msgstr ""
 
 #: src/features/resume/stylesheet/editor.tsx
@@ -6186,6 +6213,10 @@ msgstr ""
 
 #: src/features/assistant/accept-on-copy.ts
 msgid "Couldn't move this conversation to a copy."
+msgstr ""
+
+#: src/features/resume/import/read-file.ts
+msgid "Couldn't open this Word file. Try saving it again as .docx, or as a PDF."
 msgstr ""
 
 #: src/features/career/workspace/application-packet.tsx
@@ -9810,6 +9841,10 @@ msgstr ""
 msgid "Hyphenation"
 msgstr ""
 
+#: src/features/documents/documents-page.tsx
+msgid "I already have a résumé"
+msgstr ""
+
 #. placeholder {0}: document.posting.company
 #: src/features/assistant/assistant-panel.tsx
 msgid "I can see this {kind} and the {0} posting. Ask how you fit, or get a follow-up email or interview prep."
@@ -10025,14 +10060,6 @@ msgstr ""
 
 #: src/features/documents/documents-page.tsx
 msgid "Import the one you have, or start blank."
-msgstr ""
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Choose a PDF, Word or JSON file."
-msgstr ""
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Drop a PDF, Word or JSON file anywhere here."
 msgstr ""
 
 #: src/features/applications/components/detail/activity.tsx
@@ -11064,6 +11091,10 @@ msgstr ""
 
 #: src/features/assistant/conversation.tsx
 msgid "Let the assistant search facts and stories you share with all applications, read-only"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Let's make your résumé"
 msgstr ""
 
 #: src/features/settings/ai/mcp.tsx
@@ -12316,6 +12347,10 @@ msgstr ""
 msgid "My job was to find out why, without adding support work."
 msgstr ""
 
+#: src/features/documents/use-start-document.ts
+msgid "My résumé"
+msgstr ""
+
 #. Label for full name input on registration form
 #: src/dialogs/resume/index.tsx
 #: src/features/applications/components/detail/contacts.tsx
@@ -12433,10 +12468,6 @@ msgstr ""
 
 #: src/routes/builder/$resumeId/-components/design-panel.tsx
 msgid "Near-black text on white prints cleanly and is what applicant tracking systems expect."
-msgstr ""
-
-#: src/features/documents/import/import-page.tsx
-msgid "Needs AI"
 msgstr ""
 
 #: src/features/assistant/chat-chrome.tsx
@@ -13680,10 +13711,6 @@ msgstr ""
 msgid "On this device"
 msgstr ""
 
-#: src/features/documents/import/import-page.tsx
-msgid "On this device, or with AI for columns and tables. A scanned PDF has no text to read on this device."
-msgstr ""
-
 #: src/features/assistant/assistant-panel.tsx
 msgid "On this resume, without AI"
 msgstr ""
@@ -14066,6 +14093,18 @@ msgstr ""
 #: src/dialogs/resume/template/data.ts
 msgctxt "Template style tag"
 msgid "Operations"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 1"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 2"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 3"
 msgstr ""
 
 #: src/features/career/knowledge/stories.tsx
@@ -14540,10 +14579,6 @@ msgstr ""
 msgid "PDF import"
 msgstr ""
 
-#: src/features/documents/import/import-page.tsx
-msgid "PDF, JSON and LinkedIn files import on this device without it."
-msgstr ""
-
 #: src/features/homepage/faq.tsx
 msgid "PDF, Word (DOCX), Markdown and JSON. The JSON export imports back into any Reactive Resume, including one you host yourself, so your data is never locked in."
 msgstr ""
@@ -14674,6 +14709,10 @@ msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the background color"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Pick the easiest way for you. You can change everything afterwards."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
@@ -15043,6 +15082,10 @@ msgstr ""
 
 #: src/components/input/chip-input.tsx
 msgid "Press <0>{RETURN_KEY}</0> to add or save the current keyword."
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Press Download PDF when you're happy."
 msgstr ""
 
 #. placeholder {0}: templates[previewTemplate].name
@@ -15537,6 +15580,14 @@ msgstr ""
 msgid "Read on this device"
 msgstr ""
 
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. A scanned PDF (really a photo) has no text to read."
+msgstr ""
+
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. Save an older .doc file as .docx first."
+msgstr ""
+
 #: src/features/settings/ai/api-keys.tsx
 msgid "Read only"
 msgstr ""
@@ -15584,10 +15635,6 @@ msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "Read with AI"
-msgstr ""
-
-#: src/features/documents/import/import-page.tsx
-msgid "Read with your AI connection. Save an older .doc file as .docx first."
 msgstr ""
 
 #: src/features/auth/pages/consent.tsx
@@ -15690,10 +15737,6 @@ msgstr ""
 
 #: src/features/applications/components/add-application-dialog.tsx
 msgid "Reading without AI couldn't be confirmed. Retry, update your server, or enter the details manually."
-msgstr ""
-
-#: src/features/resume/import/read-file.ts
-msgid "Reading Word files needs an AI provider. Set one up in Settings, or import a PDF or JSON file instead."
 msgstr ""
 
 #: src/features/settings/ai/web-access.tsx
@@ -18949,6 +18992,10 @@ msgstr ""
 msgid "Start from"
 msgstr ""
 
+#: src/features/documents/documents-page.tsx
+msgid "Start from a blank page"
+msgstr ""
+
 #: src/features/documents/new-document-dialog.tsx
 msgid "Start from an earlier letter"
 msgstr ""
@@ -19445,6 +19492,10 @@ msgstr ""
 msgid "Talk it through with the coach"
 msgstr ""
 
+#: src/features/documents/documents-page.tsx
+msgid "Talk to the coach"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Tamil"
 msgstr ""
@@ -19505,6 +19556,10 @@ msgstr ""
 
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Tell the coach what you've done and approve it. Then it can fill your résumé for you."
 msgstr ""
 
 #: src/features/auth/layout.tsx
@@ -19633,6 +19688,10 @@ msgstr ""
 
 #: src/features/resume/editor/check/parser-view.tsx
 msgid "text layer found · 2 columns"
+msgstr ""
+
+#: src/features/resume/import/read-file.ts
+msgid "text read"
 msgstr ""
 
 #: src/features/ats-checker/messages.ts
@@ -19933,6 +19992,10 @@ msgstr ""
 
 #: src/features/documents/import/import-page.tsx
 msgid "The data archive LinkedIn sends you. Read on this device."
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "The Design tab changes colours and layout."
 msgstr ""
 
 #: src/features/ats-checker/checker.tsx
@@ -20849,6 +20912,10 @@ msgstr ""
 msgid "This week"
 msgstr ""
 
+#: src/features/resume/import/read-file.ts
+msgid "This Word file has no text to read. Try saving it as a PDF, or start blank and paste sections in."
+msgstr ""
+
 #: src/features/career/workspace/shell.tsx
 msgid "This workspace couldn't be loaded."
 msgstr ""
@@ -21172,7 +21239,6 @@ msgid "Try {0}"
 msgstr ""
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 msgid "Try a sample"
 msgstr ""
 
@@ -21631,8 +21697,16 @@ msgstr ""
 msgid "Upload .csv"
 msgstr ""
 
+#: src/features/documents/documents-page.tsx
+msgid "Upload my résumé"
+msgstr ""
+
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Upload photo"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Upload your PDF or Word file. We read it for you, and you check it before anything is saved."
 msgstr ""
 
 #: src/features/resume/editor/write/picture-settings.tsx
@@ -22823,10 +22897,6 @@ msgid "Without one, you fill in the recipient yourself and drafting uses only yo
 msgstr ""
 
 #: src/features/documents/import/import-page.tsx
-msgid "Word files and scanned PDFs are read with AI."
-msgstr ""
-
-#: src/features/documents/import/import-page.tsx
 msgid "Word files are read with AI. The file is sent to your AI connection."
 msgstr ""
 
@@ -23545,6 +23615,10 @@ msgstr ""
 msgid "Your resume has been updated."
 msgstr ""
 
+#: src/features/documents/import/import-page.tsx
+msgid "Your résumé is read on this device, for free. Nothing is sent anywhere."
+msgstr ""
+
 #: src/libs/orpc/ai-consent.ts
 msgid "Your resume text, selected passages, and check findings."
 msgstr ""
@@ -23555,10 +23629,6 @@ msgstr ""
 
 #: src/features/homepage/share.tsx
 msgid "Your resume, live at"
-msgstr ""
-
-#: src/features/documents/documents-page.tsx
-msgid "Your resumes and cover letters live here"
 msgstr ""
 
 #: src/features/ai/set-up-ai.tsx

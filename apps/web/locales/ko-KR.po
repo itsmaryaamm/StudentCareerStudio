@@ -1399,6 +1399,10 @@ msgstr "{earlier} · 입력"
 msgid "{entries, plural, one {# entry} other {# entries}}"
 msgstr "{entries, plural, one {# 항목} other {# 항목}}"
 
+#: src/features/documents/documents-page.tsx
+msgid "{entries, plural, one {Uses the # thing you approved. Each one becomes a line you can edit.} other {Uses the # things you approved. Each one becomes a line you can edit.}}"
+msgstr ""
+
 #: src/features/resume/editor/check/issues.ts
 msgid "{entry} doesn't say when. Dates place it on your timeline."
 msgstr "{entry}는 언제인지 말하지 않습니다. 날짜는 타임라인에 표시됩니다."
@@ -1999,6 +2003,10 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "댓글 1개, 처리됨"
 
+#: src/features/documents/documents-page.tsx
+msgid "1. Check it."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10~11이 가장 읽기 좋습니다"
@@ -2033,6 +2041,10 @@ msgstr "2시간 전"
 msgid "2–3 sentences reads best"
 msgstr "2~3개의 문장이 가장 잘 읽힙니다."
 
+#: src/features/documents/documents-page.tsx
+msgid "2. Pick a look."
+msgstr ""
+
 #: src/features/homepage/check.tsx
 #: src/features/homepage/sheet.tsx
 msgid "2013 – 2017"
@@ -2059,6 +2071,10 @@ msgstr "24시간 전"
 #: src/features/homepage/prepare.tsx
 msgid "3 supported · 1 partly · 1 missing"
 msgstr "3개 뒷받침됨 · 1개 일부 · 1개 없음"
+
+#: src/features/documents/documents-page.tsx
+msgid "3. Download."
+msgstr ""
 
 #: src/features/settings/ai/api-keys.tsx
 msgid "30 days"
@@ -3045,10 +3061,6 @@ msgstr "AI 기능은 직접 설정한 제공자를 사용합니다. 키는 서�
 msgid "AI is ready"
 msgstr "AI가 준비되었습니다"
 
-#: src/features/documents/import/import-page.tsx
-msgid "AI optional"
-msgstr "AI 선택 사항"
-
 #: src/features/command-palette/pages/navigation.tsx
 msgid "AI providers"
 msgstr "AI 제공업체"
@@ -3255,6 +3267,10 @@ msgstr "임베드된 폰트를 읽을 수 없습니다."
 #: src/features/documents/import/import-page.tsx
 msgid "An empty resume to type or paste into, section by section."
 msgstr "섹션별로 입력하거나 붙여넣을 수 있는 빈 이력서입니다."
+
+#: src/features/documents/documents-page.tsx
+msgid "An empty résumé. You type in each part yourself."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "An entry has no dates"
@@ -4291,6 +4307,14 @@ msgstr "무료 CV 템플릿을 찾아보고, 1열과 2열 레이아웃을 비교
 msgid "Build a professional resume, download it as PDF or Word, and manage your job search in one place. Free templates, no ads, no paywall."
 msgstr "전문적인 이력서를 작성하고 PDF 또는 Microsoft Word로 다운로드하고 한 곳에서 구직 활동을 관리하세요. 무료 템플릿, 광고 없음, 페이월 없음."
 
+#: src/features/documents/documents-page.tsx
+msgid "Build it from what I told the coach"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Build my résumé"
+msgstr ""
+
 #: src/features/homepage/marketing-layout.tsx
 #: src/features/homepage/ui.tsx
 msgid "Build your resume"
@@ -4870,7 +4894,6 @@ msgid "Choose a document; review your question before sending"
 msgstr "서류를 선택하고, 보내기 전에 질문을 검토하세요"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 msgid "Choose a file"
 msgstr "파일을 선택하세요"
@@ -5077,6 +5100,10 @@ msgstr "인사말 또는 맺음말을 생략하려면 내용을 지우세요. �
 #: src/features/resume/editor/write/write-panel.tsx
 msgid "Click any block on the page to edit it."
 msgstr "페이지의 블록을 클릭하면 편집할 수 있습니다."
+
+#: src/features/documents/documents-page.tsx
+msgid "Click any part of the page to fix it."
+msgstr ""
 
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Click anything on the page to style it. The rule you're in is outlined on the page."
@@ -6189,6 +6216,10 @@ msgstr "서류를 휴지통으로 이동할 수 없습니다. 다시 시도해 �
 #: src/features/assistant/accept-on-copy.ts
 msgid "Couldn't move this conversation to a copy."
 msgstr "이 대화를 사본으로 옮길 수 없습니다."
+
+#: src/features/resume/import/read-file.ts
+msgid "Couldn't open this Word file. Try saving it again as .docx, or as a PDF."
+msgstr ""
 
 #: src/features/career/workspace/application-packet.tsx
 msgid "Couldn't prepare the packet. Reload and review again."
@@ -9813,6 +9844,10 @@ msgstr "헝가리어"
 msgid "Hyphenation"
 msgstr "단어 분할"
 
+#: src/features/documents/documents-page.tsx
+msgid "I already have a résumé"
+msgstr ""
+
 #. placeholder {0}: document.posting.company
 #: src/features/assistant/assistant-panel.tsx
 msgid "I can see this {kind} and the {0} posting. Ask how you fit, or get a follow-up email or interview prep."
@@ -10029,14 +10064,6 @@ msgstr "가지고 있는 이력서를 가져오면 모든 섹션이 정리되어
 #: src/features/documents/documents-page.tsx
 msgid "Import the one you have, or start blank."
 msgstr "가지고 있는 파일을 가져오거나, 빈 문서로 시작하세요."
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Choose a PDF, Word or JSON file."
-msgstr "가지고 있는 이력서를 가져오면 모든 섹션이 정리되어 다듬을 수 있습니다. 빈 페이지에서 시작할 수도 있습니다. PDF, Word 또는 JSON 파일을 선택하세요."
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Drop a PDF, Word or JSON file anywhere here."
-msgstr "가지고 있는 이력서를 가져오면 모든 섹션이 정리되어 다듬을 수 있습니다. 빈 페이지에서 시작할 수도 있습니다. 여기 어디에나 PDF, Word 또는 JSON 파일을 놓으세요."
 
 #: src/features/applications/components/detail/activity.tsx
 #: src/features/documents/import/import-page.tsx
@@ -11068,6 +11095,10 @@ msgstr "길이 자체는 결함이 아니며, 보편적인 한 페이지 규칙�
 #: src/features/assistant/conversation.tsx
 msgid "Let the assistant search facts and stories you share with all applications, read-only"
 msgstr "모든 지원과 공유하는 사실과 스토리를 어시스턴트가 읽기 전용으로 검색하도록 허용"
+
+#: src/features/documents/documents-page.tsx
+msgid "Let's make your résumé"
+msgstr ""
 
 #: src/features/settings/ai/mcp.tsx
 msgid "Lets an AI client work with your documents and applications. Sign in from the client, or use an API key."
@@ -12319,6 +12350,10 @@ msgstr "톤다운 사이드바"
 msgid "My job was to find out why, without adding support work."
 msgstr "제 역할은 고객 지원 업무를 늘리지 않고 원인을 찾는 것이었습니다."
 
+#: src/features/documents/use-start-document.ts
+msgid "My résumé"
+msgstr ""
+
 #. Label for full name input on registration form
 #: src/dialogs/resume/index.tsx
 #: src/features/applications/components/detail/contacts.tsx
@@ -12437,10 +12472,6 @@ msgstr "흰 바탕에 검정에 가까운 텍스트"
 #: src/routes/builder/$resumeId/-components/design-panel.tsx
 msgid "Near-black text on white prints cleanly and is what applicant tracking systems expect."
 msgstr "흰 바탕에 검정에 가까운 텍스트는 깔끔하게 인쇄되며 지원자 추적 시스템(ATS)이 기대하는 형식입니다."
-
-#: src/features/documents/import/import-page.tsx
-msgid "Needs AI"
-msgstr "AI 필요"
 
 #: src/features/assistant/chat-chrome.tsx
 #: src/features/settings/ai/providers.tsx
@@ -13683,10 +13714,6 @@ msgstr "이 지원에 질문, 답변, 반응과 함께 저장"
 msgid "On this device"
 msgstr "이 기기에서"
 
-#: src/features/documents/import/import-page.tsx
-msgid "On this device, or with AI for columns and tables. A scanned PDF has no text to read on this device."
-msgstr "이 기기에서 처리하거나, 열과 표는 AI로 처리합니다. 스캔한 PDF에는 이 기기에서 읽을 텍스트가 없습니다."
-
 #: src/features/assistant/assistant-panel.tsx
 msgid "On this resume, without AI"
 msgstr "이 이력서에서, AI 없이"
@@ -14070,6 +14097,18 @@ msgstr "이름과 연락처 정보부터 열립니다. 먼저 채울 것은 없�
 msgctxt "Template style tag"
 msgid "Operations"
 msgstr "운영"
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 1"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 2"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 3"
+msgstr ""
 
 #: src/features/career/knowledge/stories.tsx
 #: src/features/career/workspace/prepare-review.tsx
@@ -14543,10 +14582,6 @@ msgstr "PDF 다운로드 켜짐"
 msgid "PDF import"
 msgstr "PDF 가져오기"
 
-#: src/features/documents/import/import-page.tsx
-msgid "PDF, JSON and LinkedIn files import on this device without it."
-msgstr "PDF, JSON, LinkedIn 파일은 없어도 이 기기에서 가져옵니다."
-
 #: src/features/homepage/faq.tsx
 msgid "PDF, Word (DOCX), Markdown and JSON. The JSON export imports back into any Reactive Resume, including one you host yourself, so your data is never locked in."
 msgstr "PDF, Word (DOCX), Markdown 그리고 JSON. 그만큼 JSON 수출 수입을 다시 어떤 국가로든 Reactive Resume, 귀하가 직접 호스팅하는 것을 포함하여 귀하의 데이터가 결코 잠겨 있지 않습니다."
@@ -14678,6 +14713,10 @@ msgstr "하나의 형식을 정해 모든 곳에 동일하게 사용하세요."
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the background color"
 msgstr "배경색 선택"
+
+#: src/features/documents/documents-page.tsx
+msgid "Pick the easiest way for you. You can change everything afterwards."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the text color"
@@ -15047,6 +15086,10 @@ msgstr "사전 설정"
 #: src/components/input/chip-input.tsx
 msgid "Press <0>{RETURN_KEY}</0> to add or save the current keyword."
 msgstr "<0>{RETURN_KEY}</0> 키를 눌러 현재 키워드를 추가하거나 저장하세요."
+
+#: src/features/documents/documents-page.tsx
+msgid "Press Download PDF when you're happy."
+msgstr ""
 
 #. placeholder {0}: templates[previewTemplate].name
 #: src/routes/builder/$resumeId/-components/page-canvas.tsx
@@ -15540,6 +15583,14 @@ msgstr "읽기를 선택하면 이 채용 공고가 {0} · {1}(으)로 전송됩
 msgid "Read on this device"
 msgstr "이 기기에서 읽기"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. A scanned PDF (really a photo) has no text to read."
+msgstr ""
+
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. Save an older .doc file as .docx first."
+msgstr ""
+
 #: src/features/settings/ai/api-keys.tsx
 msgid "Read only"
 msgstr "읽기 전용 액세스"
@@ -15588,10 +15639,6 @@ msgstr "셀프 호스팅 가이드 읽기"
 #: src/features/documents/import/import-page.tsx
 msgid "Read with AI"
 msgstr "AI로 읽기"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Read with your AI connection. Save an older .doc file as .docx first."
-msgstr "AI 연결로 읽습니다. 오래된 .doc 파일은 먼저 .docx로 저장하세요."
 
 #: src/features/auth/pages/consent.tsx
 msgid "Read your email address."
@@ -15694,10 +15741,6 @@ msgstr "공유한 내용 읽는 중"
 #: src/features/applications/components/add-application-dialog.tsx
 msgid "Reading without AI couldn't be confirmed. Retry, update your server, or enter the details manually."
 msgstr "AI 없이 읽을 수 있는지 확인하지 못했습니다. 다시 시도하거나 서버를 업데이트하거나 세부 정보를 직접 입력하세요."
-
-#: src/features/resume/import/read-file.ts
-msgid "Reading Word files needs an AI provider. Set one up in Settings, or import a PDF or JSON file instead."
-msgstr "Word 파일을 읽으려면 AI 공급자가 필요합니다. 설정에서 설정하거나 대신 PDF 또는 JSON 파일을 가져오세요."
 
 #: src/features/settings/ai/web-access.tsx
 msgid "Reading works"
@@ -18952,6 +18995,10 @@ msgstr "각 항목을 구체적인 동사로 시작하세요: 구축했다, 이�
 msgid "Start from"
 msgstr "다음에서 시작"
 
+#: src/features/documents/documents-page.tsx
+msgid "Start from a blank page"
+msgstr ""
+
 #: src/features/documents/new-document-dialog.tsx
 msgid "Start from an earlier letter"
 msgstr "이전 레터에서 시작"
@@ -19448,6 +19495,10 @@ msgstr "과제 전형"
 msgid "Talk it through with the coach"
 msgstr "코치와 상의하기"
 
+#: src/features/documents/documents-page.tsx
+msgid "Talk to the coach"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Tamil"
 msgstr "타밀어"
@@ -19509,6 +19560,10 @@ msgstr "주도했던 제품 개선 사례를 말씀해 주세요. 어떻게 기�
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "동료와 의견이 달랐던 때를 말씀해 주세요. 어떻게 해결했나요?"
+
+#: src/features/documents/documents-page.tsx
+msgid "Tell the coach what you've done and approve it. Then it can fill your résumé for you."
+msgstr ""
 
 #: src/features/auth/layout.tsx
 msgid "Tell your story once. Use it for your résumé and LinkedIn."
@@ -19637,6 +19692,10 @@ msgstr "텍스트 레이어 발견 · 1열"
 #: src/features/resume/editor/check/parser-view.tsx
 msgid "text layer found · 2 columns"
 msgstr "텍스트 레이어 발견 · 2열"
+
+#: src/features/resume/import/read-file.ts
+msgid "text read"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Text sits in the header or footer area."
@@ -19937,6 +19996,10 @@ msgstr "LinkedIn이 보내 주는 데이터 아카이브는 이 기기에서 읽
 #: src/features/documents/import/import-page.tsx
 msgid "The data archive LinkedIn sends you. Read on this device."
 msgstr "LinkedIn이 보내 주는 데이터 아카이브. 이 기기에서 읽습니다."
+
+#: src/features/documents/documents-page.tsx
+msgid "The Design tab changes colours and layout."
+msgstr ""
 
 #: src/features/ats-checker/checker.tsx
 msgid "The details"
@@ -20852,6 +20915,10 @@ msgstr "이 버전"
 msgid "This week"
 msgstr "이번 주"
 
+#: src/features/resume/import/read-file.ts
+msgid "This Word file has no text to read. Try saving it as a PDF, or start blank and paste sections in."
+msgstr ""
+
 #: src/features/career/workspace/shell.tsx
 msgid "This workspace couldn't be loaded."
 msgstr "이 워크스페이스를 불러올 수 없습니다."
@@ -21175,7 +21242,6 @@ msgid "Try {0}"
 msgstr "{0}를 사용해 보세요"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 msgid "Try a sample"
 msgstr "샘플을 사용해 보세요"
 
@@ -21634,9 +21700,17 @@ msgstr "이력서를 업데이트하는 중입니다…"
 msgid "Upload .csv"
 msgstr ".csv 업로드"
 
+#: src/features/documents/documents-page.tsx
+msgid "Upload my résumé"
+msgstr ""
+
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Upload photo"
 msgstr "사진 업로드"
+
+#: src/features/documents/documents-page.tsx
+msgid "Upload your PDF or Word file. We read it for you, and you check it before anything is saved."
+msgstr ""
 
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Uploading photo…"
@@ -22826,10 +22900,6 @@ msgid "Without one, you fill in the recipient yourself and drafting uses only yo
 msgstr "하나도 없으면 수신자를 직접 입력하고 초안 작성 시 이력서만 사용됩니다."
 
 #: src/features/documents/import/import-page.tsx
-msgid "Word files and scanned PDFs are read with AI."
-msgstr "Word 파일과 스캔한 PDF는 AI로 읽습니다."
-
-#: src/features/documents/import/import-page.tsx
 msgid "Word files are read with AI. The file is sent to your AI connection."
 msgstr "Word 파일은 AI로 읽습니다. 파일이 AI 연결로 전송됩니다."
 
@@ -23548,6 +23618,10 @@ msgstr "이력서가 복제되었습니다."
 msgid "Your resume has been updated."
 msgstr "이력서가 업데이트되었습니다."
 
+#: src/features/documents/import/import-page.tsx
+msgid "Your résumé is read on this device, for free. Nothing is sent anywhere."
+msgstr ""
+
 #: src/libs/orpc/ai-consent.ts
 msgid "Your resume text, selected passages, and check findings."
 msgstr "이력서 텍스트, 선택한 구절, 검토 결과."
@@ -23559,10 +23633,6 @@ msgstr "이력서에서 \"I\"와 \"my\"를 사용하고 있습니다."
 #: src/features/homepage/share.tsx
 msgid "Your resume, live at"
 msgstr "이력서, 라이브"
-
-#: src/features/documents/documents-page.tsx
-msgid "Your resumes and cover letters live here"
-msgstr "이력서와 커버레터가 여기에 보관됩니다"
 
 #: src/features/ai/set-up-ai.tsx
 msgid "Your saved connections need attention. Fix them in <0>Settings › AI</0>, or add one here."

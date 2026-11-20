@@ -198,17 +198,15 @@ it.each([
 	expect(api.parsePdf).toHaveBeenCalledTimes(1);
 });
 
-it("explains Word prerequisites before any upload and retains the file for in-place setup", async () => {
+it("reads a Word file on this device when there is no AI connection", async () => {
 	api.providers.mockResolvedValue([]);
 	mount(new File([new Uint8Array([0x50, 0x4b, 0x03, 0x04])], "resume.docx"));
-	await screen.findByRole("heading", { name: "Ways in without AI" });
-	expect(screen.getByText("Word files and scanned PDFs are read with AI.")).toBeVisible();
-	expect(screen.getByText(/not read, and not sent anywhere/)).toBeVisible();
-	expect(screen.getByRole("button", { name: "Set up AI" })).toBeEnabled();
-	expect(screen.queryByRole("button", { name: "Read with AI" })).toBeNull();
+	expect(
+		await screen.findByText("Your résumé is read on this device, for free. Nothing is sent anywhere."),
+	).toBeVisible();
+	expect(screen.queryByRole("button", { name: "Set up AI" })).toBeNull();
 	expect(api.importResume).not.toHaveBeenCalled();
 	expect(api.parseDocx).not.toHaveBeenCalled();
-	expect(api.readPdfResume).not.toHaveBeenCalled();
 });
 
 it("keeps lookup failure recovery available on Import and retries without creating a document", async () => {

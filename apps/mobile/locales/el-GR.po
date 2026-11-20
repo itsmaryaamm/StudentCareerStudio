@@ -8286,10 +8286,6 @@ msgstr "Word"
 msgid "Word export needs a real server."
 msgstr "Η εξαγωγή Word απαιτεί πραγματικό διακομιστή."
 
-#: src/features/documents/import.tsx
-msgid "Word import needs AI. For a local import, export a PDF or JSON file instead."
-msgstr "Η εισαγωγή Word χρειάζεται AI. Για τοπική εισαγωγή, εξαγάγετε αρχείο PDF ή JSON αντ' αυτού."
-
 #: src/features/public/ats-messages.ts
 msgid "Words run together when the text is extracted."
 msgstr "Οι λέξεις ενώνονται όταν εξάγεται το κείμενο."

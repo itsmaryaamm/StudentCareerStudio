@@ -119,8 +119,8 @@ export function useResumeImport({ initialFile, openLetter, applicationId, locale
 			if (!current()) return;
 			let chosen = mode;
 			if ((kind === "pdf" || kind === "docx") && !chosen) {
-				// With no connection there is nothing to choose for a PDF: it is read on this device.
-				if (kind === "pdf" && !providerState.isUnavailable && !hasUsableProvider) chosen = "local";
+				// With no AI connection there is nothing to choose: PDF and Word files are read on this device.
+				if (!providerState.isUnavailable && !hasUsableProvider) chosen = "local";
 				else {
 					setStep({ name: "choice", file, kind });
 					return;

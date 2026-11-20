@@ -8286,10 +8286,6 @@ msgstr "Word"
 msgid "Word export needs a real server."
 msgstr "Xuất Word cần máy chủ thật."
 
-#: src/features/documents/import.tsx
-msgid "Word import needs AI. For a local import, export a PDF or JSON file instead."
-msgstr "Nhập Word cần AI. Để nhập cục bộ, hãy xuất tệp PDF hoặc JSON thay thế."
-
 #: src/features/public/ats-messages.ts
 msgid "Words run together when the text is extracted."
 msgstr "Các từ bị dính liền nhau khi văn bản được trích xuất."

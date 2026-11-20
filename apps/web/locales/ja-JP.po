@@ -1399,6 +1399,10 @@ msgstr "{earlier} · 入力"
 msgid "{entries, plural, one {# entry} other {# entries}}"
 msgstr "{entries, plural, one {# エントリ} other {# エントリ}}"
 
+#: src/features/documents/documents-page.tsx
+msgid "{entries, plural, one {Uses the # thing you approved. Each one becomes a line you can edit.} other {Uses the # things you approved. Each one becomes a line you can edit.}}"
+msgstr ""
+
 #: src/features/resume/editor/check/issues.ts
 msgid "{entry} doesn't say when. Dates place it on your timeline."
 msgstr "{entry} は時期を示していません。日付を指定するとタイムラインに表示されます。"
@@ -1999,6 +2003,10 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "コメント 1 件、対応済み"
 
+#: src/features/documents/documents-page.tsx
+msgid "1. Check it."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10〜11 が最も読みやすい"
@@ -2033,6 +2041,10 @@ msgstr "2時間前"
 msgid "2–3 sentences reads best"
 msgstr "2 ～ 3 文が最もよく読まれます"
 
+#: src/features/documents/documents-page.tsx
+msgid "2. Pick a look."
+msgstr ""
+
 #: src/features/homepage/check.tsx
 #: src/features/homepage/sheet.tsx
 msgid "2013 – 2017"
@@ -2059,6 +2071,10 @@ msgstr "24時間前"
 #: src/features/homepage/prepare.tsx
 msgid "3 supported · 1 partly · 1 missing"
 msgstr "裏付けあり 3 · 一部 1 · 不足 1"
+
+#: src/features/documents/documents-page.tsx
+msgid "3. Download."
+msgstr ""
 
 #: src/features/settings/ai/api-keys.tsx
 msgid "30 days"
@@ -3045,10 +3061,6 @@ msgstr "AI 機能はあなた自身のプロバイダーを使用します。キ
 msgid "AI is ready"
 msgstr "AIの準備ができました"
 
-#: src/features/documents/import/import-page.tsx
-msgid "AI optional"
-msgstr "AI は任意"
-
 #: src/features/command-palette/pages/navigation.tsx
 msgid "AI providers"
 msgstr "AIプロバイダー"
@@ -3255,6 +3267,10 @@ msgstr "埋め込まれたフォントを読み取れませんでした。"
 #: src/features/documents/import/import-page.tsx
 msgid "An empty resume to type or paste into, section by section."
 msgstr "セクションごとに入力や貼り付けができる空のレジュメ。"
+
+#: src/features/documents/documents-page.tsx
+msgid "An empty résumé. You type in each part yourself."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "An entry has no dates"
@@ -4291,6 +4307,14 @@ msgstr "無料の履歴書テンプレートを参照し、1 列と 2 列のレ�
 msgid "Build a professional resume, download it as PDF or Word, and manage your job search in one place. Free templates, no ads, no paywall."
 msgstr "プロフェッショナルな履歴書を作成し、PDF または Microsoft Word としてダウンロードして、求職活動を 1 か所で管理します。無料のテンプレート、広告なし、ペイウォールなし。"
 
+#: src/features/documents/documents-page.tsx
+msgid "Build it from what I told the coach"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Build my résumé"
+msgstr ""
+
 #: src/features/homepage/marketing-layout.tsx
 #: src/features/homepage/ui.tsx
 msgid "Build your resume"
@@ -4870,7 +4894,6 @@ msgid "Choose a document; review your question before sending"
 msgstr "書類を選び、送信する前に質問を確認してください"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 msgid "Choose a file"
 msgstr "ファイルを選択してください"
@@ -5077,6 +5100,10 @@ msgstr "宛名の挨拶または結びの言葉を省略するには、内容を
 #: src/features/resume/editor/write/write-panel.tsx
 msgid "Click any block on the page to edit it."
 msgstr "ページ上のブロックをクリックして編集します。"
+
+#: src/features/documents/documents-page.tsx
+msgid "Click any part of the page to fix it."
+msgstr ""
 
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Click anything on the page to style it. The rule you're in is outlined on the page."
@@ -6189,6 +6216,10 @@ msgstr "書類をゴミ箱に移動できませんでした。もう一度お試
 #: src/features/assistant/accept-on-copy.ts
 msgid "Couldn't move this conversation to a copy."
 msgstr "この会話をコピーに移動できませんでした。"
+
+#: src/features/resume/import/read-file.ts
+msgid "Couldn't open this Word file. Try saving it again as .docx, or as a PDF."
+msgstr ""
 
 #: src/features/career/workspace/application-packet.tsx
 msgid "Couldn't prepare the packet. Reload and review again."
@@ -9813,6 +9844,10 @@ msgstr "ハンガリー語"
 msgid "Hyphenation"
 msgstr "ハイフネーション"
 
+#: src/features/documents/documents-page.tsx
+msgid "I already have a résumé"
+msgstr ""
+
 #. placeholder {0}: document.posting.company
 #: src/features/assistant/assistant-panel.tsx
 msgid "I can see this {kind} and the {0} posting. Ask how you fit, or get a follow-up email or interview prep."
@@ -10029,14 +10064,6 @@ msgstr "お持ちのものをインポートすると各セクションが配置
 #: src/features/documents/documents-page.tsx
 msgid "Import the one you have, or start blank."
 msgstr "お持ちのものをインポートするか、白紙から始めましょう。"
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Choose a PDF, Word or JSON file."
-msgstr "お持ちのレジュメをインポートすると各セクションが配置され、仕上げられます。空白のページから始めることもできます。PDF、Word、JSON ファイルを選択してください。"
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Drop a PDF, Word or JSON file anywhere here."
-msgstr "お持ちのレジュメをインポートすると各セクションが配置され、仕上げられます。空白のページから始めることもできます。ここのどこにでも PDF、Word、JSON ファイルをドロップしてください。"
 
 #: src/features/applications/components/detail/activity.tsx
 #: src/features/documents/import/import-page.tsx
@@ -11068,6 +11095,10 @@ msgstr "長さそのものは欠点ではなく、1ページに収めるべき�
 #: src/features/assistant/conversation.tsx
 msgid "Let the assistant search facts and stories you share with all applications, read-only"
 msgstr "すべての応募で共有している事実とストーリーを、アシスタントが読み取り専用で検索できるようにする"
+
+#: src/features/documents/documents-page.tsx
+msgid "Let's make your résumé"
+msgstr ""
 
 #: src/features/settings/ai/mcp.tsx
 msgid "Lets an AI client work with your documents and applications. Sign in from the client, or use an API key."
@@ -12319,6 +12350,10 @@ msgstr "落ち着いたサイドバー"
 msgid "My job was to find out why, without adding support work."
 msgstr "私の役割は、サポートの負担を増やさずに原因を突き止めることでした。"
 
+#: src/features/documents/use-start-document.ts
+msgid "My résumé"
+msgstr ""
+
 #. Label for full name input on registration form
 #: src/dialogs/resume/index.tsx
 #: src/features/applications/components/detail/contacts.tsx
@@ -12437,10 +12472,6 @@ msgstr "白地に黒に近いテキスト"
 #: src/routes/builder/$resumeId/-components/design-panel.tsx
 msgid "Near-black text on white prints cleanly and is what applicant tracking systems expect."
 msgstr "白地に黒に近いテキストはきれいに印刷でき、応募者追跡システムが想定する形式です。"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Needs AI"
-msgstr "AI が必要"
 
 #: src/features/assistant/chat-chrome.tsx
 #: src/features/settings/ai/providers.tsx
@@ -13683,10 +13714,6 @@ msgstr "この応募に、質問、回答、その手応えとともに記録"
 msgid "On this device"
 msgstr "このデバイス上"
 
-#: src/features/documents/import/import-page.tsx
-msgid "On this device, or with AI for columns and tables. A scanned PDF has no text to read on this device."
-msgstr "このデバイス上で、または列や表には AI で。スキャンした PDF には、このデバイスで読み取れるテキストがありません。"
-
 #: src/features/assistant/assistant-panel.tsx
 msgid "On this resume, without AI"
 msgstr "このレジュメ上で、AI なしで"
@@ -14070,6 +14097,18 @@ msgstr "名前と連絡先から始まります。先に入力する必要はあ
 msgctxt "Template style tag"
 msgid "Operations"
 msgstr "オペレーション"
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 1"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 2"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 3"
+msgstr ""
 
 #: src/features/career/knowledge/stories.tsx
 #: src/features/career/workspace/prepare-review.tsx
@@ -14543,10 +14582,6 @@ msgstr "PDF ダウンロード オン"
 msgid "PDF import"
 msgstr "PDF インポート"
 
-#: src/features/documents/import/import-page.tsx
-msgid "PDF, JSON and LinkedIn files import on this device without it."
-msgstr "PDF、JSON、LinkedIn のファイルは、なくてもこのデバイス上でインポートできます。"
-
 #: src/features/homepage/faq.tsx
 msgid "PDF, Word (DOCX), Markdown and JSON. The JSON export imports back into any Reactive Resume, including one you host yourself, so your data is never locked in."
 msgstr "PDF、Word (DOCX)、Markdown、JSON。 JSON エクスポートは、自分でホストするものも含め、任意の Reactive Resume にインポートして戻されるため、データがロックインされることはありません。"
@@ -14678,6 +14713,10 @@ msgstr "1つの形式を選び、全体を通して使用してください。"
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the background color"
 msgstr "背景色を選択"
+
+#: src/features/documents/documents-page.tsx
+msgid "Pick the easiest way for you. You can change everything afterwards."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the text color"
@@ -15047,6 +15086,10 @@ msgstr "プリセット"
 #: src/components/input/chip-input.tsx
 msgid "Press <0>{RETURN_KEY}</0> to add or save the current keyword."
 msgstr "<0>{RETURN_KEY}</0>を押すと、現在のキーワードを追加または保存します。"
+
+#: src/features/documents/documents-page.tsx
+msgid "Press Download PDF when you're happy."
+msgstr ""
 
 #. placeholder {0}: templates[previewTemplate].name
 #: src/routes/builder/$resumeId/-components/page-canvas.tsx
@@ -15540,6 +15583,14 @@ msgstr "読み取ると、この求人情報が {0} · {1} に送信されます
 msgid "Read on this device"
 msgstr "このデバイス上で読み取る"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. A scanned PDF (really a photo) has no text to read."
+msgstr ""
+
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. Save an older .doc file as .docx first."
+msgstr ""
+
 #: src/features/settings/ai/api-keys.tsx
 msgid "Read only"
 msgstr "読み取り専用アクセス"
@@ -15588,10 +15639,6 @@ msgstr "セルフホスティング ガイドを読む"
 #: src/features/documents/import/import-page.tsx
 msgid "Read with AI"
 msgstr "AI で読み取る"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Read with your AI connection. Save an older .doc file as .docx first."
-msgstr "AI 接続で読み取ります。古い .doc ファイルは先に .docx として保存してください。"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Read your email address."
@@ -15694,10 +15741,6 @@ msgstr "共有内容を読んでいます"
 #: src/features/applications/components/add-application-dialog.tsx
 msgid "Reading without AI couldn't be confirmed. Retry, update your server, or enter the details manually."
 msgstr "AIを使わずに読み取れるか確認できませんでした。再試行するか、サーバーを更新するか、詳細を手動で入力してください。"
-
-#: src/features/resume/import/read-file.ts
-msgid "Reading Word files needs an AI provider. Set one up in Settings, or import a PDF or JSON file instead."
-msgstr "Word ファイルの読み取りには AI プロバイダーが必要です。 [設定] で設定するか、代わりに PDF または JSON ファイルをインポートします。"
 
 #: src/features/settings/ai/web-access.tsx
 msgid "Reading works"
@@ -18952,6 +18995,10 @@ msgstr "それぞれを具体的な動詞から書き始めてください。例
 msgid "Start from"
 msgstr "から開始"
 
+#: src/features/documents/documents-page.tsx
+msgid "Start from a blank page"
+msgstr ""
+
 #: src/features/documents/new-document-dialog.tsx
 msgid "Start from an earlier letter"
 msgstr "以前のレターから始める"
@@ -19448,6 +19495,10 @@ msgstr "持ち帰り課題"
 msgid "Talk it through with the coach"
 msgstr "コーチと相談"
 
+#: src/features/documents/documents-page.tsx
+msgid "Talk to the coach"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Tamil"
 msgstr "タミル語"
@@ -19509,6 +19560,10 @@ msgstr "あなたが主導したプロダクト改善について教えてくだ
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "同僚と意見が合わなかったときのことを教えてください。どのように解決しましたか？"
+
+#: src/features/documents/documents-page.tsx
+msgid "Tell the coach what you've done and approve it. Then it can fill your résumé for you."
+msgstr ""
 
 #: src/features/auth/layout.tsx
 msgid "Tell your story once. Use it for your résumé and LinkedIn."
@@ -19637,6 +19692,10 @@ msgstr "テキストレイヤーあり · 1 列"
 #: src/features/resume/editor/check/parser-view.tsx
 msgid "text layer found · 2 columns"
 msgstr "テキストレイヤーあり · 2 列"
+
+#: src/features/resume/import/read-file.ts
+msgid "text read"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Text sits in the header or footer area."
@@ -19937,6 +19996,10 @@ msgstr "LinkedIn から届くデータアーカイブは、このデバイス上
 #: src/features/documents/import/import-page.tsx
 msgid "The data archive LinkedIn sends you. Read on this device."
 msgstr "LinkedIn から届くデータアーカイブ。このデバイス上で読み取ります。"
+
+#: src/features/documents/documents-page.tsx
+msgid "The Design tab changes colours and layout."
+msgstr ""
 
 #: src/features/ats-checker/checker.tsx
 msgid "The details"
@@ -20852,6 +20915,10 @@ msgstr "このバージョン"
 msgid "This week"
 msgstr "今週"
 
+#: src/features/resume/import/read-file.ts
+msgid "This Word file has no text to read. Try saving it as a PDF, or start blank and paste sections in."
+msgstr ""
+
 #: src/features/career/workspace/shell.tsx
 msgid "This workspace couldn't be loaded."
 msgstr "このワークスペースを読み込めませんでした。"
@@ -21175,7 +21242,6 @@ msgid "Try {0}"
 msgstr "{0} をお試しください"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 msgid "Try a sample"
 msgstr "サンプルを試してみる"
 
@@ -21634,9 +21700,17 @@ msgstr "履歴書を更新しています…"
 msgid "Upload .csv"
 msgstr ".csv をアップロード"
 
+#: src/features/documents/documents-page.tsx
+msgid "Upload my résumé"
+msgstr ""
+
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Upload photo"
 msgstr "写真をアップロード"
+
+#: src/features/documents/documents-page.tsx
+msgid "Upload your PDF or Word file. We read it for you, and you check it before anything is saved."
+msgstr ""
 
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Uploading photo…"
@@ -22826,10 +22900,6 @@ msgid "Without one, you fill in the recipient yourself and drafting uses only yo
 msgstr "これがない場合は、宛先を自分で記入することになり、下書きには履歴書のみが使用されます。"
 
 #: src/features/documents/import/import-page.tsx
-msgid "Word files and scanned PDFs are read with AI."
-msgstr "Word ファイルとスキャンした PDF は AI で読み取ります。"
-
-#: src/features/documents/import/import-page.tsx
 msgid "Word files are read with AI. The file is sent to your AI connection."
 msgstr "Word ファイルは AI で読み取ります。ファイルは AI 接続に送信されます。"
 
@@ -23548,6 +23618,10 @@ msgstr "履歴書を複製しました。"
 msgid "Your resume has been updated."
 msgstr "履歴書を更新しました。"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Your résumé is read on this device, for free. Nothing is sent anywhere."
+msgstr ""
+
 #: src/libs/orpc/ai-consent.ts
 msgid "Your resume text, selected passages, and check findings."
 msgstr "レジュメのテキスト、選択した箇所、チェックの結果。"
@@ -23559,10 +23633,6 @@ msgstr "履歴書内に「I」や「my」が使われています。"
 #: src/features/homepage/share.tsx
 msgid "Your resume, live at"
 msgstr "あなたの履歴書、住んでいます"
-
-#: src/features/documents/documents-page.tsx
-msgid "Your resumes and cover letters live here"
-msgstr "レジュメとカバーレターはここに保管されます"
 
 #: src/features/ai/set-up-ai.tsx
 msgid "Your saved connections need attention. Fix them in <0>Settings › AI</0>, or add one here."

@@ -21,7 +21,12 @@ import { orpc } from "@/libs/orpc/client";
 const MAX_CHARS = 2000;
 const GREETING =
 	"Hi! I'm your career coach. Tell me about something you've done at university: a project, an event, a club. We'll turn it into strong material, and I won't make anything sound fancier than it was.";
-const ACCEPT = "application/pdf,image/png,image/jpeg,image/webp";
+const DOCX_MIME = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+/** What the coach reads: PDF, Word (.docx), and photos. */
+export const UPLOAD_ACCEPT = `application/pdf,${DOCX_MIME},.docx,image/png,image/jpeg,image/webp`;
+/** The file's type, from its name when the browser doesn't say (Word files often arrive without one). */
+export const uploadMime = (file: File) =>
+	file.type || (/\.docx$/i.test(file.name) ? DOCX_MIME : /\.pdf$/i.test(file.name) ? "application/pdf" : "");
 
 export type Msg = { id: string; role: "user" | "assistant"; content: string };
 /** Lines the app itself adds when a mission is started from a chip: no AI call, so no message is used. */
@@ -181,7 +186,7 @@ function ChatBody({ compact = false, mission }: { compact?: boolean; mission?: s
 		try {
 			const dataBase64 = await readAsBase64(file);
 			analyze.mutate(
-				{ filename: file.name, mimeType: file.type, dataBase64, ...(threadId ? { threadId } : {}) },
+				{ filename: file.name, mimeType: uploadMime(file), dataBase64, ...(threadId ? { threadId } : {}) },
 				{
 					onSuccess: async (result) => {
 						await refresh(threadId);
@@ -424,7 +429,7 @@ function ChatBody({ compact = false, mission }: { compact?: boolean; mission?: s
 								<input
 									ref={fileRef}
 									type="file"
-									accept={ACCEPT}
+									accept={UPLOAD_ACCEPT}
 									className="sr-only"
 									id="chat-file"
 									aria-label="Choose a document or image to analyze"
@@ -436,7 +441,7 @@ function ChatBody({ compact = false, mission }: { compact?: boolean; mission?: s
 									aria-label={`Upload a document or image (${Math.max(0, uploadsLeft)} left)`}
 									title={
 										uploadsLeft > 0
-											? `Upload a PDF or image — ${uploadsLeft} left in the beta`
+											? `Upload a PDF, Word file or photo — ${uploadsLeft} left in the beta`
 											: "You've used all your uploads"
 									}
 									disabled={busy || uploadsLeft <= 0}

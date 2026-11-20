@@ -1399,6 +1399,10 @@ msgstr "{earlier} · בהקלדה"
 msgid "{entries, plural, one {# entry} other {# entries}}"
 msgstr "{entries, plural, one {ערך #} other {ערכי #}}"
 
+#: src/features/documents/documents-page.tsx
+msgid "{entries, plural, one {Uses the # thing you approved. Each one becomes a line you can edit.} other {Uses the # things you approved. Each one becomes a line you can edit.}}"
+msgstr ""
+
 #: src/features/resume/editor/check/issues.ts
 msgid "{entry} doesn't say when. Dates place it on your timeline."
 msgstr "{entry} לא אומר מתי. תאריכים מציבים אותו על ציר הזמן שלך."
@@ -1999,6 +2003,10 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "הערה אחת, טופלה"
 
+#: src/features/documents/documents-page.tsx
+msgid "1. Check it."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 עד 11 הכי קריא"
@@ -2033,6 +2041,10 @@ msgstr "שעתיים לפני"
 msgid "2–3 sentences reads best"
 msgstr "2-3 משפטים נקראים הכי טוב"
 
+#: src/features/documents/documents-page.tsx
+msgid "2. Pick a look."
+msgstr ""
+
 #: src/features/homepage/check.tsx
 #: src/features/homepage/sheet.tsx
 msgid "2013 – 2017"
@@ -2059,6 +2071,10 @@ msgstr "24 שעות לפני"
 #: src/features/homepage/prepare.tsx
 msgid "3 supported · 1 partly · 1 missing"
 msgstr "3 נתמכות · 1 חלקית · 1 חסרה"
+
+#: src/features/documents/documents-page.tsx
+msgid "3. Download."
+msgstr ""
 
 #: src/features/settings/ai/api-keys.tsx
 msgid "30 days"
@@ -3045,10 +3061,6 @@ msgstr "תכונות AI משתמשות בספק שלכם. המפתח מוצפן 
 msgid "AI is ready"
 msgstr "הבינה המלאכותית מוכנה"
 
-#: src/features/documents/import/import-page.tsx
-msgid "AI optional"
-msgstr "AI לא חובה"
-
 #: src/features/command-palette/pages/navigation.tsx
 msgid "AI providers"
 msgstr "ספקי AI"
@@ -3255,6 +3267,10 @@ msgstr "לא ניתן לקרוא גופן מוטבע."
 #: src/features/documents/import/import-page.tsx
 msgid "An empty resume to type or paste into, section by section."
 msgstr "קורות חיים ריקים להקלדה או הדבקה, מקטע אחר מקטע."
+
+#: src/features/documents/documents-page.tsx
+msgid "An empty résumé. You type in each part yourself."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "An entry has no dates"
@@ -4291,6 +4307,14 @@ msgstr "עיין בתבניות קורות חיים בחינם, השווה פר�
 msgid "Build a professional resume, download it as PDF or Word, and manage your job search in one place. Free templates, no ads, no paywall."
 msgstr "בנו קורות חיים מקצועיים, הורידו אותו כ-PDF או Microsoft Word, ונהל את חיפוש העבודה שלך במקום אחד. תבניות בחינם, ללא מודעות, ללא חומת תשלום."
 
+#: src/features/documents/documents-page.tsx
+msgid "Build it from what I told the coach"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Build my résumé"
+msgstr ""
+
 #: src/features/homepage/marketing-layout.tsx
 #: src/features/homepage/ui.tsx
 msgid "Build your resume"
@@ -4870,7 +4894,6 @@ msgid "Choose a document; review your question before sending"
 msgstr "בחר מסמך; בדוק את השאלה שלך לפני השליחה"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 msgid "Choose a file"
 msgstr "בחר קובץ"
@@ -5077,6 +5100,10 @@ msgstr "נקו את הפנייה או את משפט הסיום כדי להשמי
 #: src/features/resume/editor/write/write-panel.tsx
 msgid "Click any block on the page to edit it."
 msgstr "לחצו על כל בלוק בעמוד כדי לערוך אותו."
+
+#: src/features/documents/documents-page.tsx
+msgid "Click any part of the page to fix it."
+msgstr ""
 
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Click anything on the page to style it. The rule you're in is outlined on the page."
@@ -6189,6 +6216,10 @@ msgstr "לא ניתן היה להעביר את המסמך לאשפה. נסה ש�
 #: src/features/assistant/accept-on-copy.ts
 msgid "Couldn't move this conversation to a copy."
 msgstr "לא ניתן להעביר את השיחה הזו לעותק."
+
+#: src/features/resume/import/read-file.ts
+msgid "Couldn't open this Word file. Try saving it again as .docx, or as a PDF."
+msgstr ""
 
 #: src/features/career/workspace/application-packet.tsx
 msgid "Couldn't prepare the packet. Reload and review again."
@@ -9813,6 +9844,10 @@ msgstr "הונגרית"
 msgid "Hyphenation"
 msgstr "פיסוק במילים"
 
+#: src/features/documents/documents-page.tsx
+msgid "I already have a résumé"
+msgstr ""
+
 #. placeholder {0}: document.posting.company
 #: src/features/assistant/assistant-panel.tsx
 msgid "I can see this {kind} and the {0} posting. Ask how you fit, or get a follow-up email or interview prep."
@@ -10029,14 +10064,6 @@ msgstr "ייבאו את הקיימים, וכל מקטע יסודר לכם ללי
 #: src/features/documents/documents-page.tsx
 msgid "Import the one you have, or start blank."
 msgstr "ייבא את מה שיש לך, או התחל ממסמך ריק."
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Choose a PDF, Word or JSON file."
-msgstr "ייבאו את קורות החיים הקיימים, וכל מקטע יסודר לכם לליטוש, או התחילו מעמוד ריק. בחרו קובץ PDF,‏ Word או JSON."
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Drop a PDF, Word or JSON file anywhere here."
-msgstr "ייבאו את קורות החיים הקיימים, וכל מקטע יסודר לכם לליטוש, או התחילו מעמוד ריק. שחררו קובץ PDF,‏ Word או JSON בכל מקום כאן."
 
 #: src/features/applications/components/detail/activity.tsx
 #: src/features/documents/import/import-page.tsx
@@ -11068,6 +11095,10 @@ msgstr "אורך אינו פגם, ואין כלל אוניברסלי של עמו
 #: src/features/assistant/conversation.tsx
 msgid "Let the assistant search facts and stories you share with all applications, read-only"
 msgstr "אפשר לעוזר לחפש, לקריאה בלבד, בעובדות ובסיפורים שאתה משתף עם כל המועמדויות"
+
+#: src/features/documents/documents-page.tsx
+msgid "Let's make your résumé"
+msgstr ""
 
 #: src/features/settings/ai/mcp.tsx
 msgid "Lets an AI client work with your documents and applications. Sign in from the client, or use an API key."
@@ -12319,6 +12350,10 @@ msgstr "סרגל צד מעומעם"
 msgid "My job was to find out why, without adding support work."
 msgstr "התפקיד שלי היה לגלות למה, בלי להוסיף עבודת תמיכה."
 
+#: src/features/documents/use-start-document.ts
+msgid "My résumé"
+msgstr ""
+
 #. Label for full name input on registration form
 #: src/dialogs/resume/index.tsx
 #: src/features/applications/components/detail/contacts.tsx
@@ -12437,10 +12472,6 @@ msgstr "טקסט כמעט שחור על לבן"
 #: src/routes/builder/$resumeId/-components/design-panel.tsx
 msgid "Near-black text on white prints cleanly and is what applicant tracking systems expect."
 msgstr "טקסט כמעט שחור על לבן מודפס בצורה נקייה, וזה מה שמערכות ATS מצפות לו."
-
-#: src/features/documents/import/import-page.tsx
-msgid "Needs AI"
-msgstr "דורש AI"
 
 #: src/features/assistant/chat-chrome.tsx
 #: src/features/settings/ai/providers.tsx
@@ -13683,10 +13714,6 @@ msgstr "במועמדות הזו, עם השאלה, התשובה שלכם ואיך
 msgid "On this device"
 msgstr "במכשיר הזה"
 
-#: src/features/documents/import/import-page.tsx
-msgid "On this device, or with AI for columns and tables. A scanned PDF has no text to read on this device."
-msgstr "במכשיר הזה, או עם AI לעמודות ולטבלאות. ב־PDF סרוק אין טקסט לקריאה במכשיר הזה."
-
 #: src/features/assistant/assistant-panel.tsx
 msgid "On this resume, without AI"
 msgstr "בקורות החיים האלה, ללא AI"
@@ -14070,6 +14097,18 @@ msgstr "נפתח עם השם ופרטי הקשר שלכם. אין צורך למ�
 msgctxt "Template style tag"
 msgid "Operations"
 msgstr "תפעול"
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 1"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 2"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 3"
+msgstr ""
 
 #: src/features/career/knowledge/stories.tsx
 #: src/features/career/workspace/prepare-review.tsx
@@ -14543,10 +14582,6 @@ msgstr "הורדת PDF פעילה"
 msgid "PDF import"
 msgstr "ייבוא PDF"
 
-#: src/features/documents/import/import-page.tsx
-msgid "PDF, JSON and LinkedIn files import on this device without it."
-msgstr "קובצי PDF,‏ JSON ו־LinkedIn מיובאים במכשיר הזה בלעדיו."
-
 #: src/features/homepage/faq.tsx
 msgid "PDF, Word (DOCX), Markdown and JSON. The JSON export imports back into any Reactive Resume, including one you host yourself, so your data is never locked in."
 msgstr "PDF, Word (DOCX), Markdown ו-JSON. היצוא JSON מייבא חזרה לכל Reactive Resume, כולל כזה שאתה מארח בעצמך, כך שהנתונים שלך לעולם לא יהיו נעולים."
@@ -14678,6 +14713,10 @@ msgstr "בחר תבנית אחת והשתמש בה בכל מקום."
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the background color"
 msgstr "לבחור את צבע הרקע"
+
+#: src/features/documents/documents-page.tsx
+msgid "Pick the easiest way for you. You can change everything afterwards."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the text color"
@@ -15047,6 +15086,10 @@ msgstr "הגדרות קבועות מראש"
 #: src/components/input/chip-input.tsx
 msgid "Press <0>{RETURN_KEY}</0> to add or save the current keyword."
 msgstr "לחץ <0>{RETURN_KEY}</0> כדי להוסיף או לשמור את מילת המפתח הנוכחית."
+
+#: src/features/documents/documents-page.tsx
+msgid "Press Download PDF when you're happy."
+msgstr ""
 
 #. placeholder {0}: templates[previewTemplate].name
 #: src/routes/builder/$resumeId/-components/page-canvas.tsx
@@ -15540,6 +15583,14 @@ msgstr "'לקרוא' שולח את המודעה הזו אל {0} · {1}. קישו
 msgid "Read on this device"
 msgstr "לקרוא במכשיר הזה"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. A scanned PDF (really a photo) has no text to read."
+msgstr ""
+
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. Save an older .doc file as .docx first."
+msgstr ""
+
 #: src/features/settings/ai/api-keys.tsx
 msgid "Read only"
 msgstr "גישה לקריאה בלבד"
@@ -15588,10 +15639,6 @@ msgstr "קרא את המדריך לאירוח עצמי"
 #: src/features/documents/import/import-page.tsx
 msgid "Read with AI"
 msgstr "קרא באמצעות AI"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Read with your AI connection. Save an older .doc file as .docx first."
-msgstr "נקרא עם חיבור ה־AI שלכם. שמרו קובץ ‎.doc ישן כ־‎.docx קודם."
 
 #: src/features/auth/pages/consent.tsx
 msgid "Read your email address."
@@ -15694,10 +15741,6 @@ msgstr "קורא את מה ששיתפת"
 #: src/features/applications/components/add-application-dialog.tsx
 msgid "Reading without AI couldn't be confirmed. Retry, update your server, or enter the details manually."
 msgstr "לא ניתן היה לאשר קריאה ללא בינה מלאכותית. נסו שוב, עדכנו את השרת או הזינו את הפרטים ידנית."
-
-#: src/features/resume/import/read-file.ts
-msgid "Reading Word files needs an AI provider. Set one up in Settings, or import a PDF or JSON file instead."
-msgstr "קריאת קבצי Word זקוקה לספק AI. הגדר אחד בהגדרות, או ייבא במקום זאת קובץ PDF או JSON."
 
 #: src/features/settings/ai/web-access.tsx
 msgid "Reading works"
@@ -18952,6 +18995,10 @@ msgstr "התחל כל אחד מהם בפועל קונקרטי: בנה, הובי�
 msgid "Start from"
 msgstr "התחל מ"
 
+#: src/features/documents/documents-page.tsx
+msgid "Start from a blank page"
+msgstr ""
+
 #: src/features/documents/new-document-dialog.tsx
 msgid "Start from an earlier letter"
 msgstr "התחל ממכתב קודם"
@@ -19448,6 +19495,10 @@ msgstr "מטלת בית"
 msgid "Talk it through with the coach"
 msgstr "לדבר על זה עם המאמן"
 
+#: src/features/documents/documents-page.tsx
+msgid "Talk to the coach"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Tamil"
 msgstr "טמילית"
@@ -19509,6 +19560,10 @@ msgstr "ספר לי על שיפור מוצר שהובלת. מה הייתה הת�
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "ספר לי על פעם שלא הסכמת עם עמית. איך פתרתם את זה?"
+
+#: src/features/documents/documents-page.tsx
+msgid "Tell the coach what you've done and approve it. Then it can fill your résumé for you."
+msgstr ""
 
 #: src/features/auth/layout.tsx
 msgid "Tell your story once. Use it for your résumé and LinkedIn."
@@ -19637,6 +19692,10 @@ msgstr "נמצאה שכבת טקסט · עמודה אחת"
 #: src/features/resume/editor/check/parser-view.tsx
 msgid "text layer found · 2 columns"
 msgstr "נמצאה שכבת טקסט · 2 עמודות"
+
+#: src/features/resume/import/read-file.ts
+msgid "text read"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Text sits in the header or footer area."
@@ -19937,6 +19996,10 @@ msgstr "ארכיון הנתונים ש־LinkedIn שולחת לכם נקרא במ
 #: src/features/documents/import/import-page.tsx
 msgid "The data archive LinkedIn sends you. Read on this device."
 msgstr "ארכיון הנתונים ש־LinkedIn שולחת לכם. נקרא במכשיר הזה."
+
+#: src/features/documents/documents-page.tsx
+msgid "The Design tab changes colours and layout."
+msgstr ""
 
 #: src/features/ats-checker/checker.tsx
 msgid "The details"
@@ -20852,6 +20915,10 @@ msgstr "הגרסה הזו"
 msgid "This week"
 msgstr "השבוע"
 
+#: src/features/resume/import/read-file.ts
+msgid "This Word file has no text to read. Try saving it as a PDF, or start blank and paste sections in."
+msgstr ""
+
 #: src/features/career/workspace/shell.tsx
 msgid "This workspace couldn't be loaded."
 msgstr "לא ניתן היה לטעון את סביבת העבודה הזו."
@@ -21175,7 +21242,6 @@ msgid "Try {0}"
 msgstr "נסה את {0}"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 msgid "Try a sample"
 msgstr "נסה דוגמה"
 
@@ -21634,9 +21700,17 @@ msgstr "מעדכן את קורות החיים שלך…"
 msgid "Upload .csv"
 msgstr "העלה .csv"
 
+#: src/features/documents/documents-page.tsx
+msgid "Upload my résumé"
+msgstr ""
+
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Upload photo"
 msgstr "העלאת תמונה"
+
+#: src/features/documents/documents-page.tsx
+msgid "Upload your PDF or Word file. We read it for you, and you check it before anything is saved."
+msgstr ""
 
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Uploading photo…"
@@ -22826,10 +22900,6 @@ msgid "Without one, you fill in the recipient yourself and drafting uses only yo
 msgstr "בלי אחד, אתה ממלא את הנמען בעצמך והניסוח משתמש רק בקורות החיים שלך."
 
 #: src/features/documents/import/import-page.tsx
-msgid "Word files and scanned PDFs are read with AI."
-msgstr "קובצי Word וקובצי PDF סרוקים נקראים עם AI."
-
-#: src/features/documents/import/import-page.tsx
 msgid "Word files are read with AI. The file is sent to your AI connection."
 msgstr "קובצי Word נקראים עם AI. הקובץ נשלח לחיבור ה־AI שלכם."
 
@@ -23548,6 +23618,10 @@ msgstr "קורות החיים שלך שוכפלו."
 msgid "Your resume has been updated."
 msgstr "קורות החיים שלך עודכנו."
 
+#: src/features/documents/import/import-page.tsx
+msgid "Your résumé is read on this device, for free. Nothing is sent anywhere."
+msgstr ""
+
 #: src/libs/orpc/ai-consent.ts
 msgid "Your resume text, selected passages, and check findings."
 msgstr "טקסט קורות החיים שלך, קטעים שנבחרו וממצאי הבדיקה."
@@ -23559,10 +23633,6 @@ msgstr "קורות החיים שלך משתמשים ב־״I״ וב־״my״."
 #: src/features/homepage/share.tsx
 msgid "Your resume, live at"
 msgstr "קורות החיים שלך, חי ב"
-
-#: src/features/documents/documents-page.tsx
-msgid "Your resumes and cover letters live here"
-msgstr "קורות החיים והמכתבים המקדימים שלכם נמצאים כאן"
 
 #: src/features/ai/set-up-ai.tsx
 msgid "Your saved connections need attention. Fix them in <0>Settings › AI</0>, or add one here."

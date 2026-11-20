@@ -26,11 +26,9 @@ import { Crumb, CrumbLink } from "@/components/calm/crumb";
 import { IconTile, List, ListRow } from "@/components/calm/list-row";
 import { Columns, Page, PageBody, PageHeader } from "@/components/calm/page";
 import { SectionHeading } from "@/components/calm/section-heading";
-import { SetUpAiLine } from "@/components/calm/set-up-ai-line";
 import { PhoneHeaderActions } from "@/components/layout/phone-header-actions";
 import { Combobox } from "@/components/ui/combobox";
 import { useDialogStore } from "@/dialogs/store";
-import { SetUpAiDialog } from "@/features/ai/set-up-ai";
 import { getLocaleOptions } from "@/features/locale/locale-options";
 import { getSectionName } from "@/features/resume/editor/check/issues";
 import { summarizeImport } from "@/features/resume/import/read-file";
@@ -54,7 +52,6 @@ export function ImportPage({ applicationId }: ImportPageProps) {
 	const { i18n } = useLingui();
 	const inputRef = useRef<HTMLInputElement>(null);
 	const [locale, setLocale] = useState<Locale>();
-	const [settingUpAi, setSettingUpAi] = useState(false);
 	const [handedOver] = useState(peekImportFile);
 	useEffect(clearImportFile, []);
 
@@ -102,16 +99,11 @@ export function ImportPage({ applicationId }: ImportPageProps) {
 					}
 				/>
 				{noAi && (
-					<SetUpAiLine
-						className="mt-3.5"
-						lead={<Trans>Word files and scanned PDFs are read with AI.</Trans>}
-						onSetUp={() => setSettingUpAi(true)}
-					>
-						<Trans>PDF, JSON and LinkedIn files import on this device without it.</Trans>
-					</SetUpAiLine>
+					<p className="mt-3.5 rounded-lg border border-line-2 px-4 py-3 text-sm text-ink-2">
+						<Trans>Your résumé is read on this device, for free. Nothing is sent anywhere.</Trans>
+					</p>
 				)}
 				<AiProviderLoadState state={providerState} />
-				<SetUpAiDialog open={settingUpAi} onOpenChange={setSettingUpAi} />
 				<input
 					ref={inputRef}
 					type="file"
@@ -847,18 +839,12 @@ function Formats() {
 		{
 			name: "PDF",
 			extension: ".pdf",
-			ai: <Trans>AI optional</Trans>,
-			note: (
-				<Trans>
-					On this device, or with AI for columns and tables. A scanned PDF has no text to read on this device.
-				</Trans>
-			),
+			note: <Trans>Read on this device, free. A scanned PDF (really a photo) has no text to read.</Trans>,
 		},
 		{
 			name: "Word",
 			extension: ".docx",
-			ai: <Trans>Needs AI</Trans>,
-			note: <Trans>Read with your AI connection. Save an older .doc file as .docx first.</Trans>,
+			note: <Trans>Read on this device, free. Save an older .doc file as .docx first.</Trans>,
 		},
 		{
 			name: "Reactive Resume",

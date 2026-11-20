@@ -8286,10 +8286,6 @@ msgstr "Word"
 msgid "Word export needs a real server."
 msgstr "Word ఎగుమతికి నిజమైన సర్వర్ కావాలి."
 
-#: src/features/documents/import.tsx
-msgid "Word import needs AI. For a local import, export a PDF or JSON file instead."
-msgstr "Word ఇంపోర్ట్‌కు AI అవసరం. లోకల్ ఇంపోర్ట్ కోసం PDF లేదా JSON ఫైల్ ఎగుమతి చేయండి."
-
 #: src/features/public/ats-messages.ts
 msgid "Words run together when the text is extracted."
 msgstr "టెక్స్ట్ ఎక్స్‌ట్రాక్ట్ అయినప్పుడు పదాలు కలిసిపోతాయి."

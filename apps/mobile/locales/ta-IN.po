@@ -8286,10 +8286,6 @@ msgstr "Word"
 msgid "Word export needs a real server."
 msgstr "Word ஏற்றுமதிக்கு உண்மையான சேவையகம் தேவை."
 
-#: src/features/documents/import.tsx
-msgid "Word import needs AI. For a local import, export a PDF or JSON file instead."
-msgstr "Word இறக்குமதிக்கு AI தேவை. உள்ளூர் இறக்குமதிக்கு, அதற்குப் பதிலாக ஒரு PDF அல்லது JSON கோப்பை ஏற்றுமதி செய்யவும்."
-
 #: src/features/public/ats-messages.ts
 msgid "Words run together when the text is extracted."
 msgstr "உரை பிரித்தெடுக்கப்படும்போது சொற்கள் ஒன்றாக இணைந்துவிடுகின்றன."

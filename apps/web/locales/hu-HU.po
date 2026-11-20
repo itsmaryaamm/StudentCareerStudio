@@ -1399,6 +1399,10 @@ msgstr "{earlier} · begépelve"
 msgid "{entries, plural, one {# entry} other {# entries}}"
 msgstr "{entries, plural, one {# bejegyzés} other {# bejegyzések}}"
 
+#: src/features/documents/documents-page.tsx
+msgid "{entries, plural, one {Uses the # thing you approved. Each one becomes a line you can edit.} other {Uses the # things you approved. Each one becomes a line you can edit.}}"
+msgstr ""
+
 #: src/features/resume/editor/check/issues.ts
 msgid "{entry} doesn't say when. Dates place it on your timeline."
 msgstr "A {entry} nem mondja meg, hogy mikor. A dátumok helyezik el az idővonalon."
@@ -1999,6 +2003,10 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 megjegyzés, kész"
 
+#: src/features/documents/documents-page.tsx
+msgid "1. Check it."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10–11 olvasható a legjobban"
@@ -2033,6 +2041,10 @@ msgstr "2 órával előtte"
 msgid "2–3 sentences reads best"
 msgstr "2-3 mondat olvasható a legjobban"
 
+#: src/features/documents/documents-page.tsx
+msgid "2. Pick a look."
+msgstr ""
+
 #: src/features/homepage/check.tsx
 #: src/features/homepage/sheet.tsx
 msgid "2013 – 2017"
@@ -2059,6 +2071,10 @@ msgstr "24 órával előtte"
 #: src/features/homepage/prepare.tsx
 msgid "3 supported · 1 partly · 1 missing"
 msgstr "3 alátámasztva · 1 részben · 1 hiányzik"
+
+#: src/features/documents/documents-page.tsx
+msgid "3. Download."
+msgstr ""
 
 #: src/features/settings/ai/api-keys.tsx
 msgid "30 days"
@@ -3045,10 +3061,6 @@ msgstr "Az AI-funkciók a saját szolgáltatódat használják. A kulcs titkosí
 msgid "AI is ready"
 msgstr "Az MI készen áll"
 
-#: src/features/documents/import/import-page.tsx
-msgid "AI optional"
-msgstr "AI nem kötelező"
-
 #: src/features/command-palette/pages/navigation.tsx
 msgid "AI providers"
 msgstr "AI szolgáltatók"
@@ -3255,6 +3267,10 @@ msgstr "Egy beágyazott betűtípus nem olvasható be."
 #: src/features/documents/import/import-page.tsx
 msgid "An empty resume to type or paste into, section by section."
 msgstr "Üres önéletrajz, amelybe szakaszonként gépelhetsz vagy beilleszthetsz."
+
+#: src/features/documents/documents-page.tsx
+msgid "An empty résumé. You type in each part yourself."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "An entry has no dates"
@@ -4291,6 +4307,14 @@ msgstr "Böngésszen az ingyenes önéletrajz-sablonok között, hasonlítsa ös
 msgid "Build a professional resume, download it as PDF or Word, and manage your job search in one place. Free templates, no ads, no paywall."
 msgstr "Készítsen professzionális önéletrajzot, töltse le PDF vagy Microsoft Word formátumban, és egy helyen kezelje álláskeresését. Ingyenes sablonok, nincsenek hirdetések, nincs fizetőfal."
 
+#: src/features/documents/documents-page.tsx
+msgid "Build it from what I told the coach"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Build my résumé"
+msgstr ""
+
 #: src/features/homepage/marketing-layout.tsx
 #: src/features/homepage/ui.tsx
 msgid "Build your resume"
@@ -4870,7 +4894,6 @@ msgid "Choose a document; review your question before sending"
 msgstr "Válassz dokumentumot; küldés előtt nézd át a kérdésedet"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 msgid "Choose a file"
 msgstr "Válasszon egy fájlt"
@@ -5077,6 +5100,10 @@ msgstr "A megszólítás vagy az elköszönés kihagyásához törölje a tartal
 #: src/features/resume/editor/write/write-panel.tsx
 msgid "Click any block on the page to edit it."
 msgstr "Kattints az oldal bármelyik blokkjára a szerkesztéshez."
+
+#: src/features/documents/documents-page.tsx
+msgid "Click any part of the page to fix it."
+msgstr ""
 
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Click anything on the page to style it. The rule you're in is outlined on the page."
@@ -6189,6 +6216,10 @@ msgstr "Nem sikerült a Kukába helyezni a dokumentumot. Próbáld újra."
 #: src/features/assistant/accept-on-copy.ts
 msgid "Couldn't move this conversation to a copy."
 msgstr "Nem sikerült áthelyezni ezt a beszélgetést egy másolatra."
+
+#: src/features/resume/import/read-file.ts
+msgid "Couldn't open this Word file. Try saving it again as .docx, or as a PDF."
+msgstr ""
 
 #: src/features/career/workspace/application-packet.tsx
 msgid "Couldn't prepare the packet. Reload and review again."
@@ -9813,6 +9844,10 @@ msgstr "magyar"
 msgid "Hyphenation"
 msgstr "Szótagolás"
 
+#: src/features/documents/documents-page.tsx
+msgid "I already have a résumé"
+msgstr ""
+
 #. placeholder {0}: document.posting.company
 #: src/features/assistant/assistant-panel.tsx
 msgid "I can see this {kind} and the {0} posting. Ask how you fit, or get a follow-up email or interview prep."
@@ -10029,14 +10064,6 @@ msgstr "Importáld a meglévőt, és minden szakaszt előkészítünk finomítá
 #: src/features/documents/documents-page.tsx
 msgid "Import the one you have, or start blank."
 msgstr "Importáld a meglévőt, vagy kezdj üresen."
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Choose a PDF, Word or JSON file."
-msgstr "Importáld a meglévő önéletrajzodat, és minden szakaszt előkészítünk finomításra, vagy kezdj üres oldallal. Válassz PDF, Word vagy JSON fájlt."
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Drop a PDF, Word or JSON file anywhere here."
-msgstr "Importáld a meglévő önéletrajzodat, és minden szakaszt előkészítünk finomításra, vagy kezdj üres oldallal. Ejts ide bárhová egy PDF, Word vagy JSON fájlt."
 
 #: src/features/applications/components/detail/activity.tsx
 #: src/features/documents/import/import-page.tsx
@@ -11068,6 +11095,10 @@ msgstr "A hossz önmagában nem hiba, és nincs egyetemes egyoldalas szabály. T
 #: src/features/assistant/conversation.tsx
 msgid "Let the assistant search facts and stories you share with all applications, read-only"
 msgstr "Az asszisztens kereshet az összes jelentkezéssel megosztott tényekben és történetekben, csak olvasásra"
+
+#: src/features/documents/documents-page.tsx
+msgid "Let's make your résumé"
+msgstr ""
 
 #: src/features/settings/ai/mcp.tsx
 msgid "Lets an AI client work with your documents and applications. Sign in from the client, or use an API key."
@@ -12319,6 +12350,10 @@ msgstr "Visszafogott oldalsáv"
 msgid "My job was to find out why, without adding support work."
 msgstr "Az volt a feladatom, hogy kiderítsem, miért, anélkül hogy több ügyfélszolgálati munka keletkezne."
 
+#: src/features/documents/use-start-document.ts
+msgid "My résumé"
+msgstr ""
+
 #. Label for full name input on registration form
 #: src/dialogs/resume/index.tsx
 #: src/features/applications/components/detail/contacts.tsx
@@ -12437,10 +12472,6 @@ msgstr "majdnem fekete szöveg fehéren"
 #: src/routes/builder/$resumeId/-components/design-panel.tsx
 msgid "Near-black text on white prints cleanly and is what applicant tracking systems expect."
 msgstr "A fehér alapon majdnem fekete szöveg tisztán nyomtatható, és ezt várják a jelentkezéskezelő rendszerek."
-
-#: src/features/documents/import/import-page.tsx
-msgid "Needs AI"
-msgstr "AI szükséges"
 
 #: src/features/assistant/chat-chrome.tsx
 #: src/features/settings/ai/providers.tsx
@@ -13683,10 +13714,6 @@ msgstr "Ennél a jelentkezésnél, a kérdéssel, a válaszoddal és a fogadtat�
 msgid "On this device"
 msgstr "Ezen az eszközön"
 
-#: src/features/documents/import/import-page.tsx
-msgid "On this device, or with AI for columns and tables. A scanned PDF has no text to read on this device."
-msgstr "Ezen az eszközön, vagy oszlopokhoz és táblázatokhoz AI-jal. A szkennelt PDF-ben nincs ezen az eszközön olvasható szöveg."
-
 #: src/features/assistant/assistant-panel.tsx
 msgid "On this resume, without AI"
 msgstr "Ezen az önéletrajzon, AI nélkül"
@@ -14070,6 +14097,18 @@ msgstr "A neveddel és az elérhetőségeiddel nyílik meg. Előbb nem kell semm
 msgctxt "Template style tag"
 msgid "Operations"
 msgstr "Üzemeltetés"
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 1"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 2"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 3"
+msgstr ""
 
 #: src/features/career/knowledge/stories.tsx
 #: src/features/career/workspace/prepare-review.tsx
@@ -14543,10 +14582,6 @@ msgstr "PDF letöltés bekapcsolva"
 msgid "PDF import"
 msgstr "PDF-importálás"
 
-#: src/features/documents/import/import-page.tsx
-msgid "PDF, JSON and LinkedIn files import on this device without it."
-msgstr "A PDF, JSON és LinkedIn fájlok nélküle is importálhatók ezen az eszközön."
-
 #: src/features/homepage/faq.tsx
 msgid "PDF, Word (DOCX), Markdown and JSON. The JSON export imports back into any Reactive Resume, including one you host yourself, so your data is never locked in."
 msgstr "PDF, Word (DOCX), Markdown és JSON. A JSON exportál vissza bármilyen Reactive Resume-ba, beleértve azt is, amelyet Ön maga tárol, így az adatok soha nem lesznek zárolva."
@@ -14678,6 +14713,10 @@ msgstr "Válassz egy formátumot, és használd mindenhol."
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the background color"
 msgstr "Háttérszín kiválasztása"
+
+#: src/features/documents/documents-page.tsx
+msgid "Pick the easiest way for you. You can change everything afterwards."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the text color"
@@ -15047,6 +15086,10 @@ msgstr "Előbeállítások"
 #: src/components/input/chip-input.tsx
 msgid "Press <0>{RETURN_KEY}</0> to add or save the current keyword."
 msgstr "Az aktuális kulcsszó hozzáadásához vagy mentéséhez nyomd meg ezt: <0>{RETURN_KEY}</0>."
+
+#: src/features/documents/documents-page.tsx
+msgid "Press Download PDF when you're happy."
+msgstr ""
 
 #. placeholder {0}: templates[previewTemplate].name
 #: src/routes/builder/$resumeId/-components/page-canvas.tsx
@@ -15540,6 +15583,14 @@ msgstr "A Beolvasás elküldi ezt az álláshirdetést ide: {0} · {1}. A nyilv�
 msgid "Read on this device"
 msgstr "Beolvasás ezen az eszközön"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. A scanned PDF (really a photo) has no text to read."
+msgstr ""
+
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. Save an older .doc file as .docx first."
+msgstr ""
+
 #: src/features/settings/ai/api-keys.tsx
 msgid "Read only"
 msgstr "Csak olvasási hozzáférés"
@@ -15588,10 +15639,6 @@ msgstr "Olvassa el az önkiszolgálási útmutatót"
 #: src/features/documents/import/import-page.tsx
 msgid "Read with AI"
 msgstr "Beolvasás AI-val"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Read with your AI connection. Save an older .doc file as .docx first."
-msgstr "Beolvasás az AI-kapcsolatoddal. A régebbi .doc fájlt előbb mentsd el .docx formátumban."
 
 #: src/features/auth/pages/consent.tsx
 msgid "Read your email address."
@@ -15694,10 +15741,6 @@ msgstr "A megosztottak olvasása"
 #: src/features/applications/components/add-application-dialog.tsx
 msgid "Reading without AI couldn't be confirmed. Retry, update your server, or enter the details manually."
 msgstr "Nem sikerült megerősíteni az AI nélküli beolvasást. Próbálja újra, frissítse a szervert, vagy adja meg az adatokat kézzel."
-
-#: src/features/resume/import/read-file.ts
-msgid "Reading Word files needs an AI provider. Set one up in Settings, or import a PDF or JSON file instead."
-msgstr "A Word fájlok olvasásához mesterséges intelligencia-szolgáltatóra van szükség. Állítson be egyet a Beállításokban, vagy importáljon helyette egy PDF vagy JSON fájlt."
 
 #: src/features/settings/ai/web-access.tsx
 msgid "Reading works"
@@ -18952,6 +18995,10 @@ msgstr "Kezdj mindegyiket egy konkrét igével: épített, vezetett, csökkentet
 msgid "Start from"
 msgstr "Kezdje innen"
 
+#: src/features/documents/documents-page.tsx
+msgid "Start from a blank page"
+msgstr ""
+
 #: src/features/documents/new-document-dialog.tsx
 msgid "Start from an earlier letter"
 msgstr "Indítás korábbi levélből"
@@ -19448,6 +19495,10 @@ msgstr "Otthon elvégzendő feladat"
 msgid "Talk it through with the coach"
 msgstr "Beszéld át a coach-csal"
 
+#: src/features/documents/documents-page.tsx
+msgid "Talk to the coach"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Tamil"
 msgstr "tamil"
@@ -19509,6 +19560,10 @@ msgstr "Mesélj egy termékfejlesztésről, amelyet te vezettél. Mi volt a hozz
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "Mesélj egy esetről, amikor nem értettél egyet egy kollégáddal. Hogyan oldottátok meg?"
+
+#: src/features/documents/documents-page.tsx
+msgid "Tell the coach what you've done and approve it. Then it can fill your résumé for you."
+msgstr ""
 
 #: src/features/auth/layout.tsx
 msgid "Tell your story once. Use it for your résumé and LinkedIn."
@@ -19637,6 +19692,10 @@ msgstr "szövegréteg található · 1 oszlop"
 #: src/features/resume/editor/check/parser-view.tsx
 msgid "text layer found · 2 columns"
 msgstr "szövegréteg található · 2 oszlop"
+
+#: src/features/resume/import/read-file.ts
+msgid "text read"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Text sits in the header or footer area."
@@ -19937,6 +19996,10 @@ msgstr "A LinkedIn által küldött adatarchívumot ezen az eszközön olvassuk 
 #: src/features/documents/import/import-page.tsx
 msgid "The data archive LinkedIn sends you. Read on this device."
 msgstr "A LinkedIn által küldött adatarchívum. Ezen az eszközön olvassuk be."
+
+#: src/features/documents/documents-page.tsx
+msgid "The Design tab changes colours and layout."
+msgstr ""
 
 #: src/features/ats-checker/checker.tsx
 msgid "The details"
@@ -20852,6 +20915,10 @@ msgstr "Ez a verzió"
 msgid "This week"
 msgstr "Ez a hét"
 
+#: src/features/resume/import/read-file.ts
+msgid "This Word file has no text to read. Try saving it as a PDF, or start blank and paste sections in."
+msgstr ""
+
 #: src/features/career/workspace/shell.tsx
 msgid "This workspace couldn't be loaded."
 msgstr "Ezt a munkateret nem sikerült betölteni."
@@ -21175,7 +21242,6 @@ msgid "Try {0}"
 msgstr "Próbáld ki a {0}-t"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 msgid "Try a sample"
 msgstr "Próbáljon ki egy mintát"
 
@@ -21634,9 +21700,17 @@ msgstr "Önéletrajz frissítése…"
 msgid "Upload .csv"
 msgstr ".csv feltöltése"
 
+#: src/features/documents/documents-page.tsx
+msgid "Upload my résumé"
+msgstr ""
+
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Upload photo"
 msgstr "Fotó feltöltése"
+
+#: src/features/documents/documents-page.tsx
+msgid "Upload your PDF or Word file. We read it for you, and you check it before anything is saved."
+msgstr ""
 
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Uploading photo…"
@@ -22826,10 +22900,6 @@ msgid "Without one, you fill in the recipient yourself and drafting uses only yo
 msgstr "Enélkül saját maga tölti ki a címzettet, és a tervezet csak az önéletrajzát használja fel."
 
 #: src/features/documents/import/import-page.tsx
-msgid "Word files and scanned PDFs are read with AI."
-msgstr "A Word fájlokat és a szkennelt PDF-eket AI-jal olvassuk be."
-
-#: src/features/documents/import/import-page.tsx
 msgid "Word files are read with AI. The file is sent to your AI connection."
 msgstr "A Word fájlokat AI-jal olvassuk be. A fájl az AI-kapcsolatodhoz kerül."
 
@@ -23548,6 +23618,10 @@ msgstr "Az önéletrajza másolata elkészült."
 msgid "Your resume has been updated."
 msgstr "Az önéletrajza frissítve lett."
 
+#: src/features/documents/import/import-page.tsx
+msgid "Your résumé is read on this device, for free. Nothing is sent anywhere."
+msgstr ""
+
 #: src/libs/orpc/ai-consent.ts
 msgid "Your resume text, selected passages, and check findings."
 msgstr "Az önéletrajzod szövege, a kijelölt részek és az ellenőrzési megállapítások."
@@ -23559,10 +23633,6 @@ msgstr "Az önéletrajzod \"én\"-t és \"enyém\"-et használ."
 #: src/features/homepage/share.tsx
 msgid "Your resume, live at"
 msgstr "Az önéletrajzod, élőben:"
-
-#: src/features/documents/documents-page.tsx
-msgid "Your resumes and cover letters live here"
-msgstr "Itt laknak az önéletrajzaid és motivációs leveleid"
 
 #: src/features/ai/set-up-ai.tsx
 msgid "Your saved connections need attention. Fix them in <0>Settings › AI</0>, or add one here."

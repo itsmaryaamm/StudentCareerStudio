@@ -25,7 +25,11 @@ vi.mock("@tanstack/react-router", () => ({
 	Link: ({ children }: { children: ReactNode }) => <a href="/dashboard">{children}</a>,
 	useNavigate: () => vi.fn(),
 	useRouter: () => ({ subscribe: () => () => {} }),
+	useRouteContext: () => ({ session: { user: { name: "Test Student", email: "student@example.com" } } }),
 }));
+vi.mock("@/features/studio/profile", () => ({ useFacts: () => ({ data: [] }) }));
+vi.mock("@/features/studio/shared", () => ({ useStudioState: () => ({ data: undefined }) }));
+
 vi.mock("@/features/resume/builder/draft", () => ({ isEditableElementFocused: () => false }));
 vi.mock("./document-actions", () => ({
 	TagsDialog: () => null,
@@ -35,7 +39,7 @@ vi.mock("./document-actions", () => ({
 vi.mock("./document-card", () => ({ DocumentCard: () => null, DocumentRow: () => null }));
 vi.mock("./use-start-document", () => ({
 	IMPORT_ACCEPT: ".pdf,.docx,.json",
-	useStartDocument: () => ({ startBlank: vi.fn(), trySample: vi.fn(), creating: false }),
+	useStartDocument: () => ({ startBlank: vi.fn(), fromProfile: vi.fn(), creating: false }),
 }));
 vi.mock("@/hooks/use-confirm", () => ({ useConfirm: () => vi.fn(async () => true) }));
 vi.mock("@/components/layout/phone-header-actions", () => ({ PhoneHeaderActions: () => null }));
@@ -60,9 +64,9 @@ it("keeps documents load failures distinct from empty state and retries", async 
 	);
 
 	expect(await screen.findByRole("alert")).toHaveTextContent("Couldn't load documents");
-	expect(screen.queryByText("Your resumes and cover letters live here")).not.toBeInTheDocument();
+	expect(screen.queryByText("Let's make your résumé")).not.toBeInTheDocument();
 	fireEvent.click(screen.getByRole("button", { name: "Try again" }));
-	expect(await screen.findByText("Your resumes and cover letters live here")).toBeVisible();
+	expect(await screen.findByText("Let's make your résumé")).toBeVisible();
 	expect(screen.queryByRole("alert")).not.toBeInTheDocument();
 	view.unmount();
 	queryClient.clear();

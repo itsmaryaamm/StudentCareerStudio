@@ -8286,10 +8286,6 @@ msgstr "Word"
 msgid "Word export needs a real server."
 msgstr "Word-vienti tarvitsee oikean palvelimen."
 
-#: src/features/documents/import.tsx
-msgid "Word import needs AI. For a local import, export a PDF or JSON file instead."
-msgstr "Word-tuonti vaatii tekoälyn. Paikallista tuontia varten vie sen sijaan PDF- tai JSON-tiedosto."
-
 #: src/features/public/ats-messages.ts
 msgid "Words run together when the text is extracted."
 msgstr "Sanat sulautuvat yhteen, kun teksti poimitaan."

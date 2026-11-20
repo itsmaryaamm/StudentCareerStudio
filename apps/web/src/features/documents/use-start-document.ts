@@ -96,6 +96,20 @@ export function useStartDocument(applicationId?: string, locale?: Locale) {
 				await created(resumeId, "resume");
 				void navigate({ to: "/builder/$resumeId", params: { resumeId } });
 			}),
+		/** A résumé filled from approved facts and contact details (see ./from-profile.ts), opened for editing. */
+		fromProfile: (operations: { op: "replace"; path: string; value: unknown }[]) =>
+			start(async () => {
+				const resumeId = await createResume({
+					name: t`My résumé`,
+					tags: [],
+					autoName: false,
+					withSampleData: false,
+					...(locale ? { locale } : {}),
+				});
+				if (operations.length) await client.resume.patch({ id: resumeId, operations });
+				await created(resumeId, "resume");
+				void navigate({ to: "/builder/$resumeId", params: { resumeId } });
+			}),
 		trySample: () =>
 			start(async () => {
 				// Named as what it is, not a random slug, so it's never mistaken for the person's own resume.

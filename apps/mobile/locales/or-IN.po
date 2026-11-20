@@ -8298,10 +8298,6 @@ msgstr "Word"
 msgid "Word export needs a real server."
 msgstr "Word ରପ୍ତାନିକୁ ପ୍ରକୃତ ସର୍ଭର ଦରକାର।"
 
-#: src/features/documents/import.tsx
-msgid "Word import needs AI. For a local import, export a PDF or JSON file instead."
-msgstr "Word ଆଟାତ ପାଇଁ AI ଆବଶ୍ୟକ। ସ୍ଥାନୀୟ ଆଟାତ ପାଇଁ, ବଦଳରେ ଏକ PDF ବା JSON ଫାଇଲ୍ ନିର୍ଯ୍ୟାତ କରନ୍ତୁ।"
-
 #: src/features/public/ats-messages.ts
 msgid "Words run together when the text is extracted."
 msgstr "ଟେକ୍ସଟ୍ ବାହାର କରାଗଲେ ଶବ୍ଦଗୁଡ଼ିକ ଏକାଠି ମିଶିଯାʼନ୍ତି।"

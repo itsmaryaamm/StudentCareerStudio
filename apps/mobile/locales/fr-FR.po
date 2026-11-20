@@ -8286,10 +8286,6 @@ msgstr "Word"
 msgid "Word export needs a real server."
 msgstr "L’export Word nécessite un vrai serveur."
 
-#: src/features/documents/import.tsx
-msgid "Word import needs AI. For a local import, export a PDF or JSON file instead."
-msgstr "L'import Word nécessite l'IA. Pour un import local, exportez plutôt un fichier PDF ou JSON."
-
 #: src/features/public/ats-messages.ts
 msgid "Words run together when the text is extracted."
 msgstr "Les mots se collent lorsque le texte est extrait."

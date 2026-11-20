@@ -3,6 +3,7 @@ import { z } from "zod";
 import { db } from "@reactive-resume/db/client";
 import { scsChatMessage } from "@reactive-resume/db/schema";
 import { env } from "@reactive-resume/env/server";
+import { extractDocxText } from "@reactive-resume/import/docx-text";
 import { leaseGemini } from "./byok";
 import { requireConsent } from "./chat";
 import { factsService } from "./facts";
@@ -13,6 +14,9 @@ const ALLOWED = {
 	"application/pdf": (b: Buffer) => b.subarray(0, 5).toString("latin1") === "%PDF-",
 	"image/png": (b: Buffer) => b.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a])),
 	"image/jpeg": (b: Buffer) => b[0] === 0xff && b[1] === 0xd8 && b[2] === 0xff,
+	// A Word file is a zip; its text is read here and only that text goes to Gemini.
+	"application/vnd.openxmlformats-officedocument.wordprocessingml.document": (b: Buffer) =>
+		b[0] === 0x50 && b[1] === 0x4b && b[2] === 0x03 && b[3] === 0x04,
 	"image/webp": (b: Buffer) =>
 		b.subarray(0, 4).toString("latin1") === "RIFF" && b.subarray(8, 12).toString("latin1") === "WEBP",
 } as const;
@@ -22,6 +26,9 @@ const resultSchema = z.object({
 	summary: z.string().trim().min(1).max(1500),
 	facts: z.array(proposedFactSchema).max(8).default([]),
 });
+
+const DOCX = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
+const MAX_DOCX_TEXT = 24_000;
 
 const SYSTEM = `You read a document or image a university student uploaded (a résumé, transcript, certificate, project report or LinkedIn screenshot).
 Summarize what it shows in 2-4 sentences, then list facts it clearly states about the student (max 8).
@@ -39,7 +46,8 @@ export const uploadService = {
 	) {
 		await requireConsent(userId);
 		const check = ALLOWED[input.mimeType as AllowedMime];
-		if (!check) throw new ORPCError("BAD_REQUEST", { message: "Please upload a PDF, PNG, JPG or WebP file." });
+		if (!check)
+			throw new ORPCError("BAD_REQUEST", { message: "Please upload a PDF, Word (.docx), PNG, JPG or WebP file." });
 		// Reject before decoding anything large.
 		if (input.dataBase64.length > Math.ceil((env.SCS_UPLOAD_MAX_BYTES * 4) / 3) + 8)
 			throw new ORPCError("BAD_REQUEST", {
@@ -52,7 +60,23 @@ export const uploadService = {
 			});
 		// Content must match the declared type, so a renamed executable can't be sent along.
 		if (!check(bytes))
-			throw new ORPCError("BAD_REQUEST", { message: "That file doesn't look like a valid PDF or image." });
+			throw new ORPCError("BAD_REQUEST", { message: "That file doesn't look like a valid PDF, Word file or image." });
+
+		// A Word file is turned into plain text first (nothing else from it is sent).
+		let documentText: string | null = null;
+		if (input.mimeType === DOCX) {
+			try {
+				documentText = extractDocxText(new Uint8Array(bytes)).slice(0, MAX_DOCX_TEXT);
+			} catch {
+				throw new ORPCError("BAD_REQUEST", {
+					message: "Couldn't open that Word file. Try saving it again as .docx, or as a PDF.",
+				});
+			}
+			if (!documentText.trim())
+				throw new ORPCError("BAD_REQUEST", {
+					message: "That Word file has no text to read. Try saving it as a PDF instead.",
+				});
+		}
 
 		const lease = await leaseGemini(userId, "upload");
 		try {
@@ -65,7 +89,9 @@ export const uploadService = {
 						role: "user",
 						content: [
 							{ type: "text", text: "Analyze this uploaded file." },
-							{ type: "file", data: bytes, mediaType: input.mimeType },
+							documentText !== null
+								? { type: "text", text: `Text of the Word document:\n\n${documentText}` }
+								: { type: "file", data: bytes, mediaType: input.mimeType },
 						],
 					},
 				],

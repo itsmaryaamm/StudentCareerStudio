@@ -51,7 +51,7 @@ export const MISSIONS: Mission[] = [
 		sub: "Discover your strengths and career direction.",
 		output:
 			"A Career Identity Report: strengths backed by evidence, five realistic directions, skill gaps, and a 30-day plan.",
-		needs: "About 5 minutes · ChatGPT or Claude · no special access",
+		needs: "About 2 minutes",
 		intro: "We’ll turn what you’ve done into a clear picture of your strengths and where they could lead.",
 		perm: "This mission needs no connected accounts.",
 		need: "Your studies, proud experiences and what energizes you. Most of it is filled in from your career profile.",
@@ -137,7 +137,7 @@ export const MISSIONS: Mission[] = [
 			{
 				id: "riasec",
 				label: "Career-interest assessment:",
-				q: "Would you like to include a career-interest assessment?",
+				q: "Want to add a personality test? (optional)",
 				type: "single",
 				opts: ["Yes, I’ll share my RIASEC results", "No, skip it"],
 				opt: true,
@@ -154,7 +154,7 @@ export const MISSIONS: Mission[] = [
 		tint: ["#DBEAFE", "#1D4ED8"],
 		sub: "Turn your experiences into posts worth sharing.",
 		output: "Three post angles, a polished post, a shorter version, hook options and a profile update tip.",
-		needs: "About 4 minutes · ChatGPT or Claude · no special access",
+		needs: "About 2 minutes",
 		intro:
 			"Pick a real experience and we’ll shape it into a credible, distinctive post, with no clichés and no invented achievements.",
 		perm: "This mission needs no connected accounts.",
@@ -214,6 +214,7 @@ export const MISSIONS: Mission[] = [
 				type: "single",
 				facts: true,
 				hint: "From your career profile.",
+				opt: true,
 			},
 			{
 				id: "happened",
@@ -232,9 +233,11 @@ export const MISSIONS: Mission[] = [
 			{
 				id: "tone",
 				label: "Tone:",
-				q: "What tone should the post have?",
+				q: "What tone should it have?",
 				type: "single",
 				opts: ["Natural", "Reflective", "Bold", "Educational", "Story-driven"],
+				hint: "Not sure? Skip and we will keep it friendly and plain.",
+				opt: true,
 			},
 			{
 				id: "aud",
@@ -242,6 +245,8 @@ export const MISSIONS: Mission[] = [
 				q: "Who do you want to reach?",
 				type: "multi",
 				opts: ["Recruiters", "Students", "Professionals", "Industry experts", "General network"],
+				hint: "Optional.",
+				opt: true,
 			},
 			{
 				id: "file",
@@ -263,7 +268,7 @@ export const MISSIONS: Mission[] = [
 		sub: "Find eligible opportunities and organize your search.",
 		output:
 			"A verified shortlist with eligibility checks, deadlines and official links, plus recurring-search and calendar setup.",
-		needs: "About 6 minutes · ChatGPT or Claude with web search · Google Calendar optional",
+		needs: "About 2 minutes",
 		intro:
 			"We’ll build an eligibility-first search brief so your AI only shows opportunities you can actually apply for.",
 		perm: "Recurring searches and Google Calendar reminders only work if your chosen AI supports them and you authorize it.",
@@ -330,7 +335,7 @@ export const MISSIONS: Mission[] = [
 			{
 				id: "elig",
 				label: "Eligibility restrictions:",
-				q: "What are your eligibility restrictions?",
+				q: "Anything that limits where you can apply? (optional)",
 				type: "area",
 				opt: true,
 				hint: "Only what matters: degree level, graduation year, work authorization, funding needs. Skip anything you’d rather not share.",
@@ -341,13 +346,15 @@ export const MISSIONS: Mission[] = [
 				q: "Should the opportunity be paid or funded?",
 				type: "single",
 				opts: ["Paid or funded only", "Prefer paid", "Doesn’t matter"],
+				opt: true,
 			},
 			{
 				id: "freq",
 				label: "Search frequency:",
-				q: "How often should the AI search?",
+				q: "How often should it look for new ones?",
 				type: "single",
 				opts: ["One time", "Daily", "Weekly"],
+				opt: true,
 			},
 			{
 				id: "time",
@@ -369,7 +376,7 @@ export const MISSIONS: Mission[] = [
 		sub: "Discover companies, tailor your résumé, and prepare personalized outreach.",
 		output:
 			"Up to three researched companies, tailored résumé angles and email drafts ready for your review. Nothing is ever sent.",
-		needs: "About 7 minutes · ChatGPT or Claude with web search · Gmail optional",
+		needs: "About 2 minutes",
 		intro:
 			"We’ll set up a research agent that finds companies with a real, recent reason to hear from you, then drafts outreach for you to review.",
 		perm: "Gmail drafts and a recurring morning run only work if your chosen AI supports them and you authorize it. Emails are never sent automatically.",
@@ -426,6 +433,7 @@ export const MISSIONS: Mission[] = [
 				q: "What types of companies do you prefer?",
 				type: "multi",
 				opts: ["Startup", "SME", "Large corporation", "Consulting firm", "Research lab", "No preference"],
+				opt: true,
 			},
 			{
 				id: "loc",
@@ -437,10 +445,11 @@ export const MISSIONS: Mission[] = [
 			{
 				id: "contrib",
 				label: "Contributions I can make:",
-				q: "What could you realistically contribute?",
+				q: "What can you offer a company?",
 				type: "multi",
 				facts: true,
-				hint: "Pick the verified skills and projects to lead with.",
+				hint: "Pick the skills and projects to lead with. Optional.",
+				opt: true,
 			},
 			{
 				id: "goal",
@@ -452,10 +461,11 @@ export const MISSIONS: Mission[] = [
 			{
 				id: "count",
 				label: "Drafts per morning:",
-				q: "How many outreach drafts would you like?",
+				q: "How many message drafts do you want?",
 				type: "single",
 				opts: ["1", "2", "3", "4", "5"],
 				def: "3",
+				opt: true,
 			},
 			{
 				id: "time",
@@ -468,9 +478,10 @@ export const MISSIONS: Mission[] = [
 			{
 				id: "tone",
 				label: "Outreach tone:",
-				q: "What tone should the outreach have?",
+				q: "What tone should the messages have?",
 				type: "single",
 				opts: ["Concise", "Friendly", "Professional", "Confident"],
+				opt: true,
 			},
 		],
 	},

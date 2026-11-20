@@ -163,9 +163,22 @@ export async function readResumeFile(
 
 	if (kind === "docx") {
 		if (!options.aiAvailable) {
-			throw new ImportError(
-				t`Reading Word files needs an AI provider. Set one up in Settings, or import a PDF or JSON file instead.`,
-			);
+			// No AI connection: the file's text is read and sorted into sections right here, free, and never leaves the browser.
+			const { extractDocxText } = await import("@reactive-resume/import/docx-text");
+			const { parseResumeText } = await import("@reactive-resume/import/plain-text");
+			let text = "";
+			try {
+				text = extractDocxText(new Uint8Array(await file.arrayBuffer()));
+			} catch {
+				throw new ImportError(t`Couldn't open this Word file. Try saving it again as .docx, or as a PDF.`);
+			}
+			if (!text.trim()) {
+				throw new ImportError(
+					t`This Word file has no text to read. Try saving it as a PDF, or start blank and paste sections in.`,
+				);
+			}
+			options.onRead?.(t`text read`);
+			return parseResumeText(text);
 		}
 		const base64 = await fileToBase64(file);
 		options.onRead?.(t`file read`);

@@ -6,7 +6,7 @@ import { Icon } from "@reactive-resume/ui/components/icon";
 import { Input } from "@reactive-resume/ui/components/input";
 import { Textarea } from "@reactive-resume/ui/components/textarea";
 import { cn } from "@reactive-resume/utils/style";
-import { readAsBase64 } from "../chat";
+import { readAsBase64, UPLOAD_ACCEPT, uploadMime } from "../chat";
 import { FactCard, useFacts } from "../profile";
 import { isQuotaError, LimitBanner, studioErrorText, useStudioState } from "../shared";
 import { BrandWordmark } from "@/components/brand-wordmark";
@@ -47,7 +47,6 @@ const KIND_LABEL: Record<Kind, string> = {
 	linkedin: "A LinkedIn profile",
 	portfolio: "A portfolio",
 };
-const ACCEPT = "application/pdf,image/png,image/jpeg,image/webp";
 const MAX_CHARS = 1900;
 
 /** The documents to walk through, the one they named first leading. Portfolio has no guided step of its own. */
@@ -161,8 +160,8 @@ export function OnboardingChat() {
 				return "Good. For your résumé I'll need a few contact details. Check these and add what's missing.";
 			case "resume":
 				return queueFor(i)[0] === "resume"
-					? "Let's start with your résumé. Upload it (PDF or a photo), or paste the text here, and I'll pull out what's in it. Nothing is saved until you approve it."
-					: "Now your résumé. Upload it (PDF or a photo), or paste the text, and I'll add anything new to your profile.";
+					? "Let's start with your résumé. Upload it (PDF, Word or a photo), or paste the text here, and I'll pull out what's in it. Nothing is saved until you approve it."
+					: "Now your résumé. Upload it (PDF, Word or a photo), or paste the text, and I'll add anything new to your profile.";
 			case "linkedin":
 				return queueFor(i)[0] === "linkedin"
 					? "Let's start with LinkedIn. Paste the link to your profile (it looks like linkedin.com/in/your-name)."
@@ -363,7 +362,7 @@ export function OnboardingChat() {
 			const dataBase64 = await readAsBase64(file);
 			hear(`Uploaded ${file.name}`);
 			analyze.mutate(
-				{ filename: file.name, mimeType: file.type, dataBase64 },
+				{ filename: file.name, mimeType: uploadMime(file), dataBase64 },
 				{
 					onSuccess: async (r) => {
 						say(
@@ -683,7 +682,7 @@ export function OnboardingChat() {
 									<input
 										ref={fileRef}
 										type="file"
-										accept={ACCEPT}
+										accept={UPLOAD_ACCEPT}
 										className="sr-only"
 										aria-label="Choose a file to upload"
 										tabIndex={-1}

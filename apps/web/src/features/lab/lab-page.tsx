@@ -144,6 +144,13 @@ export function LabPage({ initialMission }: { initialMission?: MissionId | undef
 	const current = answerOf(q);
 	const filled = Array.isArray(current) ? current.length > 0 : current.trim().length > 0;
 
+	// Every question that isn't marked Optional has an answer (a profile-filled start counts).
+	const requiredDone = mission.qs.every((question) => {
+		if (question.opt) return true;
+		const value = answerOf(question);
+		return Array.isArray(value) ? value.length > 0 : value.trim().length > 0;
+	});
+
 	const next = () => {
 		setCustom("");
 		if (qi < mission.qs.length - 1) setQi(qi + 1);
@@ -239,10 +246,13 @@ export function LabPage({ initialMission }: { initialMission?: MissionId | undef
 							</div>
 							<div className="mt-auto flex flex-wrap gap-2">
 								<button type="button" className={primary} onClick={() => open(m.id)}>
-									Start mission
+									Start
 								</button>
-								<a className={secondary} href={`/dashboard/chat?mission=${m.id}`}>
-									Use in chat
+								<a
+									className="inline-flex h-11 items-center px-2 text-sm text-[#6c3cf1] hover:underline"
+									href={`/dashboard/chat?mission=${m.id}`}
+								>
+									or do it in the chat
 								</a>
 							</div>
 						</li>
@@ -349,10 +359,12 @@ export function LabPage({ initialMission }: { initialMission?: MissionId | undef
 					<p className="mt-3 text-[17px] text-[#1a0b3b]">{mission.intro}</p>
 					<dl className="mt-5 divide-y divide-[#efebfa] rounded-xl border border-[#efebfa] text-[15px]">
 						{[
-							["Expected output", mission.output],
-							["What we need", mission.need],
-							["Where you run it", mission.tools],
-							["Permissions", mission.perm],
+							["What you get", mission.output],
+							[
+								"How it works",
+								"Answer a few quick questions. We write a ready-made message. You paste it into ChatGPT or Claude (free).",
+							],
+							["How long", `About 2 minutes. You can skip any question marked Optional.`],
 						].map(([term, text]) => (
 							<div key={term} className="grid gap-1 p-4 sm:grid-cols-[160px_1fr] sm:gap-4">
 								<dt className="font-semibold text-[#1a0b3b]">{term}</dt>
@@ -361,7 +373,7 @@ export function LabPage({ initialMission }: { initialMission?: MissionId | undef
 						))}
 					</dl>
 					<button type="button" className={cn(primary, "mt-6")} onClick={() => setView("work")}>
-						Let's build my mission
+						Start
 					</button>
 				</section>
 			)}
@@ -369,7 +381,9 @@ export function LabPage({ initialMission }: { initialMission?: MissionId | undef
 			{view === "work" && (
 				<section className={cn(card, "mt-5 p-8")} aria-labelledby="q-title">
 					<p className="flex flex-wrap items-center gap-2 text-[13px] text-[#6b6585]">
-						Question {Math.min(qi, mission.qs.length - 1) + 1} of {mission.qs.length}
+						{q.opt
+							? "Extra question"
+							: `Question ${mission.qs.slice(0, qi + 1).filter((x) => !x.opt).length} of ${mission.qs.filter((x) => !x.opt).length}`}
 						{isPrefilled(q, answers) && (
 							<span className="rounded-full bg-[#ede9fe] px-2.5 py-0.5 text-xs font-semibold text-[#4b1d96]">
 								From your career profile
@@ -479,6 +493,11 @@ export function LabPage({ initialMission }: { initialMission?: MissionId | undef
 						<button type="button" className={secondary} onClick={back}>
 							Back
 						</button>
+						{q.opt && requiredDone && qi < mission.qs.length - 1 && (
+							<button type="button" className={secondary} onClick={() => setView("refine")}>
+								Skip the rest
+							</button>
+						)}
 						{q.opt && !filled ? (
 							<button type="button" className={primary} onClick={next}>
 								Skip

@@ -1399,6 +1399,10 @@ msgstr "{earlier} · แบบพิมพ์"
 msgid "{entries, plural, one {# entry} other {# entries}}"
 msgstr "{entries, plural, one {รายการ #} other {รายการ #}}"
 
+#: src/features/documents/documents-page.tsx
+msgid "{entries, plural, one {Uses the # thing you approved. Each one becomes a line you can edit.} other {Uses the # things you approved. Each one becomes a line you can edit.}}"
+msgstr ""
+
 #: src/features/resume/editor/check/issues.ts
 msgid "{entry} doesn't say when. Dates place it on your timeline."
 msgstr "{entry} ไม่บอกว่าเมื่อไหร่ วันที่วางไว้บนไทม์ไลน์ของคุณ"
@@ -1999,6 +2003,10 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 ความคิดเห็น เสร็จแล้ว"
 
+#: src/features/documents/documents-page.tsx
+msgid "1. Check it."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 ถึง 11 อ่านง่ายที่สุด"
@@ -2033,6 +2041,10 @@ msgstr "2 ชั่วโมงก่อน"
 msgid "2–3 sentences reads best"
 msgstr "2–3 ประโยคอ่านได้ดีที่สุด"
 
+#: src/features/documents/documents-page.tsx
+msgid "2. Pick a look."
+msgstr ""
+
 #: src/features/homepage/check.tsx
 #: src/features/homepage/sheet.tsx
 msgid "2013 – 2017"
@@ -2059,6 +2071,10 @@ msgstr "24 ชั่วโมงก่อน"
 #: src/features/homepage/prepare.tsx
 msgid "3 supported · 1 partly · 1 missing"
 msgstr "มีหลักฐาน 3 · บางส่วน 1 · ขาด 1"
+
+#: src/features/documents/documents-page.tsx
+msgid "3. Download."
+msgstr ""
 
 #: src/features/settings/ai/api-keys.tsx
 msgid "30 days"
@@ -3045,10 +3061,6 @@ msgstr "ฟีเจอร์ AI ใช้ผู้ให้บริการ�
 msgid "AI is ready"
 msgstr "AI พร้อมใช้งานแล้ว"
 
-#: src/features/documents/import/import-page.tsx
-msgid "AI optional"
-msgstr "AI ไม่บังคับ"
-
 #: src/features/command-palette/pages/navigation.tsx
 msgid "AI providers"
 msgstr "ผู้ให้บริการ AI"
@@ -3255,6 +3267,10 @@ msgstr "ไม่สามารถอ่านฟอนต์ที่ฝัง
 #: src/features/documents/import/import-page.tsx
 msgid "An empty resume to type or paste into, section by section."
 msgstr "เรซูเม่ว่างสำหรับพิมพ์หรือวางเนื้อหาทีละส่วน"
+
+#: src/features/documents/documents-page.tsx
+msgid "An empty résumé. You type in each part yourself."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "An entry has no dates"
@@ -4291,6 +4307,14 @@ msgstr "เรียกดูเทมเพลต CV ฟรี เปรีย�
 msgid "Build a professional resume, download it as PDF or Word, and manage your job search in one place. Free templates, no ads, no paywall."
 msgstr "สร้าง CV แบบมืออาชีพ ดาวน์โหลดเป็น PDF หรือ Microsoft Word และจัดการการค้นหางานของคุณได้ในที่เดียว เทมเพลตฟรี ไม่มีโฆษณา ไม่มีเพย์วอลล์"
 
+#: src/features/documents/documents-page.tsx
+msgid "Build it from what I told the coach"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Build my résumé"
+msgstr ""
+
 #: src/features/homepage/marketing-layout.tsx
 #: src/features/homepage/ui.tsx
 msgid "Build your resume"
@@ -4870,7 +4894,6 @@ msgid "Choose a document; review your question before sending"
 msgstr "เลือกเอกสาร แล้วตรวจทานคำถามของคุณก่อนส่ง"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 msgid "Choose a file"
 msgstr "เลือกไฟล์"
@@ -5077,6 +5100,10 @@ msgstr "ล้างคำขึ้นต้นหรือคำลงท้า
 #: src/features/resume/editor/write/write-panel.tsx
 msgid "Click any block on the page to edit it."
 msgstr "คลิกบล็อกใดก็ได้บนหน้าเพื่อแก้ไข"
+
+#: src/features/documents/documents-page.tsx
+msgid "Click any part of the page to fix it."
+msgstr ""
 
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Click anything on the page to style it. The rule you're in is outlined on the page."
@@ -6189,6 +6216,10 @@ msgstr "ย้ายเอกสารไปที่ถังขยะไม่
 #: src/features/assistant/accept-on-copy.ts
 msgid "Couldn't move this conversation to a copy."
 msgstr "ย้ายบทสนทนานี้ไปที่สำเนาไม่ได้"
+
+#: src/features/resume/import/read-file.ts
+msgid "Couldn't open this Word file. Try saving it again as .docx, or as a PDF."
+msgstr ""
 
 #: src/features/career/workspace/application-packet.tsx
 msgid "Couldn't prepare the packet. Reload and review again."
@@ -9813,6 +9844,10 @@ msgstr "ฮังการี"
 msgid "Hyphenation"
 msgstr "การแบ่งคำ"
 
+#: src/features/documents/documents-page.tsx
+msgid "I already have a résumé"
+msgstr ""
+
 #. placeholder {0}: document.posting.company
 #: src/features/assistant/assistant-panel.tsx
 msgid "I can see this {kind} and the {0} posting. Ask how you fit, or get a follow-up email or interview prep."
@@ -10029,14 +10064,6 @@ msgstr "นำเข้าเรซูเม่ที่คุณมี แล�
 #: src/features/documents/documents-page.tsx
 msgid "Import the one you have, or start blank."
 msgstr "นำเข้าที่คุณมีอยู่ หรือเริ่มจากหน้าว่าง"
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Choose a PDF, Word or JSON file."
-msgstr "นำเข้าเรซูเม่ที่คุณมี แล้วทุกส่วนจะถูกจัดวางให้คุณปรับแต่ง หรือเริ่มจากหน้าว่าง เลือกไฟล์ PDF, Word หรือ JSON"
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Drop a PDF, Word or JSON file anywhere here."
-msgstr "นำเข้าเรซูเม่ที่คุณมี แล้วทุกส่วนจะถูกจัดวางให้คุณปรับแต่ง หรือเริ่มจากหน้าว่าง วางไฟล์ PDF, Word หรือ JSON ที่ใดก็ได้ที่นี่"
 
 #: src/features/applications/components/detail/activity.tsx
 #: src/features/documents/import/import-page.tsx
@@ -11068,6 +11095,10 @@ msgstr "ความยาวไม่ใช่ข้อบกพร่อง �
 #: src/features/assistant/conversation.tsx
 msgid "Let the assistant search facts and stories you share with all applications, read-only"
 msgstr "อนุญาตให้ผู้ช่วยค้นหาข้อเท็จจริงและเรื่องราวที่คุณแบ่งปันกับทุกใบสมัคร แบบอ่านอย่างเดียว"
+
+#: src/features/documents/documents-page.tsx
+msgid "Let's make your résumé"
+msgstr ""
 
 #: src/features/settings/ai/mcp.tsx
 msgid "Lets an AI client work with your documents and applications. Sign in from the client, or use an API key."
@@ -12319,6 +12350,10 @@ msgstr "แถบข้างสีหม่น"
 msgid "My job was to find out why, without adding support work."
 msgstr "หน้าที่ของฉันคือหาสาเหตุ โดยไม่เพิ่มงานซัพพอร์ต"
 
+#: src/features/documents/use-start-document.ts
+msgid "My résumé"
+msgstr ""
+
 #. Label for full name input on registration form
 #: src/dialogs/resume/index.tsx
 #: src/features/applications/components/detail/contacts.tsx
@@ -12437,10 +12472,6 @@ msgstr "ข้อความเกือบดำบนพื้นขาว"
 #: src/routes/builder/$resumeId/-components/design-panel.tsx
 msgid "Near-black text on white prints cleanly and is what applicant tracking systems expect."
 msgstr "ข้อความเกือบดำบนพื้นขาวพิมพ์ได้คมชัดและเป็นสิ่งที่ระบบติดตามผู้สมัคร (ATS) คาดหวัง"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Needs AI"
-msgstr "ต้องใช้ AI"
 
 #: src/features/assistant/chat-chrome.tsx
 #: src/features/settings/ai/providers.tsx
@@ -13683,10 +13714,6 @@ msgstr "ในใบสมัครนี้ พร้อมคำถาม ค�
 msgid "On this device"
 msgstr "บนอุปกรณ์นี้"
 
-#: src/features/documents/import/import-page.tsx
-msgid "On this device, or with AI for columns and tables. A scanned PDF has no text to read on this device."
-msgstr "บนอุปกรณ์นี้ หรือใช้ AI สำหรับคอลัมน์และตาราง PDF ที่สแกนมาไม่มีข้อความให้อ่านบนอุปกรณ์นี้"
-
 #: src/features/assistant/assistant-panel.tsx
 msgid "On this resume, without AI"
 msgstr "บนเรซูเม่นี้ โดยไม่ใช้ AI"
@@ -14070,6 +14097,18 @@ msgstr "เปิดที่ชื่อและข้อมูลการต
 msgctxt "Template style tag"
 msgid "Operations"
 msgstr "ปฏิบัติการ"
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 1"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 2"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 3"
+msgstr ""
 
 #: src/features/career/knowledge/stories.tsx
 #: src/features/career/workspace/prepare-review.tsx
@@ -14543,10 +14582,6 @@ msgstr "เปิดการดาวน์โหลด PDF"
 msgid "PDF import"
 msgstr "นำเข้า PDF"
 
-#: src/features/documents/import/import-page.tsx
-msgid "PDF, JSON and LinkedIn files import on this device without it."
-msgstr "ไฟล์ PDF, JSON และ LinkedIn นำเข้าบนอุปกรณ์นี้ได้โดยไม่ต้องใช้สิ่งนี้"
-
 #: src/features/homepage/faq.tsx
 msgid "PDF, Word (DOCX), Markdown and JSON. The JSON export imports back into any Reactive Resume, including one you host yourself, so your data is never locked in."
 msgstr "PDF, Word (DOCX), Markdown และ JSON การส่งออก JSON จะนำเข้ากลับไปยัง Reactive Resume ใดๆ รวมถึงที่โฮสต์ด้วยตัวคุณเอง ดังนั้นข้อมูลของคุณจะไม่ถูกล็อค"
@@ -14678,6 +14713,10 @@ msgstr "เลือกรูปแบบเดียวแล้วใช้ใ
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the background color"
 msgstr "เลือกสีพื้นหลัง"
+
+#: src/features/documents/documents-page.tsx
+msgid "Pick the easiest way for you. You can change everything afterwards."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the text color"
@@ -15047,6 +15086,10 @@ msgstr "ค่าที่ตั้งไว้ล่วงหน้า"
 #: src/components/input/chip-input.tsx
 msgid "Press <0>{RETURN_KEY}</0> to add or save the current keyword."
 msgstr "กด <0>{RETURN_KEY}</0> เพื่อเพิ่มหรือบันทึกคีย์เวิร์ดปัจจุบัน"
+
+#: src/features/documents/documents-page.tsx
+msgid "Press Download PDF when you're happy."
+msgstr ""
 
 #. placeholder {0}: templates[previewTemplate].name
 #: src/routes/builder/$resumeId/-components/page-canvas.tsx
@@ -15540,6 +15583,14 @@ msgstr "การอ่านจะส่งประกาศงานนี้
 msgid "Read on this device"
 msgstr "อ่านบนอุปกรณ์นี้"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. A scanned PDF (really a photo) has no text to read."
+msgstr ""
+
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. Save an older .doc file as .docx first."
+msgstr ""
+
 #: src/features/settings/ai/api-keys.tsx
 msgid "Read only"
 msgstr "การเข้าถึงแบบอ่านอย่างเดียว"
@@ -15588,10 +15639,6 @@ msgstr "อ่านคู่มือการโฮสต์ด้วยตน
 #: src/features/documents/import/import-page.tsx
 msgid "Read with AI"
 msgstr "อ่านด้วย AI"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Read with your AI connection. Save an older .doc file as .docx first."
-msgstr "อ่านด้วยการเชื่อมต่อ AI ของคุณ บันทึกไฟล์ .doc รุ่นเก่าเป็น .docx ก่อน"
 
 #: src/features/auth/pages/consent.tsx
 msgid "Read your email address."
@@ -15694,10 +15741,6 @@ msgstr "กำลังอ่านสิ่งที่คุณแชร์"
 #: src/features/applications/components/add-application-dialog.tsx
 msgid "Reading without AI couldn't be confirmed. Retry, update your server, or enter the details manually."
 msgstr "ไม่สามารถยืนยันว่าอ่านได้โดยไม่ใช้ AI ลองอีกครั้ง อัปเดตเซิร์ฟเวอร์ หรือกรอกรายละเอียดด้วยตนเอง"
-
-#: src/features/resume/import/read-file.ts
-msgid "Reading Word files needs an AI provider. Set one up in Settings, or import a PDF or JSON file instead."
-msgstr "การอ่านไฟล์ Word จำเป็นต้องมีผู้ให้บริการ AI ตั้งค่าในการตั้งค่า หรือนำเข้าไฟล์ PDF หรือ JSON แทน"
 
 #: src/features/settings/ai/web-access.tsx
 msgid "Reading works"
@@ -18952,6 +18995,10 @@ msgstr "เริ่มแต่ละรายการด้วยคำกร
 msgid "Start from"
 msgstr "เริ่มจาก"
 
+#: src/features/documents/documents-page.tsx
+msgid "Start from a blank page"
+msgstr ""
+
 #: src/features/documents/new-document-dialog.tsx
 msgid "Start from an earlier letter"
 msgstr "เริ่มจากจดหมายฉบับก่อนหน้า"
@@ -19448,6 +19495,10 @@ msgstr "งานทดสอบที่ให้กลับไปทำที
 msgid "Talk it through with the coach"
 msgstr "ปรึกษากับโค้ช"
 
+#: src/features/documents/documents-page.tsx
+msgid "Talk to the coach"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Tamil"
 msgstr "ทมิฬ"
@@ -19509,6 +19560,10 @@ msgstr "เล่าถึงการปรับปรุงผลิตภั
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "เล่าถึงครั้งที่คุณเห็นต่างกับเพื่อนร่วมงาน คุณแก้ไขอย่างไร?"
+
+#: src/features/documents/documents-page.tsx
+msgid "Tell the coach what you've done and approve it. Then it can fill your résumé for you."
+msgstr ""
 
 #: src/features/auth/layout.tsx
 msgid "Tell your story once. Use it for your résumé and LinkedIn."
@@ -19637,6 +19692,10 @@ msgstr "พบชั้นข้อความ · 1 คอลัมน์"
 #: src/features/resume/editor/check/parser-view.tsx
 msgid "text layer found · 2 columns"
 msgstr "พบชั้นข้อความ · 2 คอลัมน์"
+
+#: src/features/resume/import/read-file.ts
+msgid "text read"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Text sits in the header or footer area."
@@ -19937,6 +19996,10 @@ msgstr "ไฟล์ข้อมูลที่ LinkedIn ส่งให้ค�
 #: src/features/documents/import/import-page.tsx
 msgid "The data archive LinkedIn sends you. Read on this device."
 msgstr "ไฟล์ข้อมูลที่ LinkedIn ส่งให้คุณ อ่านบนอุปกรณ์นี้"
+
+#: src/features/documents/documents-page.tsx
+msgid "The Design tab changes colours and layout."
+msgstr ""
 
 #: src/features/ats-checker/checker.tsx
 msgid "The details"
@@ -20852,6 +20915,10 @@ msgstr "เวอร์ชันนี้"
 msgid "This week"
 msgstr "สัปดาห์นี้"
 
+#: src/features/resume/import/read-file.ts
+msgid "This Word file has no text to read. Try saving it as a PDF, or start blank and paste sections in."
+msgstr ""
+
 #: src/features/career/workspace/shell.tsx
 msgid "This workspace couldn't be loaded."
 msgstr "โหลดพื้นที่ทำงานนี้ไม่ได้"
@@ -21175,7 +21242,6 @@ msgid "Try {0}"
 msgstr "ลอง {0} ดูครับ"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 msgid "Try a sample"
 msgstr "ลองตัวอย่าง"
 
@@ -21634,9 +21700,17 @@ msgstr "กำลังอัปเดตประวัติย่อของ
 msgid "Upload .csv"
 msgstr "อัปโหลด .csv"
 
+#: src/features/documents/documents-page.tsx
+msgid "Upload my résumé"
+msgstr ""
+
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Upload photo"
 msgstr "อัปโหลดรูปภาพ"
+
+#: src/features/documents/documents-page.tsx
+msgid "Upload your PDF or Word file. We read it for you, and you check it before anything is saved."
+msgstr ""
 
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Uploading photo…"
@@ -22826,10 +22900,6 @@ msgid "Without one, you fill in the recipient yourself and drafting uses only yo
 msgstr "หากไม่มี คุณจะกรอกชื่อผู้รับด้วยตนเองและการร่างจะใช้เฉพาะประวัติย่อของคุณเท่านั้น"
 
 #: src/features/documents/import/import-page.tsx
-msgid "Word files and scanned PDFs are read with AI."
-msgstr "ไฟล์ Word และ PDF ที่สแกนจะอ่านด้วย AI"
-
-#: src/features/documents/import/import-page.tsx
 msgid "Word files are read with AI. The file is sent to your AI connection."
 msgstr "ไฟล์ Word จะอ่านด้วย AI ไฟล์จะถูกส่งไปยังการเชื่อมต่อ AI ของคุณ"
 
@@ -23548,6 +23618,10 @@ msgstr "ทำสำเนาเรซูเม่ของคุณแล้ว
 msgid "Your resume has been updated."
 msgstr "อัปเดตเรซูเม่ของคุณแล้ว"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Your résumé is read on this device, for free. Nothing is sent anywhere."
+msgstr ""
+
 #: src/libs/orpc/ai-consent.ts
 msgid "Your resume text, selected passages, and check findings."
 msgstr "ข้อความในเรซูเม่ ตอนที่เลือก และผลตรวจ"
@@ -23559,10 +23633,6 @@ msgstr "เรซูเม่ของคุณใช้คำว่า \"I\" �
 #: src/features/homepage/share.tsx
 msgid "Your resume, live at"
 msgstr "ประวัติย่อของคุณอาศัยอยู่ที่"
-
-#: src/features/documents/documents-page.tsx
-msgid "Your resumes and cover letters live here"
-msgstr "เรซูเม่และจดหมายสมัครงานของคุณอยู่ที่นี่"
 
 #: src/features/ai/set-up-ai.tsx
 msgid "Your saved connections need attention. Fix them in <0>Settings › AI</0>, or add one here."

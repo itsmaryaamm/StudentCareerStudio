@@ -1399,6 +1399,10 @@ msgstr "{earlier} · தட்டச்சு செய்தது"
 msgid "{entries, plural, one {# entry} other {# entries}}"
 msgstr "{entries, plural, one {# நுழைவு} other {# உள்ளீடுகள்}}"
 
+#: src/features/documents/documents-page.tsx
+msgid "{entries, plural, one {Uses the # thing you approved. Each one becomes a line you can edit.} other {Uses the # things you approved. Each one becomes a line you can edit.}}"
+msgstr ""
+
 #: src/features/resume/editor/check/issues.ts
 msgid "{entry} doesn't say when. Dates place it on your timeline."
 msgstr "{entry} எப்போது என்று கூறவில்லை. தேதிகள் அதை உங்கள் டைம்லைனில் வைக்கும்."
@@ -1999,6 +2003,10 @@ msgstr "06/2017 – 2021"
 msgid "1 comment, done"
 msgstr "1 கருத்து, முடிந்தது"
 
+#: src/features/documents/documents-page.tsx
+msgid "1. Check it."
+msgstr ""
+
 #: src/routes/builder/$resumeId/-sidebar/right/sections/typography.tsx
 msgid "10 to 11 reads best"
 msgstr "10 முதல் 11 வரை சிறப்பாகப் படிக்கலாம்"
@@ -2033,6 +2041,10 @@ msgstr "2 மணி நேரத்திற்கு முன்"
 msgid "2–3 sentences reads best"
 msgstr "2-3 வாக்கியங்கள் சிறப்பாகப் படிக்கின்றன"
 
+#: src/features/documents/documents-page.tsx
+msgid "2. Pick a look."
+msgstr ""
+
 #: src/features/homepage/check.tsx
 #: src/features/homepage/sheet.tsx
 msgid "2013 – 2017"
@@ -2059,6 +2071,10 @@ msgstr "24 மணி நேரத்திற்கு முன்"
 #: src/features/homepage/prepare.tsx
 msgid "3 supported · 1 partly · 1 missing"
 msgstr "3 சான்றுடன் · 1 ஓரளவு · 1 இல்லை"
+
+#: src/features/documents/documents-page.tsx
+msgid "3. Download."
+msgstr ""
 
 #: src/features/settings/ai/api-keys.tsx
 msgid "30 days"
@@ -3045,10 +3061,6 @@ msgstr "AI அம்சங்கள் உங்கள் சொந்த வழ
 msgid "AI is ready"
 msgstr "AI தயாராக உள்ளது"
 
-#: src/features/documents/import/import-page.tsx
-msgid "AI optional"
-msgstr "AI விருப்பத்தேர்வு"
-
 #: src/features/command-palette/pages/navigation.tsx
 msgid "AI providers"
 msgstr "AI வழங்குநர்கள்"
@@ -3255,6 +3267,10 @@ msgstr "உட்பொதிக்கப்பட்ட எழுத்து�
 #: src/features/documents/import/import-page.tsx
 msgid "An empty resume to type or paste into, section by section."
 msgstr "பகுதி பகுதியாகத் தட்டச்சு செய்ய அல்லது ஒட்ட ஒரு காலி ரெஸ்யூம்."
+
+#: src/features/documents/documents-page.tsx
+msgid "An empty résumé. You type in each part yourself."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "An entry has no dates"
@@ -4291,6 +4307,14 @@ msgstr "இலவச CV டெம்ப்ளேட்களை உலாவவ�
 msgid "Build a professional resume, download it as PDF or Word, and manage your job search in one place. Free templates, no ads, no paywall."
 msgstr "ஒரு தொழில்முறை CVயை உருவாக்கவும், அதை PDF அல்லது Microsoft Word ஆகப் பதிவிறக்கவும் மற்றும் உங்கள் வேலை தேடலை ஒரே இடத்தில் நிர்வகிக்கவும். இலவச டெம்ப்ளேட்டுகள், விளம்பரங்கள் இல்லை, பேவால் இல்லை."
 
+#: src/features/documents/documents-page.tsx
+msgid "Build it from what I told the coach"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Build my résumé"
+msgstr ""
+
 #: src/features/homepage/marketing-layout.tsx
 #: src/features/homepage/ui.tsx
 msgid "Build your resume"
@@ -4870,7 +4894,6 @@ msgid "Choose a document; review your question before sending"
 msgstr "ஒரு ஆவணத்தைத் தேர்ந்தெடுங்கள்; அனுப்பும் முன் உங்கள் கேள்வியை மதிப்பாய்விக்கவும்"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 #: src/features/documents/import/import-page.tsx
 msgid "Choose a file"
 msgstr "ஒரு கோப்பைத் தேர்ந்தெடுக்கவும்"
@@ -5077,6 +5100,10 @@ msgstr "விளிப்பு அல்லது நிறைவு வாச
 #: src/features/resume/editor/write/write-panel.tsx
 msgid "Click any block on the page to edit it."
 msgstr "திருத்த, பக்கத்தில் உள்ள எந்தத் தொகுதியையும் கிளிக் செய்யவும்."
+
+#: src/features/documents/documents-page.tsx
+msgid "Click any part of the page to fix it."
+msgstr ""
 
 #: src/features/resume/stylesheet/editor.tsx
 msgid "Click anything on the page to style it. The rule you're in is outlined on the page."
@@ -6189,6 +6216,10 @@ msgstr "ஆவணத்தைக் குப்பைக்கு நகர்�
 #: src/features/assistant/accept-on-copy.ts
 msgid "Couldn't move this conversation to a copy."
 msgstr "இந்த உரையாடலை நகலுக்கு நகர்த்த முடியவில்லை."
+
+#: src/features/resume/import/read-file.ts
+msgid "Couldn't open this Word file. Try saving it again as .docx, or as a PDF."
+msgstr ""
 
 #: src/features/career/workspace/application-packet.tsx
 msgid "Couldn't prepare the packet. Reload and review again."
@@ -9813,6 +9844,10 @@ msgstr "ஹங்கேரியன்"
 msgid "Hyphenation"
 msgstr "இணைப்புக்குறி"
 
+#: src/features/documents/documents-page.tsx
+msgid "I already have a résumé"
+msgstr ""
+
 #. placeholder {0}: document.posting.company
 #: src/features/assistant/assistant-panel.tsx
 msgid "I can see this {kind} and the {0} posting. Ask how you fit, or get a follow-up email or interview prep."
@@ -10029,14 +10064,6 @@ msgstr "உங்களிடம் உள்ளதை இறக்குமத�
 #: src/features/documents/documents-page.tsx
 msgid "Import the one you have, or start blank."
 msgstr "உங்களிடம் உள்ளதை இறக்குமதி செய்யவும், அல்லது வெறுமையாகத் தொடங்கவும்."
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Choose a PDF, Word or JSON file."
-msgstr "உங்களிடம் உள்ள ரெஸ்யூமை இறக்குமதி செய்தால், ஒவ்வொரு பகுதியும் நீங்கள் மெருகேற்றத் தயாராக அமைக்கப்படும், அல்லது காலிப் பக்கத்திலிருந்து தொடங்குங்கள். PDF, Word அல்லது JSON கோப்பைத் தேர்ந்தெடுக்கவும்."
-
-#: src/features/documents/documents-page.tsx
-msgid "Import the resume you have and every section is laid out for you to refine, or start from a blank page. Drop a PDF, Word or JSON file anywhere here."
-msgstr "உங்களிடம் உள்ள ரெஸ்யூமை இறக்குமதி செய்தால், ஒவ்வொரு பகுதியும் நீங்கள் மெருகேற்றத் தயாராக அமைக்கப்படும், அல்லது காலிப் பக்கத்திலிருந்து தொடங்குங்கள். இங்கே எங்கும் PDF, Word அல்லது JSON கோப்பை விடுங்கள்."
 
 #: src/features/applications/components/detail/activity.tsx
 #: src/features/documents/import/import-page.tsx
@@ -11068,6 +11095,10 @@ msgstr "நீளம் ஒரு குறை அல்ல, ஒரு-பக்
 #: src/features/assistant/conversation.tsx
 msgid "Let the assistant search facts and stories you share with all applications, read-only"
 msgstr "நீங்கள் அனைத்து விண்ணப்பங்களுடனும் பகிர்ந்த உண்மைகள் மற்றும் கதைகளை உதவியாளர் தேட அனுமதிக்கவும் (படிக்க மட்டும்)"
+
+#: src/features/documents/documents-page.tsx
+msgid "Let's make your résumé"
+msgstr ""
 
 #: src/features/settings/ai/mcp.tsx
 msgid "Lets an AI client work with your documents and applications. Sign in from the client, or use an API key."
@@ -12319,6 +12350,10 @@ msgstr "மங்கிய சைட்பார்"
 msgid "My job was to find out why, without adding support work."
 msgstr "ஆதரவுப் பணியைக் கூட்டாமல், அதற்கான காரணத்தைக் கண்டறிவதே என் பணி."
 
+#: src/features/documents/use-start-document.ts
+msgid "My résumé"
+msgstr ""
+
 #. Label for full name input on registration form
 #: src/dialogs/resume/index.tsx
 #: src/features/applications/components/detail/contacts.tsx
@@ -12437,10 +12472,6 @@ msgstr "வெள்ளையில் கிட்டத்தட்ட கர�
 #: src/routes/builder/$resumeId/-components/design-panel.tsx
 msgid "Near-black text on white prints cleanly and is what applicant tracking systems expect."
 msgstr "வெள்ளையில் கிட்டத்தட்ட கருப்பு உரை சுத்தமாக அச்சாகும், விண்ணப்பதாரர் கண்காணிப்பு அமைப்புகள் எதிர்பார்ப்பதும் அதுவே."
-
-#: src/features/documents/import/import-page.tsx
-msgid "Needs AI"
-msgstr "AI தேவை"
 
 #: src/features/assistant/chat-chrome.tsx
 #: src/features/settings/ai/providers.tsx
@@ -13683,10 +13714,6 @@ msgstr "இந்த விண்ணப்பத்தில், கேள்வ
 msgid "On this device"
 msgstr "இந்தச் சாதனத்தில்"
 
-#: src/features/documents/import/import-page.tsx
-msgid "On this device, or with AI for columns and tables. A scanned PDF has no text to read on this device."
-msgstr "இந்தச் சாதனத்தில், அல்லது நெடுவரிசைகள், அட்டவணைகளுக்கு AI மூலம். ஸ்கேன் செய்த PDF-இல் இந்தச் சாதனத்தில் படிக்க உரை இல்லை."
-
 #: src/features/assistant/assistant-panel.tsx
 msgid "On this resume, without AI"
 msgstr "இந்த ரெஸ்யூமில், AI இல்லாமல்"
@@ -14070,6 +14097,18 @@ msgstr "உங்கள் பெயர் மற்றும் தொடர்
 msgctxt "Template style tag"
 msgid "Operations"
 msgstr "செயல்பாடுகள்"
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 1"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 2"
+msgstr ""
+
+#: src/features/documents/documents-page.tsx
+msgid "Option 3"
+msgstr ""
 
 #: src/features/career/knowledge/stories.tsx
 #: src/features/career/workspace/prepare-review.tsx
@@ -14543,10 +14582,6 @@ msgstr "PDF பதிவிறக்கம் இயக்கம்"
 msgid "PDF import"
 msgstr "PDF இறக்குமதி"
 
-#: src/features/documents/import/import-page.tsx
-msgid "PDF, JSON and LinkedIn files import on this device without it."
-msgstr "PDF, JSON மற்றும் LinkedIn கோப்புகள் அது இல்லாமலே இந்தச் சாதனத்தில் இறக்குமதியாகும்."
-
 #: src/features/homepage/faq.tsx
 msgid "PDF, Word (DOCX), Markdown and JSON. The JSON export imports back into any Reactive Resume, including one you host yourself, so your data is never locked in."
 msgstr "PDF, Word (DOCX), Markdown மற்றும் JSON. JSON ஏற்றுமதியானது எந்த Reactive Resume க்கும் மீண்டும் இறக்குமதி செய்யப்படுகிறது, இதில் நீங்களே ஹோஸ்ட் செய்யும் ஒன்று உட்பட, உங்கள் தரவு ஒருபோதும் பூட்டப்படாது."
@@ -14678,6 +14713,10 @@ msgstr "ஒரு வடிவமைப்பைத் தேர்ந்தெ�
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the background color"
 msgstr "பின்னணி நிறத்தைத் தேர்ந்தெடு"
+
+#: src/features/documents/documents-page.tsx
+msgid "Pick the easiest way for you. You can change everything afterwards."
+msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
 msgid "Pick the text color"
@@ -15047,6 +15086,10 @@ msgstr "முன்வழங்கல்கள்"
 #: src/components/input/chip-input.tsx
 msgid "Press <0>{RETURN_KEY}</0> to add or save the current keyword."
 msgstr "தற்போதைய முக்கியச் சொல்லைச் சேர்க்க அல்லது சேமிக்க <0>{RETURN_KEY}</0> அழுத்தவும்."
+
+#: src/features/documents/documents-page.tsx
+msgid "Press Download PDF when you're happy."
+msgstr ""
 
 #. placeholder {0}: templates[previewTemplate].name
 #: src/routes/builder/$resumeId/-components/page-canvas.tsx
@@ -15540,6 +15583,14 @@ msgstr "“படி” இந்த வேலை அறிவிப்பை {0
 msgid "Read on this device"
 msgstr "இந்தச் சாதனத்தில் படி"
 
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. A scanned PDF (really a photo) has no text to read."
+msgstr ""
+
+#: src/features/documents/import/import-page.tsx
+msgid "Read on this device, free. Save an older .doc file as .docx first."
+msgstr ""
+
 #: src/features/settings/ai/api-keys.tsx
 msgid "Read only"
 msgstr "படிக்க மட்டும் அணுகல்"
@@ -15588,10 +15639,6 @@ msgstr "சுய ஹோஸ்டிங் வழிகாட்டியைப�
 #: src/features/documents/import/import-page.tsx
 msgid "Read with AI"
 msgstr "AI மூலம் படி"
-
-#: src/features/documents/import/import-page.tsx
-msgid "Read with your AI connection. Save an older .doc file as .docx first."
-msgstr "உங்கள் AI இணைப்பு மூலம் படிக்கப்படும். பழைய .doc கோப்பை முதலில் .docx ஆகச் சேமிக்கவும்."
 
 #: src/features/auth/pages/consent.tsx
 msgid "Read your email address."
@@ -15694,10 +15741,6 @@ msgstr "நீங்கள் பகிர்ந்ததைப் படிக�
 #: src/features/applications/components/add-application-dialog.tsx
 msgid "Reading without AI couldn't be confirmed. Retry, update your server, or enter the details manually."
 msgstr "AI இல்லாமல் படிக்க முடியுமா என்பதை உறுதிப்படுத்த முடியவில்லை. மீண்டும் முயலவும், சேவையகத்தைப் புதுப்பிக்கவும் அல்லது விவரங்களை நீங்களே உள்ளிடவும்."
-
-#: src/features/resume/import/read-file.ts
-msgid "Reading Word files needs an AI provider. Set one up in Settings, or import a PDF or JSON file instead."
-msgstr "Word கோப்புகளைப் படிக்க AI வழங்குநர் தேவை. அமைப்புகளில் ஒன்றை அமைக்கவும் அல்லது அதற்குப் பதிலாக PDF அல்லது JSON கோப்பை இறக்குமதி செய்யவும்."
 
 #: src/features/settings/ai/web-access.tsx
 msgid "Reading works"
@@ -18952,6 +18995,10 @@ msgstr "ஒவ்வொன்றையும் ஒரு உறுதியா�
 msgid "Start from"
 msgstr "இருந்து தொடங்குங்கள்"
 
+#: src/features/documents/documents-page.tsx
+msgid "Start from a blank page"
+msgstr ""
+
 #: src/features/documents/new-document-dialog.tsx
 msgid "Start from an earlier letter"
 msgstr "முந்தைய கடிதத்திலிருந்து தொடங்கு"
@@ -19448,6 +19495,10 @@ msgstr "வீட்டில் செய்ய வேண்டிய பணி
 msgid "Talk it through with the coach"
 msgstr "ஆலோசகருடன் பேசிப் பாருங்கள்"
 
+#: src/features/documents/documents-page.tsx
+msgid "Talk to the coach"
+msgstr ""
+
 #: src/libs/locale.ts
 msgid "Tamil"
 msgstr "தமிழ்"
@@ -19509,6 +19560,10 @@ msgstr "நீங்கள் வழிநடத்திய ஒரு தயா
 #: src/features/career/workspace/practise.tsx
 msgid "Tell me about a time you disagreed with a colleague. How did you resolve it?"
 msgstr "சக ஊழியருடன் கருத்து வேறுபட்ட ஒரு சந்தர்ப்பத்தைப் பற்றிச் சொல்லுங்கள். அதை எப்படித் தீர்த்தீர்கள்?"
+
+#: src/features/documents/documents-page.tsx
+msgid "Tell the coach what you've done and approve it. Then it can fill your résumé for you."
+msgstr ""
 
 #: src/features/auth/layout.tsx
 msgid "Tell your story once. Use it for your résumé and LinkedIn."
@@ -19637,6 +19692,10 @@ msgstr "உரை அடுக்கு கண்டறியப்பட்ட�
 #: src/features/resume/editor/check/parser-view.tsx
 msgid "text layer found · 2 columns"
 msgstr "உரை அடுக்கு கண்டறியப்பட்டது · 2 நெடுவரிசைகள்"
+
+#: src/features/resume/import/read-file.ts
+msgid "text read"
+msgstr ""
 
 #: src/features/ats-checker/messages.ts
 msgid "Text sits in the header or footer area."
@@ -19937,6 +19996,10 @@ msgstr "LinkedIn உங்களுக்கு அனுப்பும் த�
 #: src/features/documents/import/import-page.tsx
 msgid "The data archive LinkedIn sends you. Read on this device."
 msgstr "LinkedIn உங்களுக்கு அனுப்பும் தரவுக் காப்பகம். இந்தச் சாதனத்தில் படிக்கப்படும்."
+
+#: src/features/documents/documents-page.tsx
+msgid "The Design tab changes colours and layout."
+msgstr ""
 
 #: src/features/ats-checker/checker.tsx
 msgid "The details"
@@ -20852,6 +20915,10 @@ msgstr "இந்தப் பதிப்பு"
 msgid "This week"
 msgstr "இந்த வாரம்"
 
+#: src/features/resume/import/read-file.ts
+msgid "This Word file has no text to read. Try saving it as a PDF, or start blank and paste sections in."
+msgstr ""
+
 #: src/features/career/workspace/shell.tsx
 msgid "This workspace couldn't be loaded."
 msgstr "இந்தப் பணியிடத்தை ஏற்ற முடியவில்லை."
@@ -21175,7 +21242,6 @@ msgid "Try {0}"
 msgstr "{0} முயற்சிக்கவும்"
 
 #: src/features/career/today.tsx
-#: src/features/documents/documents-page.tsx
 msgid "Try a sample"
 msgstr "ஒரு மாதிரியை முயற்சிக்கவும்"
 
@@ -21634,9 +21700,17 @@ msgstr "உங்கள் ரெஸ்யூமியை புதுப்ப�
 msgid "Upload .csv"
 msgstr "பதிவேற்ற .csv"
 
+#: src/features/documents/documents-page.tsx
+msgid "Upload my résumé"
+msgstr ""
+
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Upload photo"
 msgstr "புகைப்படத்தைப் பதிவேற்று"
+
+#: src/features/documents/documents-page.tsx
+msgid "Upload your PDF or Word file. We read it for you, and you check it before anything is saved."
+msgstr ""
 
 #: src/features/resume/editor/write/picture-settings.tsx
 msgid "Uploading photo…"
@@ -22826,10 +22900,6 @@ msgid "Without one, you fill in the recipient yourself and drafting uses only yo
 msgstr "ஒன்று இல்லாமல், பெறுநரை நீங்களே நிரப்பி, வரைவு உங்கள் விண்ணப்பத்தை மட்டுமே பயன்படுத்துகிறது."
 
 #: src/features/documents/import/import-page.tsx
-msgid "Word files and scanned PDFs are read with AI."
-msgstr "Word கோப்புகளும் ஸ்கேன் செய்த PDF-களும் AI மூலம் படிக்கப்படும்."
-
-#: src/features/documents/import/import-page.tsx
 msgid "Word files are read with AI. The file is sent to your AI connection."
 msgstr "Word கோப்புகள் AI மூலம் படிக்கப்படும். கோப்பு உங்கள் AI இணைப்புக்கு அனுப்பப்படும்."
 
@@ -23548,6 +23618,10 @@ msgstr "உங்கள் ரெஸ்யூம் நகலெடுக்க�
 msgid "Your resume has been updated."
 msgstr "உங்கள் ரெஸ்யூம் புதுப்பிக்கப்பட்டது."
 
+#: src/features/documents/import/import-page.tsx
+msgid "Your résumé is read on this device, for free. Nothing is sent anywhere."
+msgstr ""
+
 #: src/libs/orpc/ai-consent.ts
 msgid "Your resume text, selected passages, and check findings."
 msgstr "உங்கள் ரெஸ்யூம் உரை, தேர்ந்தெடுத்த பகுதிகள் மற்றும் சரிபார்ப்புக் கண்டுபிடிப்புகள்."
@@ -23559,10 +23633,6 @@ msgstr "உங்கள் ரெஸ்யூம் \"I\" மற்றும் 
 #: src/features/homepage/share.tsx
 msgid "Your resume, live at"
 msgstr "உங்கள் ரெஸ்யூம், லைவ்"
-
-#: src/features/documents/documents-page.tsx
-msgid "Your resumes and cover letters live here"
-msgstr "உங்கள் ரெஸ்யூம்களும் கவர் கடிதங்களும் இங்கே இருக்கும்"
 
 #: src/features/ai/set-up-ai.tsx
 msgid "Your saved connections need attention. Fix them in <0>Settings › AI</0>, or add one here."
