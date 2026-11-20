@@ -62,6 +62,9 @@ const check = (name, ok, extra = "") => {
 	await page.getByRole("button", { name: "Send", exact: true }).click();
 	await page.getByText("Where are you at right now").waitFor();
 	await page.getByRole("button", { name: "Looking for a co-op" }).click();
+	await page.getByText("What role are you aiming for").waitFor();
+	await page.getByLabel("Your goal").fill("Software co-op, summer 2027");
+	await page.getByRole("button", { name: "Send", exact: true }).click();
 	await page.getByText("Do you already have any of these?").waitFor();
 	check(
 		"W1 the coach asks what they already have (résumé / LinkedIn / portfolio)",

@@ -810,7 +810,7 @@ function FirstRun({ onFile, trashCount }: FirstRunProps) {
 				<Trans>Let's make your résumé</Trans>
 			</h2>
 			<p className="mt-1 text-ink-2">
-				<Trans>Pick the easiest way for you. You can change everything afterwards.</Trans>
+				<Trans>Pick the easiest way for you. About 1 minute, and you can change everything afterwards.</Trans>
 			</p>
 
 			<div className="mt-6 grid gap-4 sm:grid-cols-3">

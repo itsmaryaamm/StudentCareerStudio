@@ -7867,6 +7867,10 @@ msgstr "Tiek dublēts jūsu CV…"
 msgid "Dutch"
 msgstr "Holandiešu"
 
+#: src/features/applications/components/application-notes.tsx
+msgid "e.g. They wanted Python experience. I'll add my project and apply again."
+msgstr ""
+
 #: src/features/career/workspace/practise.tsx
 msgid "Each answer you get feedback on is kept here, newest first."
 msgstr "Katra atbilde, par kuru saņēmāt atsauksmi, tiek glabāta šeit, jaunākās augšā."
@@ -8436,6 +8440,10 @@ msgstr "Katru dienu"
 #: src/features/resume/editor/check/issues.ts
 msgid "Every entry has dates in a form systems read, in order, and none in the future."
 msgstr "Katram ierakstam ir datumi veidlapu sistēmās, kas tiek lasīti secībā, un nav neviena nākotnē."
+
+#: src/features/applications/components/application-notes.tsx
+msgid "Every no is information. One line is enough, and it makes the next application better."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Every role says what you did. Opinions on wording live in the Writing tab."
@@ -14715,7 +14723,7 @@ msgid "Pick the background color"
 msgstr "Izvēlēties fona krāsu"
 
 #: src/features/documents/documents-page.tsx
-msgid "Pick the easiest way for you. You can change everything afterwards."
+msgid "Pick the easiest way for you. About 1 minute, and you can change everything afterwards."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
@@ -22473,6 +22481,10 @@ msgstr "Kas mainījās? Atstājiet tukšu, ja nevarat to pamatot."
 #: src/features/homepage/prepare.tsx
 msgid "What did they ask?"
 msgstr "Ko viņi jautāja?"
+
+#: src/features/applications/components/application-notes.tsx
+msgid "What did this teach you?"
+msgstr ""
 
 #. placeholder {0}: requirement.text.toLocaleLowerCase()
 #: src/features/career/workspace/fit.tsx

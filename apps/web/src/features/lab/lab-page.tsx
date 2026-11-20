@@ -364,7 +364,10 @@ export function LabPage({ initialMission }: { initialMission?: MissionId | undef
 								"How it works",
 								"Answer a few quick questions. We write a ready-made message. You paste it into ChatGPT or Claude (free).",
 							],
-							["How long", `About 2 minutes. You can skip any question marked Optional.`],
+							[
+								"How long",
+								"About 2 minutes. Skip anything marked Optional. Your answers are saved on this device, so you can leave and come back.",
+							],
 						].map(([term, text]) => (
 							<div key={term} className="grid gap-1 p-4 sm:grid-cols-[160px_1fr] sm:gap-4">
 								<dt className="font-semibold text-[#1a0b3b]">{term}</dt>

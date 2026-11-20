@@ -7867,6 +7867,10 @@ msgstr "നിങ്ങളുടെ റിസ്യൂം ഡൂപ്ലിക�
 msgid "Dutch"
 msgstr "ഡച്ച്"
 
+#: src/features/applications/components/application-notes.tsx
+msgid "e.g. They wanted Python experience. I'll add my project and apply again."
+msgstr ""
+
 #: src/features/career/workspace/practise.tsx
 msgid "Each answer you get feedback on is kept here, newest first."
 msgstr "ഫീഡ്‌ബാക്ക് ലഭിച്ച ഓരോ ഉത്തരവും ഏറ്റവും പുതിയത് ആദ്യം എന്ന ക്രമത്തിൽ ഇവിടെ സൂക്ഷിക്കുന്നു."
@@ -8436,6 +8440,10 @@ msgstr "എല്ലാ ദിവസവും"
 #: src/features/resume/editor/check/issues.ts
 msgid "Every entry has dates in a form systems read, in order, and none in the future."
 msgstr "എല്ലാ എൻട്രികൾക്കും ഒരു ഫോം സിസ്റ്റങ്ങളിൽ തീയതികളുണ്ട്, ക്രമത്തിൽ വായിക്കാം, ഭാവിയിൽ ഒന്നുമില്ല."
+
+#: src/features/applications/components/application-notes.tsx
+msgid "Every no is information. One line is enough, and it makes the next application better."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Every role says what you did. Opinions on wording live in the Writing tab."
@@ -14715,7 +14723,7 @@ msgid "Pick the background color"
 msgstr "പശ്ചാത്തല നിറം തിരഞ്ഞെടുക്കുക"
 
 #: src/features/documents/documents-page.tsx
-msgid "Pick the easiest way for you. You can change everything afterwards."
+msgid "Pick the easiest way for you. About 1 minute, and you can change everything afterwards."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
@@ -22473,6 +22481,10 @@ msgstr "എന്ത് മാറി? പിന്തുണയ്ക്കാൻ
 #: src/features/homepage/prepare.tsx
 msgid "What did they ask?"
 msgstr "അവർ എന്താണ് ചോദിച്ചത്?"
+
+#: src/features/applications/components/application-notes.tsx
+msgid "What did this teach you?"
+msgstr ""
 
 #. placeholder {0}: requirement.text.toLocaleLowerCase()
 #: src/features/career/workspace/fit.tsx

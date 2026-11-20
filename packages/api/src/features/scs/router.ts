@@ -130,12 +130,13 @@ export const scsRouter = {
 			z.strictObject({
 				preferredName: line(1, 40).optional(),
 				step: z
-					.enum(["welcome", "situation", "inventory", "contact", "resume", "linkedin", "interview", "done"])
+					.enum(["welcome", "situation", "goal", "inventory", "contact", "resume", "linkedin", "interview", "done"])
 					.optional(),
 				complete: z.boolean().optional(),
 				intake: z
 					.strictObject({
 						situation: line(0, 300).optional(),
+						goal: line(0, 200).optional(),
 						first: z.enum(["resume", "linkedin", "portfolio"]).optional(),
 						has: z
 							.strictObject({

@@ -413,6 +413,7 @@ function Detail({ application, onEditDetails, onDeleted }: DetailProps) {
 
 						<ApplicationNotes
 							application={application}
+							learning={closed && !stage.accepted}
 							renderLabel={(label, htmlFor) => (
 								<SheetSection
 									note={<Trans>The coach reads these for this application only</Trans>}

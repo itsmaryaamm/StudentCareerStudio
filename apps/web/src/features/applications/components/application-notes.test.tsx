@@ -124,3 +124,17 @@ it("still saves notes when the browser refuses a recovery copy", async () => {
 		setItem.mockRestore();
 	}
 });
+
+it("asks what a closed-without-offer application taught, instead of a plain Notes field", () => {
+	i18n.load("en", {});
+	i18n.activate("en");
+	render(
+		<QueryClientProvider client={new QueryClient()}>
+			<I18nProvider i18n={i18n}>
+				<ApplicationNotes learning application={{ id: "lesson", notes: "" }} />
+			</I18nProvider>
+		</QueryClientProvider>,
+	);
+	expect(screen.getByRole("textbox", { name: "What did this teach you?" })).toBeVisible();
+	expect(screen.getByText(/Every no is information/)).toBeVisible();
+});

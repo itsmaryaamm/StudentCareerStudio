@@ -7867,6 +7867,10 @@ msgstr "మీ రిజ్యూమ్‌ను నకిలీ చేస్త
 msgid "Dutch"
 msgstr "డచ్"
 
+#: src/features/applications/components/application-notes.tsx
+msgid "e.g. They wanted Python experience. I'll add my project and apply again."
+msgstr ""
+
 #: src/features/career/workspace/practise.tsx
 msgid "Each answer you get feedback on is kept here, newest first."
 msgstr "మీరు ఫీడ్‌బ్యాక్ పొందిన ప్రతి సమాధానం ఇక్కడ ఉంచబడుతుంది, కొత్తవి ముందుగా."
@@ -8436,6 +8440,10 @@ msgstr "ప్రతిరోజూ"
 #: src/features/resume/editor/check/issues.ts
 msgid "Every entry has dates in a form systems read, in order, and none in the future."
 msgstr "ప్రతి ఎంట్రీకి ఒక ఫారమ్ సిస్టమ్‌లలో రీడ్, ఆర్డర్‌లో తేదీలు ఉంటాయి మరియు భవిష్యత్తులో ఏవీ ఉండవు."
+
+#: src/features/applications/components/application-notes.tsx
+msgid "Every no is information. One line is enough, and it makes the next application better."
+msgstr ""
 
 #: src/features/resume/editor/check/issues.ts
 msgid "Every role says what you did. Opinions on wording live in the Writing tab."
@@ -14715,7 +14723,7 @@ msgid "Pick the background color"
 msgstr "బ్యాక్‌గ్రౌండ్ రంగు ఎంచుకోండి"
 
 #: src/features/documents/documents-page.tsx
-msgid "Pick the easiest way for you. You can change everything afterwards."
+msgid "Pick the easiest way for you. About 1 minute, and you can change everything afterwards."
 msgstr ""
 
 #: src/routes/builder/$resumeId/-sidebar/right/sections/design.tsx
@@ -22473,6 +22481,10 @@ msgstr "ఏమి మారింది? ఆధారం చూపలేకప�
 #: src/features/homepage/prepare.tsx
 msgid "What did they ask?"
 msgstr "వారు ఏమి అడిగారు?"
+
+#: src/features/applications/components/application-notes.tsx
+msgid "What did this teach you?"
+msgstr ""
 
 #. placeholder {0}: requirement.text.toLocaleLowerCase()
 #: src/features/career/workspace/fit.tsx

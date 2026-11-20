@@ -24,6 +24,8 @@ export const scsBetaSeat = pg.pgTable(
 
 export type ScsIntake = {
 	situation?: string | undefined;
+	/** The role they are aiming for and by when, in their own words. */
+	goal?: string | undefined;
 	has?: { resume?: boolean | undefined; linkedin?: boolean | undefined; portfolio?: boolean | undefined } | undefined;
 	/** Which of the three they named first: the conversation starts with that one. */
 	first?: "resume" | "linkedin" | "portfolio" | undefined;

@@ -16,9 +16,11 @@ type ApplicationNotesProps = {
 	application: Pick<Application, "id" | "notes">;
 	/** Draws the field's label, given its text and the field's id. A small label when not given. */
 	renderLabel?: (label: ReactNode, htmlFor: string) => ReactNode;
+	/** The application ended without an offer: ask what it taught, which is what keeps a search going. */
+	learning?: boolean;
 };
 const saves = new Map<string, Promise<void>>();
-export function ApplicationNotes({ application, renderLabel }: ApplicationNotesProps) {
+export function ApplicationNotes({ application, renderLabel, learning = false }: ApplicationNotesProps) {
 	const id = useId();
 	const generation = useRef(getAccountGeneration());
 	const invalidate = useInvalidateApplications();
@@ -65,18 +67,27 @@ export function ApplicationNotes({ application, renderLabel }: ApplicationNotesP
 		<section className={renderLabel ? "grid" : "grid gap-2"}>
 			<DraftRecovery {...draft} />
 			{renderLabel ? (
-				renderLabel(<Trans>Notes</Trans>, id)
+				renderLabel(learning ? <Trans>What did this teach you?</Trans> : <Trans>Notes</Trans>, id)
 			) : (
 				<label htmlFor={id} className="text-xs font-semibold text-ink-3">
-					<Trans>Notes</Trans>
+					{learning ? <Trans>What did this teach you?</Trans> : <Trans>Notes</Trans>}
 				</label>
+			)}
+			{learning && (
+				<p className="text-[13px] text-ink-3">
+					<Trans>Every no is information. One line is enough, and it makes the next application better.</Trans>
+				</p>
 			)}
 			<Textarea
 				id={id}
 				rows={3}
 				className={renderLabel ? "min-h-0 resize-none px-3 py-2 text-[13px]/[19px]" : undefined}
 				value={draft.value}
-				placeholder={t`Anything to remember about this job`}
+				placeholder={
+					learning
+						? t`e.g. They wanted Python experience. I'll add my project and apply again.`
+						: t`Anything to remember about this job`
+				}
 				onBlur={flush}
 				onChange={(event) => draft.setValue(event.target.value)}
 			/>

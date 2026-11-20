@@ -126,6 +126,7 @@ export const chatService = {
 			const who = [
 				st?.name && `Name: ${st.name}`,
 				st?.intake?.situation && `Situation: ${st.intake.situation}`,
+				st?.intake?.goal && `Goal (role and timing): ${st.intake.goal}`,
 				have && `Says they have: ${have}`,
 				st?.intake?.contact?.linkedin &&
 					`LinkedIn link: ${st.intake.contact.linkedin} (you cannot open links; ask them to paste or upload what is on it)`,

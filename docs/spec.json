@@ -45116,6 +45116,7 @@
 														"he-IL",
 														"hi-IN",
 														"hu-HU",
+														"hy-AM",
 														"id-ID",
 														"it-IT",
 														"ja-JP",
@@ -45288,6 +45289,7 @@
 											"he-IL",
 											"hi-IN",
 											"hu-HU",
+											"hy-AM",
 											"id-ID",
 											"it-IT",
 											"ja-JP",
@@ -96413,6 +96415,7 @@
 											"he-IL",
 											"hi-IN",
 											"hu-HU",
+											"hy-AM",
 											"id-ID",
 											"it-IT",
 											"ja-JP",
@@ -134944,6 +134947,7 @@
 											"he-IL",
 											"hi-IN",
 											"hu-HU",
+											"hy-AM",
 											"id-ID",
 											"it-IT",
 											"ja-JP",
@@ -145001,6 +145005,3482 @@
 				]
 			}
 		},
+		"/scs/beta": {
+			"get": {
+				"operationId": "scsBetaInfo",
+				"summary": "Founding beta seat availability",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"maxSeats": {
+											"type": "number"
+										},
+										"seatsLeft": {
+											"type": "number"
+										},
+										"googleClientId": {
+											"anyOf": [
+												{
+													"type": "string"
+												},
+												{
+													"type": "null"
+												}
+											]
+										}
+									},
+									"required": [
+										"maxSeats",
+										"seatsLeft",
+										"googleClientId"
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/beta\""
+					}
+				]
+			}
+		},
+		"/scs/state": {
+			"get": {
+				"operationId": "scsState",
+				"summary": "Consent, onboarding, usage",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/state\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/consent": {
+			"post": {
+				"operationId": "scsAcceptConsent",
+				"summary": "Accept the AI data notice",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request POST \"https://rxresu.me/api/openapi/scs/consent\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			},
+			"delete": {
+				"operationId": "scsRevokeConsent",
+				"summary": "Withdraw AI consent",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request DELETE \"https://rxresu.me/api/openapi/scs/consent\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/onboarding": {
+			"put": {
+				"operationId": "scsSetOnboarding",
+				"summary": "Record the onboarding choice",
+				"tags": [
+					"Student Career Studio"
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"choice": {
+										"enum": [
+											"ai",
+											"resume",
+											"linkedin",
+											"skip"
+										],
+										"type": "string"
+									}
+								},
+								"required": [
+									"choice"
+								],
+								"additionalProperties": false
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request PUT \"https://rxresu.me/api/openapi/scs/onboarding\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{\n  \"choice\": \"ai\"\n}'"
+					}
+				]
+			}
+		},
+		"/scs/onboarding/intake": {
+			"put": {
+				"operationId": "scsSaveIntake",
+				"summary": "Save progress of the guided first conversation",
+				"tags": [
+					"Student Career Studio"
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"preferredName": {
+										"type": "string",
+										"maxLength": 160
+									},
+									"step": {
+										"enum": [
+											"welcome",
+											"situation",
+											"goal",
+											"inventory",
+											"contact",
+											"resume",
+											"linkedin",
+											"interview",
+											"done"
+										],
+										"type": "string"
+									},
+									"complete": {
+										"type": "boolean"
+									},
+									"intake": {
+										"type": "object",
+										"properties": {
+											"situation": {
+												"type": "string",
+												"maxLength": 1200
+											},
+											"goal": {
+												"type": "string",
+												"maxLength": 800
+											},
+											"first": {
+												"enum": [
+													"resume",
+													"linkedin",
+													"portfolio"
+												],
+												"type": "string"
+											},
+											"has": {
+												"type": "object",
+												"properties": {
+													"resume": {
+														"type": "boolean"
+													},
+													"linkedin": {
+														"type": "boolean"
+													},
+													"portfolio": {
+														"type": "boolean"
+													}
+												},
+												"additionalProperties": false
+											},
+											"contact": {
+												"type": "object",
+												"properties": {
+													"linkedin": {
+														"type": "string",
+														"maxLength": 600
+													},
+													"email": {
+														"type": "string",
+														"maxLength": 400
+													},
+													"phone": {
+														"type": "string",
+														"maxLength": 200
+													},
+													"portfolio": {
+														"type": "string",
+														"maxLength": 600
+													}
+												},
+												"additionalProperties": false
+											}
+										},
+										"additionalProperties": false
+									}
+								},
+								"additionalProperties": false
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request PUT \"https://rxresu.me/api/openapi/scs/onboarding/intake\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{}'"
+					}
+				]
+			}
+		},
+		"/scs/gemini-key": {
+			"put": {
+				"operationId": "scsSetOwnGeminiKey",
+				"summary": "Use my own Gemini API key",
+				"tags": [
+					"Student Career Studio"
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"apiKey": {
+										"type": "string",
+										"minLength": 1,
+										"maxLength": 200
+									}
+								},
+								"required": [
+									"apiKey"
+								],
+								"additionalProperties": false
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request PUT \"https://rxresu.me/api/openapi/scs/gemini-key\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{\n  \"apiKey\": \"<string>\"\n}'"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "scsClearOwnGeminiKey",
+				"summary": "Stop using my own Gemini key",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request DELETE \"https://rxresu.me/api/openapi/scs/gemini-key\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/referral": {
+			"put": {
+				"operationId": "scsUseFriendCode",
+				"summary": "Enter a friend's code for a bigger allowance",
+				"tags": [
+					"Student Career Studio"
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"code": {
+										"type": "string",
+										"maxLength": 64
+									}
+								},
+								"required": [
+									"code"
+								],
+								"additionalProperties": false
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request PUT \"https://rxresu.me/api/openapi/scs/referral\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{\n  \"code\": \"<string>\"\n}'"
+					}
+				]
+			}
+		},
+		"/scs/export": {
+			"get": {
+				"operationId": "scsExportData",
+				"summary": "Download all my data",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/export\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/usage": {
+			"get": {
+				"operationId": "scsUsage",
+				"summary": "My AI allowance",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"chat": {
+											"type": "object",
+											"properties": {
+												"used": {
+													"type": "number"
+												},
+												"limit": {
+													"type": "number"
+												},
+												"resetsAt": {
+													"type": "string"
+												}
+											},
+											"required": [
+												"used",
+												"limit",
+												"resetsAt"
+											]
+										},
+										"upload": {
+											"type": "object",
+											"properties": {
+												"used": {
+													"type": "number"
+												},
+												"limit": {
+													"type": "number"
+												},
+												"resetsAt": {
+													"type": "null"
+												}
+											},
+											"required": [
+												"used",
+												"limit",
+												"resetsAt"
+											]
+										}
+									},
+									"required": [
+										"chat",
+										"upload"
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/usage\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/missions": {
+			"get": {
+				"operationId": "scsListMissions",
+				"summary": "My saved Career Lab missions",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/missions\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			},
+			"put": {
+				"operationId": "scsSaveMission",
+				"summary": "Save a Career Lab mission",
+				"tags": [
+					"Student Career Studio"
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"id": {
+										"type": "string",
+										"minLength": 1,
+										"maxLength": 64
+									},
+									"missionId": {
+										"enum": [
+											"discover",
+											"linkedin",
+											"scout",
+											"intel"
+										],
+										"type": "string"
+									},
+									"name": {
+										"type": "string",
+										"maxLength": 320
+									},
+									"answers": {
+										"type": "object",
+										"propertyNames": {
+											"type": "string",
+											"maxLength": 40,
+											"pattern": "^[A-Za-z0-9_-]+$"
+										},
+										"additionalProperties": {
+											"anyOf": [
+												{
+													"type": "string",
+													"maxLength": 8000
+												},
+												{
+													"type": "array",
+													"maxItems": 30,
+													"items": {
+														"type": "string",
+														"maxLength": 1600
+													}
+												}
+											]
+										}
+									},
+									"prompt": {
+										"type": "string",
+										"maxLength": 56000
+									},
+									"templateVersion": {
+										"type": "integer",
+										"minimum": 1,
+										"maximum": 100,
+										"default": 1
+									},
+									"selectedFactIds": {
+										"type": "array",
+										"maxItems": 100,
+										"items": {
+											"type": "string",
+											"maxLength": 64
+										}
+									}
+								},
+								"required": [
+									"missionId",
+									"name",
+									"answers",
+									"prompt",
+									"selectedFactIds"
+								],
+								"additionalProperties": false
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request PUT \"https://rxresu.me/api/openapi/scs/missions\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{\n  \"missionId\": \"discover\",\n  \"name\": \"<string>\",\n  \"answers\": {},\n  \"prompt\": \"<string>\",\n  \"selectedFactIds\": [\n    \"<string>\"\n  ]\n}'"
+					}
+				]
+			}
+		},
+		"/scs/missions/{id}/duplicate": {
+			"post": {
+				"operationId": "scsDuplicateMission",
+				"summary": "Duplicate a saved mission",
+				"tags": [
+					"Student Career Studio"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"maxLength": 64
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request POST \"https://rxresu.me/api/openapi/scs/missions/<id>/duplicate\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/missions/{id}": {
+			"delete": {
+				"operationId": "scsDeleteMission",
+				"summary": "Delete a saved mission",
+				"tags": [
+					"Student Career Studio"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"maxLength": 64
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request DELETE \"https://rxresu.me/api/openapi/scs/missions/<id>\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/facts": {
+			"get": {
+				"operationId": "scsListFacts",
+				"summary": "My career profile",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"id": {
+												"type": "string"
+											},
+											"category": {
+												"enum": [
+													"education",
+													"experience",
+													"project",
+													"skill",
+													"achievement",
+													"volunteering",
+													"certification",
+													"language",
+													"goal",
+													"other"
+												],
+												"type": "string"
+											},
+											"text": {
+												"type": "string"
+											},
+											"status": {
+												"enum": [
+													"proposed",
+													"approved",
+													"rejected"
+												],
+												"type": "string"
+											},
+											"source": {
+												"enum": [
+													"chat",
+													"upload",
+													"resume",
+													"manual"
+												],
+												"type": "string"
+											},
+											"createdAt": {
+												"type": "string"
+											}
+										},
+										"required": [
+											"id",
+											"category",
+											"text",
+											"status",
+											"source",
+											"createdAt"
+										]
+									}
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/facts\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			},
+			"post": {
+				"operationId": "scsAddFact",
+				"summary": "Add a fact to my profile",
+				"tags": [
+					"Student Career Studio"
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"category": {
+										"enum": [
+											"education",
+											"experience",
+											"project",
+											"skill",
+											"achievement",
+											"volunteering",
+											"certification",
+											"language",
+											"goal",
+											"other"
+										],
+										"type": "string"
+									},
+									"text": {
+										"type": "string",
+										"maxLength": 1200
+									}
+								},
+								"required": [
+									"category",
+									"text"
+								],
+								"additionalProperties": false
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "string"
+										},
+										"category": {
+											"enum": [
+												"education",
+												"experience",
+												"project",
+												"skill",
+												"achievement",
+												"volunteering",
+												"certification",
+												"language",
+												"goal",
+												"other"
+											],
+											"type": "string"
+										},
+										"text": {
+											"type": "string"
+										},
+										"status": {
+											"enum": [
+												"proposed",
+												"approved",
+												"rejected"
+											],
+											"type": "string"
+										},
+										"source": {
+											"enum": [
+												"chat",
+												"upload",
+												"resume",
+												"manual"
+											],
+											"type": "string"
+										},
+										"createdAt": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"id",
+										"category",
+										"text",
+										"status",
+										"source",
+										"createdAt"
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request POST \"https://rxresu.me/api/openapi/scs/facts\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{\n  \"category\": \"education\",\n  \"text\": \"<string>\"\n}'"
+					}
+				]
+			}
+		},
+		"/scs/facts/{id}/approve": {
+			"post": {
+				"operationId": "scsApproveFact",
+				"summary": "Approve a proposed fact",
+				"tags": [
+					"Student Career Studio"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"maxLength": 64
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "string"
+										},
+										"category": {
+											"enum": [
+												"education",
+												"experience",
+												"project",
+												"skill",
+												"achievement",
+												"volunteering",
+												"certification",
+												"language",
+												"goal",
+												"other"
+											],
+											"type": "string"
+										},
+										"text": {
+											"type": "string"
+										},
+										"status": {
+											"enum": [
+												"proposed",
+												"approved",
+												"rejected"
+											],
+											"type": "string"
+										},
+										"source": {
+											"enum": [
+												"chat",
+												"upload",
+												"resume",
+												"manual"
+											],
+											"type": "string"
+										},
+										"createdAt": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"id",
+										"category",
+										"text",
+										"status",
+										"source",
+										"createdAt"
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request POST \"https://rxresu.me/api/openapi/scs/facts/<id>/approve\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/facts/{id}/reject": {
+			"post": {
+				"operationId": "scsRejectFact",
+				"summary": "Discard a proposed fact",
+				"tags": [
+					"Student Career Studio"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"maxLength": 64
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "string"
+										},
+										"category": {
+											"enum": [
+												"education",
+												"experience",
+												"project",
+												"skill",
+												"achievement",
+												"volunteering",
+												"certification",
+												"language",
+												"goal",
+												"other"
+											],
+											"type": "string"
+										},
+										"text": {
+											"type": "string"
+										},
+										"status": {
+											"enum": [
+												"proposed",
+												"approved",
+												"rejected"
+											],
+											"type": "string"
+										},
+										"source": {
+											"enum": [
+												"chat",
+												"upload",
+												"resume",
+												"manual"
+											],
+											"type": "string"
+										},
+										"createdAt": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"id",
+										"category",
+										"text",
+										"status",
+										"source",
+										"createdAt"
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request POST \"https://rxresu.me/api/openapi/scs/facts/<id>/reject\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/facts/{id}": {
+			"put": {
+				"operationId": "scsEditFact",
+				"summary": "Edit a fact",
+				"tags": [
+					"Student Career Studio"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"maxLength": 64
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"text": {
+										"type": "string",
+										"maxLength": 1200
+									}
+								},
+								"required": [
+									"text"
+								]
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"properties": {
+										"id": {
+											"type": "string"
+										},
+										"category": {
+											"enum": [
+												"education",
+												"experience",
+												"project",
+												"skill",
+												"achievement",
+												"volunteering",
+												"certification",
+												"language",
+												"goal",
+												"other"
+											],
+											"type": "string"
+										},
+										"text": {
+											"type": "string"
+										},
+										"status": {
+											"enum": [
+												"proposed",
+												"approved",
+												"rejected"
+											],
+											"type": "string"
+										},
+										"source": {
+											"enum": [
+												"chat",
+												"upload",
+												"resume",
+												"manual"
+											],
+											"type": "string"
+										},
+										"createdAt": {
+											"type": "string"
+										}
+									},
+									"required": [
+										"id",
+										"category",
+										"text",
+										"status",
+										"source",
+										"createdAt"
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request PUT \"https://rxresu.me/api/openapi/scs/facts/<id>\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{\n  \"text\": \"<string>\"\n}'"
+					}
+				]
+			},
+			"delete": {
+				"operationId": "scsDeleteFact",
+				"summary": "Delete a fact",
+				"tags": [
+					"Student Career Studio"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"maxLength": 64
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request DELETE \"https://rxresu.me/api/openapi/scs/facts/<id>\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/facts/import-resumes": {
+			"post": {
+				"operationId": "scsImportFacts",
+				"summary": "Propose facts from my résumés",
+				"tags": [
+					"Student Career Studio"
+				],
+				"requestBody": {
+					"required": false,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object"
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request POST \"https://rxresu.me/api/openapi/scs/facts/import-resumes\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{}'"
+					}
+				]
+			}
+		},
+		"/scs/chat/threads": {
+			"get": {
+				"operationId": "scsChatThreads",
+				"summary": "My conversations",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/chat/threads\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/chat/threads/{id}": {
+			"get": {
+				"operationId": "scsChatMessages",
+				"summary": "Messages in a conversation",
+				"tags": [
+					"Student Career Studio"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"maxLength": 64
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/chat/threads/<id>\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			},
+			"delete": {
+				"operationId": "scsDeleteThread",
+				"summary": "Delete a conversation",
+				"tags": [
+					"Student Career Studio"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"type": "string",
+							"minLength": 1,
+							"maxLength": 64
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request DELETE \"https://rxresu.me/api/openapi/scs/chat/threads/<id>\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/chat/send": {
+			"post": {
+				"operationId": "scsChatSend",
+				"summary": "Send a message to the coach",
+				"tags": [
+					"Student Career Studio"
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"threadId": {
+										"type": "string",
+										"minLength": 1,
+										"maxLength": 64
+									},
+									"message": {
+										"type": "string",
+										"maxLength": 8800
+									},
+									"mode": {
+										"enum": [
+											"interview"
+										],
+										"type": "string"
+									}
+								},
+								"required": [
+									"message"
+								],
+								"additionalProperties": false
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request POST \"https://rxresu.me/api/openapi/scs/chat/send\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{\n  \"message\": \"<string>\"\n}'"
+					}
+				]
+			}
+		},
+		"/scs/chat/analyze": {
+			"post": {
+				"operationId": "scsAnalyzeUpload",
+				"summary": "Analyze a document or image",
+				"tags": [
+					"Student Career Studio"
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"filename": {
+										"type": "string",
+										"maxLength": 800
+									},
+									"mimeType": {
+										"type": "string",
+										"maxLength": 100
+									},
+									"dataBase64": {
+										"type": "string",
+										"minLength": 1
+									},
+									"threadId": {
+										"type": "string",
+										"minLength": 1,
+										"maxLength": 64
+									}
+								},
+								"required": [
+									"filename",
+									"mimeType",
+									"dataBase64"
+								],
+								"additionalProperties": false
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request POST \"https://rxresu.me/api/openapi/scs/chat/analyze\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{\n  \"filename\": \"<string>\",\n  \"mimeType\": \"<string>\",\n  \"dataBase64\": \"<string>\"\n}'"
+					}
+				]
+			}
+		},
+		"/scs/linkedin/generate": {
+			"post": {
+				"operationId": "scsLinkedinGenerate",
+				"summary": "Generate LinkedIn text from my profile",
+				"tags": [
+					"Student Career Studio"
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"section": {
+										"enum": [
+											"headline",
+											"about",
+											"education",
+											"experience",
+											"projects",
+											"volunteering",
+											"certifications",
+											"skills",
+											"featured",
+											"contact"
+										],
+										"type": "string"
+									},
+									"instruction": {
+										"type": "string",
+										"maxLength": 800
+									}
+								},
+								"required": [
+									"section"
+								],
+								"additionalProperties": false
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request POST \"https://rxresu.me/api/openapi/scs/linkedin/generate\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{\n  \"section\": \"headline\"\n}'"
+					}
+				]
+			}
+		},
+		"/scs/linkedin/drafts": {
+			"get": {
+				"operationId": "scsLinkedinDrafts",
+				"summary": "My saved LinkedIn drafts",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/linkedin/drafts\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/linkedin/drafts/{section}": {
+			"put": {
+				"operationId": "scsLinkedinSaveDraft",
+				"summary": "Save a LinkedIn draft",
+				"tags": [
+					"Student Career Studio"
+				],
+				"parameters": [
+					{
+						"name": "section",
+						"in": "path",
+						"required": true,
+						"schema": {
+							"enum": [
+								"headline",
+								"about",
+								"education",
+								"experience",
+								"projects",
+								"volunteering",
+								"certifications",
+								"skills",
+								"featured",
+								"contact"
+							],
+							"type": "string"
+						}
+					}
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"content": {
+										"type": "string",
+										"maxLength": 12000
+									}
+								},
+								"required": [
+									"content"
+								],
+								"additionalProperties": false
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request PUT \"https://rxresu.me/api/openapi/scs/linkedin/drafts/<section>\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{\n  \"content\": \"<string>\"\n}'"
+					}
+				]
+			}
+		},
+		"/scs/feedback": {
+			"post": {
+				"operationId": "scsSubmitFeedback",
+				"summary": "Send feedback to the beta team",
+				"tags": [
+					"Student Career Studio"
+				],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"rating": {
+										"type": "integer",
+										"minimum": 1,
+										"maximum": 5
+									},
+									"category": {
+										"enum": [
+											"bug",
+											"idea",
+											"praise",
+											"other"
+										],
+										"type": "string"
+									},
+									"message": {
+										"type": "string",
+										"maxLength": 8000
+									},
+									"page": {
+										"type": "string",
+										"maxLength": 480
+									}
+								},
+								"required": [
+									"rating",
+									"category",
+									"message"
+								],
+								"additionalProperties": false
+							}
+						}
+					}
+				},
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl --request POST \"https://rxresu.me/api/openapi/scs/feedback\" --header \"x-api-key: <api-key>\" --header \"Content-Type: application/json\" --data '{\n  \"rating\": 123,\n  \"category\": \"bug\",\n  \"message\": \"<string>\"\n}'"
+					}
+				]
+			}
+		},
+		"/scs/admin/stats": {
+			"get": {
+				"operationId": "scsAdminStats",
+				"summary": "Beta dashboard numbers",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/admin/stats\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/admin/users": {
+			"get": {
+				"operationId": "scsAdminUsers",
+				"summary": "Registered users",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/admin/users\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/admin/errors": {
+			"get": {
+				"operationId": "scsAdminErrors",
+				"summary": "Recent AI errors",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/admin/errors\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
+		"/scs/admin/feedback": {
+			"get": {
+				"operationId": "scsAdminFeedback",
+				"summary": "Beta feedback",
+				"tags": [
+					"Student Career Studio"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"content": {
+							"application/json": {
+								"schema": {
+									"anyOf": [
+										{},
+										{
+											"not": {}
+										}
+									]
+								}
+							}
+						}
+					},
+					"default": {
+						"description": "Structured API error. See status and code; do not branch on message text.",
+						"content": {
+							"application/json": {
+								"schema": {
+									"type": "object",
+									"required": [
+										"defined",
+										"code",
+										"status",
+										"message"
+									],
+									"properties": {
+										"defined": {
+											"type": "boolean"
+										},
+										"code": {
+											"type": "string"
+										},
+										"status": {
+											"type": "integer"
+										},
+										"message": {
+											"type": "string"
+										},
+										"data": {}
+									}
+								}
+							}
+						}
+					}
+				},
+				"security": [
+					{
+						"apiKey": []
+					},
+					{
+						"bearerAuth": []
+					},
+					{
+						"cookieAuth": []
+					}
+				],
+				"x-codeSamples": [
+					{
+						"lang": "bash",
+						"label": "cURL",
+						"source": "curl \"https://rxresu.me/api/openapi/scs/admin/feedback\" --header \"x-api-key: <api-key>\""
+					}
+				]
+			}
+		},
 		"/statistics": {
 			"get": {
 				"operationId": "getStatisticsTotals",
@@ -148643,6 +152123,7 @@
 											"he-IL",
 											"hi-IN",
 											"hu-HU",
+											"hy-AM",
 											"id-ID",
 											"it-IT",
 											"ja-JP",
@@ -158201,6 +161682,7 @@
 											"he-IL",
 											"hi-IN",
 											"hu-HU",
+											"hy-AM",
 											"id-ID",
 											"it-IT",
 											"ja-JP",

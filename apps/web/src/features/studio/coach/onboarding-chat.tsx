@@ -13,10 +13,11 @@ import { BrandWordmark } from "@/components/brand-wordmark";
 import { ENTER_CLASS } from "@/libs/motion";
 import { orpc } from "@/libs/orpc/client";
 
-type Step = "welcome" | "situation" | "inventory" | "contact" | "resume" | "linkedin" | "interview" | "finish";
+type Step = "welcome" | "situation" | "goal" | "inventory" | "contact" | "resume" | "linkedin" | "interview" | "finish";
 type Kind = "resume" | "linkedin" | "portfolio";
 type Intake = {
 	situation?: string | undefined;
+	goal?: string | undefined;
 	first?: Kind | undefined;
 	has?: Partial<Record<Kind, boolean | undefined>> | undefined;
 	contact?:
@@ -154,6 +155,8 @@ export function OnboardingChat() {
 				return "What should I call you?";
 			case "situation":
 				return `Nice to meet you, ${n}! Where are you at right now? Pick one, or tell me in your own words.`;
+			case "goal":
+				return "Great. What role are you aiming for, and by when? For example: software co-op, summer 2027. A rough idea is fine.";
 			case "inventory":
 				return "Do you already have any of these? Tap everything you have, in the order you'd like to start with, or just tell me. Tap none if you're starting fresh.";
 			case "contact":
@@ -227,6 +230,14 @@ export function OnboardingChat() {
 		hear(text);
 		setDraft("");
 		const next = { ...intake, situation: text.slice(0, 300) };
+		setIntake(next);
+		go("goal", name, next);
+	};
+
+	const chooseGoal = (text: string) => {
+		hear(text);
+		setDraft("");
+		const next = { ...intake, goal: text.slice(0, 200) };
 		setIntake(next);
 		go("inventory", name, next);
 	};
@@ -318,6 +329,8 @@ export function OnboardingChat() {
 			go("situation", clean, intake, { preferredName: clean });
 		} else if (step === "situation") {
 			chooseSituation(text);
+		} else if (step === "goal") {
+			chooseGoal(text);
 		} else if (step === "inventory") {
 			const kinds = parseInventory(text);
 			const none = /\b(nothing|none|neither|nope|not yet|starting fresh|don'?t have any)\b/i.test(text);
@@ -437,6 +450,9 @@ export function OnboardingChat() {
 								</h1>
 								<p className="mx-auto max-w-xl text-lg text-ink-2 sm:text-xl">
 									I'll help you build a résumé and LinkedIn profile from what you've really done.
+								</p>
+								<p className="mx-auto max-w-xl text-sm text-ink-3">
+									About 2 minutes. Your answers are saved as you go, so you can leave and come back.
 								</p>
 							</div>
 						) : (
@@ -568,6 +584,22 @@ export function OnboardingChat() {
 										placeholder="Or type it in your own words…"
 										label="Your situation"
 									/>
+								</div>
+							) : step === "goal" ? (
+								<div className="grid gap-3">
+									<Composer
+										{...{ draft, setDraft, submitText, busy }}
+										placeholder="e.g. Software co-op, summer 2027"
+										label="Your goal"
+									/>
+									<Button
+										variant="ghost"
+										className="justify-self-start"
+										disabled={busy}
+										onClick={() => go("inventory", name, intake)}
+									>
+										Not sure yet, skip
+									</Button>
 								</div>
 							) : step === "inventory" ? (
 								<div className="grid gap-3">
